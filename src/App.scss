@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700;900&display=swap");
+
 .App {
   text-align: center;
+  font-family: "Inter";
 }
 
 .App-logo {
@@ -28,6 +31,22 @@
   color: #61dafb;
 }
 
+.describer {
+  font-family: "Inter";
+  .describer-item {
+    font-weight: normal;
+    h1 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 200;
+    }
+    h2 {
+      font-size: 12px;
+      font-weight: 100;
+    }
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +54,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.component-header {
+  h1 {
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.hide {
+  display: none;
 }

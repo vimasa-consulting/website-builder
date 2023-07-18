@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// Link
 import LoginPage from "../views/auth/login";
 
 const AppRouter = () => {
