@@ -72,6 +72,46 @@
   outline: none;
 }
 
+.sidebar {
+  width: 300px;
+  border-right: solid 1px gray;
+  margin-top: 100px;
+  height: 100vh;
+  .sidebar-item {
+    .sidebar-nav-item {
+      color: #fff;
+      text-align: left;
+      padding: 5px 0 5px 30px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .upgrade-plan {
+      color: #fff;
+      margin: 20px;
+      text-align: left;
+      background: rgb(48, 49, 48);
+      padding: 15px;
+      .upgrade-plan-item {
+        h1 {
+          padding: 0;
+          margin: 0;
+          font-size: 26px;
+        }
+        p {
+          font-size: 14px;
+        }
+        button {
+          background: #cb52f9;
+          padding: 5px 20px;
+          border: none;
+          cursor: pointer;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
 .hide {
   display: none;
 }
