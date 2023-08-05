@@ -6,14 +6,12 @@ interface Props {
 
 const ListOfPoints: React.FC<Props> = ({ pointsArray }) => {
   return (
-    <>
+    <ul className="list-of-points">
       {pointsArray.length &&
         pointsArray.map((item, i) => {
-          <div>
-            <li key={i}>{item}</li>
-          </div>;
+          return <li key={i}>{item}</li>;
         })}
-    </>
+    </ul>
   );
 };
 

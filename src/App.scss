@@ -3,6 +3,7 @@
 .App {
   text-align: center;
   font-family: "Inter";
+  overflow: hidden;
 }
 
 .App-logo {
@@ -72,40 +73,103 @@
   outline: none;
 }
 
-.sidebar {
-  width: 300px;
-  border-right: solid 1px gray;
-  margin-top: 100px;
-  height: 100vh;
-  .sidebar-item {
-    .sidebar-nav-item {
-      color: #fff;
-      text-align: left;
-      padding: 5px 0 5px 30px;
-      font-size: 12px;
-      cursor: pointer;
-    }
-    .upgrade-plan {
-      color: #fff;
-      margin: 20px;
-      text-align: left;
-      background: rgb(48, 49, 48);
-      padding: 15px;
-      .upgrade-plan-item {
-        h1 {
-          padding: 0;
-          margin: 0;
-          font-size: 26px;
-        }
-        p {
-          font-size: 14px;
-        }
-        button {
-          background: #cb52f9;
-          padding: 5px 20px;
-          border: none;
-          cursor: pointer;
+.Dashboard {
+  display: flex;
+  .dashboard-item {
+    display: flex;
+    .sidebar {
+      width: 300px;
+      border-right: solid 1px gray;
+      margin-top: 100px;
+      height: 100vh;
+      .sidebar-item {
+        .sidebar-nav-item {
           color: #fff;
+          text-align: left;
+          padding: 5px 0 5px 30px;
+          font-size: 12px;
+          cursor: pointer;
+        }
+        .upgrade-plan {
+          color: #fff;
+          margin: 20px;
+          text-align: left;
+          background: rgb(48, 49, 48);
+          padding: 15px;
+          .upgrade-plan-item {
+            h1 {
+              padding: 0;
+              margin: 0;
+              font-size: 26px;
+            }
+            p {
+              font-size: 14px;
+            }
+            button {
+              background: #cb52f9;
+              padding: 5px 20px;
+              border: none;
+              cursor: pointer;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .main-container {
+      width: 1000px;
+      margin: 100px 0 0 80px;
+      .main-container-items {
+        .component-header {
+          h1 {
+            color: #fff;
+            text-align: left;
+          }
+        }
+        .temp-placeholder {
+          width: 700px;
+          height: 400px;
+          background: #f7b68c;
+        }
+        .call-to-action {
+          text-align: left;
+          button {
+            margin: 20px 20px 0 0;
+            padding: 15px 94px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            font-size: 20px;
+          }
+          .smart-builder {
+            color: #fff;
+            background: linear-gradient(to right, #ea7959, #994bed);
+          }
+          .build-it {
+            color: #000;
+          }
+        }
+        .component-sub-header {
+          text-align: left;
+          h1 {
+            color: #fff;
+            font-size: 26px;
+            margin: 40px 0 20px 0;
+            letter-spacing: 2px;
+            span {
+              background-image: linear-gradient(to right, #ea7959, #994bed);
+              color: transparent;
+              background-clip: text;
+            }
+          }
+        }
+        .list-of-points {
+          text-align: left;
+          color: #fff;
+          li {
+            padding: 15px 0;
+            font-size: 18px;
+          }
         }
       }
     }

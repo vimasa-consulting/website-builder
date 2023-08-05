@@ -1,4 +1,5 @@
-import Sidebar from "../sidebar/sidebar";
+import Sidebar from "./sidebar";
+import MainContainer from "./container";
 
 
 const Dashboard = () => {
@@ -6,6 +7,7 @@ const Dashboard = () => {
       <div className="Dashboard">
         <div className="dashboard-item">
             <Sidebar />
+            <MainContainer />
         </div>
       </div>
     );
