@@ -1,5 +1,6 @@
 import AppRouter from "./router"
 import "./App.scss";
+import './tailwind.css';
 
 const App = () => {
   return (
