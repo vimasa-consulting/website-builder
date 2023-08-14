@@ -11,7 +11,7 @@ const QuestionFive = () => {
             <CheckBox checkBoxName={"Increased Product Awareness"}/>
             <div className="navigation">
                 <p> Back </p>
-                <button type="button"> Next</button>
+                <button type="button"> Build My Page</button>
             </div>
         </div>
     </div>);
