@@ -9,6 +9,8 @@ import QuestionThree from "../views/smart-builder/question-three";
 import QuestionFour from "../views/smart-builder/question-four";
 import QuestionFive from "../views/smart-builder/question-five";
 
+import WebsiteDashboard from "../views/website-builder/dashboard"
+
 const AppRouter = () => {
   return (
     <Router>
@@ -33,6 +35,7 @@ const AppRouter = () => {
           <Route path="/dashboard/smart-builder/question-three" element={<QuestionThree />}></Route>
           <Route path="/dashboard/smart-builder/question-four" element={<QuestionFour />}></Route>
           <Route path="/dashboard/smart-builder/question-five" element={<QuestionFive />}></Route>
+          <Route path="/dashboard/wesbite-builder" element={<WebsiteDashboard />}></Route>
         </Routes>
       </div>
     </Router>

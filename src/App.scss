@@ -275,6 +275,22 @@
   }
 }
 
+.website-builder-dashboard {
+  display: flex;
+  background: #fff;
+  height: 100vh;
+  .website-builder-dashboard-item {
+    display: flex;
+    .website-builder-header {
+      display: flex;
+      .website-builder-header-item {
+        background: #fff;
+        height: 60px;
+      }
+    }
+  }
+}
+
 .progress {
   --progress: 0%;
 
