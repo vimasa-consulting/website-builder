@@ -290,6 +290,58 @@
       .website-builder-header-item {
         background: #fff;
         height: 80px;
+        display: flex;
+        width: 100%;
+        .product-name {
+          flex: 1;
+          display: flex;
+          padding: 24px 20px;
+          font-weight: bold;
+        }
+        .actions {
+          flex: 1;
+          display: flex;
+          padding: 24px 20px;
+          p {
+            padding: 0 15px;
+            margin: 0;
+            font-weight: bold;
+          }
+        }
+        .views {
+          flex: 1;
+          display: flex;
+          padding: 24px 20px;
+          p {
+            padding: 0 15px;
+            margin: 0;
+            font-weight: bold;
+          }
+        }
+        .user-actions {
+          flex: 1;
+          display: flex;
+          padding: 24px 20px;
+          p {
+            padding: 0 15px;
+            margin: 0;
+            font-weight: bold;
+          }
+          .save {
+            background: gray;
+            padding: 0 20px;
+            margin: 0 10px;
+            border-radius: 24px;
+            color: #fff;
+          }
+          .publish {
+            background: pink;
+            padding: 0 20px;
+            margin: 0 10px;
+            border-radius: 24px;
+            color: #fff;
+          }
+        }
       }
     }
     .website-builder-dashboard-container {
