@@ -1,5 +1,4 @@
 import SideBarItems from "../../components/sidebarItems";
-import UpgradePlan from "../../components/upgradePlanSection";
 
 const BuilderSidebar = () => {
   const navigationItems = [
@@ -10,9 +9,6 @@ const BuilderSidebar = () => {
     "Domains",
     "Settings",
   ];
-  const heading = "Upgrade your plan";
-  const description =
-    "Upgrade your plan to maximize your performance and enjoy your benefits";
 
   return (
     <div className="sidebar">
@@ -20,7 +16,6 @@ const BuilderSidebar = () => {
         {navigationItems.map((item, i) => (
           <SideBarItems navItem={item} index={i} key={i} />
         ))}
-        <UpgradePlan heading={heading} description={description} />
       </div>
     </div>
   );
