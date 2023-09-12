@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { BiArrowBack } from "react-icons/bi";
 
 import Question from "../../components/Question";
 import CheckBox from "../../components/CheckBox";
@@ -17,13 +18,13 @@ const QuestionFive = () => {
     <div className="question">
       <div className="question-item">
         <Question
-          question={"What is the main business outcome you are looking for?"}
+          question={"5. What is the main business outcome you are looking for?"}
         />
         <CheckBox checkBoxName={"High Conversion"} />
         <CheckBox checkBoxName={"Better brand connect"} />
         <CheckBox checkBoxName={"Increased Product Awareness"} />
         <div className="navigation">
-          <p> Back </p>
+          <BiArrowBack />
           <button type="button"> Build My Page</button>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import checkmark from "../assets/dashboard/checkmark.png";
 interface Props {
   pointsArray: Array<any>;
 }
@@ -9,7 +9,12 @@ const ListOfPoints: React.FC<Props> = ({ pointsArray }) => {
     <ul className="list-of-points">
       {pointsArray.length &&
         pointsArray.map((item, i) => {
-          return <li key={i}>{item}</li>;
+          return (
+            <div className="listElement">
+              <img src={checkmark} alt="check" />
+              <li key={i}>{item}</li>
+            </div>
+          );
         })}
     </ul>
   );

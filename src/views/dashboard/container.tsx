@@ -1,6 +1,7 @@
 import ComponentHeader from "../../components/componentHeader";
 import ComponentSubHeader from "../../components/componentSubheader";
 import ListOfPoints from "../../components/listOfPoints";
+import wizard from "../../assets/dashboard/wizard.png";
 
 const MainContainer = () => {
   const points = [
@@ -14,7 +15,10 @@ const MainContainer = () => {
       <div className="main-container-items">
         <ComponentHeader heading={"Hi , what are you building today?"} />
         {/* temporary placeholder */}
-        <div className="temp-placeholder"></div>
+        <div className="videoSection">
+          <div className="temp-placeholder"></div>
+          <img src={wizard} alt="wizard" />
+        </div>
         <div className="call-to-action">
           <button className="smart-builder"> Use Smart Builder </button>
           <button className="build-it">Build it YourSelf </button>
@@ -23,7 +27,7 @@ const MainContainer = () => {
           subheading={"Build in 5 mins with "}
           specialWord={"Smart Builder"}
         />
-        <ListOfPoints pointsArray={points}/>
+        <ListOfPoints pointsArray={points} />
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 
 import Question from "../../components/Question";
 import CheckBox from "../../components/CheckBox";
+import { BiArrowBack, BiRightArrowAlt } from "react-icons/bi";
 
 const QuestionTwo = () => {
   useEffect(() => {
@@ -15,21 +16,29 @@ const QuestionTwo = () => {
   });
 
   return (
-    <div className="question">
-      <div className="question-item">
-        <Question
-          question={"What is the main business outcome you are looking for?"}
-        />
-        <CheckBox checkBoxName={"High Conversion"} />
-        <CheckBox checkBoxName={"Better brand connect"} />
-        <CheckBox checkBoxName={"Increased Product Awareness"} />
-        <div className="navigation">
-          <p> Back </p>
-          <button type="button"> Next</button>
+    <div className="questionContainer">
+      <div className="question">
+        <div className="question-item">
+          <Question
+            question={
+              "2. What is the main business outcome you are looking for?"
+            }
+          />
+          <CheckBox checkBoxName={"High Conversion"} />
+          <CheckBox checkBoxName={"Better brand connect"} />
+          <CheckBox checkBoxName={"Increased Product Awareness"} />
+          <div className="navigation">
+            <BiArrowBack />
+            <button type="button">
+              {" "}
+              Next
+              <BiRightArrowAlt />
+            </button>
+          </div>
         </div>
-      </div>
-      <div className="progress">
-        <div className="bar"></div>
+        <div className="progress">
+          <div className="bar"></div>
+        </div>
       </div>
     </div>
   );
