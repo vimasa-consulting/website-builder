@@ -372,10 +372,16 @@
           outline: max(2px, 0.15em) solid currentColor;
           outline-offset: max(2px, 0.15em);
         }
+        .checkboxLabel {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+        }
       }
       .next-button {
-        width: 100%;
+        // width: 100%;
         text-align: right;
+        // margin-top: 20px;
         button {
           color: #fff;
           background: linear-gradient(to right, #ea7959, #994bed);
@@ -391,6 +397,10 @@
           line-height: 25px; /* 138.889% */
           letter-spacing: 0.54px;
           border-radius: 3px;
+          &:disabled {
+            cursor: none;
+            opacity: 0.4;
+          }
         }
       }
       .navigation {
@@ -462,7 +472,12 @@
           flex: 1;
           display: flex;
           padding: 24px 20px;
+
           p {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            align-items: center;
             padding: 0 15px;
             margin: 0;
             font-weight: bold;
@@ -476,30 +491,51 @@
             padding: 0 15px;
             margin: 0;
             font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            align-items: center;
           }
         }
         .user-actions {
           flex: 1;
           display: flex;
           padding: 24px 20px;
+          align-items: center;
           p {
             padding: 0 15px;
             margin: 0;
             font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            align-items: center;
           }
           .save {
-            background: gray;
+            background: #4a4a4a;
             padding: 0 20px;
             margin: 0 10px;
-            border-radius: 24px;
+            border-radius: 4px;
             color: #fff;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px; /* 138.889% */
+            letter-spacing: 0.54px;
           }
           .publish {
-            background: pink;
+            background: #d0f;
             padding: 0 20px;
             margin: 0 10px;
-            border-radius: 24px;
+            border-radius: 4px;
             color: #fff;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px; /* 138.889% */
+            letter-spacing: 0.54px;
           }
         }
       }
@@ -510,6 +546,34 @@
       .sidebar {
         width: 300px;
         height: 100%;
+        .sidebarBuilderSection {
+          padding: 12px 6px;
+          .sideContent {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+            .singleElem {
+              padding: 12px 22px;
+              display: flex;
+              flex-direction: column;
+              background-color: #f3f6ff;
+              border-radius: 4px;
+              img {
+                width: 50px;
+                height: 44px;
+              }
+              p {
+                color: #000;
+                font-family: Inter;
+                font-size: 15.002px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 39.808px; /* 265.345% */
+                letter-spacing: 0.375px;
+              }
+            }
+          }
+        }
       }
       .website-builder-container {
         width: 100%;
