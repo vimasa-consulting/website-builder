@@ -2,13 +2,18 @@ import ComponentHeader from "../../components/componentHeader";
 import ComponentSubHeader from "../../components/componentSubheader";
 import ListOfPoints from "../../components/listOfPoints";
 import wizard from "../../assets/dashboard/wizard.png";
+import { useNavigate } from "react-router-dom";
 
 const MainContainer = () => {
+  const navigate = useNavigate();
   const points = [
     "Answer our expert crafted questions",
     "Get a personalised page built for your goals",
     "Add powerful copy & images to finish the page",
   ];
+  const handleNavigation = () => {
+    navigate("/dashboard/smart-builder");
+  };
 
   return (
     <div className="main-container">
@@ -20,7 +25,10 @@ const MainContainer = () => {
           <img src={wizard} alt="wizard" />
         </div>
         <div className="call-to-action">
-          <button className="smart-builder"> Use Smart Builder </button>
+          <button className="smart-builder" onClick={handleNavigation}>
+            {" "}
+            Use Smart Builder{" "}
+          </button>
           <button className="build-it">Build it YourSelf </button>
         </div>
         <ComponentSubHeader
