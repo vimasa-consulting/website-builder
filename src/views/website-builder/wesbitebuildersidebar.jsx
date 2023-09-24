@@ -1,8 +1,3 @@
-import SideBarItems from "../../components/sidebarItems";
-import audioBui from "../../assets/dashboard/icons/audioBui.png";
-import buttonCta from "../../assets/dashboard/icons/buttonCta.png";
-import ImageBui from "../../assets/dashboard/icons/ImageBui.png";
-import videoBui from "../../assets/dashboard/icons/videoBui.png";
 import { RxHeading, RxSection, RxButton } from "react-icons/rx";
 import { GiFootprint } from "react-icons/gi";
 import { BiImage } from "react-icons/bi";
@@ -59,6 +54,84 @@ const BuilderSidebar = ({ componentPropArray }) => {
               <BiImage />
             </div>
             <p>Image</p>
+          </div>
+          <div className="singleElem" onClick={() => handleClick("StarRating")}>
+            <div className="iconSize">
+              {" "}
+              <BiImage />
+            </div>
+            <p>Star Rating</p>
+          </div>
+          <div className="singleElem" onClick={() => handleClick("HeroBanner")}>
+            <div className="iconSize">
+              {" "}
+              <BiImage />
+            </div>
+            <p>Hero Banner</p>
+          </div>
+          <div className="singleElem" onClick={() => handleClick("Benefits")}>
+            <div className="iconSize">
+              {" "}
+              <BiImage />
+            </div>
+            <p>Product Benefits</p>
+          </div>
+          <div className="singleElem" onClick={() => handleClick("HowItWorks")}>
+            <div className="iconSize">
+              {" "}
+              <BiImage />
+            </div>
+            <p>How It Works</p>
+          </div>
+          <div
+            className="singleElem"
+            onClick={() => handleClick("CircularProduct")}
+          >
+            <div className="iconSize">
+              {" "}
+              <BiImage />
+            </div>
+            <p>Circular Section</p>
+          </div>
+          <div
+            className="singleElem"
+            onClick={() => handleClick("KeyFeatures")}
+          >
+            <div className="iconSize">
+              {" "}
+              <BiImage />
+            </div>
+            <p>Key Features </p>
+          </div>
+          <div
+            className="singleElem"
+            onClick={() => handleClick("comparisions")}
+          >
+            <div className="iconSize">
+              {" "}
+              <BiImage />
+            </div>
+            <p>Compare</p>
+          </div>
+          <div
+            className="singleElem"
+            onClick={() => handleClick("RangeSection")}
+          >
+            <div className="iconSize">
+              {" "}
+              <BiImage />
+            </div>
+            <p>Range Section</p>
+          </div>
+          <div
+            className="singleElem"
+            onClick={() => handleClick("UniqueSection")}
+          >
+            <div className="iconSize">
+              {" "}
+              <BiImage />
+            </div>
+            <p>Unique Section</p>
           </div>
           {/* <div className="singleElem">
             <img src={videoBui} />
