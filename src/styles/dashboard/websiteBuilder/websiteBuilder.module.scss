@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700;900&display=swap");
+
+.starRatingSection {
+  padding: 12px 13px;
+  background-color: #fff;
+  .starRatingBlock {
+    display: flex;
+    gap: 14px;
+
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .hoverOn {
+      color: #000;
+    }
+    .hoverOff {
+      color: #ccc;
+    }
+
+    .score {
+      display: flex;
+      gap: 14px;
+    }
+  }
+}
+
+.herobannerSection {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  //   padding: 8px 2px;
+
+  .leftSection {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 50%;
+    align-items: center;
+
+    h1 {
+      font-size: 32px;
+      color: #21243d;
+      font-weight: 600;
+    }
+    p {
+      font-size: 18px;
+      color: #21243d;
+    }
+    button {
+      border-radius: 4px;
+      color: #21243d;
+      padding: 12px 18px;
+      font-weight: 500;
+      width: max-content;
+      border: 1px solid grey;
+    }
+  }
+}
+
+.benefitsSection {
+  padding: 18px 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+
+  .leftSection {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 50%;
+    align-items: center;
+
+    .benefitList {
+      display: flex;
+      flex-direction: row;
+      gap: 54px;
+      padding-top: 20px;
+      .individualBenefit {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        align-items: center;
+        p {
+          font-size: 12px;
+          color: #21243d;
+        }
+        h4 {
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+    }
+    p {
+      font-size: 18px;
+      color: #21243d;
+    }
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+    }
+  }
+}
+
+.worksSection {
+  padding: 18px 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .bottomSection {
+    display: flex;
+    gap: 124px;
+    align-items: center;
+    justify-content: space-around;
+
+    .eachSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 38px;
+
+      .benefitList {
+        display: flex;
+        flex-direction: row;
+        gap: 54px;
+        padding-top: 20px;
+        .individualBenefit {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+          align-items: center;
+          p {
+            font-size: 12px;
+            color: #21243d;
+          }
+          h4 {
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+.circularSection {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .centerText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .circularBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: absolute;
+    transform-origin: top left;
+    transform: translate(-50%, -50%);
+
+    .circle {
+      border-radius: 50%;
+      background-color: rgb(209, 207, 207);
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+    }
+
+    p {
+      font-size: 12px;
+      color: #21243d;
+    }
+
+    h4 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    &:nth-child(1) {
+      transform: rotate(60deg) translate(150px) rotate(-60deg);
+    }
+    &:nth-child(2) {
+      transform: rotate(120deg) translate(150px) rotate(-120deg);
+    }
+    &:nth-child(3) {
+      transform: rotate(180deg) translate(150px) rotate(-180deg);
+    }
+    &:nth-child(4) {
+      transform: rotate(240deg) translate(150px) rotate(-240deg);
+    }
+    &:nth-child(5) {
+      transform: rotate(300deg) translate(150px) rotate(-300deg);
+    }
+    &:nth-child(6) {
+      transform: rotate(360deg) translate(150px) rotate(-360deg);
+    }
+  }
+}
+
+.KeyFeaturesSection {
+  padding: 18px 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+
+  .indiviSection {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}
+.comparisionSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 18px 0;
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .median {
+    height: 100%;
+    width: 5px;
+    border: 2px solid grey;
+  }
+  .leftSection {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+
+    ul {
+      li {
+        line-height: 2.12;
+      }
+    }
+  }
+}
+
+.BuilderRangeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 18px 0;
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    padding-bottom: 30px;
+  }
+
+  .offerBlock {
+    display: flex;
+    gap: 141px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .offerSection {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      h3 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.uniqueSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 18px 0;
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    padding-bottom: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .uniqueBlock {
+    display: flex;
+    gap: 22px;
+    padding-top: 42px;
+    .uspBlock {
+      padding: 18px;
+      border: 2px solid #d1cfcf;
+      border-radius: 8px;
+      position: relative;
+      width: 260px;
+      height: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .circularIcon {
+        background-color: #dcdcdc;
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -20px;
+        left: 9px;
+      }
+      h4 {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
