@@ -392,7 +392,7 @@ function GrapesJSComponent() {
           modalImportTitle: "Import Template",
           modalImportLabel:
             '<div style="margin-bottom: 10px; font-size: 13px;">Paste here your HTML/CSS and click Import</div>',
-          modalImportContent: function (editor) {
+          modalImportContent: function (editor: { getHtml: () => string; getCss: () => string; }) {
             return editor.getHtml() + "<style>" + editor.getCss() + "</style>";
           },
         },
