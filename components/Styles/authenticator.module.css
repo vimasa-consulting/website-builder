@@ -1,0 +1,12 @@
+.authenticator :global(.amplify-tabs) {
+  display: none;
+}
+
+.authenticator {
+  --amplify-components-authenticator-router-border-color: white;
+  --amplify-components-authenticator-router-box-shadow: none;
+
+  .actionLink {
+    color: var(--amplify-colors-brand-primary-80);
+  }
+}
