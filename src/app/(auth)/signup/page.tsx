@@ -1,7 +1,5 @@
-import Authenticator from '@/src/components/Identity/Authenticator';
-import Image from 'next/image';
-import signUpIllustration from '@/assets/images/signup-illustration.png'
-import Loader from '@/src/components/Loader';
+import Authenticator from '@/components/Identity/Authenticator';
+import Loader from '@/components/Loader';
 
 export default function SignUpPage() {
 
@@ -13,20 +11,6 @@ export default function SignUpPage() {
             <Loader/>
           </div>
         </Authenticator>
-      </div>
-      <div className="i relative hidden w-1/2 items-center justify-around overflow-hidden lg:flex">
-        <div className='px-4'>
-          {/* <Image
-            src={signUpIllustration}
-            alt="Sign Up illustration"
-            className='object-contain'
-          /> */}
-          <div className="flex flex-col items-center text-center">
-            <div className='text-2xl'>Optimise faster & better</div>
-            <div className='mt-4'>Apps & tools to help optimise your marketing efforts.</div>
-            <div>Powered by VIMASA.</div>
-          </div>
-        </div>
       </div>
     </div>
   );

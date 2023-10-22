@@ -5,7 +5,7 @@ const CentrePanel = () => {
   return (
     <div className=" flex flex-col gap-y-3 text-white">
       <div className=" ">
-        <p className=" italic"> Hi Adharsh, what are we building today?</p>
+        <p className=" italic"> Hi User, what are we building today?</p>
       </div>
       <div className=" flex flex-row justify-end align-baseline mb-8">
         <Image

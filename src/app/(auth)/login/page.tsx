@@ -1,5 +1,5 @@
-import Authenticator from "@/src/components/Identity/Authenticator";
-import Loader from "@/src/components/Loader";
+import Authenticator from "@/components/Identity/Authenticator";
+import Loader from "@/components/Loader";
 
 export default function SignInPage() {
   return (
