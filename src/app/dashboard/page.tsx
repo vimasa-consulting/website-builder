@@ -10,7 +10,7 @@ const DashboardPage = () => {
           </div>
         <div className=" p-5">
           <CentrePanel />
-          </div>     
+          </div>
       </div>
     </div>
   );

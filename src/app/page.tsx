@@ -1,5 +1,5 @@
-import HomePageView from "@/components/HomePage";
-import AuthWrapper from "@/components/Identity/AuthWrapper";
+import HomePageView from "@/src/components/HomePage";
+import AuthWrapper from "@/src/components/Identity/AuthWrapper";
 
 function HomePage() {
   return (

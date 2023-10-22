@@ -1,7 +1,7 @@
-import Authenticator from '@/components/Identity/Authenticator';
+import Authenticator from '@/src/components/Identity/Authenticator';
 import Image from 'next/image';
 import signUpIllustration from '@/assets/images/signup-illustration.png'
-import Loader from '@/components/Loader';
+import Loader from '@/src/components/Loader';
 
 export default function SignUpPage() {
 
