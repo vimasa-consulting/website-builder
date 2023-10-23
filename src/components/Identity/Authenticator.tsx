@@ -14,9 +14,9 @@ import '@aws-amplify/ui-react/styles.css';
 import { ThemeProvider, Theme } from '@aws-amplify/ui-react';
 import { Inter } from 'next/font/google'
 
-import styles from '../Styles/authenticator.module.css';
+import styles from '@/styles/authenticator.module.css';
 import awsExports from "../../aws-exports";
-import { ROUTES } from "../Services/NavigationService";
+import { ROUTES } from "../../services/NavigationService";
 
 const font = Inter({ subsets: ['latin'] })
 Amplify.configure({ ...awsExports, ssr: true });
@@ -37,7 +37,9 @@ function AmplifyAuthenticatorWrapper(authenticatorProps: AuthenticatorProps): Re
       const { payload } = data;
       if (payload?.event === 'signIn') {
         // TODO: route to sign in redirection source
-        router.replace(ROUTES.DASHBOARD);
+        setTimeout(() => {
+          router.replace(ROUTES.DASHBOARD);
+        }, 800);
       }
     });
     return () => {
@@ -49,7 +51,9 @@ function AmplifyAuthenticatorWrapper(authenticatorProps: AuthenticatorProps): Re
   // Handle if already signed in
   useEffect(() => {
     Auth.currentAuthenticatedUser().then(() => {
-      router.replace(ROUTES.DASHBOARD);
+      setTimeout(() => {
+        router.replace(ROUTES.DASHBOARD);
+      }, 800)
     }).catch(() => {
       // ignore
     });
@@ -60,8 +64,8 @@ function AmplifyAuthenticatorWrapper(authenticatorProps: AuthenticatorProps): Re
     SignUp: {
       Header() {
         return (
-          <div className="flex items-center justify-center flex-col">
-            <h2 className="text-3xl">Create a free account</h2>
+          <div className="flex items-center justify-center flex-col pt-6">
+            <h2 className="text-3xl">Create an account</h2>
             <div className="text-base mt-4">
               Already have an account? <Link href={ROUTES.SIGN_IN} className={styles.actionLink}>Sign in</Link>
             </div>
@@ -114,7 +118,7 @@ function AmplifyAuthenticatorWrapper(authenticatorProps: AuthenticatorProps): Re
     SignIn: {
       Header() {
         return (
-          <div className="flex items-center justify-center flex-col">
+          <div className="flex items-center justify-center flex-col pt-6">
             <h2 className="text-3xl">Welcome back!</h2>
             <div className="text-base mt-4">
               Don&apos;t have an account? <Link href={ROUTES.SIGN_UP} className={styles.actionLink}>Sign up</Link>
@@ -125,7 +129,7 @@ function AmplifyAuthenticatorWrapper(authenticatorProps: AuthenticatorProps): Re
       Footer() {
         const { toResetPassword } = useAmplifyAuthenticator();
         return (
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center pb-4">
             <button
               onClick={toResetPassword}
               className={styles.actionLink}
@@ -214,13 +218,13 @@ export default function Authenticator(authenticatorProps: AuthenticatorProps): R
       colors: {
         brand: {
           primary: {
-            "10": '{colors.red.10.value}',
-            "20": '{colors.red.20.value}',
-            "40": '{colors.red.40.value}',
-            "60": '{colors.red.60.value}',
-            "80": '{colors.red.80.value}',
-            "90": '{colors.red.90.value}',
-            "100": '{colors.red.100.value}',
+            "10": '{colors.purple.10.value}',
+            "20": '{colors.purple.20.value}',
+            "40": '{colors.purple.40.value}',
+            "60": '{colors.purple.60.value}',
+            "80": '{colors.purple.80.value}',
+            "90": '{colors.purple.90.value}',
+            "100": '{colors.purple.100.value}',
           }
         }
       },

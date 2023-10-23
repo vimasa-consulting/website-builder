@@ -1,6 +1,6 @@
 {
   "auth": {
-    "websitebuilderd9d5e062": {
+    "websitebuilderAuth": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -13,9 +13,7 @@
           "passwordPolicyMinLength": 8
         },
         "signupAttributes": [
-          "EMAIL",
-          "FAMILY_NAME",
-          "GIVEN_NAME"
+          "EMAIL"
         ],
         "socialProviders": [],
         "usernameAttributes": [

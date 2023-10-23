@@ -1,0 +1,87 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "websitebuilderIdPool",
+    "allowUnauthenticatedIdentities": false,
+    "resourceNameTruncated": "websitcb7ef4f1",
+    "userPoolName": "websitebuilderUserPool",
+    "autoVerifiedAttributes": [
+      "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+      "SMS Text Message"
+    ],
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+      "email"
+    ],
+    "aliasAttributes": [],
+    "userpoolClientGenerateSecret": false,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+      "address",
+      "birthdate",
+      "family_name",
+      "middle_name",
+      "gender",
+      "locale",
+      "given_name",
+      "name",
+      "nickname",
+      "phone_number",
+      "preferred_username",
+      "picture",
+      "profile",
+      "updated_at",
+      "website",
+      "zoneinfo",
+      "email"
+    ],
+    "userpoolClientReadAttributes": [
+      "address",
+      "birthdate",
+      "email",
+      "family_name",
+      "middle_name",
+      "gender",
+      "locale",
+      "given_name",
+      "name",
+      "nickname",
+      "phone_number",
+      "preferred_username",
+      "picture",
+      "profile",
+      "updated_at",
+      "website",
+      "zoneinfo",
+      "email_verified",
+      "phone_number_verified"
+    ],
+    "userpoolClientLambdaRole": "websitcb7ef4f1_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": true,
+    "sharedId": "cb7ef4f1",
+    "resourceName": "websitebuilderAuth",
+    "authSelections": "identityPoolAndUserPool",
+    "useDefault": "manual",
+    "thirdPartyAuth": false,
+    "usernameAttributes": [
+      "email"
+    ],
+    "userPoolGroups": false,
+    "adminQueries": false,
+    "triggers": {},
+    "hostedUI": false,
+    "userPoolGroupList": [],
+    "serviceName": "Cognito",
+    "usernameCaseSensitive": false,
+    "useEnabledMfas": true
+  }
+}

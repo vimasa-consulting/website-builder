@@ -5,7 +5,7 @@ import { Amplify, Auth } from "aws-amplify";
 import { useRouter } from 'next/navigation'
 
 import awsExports from "../../aws-exports";
-import { ROUTES } from "../Services/NavigationService";
+import { ROUTES } from "../../services/NavigationService";
 import Loader from "../Loader";
 
 Amplify.configure({ ...awsExports, ssr: true });
@@ -34,7 +34,7 @@ function AuthWrapper(props: { children: React.JSX.Element }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return isAuthenticated ? props.children : <Loader/>;
+  return isAuthenticated ? props.children : <Loader />;
 }
 
 export default AuthWrapper;
