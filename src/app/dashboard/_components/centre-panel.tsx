@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import videoEmbedImage from '@/public/video_embed.png';
+import homeImage from '@/public/home_image.png';
 
 const CentrePanel = () => {
   return (
@@ -9,14 +11,14 @@ const CentrePanel = () => {
       </div>
       <div className=" flex flex-row justify-end align-baseline mb-8">
         <Image
-          src="/video_embed.png"
+          src={videoEmbedImage}
           width={652}
           height={385}
           alt="video_embed"
         ></Image>
         <Image
           className="pl-5"
-          src="/home_image.png"
+          src={homeImage}
           width={228}
           height={315}
           alt="home_image"
