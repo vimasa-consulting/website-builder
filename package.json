@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^5.3.1",
     "@radix-ui/react-slot": "^1.0.2",
+    "aws-amplify": "^5.3.11",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "flowbite": "^1.8.1",
+    "flowbite-react": "^0.6.4",
     "grapesjs": "^0.21.7",
     "grapesjs-component-countdown": "^1.0.2",
     "grapesjs-custom-code": "^1.0.2",
@@ -31,9 +35,7 @@
     "react-dom": "^18",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
-    "toastr": "^2.1.4",
-    "@aws-amplify/ui-react": "^5.3.1",
-    "aws-amplify": "^5.3.11"
+    "toastr": "^2.1.4"
   },
   "devDependencies": {
     "@types/node": "^20",

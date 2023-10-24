@@ -1,0 +1,15 @@
+.navBar>div {
+  background-color: black;
+  position: relative;
+}
+
+.navBar>div:after {
+  content: "";
+  background: rgb(77, 77, 77);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 95%;
+  width: 0.1rem;
+  margin-bottom: 15px;
+}
