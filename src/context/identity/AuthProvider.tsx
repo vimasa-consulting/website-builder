@@ -2,7 +2,7 @@ import { AuthStatus, AuthUser } from "@/types/identity";
 import { Auth, Hub } from "aws-amplify";
 
 import React, { useEffect, useState } from "react";
-import { AuthContext } from "./AuthContext";
+import AuthContext from "@/context/identity/AuthContext";
 
 export default function AuthProvider({
   children,

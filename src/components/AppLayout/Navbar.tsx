@@ -1,11 +1,12 @@
 'use client'
 
-import { AuthContext } from "@/context/identity/AuthContext";
-import { signOut } from "@/services/IdentityService";
-import { ROUTES } from "@/services/NavigationService";
 import { Avatar, Dropdown, Navbar as FlowbiteNavbar } from "flowbite-react";
 import { useContext } from "react";
 // import Image from "next/image";
+
+import AuthContext from "@/context/identity/AuthContext";
+import { signOut } from "@/services/IdentityService";
+import { ROUTES } from "@/services/NavigationService";
 
 export default function Navbar() {
 

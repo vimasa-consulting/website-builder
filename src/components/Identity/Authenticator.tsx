@@ -15,8 +15,8 @@ import { ThemeProvider, Theme } from '@aws-amplify/ui-react';
 import { Inter } from 'next/font/google'
 
 import styles from '@/styles/authenticator.module.css';
-import awsExports from "../../aws-exports";
-import { ROUTES } from "../../services/NavigationService";
+import awsExports from "@/aws-exports";
+import { ROUTES } from "@/services/NavigationService";
 
 const font = Inter({ subsets: ['latin'] })
 Amplify.configure({ ...awsExports, ssr: true });

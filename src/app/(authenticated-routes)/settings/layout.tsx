@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 import AppLayout from '@/components/AppLayout'
 
 export const metadata: Metadata = {
-  title: 'Projects | Website Builder',
-  description: 'View & manage your projects here.',
+  title: 'Settings | Website Builder',
+  description: 'Find your settings here.',
 }
 
 export default function Layout({

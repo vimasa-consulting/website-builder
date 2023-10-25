@@ -1,14 +1,14 @@
 'use client'
 
-import { useContext, useEffect, useState } from "react";
-import { Amplify, Auth } from "aws-amplify";
+import { useContext, useEffect } from "react";
+import { Amplify } from "aws-amplify";
 import { useRouter } from 'next/navigation'
 
-import awsExports from "../../aws-exports";
-import { ROUTES } from "../../services/NavigationService";
-import Loader from "../Loader";
+import awsExports from "@/aws-exports";
+import { ROUTES } from "@/services/NavigationService";
+import Loader from "@/components/Loader";
 import AuthProvider from "@/context/identity/AuthProvider";
-import { AuthContext } from "@/context/identity/AuthContext";
+import AuthContext from "@/context/identity/AuthContext";
 import { AuthStatus } from "@/types/identity";
 
 Amplify.configure({ ...awsExports, ssr: true });

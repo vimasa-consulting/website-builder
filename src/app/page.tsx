@@ -1,9 +1,10 @@
 'use client'
 
-import AuthWrapper from "@/components/Identity/AuthWrapper";
-import { ROUTES } from "@/services/NavigationService";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+
+import AuthWrapper from "@/components/Identity/AuthWrapper";
+import { ROUTES } from "@/services/NavigationService";
 
 function Redirect() {
 

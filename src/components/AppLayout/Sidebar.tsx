@@ -1,10 +1,11 @@
 'use client';
 
 import { Sidebar as FlowbiteSidebar } from 'flowbite-react';
-
-import styles from '@/styles/sidebar.module.css';
-import { ROUTES } from "@/services/NavigationService";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+import { ROUTES } from "@/services/NavigationService";
+import styles from '@/styles/sidebar.module.css';
 
 export default function Sidebar() {
 
@@ -18,6 +19,7 @@ export default function Sidebar() {
         <FlowbiteSidebar.ItemGroup>
           <FlowbiteSidebar.Item
             href={ROUTES.DASHBOARD}
+            as={Link}
             className={`text-white hover:bg-zinc-600 active:bg-zinc-700 p-3 ${pathname === ROUTES.DASHBOARD ? 'bg-zinc-700' : ''}`}
           >
             <p>
@@ -27,6 +29,7 @@ export default function Sidebar() {
           </FlowbiteSidebar.Item>
           <FlowbiteSidebar.Item
             href={ROUTES.PROJECTS}
+            as={Link}
             className={`text-white hover:bg-zinc-600 active:bg-zinc-700 p-3 ${pathname === ROUTES.PROJECTS ? 'bg-zinc-700' : ''}`}
           >
             <p>
@@ -36,6 +39,7 @@ export default function Sidebar() {
           </FlowbiteSidebar.Item>
           <FlowbiteSidebar.Item
             href={ROUTES.TIPS}
+            as={Link}
             className={`text-white hover:bg-zinc-600 active:bg-zinc-700 p-3 ${pathname === ROUTES.TIPS ? 'bg-zinc-700' : ''}`}
           >
             <p>
@@ -45,6 +49,7 @@ export default function Sidebar() {
           </FlowbiteSidebar.Item>
           <FlowbiteSidebar.Item
             href={ROUTES.ANALYTICS}
+            as={Link}
             className={`text-white hover:bg-zinc-600 active:bg-zinc-700 p-3 ${pathname === ROUTES.ANALYTICS ? 'bg-zinc-700' : ''}`}
           >
             <p>
@@ -54,6 +59,7 @@ export default function Sidebar() {
           </FlowbiteSidebar.Item>
           <FlowbiteSidebar.Item
             href={ROUTES.DOMAINS}
+            as={Link}
             className={`text-white hover:bg-zinc-600 active:bg-zinc-700 p-3 ${pathname === ROUTES.DOMAINS ? 'bg-zinc-700' : ''}`}
           >
             <p>
@@ -63,6 +69,7 @@ export default function Sidebar() {
           </FlowbiteSidebar.Item>
           <FlowbiteSidebar.Item
             href={ROUTES.SETTINGS}
+            as={Link}
             className={`text-white hover:bg-zinc-600 active:bg-zinc-700 p-3 ${pathname === ROUTES.SETTINGS ? 'bg-zinc-700' : ''}`}
           >
             <p>
