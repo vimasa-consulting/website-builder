@@ -10,7 +10,7 @@ import Loader from "../Loader";
 
 Amplify.configure({ ...awsExports, ssr: true });
 
-function AuthWrapper(props: { children: React.JSX.Element }) {
+function AuthWrapper(props: { children: React.ReactNode }) {
 
   const router = useRouter();
 

@@ -38,7 +38,7 @@ function AmplifyAuthenticatorWrapper(authenticatorProps: AuthenticatorProps): Re
       if (payload?.event === 'signIn') {
         // TODO: route to sign in redirection source
         setTimeout(() => {
-          router.replace(ROUTES.DASHBOARD);
+          router.replace(ROUTES.PROJECTS);
         }, 800);
       }
     });
@@ -52,7 +52,7 @@ function AmplifyAuthenticatorWrapper(authenticatorProps: AuthenticatorProps): Re
   useEffect(() => {
     Auth.currentAuthenticatedUser().then(() => {
       setTimeout(() => {
-        router.replace(ROUTES.DASHBOARD);
+        router.replace(ROUTES.PROJECTS);
       }, 800)
     }).catch(() => {
       // ignore
