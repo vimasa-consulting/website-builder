@@ -1,4 +1,4 @@
-export default function ProjectsPage() {
+export default function Page() {
   return (
     <p>Analytics here...</p>
   );

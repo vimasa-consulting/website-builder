@@ -11,7 +11,7 @@ function Redirect() {
   const router  = useRouter();
 
   useEffect(() => {
-    router.replace(ROUTES.DASHBOARD);
+    router.replace(ROUTES.PROJECTS);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

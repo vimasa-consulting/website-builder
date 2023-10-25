@@ -4,6 +4,7 @@ export const ROUTES = {
   DASHBOARD: '/dashboard',
   EDITOR: '/editor',
   PROJECTS: '/projects',
+  NEW_PROJECT: '/projects/new',
   TIPS: '/tips',
   ANALYTICS: '/analytics',
   DOMAINS: '/domains',

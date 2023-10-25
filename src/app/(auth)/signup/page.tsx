@@ -1,7 +1,7 @@
 import Authenticator from '@/components/Identity/Authenticator';
 import Loader from '@/components/Loader';
 
-export default function SignUpPage() {
+export default function Page() {
 
   return (
     <div className="flex-grow md:flex">
