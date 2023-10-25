@@ -1,40 +1,43 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Amplify, Auth } from "aws-amplify";
 import { useRouter } from 'next/navigation'
 
 import awsExports from "../../aws-exports";
 import { ROUTES } from "../../services/NavigationService";
 import Loader from "../Loader";
+import AuthProvider from "@/context/identity/AuthProvider";
+import { AuthContext } from "@/context/identity/AuthContext";
+import { AuthStatus } from "@/types/identity";
 
 Amplify.configure({ ...awsExports, ssr: true });
 
-function AuthWrapper(props: { children: React.ReactNode }) {
+function AuthRouter(props: { children: React.ReactNode }) {
 
+  const { status } = useContext(AuthContext);
   const router = useRouter();
 
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
   useEffect(() => {
-
-    async function ensureLoggedIn() {
-      try {
-        const authUser = await Auth.currentAuthenticatedUser();
-        console.log('Logged in user', authUser);
-        setIsAuthenticated(true);
-      } catch (error) {
-        console.log('Redirecting for sign in', error);
-        router.push(ROUTES.SIGN_IN);
-      }
+    if (status === AuthStatus.unauthenticated) {
+      console.log('Redirecting for sign in');
+      router.push(ROUTES.SIGN_IN);
     }
-
-    ensureLoggedIn();
     // ignore router dep warning
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [status]);
 
-  return isAuthenticated ? props.children : <Loader />;
+  return status === AuthStatus.authenticated ? props.children : <Loader />;
+}
+
+function AuthWrapper(props: { children: React.ReactNode }) {
+  return (
+    <AuthProvider>
+      <AuthRouter>
+        {props.children}
+      </AuthRouter>
+    </AuthProvider>
+  );
 }
 
 export default AuthWrapper;

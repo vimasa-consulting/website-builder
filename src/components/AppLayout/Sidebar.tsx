@@ -1,6 +1,5 @@
 'use client';
 
-import Link from "next/link";
 import { Sidebar as FlowbiteSidebar } from 'flowbite-react';
 
 import styles from '@/styles/sidebar.module.css';
@@ -14,7 +13,7 @@ export default function Sidebar() {
   // TODO: refactor items
 
   return (
-    <FlowbiteSidebar aria-label="sidebar" className={`${styles.navBar} md:w-80`}>
+    <FlowbiteSidebar aria-label="sidebar" className={`${styles.navBar} md:w-72`}>
       <FlowbiteSidebar.Items className="">
         <FlowbiteSidebar.ItemGroup>
           <FlowbiteSidebar.Item

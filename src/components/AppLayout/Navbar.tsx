@@ -1,15 +1,21 @@
 'use client'
 
+import { AuthContext } from "@/context/identity/AuthContext";
+import { signOut } from "@/services/IdentityService";
 import { ROUTES } from "@/services/NavigationService";
 import { Avatar, Dropdown, Navbar as FlowbiteNavbar } from "flowbite-react";
+import { useContext } from "react";
 // import Image from "next/image";
 
 export default function Navbar() {
+
+  const { cachedUser } = useContext(AuthContext);
+
   return (
     <FlowbiteNavbar
       fluid={true}
       rounded={false}
-      className="bg-black text-white m-5"
+      className="bg-black m-5"
     >
       <FlowbiteNavbar.Brand href={ROUTES.PROJECTS}>
         {/* <Image
@@ -45,10 +51,10 @@ export default function Navbar() {
           }
         >
           <Dropdown.Header>
-            <span className="block text-sm">Bonnie Green</span>
-            <span className="block truncate text-sm font-medium">name@websitebuilder.com</span>
+            <span className="block text-sm">{cachedUser?.attributes.givenName} {cachedUser?.attributes.familyName}</span>
+            <span className="block truncate text-sm font-medium">{cachedUser?.attributes.email}</span>
           </Dropdown.Header>
-          <Dropdown.Item>Sign out</Dropdown.Item>
+          <Dropdown.Item onClick={signOut}>Sign out</Dropdown.Item>
         </Dropdown>
       </div>
     </FlowbiteNavbar>

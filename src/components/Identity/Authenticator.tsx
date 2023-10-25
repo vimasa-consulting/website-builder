@@ -199,7 +199,7 @@ function AmplifyAuthenticatorWrapper(authenticatorProps: AuthenticatorProps): Re
 
   return (
     <AmplifyAuthenticator
-      className={`${styles.authenticator}`}
+      className={`${styles.authenticator} text-black`}
       initialState={authenticatorProps.initialState}
       variation="default"
       components={components}
