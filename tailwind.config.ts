@@ -71,6 +71,16 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      width: {
+        '600': '600px',
+      },
+      height: {
+        '360': '360px',
+      },
+      backgroundColor: {
+        'primary': 'hsl(300, 95%, 30%)',
+        'hover': 'hsl(300, 100%, 20%)'
+      },
     },
   },
   plugins: [

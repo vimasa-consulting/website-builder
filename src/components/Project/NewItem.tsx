@@ -6,12 +6,12 @@ import Link from "next/link";
 import styles from '@/styles/project.module.css';
 import { ROUTES } from "@/services/NavigationService";
 
-export default function NewItem() {
+export default function NewItem({setIsAddNewProjectModalOpen}) {
   return (
     <div className="md:w-3/4">
-      <Link href={ROUTES.NEW_PROJECT}>
         <Card
-          className={`${styles.newItem} bg-black border-dashed h-full`}
+          className={`${styles.newItem} bg-black border-dashed h-full cursor-pointer`}
+          onClick={() => setIsAddNewProjectModalOpen(true)}
         >
           <div className="">
             <p className="text-white font-bold text-center text-xl">
@@ -20,7 +20,6 @@ export default function NewItem() {
             </p>
           </div>
         </Card>
-      </Link>
     </div>
   )
 }
