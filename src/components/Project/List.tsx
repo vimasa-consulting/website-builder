@@ -1,3 +1,5 @@
+'use client'
+
 import { Table } from "flowbite-react";
 import projects from '@/mockdata/projects/projects.json';
 import Item from "./Item";

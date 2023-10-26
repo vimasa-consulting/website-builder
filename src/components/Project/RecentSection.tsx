@@ -1,7 +1,3 @@
-'use client'
-
-import List from "./List";
-import NewItem from "./NewItem";
 import Item from "./RecentItem";
 import projects from '@/mockdata/projects/projects.json';
 
@@ -15,8 +11,6 @@ export default function RecentSection() {
       </div>
       
       <hr className="h-px my-8 bg-gray-600 border-0 w-3/4" />
-      <NewItem />
-      <List/>
     </>
   );
 }
