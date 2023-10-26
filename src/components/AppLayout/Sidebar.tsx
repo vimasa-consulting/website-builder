@@ -18,9 +18,9 @@ export default function Sidebar() {
       <FlowbiteSidebar.Items className="">
         <FlowbiteSidebar.ItemGroup>
           <FlowbiteSidebar.Item
-            href={ROUTES.DASHBOARD}
+            href={ROUTES.GET_STARTED}
             as={Link}
-            className={`text-white hover:bg-zinc-600 active:bg-zinc-700 p-3 ${pathname === ROUTES.DASHBOARD ? 'bg-zinc-700' : ''}`}
+            className={`text-white hover:bg-zinc-600 active:bg-zinc-700 p-3 ${pathname === ROUTES.GET_STARTED ? 'bg-zinc-700' : ''}`}
           >
             <p>
               <span className='pr-2'>🚀</span>

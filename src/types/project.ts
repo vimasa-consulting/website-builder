@@ -1,5 +1,6 @@
 export type Project = {
-  id: string,
+  _id: string,
   name: string,
   imageURL?: string
+  projectHostingAlias: string
 }
