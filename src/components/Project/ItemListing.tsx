@@ -23,16 +23,17 @@ function ItemListing({
     const router = useRouter();
 
     const columns = [
-        columnHelper.accessor('Name', {
+        columnHelper.accessor('name', {
             cell: info => info.getValue(),
             header: () => <span>Name</span>
         }),
-        columnHelper.accessor(row => row.Domain, {
-            id: 'Domain',
+        columnHelper.accessor(row => row.projectHostingAlias, {
+
+            id: 'projectHostingAlias',
             cell: info => info.getValue(),
             header: () => <span>Domain</span>,
         }),
-        columnHelper.accessor(row => row.Domain, {
+        columnHelper.accessor(row => row.projectHostingAlias, {
             id: 'Actions',
             cell: info => <div>
                 <button onClick={() => console.log('row', info)} className='mr-2'>⚙️</button>
@@ -70,7 +71,7 @@ function ItemListing({
     })
 
     function handleTableCellClick(cell: Cell<Project, unknown>) {
-        const cellId = cell?.row?.original?.id
+        const cellId = cell?.row?.original?.["_id"]
         const isActionsColumn = cell?.column?.id === 'Actions'
         if (cellId && !isActionsColumn) {
             router.push(`${navigationBaseURL}/${cellId}`)
@@ -85,7 +86,8 @@ function ItemListing({
     }, [tableData])
 
     return (
-        <div className="p-2 bg-white text-black rounded mt-8 w-3/4 min-h-380">
+        <div className="p-2 bg-white text-black rounded mt-8 w-3/4 min-h-380 flex flex-col justify-between">
+            <div>
             <div className='flex'>
                 <input
                     value={globalFilter ?? ''}
@@ -131,6 +133,7 @@ function ItemListing({
                 </tbody>
             </table>
             <div className="h-2" />
+            </div>
             <div className="flex items-center gap-2">
                 <button
                     className="border rounded p-1 disabled:bg-gray-100"

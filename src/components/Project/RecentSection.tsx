@@ -1,17 +1,20 @@
+import CardItemSkeleton from "./CardItemSkeleton";
 import Item from "./RecentItem";
 
 export default function RecentSection({
   recentItems
 }) {
-  
+
   return (
     <>
       <h3 className="text-xl">Recently Edited</h3>
       <div className="flex flex-wrap mt-5 gap-3">
-        {recentItems.map((project) => <Item key={project._id} project={project} />)}
+        {recentItems?.length ? recentItems.map((project) => <Item key={project._id} project={project} />) :
+        Array.from({length: 2}).map((_, index) => <CardItemSkeleton key={index} />)
+        }
       </div>
-      
-      <hr className="h-px my-8 bg-gray-600 border-0 w-3/4"  />
+
+      <hr className="h-px my-8 bg-gray-600 border-0 w-3/4" />
     </>
   );
 }
