@@ -24,6 +24,12 @@ export default function Page() {
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] = useState(false)
   const [tableData, setTableData] = useState([])
 
+  const columnHeaders = [
+    'Name',
+    'Domain',
+    'Actions'
+  ]
+
   const recentProjects = tableData.slice(0, 2);
 
   function closeModalHandler() {
@@ -32,12 +38,14 @@ export default function Page() {
 
   async function handleNewProjectSubmit(payload: NewProjectPayload) {
     try {
-      const newProject = {
+      const newProjectPayload = {
         name: payload.inputOneData,
         projectHostingAlias: payload.inputTwoData,
       }
 
-      await createProjectForOrganization(newProject)
+      const newProjectResponse = await createProjectForOrganization(newProjectPayload)
+
+      const newProject = newProjectResponse.data
 
       setTableData(prevState => [newProject, ...prevState])
     } catch (error) {
@@ -61,8 +69,8 @@ export default function Page() {
 
   async function handleProjectDeletion(data: CellContext<Project, string>) {
     try {
-      const deletedProject = await deleteProjectByProjectId(data?.['_id'])
-      console.log('deleted', deletedProject)
+      await deleteProjectByProjectId(data?.['_id'])
+      setTableData(prevState => prevState.filter(item => item['_id'] !== data?.['_id']))
     } catch (error) {
       console.log(error)
     }
@@ -88,7 +96,12 @@ export default function Page() {
           popupTitle="Add New Project"
         />
       }
-      <ItemListing tableData={tableData} navigationBaseURL="/projects" handleItemDeletion={handleProjectDeletion} />
+      <ItemListing
+        tableData={tableData}
+        navigationBaseURL="/projects"
+        handleItemDeletion={handleProjectDeletion}
+        columnHeaders={columnHeaders}
+      />
     </div>
   );
 }

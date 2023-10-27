@@ -11,45 +11,60 @@ import {
     CellContext,
 } from '@tanstack/react-table'
 import { Project } from '@/app/(authenticated-routes)/projects/page';
+import { File } from '@/types/file';
 
-const columnHelper = createColumnHelper<Project>()
+const columnHelper = createColumnHelper<Project | File>()
 
-function ItemListing({
+const ItemListing = ({
     tableData,
     navigationBaseURL,
-    handleItemDeletion
-}) {
+    handleItemDeletion,
+    columnHeaders
+}) => {
     const [globalFilter, setGlobalFilter] = React.useState('')
-    const [data, setData] = React.useState<Project[]>([])
     const router = useRouter();
 
-    const columns = [
-        columnHelper.accessor('name', {
-            cell: info => info.getValue(),
-            header: () => <span>Name</span>
-        }),
-        columnHelper.accessor(row => row.projectHostingAlias, {
+    const columns = columnHeaders.map(header => {
+        if (header === 'Path') {
+            return columnHelper.accessor((row: File) => row?.url, {
+                id: 'Path',
+                cell: info => info.getValue(),
+                header: () => <span>Path</span>,
+            })
+        }
 
-            id: 'projectHostingAlias',
-            cell: info => info.getValue(),
-            header: () => <span>Domain</span>,
-        }),
-        columnHelper.accessor(row => row.projectHostingAlias, {
-            id: 'Actions',
-            cell: info => <div>
-                <button onClick={() => console.log('row', info)} className='mr-2'>⚙️</button>
-                <button onClick={() => handleEntryDeletion(info)}>🗑️</button>
-            </div>,
-            header: () => <span>Actions</span>,
-        })
-    ]
+        if (header === 'Actions') {
+            return columnHelper.accessor((row: Project | File) => row.name, {
+                id: 'Actions',
+                cell: info => <div>
+                    <button onClick={() => console.log('row', info)} className='mr-2'>⚙️</button>
+                    <button onClick={() => handleEntryDeletion(info)}>🗑️</button>
+                </div>,
+                header: () => <span>Actions</span>,
+            })
+        }
 
-    async function handleEntryDeletion(info: CellContext<Project, string>) {
+        if (header === 'Domain') {
+            return columnHelper.accessor((row: Project) => row.projectHostingAlias, {
+                id: 'projectHostingAlias',
+                cell: info => info.getValue(),
+                header: () => <span>Domain</span>,
+            })
+        }
+
+        if (header === 'Name') {
+            return columnHelper.accessor('name', {
+                cell: info => info.getValue(),
+                header: () => <span>Name</span>
+            })
+        }
+    })
+
+    async function handleEntryDeletion(info: CellContext<Project | File, string>) {
         try {
             const cellId = info?.row?.original?.['_id']
             if (cellId) {
                 await handleItemDeletion(info?.row?.original)
-                setData(data.filter(item => item?.['_id'] !== cellId))
             }
         } catch (error) {
             console.log(error)
@@ -57,7 +72,7 @@ function ItemListing({
     }
 
     const table = useReactTable({
-        data,
+        data: tableData,
         columns,
         state: {
             globalFilter,
@@ -76,7 +91,7 @@ function ItemListing({
         },
     })
 
-    function handleTableCellClick(cell: Cell<Project, unknown>) {
+    function handleTableCellClick(cell: Cell<Project | File, unknown>) {
         const cellId = cell?.row?.original?.["_id"]
         const isActionsColumn = cell?.column?.id === 'Actions'
         if (cellId && !isActionsColumn) {
@@ -84,12 +99,6 @@ function ItemListing({
 
         }
     }
-
-    useEffect(() => {
-        if (tableData) {
-            setData(tableData)
-        }
-    }, [tableData])
 
     return (
         <div className="p-2 bg-white text-black rounded mt-8 w-3/4 min-h-475 flex flex-col justify-between">
