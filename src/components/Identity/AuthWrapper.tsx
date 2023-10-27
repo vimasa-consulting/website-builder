@@ -10,17 +10,25 @@ import Loader from "@/components/Loader";
 import AuthProvider from "@/context/identity/AuthProvider";
 import AuthContext from "@/context/identity/AuthContext";
 import { AuthStatus } from "@/types/identity";
+import { signOut } from "@/services/AuthService";
 
 Amplify.configure({ ...awsExports, ssr: true });
 
 function AuthRouter(props: { children: React.ReactNode }) {
 
-  const { status } = useContext(AuthContext);
+  const { status, cachedUser } = useContext(AuthContext);
   const router = useRouter();
 
   useEffect(() => {
     if (status === AuthStatus.unauthenticated) {
       console.log('Redirecting for sign in');
+      // ensure fully signed out
+      signOut().catch(() => {
+        // ignore 
+      });
+      router.push(ROUTES.SIGN_IN);
+    } else if (cachedUser && cachedUser.organizations.length === 0) {
+      // route to signIn for org creation
       router.push(ROUTES.SIGN_IN);
     }
     // ignore router dep warning

@@ -3,7 +3,7 @@ import MockAdapter from 'axios-mock-adapter';
 import registerMocks from "./mocks";
 
 const apiInstance = getXHRClient({
-  baseURL: 'http://localhost' // TODO: map via env
+  baseURL: process.env.NEXT_PUBLIC_CORE_API_BASE_URL
 });
 
 if (process.env.NEXT_PUBLIC_MOCK_API_ENABLED === 'true') {

@@ -5,7 +5,7 @@ import { useContext } from "react";
 // import Image from "next/image";
 
 import AuthContext from "@/context/identity/AuthContext";
-import { signOut } from "@/services/IdentityService";
+import { signOut } from "@/services/AuthService";
 import { ROUTES } from "@/services/NavigationService";
 
 export default function Navbar() {
