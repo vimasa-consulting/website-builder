@@ -81,6 +81,12 @@ const config: Config = {
         'primary': 'hsl(300, 95%, 30%)',
         'hover': 'hsl(300, 100%, 20%)'
       },
+      minHeight: {
+        '380': '380px',
+      },
+      minWidth: {
+        '100': '100px'
+      }
     },
   },
   plugins: [

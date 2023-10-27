@@ -10,7 +10,7 @@ export default function RecentSection() {
         {recentProjects.map((project) => <Item key={project._id} project={project} />)}
       </div>
       
-      <hr className="h-px my-8 bg-gray-600 border-0 w-3/4" />
+      <hr className="h-px my-8 bg-gray-600 border-0 w-3/4"  />
     </>
   );
 }

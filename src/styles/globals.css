@@ -40,7 +40,7 @@ ol[role='list'] {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   line-height: 1.5;
 }
 
@@ -87,6 +87,7 @@ select {
 input:focus {
   border: 2px solid rgb(134, 15, 150) !important;
   box-shadow: none !important;
+  outline: none !important;
 }
 
 /* Make sure textareas without a rows attribute are not tiny */
