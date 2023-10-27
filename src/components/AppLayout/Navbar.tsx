@@ -10,7 +10,7 @@ import { ROUTES } from "@/services/NavigationService";
 
 export default function Navbar() {
 
-  const { cachedUser } = useContext(AuthContext);
+  const { cachedAuthUser } = useContext(AuthContext);
 
   return (
     <FlowbiteNavbar
@@ -52,8 +52,8 @@ export default function Navbar() {
           }
         >
           <Dropdown.Header>
-            <span className="block text-sm">{cachedUser?.attributes.givenName} {cachedUser?.attributes.familyName}</span>
-            <span className="block truncate text-sm font-medium">{cachedUser?.attributes.email}</span>
+            <span className="block text-sm">{cachedAuthUser?.attributes.givenName} {cachedAuthUser?.attributes.familyName}</span>
+            <span className="block truncate text-sm font-medium">{cachedAuthUser?.attributes.email}</span>
           </Dropdown.Header>
           <Dropdown.Item onClick={signOut}>Sign out</Dropdown.Item>
         </Dropdown>
