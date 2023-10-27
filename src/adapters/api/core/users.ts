@@ -1,5 +1,5 @@
 import { apiInstance } from "./api";
 
-export function get(id: string) {
-  return apiInstance.get(`/users/${id}`);
+export function getBySub(sub: string) {
+  return apiInstance.get(`/users/${sub}`);
 }

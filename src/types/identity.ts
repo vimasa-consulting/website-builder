@@ -1,3 +1,5 @@
+import { User } from "./user"
+
 export enum AuthStatus {
   'configuring',
   'authenticated',
@@ -11,10 +13,11 @@ export type AuthUser = {
     email: string,
     givenName: string,
     familyName: string
-  }
+  },
 }
 
 export type AuthProps = {
-  status: AuthStatus;
-  cachedUser: AuthUser | null
+  status: AuthStatus,
+  cachedAuthUser: AuthUser | null,
+  cachedUser: User | null
 }
