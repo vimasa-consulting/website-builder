@@ -17,6 +17,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/authenticator.module.css';
 import awsExports from "@/aws-exports";
 import { ROUTES } from "@/services/NavigationService";
+import { postSignInActions } from "@/services/AuthService";
 
 const font = Inter({ subsets: ['latin'] })
 Amplify.configure({ ...awsExports, ssr: true });
@@ -37,9 +38,9 @@ function AmplifyAuthenticatorWrapper(authenticatorProps: AuthenticatorProps): Re
       const { payload } = data;
       if (payload?.event === 'signIn') {
         // TODO: route to sign in redirection source
-        setTimeout(() => {
+        postSignInActions().then(() => {
           router.replace(ROUTES.PROJECTS);
-        }, 800);
+        });
       }
     });
     return () => {
@@ -51,9 +52,9 @@ function AmplifyAuthenticatorWrapper(authenticatorProps: AuthenticatorProps): Re
   // Handle if already signed in
   useEffect(() => {
     Auth.currentAuthenticatedUser().then(() => {
-      setTimeout(() => {
+      postSignInActions().then(() => {
         router.replace(ROUTES.PROJECTS);
-      }, 800)
+      });
     }).catch(() => {
       // ignore
     });
