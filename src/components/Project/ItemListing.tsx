@@ -16,7 +16,8 @@ const columnHelper = createColumnHelper<Project>()
 
 function ItemListing({
     tableData,
-    navigationBaseURL
+    navigationBaseURL,
+    handleItemDeletion
 }) {
     const [globalFilter, setGlobalFilter] = React.useState('')
     const [data, setData] = React.useState<Project[]>([])
@@ -43,10 +44,15 @@ function ItemListing({
         })
     ]
 
-    function handleEntryDeletion(info: CellContext<Project, string>) {
-        const cellId = info?.row?.original?.id
-        if (cellId) {
-            setData(data.filter(item => item.id !== cellId))
+    async function handleEntryDeletion(info: CellContext<Project, string>) {
+        try {
+            const cellId = info?.row?.original?.['_id']
+            if (cellId) {
+                await handleItemDeletion(info?.row?.original)
+                setData(data.filter(item => item?.['_id'] !== cellId))
+            }
+        } catch (error) {
+            console.log(error)
         }
     }
 
@@ -86,53 +92,53 @@ function ItemListing({
     }, [tableData])
 
     return (
-        <div className="p-2 bg-white text-black rounded mt-8 w-3/4 min-h-380 flex flex-col justify-between">
+        <div className="p-2 bg-white text-black rounded mt-8 w-3/4 min-h-475 flex flex-col justify-between">
             <div>
-            <div className='flex'>
-                <input
-                    value={globalFilter ?? ''}
-                    onChange={e => setGlobalFilter(String(e.target.value))}
-                    className="p-2 font-lg shadow border-2 border-gray-200 border-block text-black ml-auto rounded"
-                    placeholder="Search all columns..."
-                />
-            </div>
-            <div className="h-2" />
-            <table className='w-full text-black border border-gray-300'>
-                <thead className='border border-gray-300 h-16 bg-rgb-249-250-251'>
-                    {table.getHeaderGroups().map(headerGroup => (
-                        <tr key={headerGroup.id}>
-                            {headerGroup.headers.map(header => (
-                                <th key={header.id} className='border border-gray-300 text-xl'>
-                                    {header.isPlaceholder
-                                        ? null
-                                        : flexRender(
-                                            header.column.columnDef.header,
-                                            header.getContext()
-                                        )}
-                                </th>
-                            ))}
-                        </tr>
-                    ))}
-                </thead>
-                <tbody>
-                    {table.getRowModel().rows.length ? table.getRowModel().rows.map(row => {
-                        return (
-                            <tr key={row.id} className='h-60 border-b border-gray-300'>
-                                {row.getVisibleCells().map(cell => (
-                                    <td key={cell.id} className='text-center cursor-pointer' onClick={() => handleTableCellClick(cell)}>
-                                        <p className='text-center min-w-100 inline-block'>{flexRender(cell.column.columnDef.cell, cell.getContext())}</p>
-                                    </td>
+                <div className='flex'>
+                    <input
+                        value={globalFilter ?? ''}
+                        onChange={e => setGlobalFilter(String(e.target.value))}
+                        className="p-2 font-lg shadow border-2 border-gray-200 border-block text-black ml-auto rounded"
+                        placeholder="Search all columns..."
+                    />
+                </div>
+                <div className="h-2" />
+                <table className='w-full text-black border border-gray-300'>
+                    <thead className='border border-gray-300 h-16 bg-rgb-249-250-251'>
+                        {table.getHeaderGroups().map(headerGroup => (
+                            <tr key={headerGroup.id}>
+                                {headerGroup.headers.map(header => (
+                                    <th key={header.id} className='border border-gray-300 text-xl'>
+                                        {header.isPlaceholder
+                                            ? null
+                                            : flexRender(
+                                                header.column.columnDef.header,
+                                                header.getContext()
+                                            )}
+                                    </th>
                                 ))}
                             </tr>
-                        )
-                    }) :
-                        <tr className='h-10'>
-                            <td colSpan={3} className='text-center border border-gray-300'>No Data Found</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-            <div className="h-2" />
+                        ))}
+                    </thead>
+                    <tbody>
+                        {table.getRowModel().rows.length ? table.getRowModel().rows.map(row => {
+                            return (
+                                <tr key={row.id} className='h-60 border-b border-gray-300'>
+                                    {row.getVisibleCells().map(cell => (
+                                        <td key={cell.id} className='text-center cursor-pointer' onClick={() => handleTableCellClick(cell)}>
+                                            <p className='text-center min-w-100 inline-block'>{flexRender(cell.column.columnDef.cell, cell.getContext())}</p>
+                                        </td>
+                                    ))}
+                                </tr>
+                            )
+                        }) :
+                            <tr className='h-10'>
+                                <td colSpan={3} className='text-center border border-gray-300'>No Data Found</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <div className="h-2" />
             </div>
             <div className="flex items-center gap-2">
                 <button

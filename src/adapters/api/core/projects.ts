@@ -8,3 +8,7 @@ export function getAllProjects(organizationId: string) {
 export function createProject(project: Omit<Project, "_id">) {
     return apiInstance.post('/project/', project);
 }
+
+export function deleteProject(projectId: string) {
+    return apiInstance.delete(`/project/${projectId}`);
+}

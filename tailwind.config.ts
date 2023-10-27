@@ -83,7 +83,7 @@ const config: Config = {
         'hover': 'hsl(300, 100%, 20%)'
       },
       minHeight: {
-        '380': '380px',
+        '475': '475px',
       },
       minWidth: {
         '100': '100px'

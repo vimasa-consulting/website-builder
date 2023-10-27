@@ -5,9 +5,10 @@ import NewItem from "@/components/Project/NewItem";
 import NewItemPopup from "@/components/Project/NewItemPopup";
 import RecentSection from "@/components/Project/RecentSection";
 import { useEffect, useState } from "react";
-import { createProjectForOrganization, getAllProjectsByOrganizationId } from "@/services/ProjectsService";
+import { createProjectForOrganization, deleteProjectByProjectId, getAllProjectsByOrganizationId } from "@/services/ProjectsService";
 import { getUserBySub } from "@/services/UserService";
 import { Auth } from "aws-amplify";
+import { CellContext } from "@tanstack/react-table";
 export interface NewProjectPayload {
   inputOneData: string;
   inputTwoData: string;
@@ -35,7 +36,7 @@ export default function Page() {
         name: payload.inputOneData,
         projectHostingAlias: payload.inputTwoData,
       }
-      
+
       await createProjectForOrganization(newProject)
 
       setTableData(prevState => [newProject, ...prevState])
@@ -53,6 +54,15 @@ export default function Page() {
       const organizationId = userDetails?.data?.organizations[0] || 'abcd'
       const allProjects = await getAllProjectsByOrganizationId(organizationId)
       setTableData(allProjects.data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  async function handleProjectDeletion(data: CellContext<Project, string>) {
+    try {
+      const deletedProject = await deleteProjectByProjectId(data?.['_id'])
+      console.log('deleted', deletedProject)
     } catch (error) {
       console.log(error)
     }
@@ -78,7 +88,7 @@ export default function Page() {
           popupTitle="Add New Project"
         />
       }
-      <ItemListing tableData={tableData} navigationBaseURL="/projects" />
+      <ItemListing tableData={tableData} navigationBaseURL="/projects" handleItemDeletion={handleProjectDeletion} />
     </div>
   );
 }
