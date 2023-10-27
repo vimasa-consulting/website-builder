@@ -82,7 +82,7 @@ export default function Page() {
 
   return (
     <div className="flex flex-col pb-14">
-      <RecentSection recentItems={recentProjects} />
+      <RecentSection itemType="Project"  recentItems={recentProjects} />
       <NewItem itemType="Project" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} />
       {
         isAddNewProjectModalOpen &&

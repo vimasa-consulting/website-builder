@@ -78,7 +78,7 @@ export default function Page({ params }: { params: { projectID: string } }) {
 
   return (
     <div className="flex flex-col pb-14">
-      <RecentSection recentItems={recentFiles} />
+      <RecentSection itemType="File" recentItems={recentFiles} />
       <NewItem itemType="File" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} />
       {
         isAddNewProjectModalOpen &&

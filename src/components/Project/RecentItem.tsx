@@ -20,10 +20,10 @@ const getImageComponent = (url?: string) => {
   );
 }
 
-export default function RecentItem({ project }: { project: Project }) {
+export default function RecentItem({ project, itemType }: { project: Project, itemType: string }) {
   return (
     <div className="max-w-xs">
-      <Link href={`${ROUTES.PROJECTS}/${project._id}`}>
+      <Link href={`${itemType === 'Project' ? ROUTES.PROJECTS : ROUTES.EDITOR}/${project._id}`}>
         <Card
           renderImage={() => getImageComponent(project.imageURL)}
         >
