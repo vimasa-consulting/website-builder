@@ -6,7 +6,7 @@ import Link from "next/link";
 import styles from '@/styles/project.module.css';
 import { ROUTES } from "@/services/NavigationService";
 
-export default function NewItem({setIsAddNewProjectModalOpen}) {
+export default function NewItem({setIsAddNewProjectModalOpen, itemType}) {
   return (
     <div className="md:w-3/4">
         <Card
@@ -16,7 +16,7 @@ export default function NewItem({setIsAddNewProjectModalOpen}) {
           <div className="">
             <p className="text-white font-bold text-center text-xl">
               <span className="px-2 text-2xl">+</span>
-              New Project
+              New {itemType}
             </p>
           </div>
         </Card>

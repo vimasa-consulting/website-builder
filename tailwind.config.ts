@@ -76,6 +76,7 @@ const config: Config = {
       },
       height: {
         '360': '360px',
+        '60': '60px'
       },
       backgroundColor: {
         'primary': 'hsl(300, 95%, 30%)',

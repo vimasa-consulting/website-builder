@@ -5,6 +5,7 @@ import NewItem from "@/components/Project/NewItem";
 import NewItemPopup from "@/components/Project/NewItemPopup";
 import RecentSection from "@/components/Project/RecentSection";
 import { useState } from "react";
+import projects from '@/mockdata/projects/projects.json';
 
 export interface NewProjectPayload {
   inputOneData: string;
@@ -82,6 +83,9 @@ const defaultData: Project[] = [
 
 export default function Page() {
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] = useState(false)
+  const [tableData, setTableData] = useState(defaultData)
+
+  const recentProjects = projects.slice(1, 3);
 
   function closeModalHandler() {
     setIsAddNewProjectModalOpen(false)
@@ -89,13 +93,21 @@ export default function Page() {
 
   function handleNewProjectSubmit(payload: NewProjectPayload) {
     console.log('payload', payload)
+    const latestId = [...tableData].sort((a, b) => +b.id - +a.id)[0].id
+    const newProject = {
+      Name: payload.inputOneData,
+      Domain: payload.inputTwoData,
+      id: String(+latestId + 1)
+    }
+
+    setTableData(prevState => [newProject, ...prevState])
     closeModalHandler()
   }
 
   return (
     <div className="flex flex-col pb-14">
-      <RecentSection />
-      <NewItem setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen}/>
+      <RecentSection recentItems={recentProjects} />
+      <NewItem itemType="Project" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen}/>
       {
         isAddNewProjectModalOpen &&
         <NewItemPopup 
@@ -108,7 +120,7 @@ export default function Page() {
         popupTitle="Add New Project"
         />
       }
-      <ItemListing tableData={defaultData}/>
+      <ItemListing tableData={tableData}/>
       {/* <List/> */}
     </div>
   );

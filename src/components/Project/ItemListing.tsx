@@ -96,12 +96,12 @@ function ItemListing({
                 />
             </div>
             <div className="h-2" />
-            <table className='w-full text-black border border-black'>
-                <thead className='border border-black h-16'>
+            <table className='w-full text-black border border-gray-300'>
+                <thead className='border border-gray-300 h-16 bg-rgb-249-250-251'>
                     {table.getHeaderGroups().map(headerGroup => (
                         <tr key={headerGroup.id}>
                             {headerGroup.headers.map(header => (
-                                <th key={header.id} className='border border-black text-xl'>
+                                <th key={header.id} className='border border-gray-300 text-xl'>
                                     {header.isPlaceholder
                                         ? null
                                         : flexRender(
@@ -116,9 +116,9 @@ function ItemListing({
                 <tbody>
                     {table.getRowModel().rows.length ? table.getRowModel().rows.map(row => {
                         return (
-                            <tr key={row.id} className='h-10'>
+                            <tr key={row.id} className='h-60 border-b border-gray-300'>
                                 {row.getVisibleCells().map(cell => (
-                                    <td key={cell.id} className='text-center border border-black cursor-pointer' onClick={() => handleTableCellClick(cell)}>
+                                    <td key={cell.id} className='text-center cursor-pointer' onClick={() => handleTableCellClick(cell)}>
                                         <p className='text-center min-w-100 inline-block'>{flexRender(cell.column.columnDef.cell, cell.getContext())}</p>
                                     </td>
                                 ))}
@@ -126,7 +126,7 @@ function ItemListing({
                         )
                     }) :
                         <tr className='h-10'>
-                            <td colSpan={3} className='text-center border border-black'>No Data Found</td>
+                            <td colSpan={3} className='text-center border border-gray-300'>No Data Found</td>
                         </tr>
                     }
                 </tbody>
