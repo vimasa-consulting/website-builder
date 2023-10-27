@@ -4,7 +4,6 @@ import NewItem from "@/components/Project/NewItem";
 import NewItemPopup from "@/components/Project/NewItemPopup";
 import RecentSection from "@/components/Project/RecentSection";
 import { useEffect, useState } from "react";
-import files from '@/mockdata/projects/files.json';
 import { createFileForProject, deleteFileByFileId, getAllFilesByProjectId } from "@/services/FilesService";
 import { CellContext } from "@tanstack/react-table";
 
