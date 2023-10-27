@@ -10,6 +10,7 @@ import Loader from "@/components/Loader";
 import AuthProvider from "@/context/identity/AuthProvider";
 import AuthContext from "@/context/identity/AuthContext";
 import { AuthStatus } from "@/types/identity";
+import { signOut } from "@/services/IdentityService";
 
 Amplify.configure({ ...awsExports, ssr: true });
 
@@ -21,6 +22,10 @@ function AuthRouter(props: { children: React.ReactNode }) {
   useEffect(() => {
     if (status === AuthStatus.unauthenticated) {
       console.log('Redirecting for sign in');
+      // ensure fully signed out
+      signOut().catch(() => {
+        // ignore 
+      });
       router.push(ROUTES.SIGN_IN);
     }
     // ignore router dep warning
