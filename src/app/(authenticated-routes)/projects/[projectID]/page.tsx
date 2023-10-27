@@ -120,8 +120,7 @@ export default function Page({ params }: { params: { projectID: string } }) {
         popupTitle="Add New File"
         />
       }
-      <ItemListing tableData={tableData}/>
-
+      <ItemListing tableData={tableData} navigationBaseURL="/editor"/>
     </div>
   );
 }

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { useRouter } from 'next/navigation';
 import {
     useReactTable,
-    ColumnFiltersState,
     getCoreRowModel,
     getFilteredRowModel,
     getPaginationRowModel,
@@ -16,12 +15,12 @@ import { Project } from '@/app/(authenticated-routes)/projects/page';
 const columnHelper = createColumnHelper<Project>()
 
 function ItemListing({
-    tableData
+    tableData,
+    navigationBaseURL
 }) {
     const [globalFilter, setGlobalFilter] = React.useState('')
     const [data, setData] = React.useState<Project[]>([])
     const router = useRouter();
-    const navigationBaseURL = '/projects'
 
     const columns = [
         columnHelper.accessor('Name', {

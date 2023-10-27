@@ -120,7 +120,7 @@ export default function Page() {
         popupTitle="Add New Project"
         />
       }
-      <ItemListing tableData={tableData}/>
+      <ItemListing tableData={tableData} navigationBaseURL="/projects"/>
       {/* <List/> */}
     </div>
   );
