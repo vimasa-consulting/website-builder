@@ -33,4 +33,25 @@ export default function registerMocks(mockInstance: MockAdapter) {
             "__v": 0
         }
     ]);
+
+    const createProjectRegex = new RegExp('\/project\/');
+    mockInstance.onPost(createProjectRegex).reply(config => {
+        const requestData = JSON.parse(config.data);
+
+        const sampleResponse = {
+                    "_id": "653bb903e0484085b1e89876",
+                    "name": requestData.name,
+                    "organizationId": "653bb8e4e0484085b1e89444",
+                    "files": [],
+                    "ownerUserId": "653bb1338e285cb5ea5464440",
+                    "projectHostingAlias": requestData.projectHostingAlias,
+                    "collaborators": [
+                        "653bb1338e285cb5ea546440"
+                    ],
+                    "__v": 0
+                }
+
+        return [200, sampleResponse];
+    });
+
 }

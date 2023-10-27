@@ -5,11 +5,9 @@ import NewItem from "@/components/Project/NewItem";
 import NewItemPopup from "@/components/Project/NewItemPopup";
 import RecentSection from "@/components/Project/RecentSection";
 import { useEffect, useState } from "react";
-import projects from '@/mockdata/projects/projects.json';
-import { getAllProjectsByOrganizationId } from "@/services/ProjectsService";
+import { createProjectForOrganization, getAllProjectsByOrganizationId } from "@/services/ProjectsService";
 import { getUserBySub } from "@/services/UserService";
 import { Auth } from "aws-amplify";
-
 export interface NewProjectPayload {
   inputOneData: string;
   inputTwoData: string;
@@ -31,16 +29,20 @@ export default function Page() {
     setIsAddNewProjectModalOpen(false)
   }
 
-  function handleNewProjectSubmit(payload: NewProjectPayload) {
-    console.log('payload', payload)
-    const latestId = [...tableData].sort((a, b) => +b.id - +a.id)[0].id
-    const newProject = {
-      Name: payload.inputOneData,
-      Domain: payload.inputTwoData,
-      id: String(+latestId + 1)
+  async function handleNewProjectSubmit(payload: NewProjectPayload) {
+    try {
+      const newProject = {
+        name: payload.inputOneData,
+        projectHostingAlias: payload.inputTwoData,
+      }
+      
+      await createProjectForOrganization(newProject)
+
+      setTableData(prevState => [newProject, ...prevState])
+    } catch (error) {
+      console.log(error)
     }
 
-    setTableData(prevState => [newProject, ...prevState])
     closeModalHandler()
   }
 
@@ -51,7 +53,7 @@ export default function Page() {
       const organizationId = userDetails?.data?.organizations[0] || 'abcd'
       const allProjects = await getAllProjectsByOrganizationId(organizationId)
       setTableData(allProjects.data)
-    } catch(error) {
+    } catch (error) {
       console.log(error)
     }
   }

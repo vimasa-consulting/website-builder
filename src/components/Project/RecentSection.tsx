@@ -13,7 +13,6 @@ export default function RecentSection({
         Array.from({length: 2}).map((_, index) => <CardItemSkeleton key={index} />)
         }
       </div>
-
       <hr className="h-px my-8 bg-gray-600 border-0 w-3/4" />
     </>
   );
