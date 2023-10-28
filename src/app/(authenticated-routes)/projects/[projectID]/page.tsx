@@ -15,12 +15,12 @@ export interface NewProjectPayload {
 export type File = {
   Name: string
   Domain: string
-  id: string
+  _id: string
 }
 
 export default function Page({ params }: { params: { projectID: string } }) {
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] = useState(false)
-  const [tableData, setTableData] = useState([])
+  const [tableData, setTableData] = useState<File[]>([])
 
   const columnHeaders = [
     'Name',
@@ -62,10 +62,10 @@ export default function Page({ params }: { params: { projectID: string } }) {
     }
   }
 
-  async function handleFileDeletion(data: CellContext<File, string>) {
+  async function handleFileDeletion(data: File) {
     try {
       await deleteFileByFileId(data?.['_id'])
-      setTableData(prevState => prevState.filter(item => item['_id'] !== data?.['_id']))
+      setTableData(prevState => prevState.filter((item: File) => item['_id'] !== data?.['_id']))
     } catch (error) {
       console.log(error)
     }
