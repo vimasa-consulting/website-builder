@@ -1,6 +1,5 @@
 'use client'
 import ItemListing from "@/components/Project/ItemListing";
-import List from "@/components/Project/List";
 import NewItem from "@/components/Project/NewItem";
 import NewItemPopup from "@/components/Project/NewItemPopup";
 import RecentSection from "@/components/Project/RecentSection";
