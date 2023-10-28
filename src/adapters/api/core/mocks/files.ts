@@ -8,7 +8,7 @@ export default function registerMocks(mockInstance: MockAdapter) {
         {
             "_id": "653bb74d9759245f93ca2b92044",
             "name": "File 1",
-            "url": "test1.test.com",
+            "url": "/",
             "builderData": "htmlData",
             "projectId": "653bb3a6187018ad655dc924",
             "__v": 0
@@ -16,7 +16,7 @@ export default function registerMocks(mockInstance: MockAdapter) {
         {
             "_id": "653bb7519759435f93ca2b92047",
             "name": "File 2",
-            "url": "test2.test.com",
+            "url": "/home",
             "builderData": "htmlData",
             "projectId": "653bb3a6187018ad655dc924",
             "__v": 0
@@ -24,7 +24,7 @@ export default function registerMocks(mockInstance: MockAdapter) {
         {
             "_id": "653bb74d9744459f93ca2b92044",
             "name": "File 3",
-            "url": "test3.test.com",
+            "url": "/about",
             "builderData": "htmlData",
             "projectId": "653bb3a6187018ad655dc924",
             "__v": 0
@@ -32,7 +32,7 @@ export default function registerMocks(mockInstance: MockAdapter) {
         {
             "_id": "653bb7522219759f93ca2b92047",
             "name": "File 4",
-            "url": "test4.test.com",
+            "url": "/company/mission",
             "builderData": "htmlData",
             "projectId": "653bb3a6187018ad655dc924",
             "__v": 0
@@ -40,7 +40,7 @@ export default function registerMocks(mockInstance: MockAdapter) {
         {
             "_id": "653bb7566619759f93ca2b92047",
             "name": "File 5",
-            "url": "test5.test.com",
+            "url": "/testimony",
             "builderData": "htmlData",
             "projectId": "653bb3a6187018ad655dc924",
             "__v": 0
@@ -67,7 +67,7 @@ export default function registerMocks(mockInstance: MockAdapter) {
     mockInstance.onDelete(deleteFileRegex).reply(200, {
         "_id": "653a238e5d63a9f6d5965d36",
         "name": "File 1",
-        "url": "test.test.com",
+        "url": "/",
         "builderData": "htmlDataUpdated",
         "__v": 0
     }
