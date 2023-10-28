@@ -8,6 +8,8 @@ import { createProjectForOrganization, deleteProjectByProjectId, getAllProjectsB
 import { getUserBySub } from "@/services/UserService";
 import { Auth } from "aws-amplify";
 import { CellContext } from "@tanstack/react-table";
+import { ProjectTableData } from "@/types/project";
+
 export interface NewProjectPayload {
   inputOneData: string;
   inputTwoData: string;
@@ -21,7 +23,7 @@ export type Project = {
 
 export default function Page() {
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] = useState(false)
-  const [tableData, setTableData] = useState<Project[]>([])
+  const [tableData, setTableData] = useState<ProjectTableData[]>([])
 
   const columnHeaders = [
     'Name',
