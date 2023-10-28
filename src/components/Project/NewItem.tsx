@@ -6,7 +6,7 @@ import Link from "next/link";
 import styles from '@/styles/project.module.css';
 import { ROUTES } from "@/services/NavigationService";
 
-export default function NewItem({setIsAddNewProjectModalOpen, itemType}) {
+export default function NewItem({setIsAddNewProjectModalOpen, itemType}: any) {
   return (
     <div className="md:w-3/4">
         <Card
