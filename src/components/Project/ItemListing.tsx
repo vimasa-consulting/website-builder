@@ -20,11 +20,11 @@ const ItemListing = ({
     navigationBaseURL,
     handleItemDeletion,
     columnHeaders
-}) => {
+}: any) => {
     const [globalFilter, setGlobalFilter] = React.useState('')
     const router = useRouter();
 
-    const columns = columnHeaders.map(header => {
+    const columns = columnHeaders.map((header:string) => {
         if (header === 'Path') {
             return columnHelper.accessor((row: File) => row?.url, {
                 id: 'Path',
@@ -36,7 +36,7 @@ const ItemListing = ({
         if (header === 'Actions') {
             return columnHelper.accessor((row: Project | File) => row.name, {
                 id: 'Actions',
-                cell: info => <div>
+                cell: (info: any) => <div>
                     <button onClick={() => console.log('row', info)} className='mr-2'>⚙️</button>
                     <button onClick={() => handleEntryDeletion(info)}>🗑️</button>
                 </div>,
@@ -45,7 +45,7 @@ const ItemListing = ({
         }
 
         if (header === 'Domain') {
-            return columnHelper.accessor((row: Project) => row.projectHostingAlias, {
+            return columnHelper.accessor((row: any) => row.projectHostingAlias, {
                 id: 'projectHostingAlias',
                 cell: info => info.getValue(),
                 header: () => <span>Domain</span>,
@@ -133,7 +133,7 @@ const ItemListing = ({
                         {table.getRowModel().rows.length ? table.getRowModel().rows.map(row => {
                             return (
                                 <tr key={row.id} className='h-60 border-b border-gray-300'>
-                                    {row.getVisibleCells().map(cell => (
+                                    {row.getVisibleCells().map((cell: any) => (
                                         <td key={cell.id} className='text-center cursor-pointer' onClick={() => handleTableCellClick(cell)}>
                                             <p className='text-center min-w-100 inline-block'>{flexRender(cell.column.columnDef.cell, cell.getContext())}</p>
                                         </td>

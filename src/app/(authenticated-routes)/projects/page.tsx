@@ -18,7 +18,7 @@ export interface NewProjectPayload {
 export type Project = {
   name: string
   projectHostingAlias: string
-  id: string
+  _id: string
 }
 
 export default function Page() {
@@ -68,7 +68,7 @@ export default function Page() {
     }
   }
 
-  async function handleProjectDeletion(data: CellContext<Project, string>) {
+  async function handleProjectDeletion(data: Project) {
     try {
       await deleteProjectByProjectId(data?.['_id'])
       setTableData(prevState => prevState.filter(item => item['_id'] !== data?.['_id']))

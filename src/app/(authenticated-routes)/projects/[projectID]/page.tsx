@@ -16,7 +16,7 @@ export interface NewProjectPayload {
 export type File = {
   Name: string
   Domain: string
-  id: string
+  _id: string
 }
 
 export default function Page({ params }: { params: { projectID: string } }) {
@@ -63,10 +63,10 @@ export default function Page({ params }: { params: { projectID: string } }) {
     }
   }, [params.projectID])
 
-  async function handleFileDeletion(data: CellContext<File, string>) {
+  async function handleFileDeletion(data: File) {
     try {
       await deleteFileByFileId(data?.['_id'])
-      setTableData(prevState => prevState.filter(item => item['_id'] !== data?.['_id']))
+      setTableData(prevState => prevState.filter((item: File) => item['_id'] !== data?.['_id']))
     } catch (error) {
       console.log(error)
     }
