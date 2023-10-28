@@ -5,10 +5,10 @@ const DashboardPage = () => {
   return (
     <div className="min-h-full flex flex-col">
       <div className="flex flex-row justify-center">
-        <div className=" p-5 w-64 border-r-2 border-black">
+        <div className=" p-5 w-64">
           <NavigationPanel />
           </div>
-        <div className=" p-5">
+        <div className="p-5">
           <CentrePanel />
           </div>
       </div>

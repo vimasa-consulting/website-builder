@@ -4,9 +4,9 @@ import Sidebar from "./Sidebar";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-full flex flex-col">
       <Navbar />
-      <div className="h-screen flex flex-row">
+      <div className="h-full flex flex-row min-h-screen">
         <Sidebar />
         <AppView>
           {children}
