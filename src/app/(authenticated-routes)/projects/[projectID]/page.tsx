@@ -66,7 +66,7 @@ export default function Page({ params }: { params: { projectID: string } }) {
   async function handleFileDeletion(data: File) {
     try {
       await deleteFileByFileId(data?.['_id'])
-      setTableData(prevState => prevState.filter((item: File) => item['_id'] !== data?.['_id']))
+      setTableData(prevState => prevState.filter((item: FileTableData) => item['_id'] !== data?.['_id']))
     } catch (error) {
       console.log(error)
     }
