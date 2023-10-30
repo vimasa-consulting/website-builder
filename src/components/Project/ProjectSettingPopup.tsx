@@ -63,7 +63,7 @@ export default function DismissableModal(props: any) {
               </div>
               <input type="file" id="img" name="img" accept="image/*" />
             </div>
-            <div className="max-w-md" id="fileUpload">
+            {/* <div className="max-w-md" id="fileUpload">
               <div className="mb-2 block">
                 <Label htmlFor="file" value="FavIcon" />
               </div>
@@ -71,7 +71,7 @@ export default function DismissableModal(props: any) {
                 // helperText="FavIcons"
                 id="file"
               />
-            </div>
+            </div> */}
             <h4 className="text-1xl text-gray-500 dark:text-gray-400">
               Add Custom HTML
             </h4>

@@ -206,10 +206,7 @@ const ItemListing = ({
           <button onClick={() => setOpenModal("dismissible")}>
             Open Modal
           </button>
-          <FileSettigPopupModal
-            openModal={openModal}
-            setOpenModal={setOpenModal}
-          />
+          <DismissableModal openModal={openModal} setOpenModal={setOpenModal} />
         </span>
       </div>
     </div>
