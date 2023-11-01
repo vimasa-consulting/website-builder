@@ -9,8 +9,6 @@ import {
   Tooltip,
 } from "flowbite-react";
 import React, { useState } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
 import AceEditor from "react-ace";
 
 import "ace-builds/src-noconflict/mode-java";
@@ -19,7 +17,7 @@ import "ace-builds/src-noconflict/ext-language_tools";
 
 import { AiFillInfoCircle } from "react-icons/ai";
 
-export default function FileSettigPopupModal(props: any) {
+export default function FileSettingPopupModal(props: any) {
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
   function onChange(newValue: any) {

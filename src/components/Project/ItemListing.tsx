@@ -14,7 +14,7 @@ import { Project } from "@/app/(authenticated-routes)/projects/page";
 import { File } from "@/types/file";
 import { Button, Modal } from "flowbite-react";
 import DismissableModal from "./ProjectSettingPopup";
-import FileSettigPopupModal from "./FileSettigPopup";
+import FileSettingPopupModal from "./FileSettingPopup";
 
 const columnHelper = createColumnHelper<Project | File>();
 
@@ -214,22 +214,17 @@ const ItemListing = ({
           {openSettingModal && (
             <DismissableModal onClose={closeModal} closeOnOutsideClick={true} />
           )} */}
-          <button onClick={() => setOpenModal("dismissible")}>
-            Open Modal
-          </button>
+
           {/* <FileSettigPopupModal
             openModal={openModal}
             setOpenModal={setOpenModal}
           /> */}
           {/* <DismissableModal onClose={openModal} closeOnOutsideClick={true} /> */}
-          {/* <DismissableModal
-            openModal={openModalFile}
-            setOpenModal={setOpenModalFile}
-          /> */}
-          <FileSettigPopupModal
+          <DismissableModal openModal={openModal} setOpenModal={setOpenModal} />
+          {/* <FileSettingPopupModal
             openModal={openModal}
             setOpenModal={setOpenModal}
-          />
+          /> */}
           {/* <DismissableModal openModal={openModal} setOpenModal={setOpenModal} /> */}
         </span>
       </div>
