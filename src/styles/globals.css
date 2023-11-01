@@ -836,6 +836,7 @@ textarea:not([rows]) {
   width: auto !important;
   height: auto !important;
   min-height: auto !important;
+  min-width: 105px !important;
 }
 
 .gjs-one-bg {
@@ -854,6 +855,12 @@ textarea:not([rows]) {
 .gjs-four-color,
 .gjs-four-color-h:hover {
   color: #871097 !important;
+}
+
+.gjs-block__media {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .gjs-block__media > svg {
