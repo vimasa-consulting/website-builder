@@ -831,3 +831,46 @@ textarea:not([rows]) {
   stroke-width: 10;
   stroke: #fff;
 }
+
+.gjs-block {
+  width: auto !important;
+  height: auto !important;
+  min-height: auto !important;
+  min-width: 105px !important;
+}
+
+.gjs-one-bg {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.gjs-two-color {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.gjs-three-bg {
+  background-color: #871097 !important;
+  color: white;
+}
+
+.gjs-four-color,
+.gjs-four-color-h:hover {
+  color: #871097 !important;
+}
+
+.gjs-block__media {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.gjs-block__media > svg {
+width: 47.4px;
+height: 47.4px;
+}
+
+.gjs-block-section {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}

@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import grapesjs from "grapesjs";
+import React, { useEffect, useRef, useState } from "react";
+import grapesjs, { Editor } from "grapesjs";
 import plugin from "grapesjs-preset-webpage"; // Import the preset
 import "grapesjs/dist/css/grapes.min.css";
 import "toastr/build/toastr.min.css";
@@ -20,8 +20,53 @@ import gjsTyped from "grapesjs-typed";
 import gjsStyleBg from "grapesjs-style-bg";
 
 import toastr from "toastr";
+import CustomBlockPopup from "@/components/Editor/CustomBlockPopup";
+import firstImpressionMapping from "@/components/Editor/CustomBlocks/FirstImpression/firstImpressionMapping";
+import customBlockMapping from "@/components/Editor/CustomBlocks/customBlockMapping";
+import logicMapping from "@/components/Editor/CustomBlocks/Logic/logicMapping";
+import emotionMapping from "@/components/Editor/CustomBlocks/Emotion/emotionMapping";
+import urgencyMapping from "@/components/Editor/CustomBlocks/Urgency/urgencyMapping";
+import valueMapping from "@/components/Editor/CustomBlocks/Value/valueMapping";
+import trustMapping from "@/components/Editor/CustomBlocks/Trust/trustMapping";
+import brandConnectMapping from "@/components/Editor/CustomBlocks/BrandConnect/brandConnectMapping";
+import userActionsMapping from "@/components/Editor/CustomBlocks/UserActions/userActionsMapping";
+import { BlockDetails } from "@/types/blockDetails";
+
+export interface BlockOptions {
+  label: string;
+  key: string;
+  content: string;
+}
 
 function GrapesJSComponent() {
+  const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] = useState(false)
+  const [blockDetails, setBlockDetails] = useState<BlockDetails | null>(null)
+  const [grapeJSEditor, setGrapeJSEditor] = useState<Editor | null>(null)
+  const [blockOptions, setBlockOptions] = useState<BlockOptions[]>([])
+
+  function getBlockOptions(blockType: string) {
+    switch (blockType) {
+      case 'First Impression':
+        return firstImpressionMapping
+      case 'Logic':
+        return logicMapping
+      case 'Emotion':
+        return emotionMapping
+      case 'Urgency':
+        return urgencyMapping
+      case 'Value':
+        return valueMapping
+      case 'Trust':
+        return trustMapping
+      case 'Brand Connect':
+        return brandConnectMapping
+      case 'User Actions':
+        return userActionsMapping
+      default:
+        return firstImpressionMapping
+    }
+  }
+
   useEffect(() => {
     var lp = "./img/";
     var plp = "https://via.placeholder.com/350x250/";
@@ -42,6 +87,9 @@ function GrapesJSComponent() {
     ];
     const editor = grapesjs.init({
       container: "#gjs",
+      blockManager: {
+        blocks: customBlockMapping
+      },
       fromElement: true,
       showOffsets: true,
       assetManager: {
@@ -398,30 +446,75 @@ function GrapesJSComponent() {
         },
       },
     });
+
+    editor.on('block', function (event) {
+      if (event.model && event.event === "block:drag:stop") {
+        const options = getBlockOptions(event?.options?.attributes?.id)
+        setBlockOptions(options)
+        console.log('block event', event)
+        setBlockDetails(event?.options?.attributes)
+        setIsAddNewProjectModalOpen(true)
+      }
+    });
+
+    editor.on('block:add', function (event) {
+      if (event?.option?.content) {
+        editor.addComponents(event.option.content)
+      }
+      setIsAddNewProjectModalOpen(false)
+      setBlockDetails(null)
+      setBlockOptions([])
+    });
+
+    setGrapeJSEditor(editor)
   }, []);
 
   return (
-    <div id="gjs">
-      <header className="header-banner">
-        <div className="container-width">
-          <div className="logo-container">
-            <div className="logo">GrapesJS</div>
+    <>
+      <div id="gjs">
+        {/* <header className="header-banner">
+          <div id="irdk" className="container-width">
+            <div className="logo-container">
+            </div>
+            <nav className="menu">
+              <div className="menu-item">BUILDER
+              </div>
+              <div className="menu-item">TEMPLATE
+              </div>
+              <div className="menu-item">WEB
+              </div>
+            </nav>
+            <div id="ix15" className="logo">GrapesJS
+            </div>
+            <div className="clearfix">
+            </div>
+            <div id="i4v2o" className="lead-title">Build your templates without coding
+            </div>
+            <div className="gjs-row">
+              <div className="gjs-cell">
+              </div>
+            </div>
+            <div className="sub-lead-title">All text blocks could be edited easily with double clicking on it. You can create new text blocks with the command from the left panel
+            </div>
+            <div className="lead-btn">Hover me
+            </div>
           </div>
-          <nav className="menu">
-            <div className="menu-item">BUILDER</div>
-            <div className="menu-item">TEMPLATE</div>
-            <div className="menu-item">WEB</div>
-          </nav>
-          <div className="clearfix"></div>
-          <div className="lead-title">Build your templates without coding</div>
-          <div className="sub-lead-title">
-            All text blocks could be edited easily with double clicking on it.
-            You can create new text blocks with the command from the left panel
+          <div className="gjs-row">
+            <div className="gjs-cell">
+            </div>
           </div>
-          <div className="lead-btn">Hover me</div>
-        </div>
-      </header>
-    </div>
+        </header> */}
+      </div>
+      {
+        isAddNewProjectModalOpen &&
+        <CustomBlockPopup
+          onClose={() => setIsAddNewProjectModalOpen(false)}
+          grapeJSEditor={grapeJSEditor}
+          blockDetails={blockDetails}
+          blockOptions={blockOptions}
+        />
+      }
+    </>
   );
 }
 
