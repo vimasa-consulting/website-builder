@@ -3,10 +3,9 @@ import ItemListing from "@/components/Project/ItemListing";
 import NewItem from "@/components/Project/NewItem";
 import NewItemPopup from "@/components/Project/NewItemPopup";
 import RecentSection from "@/components/Project/RecentSection";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { createFileForProject, deleteFileByFileId, getAllFilesByProjectId } from "@/services/FilesService";
 import { CellContext } from "@tanstack/react-table";
-import { FileTableData } from "@/types/file";
 
 export interface NewProjectPayload {
   inputOneData: string;
@@ -16,12 +15,12 @@ export interface NewProjectPayload {
 export type File = {
   Name: string
   Domain: string
-  _id: string
+  id: string
 }
 
 export default function Page({ params }: { params: { projectID: string } }) {
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] = useState(false)
-  const [tableData, setTableData] = useState<FileTableData[]>([])
+  const [tableData, setTableData] = useState([])
 
   const columnHeaders = [
     'Name',
@@ -53,7 +52,7 @@ export default function Page({ params }: { params: { projectID: string } }) {
     closeModalHandler()
   }
 
-  const loadFileDetails = useCallback(async () => {
+  async function loadFileDetails() {
     try {
       const projectId = params?.projectID
       const allProjects = await getAllFilesByProjectId(projectId)
@@ -61,12 +60,12 @@ export default function Page({ params }: { params: { projectID: string } }) {
     } catch (error) {
       console.log(error)
     }
-  }, [params.projectID])
+  }
 
-  async function handleFileDeletion(data: File) {
+  async function handleFileDeletion(data: CellContext<File, string>) {
     try {
       await deleteFileByFileId(data?.['_id'])
-      setTableData(prevState => prevState.filter((item: FileTableData) => item['_id'] !== data?.['_id']))
+      setTableData(prevState => prevState.filter(item => item['_id'] !== data?.['_id']))
     } catch (error) {
       console.log(error)
     }
@@ -74,7 +73,7 @@ export default function Page({ params }: { params: { projectID: string } }) {
 
   useEffect(() => {
     loadFileDetails()
-  }, [loadFileDetails])
+  }, [])
 
   return (
     <div className="flex flex-col pb-14">

@@ -1,5 +1,6 @@
 'use client'
 import ItemListing from "@/components/Project/ItemListing";
+import List from "@/components/Project/List";
 import NewItem from "@/components/Project/NewItem";
 import NewItemPopup from "@/components/Project/NewItemPopup";
 import RecentSection from "@/components/Project/RecentSection";
@@ -8,8 +9,6 @@ import { createProjectForOrganization, deleteProjectByProjectId, getAllProjectsB
 import { getUserBySub } from "@/services/UserService";
 import { Auth } from "aws-amplify";
 import { CellContext } from "@tanstack/react-table";
-import { ProjectTableData } from "@/types/project";
-
 export interface NewProjectPayload {
   inputOneData: string;
   inputTwoData: string;
@@ -18,12 +17,12 @@ export interface NewProjectPayload {
 export type Project = {
   name: string
   projectHostingAlias: string
-  _id: string
+  id: string
 }
 
 export default function Page() {
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] = useState(false)
-  const [tableData, setTableData] = useState<ProjectTableData[]>([])
+  const [tableData, setTableData] = useState([])
 
   const columnHeaders = [
     'Name',
@@ -68,7 +67,7 @@ export default function Page() {
     }
   }
 
-  async function handleProjectDeletion(data: Project) {
+  async function handleProjectDeletion(data: CellContext<Project, string>) {
     try {
       await deleteProjectByProjectId(data?.['_id'])
       setTableData(prevState => prevState.filter(item => item['_id'] !== data?.['_id']))
