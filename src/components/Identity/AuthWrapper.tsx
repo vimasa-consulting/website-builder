@@ -1,11 +1,10 @@
-"use client";
+'use client'
 
 import { useContext, useEffect } from "react";
 import { Amplify } from "aws-amplify";
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation'
 
-import awsExports from "../../../aws-exports";
-// ("@/aws-exports");
+import awsExports from "@/aws-exports";
 import { ROUTES } from "@/services/NavigationService";
 import Loader from "@/components/Loader";
 import AuthProvider from "@/context/identity/AuthProvider";
@@ -16,15 +15,16 @@ import { signOut } from "@/services/AuthService";
 Amplify.configure({ ...awsExports, ssr: true });
 
 function AuthRouter(props: { children: React.ReactNode }) {
+
   const { status, cachedUser } = useContext(AuthContext);
   const router = useRouter();
 
   useEffect(() => {
     if (status === AuthStatus.unauthenticated) {
-      console.log("Redirecting for sign in");
+      console.log('Redirecting for sign in');
       // ensure fully signed out
       signOut().catch(() => {
-        // ignore
+        // ignore 
       });
       router.push(ROUTES.SIGN_IN);
     } else if (cachedUser && cachedUser.organizations.length === 0) {
@@ -41,7 +41,9 @@ function AuthRouter(props: { children: React.ReactNode }) {
 function AuthWrapper(props: { children: React.ReactNode }) {
   return (
     <AuthProvider>
-      <AuthRouter>{props.children}</AuthRouter>
+      <AuthRouter>
+        {props.children}
+      </AuthRouter>
     </AuthProvider>
   );
 }

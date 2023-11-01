@@ -11,7 +11,7 @@
   "dependencies": {
     "@aws-amplify/ui-react": "^5.3.1",
     "@radix-ui/react-slot": "^1.0.2",
-    "@tanstack/react-table": "^8.10.7",
+    "@tanstack/react-table": "8.10.7",
     "aws-amplify": "^5.3.11",
     "axios": "^1.5.1",
     "class-variance-authority": "^0.7.0",
@@ -34,9 +34,7 @@
     "lucide-react": "^0.287.0",
     "next": "13.5.4",
     "react": "^18",
-    "react-ace": "^10.1.0",
     "react-dom": "^18",
-    "react-icons": "^4.11.0",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "toastr": "^2.1.4"
