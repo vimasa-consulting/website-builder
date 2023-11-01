@@ -27,6 +27,7 @@ const ItemListing = ({
   const [globalFilter, setGlobalFilter] = React.useState("");
   const router = useRouter();
   const [openModal, setOpenModal] = useState<string | undefined>();
+  const [openModalFile, setOpenModalFile] = useState<string | undefined>();
 
   const columns = columnHeaders.map((header) => {
     if (header === "Path") {
@@ -37,12 +38,22 @@ const ItemListing = ({
       });
     }
 
+    const handleSettings = (row: any) => {
+      // {
+      //   row.name === "Project"
+      //     ? setOpenModal("dismissible")
+      //     : setOpenModalFile("dismissible");
+      // }
+      setOpenModal("dismissible");
+      console.log("row");
+    };
+
     if (header === "Actions") {
       return columnHelper.accessor((row: Project | File) => row.name, {
         id: "Actions",
         cell: (info) => (
           <div>
-            <button onClick={() => console.log("row", info)} className="mr-2">
+            <button onClick={handleSettings} className="mr-2">
               ⚙️
             </button>
             <button onClick={() => handleEntryDeletion(info)}>🗑️</button>
@@ -107,7 +118,7 @@ const ItemListing = ({
     if (cellId && !isActionsColumn) {
       router.push(`${navigationBaseURL}/${cellId}`);
     }
-    setOpenModal("dismissible");
+    // setOpenModal("dismissible");
   }
 
   return (
@@ -206,7 +217,20 @@ const ItemListing = ({
           <button onClick={() => setOpenModal("dismissible")}>
             Open Modal
           </button>
-          <DismissableModal openModal={openModal} setOpenModal={setOpenModal} />
+          {/* <FileSettigPopupModal
+            openModal={openModal}
+            setOpenModal={setOpenModal}
+          /> */}
+          {/* <DismissableModal onClose={openModal} closeOnOutsideClick={true} /> */}
+          {/* <DismissableModal
+            openModal={openModalFile}
+            setOpenModal={setOpenModalFile}
+          /> */}
+          <FileSettigPopupModal
+            openModal={openModal}
+            setOpenModal={setOpenModal}
+          />
+          {/* <DismissableModal openModal={openModal} setOpenModal={setOpenModal} /> */}
         </span>
       </div>
     </div>

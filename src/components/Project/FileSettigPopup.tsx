@@ -167,7 +167,7 @@ export default function FileSettigPopupModal(props: any) {
               </div>
               <TextInput
                 id="name"
-                placeholder="name@company.com"
+                placeholder="Title tag"
                 value={input1}
                 onChange={(e) => setInput1(e.target.value)}
                 required
@@ -179,7 +179,7 @@ export default function FileSettigPopupModal(props: any) {
               </div>
               <TextInput
                 id="name"
-                placeholder="name@company.com"
+                placeholder="Meta Description"
                 value={input1}
                 onChange={(e) => setInput1(e.target.value)}
                 required
@@ -191,7 +191,7 @@ export default function FileSettigPopupModal(props: any) {
               </div>
               <TextInput
                 id="name"
-                placeholder="name@company.com"
+                placeholder="Open Graph Title"
                 value={input1}
                 onChange={(e) => setInput1(e.target.value)}
                 required
@@ -203,7 +203,7 @@ export default function FileSettigPopupModal(props: any) {
               </div>
               <TextInput
                 id="name"
-                placeholder="name@company.com"
+                placeholder="Graph Description"
                 value={input1}
                 onChange={(e) => setInput1(e.target.value)}
                 required
