@@ -5,7 +5,7 @@ export function getAllFiles(projectId: string) {
     return apiInstance.get(`/files/?projectId=${projectId}`);
 }
 
-export function createFile(file: Omit<File, "_id">) {
+export function createFile(file: Omit<File, '_id' | 'createdAt' | 'updatedAt'>) {
     return apiInstance.post('/file/', file);
 }
 

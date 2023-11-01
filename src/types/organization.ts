@@ -4,5 +4,6 @@ export type Organization = {
 }
 
 export type CreateOrganizationPayload = {
-  name: string
+  name: string,
+  userId: string, // TOOD: remove
 }

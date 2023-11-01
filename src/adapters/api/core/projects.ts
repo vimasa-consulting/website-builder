@@ -5,7 +5,7 @@ export function getAllProjects(organizationId: string) {
     return apiInstance.get(`/projects/?organizationId=${organizationId}`);
 }
 
-export function createProject(project: Omit<Project, "_id">) {
+export function createProject(project: Omit<Project, '_id' | 'imageURL' >) {
     return apiInstance.post('/project/', project);
 }
 
