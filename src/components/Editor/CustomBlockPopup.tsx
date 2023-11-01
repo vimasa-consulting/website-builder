@@ -5,8 +5,8 @@ import React from 'react';
 
 interface CustomPopupProps {
     onClose: () => void;
-    grapeJSEditor: Editor
-    blockDetails: BlockDetails
+    grapeJSEditor: Editor | null
+    blockDetails: BlockDetails | null
     blockOptions:  BlockOptions[]
 }
 
@@ -21,7 +21,7 @@ const CustomBlockPopup: React.FC<CustomPopupProps> = ({ onClose, grapeJSEditor, 
                 >
                     ✖️
                 </button>
-                <h2 className="text-xl font-semibold mb-4 text-black text-center">{blockDetails.id}</h2>
+                <h2 className="text-xl font-semibold mb-4 text-black text-center">{blockDetails?.id}</h2>
                 <div className="mb-6 mt-6">
                 </div>
                 <div className="flex flex-wrap flex-col max-h-80 justify-center">
@@ -30,7 +30,7 @@ const CustomBlockPopup: React.FC<CustomPopupProps> = ({ onClose, grapeJSEditor, 
                             <button
                             key={option.key}
                             className="bg-primary text-white px-4 py-2 rounded font-bold hover:bg-hover m-4"
-                            onClick={() => grapeJSEditor.trigger("block:add", {blockDetails, option})}
+                            onClick={() => grapeJSEditor?.trigger("block:add", {blockDetails, option})}
                         >
                             {option.label}
                         </button>
