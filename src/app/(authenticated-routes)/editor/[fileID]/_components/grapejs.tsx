@@ -39,6 +39,18 @@ export interface BlockOptions {
   content: string;
 }
 
+// TODO: map from imported components itself
+const customBlockIDS = [
+  'First Impression',
+  'Logic',
+  'Emotion',
+  'Urgency',
+  'Value',
+  'Trust',
+  'Brand Connect',
+  'User Actions'
+];
+
 function getBlockOptions(blockType: string) {
   switch (blockType) {
     case 'First Impression':
@@ -71,7 +83,7 @@ export default function GrapesJSComponent() {
   const onEditor = (editor: Editor) => {
 
     editor.on('block', function (event) {
-      if (event.model && event.event === "block:drag:stop") {
+      if (event.model && event.event === "block:drag:stop" && customBlockIDS.includes(event?.options?.attributes?.id)) {
         const options = getBlockOptions(event?.options?.attributes?.id)
         setBlockOptions(options)
         console.log('block event', event)
@@ -111,7 +123,7 @@ export default function GrapesJSComponent() {
     lp + "bg-gr-v.png",
   ];
 
-  const styleManager:any = {
+  const styleManager: any = {
     sectors: [{
       name: 'General',
       properties: [
