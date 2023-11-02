@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@aws-amplify/ui-react": "^5.3.1",
+    "@grapesjs/react": "^1.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@tanstack/react-table": "8.10.7",
     "aws-amplify": "^5.3.11",
@@ -19,6 +20,7 @@
     "flowbite": "^1.8.1",
     "flowbite-react": "^0.6.4",
     "grapesjs": "^0.21.7",
+    "grapesjs-blocks-basic": "^1.0.2",
     "grapesjs-component-countdown": "^1.0.2",
     "grapesjs-custom-code": "^1.0.2",
     "grapesjs-parser-postcss": "^1.0.3",
