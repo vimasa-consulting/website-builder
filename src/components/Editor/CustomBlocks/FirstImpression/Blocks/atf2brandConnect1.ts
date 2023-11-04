@@ -86,7 +86,7 @@ const atf2BrandConnect1Component = (editor: Editor) => {
             }
 
             .${classPrefix}-offer-cta {
-              color: #000;
+              color: #fff;
               text-align: center;
               font-size: 25px;
               font-style: normal;
