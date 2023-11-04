@@ -66,7 +66,6 @@ const atf1Conversion1Component = (editor: Editor) => {
               display: flex;
               flex-direction: row;
               height: 70vh;
-              border: 1px solid black;
             }
 
             .${classPrefix}-left-column {
