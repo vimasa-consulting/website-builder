@@ -55,6 +55,7 @@ const atf2BrandConnect2Component = (editor: Editor) => {
               display: flex;
               flex-direction: row;
               height: 70vh;
+              background: #E9E9E9;              
             }
 
             .${classPrefix}-left-column {
@@ -92,7 +93,7 @@ const atf2BrandConnect2Component = (editor: Editor) => {
               font-weight: 500;
               line-height: normal;
               padding: 10px 20px;
-              background: #d9d9d9;
+              background: #676767;
               border-radius: 8px;
             }
 
