@@ -4,6 +4,7 @@ import initTrust from "./Trust";
 import initLogic from "./Logic";
 import initEmotion from "./Emotion";
 import initUrgency from "./Urgency";
+import initValue from "./Value";
 
 export default function init(editor: Editor) {
   initFirstImpression(editor);
@@ -11,4 +12,5 @@ export default function init(editor: Editor) {
   initLogic(editor);
   initEmotion(editor);
   initUrgency(editor);
+  initValue(editor);
 }
