@@ -57,18 +57,18 @@ const atf1ProductAwareness3Component = (editor: Editor) => {
                 <div class="${classPrefix}-list-wrapper">
                   <div class="${classPrefix}-list-item">
                     <img class="${classPrefix}-item-image" src="https://img.icons8.com/ios/50/000000/checked--v1.png" alt="checked--v1" />
-                    <span class="${classPrefix}-item-content">Mention a point to bring trust</span>
+                    <span class="${classPrefix}-item-content">Product Feature 1</span>
                   </div>
                   <div class="${classPrefix}-list-item">
                     <img class="${classPrefix}-item-image" src="https://img.icons8.com/ios/50/000000/checked--v1.png" alt="checked--v1" />
-                    <span class="${classPrefix}-item-content">Mention a point to bring trust</span>
+                    <span class="${classPrefix}-item-content">Product Feature 2</span>
                   </div>
                   <div class="${classPrefix}-list-item">
                     <img class="${classPrefix}-item-image" src="https://img.icons8.com/ios/50/000000/checked--v1.png" alt="checked--v1" />
-                    <span class="${classPrefix}-item-content">Mention a point to bring trust</span>
+                    <span class="${classPrefix}-item-content">Product Feature 3</span>
                   </div>
                 </div>
-                <button class="${classPrefix}-offer-cta">Offer based CTA ></button>
+                <button class="${classPrefix}-offer-cta">Shop Now ></button>
               </div>
               <div class="${classPrefix}-right-column">
                 <img class="${classPrefix}-right-image" />

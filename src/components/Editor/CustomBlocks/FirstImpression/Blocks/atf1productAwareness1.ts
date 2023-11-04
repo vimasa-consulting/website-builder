@@ -54,7 +54,7 @@ const atf1ProductAwareness1Component = (editor: Editor) => {
                 Elaborate on the features and benefits of your product that will help your
                 users achieve the aformentioned dream outcome
               </h2>
-              <a class="${classPrefix}-offer-cta">Offer based CTA ></a>
+              <a class="${classPrefix}-offer-cta">Shop Now ></a>
 
             </div>
             <div class="${classPrefix}-right-column">
