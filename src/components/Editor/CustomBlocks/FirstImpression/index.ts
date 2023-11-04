@@ -24,6 +24,14 @@ import {
   atf1ProductAwareness3block,
   atf1ProductAwareness3Component,
 } from "./Blocks/atf1productAwareness3";
+import {
+  atf1BrandConnect1block,
+  atf1BrandConnect1Component,
+} from "./Blocks/atf1brandConnect1";
+import {
+  atf1BrandConnect2block,
+  atf1BrandConnect2Component,
+} from "./Blocks/atf1brandConnect2";
 
 export default function initFirstImpression(editor: Editor) {
   // ATF1CONVERSION1
@@ -44,4 +52,10 @@ export default function initFirstImpression(editor: Editor) {
   // ATF1PRODUCTAWARENESS3
   atf1ProductAwareness3block(editor);
   atf1ProductAwareness3Component(editor);
+  // ATF1BRANDCONNECT1
+  atf1BrandConnect1block(editor);
+  atf1BrandConnect1Component(editor);
+  // ATF1BRANDCONNECT2
+  atf1BrandConnect2block(editor);
+  atf1BrandConnect2Component(editor);
 }
