@@ -143,12 +143,11 @@ const atf1Conversion1Component = (editor: Editor) => {
 
             .${classPrefix}-right-column {
               width: 50vw;
-              background: grey;
             }
 
             .${classPrefix}-right-image {
-              width: auto;
-              height: auto;
+              width: 100%;
+              height: 100%;
             }
 
             @media only screen and (min-width: 601px) and (max-width: 768px) {
@@ -225,6 +224,9 @@ const atf1Conversion1Component = (editor: Editor) => {
               .${classPrefix}-right-column {
                 padding: 2rem 0;
                 width: auto;
+              }
+              .${classPrefix}-right-image {
+                border-radius: 8px;
               }
             }
           `,
