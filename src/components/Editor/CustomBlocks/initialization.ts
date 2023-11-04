@@ -3,10 +3,12 @@ import initFirstImpression from "./FirstImpression/index";
 import initTrust from "./Trust";
 import initLogic from "./Logic";
 import initEmotion from "./Emotion";
+import initUrgency from "./Urgency";
 
 export default function init(editor: Editor) {
   initFirstImpression(editor);
-  initTrust(editor)
-  initLogic(editor)
-  initEmotion(editor)
+  initTrust(editor);
+  initLogic(editor);
+  initEmotion(editor);
+  initUrgency(editor);
 }
