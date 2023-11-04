@@ -1,6 +1,6 @@
 import { Editor } from "grapesjs";
 
-const howItWorks1Block = (editor: Editor) => {
+const shopByOffer1Block = (editor: Editor) => {
     const options = {
         id: "value-shopByOffer1",
         label: "Shop By Offer 1",
@@ -24,7 +24,7 @@ const howItWorks1Block = (editor: Editor) => {
     });
 };
 
-const howItWorks1Component = (editor: Editor) => {
+const shopByOffer1Component = (editor: Editor) => {
     const options = {
         id: "value-shopByOffer1",
         label: "Shop By Offer 1",
@@ -233,4 +233,4 @@ const howItWorks1Component = (editor: Editor) => {
     });
 };
 
-export { howItWorks1Block, howItWorks1Component };
+export { shopByOffer1Block, shopByOffer1Component };
