@@ -96,7 +96,7 @@ const beforeAfter1Component = (editor: Editor) => {
             background-color: #fff;
             display: flex;
             flex-direction: column;
-            padding: 60px 80px;
+            padding: 20px 80px;
             max-height: 700px;
           }
           
@@ -229,6 +229,7 @@ const beforeAfter1Component = (editor: Editor) => {
             display: flex;
             flex-direction: column;
             margin: auto 0;
+            padding-right: 100px;
           }
           
           .${classPrefix}-button {
@@ -245,10 +246,10 @@ const beforeAfter1Component = (editor: Editor) => {
           
           .${classPrefix}-title {
             color: #000;
-            align-self: stretch;
-            font-size: 30px;
+            font-size: 32px;
             margin-bottom: 0;
             font-family: Inter, Roboto, sans-serif;
+            line-height: 1.5;
           }
           
           .${classPrefix}-description {
@@ -311,6 +312,7 @@ const beforeAfter1Component = (editor: Editor) => {
           
             .${classPrefix}-panel-3 {
               margin-top: 40px;
+              padding-right: 0px;
             }
             .${classPrefix}-button {
                 font-size: 14px;
