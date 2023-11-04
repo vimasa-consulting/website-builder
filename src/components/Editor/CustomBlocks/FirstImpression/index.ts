@@ -32,6 +32,27 @@ import {
   atf1BrandConnect2block,
   atf1BrandConnect2Component,
 } from "./Blocks/atf1brandConnect2";
+import atf2Brand from "./atf2Brand";
+import {
+  atf2BrandConnect1block,
+  atf2BrandConnect1Component,
+} from "./Blocks/atf2brandConnect1";
+import {
+  atf2BrandConnect2block,
+  atf2BrandConnect2Component,
+} from "./Blocks/atf2brandConnect2";
+import {
+  atf2Conversion1block,
+  atf2Conversion1Component,
+} from "./Blocks/atf2conversion1";
+import {
+  atf2Conversion2block,
+  atf2Conversion2Component,
+} from "./Blocks/atf2conversion2";
+import {
+  atf2Conversion3block,
+  atf2Conversion3Component,
+} from "./Blocks/atf2conversion3";
 
 export default function initFirstImpression(editor: Editor) {
   // ATF1CONVERSION1
@@ -58,4 +79,20 @@ export default function initFirstImpression(editor: Editor) {
   // ATF1BRANDCONNECT2
   atf1BrandConnect2block(editor);
   atf1BrandConnect2Component(editor);
+
+  // ATF2BRANDCONNECT1
+  atf2BrandConnect1block(editor);
+  atf2BrandConnect1Component(editor);
+  // ATF2BRANDCONNECT2
+  atf2BrandConnect2block(editor);
+  atf2BrandConnect2Component(editor);
+  // ATF2CONVERSION1
+  atf2Conversion1block(editor);
+  atf2Conversion1Component(editor);
+  // ATF2CONVERSION2
+  atf2Conversion2block(editor);
+  atf2Conversion2Component(editor);
+  // ATF2CONVERSION3
+  atf2Conversion3block(editor);
+  atf2Conversion3Component(editor);
 }

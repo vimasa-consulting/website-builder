@@ -1,20 +1,20 @@
 import { Editor } from "grapesjs";
 
 const options = {
-  id: "firstImpression-atf2-brand-connect1",
-  label: "ATF2 BrandConnect1",
+  id: "firstImpression-atf2-conversion1",
+  label: "ATF2 Conversion1",
   block: {},
   props: {},
   style: "",
   category: "First Impression",
-  classPrefix: "firstImpression-atf2-brand-connect1",
+  classPrefix: "firstImpression-atf2-conversion1",
   styleAdditional: "",
   media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
     <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z"/>
   </svg>`,
   // ...opt,
 };
-const atf2BrandConnect1block = (editor: Editor) => {
+const atf2Conversion1block = (editor: Editor) => {
   // create a block
   editor.Blocks.add(options.id, {
     media: options.media,
@@ -25,7 +25,7 @@ const atf2BrandConnect1block = (editor: Editor) => {
   });
 };
 
-const atf2BrandConnect1Component = (editor: Editor) => {
+const atf2Conversion1Component = (editor: Editor) => {
   const { classPrefix } = options;
   // Create component
   editor.Components.addType(options.id, {
@@ -37,11 +37,22 @@ const atf2BrandConnect1Component = (editor: Editor) => {
         components: `
            <section class="${classPrefix}-section">
             <div class="${classPrefix}-left-column">
-              <h1 class="${classPrefix}-h1">Your Brand Positioning In one bold line</h1>
+              <div class="${classPrefix}-rating-wrapper">
+                <div class="${classPrefix}-image-wrapper">
+                  <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
+                  <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
+                  <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
+                  <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
+                  <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
+                </div>
+                <span class="${classPrefix}-rating">4.5/5 (2400 reviews)</span>
+              </div>
+              <h1 class="${classPrefix}-h1">Talk about the dream outcome for your user</h1>
               <h2 class="${classPrefix}-h2">
-                Use this section to establish a connection between your brand positioning and the line of products you offer as a solution. This helps convey your brand story strongly.
+                Elaborate on the features and benefits of your product that will help your
+                users achieve the aformentioned dream outcome
               </h2>
-              <a class="${classPrefix}-offer-cta">Explore More ></a>
+              <a class="${classPrefix}-offer-cta">Offer based CTA ></a>
 
             </div>
             <div class="${classPrefix}-right-column">
@@ -65,6 +76,23 @@ const atf2BrandConnect1Component = (editor: Editor) => {
               align-items: flex-start;
               justify-content: center;
               padding: 10rem 5rem;
+            }
+
+            .${classPrefix}-rating-wrapper {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 20px;
+              margin-bottom: 20px;
+            }
+
+            .${classPrefix}-rating-img {
+              width: 25px;
+              height: 25px;
+            }
+
+            .${classPrefix}-rating {
+              color: rgba(0, 0, 0, 0.5);
             }
 
             .${classPrefix}-h1 {
@@ -140,6 +168,22 @@ const atf2BrandConnect1Component = (editor: Editor) => {
                 width: auto;
                 align-items: center;
               }
+              .${classPrefix}-rating-wrapper {
+                flex-direction: row;
+                gap: 10px;
+                margin-bottom: 20px;
+              }
+              .${classPrefix}-rating-img {
+                width: 18px;
+                height: 18px;
+              }
+              
+              .${classPrefix}-rating {
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+              }
               .${classPrefix}-h1 {
                 text-align: center;
                 font-size: 26px;
@@ -175,4 +219,4 @@ const atf2BrandConnect1Component = (editor: Editor) => {
   });
 };
 
-export { atf2BrandConnect1block, atf2BrandConnect1Component };
+export { atf2Conversion1block, atf2Conversion1Component };
