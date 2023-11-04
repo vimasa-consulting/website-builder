@@ -87,6 +87,11 @@ const atf1Conversion1Component = (editor: Editor) => {
 
             .${classPrefix}-left-column {
               width: 50vw;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+              padding: 10rem 5rem;
             }
 
             .${classPrefix}-rating-wrapper {
@@ -95,14 +100,6 @@ const atf1Conversion1Component = (editor: Editor) => {
               align-items: center;
               gap: 20px;
               margin-bottom: 20px;
-            }
-
-            .${classPrefix}-left-column {
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: center;
-              padding: 10rem 5rem;
             }
 
             .${classPrefix}-rating-img {
@@ -154,7 +151,7 @@ const atf1Conversion1Component = (editor: Editor) => {
               height: auto;
             }
 
-            @${classPrefix}-media only screen and (min-width: 601px) and (max-width: 768px) {
+            @media only screen and (min-width: 601px) and (max-width: 768px) {
               .${classPrefix}-section {
                 height: auto;
                 padding: 2rem 2rem;
@@ -177,7 +174,7 @@ const atf1Conversion1Component = (editor: Editor) => {
               }
             }
 
-            @${classPrefix}-media only screen and (max-width: 600px) {
+            @media only screen and (max-width: 600px) {
               .${classPrefix}-section {
                 padding: 2rem 2rem;
                 height: auto;
@@ -230,7 +227,6 @@ const atf1Conversion1Component = (editor: Editor) => {
                 width: auto;
               }
             }
-
           `,
       },
     },
