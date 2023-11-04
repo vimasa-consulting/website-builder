@@ -1,21 +1,23 @@
 import { Editor } from "grapesjs";
 
 const options = {
-  id: "firstImpression-atf1-conversion1",
-  label: "ATF1 Conversion1",
+  id: "firstImpression-atf1-product-awareness1",
+  label: "ATF1 Product Awareness1",
   block: {},
   props: {},
   style: "",
   category: "First Impression",
-  classPrefix: "firstImpression-atf1-conversion1",
+  classPrefix: "firstImpression-atf1-product-awareness1",
   styleAdditional: "",
   media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
     <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z"/>
   </svg>`,
   // ...opt,
 };
-const atf1Conversion1block = (editor: Editor) => {
+
+const atf1ProductAwareness1block = (editor: Editor) => {
   // create a block
+  // TODO: check if we need block check
   editor.Blocks.add(options.id, {
     media: options.media,
     label: options.label,
@@ -25,7 +27,7 @@ const atf1Conversion1block = (editor: Editor) => {
   });
 };
 
-const atf1Conversion1Component = (editor: Editor) => {
+const atf1ProductAwareness1Component = (editor: Editor) => {
   const { classPrefix } = options;
   // Create component
   editor.Components.addType(options.id, {
@@ -219,4 +221,4 @@ const atf1Conversion1Component = (editor: Editor) => {
   });
 };
 
-export { atf1Conversion1block, atf1Conversion1Component };
+export { atf1ProductAwareness1block, atf1ProductAwareness1Component };
