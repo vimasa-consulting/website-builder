@@ -1,13 +1,13 @@
 import { Editor } from "grapesjs";
 
 const options = {
-  id: "firstImpression-atf2-conversion3",
-  label: "ATF2 Conversion3",
+  id: "firstImpression-atf2-product-awareness2",
+  label: "ATF2 Product Awareness2",
   block: {},
   props: {},
   style: "",
   category: "First Impression",
-  classPrefix: "firstImpression-atf2-conversion3",
+  classPrefix: "firstImpression-atf2-product-awareness2",
   styleAdditional: "",
   media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
     <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z"/>
@@ -15,9 +15,8 @@ const options = {
   // ...opt,
 };
 
-const atf2Conversion3block = (editor: Editor) => {
+const atf2ProductAwareness2block = (editor: Editor) => {
   // create a block
-  // TODO: check if we need block check
   editor.Blocks.add(options.id, {
     media: options.media,
     label: options.label,
@@ -27,7 +26,7 @@ const atf2Conversion3block = (editor: Editor) => {
   });
 };
 
-const atf2Conversion3Component = (editor: Editor) => {
+const atf2ProductAwareness2Component = (editor: Editor) => {
   const { classPrefix } = options;
   // Create component
   editor.Components.addType(options.id, {
@@ -58,35 +57,21 @@ const atf2Conversion3Component = (editor: Editor) => {
                 <div class="${classPrefix}-list-wrapper">
                   <div class="${classPrefix}-list-item">
                     <img class="${classPrefix}-item-image" src="https://img.icons8.com/ios/50/000000/checked--v1.png" alt="checked--v1" />
-                    <span class="${classPrefix}-item-content">Mention a point to bring trust</span>
+                    <span class="${classPrefix}-item-content">Product Feature 1</span>
                   </div>
                   <div class="${classPrefix}-list-item">
                     <img class="${classPrefix}-item-image" src="https://img.icons8.com/ios/50/000000/checked--v1.png" alt="checked--v1" />
-                    <span class="${classPrefix}-item-content">Mention a point to bring trust</span>
+                    <span class="${classPrefix}-item-content">Product Feature 2</span>
                   </div>
                   <div class="${classPrefix}-list-item">
                     <img class="${classPrefix}-item-image" src="https://img.icons8.com/ios/50/000000/checked--v1.png" alt="checked--v1" />
-                    <span class="${classPrefix}-item-content">Mention a point to bring trust</span>
+                    <span class="${classPrefix}-item-content">Product Feature 3</span>
                   </div>
                 </div>
-                <button class="${classPrefix}-offer-cta">Offer based CTA ></button>
+                <button class="${classPrefix}-offer-cta">Shop Now ></button>
               </div>
               <div class="${classPrefix}-right-column">
                 <img class="${classPrefix}-right-image" />
-              </div>
-            </div>
-            <div class="${classPrefix}-three-column-wrapper">
-              <div class="${classPrefix}-benefits-wrapper">
-                <img class="${classPrefix}-benefit-img" src="https://img.icons8.com/ios-glyphs/50/000000/star--v1.png" />
-                <span class="${classPrefix}-benefits-text">Brand Benefit 1</span>
-              </div>
-              <div class="${classPrefix}-benefits-wrapper">
-                <img class="${classPrefix}-benefit-img" src="https://img.icons8.com/ios-glyphs/50/000000/star--v1.png" />
-                <span class="${classPrefix}-benefits-text">Brand Benefit 2</span>
-              </div>
-              <div class="${classPrefix}-benefits-wrapper">
-                <img class="${classPrefix}-benefit-img" src="https://img.icons8.com/ios-glyphs/50/000000/star--v1.png" />
-                <span class="${classPrefix}-benefits-text">Brand Benefit 3</span>
               </div>
             </div>
           </section>
@@ -170,43 +155,6 @@ const atf2Conversion3Component = (editor: Editor) => {
               height: 100%;
             }
 
-            .${classPrefix}-list-item {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              gap: 10px;
-              margin-bottom: 10px;
-            }
-
-            .${classPrefix}-item-image {
-              width: 33px;
-              height: 33px;
-            }
-
-            /* THREE COLUMN */
-            .${classPrefix}-three-column-wrapper {
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: center;
-              gap: 200px;
-              margin: 5rem auto;
-              padding: 2rem;
-              border-radius: 10px;
-              background: #fff;
-              box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.18);
-              width: 80vw;
-            }
-
-            .${classPrefix}-benefit-img {
-              margin-bottom: 20px;
-            }
-
-            .${classPrefix}-benefits-wrapper {
-              display: flex;
-              flex-direction: column;
-            }
-
           @media only screen and (min-width: 601px) and (max-width: 768px) {
             .${classPrefix}-section {
               padding: 1rem;
@@ -237,16 +185,7 @@ const atf2Conversion3Component = (editor: Editor) => {
               width: 100%;
               height: 100%;
             }
-
-            /* Benefits */
-            .${classPrefix}-three-column-wrapper {
-              margin: 4rem auto;
-              padding: 2rem;
-              width: 80vw;
-              justify-content: center;
-              gap: 100px;
-            }
-            }
+          }
 
           @media only screen and (max-width: 600px) {
             .${classPrefix}-section {
@@ -316,35 +255,6 @@ const atf2Conversion3Component = (editor: Editor) => {
               width: 100%;
               height: 100%;
             }
-
-            /* Benefits */
-            .${classPrefix}-three-column-wrapper {
-              gap: 10px;
-              padding: 10px;
-              margin: 2rem auto;
-              width: 90vw;
-              box-shadow: none;
-              justify-content: space-between;
-            }
-
-            .${classPrefix}-benefits-wrapper {
-              gap: 5px;
-              flex-direction: row;
-            }
-
-            .${classPrefix}-benefit-text {
-              color: #000;
-              font-family: Inter;
-              font-size: 12px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 140%;
-            }
-
-            .${classPrefix}-benefit-img {
-              width: 18px;
-              height: 18px;
-            }
           }
           `,
       },
@@ -352,4 +262,4 @@ const atf2Conversion3Component = (editor: Editor) => {
   });
 };
 
-export { atf2Conversion3block, atf2Conversion3Component };
+export { atf2ProductAwareness2block, atf2ProductAwareness2Component };
