@@ -53,6 +53,18 @@ import {
   atf2Conversion3block,
   atf2Conversion3Component,
 } from "./Blocks/atf2conversion3";
+import {
+  atf2ProductAwareness1block,
+  atf2ProductAwareness1Component,
+} from "./Blocks/atf2productAwareness1";
+import {
+  atf2ProductAwareness2block,
+  atf2ProductAwareness2Component,
+} from "./Blocks/atf2productAwareness2";
+import {
+  atf2ProductAwareness3block,
+  atf2ProductAwareness3Component,
+} from "./Blocks/atf2productAwareness3";
 
 export default function initFirstImpression(editor: Editor) {
   // ATF1CONVERSION1
@@ -80,12 +92,6 @@ export default function initFirstImpression(editor: Editor) {
   atf1BrandConnect2block(editor);
   atf1BrandConnect2Component(editor);
 
-  // ATF2BRANDCONNECT1
-  atf2BrandConnect1block(editor);
-  atf2BrandConnect1Component(editor);
-  // ATF2BRANDCONNECT2
-  atf2BrandConnect2block(editor);
-  atf2BrandConnect2Component(editor);
   // ATF2CONVERSION1
   atf2Conversion1block(editor);
   atf2Conversion1Component(editor);
@@ -95,4 +101,19 @@ export default function initFirstImpression(editor: Editor) {
   // ATF2CONVERSION3
   atf2Conversion3block(editor);
   atf2Conversion3Component(editor);
+  // ATF2PRODUCTAWARENESS1
+  atf2ProductAwareness1block(editor);
+  atf2ProductAwareness1Component(editor);
+  // ATF2PRODUCTAWARENESS2
+  atf2ProductAwareness2block(editor);
+  atf2ProductAwareness2Component(editor);
+  // ATF2PRODUCTAWARENESS3
+  atf2ProductAwareness3block(editor);
+  atf2ProductAwareness3Component(editor);
+  // ATF2BRANDCONNECT1
+  atf2BrandConnect1block(editor);
+  atf2BrandConnect1Component(editor);
+  // ATF2BRANDCONNECT2
+  atf2BrandConnect2block(editor);
+  atf2BrandConnect2Component(editor);
 }
