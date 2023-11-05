@@ -4,7 +4,7 @@ import image from "../../../../../public/verifiedCheckMark.png"
 const reviewsAndRatings3Block = (editor: Editor) => {
     const options = {
         id: "trust-reviewsAndRatings3",
-        label: "Reviews & Ratings 3",
+        label: "Review & Rating 3",
         block: {},
         props: {},
         style: "",
@@ -28,7 +28,7 @@ const reviewsAndRatings3Block = (editor: Editor) => {
 const reviewsAndRatings3Component = (editor: Editor) => {
     const options = {
         id: "trust-reviewsAndRatings3",
-        label: "Reviews & Ratings 3",
+        label: "Review & Rating 3",
         block: {},
         props: {},
         style: "",
