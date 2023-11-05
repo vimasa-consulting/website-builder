@@ -9,6 +9,10 @@ import {
   solutionToUserPain2Component
   } from "./Blocks/solutionToUserPain2";
 
+import {
+    solutionToUserPain3Block,
+    solutionToUserPain3Component
+    } from "./Blocks/solutionToUserPain3";
   
 export default function initEmotion(editor: Editor) {
   solutionToUserPain1Block(editor);
@@ -16,5 +20,8 @@ export default function initEmotion(editor: Editor) {
 
   solutionToUserPain2Block(editor);
   solutionToUserPain2Component(editor);
+
+  solutionToUserPain3Block(editor);
+  solutionToUserPain3Component(editor);
 
 }
