@@ -12,6 +12,7 @@ import { clientListLogos4Block, clientListLogos4Component } from "./Blocks/clien
 import { clientListLogos3Block, clientListLogos3Component } from "./Blocks/clientListLogos3";
 import { clientListLogos2Block, clientListLogos2Component } from "./Blocks/clientListLogos2";
 import { reviewsAndRatings1Block, reviewsAndRatings1Component } from "./Blocks/reviewsAndRatings1";
+import { reviewsAndRatings2Block, reviewsAndRatings2Component } from "./Blocks/reviewsAndRatings2";
   
 
 export default function initTrust(editor: Editor) {
@@ -29,4 +30,6 @@ export default function initTrust(editor: Editor) {
   clientListLogos4Component(editor);
   reviewsAndRatings1Block(editor);
   reviewsAndRatings1Component(editor);
+  reviewsAndRatings2Block(editor);
+  reviewsAndRatings2Component(editor);
 }
