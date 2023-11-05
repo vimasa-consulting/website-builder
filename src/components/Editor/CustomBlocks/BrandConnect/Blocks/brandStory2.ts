@@ -4,7 +4,7 @@ import { result } from 'underscore';
 const brandStory2Block = (editor: Editor) => {
   const options = {
     id: "brandConnect-brandStory2",
-    label: "Before After 2",
+    label: "Brand Story 2",
     block: {},
     props: {},
     style: "",
@@ -28,7 +28,7 @@ const brandStory2Block = (editor: Editor) => {
 const brandStory2Component = (editor: Editor) => {
   const options = {
     id: "brandConnect-brandStory2",
-    label: "Before After 2",
+    label: "Brand Story 2",
     block: {},
     props: {},
     style: "",

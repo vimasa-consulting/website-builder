@@ -4,7 +4,7 @@ import { Editor } from "grapesjs";
 const brandStory3Block = (editor: Editor) => {
   const options = {
     id: "brandConnect-brandStory3",
-    label: "Before After 3",
+    label: "Brand Story 3",
     block: {},
     props: {},
     style: "",
@@ -28,7 +28,7 @@ const brandStory3Block = (editor: Editor) => {
 const brandStory3Component = (editor: Editor) => {
   const options = {
     id: "brandConnect-brandStory3",
-    label: "Before After 3",
+    label: "Brand Story 3",
     block: {},
     props: {},
     style: "",
