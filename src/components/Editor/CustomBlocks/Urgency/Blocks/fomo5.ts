@@ -48,7 +48,7 @@ const fomo5Component = (editor: Editor) => {
                 components: `
                 <div class="${classPrefix}-section">
                     <div class="${classPrefix}-section-heading">
-                        <h2 class="${classPrefix}-h2">Sale Name</h2>
+                        <h2 class="${classPrefix}-h3">[Insert Sale Name] is live now. Talk about extra benefits/value. Shop Now!</h2>
                     </div>
                     <div class="${classPrefix}-section-container">
                         <p class="${classPrefix}-text">Hurry! Sale ends in </p>
@@ -71,13 +71,12 @@ const fomo5Component = (editor: Editor) => {
                 justify-content: center;
                } 
                .${classPrefix}-countdown .countdown-digit{
-                font-size: 2rem;
+                font-size: 1.5rem;
                }
-               .${classPrefix}-h2 {
+               .${classPrefix}-h3 {
                 color: #000;
-                font-size: 36px;
+                font-size: 24px;
                 font-style: normal;
-                font-weight: 600;
                 line-height: 64px;
                 margin: 0;
               }
