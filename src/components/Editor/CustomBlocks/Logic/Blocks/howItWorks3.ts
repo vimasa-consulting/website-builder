@@ -1,14 +1,14 @@
 import { Editor } from "grapesjs";
 
-const howItWorks2Block = (editor: Editor) => {
+const howItWorks3Block = (editor: Editor) => {
   const options = {
-    id: "logic-howItWorks2",
-    label: "How It Works 2",
+    id: "logic-howItWorks3",
+    label: "How It Works 3",
     block: {},
     props: {},
     style: "",
     category: "Logic",
-    classPrefix: "logic-howItWorks2",
+    classPrefix: "logic-howItWorks3",
     styleAdditional: "",
     media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
       <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z"/>
@@ -24,15 +24,15 @@ const howItWorks2Block = (editor: Editor) => {
   });
 };
 
-const howItWorks2Component = (editor: Editor) => {
+const howItWorks3Component = (editor: Editor) => {
   const options = {
-    id: "logic-howItWorks2",
-    label: "How It Works 2",
+    id: "logic-howItWorks3",
+    label: "How It Works 3",
     block: {},
     props: {},
     style: "",
     category: "Logic",
-    classPrefix: "logic-howItWorks2",
+    classPrefix: "logic-howItWorks3",
     styleAdditional: "",
     media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
     <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z"/>
@@ -48,54 +48,52 @@ const howItWorks2Component = (editor: Editor) => {
         components: `
 <section class="${classPrefix}-section">
   <div class="${classPrefix}-card">
-    <div class="${classPrefix}-cardCRHeadingMobile">
+    <div class="${classPrefix}-cardHeading">
       <span class="${classPrefix}-h1">How it Works</span>
       <span class="${classPrefix}-p">Talk about your product&apos;s merits such as convenience, functionality, innovativeness,
         etc.</span>
     </div>
-    <div class="${classPrefix}-cardContentLeft">
-      <img loading="lazy"
-        src="https://placehold.co/500x500"
-        class="${classPrefix}-img" />
-    </div>
-    <div class="${classPrefix}-cardContentRight">
-      <div class="${classPrefix}-cardCRHeading">
-        <span class="${classPrefix}-h1">How it Works</span>
-        <span class="${classPrefix}-p">Talk about your product&apos;s merits such as convenience, functionality, innovativeness,
-          etc.</span>
+    <div class="${classPrefix}-cardContent">
+      <div class="${classPrefix}-showOnlyOnMobile">
+        <img loading="lazy" src="https://placehold.co/400x400" class="${classPrefix}-imgFill" />
       </div>
-      <div class="${classPrefix}-stepsWrapper">
-        <div class="${classPrefix}-stepItem">
-          <div class="${classPrefix}-stepNumber">
-            <p>1</p>
+      <div class="${classPrefix}-cardContentLeft">
+        <div class="${classPrefix}-stepsWrapper">
+          <div class="${classPrefix}-stepItem">
+            <div class="${classPrefix}-stepIcon">
+              <img loading="lazy" src="/editor/component-icons/tv-14.png" class="${classPrefix}-imgFill" />
+            </div>
+            <div class="${classPrefix}-stepContent">
+              <span class="${classPrefix}-h3">Step 1</span>
+              <span class="${classPrefix}-p">Description of the step</span>
+            </div>
           </div>
-          <div class="${classPrefix}-stepContent">
-            <span class="${classPrefix}-h3">Step 1</span>
-            <span class="${classPrefix}-p">Description of the step</span>
+          <div class="${classPrefix}-stepItem">
+            <div class="${classPrefix}-stepIcon">
+              <img loading="lazy" src="/editor/component-icons/delivery.png" class="${classPrefix}-imgFill" />
+            </div>
+            <div class="${classPrefix}-stepContent">
+              <span class="${classPrefix}-h3">Step 2</span>
+              <span class="${classPrefix}-p">Description of the step</span>
+            </div>
+          </div>
+          <div class="${classPrefix}-stepItem">
+            <div class="${classPrefix}-stepIcon">
+              <img loading="lazy" src="/editor/component-icons/no-card.png" class="${classPrefix}-imgFill" />
+            </div>
+            <div class="${classPrefix}-stepContent">
+              <span class="${classPrefix}-h3">Step 3</span>
+              <span class="${classPrefix}-p">Description of the step</span>
+            </div>
           </div>
         </div>
-        <div class="${classPrefix}-stepItem">
-          <div class="${classPrefix}-stepNumber">
-            <p>2</p>
-          </div>
-          <div class="${classPrefix}-stepContent">
-            <span class="${classPrefix}-h3">Step 2</span>
-            <span class="${classPrefix}-p">Description of the step</span>
-          </div>
-        </div>
-        <div class="${classPrefix}-stepItem">
-          <div class="${classPrefix}-stepNumber">
-            <p>3</p>
-          </div>
-          <div class="${classPrefix}-stepContent">
-            <span class="${classPrefix}-h3">Step 3</span>
-            <span class="${classPrefix}-p">Description of the step</span>
-          </div>
-        </div>
+      </div>
+      <div class="${classPrefix}-cardContentRight ${classPrefix}-hideOnMobile">
+        <img loading="lazy" src="https://placehold.co/400x400" class="${classPrefix}-imgFill" />
       </div>
     </div>
   </div>
-</section>
+</section>    
         `,
         styles: `
 .${classPrefix}-h1 {
@@ -159,89 +157,68 @@ const howItWorks2Component = (editor: Editor) => {
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  padding: 80px 60px 80px 80px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-section {
-    padding: 0 40px;
+    padding: 0 10px;
   }
 }
 
 .${classPrefix}-card {
   display: flex;
+  flex-direction: column;
+}
+
+.${classPrefix}-cardContent {
+  display: flex;
   flex-direction: row;
 }
 
 @media (max-width: 425px) {
-  .${classPrefix}-card {
+  .${classPrefix}-cardContent {
     flex-direction: column;
   }
 }
 
-.${classPrefix}-cardCRHeadingMobile {
-  display: none;
+.${classPrefix}-cardContent .${classPrefix}-showOnlyOnMobile {
+  padding-left: 30px;
+}
+
+.${classPrefix}-showOnlyOnMobile .${classPrefix}-imgFill {
+  border-radius: 10px;
+}
+
+.${classPrefix}-cardHeading {
   text-align: center;
-  padding: 50px 0 30px;
+  margin: 0 auto;
 }
 
 @media (max-width: 425px) {
-  .${classPrefix}-cardCRHeadingMobile {
-    display: block;
+  .${classPrefix}-cardHeading {
+    text-align: center;
+    padding: 50px 0 30px;
   }
 }
 
-.${classPrefix}-cardCRHeadingMobile .${classPrefix}-p {
+.${classPrefix}-cardHeading .${classPrefix}-p {
   padding: 10px 0 0 0;
+  max-width: 425px;
 }
 
 .${classPrefix}-cardContentLeft {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border-radius: 10px;
-  width: 50%;
+  width: 60%;
+  padding-right: 40px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-cardContentLeft {
     width: 100%;
+
   }
-}
-
-.${classPrefix}-img {
-  object-fit: fill;
-  object-position: center;
-  overflow: hidden;
-  width: 100%;
-  border-radius: 10px;
-}
-
-.${classPrefix}-cardContentRight {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  padding: 30px 0px 0px 80px;
-}
-
-@media (max-width: 425px) {
-  .${classPrefix}-cardContentRight {
-    width: auto;
-    padding: 0;
-  }
-}
-
-.${classPrefix}-cardCRHeading {
-  max-width: 425px;
-}
-
-@media (max-width: 425px) {
-  .${classPrefix}-cardCRHeading {
-    display: none;
-  }
-}
-
-.${classPrefix}-cardCRHeading .${classPrefix}-p {
-  padding: 20px 0 0 0;
 }
 
 .${classPrefix}-stepsWrapper {
@@ -268,28 +245,47 @@ const howItWorks2Component = (editor: Editor) => {
   border: none;
 }
 
-.${classPrefix}-stepNumber {
+.${classPrefix}-stepIcon {
   color: #000;
-  border-radius: 50%;
-  font: 400 32px Inter, sans-serif;
-  background-color: #d9d9d9;
-  width: 63px;
-  height: 63px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 @media (max-width: 425px) {
-  .${classPrefix}-stepNumber {
-    font: 400 22px Inter, sans-serif;
+  .${classPrefix}-stepIcon {
     width: 40px;
     height: 40px;
   }
 }
 
+.${classPrefix}-imgFill {
+  object-fit: fill;
+  object-position: center;
+  overflow: hidden;
+  width: 100%;
+}
+
 .${classPrefix}-stepContent {
   padding: 5px 20px;
+}
+
+.${classPrefix}-cardContentRight {
+  width: 50%;
+  padding-top: 120px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-cardContentRight {
+    width: auto;
+    padding: 0;
+  }
+}
+
+.${classPrefix}-cardContentRight .${classPrefix}-imgFill {
+  border-radius: 10px;
 }
       `,
       },
@@ -297,4 +293,4 @@ const howItWorks2Component = (editor: Editor) => {
   });
 };
 
-export { howItWorks2Block, howItWorks2Component };
+export { howItWorks3Block, howItWorks3Component };
