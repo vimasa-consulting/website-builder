@@ -49,18 +49,20 @@ const howItWorks2Component = (editor: Editor) => {
 <section class="${classPrefix}-section">
   <div class="${classPrefix}-card">
     <div class="${classPrefix}-cardCRHeadingMobile">
-      <h1>How it Works</h1>
-      <p>Talk about your product&apos;s merits such as convenience, functionality, innovativeness, etc.</p>
+      <span class="${classPrefix}-h1">How it Works</span>
+      <span class="${classPrefix}-p">Talk about your product&apos;s merits such as convenience, functionality, innovativeness,
+        etc.</span>
     </div>
     <div class="${classPrefix}-cardContentLeft">
       <img loading="lazy"
-        srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+        src="https://placehold.co/500x500"
         class="${classPrefix}-img" />
     </div>
     <div class="${classPrefix}-cardContentRight">
       <div class="${classPrefix}-cardCRHeading">
-        <h1>How it Works</h1>
-        <p>Talk about your product&apos;s merits such as convenience, functionality, innovativeness, etc.</p>
+        <span class="${classPrefix}-h1">How it Works</span>
+        <span class="${classPrefix}-p">Talk about your product&apos;s merits such as convenience, functionality, innovativeness,
+          etc.</span>
       </div>
       <div class="${classPrefix}-stepsWrapper">
         <div class="${classPrefix}-stepItem">
@@ -68,8 +70,8 @@ const howItWorks2Component = (editor: Editor) => {
             <p>1</p>
           </div>
           <div class="${classPrefix}-stepContent">
-            <h3>Step 1</h3>
-            <p>Description of the step</p>
+            <span class="${classPrefix}-h3">Step 1</span>
+            <span class="${classPrefix}-p">Description of the step</span>
           </div>
         </div>
         <div class="${classPrefix}-stepItem">
@@ -77,8 +79,8 @@ const howItWorks2Component = (editor: Editor) => {
             <p>2</p>
           </div>
           <div class="${classPrefix}-stepContent">
-            <h3>Step 2</h3>
-            <p>Description of the step</p>
+            <span class="${classPrefix}-h3">Step 2</span>
+            <span class="${classPrefix}-p">Description of the step</span>
           </div>
         </div>
         <div class="${classPrefix}-stepItem">
@@ -86,8 +88,8 @@ const howItWorks2Component = (editor: Editor) => {
             <p>3</p>
           </div>
           <div class="${classPrefix}-stepContent">
-            <h3>Step 3</h3>
-            <p>Description of the step</p>
+            <span class="${classPrefix}-h3">Step 3</span>
+            <span class="${classPrefix}-p">Description of the step</span>
           </div>
         </div>
       </div>
@@ -96,36 +98,55 @@ const howItWorks2Component = (editor: Editor) => {
 </section>
         `,
         styles: `
+.${classPrefix}-h1 {
+  display: block;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.${classPrefix}-h3 {
+  display: block;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.${classPrefix}-p {
+  display: block;
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+}
+
 .${classPrefix}-section {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
   max-height: 800px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-section {
-    padding: 0;
+    padding: 0 40px;
   }
 }
 
 .${classPrefix}-card {
   display: flex;
   flex-direction: row;
-  gap: 40px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-card {
     flex-direction: column;
-    gap: 5px;
   }
 }
 
 .${classPrefix}-cardCRHeadingMobile {
   display: none;
   text-align: center;
+  padding: 50px 0 30px;
 }
 
 @media (max-width: 425px) {
@@ -134,51 +155,48 @@ const howItWorks2Component = (editor: Editor) => {
   }
 }
 
+.${classPrefix}-cardCRHeadingMobile .${classPrefix}-p {
+  padding: 10px 0 0 0;
+}
+
 .${classPrefix}-cardContentLeft {
-  border-radius: 10px;
-  background-color: #e9e9e9;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   justify-content: center;
+  border-radius: 10px;
+  background-color: gray;
   width: 50%;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-cardContentLeft {
     width: 100%;
-    min-height: 250px;
   }
 }
 
 .${classPrefix}-img {
-  aspect-ratio: 1;
-  object-fit: contain;
+  object-fit: fill;
   object-position: center;
-  width: 45px;
-  mix-blend-mode: multiply;
   overflow: hidden;
-  align-self: center;
-  margin-bottom: -34px;
-  max-width: 100%;
+  width: 100%;
 }
 
 .${classPrefix}-cardContentRight {
   display: flex;
   flex-direction: column;
-  padding: 10px 60px 0px 25px;
   width: 50%;
+  padding: 30px 0px 0px 80px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-cardContentRight {
     width: auto;
-    padding: 0 20px;
+    padding: 0;
   }
 }
 
 .${classPrefix}-cardCRHeading {
-  max-width: 350px;
+  max-width: 425px;
 }
 
 @media (max-width: 425px) {
@@ -187,14 +205,20 @@ const howItWorks2Component = (editor: Editor) => {
   }
 }
 
-.${classPrefix}-cardCRHeading h1 {
-  font-size: 40px;
-  font-weight: 600;
+.${classPrefix}-cardCRHeading .${classPrefix}-p {
+  padding: 20px 0 0 0;
 }
 
 .${classPrefix}-stepsWrapper {
   display: flex;
   flex-direction: column;
+  padding-top: 30px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-stepsWrapper {
+    padding-top: 10px;
+  }
 }
 
 .${classPrefix}-stepItem {
@@ -202,6 +226,7 @@ const howItWorks2Component = (editor: Editor) => {
   flex-direction: row;
   align-items: center;
   border-bottom: solid 1px;
+  padding: 30px 0;
 }
 
 .${classPrefix}-stepItem:last-child {
