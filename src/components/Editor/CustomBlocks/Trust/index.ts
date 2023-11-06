@@ -21,6 +21,7 @@ import { testimonials3Block, testimonials3Component } from "./Blocks/testimonial
 import { endorsements3Block, endorsements3Component } from "./Blocks/endorsements3";
 import { endorsements2Block, endorsements2Component } from "./Blocks/endorsements2";
 import { endorsements1Block, endorsements1Component } from "./Blocks/endorsements1";
+import { testimonials4Block, testimonials4Component } from "./Blocks/testimonials4";
   
 
 export default function initTrust(editor: Editor) {
@@ -50,6 +51,8 @@ export default function initTrust(editor: Editor) {
   testimonials2Component(editor);
   testimonials3Block(editor);
   testimonials3Component(editor);
+  testimonials4Block(editor);
+  testimonials4Component(editor);
   endorsements1Block(editor);
   endorsements1Component(editor);
   endorsements2Block(editor);
