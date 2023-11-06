@@ -113,7 +113,7 @@ const howItWorks2Component = (editor: Editor) => {
 .${classPrefix}-card {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 40px;
 }
 
 @media (max-width: 425px) {
@@ -166,13 +166,14 @@ const howItWorks2Component = (editor: Editor) => {
 .${classPrefix}-cardContentRight {
   display: flex;
   flex-direction: column;
-  padding: 10px 0px 0px 25px;
+  padding: 10px 60px 0px 25px;
   width: 50%;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-cardContentRight {
     width: auto;
+    padding: 0 20px;
   }
 }
 
@@ -200,6 +201,11 @@ const howItWorks2Component = (editor: Editor) => {
   display: flex;
   flex-direction: row;
   align-items: center;
+  border-bottom: solid 1px;
+}
+
+.${classPrefix}-stepItem:last-child {
+  border: none;
 }
 
 .${classPrefix}-stepNumber {
