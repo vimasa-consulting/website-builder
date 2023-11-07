@@ -19,6 +19,7 @@ import {
   userAspirations1Component
 } from "./Blocks/userAspirations1";
 import { userAspirations2Block, userAspirations2Component } from "./Blocks/userAspirations2";
+import { personaUseCase2Block, personaUseCase2Component } from "./Blocks/personaUseCase2";
   
 
 
@@ -37,5 +38,8 @@ export default function initEmotion(editor: Editor) {
 
   userAspirations2Block(editor);
   userAspirations2Component(editor);
+
+  personaUseCase2Block(editor);
+  personaUseCase2Component(editor);
 
 }
