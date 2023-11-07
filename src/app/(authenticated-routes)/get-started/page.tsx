@@ -65,10 +65,10 @@ export default function Page() {
         </div>
         <div className={styles.callToAction}>
           {/* <BuilderCta handleNavigation={handleNavigation} /> */}
-          <button className={styles.smartBuilder}>
+          <Link href="/questionnaire">
             {" "}
-            <Link href="/questionnaire">Use Smart Builder </Link>
-          </button>
+            <button className={styles.smartBuilder}> Use Smart Builder</button>
+          </Link>
           <button className={styles.buildIt} onClick={handlePopup}>
             Build it YourSelf{" "}
           </button>
