@@ -5,6 +5,8 @@ import initLogic from "./Logic";
 import initEmotion from "./Emotion";
 import initUrgency from "./Urgency";
 import initValue from "./Value";
+import initBrandConnect from "./BrandConnect";
+import initUserActions from "./UserActions";
 
 export default function init(editor: Editor) {
   initFirstImpression(editor);
@@ -13,4 +15,6 @@ export default function init(editor: Editor) {
   initEmotion(editor);
   initUrgency(editor);
   initValue(editor);
+  initBrandConnect(editor);
+  initUserActions(editor);
 }

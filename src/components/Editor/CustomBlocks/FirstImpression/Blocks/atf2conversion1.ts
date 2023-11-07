@@ -1,20 +1,20 @@
 import { Editor } from "grapesjs";
 
 const options = {
-  id: "firstImpression-atf1-conversion1",
-  label: "ATF1 Conversion1",
+  id: "firstImpression-atf2-conversion1",
+  label: "ATF2 Conversion1",
   block: {},
   props: {},
   style: "",
   category: "First Impression",
-  classPrefix: "firstImpression-atf1-conversion1",
+  classPrefix: "firstImpression-atf2-conversion1",
   styleAdditional: "",
   media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
     <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z"/>
   </svg>`,
   // ...opt,
 };
-const atf1Conversion1block = (editor: Editor) => {
+const atf2Conversion1block = (editor: Editor) => {
   // create a block
   editor.Blocks.add(options.id, {
     media: options.media,
@@ -25,7 +25,7 @@ const atf1Conversion1block = (editor: Editor) => {
   });
 };
 
-const atf1Conversion1Component = (editor: Editor) => {
+const atf2Conversion1Component = (editor: Editor) => {
   const { classPrefix } = options;
   // Create component
   editor.Components.addType(options.id, {
@@ -66,6 +66,7 @@ const atf1Conversion1Component = (editor: Editor) => {
               display: flex;
               flex-direction: row;
               height: 70vh;
+              background: #E9E9E9;
             }
 
             .${classPrefix}-left-column {
@@ -113,14 +114,14 @@ const atf1Conversion1Component = (editor: Editor) => {
             }
 
             .${classPrefix}-offer-cta {
-              color: #000;
+              color: #fff;
               text-align: center;
               font-size: 25px;
               font-style: normal;
               font-weight: 500;
               line-height: normal;
               padding: 10px 20px;
-              background: #d9d9d9;
+              background: #676767;
               border-radius: 8px;
             }
 
@@ -218,4 +219,4 @@ const atf1Conversion1Component = (editor: Editor) => {
   });
 };
 
-export { atf1Conversion1block, atf1Conversion1Component };
+export { atf2Conversion1block, atf2Conversion1Component };

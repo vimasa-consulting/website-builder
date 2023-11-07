@@ -19,6 +19,10 @@ import tuiImageEditorPlugin from "grapesjs-tui-image-editor";
 import typedPlugin from "grapesjs-typed";
 import styleBGPlugin from "grapesjs-style-bg";
 import presetWebpagePlugin from "grapesjs-preset-webpage";
+import navbar from "grapesjs-navbar";
+// Below two packages dont have type defs
+// import lorySlider from "grapesjs-lory-slider";
+// import table from "grapesjs-table";
 
 // import styles from '@/styles/grapejs.module.css';
 import CustomBlockPopup from "@/components/Editor/CustomBlockPopup";
@@ -32,7 +36,7 @@ import trustMapping from "@/components/Editor/CustomBlocks/Trust/trustMapping";
 import brandConnectMapping from "@/components/Editor/CustomBlocks/BrandConnect/brandConnectMapping";
 import userActionsMapping from "@/components/Editor/CustomBlocks/UserActions/userActionsMapping";
 import { BlockDetails } from "@/types/blockDetails";
-import initCustomBlocks from "@/components/Editor/CustomBlocks/initialization"
+import initCustomBlocks from "@/components/Editor/CustomBlocks/initialization";
 
 export interface BlockOptions {
   label: string;
@@ -436,7 +440,7 @@ export default function GrapesJSComponent() {
           storageManager: false, // check persistance per file id & remove
           blockManager: {
             // blocks: customBlockMapping,
-            blocks: []
+            blocks: [],
           },
           showOffsets: true,
           assetManager: {
@@ -459,6 +463,10 @@ export default function GrapesJSComponent() {
             typedPlugin,
             styleBGPlugin,
             presetWebpagePlugin,
+            navbar,
+            // TODO: Undo once fixed
+            // lorySlider,
+            // table,
           ],
           pluginsOpts: {
             "gjs-blocks-basic": { flexGrid: true },
