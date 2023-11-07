@@ -15,13 +15,14 @@ import {
   getAllProjectsByOrganizationId,
 } from "@/services/ProjectsService";
 import { ProjectTableData } from "@/types/project";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export interface NewProjectPayload {
   inputOneData: string;
   inputTwoData: string;
 }
 export default function Page() {
+  const router = useRouter();
   const [startQuiz1, setStartQuiz1] = useState(false);
   const [tableData, setTableData] = useState<ProjectTableData[]>([]);
 
@@ -50,6 +51,7 @@ export default function Page() {
 
       const newProject = newProjectResponse.data;
       console.log("newProject", newProject);
+      router.push("/projects");
 
       setTableData((prevState) => [newProject, ...prevState]);
     } catch (error) {

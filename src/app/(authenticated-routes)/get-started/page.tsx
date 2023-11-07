@@ -17,12 +17,14 @@ import {
   deleteFileByFileId,
   getAllFilesByProjectId,
 } from "@/services/FilesService";
+import { useRouter } from "next/navigation";
 export interface NewProjectPayload {
   inputOneData: string;
   inputTwoData: string;
 }
 
 export default function Page() {
+  const router = useRouter();
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] =
     useState(false);
   const [tableData, setTableData] = useState<FileTableData[]>([]);
@@ -43,6 +45,7 @@ export default function Page() {
       console.log(newFile, "newFile");
 
       setTableData((prevState) => [newFile, ...prevState]);
+      router.push("/projects");
     } catch (error) {
       console.log(error);
     }
