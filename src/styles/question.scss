@@ -1,0 +1,167 @@
+.questionContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .question {
+    display: flex;
+    color: #fff;
+    // margin-top: 250px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    .question-item {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      .single-question {
+        display: flex;
+        .single-question-item {
+          font-size: 32px;
+          margin: 20px 0;
+          color: #fff;
+          font-family: Inter;
+          font-size: 23.974px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 27.969px; /* 116.667% */
+          letter-spacing: 0.48px;
+        }
+      }
+      .checkbox {
+        margin: 10px 0;
+        font-size: 22px;
+        color: #fff;
+        font-family: Inter;
+        font-size: 17.98px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 27.969px; /* 155.556% */
+        letter-spacing: 0.54px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        input[type="checkbox"] {
+          /* Add if not using autoprefixer */
+          -webkit-appearance: none;
+          /* Remove most all native input styles */
+          appearance: none;
+          /* For iOS < 15 */
+          background-color: var(--form-background);
+          /* Not removed via appearance */
+          margin: 0;
+
+          font: inherit;
+          color: currentColor;
+          width: 1.15em;
+          height: 1.15em;
+          border: 0.15em solid currentColor;
+          border-radius: 0.15em;
+          transform: translateY(-0.075em);
+
+          display: grid;
+          place-content: center;
+        }
+
+        input[type="checkbox"]::before {
+          content: "";
+          width: 0.65em;
+          height: 0.65em;
+          clip-path: polygon(
+            14% 44%,
+            0 65%,
+            50% 100%,
+            100% 16%,
+            80% 0%,
+            43% 62%
+          );
+          transform: scale(0);
+          transform-origin: bottom left;
+          transition: 120ms transform ease-in-out;
+          box-shadow: inset 1em 1em var(--form-control-color);
+          /* Windows High Contrast Mode */
+          background-color: #d0f;
+        }
+
+        input[type="checkbox"]:checked::before {
+          transform: scale(1);
+        }
+
+        input[type="checkbox"]:focus {
+          outline: max(2px, 0.15em) solid currentColor;
+          outline-offset: max(2px, 0.15em);
+        }
+        .checkboxLabel {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+        }
+      }
+      .next-button {
+        // width: 100%;
+        text-align: right;
+        // margin-top: 20px;
+        button {
+          color: #fff;
+          background: linear-gradient(to right, #ea7959, #994bed);
+          border: none;
+          cursor: pointer;
+          outline: none;
+          padding: 4px 23px;
+          margin-top: 10px;
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 25px; /* 138.889% */
+          letter-spacing: 0.54px;
+          border-radius: 3px;
+          &:disabled {
+            cursor: none;
+            opacity: 0.4;
+          }
+        }
+      }
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+
+        svg {
+          transform: scale(1.5);
+        }
+        button {
+          // flex: 1;
+          color: #fff;
+          background: linear-gradient(to right, #ea7959, #994bed);
+          border: none;
+          cursor: pointer;
+          outline: none;
+          font-size: 14px;
+          padding: 4px 23px;
+          margin-top: 10px;
+          // width: 97px;
+          // height: 31px;
+          margin-top: 10px;
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 25px; /* 138.889% */
+          letter-spacing: 0.54px;
+          border-radius: 3px;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          svg {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}

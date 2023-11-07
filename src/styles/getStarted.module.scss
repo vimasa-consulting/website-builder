@@ -1,0 +1,96 @@
+.mainContainer {
+  // margin: 100px 0 0 80px;
+  .mainContainerItems {
+    .componentHeader {
+      color: #fff;
+      text-align: left;
+      font-size: 26px;
+      font-family: "Inter";
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+    .videoSection {
+      display: flex;
+      gap: 12px;
+      align-items: flex-end;
+      img {
+        height: 315px;
+        width: 228px;
+      }
+      .tempPlaceholder {
+        width: 700px;
+        height: 400px;
+        background: #f7b68c;
+      }
+    }
+
+    .callToAction {
+      text-align: left;
+      display: flex;
+      button {
+        margin: 46px 20px 0 0;
+        padding: 15px 78px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        font-size: 20px;
+        border-radius: 3px;
+      }
+      .smartBuilder {
+        color: #fff;
+        background: linear-gradient(to right, #ea7959, #994bed);
+        font-family: "Inter";
+        font-size: 20px;
+        letter-spacing: 0.6px;
+      }
+      .buildIt {
+        background-color: #fff;
+        color: #000;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px; /* 125% */
+        letter-spacing: 0.6px;
+      }
+    }
+    .subHeader {
+      text-align: left;
+      font-family: "Inter";
+      font-size: 34px;
+      font-weight: 500;
+      color: #fff;
+
+      margin: 40px 0 20px 0;
+      letter-spacing: 2px;
+      line-height: 40px; /* 117.647% */
+      letter-spacing: 0.68px;
+      span {
+        background-image: linear-gradient(to right, #ea7959, #994bed);
+        color: transparent;
+        background-clip: text;
+      }
+    }
+    .listItem {
+      text-align: left;
+      color: #fff;
+      li {
+        font-family: Inter;
+        font-size: 20px;
+        line-height: 32px; /* 125% */
+        letter-spacing: 0.6px;
+        // padding: 15px 0;
+        font-size: 18px;
+      }
+      .listElement {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        img {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+  }
+}
