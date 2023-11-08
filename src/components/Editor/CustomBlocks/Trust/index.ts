@@ -1,32 +1,82 @@
 import { Editor } from "grapesjs";
 import {
   beforeAfter1Block,
-  beforeAfter1Component
-  } from "./Blocks/beforeAfter1";
+  beforeAfter1Component,
+} from "./Blocks/beforeAfter1";
+import {
+  beforeAfter2Block,
+  beforeAfter2Component,
+} from "./Blocks/beforeAfter2";
 import {
   beforeAfter3Block,
-  beforeAfter3Component
-  } from "./Blocks/beforeAfter3";
-import { clientListLogos1Block, clientListLogos1Component } from "./Blocks/clientListLogos1";
-import { clientListLogos4Block, clientListLogos4Component } from "./Blocks/clientListLogos4";
-import { clientListLogos3Block, clientListLogos3Component } from "./Blocks/clientListLogos3";
-import { clientListLogos2Block, clientListLogos2Component } from "./Blocks/clientListLogos2";
-import { reviewsAndRatings1Block, reviewsAndRatings1Component } from "./Blocks/reviewsAndRatings1";
-import { reviewsAndRatings2Block, reviewsAndRatings2Component } from "./Blocks/reviewsAndRatings2";
-import { reviewsAndRatings3Block, reviewsAndRatings3Component } from "./Blocks/reviewsAndRatings3";
-import { reviewsAndRatings4Block, reviewsAndRatings4Component } from "./Blocks/reviewsAndRatings4";
-import { testimonials1Block, testimonials1Component } from "./Blocks/testimonials1";
-import { testimonials2Block, testimonials2Component } from "./Blocks/testimonials2";
-import { testimonials3Block, testimonials3Component } from "./Blocks/testimonials3";
-import { endorsements3Block, endorsements3Component } from "./Blocks/endorsements3";
-import { endorsements2Block, endorsements2Component } from "./Blocks/endorsements2";
-import { endorsements1Block, endorsements1Component } from "./Blocks/endorsements1";
-import { testimonials4Block, testimonials4Component } from "./Blocks/testimonials4";
-  
+  beforeAfter3Component,
+} from "./Blocks/beforeAfter3";
+import {
+  clientListLogos1Block,
+  clientListLogos1Component,
+} from "./Blocks/clientListLogos1";
+import {
+  clientListLogos4Block,
+  clientListLogos4Component,
+} from "./Blocks/clientListLogos4";
+import {
+  clientListLogos3Block,
+  clientListLogos3Component,
+} from "./Blocks/clientListLogos3";
+import {
+  clientListLogos2Block,
+  clientListLogos2Component,
+} from "./Blocks/clientListLogos2";
+import {
+  reviewsAndRatings1Block,
+  reviewsAndRatings1Component,
+} from "./Blocks/reviewsAndRatings1";
+import {
+  reviewsAndRatings2Block,
+  reviewsAndRatings2Component,
+} from "./Blocks/reviewsAndRatings2";
+import {
+  reviewsAndRatings3Block,
+  reviewsAndRatings3Component,
+} from "./Blocks/reviewsAndRatings3";
+import {
+  reviewsAndRatings4Block,
+  reviewsAndRatings4Component,
+} from "./Blocks/reviewsAndRatings4";
+import {
+  testimonials1Block,
+  testimonials1Component,
+} from "./Blocks/testimonials1";
+import {
+  testimonials2Block,
+  testimonials2Component,
+} from "./Blocks/testimonials2";
+import {
+  testimonials3Block,
+  testimonials3Component,
+} from "./Blocks/testimonials3";
+import {
+  endorsements3Block,
+  endorsements3Component,
+} from "./Blocks/endorsements3";
+import {
+  endorsements2Block,
+  endorsements2Component,
+} from "./Blocks/endorsements2";
+import {
+  endorsements1Block,
+  endorsements1Component,
+} from "./Blocks/endorsements1";
+import {
+  testimonials4Block,
+  testimonials4Component,
+} from "./Blocks/testimonials4";
 
 export default function initTrust(editor: Editor) {
   beforeAfter1Block(editor);
   beforeAfter1Component(editor);
+  beforeAfter2Block(editor);
+  beforeAfter2Component(editor);
   beforeAfter3Block(editor);
   beforeAfter3Component(editor);
   clientListLogos1Block(editor);
