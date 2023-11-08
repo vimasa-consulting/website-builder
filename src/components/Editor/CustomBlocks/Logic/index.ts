@@ -11,6 +11,10 @@ import {
   howItWorks3Block,
   howItWorks3Component
 } from "./Blocks/howItWorks3";
+import {
+  howItWorks4Block,
+  howItWorks4Component
+} from "./Blocks/howItWorks4";
 
 export default function initLogic(editor: Editor) {
   // Before After 1
@@ -20,4 +24,6 @@ export default function initLogic(editor: Editor) {
   howItWorks2Component(editor);
   howItWorks3Block(editor);
   howItWorks3Component(editor);
+  howItWorks4Block(editor);
+  howItWorks4Component(editor);
 }
