@@ -32,12 +32,7 @@ export default function Page() {
     const fetchResponse = async () => {
       try {
         const response = await axios.get(
-          `https://api.typeform.com/forms/${formId}/responses/${responseId}`,
-          {
-            headers: {
-              "Authorization": "Bearer YOUR_API_KEY", // Replace with your Typeform API key
-            },
-          }
+          `/editor/${formId}`
         );
         console.log(response.data);
         //setResponse(response.data);
