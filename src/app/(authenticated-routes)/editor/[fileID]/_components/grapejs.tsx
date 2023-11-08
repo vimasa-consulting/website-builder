@@ -78,8 +78,21 @@ function getBlockOptions(blockType: string) {
       return firstImpressionMapping;
   }
 }
-
-export default function GrapesJSComponent() {
+// Define a function to insert the custom component programmatically
+// @ts-ignore
+function insertCustomComponent(editor) {
+  const customComponent = `<div data-gjs-type="countdown">/div>`;
+  
+  // Use the editor's API to insert the custom component at the current cursor position
+  editor.Panels.getButton("views", "open-blocks").set("active", 1);
+  // @ts-ignore
+  editor.on("block:add", (block) => {
+    block.set("content", customComponent);
+  });
+  editor.runCommand("open-blocks");
+}
+// @ts-ignore
+export default function GrapesJSComponent() {  
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] =
     useState(false);
   const [blockDetails, setBlockDetails] = useState<BlockDetails | null>(null);
@@ -113,6 +126,13 @@ export default function GrapesJSComponent() {
     // loadComponents(editor);
     initCustomBlocks(editor);
     setGrapeJSEditor(editor);
+    editor.addComponents({ type: 'navbar'});
+    editor.addComponents({ type: 'brandConnect-brandStory1'});
+    editor.addComponents({ type: 'emotion-personaUseCase1'});
+    editor.addComponents({ type: 'value-brandBenefits1'});
+    //insertCustomComponent(editor);
+    //insertCustomComponent(editor);
+    
   };
 
   const lp = "./img/";
