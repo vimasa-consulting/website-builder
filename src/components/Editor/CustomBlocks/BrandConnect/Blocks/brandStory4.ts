@@ -1,20 +1,19 @@
 import { Editor } from "grapesjs";
 
+const options = {
+  id: "brandConnect-brandStory4",
+  label: "Brand Story 4",
+  block: {},
+  props: {},
+  style: "",
+  category: "Brand Connect",
+  classPrefix: "brandConnect-brandStory4",
+  styleAdditional: "",
+  media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
+    <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z"/>
+  </svg>`,
+};
 const brandStory4Block = (editor: Editor) => {
-  const options = {
-    id: "brandConnect-brandStory4",
-    label: "Brand Story 4",
-    block: {},
-    props: {},
-    style: "",
-    category: "Brand Connect",
-    classPrefix: "brandConnect-brandStory4",
-    styleAdditional: "",
-    media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
-      <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z"/>
-    </svg>`,
-  };
-
   editor.Blocks.add(options.id, {
     media: options.media,
     label: options.label,
@@ -25,19 +24,6 @@ const brandStory4Block = (editor: Editor) => {
 };
 
 const brandStory4Component = (editor: Editor) => {
-  const options = {
-    id: "brandConnect-brandStory4",
-    label: "Brand Story 4",
-    block: {},
-    props: {},
-    style: "",
-    category: "Brand Connect",
-    classPrefix: "brandConnect-brandStory4",
-    styleAdditional: "",
-    media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
-                <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z"/>
-                </svg>`,
-  };
   const { classPrefix } = options;
   const methods: any = {
     model: {
@@ -132,7 +118,7 @@ const brandStory4Component = (editor: Editor) => {
       `,
       },
     },
-  }
+  };
   editor.Components.addType(options.id, methods);
 };
 
