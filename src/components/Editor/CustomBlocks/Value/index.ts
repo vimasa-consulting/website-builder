@@ -23,6 +23,26 @@ import {
   productShowcase3Block,
   productShowcase3Component,
 } from "./Blocks/productShowcase3";
+import {
+  brandBenefits1Block,
+  brandBenefits1Component,
+} from "./Blocks/brandBenefits1";
+import {
+  brandBenefits2Block,
+  brandBenefits2Component,
+} from "./Blocks/brandBenefits2";
+import {
+  brandBenefits3Block,
+  brandBenefits3Component,
+} from "./Blocks/brandBenefits3";
+import {
+  brandBenefits4Block,
+  brandBenefits4Component,
+} from "./Blocks/brandBenefits4";
+import {
+  brandBenefits5Block,
+  brandBenefits5Component,
+} from "./Blocks/brandBenefits5";
 
 export default function initValue(editor: Editor) {
   shopByOfferValue1Block(editor);
@@ -42,4 +62,19 @@ export default function initValue(editor: Editor) {
 
   productShowcase3Block(editor);
   productShowcase3Component(editor);
+
+  brandBenefits1Block(editor);
+  brandBenefits1Component(editor);
+
+  brandBenefits2Block(editor);
+  brandBenefits2Component(editor);
+
+  brandBenefits3Block(editor);
+  brandBenefits3Component(editor);
+
+  brandBenefits4Block(editor);
+  brandBenefits4Component(editor);
+
+  brandBenefits5Block(editor);
+  brandBenefits5Component(editor);
 }
