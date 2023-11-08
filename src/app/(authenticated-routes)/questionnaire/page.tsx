@@ -5,15 +5,9 @@ import Image from "next/image";
 import "../../../styles/questionnaire.scss";
 import wizard from "../../../public/projects/Wizard2.png";
 import { useState } from "react";
-import QuestionTwo from "../questionnaire/question-two";
 import { PopupButton } from "@typeform/embed-react";
-import TypeformModal from "./TypeFormModal";
 import NewItemPopup from "@/components/Project/NewItemPopup";
-import {
-  createProjectForOrganization,
-  deleteProjectByProjectId,
-  getAllProjectsByOrganizationId,
-} from "@/services/ProjectsService";
+import { createProjectForOrganization } from "@/services/ProjectsService";
 import { ProjectTableData } from "@/types/project";
 import { useRouter } from "next/navigation";
 
