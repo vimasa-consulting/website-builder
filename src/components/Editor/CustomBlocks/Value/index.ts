@@ -19,6 +19,10 @@ import {
   multiProductOffers3Block,
   multiProductOffers3Component,
 } from "./Blocks/multiProductOffer3";
+import {
+  productShowcase3Block,
+  productShowcase3Component,
+} from "./Blocks/productShowcase3";
 
 export default function initValue(editor: Editor) {
   shopByOfferValue1Block(editor);
@@ -35,4 +39,7 @@ export default function initValue(editor: Editor) {
 
   multiProductOffers3Block(editor);
   multiProductOffers3Component(editor);
+
+  productShowcase3Block(editor);
+  productShowcase3Component(editor);
 }
