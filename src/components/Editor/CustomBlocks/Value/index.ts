@@ -43,6 +43,14 @@ import {
   brandBenefits5Block,
   brandBenefits5Component,
 } from "./Blocks/brandBenefits5";
+import {
+  singleProductOffer1Component,
+  singleProductOffer1block,
+} from "./Blocks/singleProductOffer1";
+import {
+  singleProductOffer3Component,
+  singleProductOffer3block,
+} from "./Blocks/singleProductOffer3";
 
 export default function initValue(editor: Editor) {
   shopByOfferValue1Block(editor);
@@ -77,4 +85,10 @@ export default function initValue(editor: Editor) {
 
   brandBenefits5Block(editor);
   brandBenefits5Component(editor);
+
+  singleProductOffer1block(editor);
+  singleProductOffer1Component(editor);
+
+  singleProductOffer3block(editor);
+  singleProductOffer3Component(editor);
 }
