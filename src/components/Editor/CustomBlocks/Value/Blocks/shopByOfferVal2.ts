@@ -69,7 +69,6 @@ const component = (editor: Editor) => {
         `,
         styles: `
           .${classPrefix}-section {
-            border: 1px solid black;
             padding: 3.5rem 1rem;
             margin: 0 auto;
           }
