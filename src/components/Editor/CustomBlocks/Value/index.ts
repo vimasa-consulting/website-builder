@@ -1,10 +1,14 @@
 import { Editor } from "grapesjs";
 import {
-shopByOffer1Block,
-shopByOffer1Component
-} from "./Blocks/shopByOffer1";
+  shopByOfferValue1Block,
+  shopByOfferValue1Component,
+} from "./Blocks/shopByOfferVal1";
+import { shopByOfferValue2Block } from "./Blocks/shopByOfferVal2";
 
 export default function initValue(editor: Editor) {
-  shopByOffer1Block(editor);
-  shopByOffer1Component(editor);
+  shopByOfferValue1Block(editor);
+  shopByOfferValue1Component(editor);
+
+  shopByOfferValue2Block(editor);
+  shopByOfferValue1Component(editor);
 }
