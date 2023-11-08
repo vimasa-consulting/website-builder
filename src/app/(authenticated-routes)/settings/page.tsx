@@ -13,7 +13,7 @@ export default function Page() {
     borderRadius: "10px",
   };
 
-  const handleTabClick = (tabTitle) => {
+  const handleTabClick = (tabTitle:string) => {
     setActiveTab(tabTitle);
     console.log("tabTitle", tabTitle);
   };
