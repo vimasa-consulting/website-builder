@@ -13,7 +13,7 @@ export default function Page() {
     borderRadius: "10px",
   };
 
-  const handleTabClick = (tabTitle) => {
+  const handleTabClick = (tabTitle:string) => {
     setActiveTab(tabTitle);
     console.log("tabTitle", tabTitle);
   };
@@ -88,22 +88,22 @@ export default function Page() {
           )}
           {activeTab === "Profile" && (
             <span className="font-medium text-gray-800 dark:text-white">
-              Dashboard tab's associated content
+              Dashboard tabs associated content
             </span>
           )}
           {activeTab === "Security" && (
             <span className="font-medium text-gray-800 dark:text-white">
-              Settings tab's associated content
+              Settings tabs associated content
             </span>
           )}
           {activeTab === "Team" && (
             <span className="font-medium text-gray-800 dark:text-white">
-              Contacts tab's associated content
+              Contacts tabs associated content
             </span>
           )}
           {activeTab === "Plan & Billings" && (
             <span className="font-medium text-gray-800 dark:text-white">
-              Plan tab's associated content
+              Plan tabs associated content
             </span>
           )}
         </div>
