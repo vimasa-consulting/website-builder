@@ -65,40 +65,14 @@ const beforeAfter2Component = (editor: Editor) => {
                       <div class="${classPrefix}-card">
                       
                         <div class="${classPrefix}-panel">
-                          <img
-                            loading="lazy"
-                            srcset="
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100   100w,
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200   200w,
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400   400w,
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800   800w,
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w,
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w,
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&
-                            "
-                            class="${classPrefix}-image"
-                          />
+                        <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-image" />
                         </div>
                         <div class="${classPrefix}-before"><span>Before</span></div>
                       </div>
                       <div class="${classPrefix}-card-2">
                       <div class="${classPrefix}-after"><span>After</span></div>
                         <div class="${classPrefix}-panel-2">
-                          <img
-                            loading="lazy"
-                            srcset="
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100   100w,
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200   200w,
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400   400w,
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800   800w,
-                              httpscdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200    1200w,
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w,
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w,
-                              https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&
-                            "
-                            class="${classPrefix}-image"
-                          />
+                        <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-image" />
                         </div>
                       </div>
                     </div>
@@ -152,7 +126,6 @@ const beforeAfter2Component = (editor: Editor) => {
             display: flex;
             flex-direction: column;
             margin: 0 auto;
-            padding: 277px 53px 25px 54px;
             height: 550px;
             min-width: 429px;
           }
@@ -181,14 +154,10 @@ const beforeAfter2Component = (editor: Editor) => {
           }
           
           .${classPrefix}-image {
-            aspect-ratio: 1;
-            object-fit: contain;
-            object-position: center;
-            width: 45px;
-            mix-blend-mode: multiply;
-            overflow: hidden;
-            align-self: center;
-            max-width: 100%;
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            border-radius: 10px;
           }
           
           .${classPrefix}-caption {
@@ -207,11 +176,10 @@ const beforeAfter2Component = (editor: Editor) => {
           }
           
           .${classPrefix}-image-2 {
-            position: absolute;
-            height: 100%;
             width: 100%;
+            height: 550px;
             object-fit: cover;
-            object-position: center;
+            border-radius: 10px;
           }
           
           .${classPrefix}-div-6 {
@@ -234,7 +202,6 @@ const beforeAfter2Component = (editor: Editor) => {
             background-color: #e9e9e9;
             display: flex;
             flex-direction: column;
-            padding: 277px 54px 25px;
             height: 550px;
             width: 429px;
           }
@@ -359,9 +326,15 @@ const beforeAfter2Component = (editor: Editor) => {
               display: flex;
               flex-direction: column;
               margin: 0 auto;
-              padding: 230px 53px 25px 54px;
               min-height: 230px;
               min-width: 170px;
+            }
+
+            .${classPrefix}-image {
+              width: 100%;
+              height: 230px;
+              object-fit: cover;
+              border-radius: 10px;
             }
 
             .${classPrefix}-card-2 {
@@ -380,9 +353,15 @@ const beforeAfter2Component = (editor: Editor) => {
               background-color: #e9e9e9;
               display: flex;
               flex-direction: column;
-              padding: 230px 54px 25px;
-              height: 140px;
+              height: 230px;
               width: 160px;
+            }
+
+            .${classPrefix}-image-2 {
+              width: 100%;
+              height: 230px;
+              object-fit: cover;
+              border-radius: 10px;
             }
 
             .${classPrefix}-title {
