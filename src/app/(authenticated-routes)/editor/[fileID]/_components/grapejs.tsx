@@ -126,12 +126,18 @@ export default function GrapesJSComponent() {
     // loadComponents(editor);
     initCustomBlocks(editor);
     setGrapeJSEditor(editor);
-    editor.addComponents({ type: 'navbar'});
-    editor.addComponents({ type: 'brandConnect-brandStory1'});
-    editor.addComponents({ type: 'emotion-personaUseCase1'});
-    editor.addComponents({ type: 'value-brandBenefits1'});
-    //insertCustomComponent(editor);
-    //insertCustomComponent(editor);
+    // TODO: read query param from url block_sequence
+    // TODO: decode and split by comma into array of blocks
+    var blocks=[
+      'dingdong',
+      'navbar',
+      'brandConnect-brandStory1',
+      'emotion-personaUseCase1',
+      'value-brandBenefits1'
+    ]
+    blocks.forEach((item) => {
+      editor.addComponents({ type: item});
+    }); 
     
   };
 
