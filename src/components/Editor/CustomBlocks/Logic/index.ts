@@ -27,6 +27,10 @@ import {
   productFeatures1Block,
   productFeatures1Component
 } from "./Blocks/productFeatures1";
+import {
+  productBenefits3Block,
+  productBenefits3Component
+} from "./Blocks/productBenefits3";
 
 export default function initLogic(editor: Editor) {
   // Before After 1
@@ -44,4 +48,6 @@ export default function initLogic(editor: Editor) {
   howItWorks6Component(editor);
   productFeatures1Block(editor);
   productFeatures1Component(editor);
+  productBenefits3Block(editor);
+  productBenefits3Component(editor);
 }
