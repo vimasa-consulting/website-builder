@@ -175,7 +175,7 @@ const howItWorks6Component = (editor: Editor) => {
 }
 
 .${classPrefix}-cardContent .${classPrefix}-imgFill {
-  width: 80%;
+  max-height: 500px;
   border-radius: 10px;
   background: #E9E9E9;
   min-width: 300px;
@@ -190,7 +190,7 @@ const howItWorks6Component = (editor: Editor) => {
 .${classPrefix}-contentPartialOverlay {
   position: absolute;
   top: 50%;
-  right: -70px;
+  right: -30%;
   transform: translate(0%, -50%);
   padding: 30px;
   max-width: 300px;
