@@ -1,0 +1,68 @@
+.smart-builder {
+  display: flex;
+  color: #fff;
+  margin-top: 250px;
+  justify-content: center;
+  .smart-builder-item {
+    display: flex;
+    width: 1200px;
+    flex-direction: row;
+    align-items: center;
+    gap: 98px;
+    .right-section {
+      width: 60%;
+      .component-header {
+        color: #fff;
+
+        font-family: Inter;
+        font-size: 26.971px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 39.985px; /* 148.254% */
+        letter-spacing: 0.54px;
+        padding-bottom: 32px;
+      }
+      .component-sub-header {
+        color: #fff;
+
+        font-family: Inter;
+        font-size: 17.993px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 27.969px; /* 155.444% */
+        letter-spacing: 0.18px;
+      }
+      p {
+        color: #fff;
+        font-family: Inter;
+        font-size: 17.993px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 27.969px; /* 155.444% */
+        letter-spacing: 0.18px;
+      }
+      button {
+        border: none;
+        cursor: pointer;
+        outline: none;
+        font-size: 20px;
+        height: 30px;
+        width: 180px;
+        font-size: 14px;
+        padding: 4px 23px;
+        margin-top: 34px;
+      }
+      .smart-builder {
+        color: #fff;
+        background: linear-gradient(to right, #ea7959, #994bed);
+        background-color: green;
+      }
+    }
+  }
+
+  // .custom-modal-content {
+  //   background-color: green; /* Set your desired background color */
+  //   border-radius: 10px; /* Add rounded corners if needed */
+  //   padding: 20px; /* Add padding as necessary */
+  // }
+}
