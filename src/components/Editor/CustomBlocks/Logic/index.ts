@@ -15,7 +15,14 @@ import {
   howItWorks4Block,
   howItWorks4Component
 } from "./Blocks/howItWorks4";
-import { howItWorks5Block, howItWorks5Component } from "./Blocks/howItWorks5";
+import {
+  howItWorks5Block
+  , howItWorks5Component
+} from "./Blocks/howItWorks5";
+import {
+  howItWorks6Block,
+  howItWorks6Component
+} from "./Blocks/howItWorks6";
 
 export default function initLogic(editor: Editor) {
   // Before After 1
@@ -29,4 +36,6 @@ export default function initLogic(editor: Editor) {
   howItWorks4Component(editor);
   howItWorks5Block(editor);
   howItWorks5Component(editor);
+  howItWorks6Block(editor);
+  howItWorks6Component(editor);
 }
