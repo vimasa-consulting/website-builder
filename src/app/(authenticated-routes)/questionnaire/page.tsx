@@ -10,6 +10,7 @@ import NewItemPopup from "@/components/Project/NewItemPopup";
 import { createProjectForOrganization } from "@/services/ProjectsService";
 import { ProjectTableData } from "@/types/project";
 import { useRouter } from "next/navigation";
+import axios from "axios";
 
 export interface NewProjectPayload {
   inputOneData: string;
@@ -24,9 +25,28 @@ export default function Page() {
   //   setStartQuiz1(!startQuiz1);
   // };
 
-  const sdc = () => {
-    console.log("Sub");
-    setStartQuiz1(!startQuiz1);
+  const sdc = (typeformObject:any ) => {
+    console.log("Sub", typeformObject.formId, typeformObject.responseId);
+    const formId =typeformObject.formId;
+    const responseId =typeformObject.responseId
+    const fetchResponse = async () => {
+      try {
+        const response = await axios.get(
+          `https://api.typeform.com/forms/${formId}/responses/${responseId}`,
+          {
+            headers: {
+              "Authorization": "Bearer YOUR_API_KEY", // Replace with your Typeform API key
+            },
+          }
+        );
+        console.log(response.data);
+        //setResponse(response.data);
+        router.push("/editor/653bb74d9759245f93ca2b92044");
+      } catch (error) {
+        console.error("Error fetching Typeform response:", error);
+      }
+    };
+    fetchResponse();
   };
   function closeModalHandler() {
     setStartQuiz1(!startQuiz1);
@@ -65,7 +85,7 @@ export default function Page() {
                 <Image src={wizard} alt="Wizard" />
               </div>
               <div className="right-section">
-                <h2 className="component-header ">
+                <h2 className="component-header">
                   Help our experts build your page
                 </h2>
 
@@ -84,7 +104,7 @@ export default function Page() {
                     onSubmit={sdc}
                     className="smart-builder"
                   >
-                    Let's get started{" "}
+                    Lets get started{" "}
                   </PopupButton>
                 </div>
                 {/* <TypeformModal /> */}
