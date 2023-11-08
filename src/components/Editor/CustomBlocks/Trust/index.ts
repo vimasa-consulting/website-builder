@@ -8,6 +8,10 @@ import {
   beforeAfter2Component,
 } from "./Blocks/beforeAfter2";
 import {
+  beforeAfter4Block,
+  beforeAfter4Component,
+} from "./Blocks/beforeAfter4";
+import {
   beforeAfter3Block,
   beforeAfter3Component,
 } from "./Blocks/beforeAfter3";
@@ -79,6 +83,8 @@ export default function initTrust(editor: Editor) {
   beforeAfter2Component(editor);
   beforeAfter3Block(editor);
   beforeAfter3Component(editor);
+  beforeAfter4Block(editor);
+  beforeAfter4Component(editor);
   clientListLogos1Block(editor);
   clientListLogos1Component(editor);
   clientListLogos2Block(editor);
