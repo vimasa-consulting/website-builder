@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const clientListLogos1Block = (editor: Editor) => {
     const options = {
-        id: "trust-clientListLogos1",
+        id: "Ub1",
         label: "Client List Logos 1",
         block: {},
         props: {},
@@ -26,7 +26,7 @@ const clientListLogos1Block = (editor: Editor) => {
 
 const clientListLogos1Component = (editor: Editor) => {
     const options = {
-        id: "trust-clientListLogos1",
+        id: "Ub1",
         label: "Client List Logos 1",
         block: {},
         props: {},

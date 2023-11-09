@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const solutionToUserPain2Block = (editor: Editor) => {
     const options = {
-        id: "emotion-solutionToUserPain2",
+        id: "Xa2",
         label: "Solution To User Pain 2",
         block: {},
         props: {},
@@ -26,7 +26,7 @@ const solutionToUserPain2Block = (editor: Editor) => {
 
 const solutionToUserPain2Component = (editor: Editor) => {
     const options = {
-        id: "emotion-solutionToUserPain2",
+        id: "Xa2",
         label: "Solution To User Pain 2",
         block: {},
         props: {},

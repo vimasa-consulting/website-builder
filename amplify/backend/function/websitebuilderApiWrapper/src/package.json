@@ -1,0 +1,28 @@
+{
+  "name": "enterprise-chargebee-webhook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "jsonwebtoken": "^8.5.1",
+    "jwk-to-pem": "^2.0.5"
+  },
+  "devDependencies": {
+    "serverless-offline": "^10.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipindex/enterprise-chargebee-webhook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pipindex/enterprise-chargebee-webhook/issues"
+  },
+  "homepage": "https://github.com/pipindex/enterprise-chargebee-webhook#readme"
+}

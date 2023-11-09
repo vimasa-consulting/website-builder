@@ -1,7 +1,7 @@
 import { Editor } from "grapesjs";
 
 const options = {
-  id: "firstImpression-atf1-brand-connect1",
+  id: "Zc1",
   label: "ATF1 BrandConnect1",
   block: {},
   props: {},

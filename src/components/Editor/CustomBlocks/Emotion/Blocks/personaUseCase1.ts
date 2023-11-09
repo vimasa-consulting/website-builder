@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const personaUseCase1Block = (editor: Editor) => {
     const options = {
-        id: "emotion-personaUseCase1",
+        id: "Xc1",
         label: "Persona/Use Case 1",
         block: {},
         props: {},
@@ -26,7 +26,7 @@ const personaUseCase1Block = (editor: Editor) => {
 
 const personaUseCase1Component = (editor: Editor) => {
     const options = {
-        id: "emotion-personaUseCase1",
+        id: "Xc1",
         label: "Persona/Use Case 1",
         block: {},
         props: {},

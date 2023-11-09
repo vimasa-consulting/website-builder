@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const fomo3Block = (editor: Editor) => {
     const options = {
-        id: "urgency-fomo3",
+        id: "Wa3",
         label: "FOMO 3",
         block: {},
         props: {},
@@ -26,7 +26,7 @@ const fomo3Block = (editor: Editor) => {
 
 const fomo3Component = (editor: Editor) => {
     const options = {
-        id: "urgency-fomo3",
+        id: "Wa3",
         label: "FOMO 3",
         block: {},
         props: {},

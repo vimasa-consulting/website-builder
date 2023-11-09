@@ -38,6 +38,8 @@ import userActionsMapping from "@/components/Editor/CustomBlocks/UserActions/use
 import { BlockDetails } from "@/types/blockDetails";
 import initCustomBlocks from "@/components/Editor/CustomBlocks/initialization";
 
+import {decode as atob} from 'base-64';
+
 export interface BlockOptions {
   label: string;
   key: string;
@@ -78,19 +80,7 @@ function getBlockOptions(blockType: string) {
       return firstImpressionMapping;
   }
 }
-// Define a function to insert the custom component programmatically
-// @ts-ignore
-function insertCustomComponent(editor) {
-  const customComponent = `<div data-gjs-type="countdown">/div>`;
-  
-  // Use the editor's API to insert the custom component at the current cursor position
-  editor.Panels.getButton("views", "open-blocks").set("active", 1);
-  // @ts-ignore
-  editor.on("block:add", (block) => {
-    block.set("content", customComponent);
-  });
-  editor.runCommand("open-blocks");
-}
+
 // @ts-ignore
 export default function GrapesJSComponent() {  
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] =
@@ -126,17 +116,14 @@ export default function GrapesJSComponent() {
     // loadComponents(editor);
     initCustomBlocks(editor);
     setGrapeJSEditor(editor);
+    const url=new URL(window.location.href)
+    const block_sequence=url.searchParams.get("block_sequence")||"";
+    //const block_sequence='WmIzLCBUYTEsIFlmMSwgWWIxLCBTYjEsIFVmMSwgVGMxLCAgVmExLCBVZDEsIFVjMQ=='
     // TODO: read query param from url block_sequence
-    // TODO: decode and split by comma into array of blocks
-    var blocks=[
-      'dingdong',
-      'navbar',
-      'brandConnect-brandStory1',
-      'emotion-personaUseCase1',
-      'value-brandBenefits1'
-    ]
+    const blocks=atob(block_sequence).split(",")    
     blocks.forEach((item) => {
-      editor.addComponents({ type: item});
+      console.log(item.trim());
+      editor.addComponents({ type: item.trim()});
     }); 
     
   };

@@ -3,7 +3,7 @@ import image from "../../../../../public/verifiedCheckMark.png"
 
 const endorsements2Block = (editor: Editor) => {
     const options = {
-        id: "trust-endorsements2",
+        id: "Uf2",
         label: "Endorsements 2",
         block: {},
         props: {},
@@ -27,7 +27,7 @@ const endorsements2Block = (editor: Editor) => {
 
 const endorsements2Component = (editor: Editor) => {
     const options = {
-        id: "trust-endorsements2",
+        id: "Uf2",
         label: "Endorsements 2",
         block: {},
         props: {},
