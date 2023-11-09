@@ -26,6 +26,7 @@ import { whatWeDontStandFor2Block, whatWeDontStandFor2Component } from "./Blocks
 import { socialMedia1Block, socialMedia1Component } from "./Blocks/socialMedia1";
 import { socialMedia2Block, socialMedia2Component } from "./Blocks/socialMedia2";
 import { socialMedia3Block, socialMedia3Component } from "./Blocks/socialMedia3";
+import { fromTheFounder2Block, fromTheFounder2Component } from "./Blocks/fromTheFounder2";
 
 export default function initBrandConnect(editor: Editor) {
   brandStory1Block(editor);
@@ -58,4 +59,6 @@ export default function initBrandConnect(editor: Editor) {
   socialMedia2Component(editor);
   socialMedia3Block(editor);
   socialMedia3Component(editor);
+  fromTheFounder2Block(editor);
+  fromTheFounder2Component(editor);
 }
