@@ -26,7 +26,7 @@ const signUp1Block = (editor: Editor) => {
 
 const signUp1Component = (editor: Editor) => {
     const options = {
-        id: "userActions-signUp1",
+        id: "Sa1",
         label: "Signup 1",
         block: {},
         props: {},
