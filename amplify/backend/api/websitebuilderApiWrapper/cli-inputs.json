@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/api/typeform": {
+      "name": "/api/typeform",
+      "lambdaFunction": "websitebuilderApiWrapper",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
