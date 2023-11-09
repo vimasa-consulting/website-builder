@@ -38,6 +38,8 @@ import userActionsMapping from "@/components/Editor/CustomBlocks/UserActions/use
 import { BlockDetails } from "@/types/blockDetails";
 import initCustomBlocks from "@/components/Editor/CustomBlocks/initialization";
 
+import {decode as atob} from 'base-64';
+
 export interface BlockOptions {
   label: string;
   key: string;
@@ -114,17 +116,12 @@ export default function GrapesJSComponent() {
     // loadComponents(editor);
     initCustomBlocks(editor);
     setGrapeJSEditor(editor);
+    const block_sequence='WmIzLCBUYTEsIFlmMSwgWWIxLCBTYjEsIFVmMSwgVGMxLCAgVmExLCBVZDEsIFVjMQ=='
     // TODO: read query param from url block_sequence
-    // TODO: decode and split by comma into array of blocks
-    var blocks=[
-      'dingdong',
-      'navbar',
-      'brandConnect-brandStory1',
-      'emotion-personaUseCase1',
-      'value-brandBenefits1'
-    ]
+    const blocks=atob(block_sequence).split(",")    
     blocks.forEach((item) => {
-      editor.addComponents({ type: item});
+      console.log(item.trim());
+      editor.addComponents({ type: item.trim()});
     }); 
     
   };
