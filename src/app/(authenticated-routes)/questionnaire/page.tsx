@@ -51,8 +51,11 @@ export default function Page() {
         if(response.data && response.data.data && response.data.data.items && response.data.data.items.length==1 ) {
           var variables =response.data.data.items[0].variables;
           //console.log(variables);
+          // @ts-ignore
           const typeform_answer_1=variables.filter(item => item["key"] == "a_1")[0].number;
+          // @ts-ignore
           const typeform_answer_3=variables.filter(item => item["key"] == "a_3")[0].number;
+          // @ts-ignore
           const typeform_answer_4=variables.filter(item => item["key"] == "a_4")[0].number;
           //console.log(typeform_answer_1,typeform_answer_3,typeform_answer_4);
           const answer_1=mapping_answer[typeform_answer_1];
