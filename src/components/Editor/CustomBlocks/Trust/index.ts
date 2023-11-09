@@ -75,8 +75,17 @@ import {
   testimonials4Block,
   testimonials4Component,
 } from "./Blocks/testimonials4";
+import { faquc1Block, faquc1Component } from "./Blocks/faquc1";
+import { faquc3Block, faquc3Component } from "./Blocks/faquc3";
+import { faquc2Block, faquc2Component } from "./Blocks/faquc2";
 
 export default function initTrust(editor: Editor) {
+  faquc1Block(editor);
+  faquc1Component(editor);
+  faquc2Block(editor);
+  faquc2Component(editor);
+  faquc3Block(editor);
+  faquc3Component(editor);
   beforeAfter1Block(editor);
   beforeAfter1Component(editor);
   beforeAfter2Block(editor);
