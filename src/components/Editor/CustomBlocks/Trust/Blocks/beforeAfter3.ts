@@ -26,7 +26,7 @@ const beforeAfter3Block = (editor: Editor) => {
 
 const beforeAfter3Component = (editor: Editor) => {
     const options = {
-        id: "trust-beforeAfter3",
+        id: "Ua3",
         label: "Before After 3",
         block: {},
         props: {},

@@ -27,7 +27,7 @@ const testimonials1Block = (editor: Editor) => {
 
 const testimonials1Component = (editor: Editor) => {
     const options = {
-        id: "trust-testimonials1",
+        id: "Ue1",
         label: "Testimonials 1",
         block: {},
         props: {},

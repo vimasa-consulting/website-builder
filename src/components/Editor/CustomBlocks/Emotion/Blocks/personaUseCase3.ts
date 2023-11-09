@@ -26,7 +26,7 @@ const personaUseCase3Block = (editor: Editor) => {
 
 const personaUseCase3Component = (editor: Editor) => {
     const options = {
-        id: "emotion-personaUseCase3",
+        id: "Xc3",
         label: "Persona/Use Case 3",
         block: {},
         props: {},

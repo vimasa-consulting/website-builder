@@ -27,7 +27,7 @@ const reviewsAndRatings4Block = (editor: Editor) => {
 
 const reviewsAndRatings4Component = (editor: Editor) => {
     const options = {
-        id: "trust-reviewsAndRatings4",
+        id: "Ud4",
         label: "Review & Rating 4",
         block: {},
         props: {},

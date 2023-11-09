@@ -27,7 +27,7 @@ const endorsements1Block = (editor: Editor) => {
 
 const endorsements1Component = (editor: Editor) => {
     const options = {
-        id: "trust-endorsements1",
+        id: "Uf1",
         label: "Endorsements 1",
         block: {},
         props: {},

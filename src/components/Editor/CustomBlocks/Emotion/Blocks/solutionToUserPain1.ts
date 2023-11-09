@@ -26,7 +26,7 @@ const solutionToUserPain1Block = (editor: Editor) => {
 
 const solutionToUserPain1Component = (editor: Editor) => {
     const options = {
-        id: "emotion-solutionToUserPain1",
+        id: "Xa1",
         label: "Solution To User Pain 1",
         block: {},
         props: {},

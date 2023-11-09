@@ -26,7 +26,7 @@ const clientListLogos3Block = (editor: Editor) => {
 
 const clientListLogos3Component = (editor: Editor) => {
     const options = {
-        id: "trust-clientListLogos3",
+        id: "Ub3",
         label: "Client List Logos 3",
         block: {},
         props: {},
