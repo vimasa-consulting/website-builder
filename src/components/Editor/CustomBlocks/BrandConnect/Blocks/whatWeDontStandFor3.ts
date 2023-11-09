@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const options = {
   id: "Tc3",
-  label: "What We Dont Stand For - 5",
+  label: "What We Dont Stand For - 3",
   block: {},
   props: {},
   style: "",
