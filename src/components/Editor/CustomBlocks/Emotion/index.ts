@@ -32,8 +32,8 @@ export default function initEmotion(editor: Editor) {
   solutionToUserPain2Block(editor);
   solutionToUserPain2Component(editor);
 
-  solutionToUserPain3Block(editor);
-  solutionToUserPain3Component(editor);
+  // solutionToUserPain3Block(editor);
+  // solutionToUserPain3Component(editor);
 
   userAspirations1Block(editor);
   userAspirations1Component(editor);
