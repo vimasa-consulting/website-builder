@@ -78,19 +78,7 @@ function getBlockOptions(blockType: string) {
       return firstImpressionMapping;
   }
 }
-// Define a function to insert the custom component programmatically
-// @ts-ignore
-function insertCustomComponent(editor) {
-  const customComponent = `<div data-gjs-type="countdown">/div>`;
-  
-  // Use the editor's API to insert the custom component at the current cursor position
-  editor.Panels.getButton("views", "open-blocks").set("active", 1);
-  // @ts-ignore
-  editor.on("block:add", (block) => {
-    block.set("content", customComponent);
-  });
-  editor.runCommand("open-blocks");
-}
+
 // @ts-ignore
 export default function GrapesJSComponent() {  
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] =
