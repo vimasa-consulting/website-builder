@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const signUpCtaBlock = (editor: Editor) => {
     const options = {
-        id: "userActions-signUpCta",
+        id: "Sb1",
         label: "Signup CTA",
         block: {},
         props: {},

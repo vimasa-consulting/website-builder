@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const signUp2Block = (editor: Editor) => {
     const options = {
-        id: "userActions-signUp2",
+        id: "Sa2",
         label: "Signup 2",
         block: {},
         props: {},
