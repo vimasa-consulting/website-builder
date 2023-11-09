@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const clientListLogos4Block = (editor: Editor) => {
     const options = {
-        id: "trust-clientListLogos4",
+        id: "Ub1",
         label: "Client List Logos 4",
         block: {},
         props: {},

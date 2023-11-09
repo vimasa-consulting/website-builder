@@ -3,7 +3,7 @@ import image from "../../../../../public/verifiedCheckMark.png"
 
 const testimonials2Block = (editor: Editor) => {
     const options = {
-        id: "trust-testimonials2",
+        id: "Ue2",
         label: "Testimonials 2",
         block: {},
         props: {},

@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const testimonials4Block = (editor: Editor) => {
     const options = {
-        id: "trust-testimonials4",
+        id: "Ue4",
         label: "Testimonials 4",
         block: {},
         props: {},

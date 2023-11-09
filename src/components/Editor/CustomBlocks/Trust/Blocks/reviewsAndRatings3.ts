@@ -3,7 +3,7 @@ import image from "../../../../../public/verifiedCheckMark.png"
 
 const reviewsAndRatings3Block = (editor: Editor) => {
     const options = {
-        id: "trust-reviewsAndRatings3",
+        id: "Ud3",
         label: "Review & Rating 3",
         block: {},
         props: {},
