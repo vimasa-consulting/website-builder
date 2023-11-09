@@ -55,6 +55,7 @@ import {
   productData1Block,
   productData1Component
 } from "./Blocks/productData1";
+import { productData2Block, productData2Component } from "./Blocks/productData2";
 
 export default function initLogic(editor: Editor) {
   // Before After 1
@@ -86,4 +87,6 @@ export default function initLogic(editor: Editor) {
   productBenefits3Component(editor);
   productData1Block(editor);
   productData1Component(editor);
+  productData2Block(editor);
+  productData2Component(editor);
 }
