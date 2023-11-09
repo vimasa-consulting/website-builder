@@ -1,7 +1,7 @@
 import { Editor } from "grapesjs";
 
 const options = {
-  id: "brandConnect-brandStory3",
+  id: "Ta3",
   label: "Brand Story 3",
   block: {},
   props: {},

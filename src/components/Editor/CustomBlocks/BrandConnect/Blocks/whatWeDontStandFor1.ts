@@ -1,7 +1,7 @@
 import { Editor } from "grapesjs";
 
 const options = {
-  id: "brandConnect-whatWeDontStandFor1",
+  id: "Tc1",
   label: "What We Don't Stand For - 1",
   block: {},
   props: {},
