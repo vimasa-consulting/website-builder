@@ -22,6 +22,8 @@ import {
 import { whatWeStandFor2Block, whatWeStandFor2Component } from "./Blocks/whatWeStandFor2";
 import { whatWeDontStandFor1Block, whatWeDontStandFor1Component } from "./Blocks/whatWeDontStandFor1";
 import { whatWeStandFor1Block, whatWeStandFor1Component } from "./Blocks/whatWeStandFor1";
+import { whatWeDontStandFor2Block, whatWeDontStandFor2Component } from "./Blocks/whatWeDontStandFor2";
+import { socialMedia1Block, socialMedia1Component } from "./Blocks/socialMedia1";
 
 export default function initBrandConnect(editor: Editor) {
   brandStory1Block(editor);
@@ -44,6 +46,10 @@ export default function initBrandConnect(editor: Editor) {
   whatWeStandFor5Component(editor);
   whatWeDontStandFor1Block(editor);
   whatWeDontStandFor1Component(editor);
+  whatWeDontStandFor2Block(editor);
+  whatWeDontStandFor2Component(editor);
   whatWeDontStandFor5Block(editor);
   whatWeDontStandFor5Component(editor);
+  socialMedia1Block(editor);
+  socialMedia1Component(editor);
 }
