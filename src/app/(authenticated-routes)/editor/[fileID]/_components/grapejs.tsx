@@ -116,7 +116,9 @@ export default function GrapesJSComponent() {
     // loadComponents(editor);
     initCustomBlocks(editor);
     setGrapeJSEditor(editor);
-    const block_sequence='WmIzLCBUYTEsIFlmMSwgWWIxLCBTYjEsIFVmMSwgVGMxLCAgVmExLCBVZDEsIFVjMQ=='
+    const url=new URL(window.location.href)
+    const block_sequence=url.searchParams.get("block_sequence")||"";
+    //const block_sequence='WmIzLCBUYTEsIFlmMSwgWWIxLCBTYjEsIFVmMSwgVGMxLCAgVmExLCBVZDEsIFVjMQ=='
     // TODO: read query param from url block_sequence
     const blocks=atob(block_sequence).split(",")    
     blocks.forEach((item) => {
