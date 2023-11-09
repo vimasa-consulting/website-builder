@@ -1,4 +1,20 @@
 {
+  "api": {
+    "websitebuilderApiWrapper": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "websitebuilderApiWrapper"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "websitebuilderAuth": {
       "customAuth": false,
@@ -25,6 +41,31 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "websitebuilderApiWrapper": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_websitebuilderApiWrapper_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "websitebuilderApiWrapper"
+        }
+      ]
+    },
+    "AMPLIFY_function_websitebuilderApiWrapper_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "websitebuilderApiWrapper"
+        }
+      ]
     }
   }
 }
