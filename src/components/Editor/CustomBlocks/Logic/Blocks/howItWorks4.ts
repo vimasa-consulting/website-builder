@@ -180,12 +180,6 @@ const howItWorks4Component = (editor: Editor) => {
   }
 }
 
-@media (max-width: 425px) {
-  .${classPrefix}-showOnlyOnMobile {
-    display: block;
-  }
-}
-
 @media (min-width: 426px) {
   .${classPrefix}-showOnlyOnMobile {
     display: none;
