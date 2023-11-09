@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const socialMedia2Block = (editor: Editor) => {
     const options = {
-        id: "brandConnect-socialMedia2",
+        id: "Td2",
         label: "Social Media 2",
         block: {},
         props: {},
@@ -26,7 +26,7 @@ const socialMedia2Block = (editor: Editor) => {
 
 const socialMedia2Component = (editor: Editor) => {
     const options = {
-        id: "brandConnect-socialMedia2",
+        id: "Td2",
         label: "Social Media 2",
         block: {},
         props: {},
