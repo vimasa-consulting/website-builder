@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const beforeAfter2Block = (editor: Editor) => {
   const options = {
-    id: "trust-beforeAfter2",
+    id: "Ua2",
     label: "Before After 2",
     block: {},
     props: {},
@@ -26,7 +26,7 @@ const beforeAfter2Block = (editor: Editor) => {
 
 const beforeAfter2Component = (editor: Editor) => {
   const options = {
-    id: "trust-beforeAfter2",
+    id: "Ua2",
     label: "Before After 2",
     block: {},
     props: {},

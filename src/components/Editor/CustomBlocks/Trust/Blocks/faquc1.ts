@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const faquc1Block = (editor: Editor) => {
   const options = {
-    id: "trust-faquc1",
+    id: "Uc1",
     label: "FAQ UC 1",
     block: {},
     props: {},
@@ -26,7 +26,7 @@ const faquc1Block = (editor: Editor) => {
 
 const faquc1Component = (editor: Editor) => {
   const options = {
-    id: "trust-faquc1",
+    id: "Uc1",
     label: "FAQ UC 1",
     block: {},
     props: {},
