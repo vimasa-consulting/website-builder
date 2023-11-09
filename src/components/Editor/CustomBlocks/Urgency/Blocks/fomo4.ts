@@ -26,7 +26,7 @@ const fomo4Block = (editor: Editor) => {
 
 const fomo4Component = (editor: Editor) => {
     const options = {
-        id: "urgency-fomo4",
+        id: "Wa4",
         label: "FOMO 4",
         block: {},
         props: {},

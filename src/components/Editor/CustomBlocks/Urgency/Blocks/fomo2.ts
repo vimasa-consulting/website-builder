@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const fomo2Block = (editor: Editor) => {
     const options = {
-        id: "urgency-fomo2",
+        id: "Wa2",
         label: "FOMO 2",
         block: {},
         props: {},
