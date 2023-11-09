@@ -33,7 +33,7 @@ export default function Page() {
       try {
         //change to the right api that gets typeform answer;
         const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_CORE_API_BASE_URL}/typeform?formId=${formId}&responseId=${responseId}`
+          `/api/typeform?formId=${formId}&responseId=${responseId}`
         );
         console.log(response.data.data);
         const mapping_answer=[
