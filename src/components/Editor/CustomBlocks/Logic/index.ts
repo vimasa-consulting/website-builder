@@ -28,6 +28,14 @@ import {
   productFeatures1Component
 } from "./Blocks/productFeatures1";
 import {
+  productBenefits1Block,
+  productBenefits1Component
+} from "./Blocks/productBenefits1";
+import {
+  productBenefits2Block,
+  productBenefits2Component
+} from "./Blocks/productBenefits2";
+import {
   productBenefits3Block,
   productBenefits3Component
 } from "./Blocks/productBenefits3";
@@ -43,7 +51,6 @@ import {
   productFeatures4Block,
   productFeatures4Component
 } from "./Blocks/productFeatures4";
-import { productBenefits1Block, productBenefits1Component } from "./Blocks/productBenefits1";
 
 export default function initLogic(editor: Editor) {
   // Before After 1
@@ -69,6 +76,8 @@ export default function initLogic(editor: Editor) {
   productFeatures4Component(editor);
   productBenefits1Block(editor);
   productBenefits1Component(editor);
+  productBenefits2Block(editor);
+  productBenefits2Component(editor);
   productBenefits3Block(editor);
   productBenefits3Component(editor);
 }
