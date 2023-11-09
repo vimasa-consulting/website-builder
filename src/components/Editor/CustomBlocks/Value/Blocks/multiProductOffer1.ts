@@ -1,7 +1,7 @@
 import { Editor } from "grapesjs";
 
 const options = {
-  id: "value-multiProductOffers1",
+  id: "Vc1",
   label: "Multi Product Offers - 1",
   block: {},
   props: {},
