@@ -19,6 +19,7 @@ import {
   whatWeDontStandFor5Block,
   whatWeDontStandFor5Component,
 } from "./Blocks/whatWeDontStandFor3";
+import { whatWeStandFor2Block, whatWeStandFor2Component } from "./Blocks/whatWeStandFor2";
 
 export default function initBrandConnect(editor: Editor) {
   brandStory1Block(editor);
@@ -29,6 +30,8 @@ export default function initBrandConnect(editor: Editor) {
   brandStory3Component(editor);
   brandStory4Block(editor);
   brandStory4Component(editor);
+  whatWeStandFor2Block(editor);
+  whatWeStandFor2Component(editor);
   whatWeStandFor3Block(editor);
   whatWeStandFor3Component(editor);
   whatWeStandFor4Block(editor);
