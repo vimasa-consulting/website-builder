@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const userAspirations2Block = (editor: Editor) => {
     const options = {
-        id: "emotion-userAspirations2",
+        id: "Xb2",
         label: "User Aspirations 2",
         block: {},
         props: {},
