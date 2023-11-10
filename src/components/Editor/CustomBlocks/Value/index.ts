@@ -51,13 +51,25 @@ import {
   singleProductOffer3Component,
   singleProductOffer3block,
 } from "./Blocks/singleProductOffer3";
+import { shopByOfferVal3Block, shopByOfferVal3Component } from "./Blocks/shopByOfferVal3";
+import { showcaseV2Block, showcaseV2Component } from "./Blocks/showcaseV2";
+import { showcaseV1Block, showcaseV1Component } from "./Blocks/showcaseV1";
 
 export default function initValue(editor: Editor) {
+  showcaseV1Block(editor);
+  showcaseV1Component(editor);
+
+  showcaseV2Block(editor);
+  showcaseV2Component(editor);
+
   shopByOfferValue1Block(editor);
   shopByOfferValue1Component(editor);
 
   shopByOfferValue2Block(editor);
   shopByOfferValue2Component(editor);
+
+  shopByOfferVal3Block(editor);
+  shopByOfferVal3Component(editor);
 
   multiProductOffers1Block(editor);
   multiProductOffers1Component(editor);
