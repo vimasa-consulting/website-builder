@@ -54,6 +54,7 @@ import {
 import { shopByOfferVal3Block, shopByOfferVal3Component } from "./Blocks/shopByOfferVal3";
 import { showcaseV2Block, showcaseV2Component } from "./Blocks/showcaseV2";
 import { showcaseV1Block, showcaseV1Component } from "./Blocks/showcaseV1";
+import { singleProductOffer2Block, singleProductOffer2Component } from "./Blocks/singleProductOffer2";
 
 export default function initValue(editor: Editor) {
   showcaseV1Block(editor);
@@ -100,6 +101,9 @@ export default function initValue(editor: Editor) {
 
   singleProductOffer1block(editor);
   singleProductOffer1Component(editor);
+
+  singleProductOffer2Block(editor);
+  singleProductOffer2Component(editor);
 
   singleProductOffer3block(editor);
   singleProductOffer3Component(editor);
