@@ -22,6 +22,7 @@ import { userAspirations2Block, userAspirations2Component } from "./Blocks/userA
 import { personaUseCase2Block, personaUseCase2Component } from "./Blocks/personaUseCase2";
 import { personaUseCase1Block, personaUseCase1Component } from "./Blocks/personaUseCase1";
 import { personaUseCase3Block, personaUseCase3Component } from "./Blocks/personaUseCase3";
+import { userAspirations3Block, userAspirations3Component } from "./Blocks/userAspirations3";
   
 
 
@@ -40,6 +41,9 @@ export default function initEmotion(editor: Editor) {
 
   userAspirations2Block(editor);
   userAspirations2Component(editor);
+
+  userAspirations3Block(editor);
+  userAspirations3Component(editor);
 
   personaUseCase1Block(editor);
   personaUseCase1Component(editor);
