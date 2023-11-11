@@ -63,9 +63,18 @@ import {
   productData3Block,
   productData3Component
 } from "./Blocks/productData3";
+import { timeline2Block, timeline2Component } from "./Blocks/timeline2";
+import { timeline1Block, timeline1Component } from "./Blocks/timeline1";
+import { timeline3Block, timeline3Component } from "./Blocks/timeline3";
 
 export default function initLogic(editor: Editor) {
   // Before After 1
+  timeline1Block(editor);
+  timeline1Component(editor)
+  timeline2Block(editor);
+  timeline2Component(editor);
+  timeline3Block(editor);
+  timeline3Component(editor);
   howItWorks1Block(editor);
   howItWorks1Component(editor);
   howItWorks2Block(editor);
