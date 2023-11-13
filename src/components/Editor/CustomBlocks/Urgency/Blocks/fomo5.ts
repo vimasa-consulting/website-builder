@@ -58,34 +58,71 @@ const fomo5Component = (editor: Editor) => {
                 `,
                 styles: `
                .${classPrefix}-section {
-                height: 140px;
+                height: 96px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                } 
                .${classPrefix}-section-container {
-                height: 80px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                } 
-               .${classPrefix}-countdown .countdown-digit{
-                font-size: 1.5rem;
-               }
+               .${classPrefix}-countdown {
+                display: flex;
+                }
+               .${classPrefix}-countdown .countdown-cont {
+                display: flex;
+                margin-right: 8px;
+                }
+               .${classPrefix}-countdown .countdown-block {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                margin-left: 4px;
+                justify-content: center;
+                align-items: center;
+                }
+               .${classPrefix}-countdown .countdown-block .countdown-label {
+                color: #000;
+                text-align: center;
+                font-family: Inter;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 21px */
+                }
+               .${classPrefix}-countdown .countdown-block .countdown-digit {
+                border-radius: 3px;
+                background: #E9E9E9;
+                padding: 3px 7px;
+                text-align: center;
+                font-family: Inter;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 21px */
+                margin-right: 4px;
+                }
                .${classPrefix}-h3 {
                 color: #000;
-                font-size: 24px;
+                text-align: center;
+                font-family: Inter;
+                font-size: 20px;
                 font-style: normal;
-                line-height: 64px;
+                font-weight: 500;
+                line-height: 0;
                 margin: 0;
+                margin-bottom: 22px;
               }
                .${classPrefix}-text {
                 text-align: center;
                 font-family: Inter, sans-serif;
                 font-size: 15px;
                 padding: 0 8px;
-                line-height: 1.5;
+                line-height: 0;
+                margin: 0;
                } 
                 `,
             },
