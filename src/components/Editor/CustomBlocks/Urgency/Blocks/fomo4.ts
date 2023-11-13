@@ -48,10 +48,17 @@ const fomo4Component = (editor: Editor) => {
                 components: `
                 <div class="${classPrefix}-section">
                     <div class="${classPrefix}-section-container">
-                        <img src="https://s3-alpha-sig.figma.com/img/8f11/d7e1/3d01155bd542e8dc709e3193e3f9f33a?Expires=1701043200&amp;Signature=J6WB0V~9T7uQCsWI54O~FGJyW0ZtnbiW3ScKA6U8O4-CBTkzC-fOz8V3x1ltcA0~OtGRvnWIo4B8mNwjiMtnpB-yQSZf767VbvqjufjYItV9kAdB7Jw7A1ftHDykxuWtp-LhSnxYk0B~dUsX6LefnEdVhgI3AP9V7Nz0Xg7ydTBUrgaZ1grw4a~lzEZsCtr9ZZJN9yQJgXCV78SZFKNDeuIKoYFapVM6k8q-nOcJib3yWUW294qEwm7fOikZkUtWJo97LbdkoHXmoyUgLzXBDzQL0ZZcNnAY8t-3pGMQslOKbxb3vz8pmpJAAHFBzd0tEQ9Mb8gjShEMZ~7sVv7BIw__&amp;Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
-                        <p class="${classPrefix}-text">Rush Now! [Insert Sale Name] ends in</p>
-                        <div class="${classPrefix}-countdown" data-gjs-type="countdown"></div> 
-                        <img src="https://s3-alpha-sig.figma.com/img/8f11/d7e1/3d01155bd542e8dc709e3193e3f9f33a?Expires=1701043200&amp;Signature=J6WB0V~9T7uQCsWI54O~FGJyW0ZtnbiW3ScKA6U8O4-CBTkzC-fOz8V3x1ltcA0~OtGRvnWIo4B8mNwjiMtnpB-yQSZf767VbvqjufjYItV9kAdB7Jw7A1ftHDykxuWtp-LhSnxYk0B~dUsX6LefnEdVhgI3AP9V7Nz0Xg7ydTBUrgaZ1grw4a~lzEZsCtr9ZZJN9yQJgXCV78SZFKNDeuIKoYFapVM6k8q-nOcJib3yWUW294qEwm7fOikZkUtWJo97LbdkoHXmoyUgLzXBDzQL0ZZcNnAY8t-3pGMQslOKbxb3vz8pmpJAAHFBzd0tEQ9Mb8gjShEMZ~7sVv7BIw__&amp;Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+                        <div class="${classPrefix}-section-mobile-only">
+                          <img src="https://s3-alpha-sig.figma.com/img/8f11/d7e1/3d01155bd542e8dc709e3193e3f9f33a?Expires=1701043200&amp;Signature=J6WB0V~9T7uQCsWI54O~FGJyW0ZtnbiW3ScKA6U8O4-CBTkzC-fOz8V3x1ltcA0~OtGRvnWIo4B8mNwjiMtnpB-yQSZf767VbvqjufjYItV9kAdB7Jw7A1ftHDykxuWtp-LhSnxYk0B~dUsX6LefnEdVhgI3AP9V7Nz0Xg7ydTBUrgaZ1grw4a~lzEZsCtr9ZZJN9yQJgXCV78SZFKNDeuIKoYFapVM6k8q-nOcJib3yWUW294qEwm7fOikZkUtWJo97LbdkoHXmoyUgLzXBDzQL0ZZcNnAY8t-3pGMQslOKbxb3vz8pmpJAAHFBzd0tEQ9Mb8gjShEMZ~7sVv7BIw__&amp;Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+                          <p class="${classPrefix}-text">Rush Now! [Insert Sale Name] ends in</p>
+                          <img src="https://s3-alpha-sig.figma.com/img/8f11/d7e1/3d01155bd542e8dc709e3193e3f9f33a?Expires=1701043200&amp;Signature=J6WB0V~9T7uQCsWI54O~FGJyW0ZtnbiW3ScKA6U8O4-CBTkzC-fOz8V3x1ltcA0~OtGRvnWIo4B8mNwjiMtnpB-yQSZf767VbvqjufjYItV9kAdB7Jw7A1ftHDykxuWtp-LhSnxYk0B~dUsX6LefnEdVhgI3AP9V7Nz0Xg7ydTBUrgaZ1grw4a~lzEZsCtr9ZZJN9yQJgXCV78SZFKNDeuIKoYFapVM6k8q-nOcJib3yWUW294qEwm7fOikZkUtWJo97LbdkoHXmoyUgLzXBDzQL0ZZcNnAY8t-3pGMQslOKbxb3vz8pmpJAAHFBzd0tEQ9Mb8gjShEMZ~7sVv7BIw__&amp;Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+                        </div>
+                        <div>
+                          <img class="${classPrefix}-section-desktop-only" src="https://s3-alpha-sig.figma.com/img/8f11/d7e1/3d01155bd542e8dc709e3193e3f9f33a?Expires=1701043200&amp;Signature=J6WB0V~9T7uQCsWI54O~FGJyW0ZtnbiW3ScKA6U8O4-CBTkzC-fOz8V3x1ltcA0~OtGRvnWIo4B8mNwjiMtnpB-yQSZf767VbvqjufjYItV9kAdB7Jw7A1ftHDykxuWtp-LhSnxYk0B~dUsX6LefnEdVhgI3AP9V7Nz0Xg7ydTBUrgaZ1grw4a~lzEZsCtr9ZZJN9yQJgXCV78SZFKNDeuIKoYFapVM6k8q-nOcJib3yWUW294qEwm7fOikZkUtWJo97LbdkoHXmoyUgLzXBDzQL0ZZcNnAY8t-3pGMQslOKbxb3vz8pmpJAAHFBzd0tEQ9Mb8gjShEMZ~7sVv7BIw__&amp;Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+                          <p class="${classPrefix}-text ${classPrefix}-section-desktop-only">Rush Now! [Insert Sale Name] ends in</p>
+                          <div class="${classPrefix}-countdown" data-gjs-type="countdown"></div> 
+                          <img class="${classPrefix}-section-desktop-only" src="https://s3-alpha-sig.figma.com/img/8f11/d7e1/3d01155bd542e8dc709e3193e3f9f33a?Expires=1701043200&amp;Signature=J6WB0V~9T7uQCsWI54O~FGJyW0ZtnbiW3ScKA6U8O4-CBTkzC-fOz8V3x1ltcA0~OtGRvnWIo4B8mNwjiMtnpB-yQSZf767VbvqjufjYItV9kAdB7Jw7A1ftHDykxuWtp-LhSnxYk0B~dUsX6LefnEdVhgI3AP9V7Nz0Xg7ydTBUrgaZ1grw4a~lzEZsCtr9ZZJN9yQJgXCV78SZFKNDeuIKoYFapVM6k8q-nOcJib3yWUW294qEwm7fOikZkUtWJo97LbdkoHXmoyUgLzXBDzQL0ZZcNnAY8t-3pGMQslOKbxb3vz8pmpJAAHFBzd0tEQ9Mb8gjShEMZ~7sVv7BIw__&amp;Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+                        </div>
                     </div>
                 </div>
                 `,
@@ -62,7 +69,7 @@ const fomo4Component = (editor: Editor) => {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-               } 
+               }
                .${classPrefix}-section-container img {
                 opacity: 0.5;
                 width: 30px;
@@ -72,7 +79,16 @@ const fomo4Component = (editor: Editor) => {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
                } 
+               .${classPrefix}-section-container > div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+               } 
+               .${classPrefix}-section-container .${classPrefix}-section-mobile-only {
+                display: none;
+              }
                .${classPrefix}-countdown .countdown-digit{
                 font-size: 1.5rem;
                }
@@ -119,6 +135,67 @@ const fomo4Component = (editor: Editor) => {
                 line-height: 140%; /* 21px */
                 margin-right: 4px;
                 }
+                @media (max-width: 770px) {
+                .${classPrefix}-section {
+                  height: 70px;
+                  padding-top: 10px;
+                  padding-bottom: 14px;
+                }
+                .${classPrefix}-section-desktop-only{
+                  display: none;
+                }
+                .${classPrefix}-section-container .${classPrefix}-section-mobile-only{
+                  display: flex;
+                }
+               .${classPrefix}-section-heading {
+                margin-bottom: 5px;
+                }
+                .${classPrefix}-h2 {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-family: Inter;
+                font-size: 19px;
+                font-style: normal;
+                font-weight: 400;
+                }
+                .${classPrefix}-text {
+                text-align: center;
+                font-family: Inter;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                margin-left: 4px;
+                }   
+                .${classPrefix}-section-container img {
+                width: 20px;
+                height: 20px;
+                }
+                .${classPrefix}-countdown {
+                  margin-top: 4px;
+                }
+                .${classPrefix}-countdown .countdown-block .countdown-label {
+                color: #000;
+                text-align: center;
+                font-family: Inter;
+                font-size: 9px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 21px */
+                }
+               .${classPrefix}-countdown .countdown-block .countdown-digit {
+                border-radius: 3px;
+                background: #E9E9E9;
+                padding: 2px 3px;
+                text-align: center;
+                font-family: Inter;
+                font-size: 9px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 21px */
+                margin-right: 2px;
+                }
+              }
+
                 `,
             },
         },
