@@ -48,10 +48,13 @@ const fomo5Component = (editor: Editor) => {
                 components: `
                 <div class="${classPrefix}-section">
                     <div class="${classPrefix}-section-heading">
-                        <h2 class="${classPrefix}-h3">[Insert Sale Name] is live now. Talk about extra benefits/value. Shop Now!</h2>
+                        <h2 class="${classPrefix}-h3 ${classPrefix}-section-desktop-only">[Insert Sale Name] is live now. Talk about extra benefits/value. Shop Now!</h2>
+                        <h2 class="${classPrefix}-h3 ${classPrefix}-section-mobile-only">[Insert Sale Name] is live now. Shop Now!</h2>
+                        <p class="${classPrefix}-text ${classPrefix}-section-mobile-only">Talk about extra benefits/value like Free Shipping, Cashback etc.</p>
                     </div>
                     <div class="${classPrefix}-section-container">
-                        <p class="${classPrefix}-text">Hurry! Sale ends in </p>
+                        <p class="${classPrefix}-text ${classPrefix}-section-desktop-only">Hurry! Sale ends in </p>
+                        <p class="${classPrefix}-text ${classPrefix}-section-mobile-only">Ends in</p>
                         <div class="${classPrefix}-countdown" data-gjs-type="countdown"></div>    
                     </div>
                 </div>
@@ -64,6 +67,9 @@ const fomo5Component = (editor: Editor) => {
                 align-items: center;
                 justify-content: center;
                } 
+               .${classPrefix}-section .${classPrefix}-section-mobile-only {
+                  display: none;
+                }
                .${classPrefix}-section-container {
                 display: flex;
                 align-items: center;
@@ -124,6 +130,67 @@ const fomo5Component = (editor: Editor) => {
                 line-height: 0;
                 margin: 0;
                } 
+                @media (max-width: 770px) {
+                  .${classPrefix}-h3 {
+                    margin-bottom: 10px;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1; /* 18.2px */
+                  }
+                  .${classPrefix}-section {
+                    height: 70px;
+                    padding-top: 10px;
+                    padding-bottom: 14px;
+                  }
+                  .${classPrefix}-section-desktop-only{
+                    display: none;
+                  }
+                  .${classPrefix}-section .${classPrefix}-section-mobile-only{
+                    display: flex;
+                  }
+                 .${classPrefix}-section-heading {
+                  margin-bottom: 5px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  }
+                  .${classPrefix}-text {
+                  text-align: center;
+                  font-family: Inter;
+                  font-size: 9px;
+                  font-style: normal;
+                  font-weight: 400;
+                  margin-left: 4px;
+                  }   
+                  .${classPrefix}-countdown {
+                    margin-top: 4px;
+                  }
+                  .${classPrefix}-countdown .countdown-block .countdown-label {
+                  color: #000;
+                  text-align: center;
+                  font-family: Inter;
+                  font-size: 9px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 140%; /* 21px */
+                  }
+                 .${classPrefix}-countdown .countdown-block .countdown-digit {
+                  border-radius: 3px;
+                  background: #E9E9E9;
+                  padding: 2px 3px;
+                  text-align: center;
+                  font-family: Inter;
+                  font-size: 9px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 140%; /* 21px */
+                  margin-right: 2px;
+                  }
+                }
                 `,
             },
         },
