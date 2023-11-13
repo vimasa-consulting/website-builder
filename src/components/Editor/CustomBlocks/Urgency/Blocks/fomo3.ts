@@ -116,7 +116,7 @@ const fomo3Component = (editor: Editor) => {
                 font-size: 38px;
                 font-style: normal;
                 font-weight: 600;
-                line-height: 0;
+                line-height: 1;
                 text-transform: uppercase;
                 margin: 0;
               }
@@ -130,6 +130,52 @@ const fomo3Component = (editor: Editor) => {
                 line-height: 140%;
                 margin: 0;
                } 
+              @media (max-width: 770px) {
+                .${classPrefix}-section {
+                  height: 70px;
+                  padding-top: 10px;
+                  padding-bottom: 14px;
+                }
+               .${classPrefix}-section-heading {
+                margin-bottom: 5px;
+                }
+                .${classPrefix}-h2 {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-family: Inter;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                }
+                .${classPrefix}-text {
+                text-align: center;
+                font-family: Inter;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                }
+                .${classPrefix}-countdown .countdown-block .countdown-label {
+                color: #000;
+                text-align: center;
+                font-family: Inter;
+                font-size: 9px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 21px */
+                }
+               .${classPrefix}-countdown .countdown-block .countdown-digit {
+                border-radius: 3px;
+                background: #E9E9E9;
+                padding: 2px 3px;
+                text-align: center;
+                font-family: Inter;
+                font-size: 9px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 21px */
+                margin-right: 2px;
+                }
+              }
                 `,
             },
         },
