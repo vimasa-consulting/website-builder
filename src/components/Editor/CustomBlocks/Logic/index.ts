@@ -63,6 +63,18 @@ import {
   productData3Block,
   productData3Component
 } from "./Blocks/productData3";
+import { 
+  comparison1Block, 
+  comparison1Component 
+} from "./Blocks/comparison1";
+import { 
+  comparison2Block, 
+  comparison2Component 
+} from "./Blocks/comparison2";
+import { 
+  comparison3Block, 
+  comparison3Component 
+} from "./Blocks/comparison3";
 
 export default function initLogic(editor: Editor) {
   // Before After 1
@@ -98,4 +110,10 @@ export default function initLogic(editor: Editor) {
   productData2Component(editor);
   productData3Block(editor);
   productData3Component(editor);
+  comparison1Block(editor);
+  comparison1Component(editor);
+  comparison2Block(editor);
+  comparison2Component(editor);
+  comparison3Block(editor);
+  comparison3Component(editor);
 }
