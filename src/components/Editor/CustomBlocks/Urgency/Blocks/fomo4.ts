@@ -48,27 +48,47 @@ const fomo4Component = (editor: Editor) => {
                 components: `
                 <div class="${classPrefix}-section">
                     <div class="${classPrefix}-section-container">
-                        <svg width="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.47 37.47"><defs><style>.cls-1{fill:#231f20;}</style></defs><g id="Layer_1-2"><path class="cls-1" d="m18.73,0c-3.01,0-5.86.71-8.38,1.98l3.76,3.78c1.45-.51,3-.79,4.62-.79,7.6,0,13.78,6.17,13.78,13.77,0,2.96-.95,5.79-2.66,8.12l-1.52-1.53L10.67,7.58l-1.87-1.88-1.65-1.67C2.8,7.46,0,12.78,0,18.74c0,10.33,8.4,18.73,18.73,18.73,2.54,0,5.01-.5,7.33-1.48.14-.06.29-.13.43-.2l-3.83-3.85c-1.27.38-2.58.57-3.93.57-7.59,0-13.77-6.18-13.77-13.77,0-2.8.84-5.4,2.27-7.58l1.31,1.31,17.7,17.8h.01l1.95,1.97,1.6,1.61c4.81-3.52,7.67-9.13,7.67-15.11C37.47,8.41,29.06,0,18.73,0Z"/></g></svg>
-                        <p class="${classPrefix}-text">Rush Now! [Insert Sale Name] ends in</p>
-                        <div class="${classPrefix}-countdown" data-gjs-type="countdown"></div> 
-                        <svg width="16px" xxmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.47 37.47"><defs><style>.cls-1{fill:#231f20;}</style></defs><g id="Layer_1-2"><path class="cls-1" d="m18.73,0c-3.01,0-5.86.71-8.38,1.98l3.76,3.78c1.45-.51,3-.79,4.62-.79,7.6,0,13.78,6.17,13.78,13.77,0,2.96-.95,5.79-2.66,8.12l-1.52-1.53L10.67,7.58l-1.87-1.88-1.65-1.67C2.8,7.46,0,12.78,0,18.74c0,10.33,8.4,18.73,18.73,18.73,2.54,0,5.01-.5,7.33-1.48.14-.06.29-.13.43-.2l-3.83-3.85c-1.27.38-2.58.57-3.93.57-7.59,0-13.77-6.18-13.77-13.77,0-2.8.84-5.4,2.27-7.58l1.31,1.31,17.7,17.8h.01l1.95,1.97,1.6,1.61c4.81-3.52,7.67-9.13,7.67-15.11C37.47,8.41,29.06,0,18.73,0Z"/></g></svg>
+                        <div class="${classPrefix}-section-mobile-only">
+                          <img src="https://s3-alpha-sig.figma.com/img/8f11/d7e1/3d01155bd542e8dc709e3193e3f9f33a?Expires=1701043200&amp;Signature=J6WB0V~9T7uQCsWI54O~FGJyW0ZtnbiW3ScKA6U8O4-CBTkzC-fOz8V3x1ltcA0~OtGRvnWIo4B8mNwjiMtnpB-yQSZf767VbvqjufjYItV9kAdB7Jw7A1ftHDykxuWtp-LhSnxYk0B~dUsX6LefnEdVhgI3AP9V7Nz0Xg7ydTBUrgaZ1grw4a~lzEZsCtr9ZZJN9yQJgXCV78SZFKNDeuIKoYFapVM6k8q-nOcJib3yWUW294qEwm7fOikZkUtWJo97LbdkoHXmoyUgLzXBDzQL0ZZcNnAY8t-3pGMQslOKbxb3vz8pmpJAAHFBzd0tEQ9Mb8gjShEMZ~7sVv7BIw__&amp;Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+                          <p class="${classPrefix}-text">Rush Now! [Insert Sale Name] ends in</p>
+                          <img src="https://s3-alpha-sig.figma.com/img/8f11/d7e1/3d01155bd542e8dc709e3193e3f9f33a?Expires=1701043200&amp;Signature=J6WB0V~9T7uQCsWI54O~FGJyW0ZtnbiW3ScKA6U8O4-CBTkzC-fOz8V3x1ltcA0~OtGRvnWIo4B8mNwjiMtnpB-yQSZf767VbvqjufjYItV9kAdB7Jw7A1ftHDykxuWtp-LhSnxYk0B~dUsX6LefnEdVhgI3AP9V7Nz0Xg7ydTBUrgaZ1grw4a~lzEZsCtr9ZZJN9yQJgXCV78SZFKNDeuIKoYFapVM6k8q-nOcJib3yWUW294qEwm7fOikZkUtWJo97LbdkoHXmoyUgLzXBDzQL0ZZcNnAY8t-3pGMQslOKbxb3vz8pmpJAAHFBzd0tEQ9Mb8gjShEMZ~7sVv7BIw__&amp;Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+                        </div>
+                        <div>
+                          <img class="${classPrefix}-section-desktop-only" src="https://s3-alpha-sig.figma.com/img/8f11/d7e1/3d01155bd542e8dc709e3193e3f9f33a?Expires=1701043200&amp;Signature=J6WB0V~9T7uQCsWI54O~FGJyW0ZtnbiW3ScKA6U8O4-CBTkzC-fOz8V3x1ltcA0~OtGRvnWIo4B8mNwjiMtnpB-yQSZf767VbvqjufjYItV9kAdB7Jw7A1ftHDykxuWtp-LhSnxYk0B~dUsX6LefnEdVhgI3AP9V7Nz0Xg7ydTBUrgaZ1grw4a~lzEZsCtr9ZZJN9yQJgXCV78SZFKNDeuIKoYFapVM6k8q-nOcJib3yWUW294qEwm7fOikZkUtWJo97LbdkoHXmoyUgLzXBDzQL0ZZcNnAY8t-3pGMQslOKbxb3vz8pmpJAAHFBzd0tEQ9Mb8gjShEMZ~7sVv7BIw__&amp;Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+                          <p class="${classPrefix}-text ${classPrefix}-section-desktop-only">Rush Now! [Insert Sale Name] ends in</p>
+                          <div class="${classPrefix}-countdown" data-gjs-type="countdown"></div> 
+                          <img class="${classPrefix}-section-desktop-only" src="https://s3-alpha-sig.figma.com/img/8f11/d7e1/3d01155bd542e8dc709e3193e3f9f33a?Expires=1701043200&amp;Signature=J6WB0V~9T7uQCsWI54O~FGJyW0ZtnbiW3ScKA6U8O4-CBTkzC-fOz8V3x1ltcA0~OtGRvnWIo4B8mNwjiMtnpB-yQSZf767VbvqjufjYItV9kAdB7Jw7A1ftHDykxuWtp-LhSnxYk0B~dUsX6LefnEdVhgI3AP9V7Nz0Xg7ydTBUrgaZ1grw4a~lzEZsCtr9ZZJN9yQJgXCV78SZFKNDeuIKoYFapVM6k8q-nOcJib3yWUW294qEwm7fOikZkUtWJo97LbdkoHXmoyUgLzXBDzQL0ZZcNnAY8t-3pGMQslOKbxb3vz8pmpJAAHFBzd0tEQ9Mb8gjShEMZ~7sVv7BIw__&amp;Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+                        </div>
                     </div>
                 </div>
                 `,
                 styles: `
                .${classPrefix}-section {
-                height: 140px;
+                height: 48px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-               } 
+               }
+               .${classPrefix}-section-container img {
+                opacity: 0.5;
+                width: 30px;
+                height: 30px;
+                }
                .${classPrefix}-section-container {
-                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+               } 
+               .${classPrefix}-section-container > div {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                } 
+               .${classPrefix}-section-container .${classPrefix}-section-mobile-only {
+                display: none;
+              }
                .${classPrefix}-countdown .countdown-digit{
                 font-size: 1.5rem;
                }
@@ -76,9 +96,106 @@ const fomo4Component = (editor: Editor) => {
                 text-align: center;
                 font-family: Inter, sans-serif;
                 font-size: 16px;
-                padding: 0 8px;
-                line-height: 1.5;
+                margin: 0;
+                margin-left: 8px;
                } 
+               .${classPrefix}-countdown {
+                display: flex;
+                }
+               .${classPrefix}-countdown .countdown-cont {
+                display: flex;
+                margin-right: 8px;
+                }
+               .${classPrefix}-countdown .countdown-block {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                margin-left: 4px;
+                justify-content: center;
+                align-items: center;
+                }
+               .${classPrefix}-countdown .countdown-block .countdown-label {
+                color: #000;
+                text-align: center;
+                font-family: Inter;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 21px */
+                }
+               .${classPrefix}-countdown .countdown-block .countdown-digit {
+                border-radius: 3px;
+                background: #E9E9E9;
+                padding: 3px 7px;
+                text-align: center;
+                font-family: Inter;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 21px */
+                margin-right: 4px;
+                }
+                @media (max-width: 770px) {
+                .${classPrefix}-section {
+                  height: 70px;
+                  padding-top: 10px;
+                  padding-bottom: 14px;
+                }
+                .${classPrefix}-section-desktop-only{
+                  display: none;
+                }
+                .${classPrefix}-section-container .${classPrefix}-section-mobile-only{
+                  display: flex;
+                }
+               .${classPrefix}-section-heading {
+                margin-bottom: 5px;
+                }
+                .${classPrefix}-h2 {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-family: Inter;
+                font-size: 19px;
+                font-style: normal;
+                font-weight: 400;
+                }
+                .${classPrefix}-text {
+                text-align: center;
+                font-family: Inter;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                margin-left: 4px;
+                }   
+                .${classPrefix}-section-container img {
+                width: 20px;
+                height: 20px;
+                }
+                .${classPrefix}-countdown {
+                  margin-top: 4px;
+                }
+                .${classPrefix}-countdown .countdown-block .countdown-label {
+                color: #000;
+                text-align: center;
+                font-family: Inter;
+                font-size: 9px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 21px */
+                }
+               .${classPrefix}-countdown .countdown-block .countdown-digit {
+                border-radius: 3px;
+                background: #E9E9E9;
+                padding: 2px 3px;
+                text-align: center;
+                font-family: Inter;
+                font-size: 9px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 21px */
+                margin-right: 2px;
+                }
+              }
+
                 `,
             },
         },

@@ -48,45 +48,149 @@ const fomo5Component = (editor: Editor) => {
                 components: `
                 <div class="${classPrefix}-section">
                     <div class="${classPrefix}-section-heading">
-                        <h2 class="${classPrefix}-h3">[Insert Sale Name] is live now. Talk about extra benefits/value. Shop Now!</h2>
+                        <h2 class="${classPrefix}-h3 ${classPrefix}-section-desktop-only">[Insert Sale Name] is live now. Talk about extra benefits/value. Shop Now!</h2>
+                        <h2 class="${classPrefix}-h3 ${classPrefix}-section-mobile-only">[Insert Sale Name] is live now. Shop Now!</h2>
+                        <p class="${classPrefix}-text ${classPrefix}-section-mobile-only">Talk about extra benefits/value like Free Shipping, Cashback etc.</p>
                     </div>
                     <div class="${classPrefix}-section-container">
-                        <p class="${classPrefix}-text">Hurry! Sale ends in </p>
+                        <p class="${classPrefix}-text ${classPrefix}-section-desktop-only">Hurry! Sale ends in </p>
+                        <p class="${classPrefix}-text ${classPrefix}-section-mobile-only">Ends in</p>
                         <div class="${classPrefix}-countdown" data-gjs-type="countdown"></div>    
                     </div>
                 </div>
                 `,
                 styles: `
                .${classPrefix}-section {
-                height: 140px;
+                height: 96px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                } 
+               .${classPrefix}-section .${classPrefix}-section-mobile-only {
+                  display: none;
+                }
                .${classPrefix}-section-container {
-                height: 80px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                } 
-               .${classPrefix}-countdown .countdown-digit{
-                font-size: 1.5rem;
-               }
+               .${classPrefix}-countdown {
+                display: flex;
+                }
+               .${classPrefix}-countdown .countdown-cont {
+                display: flex;
+                margin-right: 8px;
+                }
+               .${classPrefix}-countdown .countdown-block {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                margin-left: 4px;
+                justify-content: center;
+                align-items: center;
+                }
+               .${classPrefix}-countdown .countdown-block .countdown-label {
+                color: #000;
+                text-align: center;
+                font-family: Inter;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 21px */
+                }
+               .${classPrefix}-countdown .countdown-block .countdown-digit {
+                border-radius: 3px;
+                background: #E9E9E9;
+                padding: 3px 7px;
+                text-align: center;
+                font-family: Inter;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 21px */
+                margin-right: 4px;
+                }
                .${classPrefix}-h3 {
                 color: #000;
-                font-size: 24px;
+                text-align: center;
+                font-family: Inter;
+                font-size: 20px;
                 font-style: normal;
-                line-height: 64px;
+                font-weight: 500;
+                line-height: 0;
                 margin: 0;
+                margin-bottom: 22px;
               }
                .${classPrefix}-text {
                 text-align: center;
                 font-family: Inter, sans-serif;
                 font-size: 15px;
                 padding: 0 8px;
-                line-height: 1.5;
+                line-height: 0;
+                margin: 0;
                } 
+                @media (max-width: 770px) {
+                  .${classPrefix}-h3 {
+                    margin-bottom: 10px;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1; /* 18.2px */
+                  }
+                  .${classPrefix}-section {
+                    height: 70px;
+                    padding-top: 10px;
+                    padding-bottom: 14px;
+                  }
+                  .${classPrefix}-section-desktop-only{
+                    display: none;
+                  }
+                  .${classPrefix}-section .${classPrefix}-section-mobile-only{
+                    display: flex;
+                  }
+                 .${classPrefix}-section-heading {
+                  margin-bottom: 5px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  }
+                  .${classPrefix}-text {
+                  text-align: center;
+                  font-family: Inter;
+                  font-size: 9px;
+                  font-style: normal;
+                  font-weight: 400;
+                  margin-left: 4px;
+                  }   
+                  .${classPrefix}-countdown {
+                    margin-top: 4px;
+                  }
+                  .${classPrefix}-countdown .countdown-block .countdown-label {
+                  color: #000;
+                  text-align: center;
+                  font-family: Inter;
+                  font-size: 9px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 140%; /* 21px */
+                  }
+                 .${classPrefix}-countdown .countdown-block .countdown-digit {
+                  border-radius: 3px;
+                  background: #E9E9E9;
+                  padding: 2px 3px;
+                  text-align: center;
+                  font-family: Inter;
+                  font-size: 9px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 140%; /* 21px */
+                  margin-right: 2px;
+                  }
+                }
                 `,
             },
         },

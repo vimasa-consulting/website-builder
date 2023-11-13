@@ -58,22 +58,50 @@ const fomo2Component = (editor: Editor) => {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                padding-top: 16px;
+                padding-bottom: 13px;
                } 
                .${classPrefix}-h2 {
-                color: #000;
-                font-size: 36px;
+                color: #1E1E1E;
+                font-size: 38px;
+                font-family: Inter;
                 font-style: normal;
                 font-weight: 600;
-                line-height: 64px;
+                line-height: 53.2px;
                 margin: 0;
+                text-align: center;
+                margin-bottom: 4px;
               }
                .${classPrefix}-text {
                 text-align: center;
                 font-family: Inter, sans-serif;
                 font-size: 15px;
-                padding: 0 8px;
-                line-height: 1.5;
+                line-height: 21px;
+                margin: 0;
                } 
+              @media (max-width: 770px) {
+                .${classPrefix}-section {
+                height: 63px;
+                padding: 10px 31px 15px 30px;
+                }
+                .${classPrefix}-h2 {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-family: Inter;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1;
+                }
+                .${classPrefix}-text {
+                color: #000;
+                text-align: center;
+                font-family: Inter;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                }
+              }
                 `,
             },
         },
