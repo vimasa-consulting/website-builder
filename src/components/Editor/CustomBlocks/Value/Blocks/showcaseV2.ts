@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const showcaseV2Block = (editor: Editor) => {
   const options = {
-    id: "value-showcaseV2",
+    id: "Ve1",
     label: "Showcase V2",
     block: {},
     props: {},
@@ -26,7 +26,7 @@ const showcaseV2Block = (editor: Editor) => {
 
 const showcaseV2Component = (editor: Editor) => {
   const options = {
-    id: "value-showcaseV2",
+    id: "Ve1",
     label: "Showcase V 2",
     block: {},
     props: {},

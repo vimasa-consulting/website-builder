@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const timeline2Block = (editor: Editor) => {
   const options = {
-    id: "timeline2",
+    id: "Ye2",
     label: "Timeline 2",
     block: {},
     props: {},
@@ -26,7 +26,7 @@ const timeline2Block = (editor: Editor) => {
 
 const timeline2Component = (editor: Editor) => {
   const options = {
-    id: "timeline2",
+    id: "Ye2",
     label: "Timeline 2",
     block: {},
     props: {},

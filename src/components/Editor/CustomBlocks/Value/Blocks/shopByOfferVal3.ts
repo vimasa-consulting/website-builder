@@ -2,7 +2,7 @@ import { Editor } from "grapesjs";
 
 const shopByOfferVal3Block = (editor: Editor) => {
   const options = {
-    id: "value-shopByOfferVal3",
+    id: "Va3",
     label: "Shop By Offer 3",
     block: {},
     props: {},
@@ -26,7 +26,7 @@ const shopByOfferVal3Block = (editor: Editor) => {
 
 const shopByOfferVal3Component = (editor: Editor) => {
   const options = {
-    id: "value-shopByOfferVal3",
+    id: "Va3",
     label: "Shop By Offer 3",
     block: {},
     props: {},
