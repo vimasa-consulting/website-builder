@@ -58,35 +58,77 @@ const fomo3Component = (editor: Editor) => {
                 `,
                 styles: `
                .${classPrefix}-section {
-                height: 140px;
+                height: 128px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                padding-top: 16px;
+                padding-bottom: 25px;
                } 
                .${classPrefix}-section-container {
-                height: 80px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                } 
-               .${classPrefix}-countdown .countdown-digit{
-                font-size: 2rem;
-               }
-               .${classPrefix}-h2 {
+               .${classPrefix}-countdown {
+                display: flex;
+                }
+               .${classPrefix}-countdown .countdown-cont {
+                display: flex;
+                }
+               .${classPrefix}-countdown .countdown-block {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                margin-left: 4px;
+                justify-content: center;
+                align-items: center;
+                }
+               .${classPrefix}-countdown .countdown-block .countdown-label {
                 color: #000;
-                font-size: 36px;
+                text-align: center;
+                font-family: Inter;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 21px */
+                }
+               .${classPrefix}-countdown .countdown-block .countdown-digit {
+                border-radius: 3px;
+                background: #E9E9E9;
+                padding: 3px 7px;
+                text-align: center;
+                font-family: Inter;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 21px */
+                margin-right: 4px;
+                }
+               .${classPrefix}-section-heading {
+                margin-bottom: 16px;
+                }
+               .${classPrefix}-h2 {
+                color: #1E1E1E;
+                text-align: center;
+                font-family: Inter;
+                font-size: 38px;
                 font-style: normal;
                 font-weight: 600;
-                line-height: 64px;
+                line-height: 0;
+                text-transform: uppercase;
                 margin: 0;
               }
                .${classPrefix}-text {
+                color: #000;
                 text-align: center;
-                font-family: Inter, sans-serif;
+                font-family: Inter;
                 font-size: 15px;
-                padding: 0 8px;
-                line-height: 1.5;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                margin: 0;
                } 
                 `,
             },
