@@ -58,21 +58,26 @@ const fomo2Component = (editor: Editor) => {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                padding-top: 16px;
+                padding-bottom: 13px;
                } 
                .${classPrefix}-h2 {
-                color: #000;
-                font-size: 36px;
+                color: #1E1E1E;
+                font-size: 38px;
+                font-family: Inter;
                 font-style: normal;
                 font-weight: 600;
-                line-height: 64px;
+                line-height: 53.2px;
                 margin: 0;
+                text-align: center;
+                margin-bottom: 4px;
               }
                .${classPrefix}-text {
                 text-align: center;
                 font-family: Inter, sans-serif;
                 font-size: 15px;
-                padding: 0 8px;
-                line-height: 1.5;
+                line-height: 21px;
+                margin: 0;
                } 
                 `,
             },
