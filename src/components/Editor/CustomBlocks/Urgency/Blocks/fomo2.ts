@@ -79,6 +79,29 @@ const fomo2Component = (editor: Editor) => {
                 line-height: 21px;
                 margin: 0;
                } 
+              @media (max-width: 770px) {
+                .${classPrefix}-section {
+                height: 63px;
+                padding: 10px 31px 15px 30px;
+                }
+                .${classPrefix}-h2 {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-family: Inter;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1;
+                }
+                .${classPrefix}-text {
+                color: #000;
+                text-align: center;
+                font-family: Inter;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                }
+              }
                 `,
             },
         },

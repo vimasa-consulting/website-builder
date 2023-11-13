@@ -70,12 +70,12 @@ const fomo1Component = (editor: Editor) => {
                  height: 38px;
                }
                 .${classPrefix}-text {
-                    color: #000;
-                    text-align: center;
-                    font-family: Inter;
-                    font-size: 11px;
-                    font-style: normal;
-                    font-weight: 400;
+                color: #000;
+                text-align: center;
+                font-family: Inter;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 400;
                 }
                 .${classPrefix}-text b {
                 display: block;
