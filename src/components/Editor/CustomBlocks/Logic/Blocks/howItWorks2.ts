@@ -213,6 +213,7 @@ const howItWorks2Component = (editor: Editor) => {
 .${classPrefix}-cardContentRight {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 50%;
   padding: 30px 0px 0px 80px;
 }
