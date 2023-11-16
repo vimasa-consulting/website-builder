@@ -95,7 +95,7 @@ export default function GrapesJSComponent() {
         // open a popup and pass editor as props?
         editor.Modal.open({
           title: "Persuasive Blocks",
-          content:'',
+          content:'List',
         }).onceClose(() => editor.stopCommand('openPersuasiveBlocks'));          
       },
       stop() {
