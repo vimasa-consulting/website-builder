@@ -93,9 +93,13 @@ export default function GrapesJSComponent() {
     editor.Commands.add('openPersuasiveBlocks', {
       run(editor, sender) {
         // open a popup and pass editor as props?
-        alert('show popup with algolia instant search');
+        editor.Modal.open({
+          title: "Persuasive Blocks",
+          content:'',
+        }).onceClose(() => editor.stopCommand('openPersuasiveBlocks'));          
       },
-      stop(editor, sender) {
+      stop() {
+        editor.Modal.close();
       },
     });
     // editor.on("block", function (event) {
@@ -122,14 +126,12 @@ export default function GrapesJSComponent() {
     // });
     // loadBlocks(editor);
     // loadComponents(editor);
-    
       editor.Panels.addButton('views',{
         id: 'persuasiveblocks',
-        label: '<u>B</u>',
+        label: `<u>PB</u>`,
         className: 'persuasiveblocks',
-        command: 'openPersuasiveBlocks',
-        attributes: { title: 'Persuasive Blocks'},
-        active: false,
+        command: () => editor.runCommand('openPersuasiveBlocks'),
+        attributes: { title: 'Persuasive Blocks'}
       });
     
     initCustomBlocks(editor);
