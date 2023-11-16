@@ -90,6 +90,14 @@ export default function GrapesJSComponent() {
   const [blockOptions, setBlockOptions] = useState<BlockOptions[]>([]);
 
   const onEditor = (editor: Editor) => {
+    editor.Commands.add('openPersuasiveBlocks', {
+      run(editor, sender) {
+        // open a popup and pass editor as props?
+        alert('show popup with algolia instant search');
+      },
+      stop(editor, sender) {
+      },
+    });
     // editor.on("block", function (event) {
     //   if (
     //     event.model &&
@@ -114,6 +122,16 @@ export default function GrapesJSComponent() {
     // });
     // loadBlocks(editor);
     // loadComponents(editor);
+    
+      editor.Panels.addButton('views',{
+        id: 'persuasiveblocks',
+        label: '<u>B</u>',
+        className: 'persuasiveblocks',
+        command: 'openPersuasiveBlocks',
+        attributes: { title: 'Persuasive Blocks'},
+        active: false,
+      });
+    
     initCustomBlocks(editor);
     setGrapeJSEditor(editor);
     const url=new URL(window.location.href)
