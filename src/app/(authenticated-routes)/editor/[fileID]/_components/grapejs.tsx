@@ -38,6 +38,9 @@ import userActionsMapping from "@/components/Editor/CustomBlocks/UserActions/use
 import { BlockDetails } from "@/types/blockDetails";
 import initCustomBlocks from "@/components/Editor/CustomBlocks/initialization";
 
+import algoliasearch from 'algoliasearch/lite';
+import { InstantSearch, SearchBox,Hits,RefinementList } from 'react-instantsearch';
+
 import {decode as atob} from 'base-64';
 
 export interface BlockOptions {
@@ -148,6 +151,7 @@ export default function GrapesJSComponent() {
     }); 
     
   };
+  const searchClient = algoliasearch('IO4B9E5Q45', 'a089c7660ed4fcbb8529e4a12ce2836c');
 
   const lp = "./img/";
   const plp = "https://via.placeholder.com/350x250/";
@@ -463,6 +467,17 @@ export default function GrapesJSComponent() {
       },
     ],
   };
+// @ts-ignore
+function Hit({ hit }) {
+  return (
+    <article>
+      <img src={hit.id} />
+      <p>{hit.category}</p>
+      <h1>{hit.description}</h1>
+      <button>Add to page</button>
+    </article>
+  );
+}
 
   return (
     <>
@@ -544,7 +559,12 @@ export default function GrapesJSComponent() {
         onEditor={onEditor}
       />
       <div style={{display: 'none'}}>
-        <div id="customModalPopup"> Hello
+        <div id="customModalPopup">
+        <InstantSearch searchClient={searchClient} indexName="blocks">
+          <SearchBox />
+          <RefinementList attribute="category" />
+          <Hits hitComponent={Hit} />
+        </InstantSearch>
         </div>
       </div>
       {isAddNewProjectModalOpen && (
