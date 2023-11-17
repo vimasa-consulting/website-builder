@@ -93,9 +93,10 @@ export default function GrapesJSComponent() {
     editor.Commands.add('openPersuasiveBlocks', {
       run(editor, sender) {
         // open a popup and pass editor as props?
+        const container=document.querySelector("#customModalPopup");
         editor.Modal.open({
           title: "Persuasive Blocks",
-          content:'List',
+          content: container,
         }).onceClose(() => editor.stopCommand('openPersuasiveBlocks'));          
       },
       stop() {
@@ -542,6 +543,10 @@ export default function GrapesJSComponent() {
         }}
         onEditor={onEditor}
       />
+      <div style={{display: 'none'}}>
+        <div id="customModalPopup"> Hello
+        </div>
+      </div>
       {isAddNewProjectModalOpen && (
         <CustomBlockPopup
           onClose={() => setIsAddNewProjectModalOpen(false)}
