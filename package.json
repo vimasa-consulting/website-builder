@@ -39,6 +39,7 @@
     "grapesjs-touch": "^0.1.1",
     "grapesjs-tui-image-editor": "^1.0.2",
     "grapesjs-typed": "^2.0.1",
+    "instantsearch.css": "^8.1.0",
     "lucide-react": "^0.287.0",
     "next": "13.5.4",
     "react": "^18",
