@@ -96,9 +96,10 @@ export default function GrapesJSComponent() {
   const onEditor = (editor: Editor) => {
     const deviceManager = editor.Devices;
     deviceManager.remove('tablet');
-    //console.log(deviceManager);
     const mobileDevice=deviceManager.get("mobilePortrait");
     mobileDevice?.set({"width": "400px"});
+    const desktopDevice=deviceManager.get("desktop");
+    desktopDevice?.set({"width": "1440px"});
 
     editor.Commands.add('openPersuasiveBlocks', {
       run(editor, sender) {
