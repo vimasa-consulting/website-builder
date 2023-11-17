@@ -145,6 +145,21 @@ export default function GrapesJSComponent() {
         command: () => editor.runCommand('openPersuasiveBlocks'),
         attributes: { title: 'Persuasive Blocks'}
       });
+      editor.Panels.addButton('options',{
+        id: 'savepage',
+        label: `<img width="24" height="24" src="https://img.icons8.com/nolan/64/save.png" alt="save"/>`,
+        className: 'savepage',
+        command: () => editor.runCommand('openPersuasiveBlocks'),
+        attributes: { title: 'save page'}
+      });
+      editor.Panels.addButton('options',{
+        id: 'publishepage',
+        label: `<img width="20" height="20" src="https://img.icons8.com/ios/50/upload--v1.png" alt="upload--v1"/>`,
+        className: 'publishepage',
+        command: () => editor.runCommand('openPersuasiveBlocks'),
+        attributes: { title: 'save page'}
+      });
+
       editor.Panels.removeButton('devices-c', 'set-device-tablet');
     
     initCustomBlocks(editor);
