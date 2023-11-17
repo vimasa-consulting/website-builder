@@ -40,6 +40,7 @@ import initCustomBlocks from "@/components/Editor/CustomBlocks/initialization";
 
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, SearchBox,Hits,RefinementList } from 'react-instantsearch';
+import 'instantsearch.css/themes/satellite.css'
 
 import {decode as atob} from 'base-64';
 
@@ -469,9 +470,10 @@ export default function GrapesJSComponent() {
   };
 // @ts-ignore
 function Hit({ hit }) {
+  const hitImage=`/editor/blocks/${hit.id}.png`;
   return (
     <article>
-      <img src={hit.id} />
+      <img src={hitImage} width="160px"/>
       <p>{hit.category}</p>
       <h1>{hit.description}</h1>
       <button>Add to page</button>
