@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import GjsEditor from "@grapesjs/react";
-import { grapesjs, type Editor } from "grapesjs";
+import { grapesjs, type Editor, PropertyProps } from "grapesjs";
 import "grapesjs/dist/css/grapes.min.css";
 import blocksBasicPlugin from "grapesjs-blocks-basic";
 import formsPlugin from "grapesjs-plugin-forms";
@@ -161,6 +161,14 @@ export default function GrapesJSComponent() {
       });
 
       editor.Panels.removeButton('devices-c', 'set-device-tablet');
+      const styleManager = editor.StyleManager;
+      var fonts=styleManager.getProperty("typography","font-family");
+      // @ts-ignore
+      var fontOptions=fonts?.attributes?.options;
+      fontOptions.push({id: 'Inter, sans-serif', label:'Inter'})
+      console.log(fontOptions);
+      // @ts-ignore
+      fonts?.set("options",fontOptions);
     
     initCustomBlocks(editor);
     setGrapeJSEditor(editor);
