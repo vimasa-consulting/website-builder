@@ -71,12 +71,12 @@ const productFeatures1Component = (editor: Editor) => {
           </div>
         </td>
         <td>
-          <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-imgFill" />
+          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
         </td>
       </tr>
       <tr>
         <td>
-          <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-imgFill" />
+          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
         </td>
         <td>
           <div class="${classPrefix}-cardTextRight">
@@ -115,7 +115,7 @@ const productFeatures1Component = (editor: Editor) => {
           </div>
         </td>
         <td>
-          <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-imgFill" />
+          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
         </td>
       </tr>
     </table>
@@ -125,6 +125,7 @@ const productFeatures1Component = (editor: Editor) => {
         styles: `
 .${classPrefix}-h1 {
   display: block;
+  font-family: Inter;
   font-size: 40px;
   font-weight: 600;
 }
@@ -176,87 +177,120 @@ const productFeatures1Component = (editor: Editor) => {
   }
 }
 
-.${classPrefix}-imgFill {
-  object-fit: fill;
-  object-position: center;
+.${classPrefix}-img {
+  width: 574px;
+  height: 408px;
+  object-fit: scale-down;
   overflow: hidden;
-  width: 100%;
+  border-radius: 10px;
+  background: #E9E9E9;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-img {
+    width: 186px;
+    height: 132px;
+  }
 }
 
 .${classPrefix}-section {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 20px 80px;
+  padding: 37px 146px 78px 143px;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-section {
-    padding: 10px 5px;
+    padding: 9px 0 29px 0;
   }
 }
 
 .${classPrefix}-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .${classPrefix}-cardHeading {
-  margin: 0 auto;
   text-align: center;
+  margin: 0 35px;
+}
+
+.${classPrefix}-cardHeading .${classPrefix}-h1 {
+  width: 898px;
+  height: 44px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-cardHeading .${classPrefix}-h1 {
+    width: 330px;
+    height: auto;
+    font-size: 26px;
+    line-height: 35px;
+  }
 }
 
 .${classPrefix}-cardContent {
-  margin: 0 auto;
-  margin-top: 90px;
+  margin-top: 91px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-cardContent {
-    margin-top: 40px;
+    margin: 47px 14px 0 16px;
   }
-}
-
-.${classPrefix}-cardContent td {
-  width: 33%;
 }
 
 .${classPrefix}-cardTextLeft,
 .${classPrefix}-cardTextRight {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+}
+
+.${classPrefix}-cardTextLeft .${classPrefix}-h3,
+.${classPrefix}-cardTextRight .${classPrefix}-h3 {
+  width: 340px;
+  height: 19px;
 }
 
 @media (max-width: 425px) {
-  .${classPrefix}-cardTextLeft,
-  .${classPrefix}-cardTextRight {
-    gap: 6px;
+
+  .${classPrefix}-cardTextLeft .${classPrefix}-h3,
+  .${classPrefix}-cardTextRight .${classPrefix}-h3 {
+    width: 152px;
+    height: 19px;
+    font-size: 15px;
   }
 }
 
-.${classPrefix}-cardTextLeft {
-  margin-right: 90px;
+.${classPrefix}-cardTextLeft .${classPrefix}-p,
+.${classPrefix}-cardTextRight .${classPrefix}-p {
+  width: 482px;
+  height: 87px;
+  margin-top: 21px;
 }
 
 @media (max-width: 425px) {
-  .${classPrefix}-cardTextLeft {
-    margin-right: 6px;
+
+  .${classPrefix}-cardTextLeft .${classPrefix}-p,
+  .${classPrefix}-cardTextRight .${classPrefix}-p {
+    width: 177px;
+    height: 53px;
+    margin-top: 6px;
   }
 }
 
 .${classPrefix}-cardTextRight {
-  margin-left: 90px;
+  margin-left: 64px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-cardTextRight {
-    margin-left: 6px;
+    margin-left: 16px;
   }
-}
-
-.${classPrefix}-imgFill {
-  border-radius: 20px;
 }
       `,
       },

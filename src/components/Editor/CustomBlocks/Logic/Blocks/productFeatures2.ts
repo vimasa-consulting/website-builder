@@ -118,6 +118,7 @@ const productFeatures2Component = (editor: Editor) => {
         styles: `
 .${classPrefix}-h1 {
   display: block;
+  font-family: Inter;
   font-size: 40px;
   font-weight: 600;
 }
