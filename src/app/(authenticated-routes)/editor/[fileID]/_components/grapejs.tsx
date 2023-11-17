@@ -473,8 +473,8 @@ function Hit({ hit }) {
   const hitImage=`/editor/blocks/${hit.id}.png`;
   return (
     <article>
-      <img src={hitImage} width="160px"/>
-      <p>{hit.category}</p>
+      <img src={hitImage} width="240px"/>
+x
       <h1>{hit.description}</h1>
       <button>Add to page</button>
     </article>
