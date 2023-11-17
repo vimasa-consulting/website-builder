@@ -35,8 +35,20 @@ const component = (editor: Editor) => {
             <div class="${classPrefix}-container">
             <h1 class="${classPrefix}-heading">Hopeful & Optimistic header about User’s aspirations</h1>
             <p class="${classPrefix}-text">Describe how your user’s aspiration will be achieved with the help of your product. Make an emotional connection between your user’s desire and your product</p>
-            <img class="${classPrefix}-mainImage" src="https://placehold.co/424x387" alt="" />
-            <img class="${classPrefix}-subImage" src="https://placehold.co/468x556" alt="" />
+            <div class="${classPrefix}-mainImage">
+              <img 
+                loading="lazy"
+                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, httpscdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                class="${classPrefix}-image"      
+              />
+            </div>
+            <div class="${classPrefix}-subImage">
+              <img 
+                loading="lazy"
+                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, httpscdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                class="${classPrefix}-image"      
+              />
+            </div>
             </div>
           </section>
         `,
@@ -93,6 +105,18 @@ const component = (editor: Editor) => {
             border-radius: 10px;
             max-width: 100%;
             margin-right: 110px;
+            background: #E9E9E9;
+            box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+            width: 424px;
+            height: 387px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .${classPrefix}-mainImage img, .${classPrefix}-subImage img {
+            outline: none;
+            width: 45px;
+            height: 45px;
           }
           .${classPrefix}-subImage {
             border-radius: 10px;
@@ -103,6 +127,11 @@ const component = (editor: Editor) => {
             z-index: 1;
             background: #E9E9E9;
             box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+            width: 468px;
+            height: 556px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
 
           .${classPrefix}-content-wrapper {
