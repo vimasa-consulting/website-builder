@@ -78,7 +78,7 @@ const productFeatures1Component = (editor: Editor) => {
         <td>
           <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
         </td>
-        <td>
+        <td class="${classPrefix}-paddingHack">
           <div class="${classPrefix}-cardTextRight">
             <span class="${classPrefix}-h3">
               Feature 2
@@ -283,13 +283,13 @@ const productFeatures1Component = (editor: Editor) => {
   }
 }
 
-.${classPrefix}-cardTextRight {
-  margin-left: 64px;
+.${classPrefix}-paddingHack {
+  padding-left: 64px;
 }
 
 @media (max-width: 425px) {
-  .${classPrefix}-cardTextRight {
-    margin-left: 16px;
+  .${classPrefix}-paddingHack {
+    padding-left: 16px;
   }
 }
       `,
