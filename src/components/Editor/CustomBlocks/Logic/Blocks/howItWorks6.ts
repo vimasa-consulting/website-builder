@@ -52,22 +52,33 @@ const howItWorks6Component = (editor: Editor) => {
       <span class="${classPrefix}-h1">How it Works</span>
     </div>
     <div class="${classPrefix}-cardContent">
-      <img loading="lazy" src="https://placehold.co/814x458" class="${classPrefix}-imgFill" />
+      <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
       <div class="${classPrefix}-contentPartialOverlay">
         <span class="${classPrefix}-overlayHeading">
           <span class="${classPrefix}-h3">
             Describe your product in 2-3 words
           </span>
         </span>
-        <div class="${classPrefix}-overlayDescription">
-          <span class="${classPrefix}-p">
-            Give an overview of how your product works.
-            <br><br>
-            Then give a step by step description of the process. Keep the explanation simple and easy to understand
-            for the user.
-            <br><br>
-            Highlight the ease of use as a value of your product.
-          </span>
+        <div class="${classPrefix}-hideOnMobile">
+          <div class="${classPrefix}-overlayDescription">
+            <span class="${classPrefix}-p">
+              Give an overview of how your product works.
+              <br><br>
+              Then give a step by step description of the process. Keep the explanation simple and easy to understand
+              for the user.
+              <br><br>
+              Highlight the ease of use as a value of your product.
+            </span>
+          </div>
+        </div>
+        <div class="${classPrefix}-showOnlyOnMobile">
+          <div class="${classPrefix}-overlayDescription">
+            <span class="${classPrefix}-p">
+              Give an overview of how your product works. Then give a step by step description of the process. 
+              <br><br>
+              Highlight the ease of use as a value of your product.
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -79,6 +90,7 @@ const howItWorks6Component = (editor: Editor) => {
   display: block;
   font-size: 40px;
   font-weight: 600;
+  font-family: Inter;
 }
 
 @media (max-width: 425px) {
@@ -106,11 +118,13 @@ const howItWorks6Component = (editor: Editor) => {
   font-family: Inter;
   font-size: 15px;
   font-weight: 400;
+  line-height: 21px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-p {
     font-size: 13px;
+    line-height: 18.5px;
   }
 }
 
@@ -126,85 +140,115 @@ const howItWorks6Component = (editor: Editor) => {
   }
 }
 
-.${classPrefix}-imgFill {
-  object-fit: fill;
-  object-position: center;
-  overflow: hidden;
-  width: 100%;
-}
-
 .${classPrefix}-section {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 80px 100px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 81px 136px 125px 150px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-section {
-    padding: 50px 15px;
+    padding: 50px 0 54px 0;
   }
 }
 
 .${classPrefix}-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.${classPrefix}-cardHeading {
-  margin: 0 auto;
+.${classPrefix}-cardHeading .${classPrefix}-h1 {
+  text-align: center;
+  width: 458px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-cardHeading .${classPrefix}-h1 {
+    width: 185px;
+  }
 }
 
 .${classPrefix}-cardContent {
-  position: relative;
-  margin: 80px auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 81px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-cardContent {
-    margin: 26px auto 0 auto;
-    display: flex;
     flex-direction: column;
+    margin-top: 26px;
   }
 }
 
-.${classPrefix}-cardContent .${classPrefix}-imgFill {
-  max-height: 500px;
+.${classPrefix}-img {
+  width: 814px;
+  height: 458px;
   border-radius: 10px;
   background: #E9E9E9;
-  min-width: 300px;
+  object-fit: scale-down;
+  overflow: hidden;
 }
 
 @media (max-width: 425px) {
-  .${classPrefix}-cardContent .${classPrefix}-imgFill  {
-    width: 100%;
+  .${classPrefix}-img {
+    width: 372px;
+    height: 209px;
+    margin: 0 14px;
   }
 }
 
 .${classPrefix}-contentPartialOverlay {
-  position: absolute;
-  top: 50%;
-  right: -30%;
-  transform: translate(0%, -50%);
-  padding: 30px;
-  max-width: 300px;
+  margin-left: -150px;
+  width: 492px;
+  height: 301px;
+  padding: 36px 83px 55px 48px;
   border-radius: 20px;
   background: #FFF;
   box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+  z-index: 1;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-contentPartialOverlay {
-    position: unset;
-    max-width: 90%;
-    transform: none;
-    z-index: 1;
-    margin: -20px 20px 0;
+    width: 318px;
+    height: 235px;
+    margin: -30px 41px 0 41px;
+    border-radius: 10px;
+    padding: 29px 32px 30px 32px;
   }
 }
 
-.${classPrefix}-overlayDescription {
+.${classPrefix}-overlayHeading .${classPrefix}-h3 {
+  width: 361px;
+  height: 17px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-overlayHeading .${classPrefix}-h3 {
+    width: auto;
+    height: 18px;
+  }
+}
+
+.${classPrefix}-overlayDescription .${classPrefix}-p {
   margin-top: 25px;
+  width: 396px;
+  height: 168px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-overlayDescription .${classPrefix}-p {
+    margin-top: 42px;
+    width: 254px;
+    height: 116px;
+  }
 }
       `,
       },
