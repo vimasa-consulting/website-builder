@@ -94,6 +94,8 @@ export default function GrapesJSComponent() {
   const [blockOptions, setBlockOptions] = useState<BlockOptions[]>([]);
 
   const onEditor = (editor: Editor) => {
+    const deviceManager = editor.Devices;
+    deviceManager.remove('tablet');
     editor.Commands.add('openPersuasiveBlocks', {
       run(editor, sender) {
         // open a popup and pass editor as props?
@@ -138,6 +140,7 @@ export default function GrapesJSComponent() {
         command: () => editor.runCommand('openPersuasiveBlocks'),
         attributes: { title: 'Persuasive Blocks'}
       });
+      editor.Panels.removeButton('devices-c', 'set-device-tablet');
     
     initCustomBlocks(editor);
     setGrapeJSEditor(editor);
