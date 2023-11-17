@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import GjsEditor from "@grapesjs/react";
-import { grapesjs, type Editor } from "grapesjs";
+import { grapesjs, type Editor, PropertyProps } from "grapesjs";
 import "grapesjs/dist/css/grapes.min.css";
 import blocksBasicPlugin from "grapesjs-blocks-basic";
 import formsPlugin from "grapesjs-plugin-forms";
@@ -100,7 +100,7 @@ export default function GrapesJSComponent() {
     mobileDevice?.set({"width": "400px"});
     const desktopDevice=deviceManager.get("desktop");
     desktopDevice?.set({"width": "1440px"});
-
+   
     editor.Commands.add('openPersuasiveBlocks', {
       run(editor, sender) {
         // open a popup and pass editor as props?
@@ -145,7 +145,30 @@ export default function GrapesJSComponent() {
         command: () => editor.runCommand('openPersuasiveBlocks'),
         attributes: { title: 'Persuasive Blocks'}
       });
+      editor.Panels.addButton('options',{
+        id: 'savepage',
+        label: `<img width="24" height="24" src="https://img.icons8.com/nolan/64/save.png" alt="save"/>`,
+        className: 'savepage',
+        command: () => editor.runCommand('openPersuasiveBlocks'),
+        attributes: { title: 'save page'}
+      });
+      editor.Panels.addButton('options',{
+        id: 'publishepage',
+        label: `<img width="20" height="20" src="https://img.icons8.com/ios/50/upload--v1.png" alt="upload--v1"/>`,
+        className: 'publishepage',
+        command: () => editor.runCommand('openPersuasiveBlocks'),
+        attributes: { title: 'save page'}
+      });
+
       editor.Panels.removeButton('devices-c', 'set-device-tablet');
+      const styleManager = editor.StyleManager;
+      var fonts=styleManager.getProperty("typography","font-family");
+      // @ts-ignore
+      var fontOptions=fonts?.attributes?.options;
+      fontOptions.push({id: 'Inter, sans-serif', label:'Inter'})
+      console.log(fontOptions);
+      // @ts-ignore
+      fonts?.set("options",fontOptions);
     
     initCustomBlocks(editor);
     setGrapeJSEditor(editor);
@@ -565,6 +588,11 @@ x
               },
             },
           },
+          canvas: {
+            styles: [
+              'https://fonts.googleapis.com/css?family=Inter'
+            ]
+          }
         }}
         onEditor={onEditor}
       />
