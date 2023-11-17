@@ -100,7 +100,7 @@ export default function GrapesJSComponent() {
     mobileDevice?.set({"width": "400px"});
     const desktopDevice=deviceManager.get("desktop");
     desktopDevice?.set({"width": "1440px"});
-
+   
     editor.Commands.add('openPersuasiveBlocks', {
       run(editor, sender) {
         // open a popup and pass editor as props?
@@ -588,6 +588,11 @@ x
               },
             },
           },
+          canvas: {
+            styles: [
+              'https://fonts.googleapis.com/css?family=Inter'
+            ]
+          }
         }}
         onEditor={onEditor}
       />
