@@ -39,16 +39,8 @@ import { BlockDetails } from "@/types/blockDetails";
 import initCustomBlocks from "@/components/Editor/CustomBlocks/initialization";
 import "../../../../../styles/persuasiveblock.css";
 
-import algoliasearch from "algoliasearch/lite";
-import {
-  InstantSearch,
-  SearchBox,
-  Hits,
-  RefinementList,
-} from "react-instantsearch";
-import "instantsearch.css/themes/satellite.css";
-
 import { decode as atob } from "base-64";
+import BlockSearchPopup from "@/components/Editor/BlockSearchPopup";
 
 export interface BlockOptions {
   label: string;
@@ -111,6 +103,9 @@ export default function GrapesJSComponent() {
       run(editor, sender) {
         // open a popup and pass editor as props?
         const container = document.querySelector("#customModalPopup");
+        
+        
+
         editor.Modal.open({
           title: "Persuasive Blocks",
           content: container,
@@ -188,10 +183,6 @@ export default function GrapesJSComponent() {
       editor.addComponents({ type: item.trim() });
     });
   };
-  const searchClient = algoliasearch(
-    "IO4B9E5Q45",
-    "a089c7660ed4fcbb8529e4a12ce2836c"
-  );
 
   const lp = "./img/";
   const plp = "https://via.placeholder.com/350x250/";
@@ -507,19 +498,7 @@ export default function GrapesJSComponent() {
       },
     ],
   };
-  // @ts-ignore
-  function Hit({ hit }) {
-    const hitImage = `/editor/blocks/${hit.id}.png`;
-    return (
-      <article className="articleSection">
-        <img src={hitImage} width="240px" />
-        <div className="description">
-          <h1>{hit.description}</h1>
-          <button>ADD</button>
-        </div>
-      </article>
-    );
-  }
+  
 
   return (
     <>
@@ -604,32 +583,7 @@ export default function GrapesJSComponent() {
         onEditor={onEditor}
       />
       <div style={{ display: "none" }}>
-        <div id="customModalPopup">
-          <div className="leftSection">
-            <InstantSearch searchClient={searchClient} indexName="blocks">
-              <div className="searchSection">
-                <SearchBox />
-              </div>
-              <div className="refinementList">
-                <RefinementList attribute="category" />
-              </div>
-            </InstantSearch>
-          </div>
-          <div className="rightSection">
-            <div className="topSection">
-              <h2>Selected Blocks</h2>
-              <p>
-                Helps you develop trust in your users, on your product’s
-                authenticity & effectiveness
-              </p>
-            </div>
-            <div className="bottomSection">
-              <InstantSearch searchClient={searchClient} indexName="blocks">
-                <Hits hitComponent={Hit} />
-              </InstantSearch>
-            </div>
-          </div>
-        </div>
+        <BlockSearchPopup grapeJSEditor={grapeJSEditor} />
       </div>
       {isAddNewProjectModalOpen && (
         <CustomBlockPopup
