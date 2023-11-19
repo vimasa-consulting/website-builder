@@ -80,7 +80,9 @@ const reviewsAndRatings1Component = (editor: Editor) => {
                     “Insert a realistic & relatable customer quote here. Be specific with the pointers. Make the language resonate with your target audience.”
                     </p>
                     <h3 class="${classPrefix}-customerName">Customer Name</h3>
-                    <p class="${classPrefix}-verifiedBuyer"><span class="${classPrefix}-verifiedCheckMark">&#10003;</span>Verified Buyer</p>
+                    <p class="${classPrefix}-verifiedBuyer">
+                    <span class="${classPrefix}-verifiedCheckMark">&#10003;</span>
+                    Verified Buyer</p>
                 </div>
                 <div class="${classPrefix}-card">
                     <div class="${classPrefix}-ratingsContainer">
@@ -104,8 +106,10 @@ const reviewsAndRatings1Component = (editor: Editor) => {
                 styles: `
         .${classPrefix}-section {
             background-color: #fff;
-            padding: 20px 80px;
+            padding: 76px 0px 91px;
             font-family: Inter, sans-serif;
+            max-width: 1440px;
+            margin: 0 auto;
           }
         .${classPrefix}-title{
             color: #000;
@@ -114,11 +118,14 @@ const reviewsAndRatings1Component = (editor: Editor) => {
             font-style: normal;
             font-weight: 600;
             line-height: normal;
+            margin-top: 0px;
+            margin-bottom: 70px;
         }
         .${classPrefix}-reviewsContainer {
             display: flex;
             justify-content: center;
             gap: 29px;
+            margin: 0 auto;
         }
         .${classPrefix}-card {
             display: flex;
@@ -128,15 +135,20 @@ const reviewsAndRatings1Component = (editor: Editor) => {
             border-radius: 10px;
             border: 1px solid rgba(171, 171, 171, 0.70);
             padding: 56px 41px 53px;
+            max-width: 397px;
         }
         .${classPrefix}-ratingImg {
-            width: 25px;
-            height: 25px;
+            width: 23.5px;
+            height: 23.5px;
+          }
+        .${classPrefix}-ratingsContainer {
+            height: 23.5px;
           }
         .${classPrefix}-horizontalLine {
             width: 78.5px;
             color: #ABABAB;
             margin-top: 31px;
+            margin-bottom: 0px;
         }
         .${classPrefix}-productName {
             color: #000;
@@ -144,7 +156,6 @@ const reviewsAndRatings1Component = (editor: Editor) => {
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
-            line-height: 140%;
             margin-top: 19px;
             margin-bottom: 16px;
         }
@@ -163,10 +174,11 @@ const reviewsAndRatings1Component = (editor: Editor) => {
             font-size: 16px;
             font-style: normal;
             font-weight: 500;
-            line-height: 140%;
+            margin-top: 27px;
+            margin-bottom: 0px;
         }
         .${classPrefix}-verifiedCheckMark {
-            font-size: 22px;
+            font-size: 19px;
             margin-right: 2px;
             opacity: 0.7;
         }
@@ -175,24 +187,56 @@ const reviewsAndRatings1Component = (editor: Editor) => {
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            line-height: 140%;
+            margin-top: 7px;
+            line-height: 21px;
+            margin-bottom: -7px;
         } 
-        @media (max-width: 770px) {
+        @media (max-width: 400px) {
+            .${classPrefix}-section {
+                padding: 22px 36px 29px 35px;
+            } 
+            .${classPrefix}-title {
+                color: #000;
+                text-align: center;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 600;
+                margin-bottom: 32px;
+                padding: 0 40px;
+            } 
             .${classPrefix}-reviewsContainer {
                 display: flex;
                 justify-content: center;
                 gap: 29px;
                 flex-direction: column;
             } 
-        }
-
-        @media (max-width: 425px) {
-            .${classPrefix}-section {
-                padding: 20px;
+            .${classPrefix}-horizontalLine {
+                margin-top: 20.5px;
             }
-            .${classPrefix}-title { 
-            font-size: 30px;
+            .${classPrefix}-review {
+                color: #000;
+                text-align: center;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
             }
+            .${classPrefix}-customerName {
+                margin-top: 13px;
+            }
+            .${classPrefix}-verifiedBuyer {
+                margin-top: 2px;
+                font-size: 13px;
+            } 
+            .${classPrefix}-verifiedCheckMark {
+                font-size: 17px;
+            } 
+            .${classPrefix}-productName {
+                font-size: 18px;
+            } 
+            .${classPrefix}-card {
+                padding: 34px 22px 31px;
+            } 
         }
         `,
             },
