@@ -47,10 +47,11 @@ const testimonials4Component = (editor: Editor) => {
                 traits: [],
                 components: `
               <section class="${classPrefix}-section">
-              <h1 class="${classPrefix}-title">Header for Endorsement</h1>
+              <h1 class="${classPrefix}-title">Header for Customer Reviews</h1>
               <div class="${classPrefix}-sectionWrapper">
                 <div class="${classPrefix}-wrapper">
                   <div class="${classPrefix}-content">
+                  <img src="https://img.icons8.com/ios/50/808080/quote-left.png" class="${classPrefix}-quotes" alt="Quotes"/>
                     <div class="${classPrefix}-description">
                       <p class="${classPrefix}-descriptionContent">
                       “Insert a realistic & relatable customer quote here. Be specific with the pointers.
@@ -67,9 +68,7 @@ const testimonials4Component = (editor: Editor) => {
                   </div>
                   </div>
                   <div class="${classPrefix}-imageWrapper">
-                    <img 
-                    class="${classPrefix}-image"
-                    />
+                  <img class="${classPrefix}-img" class="${classPrefix}-image" src="https://placehold.co/366x366" alt="Placeholder"/>
                 </div>
                 </div>
                 </div> 
@@ -79,7 +78,9 @@ const testimonials4Component = (editor: Editor) => {
         .${classPrefix}-section {
             background-color: #fff;
             font-family: Inter, sans-serif;
-            padding: 75px 20px 92px;
+            padding: 75px 0px 92px;
+            margin: 0 auto;
+            max-width: 1440px;
           }
         .${classPrefix}-sectionWrapper {
             display: flex;
@@ -114,10 +115,11 @@ const testimonials4Component = (editor: Editor) => {
             background: #E9E9E9;
             border-radius: 10px;
           }
-          .${classPrefix}-image {
-            width: 45px;
-            height: 45px;
+          .${classPrefix}-img {
+            width: 100%;
+            height: 100%;
             object-fit: fill;
+            border-radius: 10px;
           }
           .${classPrefix}-content {
             display: flex;
@@ -132,8 +134,14 @@ const testimonials4Component = (editor: Editor) => {
             font-weight: 400;
             line-height: 140%;
             margin-top: 0;
-            padding-right: 62px;
+            padding-right: 49px;
             margin-bottom: 49px;
+          }
+          .${classPrefix}-quotes {
+            width: 40px;
+            height: 40px;
+            display: block;
+            margin-bottom: 13px;
           }
           .${classPrefix}-descriptionContent {
             margin: 0;
@@ -171,27 +179,42 @@ const testimonials4Component = (editor: Editor) => {
           margin-bottom: 44px;
         }
 
-        @media (max-width: 770px) {
+        @media (max-width: 400px) {
           .${classPrefix}-section {
-            padding: 20px;
+            padding: 42px 51px 31px;
           }
           .${classPrefix}-wrapper {
-            flex-direction: column;
+            flex-direction: column-reverse;
             height: unset;
-            gap: 52px;
+            gap: 28px;
           }
-          .${classPrefix}-imageWrapper {
-            min-height: 350px;
+          .${classPrefix}-img {
+            width: 289px;
+            height: 289px;
           }
           .${classPrefix}-descriptionContainer {
             min-width: unset;
           }
+          .${classPrefix}-description {
+            font-size: 13px;
+            padding: unset;
+            margin-bottom: 18px;
+          }
+          .${classPrefix}-customerName {
+            font-size: 15px;
+            margin-bottom: 3px;
+          }
           .${classPrefix}-title {
-            font-size: 30px;
-            margin-bottom: 20px;
+            padding: 0 20px;
+            font-size: 26px;
+            margin-bottom: 35px;
           }
           .${classPrefix}-content {
             min-width: unset;
+          }
+          .${classPrefix}-designation {
+            font-size: 12px;
+            margin-bottom: unset;
           }
         }
         `,
