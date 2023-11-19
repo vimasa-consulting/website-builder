@@ -52,11 +52,7 @@ const beforeAfter1Component = (editor: Editor) => {
                   <div class="${classPrefix}-cardWrapper">
                     <div class="${classPrefix}-card">
                       <div class="${classPrefix}-panel">
-                        <img
-                          loading="lazy"
-                          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
-                          class="${classPrefix}-image"
-                        />
+                      <img class="${classPrefix}-img ${classPrefix}-img-1" src="https://placehold.co/415x518" alt="Placeholder"/>
                         <div class="${classPrefix}-caption">
                           <button class="${classPrefix}-button" >Before</button>
                         </div>
@@ -64,11 +60,7 @@ const beforeAfter1Component = (editor: Editor) => {
                     </div>
                     <div class="${classPrefix}-card-2">
                       <div class="${classPrefix}-panel-2">
-                        <img
-                          loading="lazy"
-                          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, httpscdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
-                          class="${classPrefix}-image"
-                        />
+                      <img class="${classPrefix}-img ${classPrefix}-img-2" src="https://placehold.co/415x518" alt="Placeholder"/>
                         <div class="${classPrefix}-caption">
                           <button class="${classPrefix}-button" >After</button>
                         </div>
@@ -91,19 +83,17 @@ const beforeAfter1Component = (editor: Editor) => {
         `,
                 styles: `
         .${classPrefix}-section {
-            justify-content: center;
-            align-items: center;
             background-color: #fff;
-            display: flex;
-            flex-direction: column;
-            padding: 20px 80px;
-            max-height: 700px;
+            padding: 117px 0px;
+            margin: 0 auto;
+            max-width: 1440px;
           }
           
           .${classPrefix}-wrapper {
             align-self: center;
             width: 100%;
             max-width: 1202px;
+            margin: 0 auto;
           }
           
           .${classPrefix}-content {
@@ -113,14 +103,12 @@ const beforeAfter1Component = (editor: Editor) => {
 
           .${classPrefix}-cardWrapper {
             display: flex;
-            width: 65%;
           }
           
           .${classPrefix}-card {
             display: flex;
             flex-direction: column;
             line-height: normal;
-            width: 50%;
             margin-left: 0px;
           }
           
@@ -129,10 +117,8 @@ const beforeAfter1Component = (editor: Editor) => {
             background-color: #d9d9d9;
             display: flex;
             width: 100%;
-            max-width: 415px;
             flex-direction: column;
             margin: 0 auto;
-            padding: 277px 53px 25px 54px;
           }
           
           .${classPrefix}-image {
@@ -151,12 +137,7 @@ const beforeAfter1Component = (editor: Editor) => {
             flex-direction: column;
             color: #000;
             text-align: center;
-            position: relative;
-            fill: #fff;
-            overflow: hidden;
-            align-self: stretch;
-            aspect-ratio: 5.6;
-            margin-top: 197px;
+            fill: #fff; 
             width: 100%;
             font: 500 20px Inter, sans-serif;
           }
@@ -177,17 +158,15 @@ const beforeAfter1Component = (editor: Editor) => {
             display: flex;
             flex-direction: column;
             line-height: normal;
-            width: 50%;
           }
           
           .${classPrefix}-panel-2 {
-            border-radius: 0px 10px 10px 0px;
             background-color: #e9e9e9;
             display: flex;
             width: 100%;
-            max-width: 416px;
             flex-direction: column;
-            padding: 277px 54px 25px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
           }
           
           .${classPrefix}-caption-2 {
@@ -222,54 +201,74 @@ const beforeAfter1Component = (editor: Editor) => {
             display: flex;
             flex-direction: column;
             line-height: normal;
-            width: 35%;
           }
           
           .${classPrefix}-panel-3 {
             display: flex;
             flex-direction: column;
             margin: auto 0;
-            padding-right: 100px;
           }
-          
+
+          .${classPrefix}-img {
+            width: 415px;
+            height: 518px;
+          }
+          .${classPrefix}-img-1 {
+            border-top-left-radius: 10px;
+          }
+          .${classPrefix}-img-2 {
+            border-top-right-radius: 10px !important;
+          }
           .${classPrefix}-button {
             display: block;
             width: 100%;
-            height: 100%;
-            max-height: 55px;
+            height: 58px;
             border-radius: 10px;
             border: none;
             cursor: pointer;
             font-size: 20px;
             background-color: white;
+            margin: 0 53px;
+            max-width: 308px;
+            margin-bottom: 25.5px;
           }
           
           .${classPrefix}-title {
             color: #000;
             font-size: 32px;
-            margin-bottom: 0;
             font-family: Inter, Roboto, sans-serif;
             line-height: 1.5;
+            margin: 0;
+            padding-right: 20px;
           }
           
           .${classPrefix}-description {
             color: #000;
             align-self: stretch;
             font: 400 15px/140% Inter, -apple-system, Roboto, Helvetica, sans-serif;
+            margin-top: 23px;
+            margin-bottom: 0px;
           }
           
-          @media (max-width: 768px) {
+          @media (max-width: 400px) {
             .${classPrefix}-section {
-              padding: 0 20px;
+              padding: 25px 20px 72px;
             }
           
             .${classPrefix}-wrapper {
               max-width: 100%;
-              margin: 40px 0;
+            }
+          
+            .${classPrefix}-button {
+              margin: unset;
+              max-width: 134px;
+              height: 28px;
+              border-radius: 5px;
+              font-size: 13px;
             }
           
             .${classPrefix}-content {
-              flex-direction: column;
+              flex-direction: column-reverse;
               align-items: stretch;
               gap: 0px;
             }
@@ -277,13 +276,31 @@ const beforeAfter1Component = (editor: Editor) => {
             .${classPrefix}-card {
               width: 100%;
             }
+            .${classPrefix}-img {
+              width: 180px;
+              height: 225px;
+            }
+            .${classPrefix}-title {
+              font-size: 26px;
+              padding-right: 70px;
+            }
+            .${classPrefix}-description {
+              font-size: 13px;
+              margin-top:8px;
+              margin-bottom: 37px;
+              margin-right: 20px;
+            }
           
             .${classPrefix}-panel {
-              padding: 100px 20px 0;
+              width: unset;
+            }
+            .${classPrefix}-panel-2 {
+              width: unset;
+              margin: 0 auto;
             }
           
             .${classPrefix}-caption {
-              margin-top: 40px;
+              margin-top: 0px;
               padding: 0 20px;
               margin-bottom: 20px;
             }
@@ -297,7 +314,6 @@ const beforeAfter1Component = (editor: Editor) => {
               }
           
             .${classPrefix}-panel-2 {
-              padding: 100px 20px 0;
             }
           
             .${classPrefix}-caption-2 {
@@ -311,8 +327,7 @@ const beforeAfter1Component = (editor: Editor) => {
             }
           
             .${classPrefix}-panel-3 {
-              margin-top: 40px;
-              padding-right: 0px;
+
             }
             .${classPrefix}-button {
                 font-size: 14px;
