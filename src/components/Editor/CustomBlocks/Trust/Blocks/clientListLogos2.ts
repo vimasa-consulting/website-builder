@@ -55,34 +55,34 @@ const clientListLogos2Component = (editor: Editor) => {
                 A short description about how your company has helped the clients find a market edge and saved them time, money or resources
                 </h5>  
                 <div class="${classPrefix}-logoWrapper">
+                  <div class="${classPrefix}-logoContainer">
+                  <div class="${classPrefix}-logo">
+                  <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                  </div>
+                   <p class="${classPrefix}-brand">Brand Name</p>
+                   </div>
                    <div class="${classPrefix}-logoContainer">
-                   <div class="${classPrefix}-logoBox">
-                       Logo 1
+                   <div class="${classPrefix}-logo">
+                    <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                    </div>
+                   <p class="${classPrefix}-brand">Brand Name</p>
+                   </div>
+                   <div class="${classPrefix}-logoContainer">
+                   <div class="${classPrefix}-logo">
+                   <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
                    </div>
                    <p class="${classPrefix}-brand">Brand Name</p>
                    </div>
                    <div class="${classPrefix}-logoContainer">
-                   <div class="${classPrefix}-logoBox">
-                       Logo 2
+                   <div class="${classPrefix}-logo">
+                   <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
                    </div>
                    <p class="${classPrefix}-brand">Brand Name</p>
                    </div>
                    <div class="${classPrefix}-logoContainer">
-                   <div class="${classPrefix}-logoBox">
-                       Logo 3
-                   </div>
-                   <p class="${classPrefix}-brand">Brand Name</p>
-                   </div>
-                   <div class="${classPrefix}-logoContainer">
-                   <div class="${classPrefix}-logoBox">
-                       Logo 4
-                   </div>
-                   <p class="${classPrefix}-brand">Brand Name</p>
-                   </div>
-                   <div class="${classPrefix}-logoContainer">
-                   <div class="${classPrefix}-logoBox">
-                       Logo 5
-                   </div>
+                   <div class="${classPrefix}-logo">
+                    <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                    </div>
                    <p class="${classPrefix}-brand">Brand Name</p>
                    </div>
                </div>
@@ -91,9 +91,10 @@ const clientListLogos2Component = (editor: Editor) => {
         `,
                 styles: `
         .${classPrefix}-section {
-            padding: 114px 20px;
-            max-height: 700px;
+            padding: 114px 0 116px;
+            max-width: 1440px;
             font-family: Inter, sans-serif;
+            margin: 0 auto;
           }
         .${classPrefix}-logoWrapper {
             justify-content: center;
@@ -115,7 +116,7 @@ const clientListLogos2Component = (editor: Editor) => {
             font-weight: 600;
             font-family: Inter, sans-serif;
             text-align: center;
-            margin: 0 0 24px;
+            margin: 0 0 23px;
           }
           .${classPrefix}-brand {
             color: #000;
@@ -132,7 +133,7 @@ const clientListLogos2Component = (editor: Editor) => {
             font-size: 15px;
             font-weight: 400;
             line-height: 21px;
-            margin: 0 0 64px;
+            margin: 0 0 88px;
             max-width: 600px;
             text-align: left;
           }
@@ -150,20 +151,46 @@ const clientListLogos2Component = (editor: Editor) => {
             width: 134px;
             text-align: center;
           }
+          .${classPrefix}-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+          }
+          .${classPrefix}-logo {
+            border: 1px dashed #999;
+            border-radius: 10px;
+            color: #999;
+            height: 55px;
+            width: 134px;
+          }
 
-          @media (max-width: 770px) {
+          @media (max-width: 400px) {
+            .${classPrefix}-section {
+              padding: 57px 21px 40px 19px;
+              max-width: 1440px;
+              font-family: Inter, sans-serif;
+              margin: 0 auto;
+            }
             .${classPrefix}-logoWrapper {
-                flex-direction: column;
-                gap: 30px;
+                gap: 18px;
             }
             .${classPrefix}-title {
-                font-size: 20px;
-                text-align: center;
-                margin-bottom: 40px;
+              color: #000;
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 35px;
+              margin-bottom: 10px;
+              text-align: unset;
             }
             .${classPrefix}-description {
-                margin: 0 0 32px;
-                text-align: center;
+              color: #000;
+              font-size: 13px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%; 
+              margin-bottom: 40px;
             }
             .${classPrefix}-titleContainer {
                 padding-right: 0px;
@@ -174,6 +201,31 @@ const clientListLogos2Component = (editor: Editor) => {
             .${classPrefix}-section {
                 padding: 70px 20px;
             }
+            .${classPrefix}-logoContainer:nth-child(5) {
+              display: none;
+           }
+            .${classPrefix}-logoContainer{
+              gap: 8px;
+           }
+           .${classPrefix}-logo {
+             border: 1px dashed #999;
+             border-radius: 5px;
+             color: #999;
+             height: 32px;
+             width: 76px;
+           }
+           .${classPrefix}-img {
+             border-radius: 5px;
+           }
+           .${classPrefix}-brand {
+            color: #000;
+            text-align: center;
+            font-family: Inter;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+          }
           }
         `,
             },

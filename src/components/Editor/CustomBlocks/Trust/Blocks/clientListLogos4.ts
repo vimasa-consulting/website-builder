@@ -49,19 +49,31 @@ const clientListLogos4Component = (editor: Editor) => {
              <section class="${classPrefix}-section">
              <h1 class="${classPrefix}-title" >Header for your successful client collaborations</h1>  
              <div class="${classPrefix}-logoWrapper">
-                <div class="${classPrefix}-logoContainer">Logo 1</div>
-                <div class="${classPrefix}-logoContainer">Logo 2</div>
-                <div class="${classPrefix}-logoContainer">Logo 3</div>
-                <div class="${classPrefix}-logoContainer">Logo 4</div>
-                <div class="${classPrefix}-logoContainer">Logo 5</div>
+             <div class="${classPrefix}-logo">
+             <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+             </div>
+             <div class="${classPrefix}-logo">
+             <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+             </div>
+             <div class="${classPrefix}-logo">
+             <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+             </div>
+             <div class="${classPrefix}-logo">
+             <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+             </div>
+             <div class="${classPrefix}-logo">
+             <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+             </div>
             </div>
                 </section>
         `,
                 styles: `
         .${classPrefix}-section {
-            padding: 20px;
+            padding: 44px 0 61px;
             max-height: 700px;
             font-family: Inter, sans-serif;
+            max-width: 1440px;
+            margin: 0 auto;
           }
         .${classPrefix}-logoWrapper {
             justify-content: center;
@@ -77,29 +89,54 @@ const clientListLogos4Component = (editor: Editor) => {
             font-family: Inter, sans-serif;
             text-align: center;
             margin-bottom: 86px;
+            margin-top: 0px;
           }
-          .${classPrefix}-logoContainer {
-            padding: 12px 24px;
+          .${classPrefix}-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+          }
+          .${classPrefix}-logo {
             border: 1px dashed #999;
             border-radius: 10px;
             color: #999;
+            height: 55px;
             width: 134px;
-            text-align: center;
           }
 
-          @media (max-width: 770px) {
-            .${classPrefix}-logoWrapper {
-                flex-direction: column;
-                gap: 30px;
+          @media (max-width: 400px) {
+            .${classPrefix}-section {
+                padding: 36px 0 41px;
             }
             .${classPrefix}-title {
-                font-size: 20px;
+                color: #000;
                 text-align: center;
-                margin-bottom: 60px;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 35px;
+                margin-bottom: 27px;
             }
+            .${classPrefix}-logoWrapper {
+                gap: 18px;
+              }
             .${classPrefix}-titleContainer {
                 padding-right: 0px;
             }
+            .${classPrefix}-logo:nth-child(5) {
+                display: none;
+             }
+             .${classPrefix}-logo {
+               border: 1px dashed #999;
+               border-radius: 5px;
+               color: #999;
+               height: 32px;
+               width: 76px;
+             }
+             .${classPrefix}-img {
+               border-radius: 5px;
+             }
           }
         `,
             },

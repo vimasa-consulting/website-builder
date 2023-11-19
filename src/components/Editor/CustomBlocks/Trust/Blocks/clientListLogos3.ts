@@ -50,24 +50,35 @@ const clientListLogos3Component = (editor: Editor) => {
                 <div class="${classPrefix}-contentWrapper">
                     <div class="${classPrefix}-block">
                         <p class="${classPrefix}-title">“Insert a customer quote here. Be specific in the benefits they received from you“</p>
-                        <div class="${classPrefix}-logoContainer">Logo 1</div>
+                        <div class="${classPrefix}-logo">
+                        <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                        </div>
                     </div>
                     <div class="${classPrefix}-block">
                         <p class="${classPrefix}-title">“Insert a customer quote here. Be specific in the benefits they received from you“</p>
-                        <div class="${classPrefix}-logoContainer">Logo 2</div>
+                        <div class="${classPrefix}-logo">
+                        <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                        </div>
                     </div>
                     <div class="${classPrefix}-block">
                         <p class="${classPrefix}-title">“Insert a customer quote here. Be specific in the benefits they received from you“</p>
-                        <div class="${classPrefix}-logoContainer">Logo 3</div>
+                        <div class="${classPrefix}-logo">
+                        <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                        </div>
                     </div>
                 </div>
             </section>
         `,
                 styles: `
         .${classPrefix}-section {
-            padding: 72px 20px;
+            padding: 71px 0px 74px;
             max-height: 700px;
             font-family: Inter, sans-serif;
+            max-width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
         .${classPrefix}-contentWrapper {
             display: flex;
@@ -87,7 +98,9 @@ const clientListLogos3Component = (editor: Editor) => {
             font-family: Inter;
             font-size: 15px;
             font-weight: 400;
-            margin: 0 0 36px;
+            margin: 0 0 35px;
+            max-width: 274px;
+            padding: 0 22px;
           }
           .${classPrefix}-logoContainer {
             padding: 12px 24px;
@@ -97,21 +110,49 @@ const clientListLogos3Component = (editor: Editor) => {
             width: 134px;
             text-align: center;
           }
-
-          @media (max-width: 770px) {
-            .${classPrefix}-logoWrapper {
-                flex-direction: column;
-                gap: 30px;
+          .${classPrefix}-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+          }
+          .${classPrefix}-logo {
+            border: 1px dashed #999;
+            border-radius: 10px;
+            color: #999;
+            height: 55px;
+            width: 134px;
+          }
+          @media (max-width: 400px) {
+            .${classPrefix}-section {
+               padding: 35px 14px 37px;
             }
             .${classPrefix}-title {
-                font-size: 20px;
+                color: #000;
                 text-align: center;
-                margin-bottom: 32px;
+                font-size: 9px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                margin-bottom: 19px;
+                padding: 0;
             }
             .${classPrefix}-contentWrapper {
-                flex-direction: column;
-                gap: 60px;
+                gap: 21px;
               }
+              .${classPrefix}-logoContainer:nth-child(5) {
+                display: none;
+             }
+             .${classPrefix}-logo {
+               border: 1px dashed #999;
+               border-radius: 5px;
+               color: #999;
+               height: 32px;
+               width: 76px;
+             }
+             .${classPrefix}-img {
+               border-radius: 5px;
+             }
           }
         `,
             },
