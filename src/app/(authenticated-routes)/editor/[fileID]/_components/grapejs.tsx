@@ -38,9 +38,11 @@ import userActionsMapping from "@/components/Editor/CustomBlocks/UserActions/use
 import { BlockDetails } from "@/types/blockDetails";
 import initCustomBlocks from "@/components/Editor/CustomBlocks/initialization";
 import "../../../../../styles/persuasiveblock.css";
+import "../../../../../styles/previewblock.css";
 
 import { decode as atob } from "base-64";
 import BlockSearchPopup from "@/components/Editor/BlockSearchPopup";
+import BlockPreviewPopup from "@/components/Editor/BlockPreviewPopup";
 
 export interface BlockOptions {
   label: string;
@@ -103,9 +105,6 @@ export default function GrapesJSComponent() {
       run(editor, sender) {
         // open a popup and pass editor as props?
         const container = document.querySelector("#customModalPopup");
-        
-        
-
         editor.Modal.open({
           title: "Persuasive Blocks",
           content: container,
@@ -115,30 +114,19 @@ export default function GrapesJSComponent() {
         editor.Modal.close();
       },
     });
-    // editor.on("block", function (event) {
-    //   if (
-    //     event.model &&
-    //     event.event === "block:drag:stop" &&
-    //     customBlockIDS.includes(event?.options?.attributes?.id)
-    //   ) {
-    //     const options = getBlockOptions(event?.options?.attributes?.id);
-    //     setBlockOptions(options);
-    //     console.log("block event", event);
-    //     setBlockDetails(event?.options?.attributes);
-    //     setIsAddNewProjectModalOpen(true);
-    //   }
-    // });
-
-    // editor.on("block:add", function (event) {
-    //   if (event?.option?.content) {
-    //     editor.addComponents(event.option.content);
-    //   }
-    //   setIsAddNewProjectModalOpen(false);
-    //   setBlockDetails(null);
-    //   setBlockOptions([]);
-    // });
-    // loadBlocks(editor);
-    // loadComponents(editor);
+    editor.Commands.add("openPreviewBlocks", {
+      run(editor, sender) {
+        // open a popup and pass editor as props?
+        const container = document.querySelector("#customModalPreviewPopup");
+        editor.Modal.open({
+          title: "Preview Blocks",
+          content: container,
+        }).onceClose(() => editor.stopCommand("openPreviewBlocks"));
+      },
+      stop() {
+        editor.Modal.close();
+      },
+    });    
     editor.Panels.addButton("views", {
       id: "persuasiveblocks",
       label: `<u>PB</u>`,
@@ -160,6 +148,13 @@ export default function GrapesJSComponent() {
       command: () => editor.runCommand("openPersuasiveBlocks"),
       attributes: { title: "save page" },
     });
+    /*editor.Panels.addButton("options", {
+      id: "previewpage",
+      label: `<img width="20" height="20" src="https://img.icons8.com/ios/50/upload--v1.png" alt="upload--v1"/>`,
+      className: "publishepage",
+      command: () => editor.runCommand("openPreviewBlocks"),
+      attributes: { title: "save page" },
+    });*/
 
     editor.Panels.removeButton("devices-c", "set-device-tablet");
     const styleManager = editor.StyleManager;
@@ -181,8 +176,12 @@ export default function GrapesJSComponent() {
     blocks.forEach((item) => {
       console.log(item.trim());
       editor.addComponents({ type: item.trim() });
-    });
+    });    
+    if(blocks.length>1){
+      editor.runCommand("openPreviewBlocks")
+    }
   };
+  
 
   const lp = "./img/";
   const plp = "https://via.placeholder.com/350x250/";
@@ -585,6 +584,9 @@ export default function GrapesJSComponent() {
       <div style={{ display: "none" }}>
         <BlockSearchPopup grapeJSEditor={grapeJSEditor} />
       </div>
+      <div style={{ display: "none" }}>
+        <BlockPreviewPopup grapeJSEditor={grapeJSEditor} />
+      </div>      
       {isAddNewProjectModalOpen && (
         <CustomBlockPopup
           onClose={() => setIsAddNewProjectModalOpen(false)}
