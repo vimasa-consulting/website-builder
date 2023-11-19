@@ -51,31 +51,34 @@ const endorsements3Component = (editor: Editor) => {
                 <div class="${classPrefix}-wrapper">
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img />
+                      <img class="${classPrefix}-img" src="https://placehold.co/360x311" alt="Placeholder"/>
                     </div>
                     <h2 class="${classPrefix}-endorserName">Endorser Name</h2>
                     <p class="${classPrefix}-designation">Designation/profile</p>
                     <p class="${classPrefix}-review">
+                    <img src="https://img.icons8.com/ios-filled/50/E9E9E9/quote-left.png" alt="quotes" class="${classPrefix}-quotes" />
                     Insert the words as spoken by an authority endorsing or validating your brand. Add specific pointers the authority has quoted about your product.
                     </p>
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img />
+                      <img class="${classPrefix}-img" src="https://placehold.co/360x311" alt="Placeholder"/>
                     </div>
                     <h2 class="${classPrefix}-endorserName">Endorser Name</h2>
                     <p class="${classPrefix}-designation">Designation/profile</p>
                     <p class="${classPrefix}-review">
+                    <img src="https://img.icons8.com/ios-filled/50/E9E9E9/quote-left.png" alt="quotes" class="${classPrefix}-quotes" />
                     Insert the words as spoken by an authority endorsing or validating your brand. Add specific pointers the authority has quoted about your product.
                     </p>
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img />
+                      <img class="${classPrefix}-img" src="https://placehold.co/360x311" alt="Placeholder"/>
                     </div>
                     <h2 class="${classPrefix}-endorserName">Endorser Name</h2>
                     <p class="${classPrefix}-designation">Designation/profile</p>
                     <p class="${classPrefix}-review">
+                    <img src="https://img.icons8.com/ios-filled/50/E9E9E9/quote-left.png" alt="quotes" class="${classPrefix}-quotes" />
                     Insert the words as spoken by an authority endorsing or validating your brand. Add specific pointers the authority has quoted about your product.
                     </p>
                   </div>
@@ -86,7 +89,9 @@ const endorsements3Component = (editor: Editor) => {
                 .${classPrefix}-section {
                   background-color: #fff;
                   font-family: Inter, sans-serif;
-                  padding: 79px 124px 85px;
+                  padding: 79px 0px 85px;
+                  max-width: 1440px;
+                  margin: 0 auto;
                 }
                 .${classPrefix}-title {
                   text-align: center;
@@ -119,15 +124,21 @@ const endorsements3Component = (editor: Editor) => {
                   background: #E9E9E9;
                 }
                 .${classPrefix}-img {
-                  width: 41px;
-                  height: 41px;
+                  width: 100%;
+                  height: 100%;
                   object-fit: fill;
+                  border-radius: 10px;
+                }
+                .${classPrefix}-quotes {
+                  width: 30px;
+                  height: 30px;
+                  margin-bottom: -7px;
                 }
                 .${classPrefix}-endorserName {
                   font-size: 20px;
                   font-style: normal;
                   font-weight: 500;
-                  margin-top: 30px;
+                  margin-top: 33px;
                   margin-bottom: 0px;
                   text-align: center;
                 }
@@ -137,28 +148,50 @@ const endorsements3Component = (editor: Editor) => {
                   font-weight: 400;
                   line-height: 140%;
                   margin: 0px;
-                  text-indent: 32px;
-                  padding-right: 34px;
+                  text-indent: 0px;
+                  padding-right: 0px;
                 }
                 .${classPrefix}-designation {
                   margin: 10px 0px 45px;
                   text-align: center;
+                  font-size: 15px;
                 } 
                 
-              @media (max-width: 770px) {
+              @media (max-width: 400px) {
                 .${classPrefix}-section {
-                  padding: 20px;
+                  padding: 66px 35px 53px; 
                 }
                 .${classPrefix}-wrapper {
                   width: 100%;
                   flex-direction: column;
+                  gap: 80px;
                 }
                 .${classPrefix}-review {
                   padding: 0px;
+                  font-size: 15px;
+                }
+                .${classPrefix}-img {
+                  width: 319px;
+                  height: 276px;
+                  object-fit: fill;
+                  border-radius: 10px;
+                }
+                .${classPrefix}-playerWrapper {
+                  width: unset;
+                  height: unset;
+                  background: unset;
                 }
                 .${classPrefix}-title {
-                  font-size: 30px;
-                  margin-bottom: 50px;
+                  font-size: 26px;
+                  margin-bottom: 35px;
+                }
+                .${classPrefix}-designation {
+                  margin-bottom: 28px;
+                  font-size: 13px;
+                  margin-top: 0px;
+                }
+                .${classPrefix}-endorserName {
+                  font-size: 18px;
                 }
               }
         `,
