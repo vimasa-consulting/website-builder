@@ -164,9 +164,9 @@ padding: 50px 10px;
 }
 
 .${classPrefix}-bottom-container {
-padding: 60px 20px;
+padding: 30px 20px;
 max-width: 359px;
-max-height: 328px;
+max-height: none;
 }
 
 .${classPrefix}-section-header-prefix {
