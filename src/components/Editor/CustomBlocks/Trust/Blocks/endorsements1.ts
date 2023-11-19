@@ -48,6 +48,7 @@ const endorsements1Component = (editor: Editor) => {
                 traits: [],
                 components: `
               <section class="${classPrefix}-section">
+              <h1 class="${classPrefix}-mobileTitle">Header for Endorsement</h1>
                 <div class="${classPrefix}-wrapper">
                   <div class="${classPrefix}-content">
                     <h1 class="${classPrefix}-title">Header for Endorsement</h1>
@@ -70,9 +71,7 @@ const endorsements1Component = (editor: Editor) => {
                   </div>
                   </div>
                   <div class="${classPrefix}-imageWrapper">
-                    <img 
-                    class="${classPrefix}-image"
-                    />
+                  <img class="${classPrefix}-img" src="https://placehold.co/521x521" alt="Placeholder"/>
                 </div>
                 </div>
               </section>
@@ -81,10 +80,12 @@ const endorsements1Component = (editor: Editor) => {
         .${classPrefix}-section {
             background-color: #fff;
             font-family: Inter, sans-serif;
-            padding: 119px 20px;
+            padding: 119px 0px;
             display: flex;
             justify-content: center;
             align-items: center;
+            max-width: 1440px;
+            margin: 0 auto;
           }
           .${classPrefix}-title {
             font-size: 40px;
@@ -103,7 +104,6 @@ const endorsements1Component = (editor: Editor) => {
             margin: 0px;
           }
           .${classPrefix}-imageWrapper {
-            flex: 1;
             width: 100%;
             height: 100%;
             display: flex;
@@ -111,6 +111,12 @@ const endorsements1Component = (editor: Editor) => {
             justify-content: center;
             background: #E9E9E9;
             border-radius: 10px;
+          }
+          .${classPrefix}-img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            border-radius: 10px; 
           }
           .${classPrefix}-image {
             width: 45px;
@@ -120,7 +126,8 @@ const endorsements1Component = (editor: Editor) => {
           .${classPrefix}-content {
             display: flex;
             flex-direction: column;
-            flex: 1;
+            max-width: 491px;
+
           }
           .${classPrefix}-description {
             font-size: 18px;
@@ -128,7 +135,7 @@ const endorsements1Component = (editor: Editor) => {
             font-weight: 400;
             line-height: 140%;
             margin-top: 0;
-            padding-right: 48px;
+            padding-right: 30px;
             margin-bottom: 71px;
           }
           .${classPrefix}-endorserName {
@@ -143,6 +150,7 @@ const endorsements1Component = (editor: Editor) => {
         .${classPrefix}-customerProfile {
           display: flex;
           gap: 22px;
+          align-items: center;
         }
         .${classPrefix}-imageContainer {
           height: 100px;
@@ -162,25 +170,64 @@ const endorsements1Component = (editor: Editor) => {
           margin: 0;
           font-size: 15px;
         }
+        .${classPrefix}-mobileTitle {
+          display: none;
+        }
 
-        @media (max-width: 770px) {
+        @media (max-width: 400px) {
           .${classPrefix}-section {
-            padding: 20px;
+            padding: 56px 27px 62px 26px;
+            flex-direction: column;
           }
           .${classPrefix}-wrapper {
-            flex-direction: column;
+            flex-direction: column-reverse;
             height: unset;
-            gap: 52px;
+            gap: 30px;
+            width: unset;
           }
           .${classPrefix}-imageWrapper {
-            min-height: 350px;
+            height: 360px;
+          }
+          .${classPrefix}-img {
+            object-fit: cover;
           }
           .${classPrefix}-descriptionContainer {
             min-width: unset;
           }
           .${classPrefix}-title {
-            font-size: 30px;
-            margin-bottom: 20px;
+            display: none;
+          }
+          .${classPrefix}-description {
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            margin-bottom: 30px;
+            padding-right: unset;
+          }
+          .${classPrefix}-endorserName {
+            font-size: 18px;
+            margin-bottom: 0px;
+          }
+          .${classPrefix}-designation {
+            font-size: 13px;
+          }
+          .${classPrefix}-imageContainer {
+            height: 80px;
+            width: 80px;
+          }
+          .${classPrefix}-customerProfile {
+            gap: 18px;
+          }
+          .${classPrefix}-mobileTitle {
+            display: unset;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 35px;
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 35px;
           }
         }
         `,
