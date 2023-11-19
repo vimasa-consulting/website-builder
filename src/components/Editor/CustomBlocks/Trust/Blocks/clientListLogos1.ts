@@ -46,29 +46,48 @@ const clientListLogos1Component = (editor: Editor) => {
                 classes: [classPrefix],
                 traits: [],
                 components: `
-             <section class="${classPrefix}-section">
-                <div class="${classPrefix}-titleContainer" >
-                <h1 class="${classPrefix}-title" >Header about the successful collaborations with your clients</h1>
-                </div>
-                <div class="${classPrefix}-logoContainer">Logo 1</div>
-                <div class="${classPrefix}-logoContainer">Logo 2</div>
-                <div class="${classPrefix}-logoContainer">Logo 3</div>
-                <div class="${classPrefix}-logoContainer">Logo 4</div>
+              <section class="${classPrefix}-section">
+                  <div class="${classPrefix}-sectionWrapper">
+                    <div class="${classPrefix}-titleContainer" >
+                    <h1 class="${classPrefix}-title" >Header about the successful collaborations with your clients</h1>
+                    </div>
+                    <div class="${classPrefix}-logoContainer">
+                    <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                    </div>
+                    <div class="${classPrefix}-logoContainer">
+                    <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                    </div>
+                    <div class="${classPrefix}-logoContainer">
+                    <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                    </div>
+                    <div class="${classPrefix}-logoContainer">
+                    <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                    </div>
+                  </div>
               </section>
         `,
                 styles: `
         .${classPrefix}-section {
+            background-color: #fff;
+            padding: 48px 0 59px;
+            font-family: Inter, sans-serif;
+            max-width: 1440px;
+            margin: 0 auto;
+          }
+        .${classPrefix}-sectionWrapper {
             justify-content: space-between;
             align-items: center;
             background-color: #fff;
             display: flex;
-            padding: 20px 157px;
-            max-height: 700px;
-            font-family: Inter, sans-serif;
+            height: 100%;
+            max-width: 1125px;
+            margin: 0 auto;
+            width: 100%;
           }
           .${classPrefix}-titleContainer {
             max-width: 357px;
             padding-right: 56px;
+            margin-right: 14px;
           }
           .${classPrefix}-title {
             font-size: 24px;
@@ -76,27 +95,52 @@ const clientListLogos1Component = (editor: Editor) => {
             font-weight: 500;
             line-height: 140%;
             font-family: Inter, sans-serif;
+            margin: 0px;
           }
-
+          .${classPrefix}-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+          }
           .${classPrefix}-logoContainer {
-            padding: 12px 24px;
             border: 1px dashed #999;
             border-radius: 10px;
             color: #999;
-
+            height: 55px;
+            width: 134px;
           }
-          @media (max-width: 770px) {
+          @media (max-width: 400px) {
             .${classPrefix}-section {
-                padding: 20px;
-                flex-direction: column;
-                gap: 30px;
+              padding: 39px 12px 38px 16px;
+            }
+            .${classPrefix}-sectionWrapper {
             }
             .${classPrefix}-title {
-                font-size: 20px;
-                text-align: center;
+              color: #000;
+              font-family: Inter;
+              font-size: 13px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 140%; /* 18.2px */
+            }
+            .${classPrefix}-logoContainer:nth-child(4) {
+               display: none;
             }
             .${classPrefix}-titleContainer {
-                padding-right: 0px;
+                width: 112px;
+                padding-right: 10px;
+                margin-right: 8px;
+            }
+            .${classPrefix}-logoContainer {
+              border: 1px dashed #999;
+              border-radius: 5px;
+              color: #999;
+              height: 32px;
+              width: 70px;
+            }
+            .${classPrefix}-img {
+              border-radius: 5px;
             }
           }
         `,
