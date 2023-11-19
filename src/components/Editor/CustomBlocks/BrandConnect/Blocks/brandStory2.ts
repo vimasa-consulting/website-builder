@@ -32,50 +32,50 @@ const brandStory2Component = (editor: Editor) => {
         traits: [],
         components: `
            <section class="${classPrefix}-section">
-              <div class="${classPrefix}-left-panel">
-               <h5 class="${classPrefix}-left-panel-heading">Compelling Header for Your Brand Story</h5> 
-              <div class="${classPrefix}-left-panel-img">
+            <div class="${classPrefix}-container">
+              <div class="${classPrefix}-left-container">
+                <h5 class="${classPrefix}-left-panel-heading">Compelling Header for Your Brand Story</h5>
+                <p class="${classPrefix}-left-panel-info">Craft your brand story in a way that sounds authentic, evokes emotions in your users, and
+                  is consistent across channels. Include the origin of the brand, its purpose & the values. Be very specific and
+                  simple with your brand message.</p>
               </div>
-               <p class="${classPrefix}-left-panel-info">Craft your brand story in a way that sounds authentic, evokes emotions in your users, and is consistent across channels. Include the origin of the brand, its purpose & the values. Be very specific and simple with your brand message.</p>
+              <div class="${classPrefix}-right-container">
+                <video class="${classPrefix}-video" controls>
+                  <source src="" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
               </div>
-              <div class="${classPrefix}-panel">
-             </div>
-           </section>
-                    `,
+            </div>
+          </section>
+        `,
         styles: `
         .${classPrefix}-section {
-          padding: 84px 161px 83px 162px;
-          justify-content: center;
-          align-items: center;
-          justify-content: center;
-          align-items: center;
-          background-color: white;
+          max-height: 762;
+          max-width: 1440px;
+          padding: 84px 162px;
           display: flex;
-          max-height: 700px;
-        }
-        
-        .${classPrefix}-left-panel {
+          align-items: center;
+          align-items: center;
+          justify-content: center;
+          justify-content: center;
+          background-color: white;
+          }
+
+          .${classPrefix}-container {
+          max-width: 1117px;
+          max-height: 595px;
+          display: flex;
+          }
+
+          .${classPrefix}-left-container {
           display: flex;
           justify-content: center;
           align-items: center;
           flex-direction: column;
           flex: 1;
-        }
+          }
 
-        .${classPrefix}-left-panel-img {
-          display: none;
-          aspect-ratio: 1;
-          object-fit: contain;
-          object-position: center;
-          width: 90px;
-          mix-blend-mode: multiply;
-          overflow: hidden;
-          align-self: center;
-          max-width: 100%;
-          border-radius: 50%;
-        }
-
-        .${classPrefix}-left-panel-heading {
+          .${classPrefix}-left-panel-heading {
           color: #000;
           font-family: Inter;
           font-size: 40px;
@@ -83,31 +83,38 @@ const brandStory2Component = (editor: Editor) => {
           font-weight: 600;
           line-height: normal;
           margin: 0;
-        }
+          }
 
-        .${classPrefix}-left-panel-info {
+          .${classPrefix}-left-panel-info {
           color: #000;
           font-family: Inter;
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
           line-height: 140%; /* 21px */
-          padding-top: 26px; 
-        }
+          padding-top: 26px;
+          margin: 0px;
+          }
 
-        .${classPrefix}-panel {
+          .${classPrefix}-right-container {
           border-radius: 10px;
-          background-color: #d9d9d9;
           display: flex;
-          flex: 1;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           height: 595px;
           margin-left: 90px;
-        }
-        
-        .${classPrefix}-image {
+          }
+
+          .${classPrefix}-video {
+          width: 100%;
+          height: 100%;
+          max-width: 595px;
+          max-height: 595px;
+          border-radius: 10px;
+          }
+
+          .${classPrefix}-image {
           aspect-ratio: 1;
           object-fit: contain;
           object-position: center;
@@ -117,9 +124,9 @@ const brandStory2Component = (editor: Editor) => {
           align-self: center;
           max-width: 100%;
           border-radius: 50%;
-        }
+          }
 
-       .${classPrefix}-title {
+          .${classPrefix}-title {
           text-align: center;
           font-family: Inter, sans-serif;
           font-size: 38px;
@@ -128,70 +135,69 @@ const brandStory2Component = (editor: Editor) => {
           line-height: normal;
           margin-top: 64px;
           margin-bottom: 0;
-        }
+          }
 
-        .${classPrefix}-description {
+          .${classPrefix}-description {
           text-align: center;
           padding: 0 84px;
           font-family: Inter, sans-serif;
           font-size: 18px;
           font-weight: 400;
-        }
+          }
 
-        @media (max-width: 770px) {
+          @media (max-width: 770px) {
           .${classPrefix}-section {
-            padding: 20px;
-            height: 693px;
-          }
-        
-          .${classPrefix}-panel {
-            display: none;
+          padding: 30px 20px;
           }
 
-          .${classPrefix}-image {
-            display: none;
-          }
-          .${classPrefix}-cardWrapper {
-              width: 100%;
-            }
-          .${classPrefix}-description {
-              padding: 30px;
-          }
-
-          .${classPrefix}-left-panel-info {
-              color: #000;
-              font-family: Inter;
-              font-size: 13px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 140%; /* 18.2px */
-              padding-top: 31px;
-          }
-
-          .${classPrefix}-left-panel-img {
-            display: block;
-            border-radius: 10px;
-            background-color: #d9d9d9;
-            display: flex;
-            flex: 1;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 595px;
-            margin-left: 90px;
+          .${classPrefix}-container {
+          flex-direction: column;
+          align-content: center;
+          justify-items: center;
+          max-width: none;
+          max-height: none;
           }
 
           .${classPrefix}-left-panel-heading {
-              color: #000;
-              text-align: center;
-              font-size: 26px;
-              font-style: normal;
-              font-weight: 600;
-              line-height: 35px; /* 134.615% */
-              margin-bottom: 45px;
+          color: #000;
+          text-align: center;
+          font-family: Inter;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 35px; /* 134.615% */
+          padding: 0 20px;
           }
-        }
-        
+
+          .${classPrefix}-left-panel-info {
+          color: #000;
+          font-family: Inter;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%; /* 18.2px */
+          text-align: center;
+          }
+
+          .${classPrefix}-right-container {
+          justify-items: center;
+          align-content: center;
+          height: auto;
+          margin: 0;
+          margin-top: 45px;
+          }
+
+          .${classPrefix}-video {
+          width: 100%;
+          height: 300px;
+          }
+          .${classPrefix}-cardWrapper {
+          width: 100%;
+          }
+          .${classPrefix}-description {
+          padding: 30px;
+          }
+          }
       `,
       },
     },
