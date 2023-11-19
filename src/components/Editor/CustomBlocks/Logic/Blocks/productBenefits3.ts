@@ -104,6 +104,7 @@ const productBenefits3Component = (editor: Editor) => {
         styles: `
 .${classPrefix}-h1 {
   display: block;
+  font-family: Inter;
   font-size: 40px;
   font-weight: 600;
 }
@@ -133,11 +134,13 @@ const productBenefits3Component = (editor: Editor) => {
   font-family: Inter;
   font-size: 15px;
   font-weight: 400;
+  line-height: 21px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-p {
     font-size: 13px;
+    line-height: 18.5px;
   }
 }
 

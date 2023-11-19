@@ -55,7 +55,7 @@ const howItWorks2Component = (editor: Editor) => {
     </div>
     <div class="${classPrefix}-cardContentLeft">
       <img loading="lazy"
-        src="https://placehold.co/500x500"
+        src="/editor/component-icons/image-icon.png"
         class="${classPrefix}-img" />
     </div>
     <div class="${classPrefix}-cardContentRight">
@@ -67,7 +67,7 @@ const howItWorks2Component = (editor: Editor) => {
       <div class="${classPrefix}-stepsWrapper">
         <div class="${classPrefix}-stepItem">
           <div class="${classPrefix}-stepNumber">
-            <p>1</p>
+            <span class="${classPrefix}-h3">1</span>
           </div>
           <div class="${classPrefix}-stepContent">
             <span class="${classPrefix}-h3">Step 1</span>
@@ -76,7 +76,7 @@ const howItWorks2Component = (editor: Editor) => {
         </div>
         <div class="${classPrefix}-stepItem">
           <div class="${classPrefix}-stepNumber">
-            <p>2</p>
+            <span class="${classPrefix}-h3">2</span>
           </div>
           <div class="${classPrefix}-stepContent">
             <span class="${classPrefix}-h3">Step 2</span>
@@ -85,7 +85,7 @@ const howItWorks2Component = (editor: Editor) => {
         </div>
         <div class="${classPrefix}-stepItem">
           <div class="${classPrefix}-stepNumber">
-            <p>3</p>
+            <span class="${classPrefix}-h3">3</span>
           </div>
           <div class="${classPrefix}-stepContent">
             <span class="${classPrefix}-h3">Step 3</span>
@@ -100,6 +100,7 @@ const howItWorks2Component = (editor: Editor) => {
         styles: `
 .${classPrefix}-h1 {
   display: block;
+  font-family: Inter;
   font-size: 40px;
   font-weight: 600;
 }
@@ -129,11 +130,13 @@ const howItWorks2Component = (editor: Editor) => {
   font-family: Inter;
   font-size: 15px;
   font-weight: 400;
+  line-height: 21px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-p {
     font-size: 13px;
+    line-height: 18.5px;
   }
 }
 
@@ -153,6 +156,11 @@ const howItWorks2Component = (editor: Editor) => {
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
+  padding: 175px 156px 141px 157px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 @media (max-width: 425px) {
@@ -175,7 +183,6 @@ const howItWorks2Component = (editor: Editor) => {
 .${classPrefix}-cardCRHeadingMobile {
   display: none;
   text-align: center;
-  padding: 50px 0 30px;
 }
 
 @media (max-width: 425px) {
@@ -184,49 +191,45 @@ const howItWorks2Component = (editor: Editor) => {
   }
 }
 
+.${classPrefix}-cardCRHeadingMobile .${classPrefix}-h1 {
+  width: 280px;
+  margin-top: 56px;
+}
+
 .${classPrefix}-cardCRHeadingMobile .${classPrefix}-p {
-  padding: 10px 0 0 0;
-}
-
-.${classPrefix}-cardContentLeft {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 10px;
-  width: 50%;
-}
-
-@media (max-width: 425px) {
-  .${classPrefix}-cardContentLeft {
-    width: 100%;
-  }
+  width: 320px;
+  height: 32px;
+  margin-top: 10px;
+  margin-bottom: 46px;
 }
 
 .${classPrefix}-img {
-  object-fit: fill;
-  object-position: center;
+  object-fit: scale-down;
   overflow: hidden;
-  width: 100%;
+  width: 525px;
+  height: 525px;
   border-radius: 10px;
+  background: #E9E9E9;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-img {
+    width: 320px;
+    height: 320px;
+  }
 }
 
 .${classPrefix}-cardContentRight {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
-  padding: 30px 0px 0px 80px;
+  padding-left: 103px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-cardContentRight {
-    width: auto;
     padding: 0;
   }
-}
-
-.${classPrefix}-cardCRHeading {
-  max-width: 425px;
 }
 
 @media (max-width: 425px) {
@@ -235,19 +238,26 @@ const howItWorks2Component = (editor: Editor) => {
   }
 }
 
+.${classPrefix}-cardCRHeading .${classPrefix}-h1 {
+  width: 439px;
+}
+
 .${classPrefix}-cardCRHeading .${classPrefix}-p {
-  padding: 20px 0 0 0;
+  padding-top: 19px;
+  width: 439px;
+  height: 51px;
 }
 
 .${classPrefix}-stepsWrapper {
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
+  padding-top: 53px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-stepsWrapper {
-    padding-top: 10px;
+    padding-top: 45px;
+    margin-bottom: 57px;
   }
 }
 
@@ -256,35 +266,92 @@ const howItWorks2Component = (editor: Editor) => {
   flex-direction: row;
   align-items: center;
   border-bottom: solid 1px #ABABAB;
-  padding: 30px 0;
+  padding-top: 31px;
+  padding-bottom: 33px;
+  width: 499px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-stepItem {
+    padding-top: 18.5px;
+    padding-bottom: 16.5px;
+    width: 320px;
+  }
+}
+
+.${classPrefix}-stepItem:first-child {
+  padding-top: 0;
 }
 
 .${classPrefix}-stepItem:last-child {
   border: none;
+  padding-bottom: 0;
 }
 
 .${classPrefix}-stepNumber {
-  color: #000;
   border-radius: 50%;
-  font: 400 32px Inter, sans-serif;
   background-color: #d9d9d9;
-  width: 63px;
-  height: 63px;
+  width: 54px;
+  height: 54px;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-stepNumber {
-    font: 400 22px Inter, sans-serif;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: 400;
   }
 }
 
 .${classPrefix}-stepContent {
-  padding: 5px 20px;
+  padding-left: 32px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-stepContent {
+    padding-left: 17px;
+    width: 253px;
+    height: 43px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.${classPrefix}-stepContent .${classPrefix}-h3 {
+  width: 378px;
+  height: 17px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-stepContent .${classPrefix}-h3 {
+    width: 128px;
+    height: 17px;
+  }
+}
+
+.${classPrefix}-stepContent .${classPrefix}-p {
+  margin-top: 17px;
+  width: 381px;
+  height: 18px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-stepContent .${classPrefix}-p {
+    margin-top: 0;
+    width: 253px;
+    height: 18px;
+  }
 }
       `,
       },
