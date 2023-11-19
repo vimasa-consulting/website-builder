@@ -32,73 +32,155 @@ const brandStory3Component = (editor: Editor) => {
         traits: [],
         components: `
            <section class="${classPrefix}-section">
-              <div class="${classPrefix}-section-container">
-                <div class="${classPrefix}-section-header">
-                  Compelling header for
-                  Your Brand Story
-                </div>
-                <div class="${classPrefix}-section-info">
-                Craft your brand story in a way that sounds authentic, evokes emotions in your users, and is consistent across channels. Tap into emotions such as joy, nostalgia, pain, etc, while narrating your journey.
-                Include the origin of the brand, its purpose & the values. Be very specific and simple with your brand message.
-                </div>
+            <div class="${classPrefix}-container">
+              <div class="${classPrefix}-left-container">
+                <h5 class="${classPrefix}-left-panel-heading">Compelling Header for Your Brand Story</h5>
+                <p class="${classPrefix}-left-panel-info">Craft your brand story in a way that sounds authentic, evokes emotions in your users,
+                  and
+                  is consistent across channels. Include the origin of the brand, its purpose & the values. Be very specific and
+                  simple with your brand message.</p>
+                <p class="${classPrefix}-left-panel-info">Include the origin of the brand, its purpose & the values. Be very specific and simple
+                  with your brand message.</p>
               </div>
-              <div class="${classPrefix}-right-pane"></div>
-           </section>
+              <div class="${classPrefix}-right-container">
+                <video class="${classPrefix}-video-1" controls>
+                  <source src="" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </section>
         `,
         styles: `
         .${classPrefix}-section {
+        max-height: 700px;
+        max-width: 1440px;
+        padding: 84px 162px;
+        background: #e9e9e9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        }
+
+        .${classPrefix}-container {
+        width: 100%;
+        max-width: 1117px;
+        max-height: 595px;
+        display: flex;
+        justify-content: space-between;
+        }
+
+        .${classPrefix}-left-container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+        width: 500px;
+        height: 300px;
+        padding: 70px;
+        }
+
+        .${classPrefix}-left-panel-heading {
+        color: #000;
+        font-family: Inter;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0;
+        }
+
+        .${classPrefix}-left-panel-info {
+        color: #000;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 21px */
+        padding-top: 26px;
+        margin: 0px;
+        }
+
+        .${classPrefix}-right-container {
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex:1;
+        }
+
+        .${classPrefix}-video-1 {
+          height: 100%;
           width: 100%;
-          height: 707px;
-          flex-shrink: 0;
-          background: #E9E9E9;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        border-radius: 10px;
         }
 
-        .${classPrefix}-section-container {
-          padding: 62px 72px 72px; 
-          background: #fff;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 726px;
-          fill: #FFF;
-          filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.15));        
-          flex-direction: column;
-          flex: 1;
-          margin-left: 36px;
+        @media (max-width: 400px) {
+        .${classPrefix}-section {
+        padding: 50px 20px;
         }
 
-
-        .${classPrefix}-section-header {
-          color: #000;
-          text-align: center;
-          font-family: Inter;
-          font-size: 40px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-          margin-bottom: 36px;
+        .${classPrefix}-container {
+        flex-direction: column-reverse;
+        align-content: center;
+        justify-items: center;
+        max-width: none;
+        max-height: none;
+        width: auto;
+        justify-content: space-between;
+        row-gap: 30px;
         }
 
-        .${classPrefix}-section-info {
-          text-align: center;
-          font-family: Inter;
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 140%; /* 21px */ 
+        .${classPrefix}-left-container {
+        width: auto;
+        heigth: auto;
+        padding: 30px;
         }
 
-        .${classPrefix}-right-pane {
-          flex: 1;
+        .${classPrefix}-left-panel-heading {
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 35px; /* 134.615% */
         }
 
-        @media (max-width: 770px) {
-          .${classPrefix}-section {
-          }
+        .${classPrefix}-left-panel-info {
+        color: #000;
+        font-family: Inter;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 18.2px */
+        text-align: center;
         }
+
+        .${classPrefix}-right-container {
+        justify-items: center;
+        align-content: center;
+        height: auto;
+        margin: 0;
+        }
+
+        .${classPrefix}-video-1 {
+        width: 100%;
+        height: 300px;
+        }
+        .${classPrefix}-cardWrapper {
+        width: 100%;
+        }
+        .${classPrefix}-description {
+        padding: 30px;
+        }
+      }
       `,
       },
     },
