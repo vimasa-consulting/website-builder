@@ -51,7 +51,7 @@ const testimonials3Component = (editor: Editor) => {
                 <div class="${classPrefix}-wrapper">
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img />
+                      <img class="${classPrefix}-img" src="https://placehold.co/345x444" alt="Placeholder"/>
                     </div>
                     <h2 class="${classPrefix}-customerName">Customer Name</h2>
                     <p class="${classPrefix}-review">
@@ -60,7 +60,7 @@ const testimonials3Component = (editor: Editor) => {
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img />
+                      <img class="${classPrefix}-img" src="https://placehold.co/345x444" alt="Placeholder"/>
                     </div>
                     <h2 class="${classPrefix}-customerName">Customer Name</h2>
                     <p class="${classPrefix}-review">
@@ -69,7 +69,7 @@ const testimonials3Component = (editor: Editor) => {
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img />
+                      <img class="${classPrefix}-img" src="https://placehold.co/345x444" alt="Placeholder"/>
                     </div>
                     <h2 class="${classPrefix}-customerName">Customer Name</h2>
                     <p class="${classPrefix}-review">
@@ -83,7 +83,9 @@ const testimonials3Component = (editor: Editor) => {
                 .${classPrefix}-section {
                   background-color: #fff;
                   font-family: Inter, sans-serif;
-                  padding: 78px 160px 105px;
+                  padding: 78px 0px 105px;
+                  margin: 0 auto;
+                  max-width: 1440px;
                 }
                 .${classPrefix}-title {
                   text-align: center;
@@ -97,7 +99,7 @@ const testimonials3Component = (editor: Editor) => {
                 .${classPrefix}-wrapper {
                   display: flex;
                   gap: 43px;
-                  max-width: 1148px;
+                  max-width: 1121px;
                   margin: 0 auto;
                 }
                 .${classPrefix}-card {
@@ -111,14 +113,15 @@ const testimonials3Component = (editor: Editor) => {
                   flex-direction: column;
                   justify-content: center;
                   align-items: center;
-                  height: 444px;
                   border-radius: 10px;
                   background: #E9E9E9;
+                  width: 345px;
+                  height: 444px;
                 }
                 .${classPrefix}-img {
-                  width: 41px;
-                  height: 41px;
-                  object-fit: fill;
+                  object-fit: cover;
+                  width: 100%;
+                  border-radius: 10px;
                 }
                 .${classPrefix}-customerName {
                   font-size: 20px;
@@ -132,20 +135,35 @@ const testimonials3Component = (editor: Editor) => {
                   font-style: normal;
                   font-weight: 400;
                   line-height: 140%;
-                  padding-right: 25px;
                   margin: 0px;
                 }
                 
-              @media (max-width: 770px) {
+              @media (max-width: 400px) {
                 .${classPrefix}-section {
-                  padding: 20px;
+                  padding: 56px 49px 90px;
                 }
                 .${classPrefix}-wrapper {
                   flex-direction: column;
+                  gap: 90px;
+                }
+                .${classPrefix}-playerWrapper {
+                  max-width: 100%;
+                  height: 353px;
+                }
+                .${classPrefix}-img {
+                  height: 100%;
                 }
                 .${classPrefix}-title {
-                  font-size: 30px;
-                  margin-bottom: 50px;
+                  font-size: 26px;
+                  margin-bottom: 44px;
+                  padding: 0 20px;
+                }
+                .${classPrefix}-customerName {
+                  font-size: 18px;
+                  margin-top: 35px;
+                  margin-bottom: 14px;
+
+                  
                 }
               }
         `,
