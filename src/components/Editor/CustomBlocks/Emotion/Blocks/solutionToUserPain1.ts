@@ -108,18 +108,28 @@ const solutionToUserPain1Component = (editor: Editor) => {
                   }
                   
                   .${classPrefix}-title {
-                    font-size: 30px;
-                    font-family: Inter, sans-serif;
+                    color: #000;
                     text-align: center;
-                    margin-top: 80px;
-                    margin-bottom: 8px;
+                    font-family: Inter;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin-top: 86px;
+                    margin-bottom: 18px;
                   }
 
                   .${classPrefix}-subTitle {
                     text-align: center;
-                    padding: 0 31%;
+                    padding: 0px 21%;
                     font-family: Inter, sans-serif;
                     font-weight: 500;
+                    color: #000;
+                    margin: 0;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
                   }
                   
                   .${classPrefix}-cardTitle {
@@ -147,17 +157,17 @@ const solutionToUserPain1Component = (editor: Editor) => {
                   
                   .${classPrefix}-stepTitle {
                     color: #000;
-                    margin-top: 22px;
+                    margin-top: 13px;
                     font: 500 20px Inter, sans-serif;
                     text-align: center;
                   }
                   
                   .${classPrefix}-stepDescription {
                     color: #000;
-                    margin-top: 12px;
+                    margin-top: 19px;
                     font: 400 15px/140% Inter, -apple-system, Roboto, Helvetica, sans-serif;
                     text-align: center;
-                    padding: 0 90px;
+                    padding: 0 48px;
                   }
                   
                   .${classPrefix}-column {
@@ -209,6 +219,7 @@ const solutionToUserPain1Component = (editor: Editor) => {
                     overflow: hidden;
                     align-self: center;
                     max-width: 100%;
+                    outline: none; 
                   }
                   @media (max-width: 425px) {
                     .${classPrefix}-section {
