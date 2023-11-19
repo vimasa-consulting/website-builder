@@ -37,62 +37,110 @@ const component = (editor: Editor) => {
               <div class="${classPrefix}-content-wrapper">
                 <span class="${classPrefix}-small-heading">Highlight</span>
                 <h1 class="${classPrefix}-heading">What you stand for in one bold line</h1>
-                <span class="${classPrefix}-text">Elaborate on your core belief & ideology as a brand. Mention specific pointers about what you stand for, and avoid being vague or generic.</span>
+                <span class="${classPrefix}-text">Elaborate on your core belief & ideology as a brand. Mention specific pointers
+                  about what you stand for, and avoid being vague or generic.</span>
               </div>
             </div>
           </section>
         `,
         styles: `
           .${classPrefix}-section {
-            padding: 5.25rem;
+          padding: 5.25rem;
+          max-width: 1440px;
+          margin: auto;
           }
           .${classPrefix}-container {
-            margin: 0 auto;
-            display: flex;
-            gap: 50px;
-            justify-content: center;
-            align-items: center;
+          margin: 0 auto;
+          display: flex;
+          gap: 50px;
+          justify-content: center;
+          align-items: center;
           }
 
           .${classPrefix}-content-wrapper {
-            width: 400px;
+          width: 400px;
           }
 
           .${classPrefix}-small-heading {
-            color: #000;
-            font-family: Inter;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%; /* 28px */
+          color: #000;
+          font-family: Inter;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%; /* 28px */
           }
 
           .${classPrefix}-heading {
-            color: #000;
-            font-family: Inter;
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            margin: 0;
+          color: #000;
+          font-family: Inter;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          margin: 0;
           }
 
           .${classPrefix}-text {
-            color: #000;
-            font-family: Inter;
-            font-size: 15px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 140%; /* 21px */
+          color: #000;
+          font-family: Inter;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%; /* 21px */
           }
 
           .${classPrefix}-image {
-            border-radius: 10px;
-          }
-          @media (max-width: 770px) {
+          border-radius: 10px;
           }
 
           @media (max-width: 480px) {
+          .${classPrefix}-section {
+          padding: 10px;
+          }
+          .${classPrefix}-container {
+          gap: 30px;
+          padding: 30px 20px;
+          text-align: center;
+          flex-direction: column-reverse;
+          }
+
+          .${classPrefix}-content-wrapper {
+          width: auto;
+          }
+
+          .${classPrefix}-image {
+          width: 360px;
+          height: 250px;
+          }
+
+          .${classPrefix}-small-heading {
+          color: #000;
+          text-align: center;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%; /* 22.4px */
+          margin-bottom: 20px;
+          }
+          .${classPrefix}-heading {
+          color: #000;
+          text-align: center;
+          font-family: Inter;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          margin-bottom: 20px;
+          }
+          .${classPrefix}-text {
+          color: #000;
+          font-family: Inter;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%; /* 18.2px */
+          }
           }
         `,
       },
