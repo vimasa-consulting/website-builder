@@ -113,15 +113,14 @@ const brandStory1Component = (editor: Editor) => {
 
         @media (max-width: 770px) {
           .${classPrefix}-section {
-            padding: 10px;
-            max-height: 422px;
-            background-color: #d9d9d9;
-            border-radius: 10px;
-            height: 405px;
+                padding: 10px;
+                max-height: 422px;
+                border-radius: 10px;
+                height: 405px;
           }
 
           .${classPrefix}-panel {
-            padding: 0 10px;
+            padding: 0 26px;
             height: 100%;
           }
 
