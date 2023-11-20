@@ -109,13 +109,17 @@ const userAspirations1Component = (editor: Editor) => {
                 styles: `
                 .${classPrefix}-section {
                     background-color: #fff;
-                    padding: 80px 20px 71px;
+                    padding: 63px 20px 181px;
                     font-family: Inter, sans-serif;
                   }
                   
                   .${classPrefix}-title {
-                    font-size: 40px;
                     text-align: center;
+                    font-family: Inter;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
                     max-width: 689px;
                     margin: 0px auto 11px;
                   }
@@ -152,8 +156,8 @@ const userAspirations1Component = (editor: Editor) => {
                     color: #000;
                     margin-top: 22px;
                     font: 500 20px Inter, sans-serif;
-                    margin-top: 31px;
-                    margin-bottom: 18px;
+                    margin-top: 34px;
+                    margin-bottom: 19px;
                   }
                   
                   .${classPrefix}-stepDescription {
@@ -216,6 +220,7 @@ const userAspirations1Component = (editor: Editor) => {
                     overflow: hidden;
                     align-self: center;
                     max-width: 100%;
+                    outline: none;
                   }
                   @media (max-width: 770px) {
                     .${classPrefix}-cards {

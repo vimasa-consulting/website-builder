@@ -51,7 +51,7 @@ const howItWorks4Component = (editor: Editor) => {
     <div class="${classPrefix}-cardHeading">
       <span class="${classPrefix}-h1">How it Works</span>
       <span class="${classPrefix}-hideOnMobile">
-        <span class="${classPrefix}-p">Talk about your product&apos;s merits such as convenience, functionality, innovativeness,
+        <span class="${classPrefix}-h3">Talk about your product&apos;s merits such as convenience, functionality, innovativeness,
           etc.</span>
       </span>
     </div>
@@ -73,19 +73,17 @@ const howItWorks4Component = (editor: Editor) => {
                 Step 1
               </span>
             </span>
-            <div class="${classPrefix}-stepIcon">
-              <img loading="lazy" src="/editor/component-icons/checkmark.png" class="${classPrefix}-imgFill" />
-            </div>
+            <img loading="lazy" src="/editor/component-icons/checkmark.png" class="${classPrefix}-stepIcon" />
           </div>
           <div class="${classPrefix}-stepContent">
-            <img loading="lazy" src="https://placehold.co/400x400" class="${classPrefix}-imgFill" />
+            <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
           </div>
         </div>
         <div class="${classPrefix}-stepItem">
           <div class="${classPrefix}-stepHeading">
             <span class="${classPrefix}-hideOnMobile">
               <span class="${classPrefix}-h3">
-                Step 1
+                Step 2
                 <br>
                 Description of the step
               </span>
@@ -94,22 +92,20 @@ const howItWorks4Component = (editor: Editor) => {
               <span class="${classPrefix}-h3">
                 Describe
                 <br>
-                Step 1
+                Step 2
               </span>
             </span>
-            <div class="${classPrefix}-stepIcon">
-              <img loading="lazy" src="/editor/component-icons/checkmark.png" class="${classPrefix}-imgFill" />
-            </div>
+            <img loading="lazy" src="/editor/component-icons/checkmark.png" class="${classPrefix}-stepIcon" />
           </div>
           <div class="${classPrefix}-stepContent">
-            <img loading="lazy" src="https://placehold.co/400x400" class="${classPrefix}-imgFill" />
+            <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
           </div>
         </div>
         <div class="${classPrefix}-stepItem">
           <div class="${classPrefix}-stepHeading">
             <span class="${classPrefix}-hideOnMobile">
               <span class="${classPrefix}-h3">
-                Step 1
+                Step 3
                 <br>
                 Description of the step
               </span>
@@ -118,15 +114,13 @@ const howItWorks4Component = (editor: Editor) => {
               <span class="${classPrefix}-h3">
                 Describe
                 <br>
-                Step 1
+                Step 3
               </span>
             </span>
-            <div class="${classPrefix}-stepIcon">
-              <img loading="lazy" src="/editor/component-icons/checkmark.png" class="${classPrefix}-imgFill" />
-            </div>
+            <img loading="lazy" src="/editor/component-icons/checkmark.png" class="${classPrefix}-stepIcon" />
           </div>
           <div class="${classPrefix}-stepContent">
-            <img loading="lazy" src="https://placehold.co/400x400" class="${classPrefix}-imgFill" />
+            <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
           </div>
         </div>
       </div>
@@ -137,6 +131,7 @@ const howItWorks4Component = (editor: Editor) => {
         styles: `
 .${classPrefix}-h1 {
   display: block;
+  font-family: Inter;
   font-size: 40px;
   font-weight: 600;
 }
@@ -166,11 +161,13 @@ const howItWorks4Component = (editor: Editor) => {
   font-family: Inter;
   font-size: 15px;
   font-weight: 400;
+  line-height: 21px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-p {
     font-size: 13px;
+    line-height: 18.5px;
   }
 }
 
@@ -186,23 +183,18 @@ const howItWorks4Component = (editor: Editor) => {
   }
 }
 
-.${classPrefix}-imgFill {
-  object-fit: fill;
-  object-position: center;
-  overflow: hidden;
-  width: 100%;
-}
-
 .${classPrefix}-section {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 80px 60px 80px 80px;
+  padding: 92px 100px 81px 100px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-section {
-    padding: 40px 18px;
+    padding: 40px 18px 43px 18px;
   }
 }
 
@@ -211,11 +203,28 @@ const howItWorks4Component = (editor: Editor) => {
   flex-direction: column;
 }
 
+.${classPrefix}-cardHeading .${classPrefix}-h1 {
+  width: 266px;
+  height: 46px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-cardHeading .${classPrefix}-h1 {
+    font-size: 26px;
+  }
+}
+
+.${classPrefix}-cardHeading .${classPrefix}-h3 {
+  width: 845px;
+  height: 17px;
+  margin-top: 12px;
+}
+
 .${classPrefix}-stepsWrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 90px;
+  margin-top: 93px;
 }
 
 @media (max-width: 425px) {
@@ -224,33 +233,57 @@ const howItWorks4Component = (editor: Editor) => {
   }
 }
 
-.${classPrefix}-stepItem {
-  width: 30%;
-}
-
 .${classPrefix}-stepHeading {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
+}
+
+.${classPrefix}-stepHeading .${classPrefix}-hideOnMobile .${classPrefix}-h3 {
+  width: 301px;
+  height: 50px;
+  margin-bottom: 40px;
+}
+
+.${classPrefix}-stepHeading .${classPrefix}-showOnlyOnMobile .${classPrefix}-h3 {
+  width: 102px;
+  height: 31px;
+  font-size: 15px;
 }
 
 .${classPrefix}-stepIcon {
-  color: #000;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  align-self: end;
-}
-
-.${classPrefix}-stepContent {
-  width: 100%;
-  margin-top: 40px;
+  width: 48px;
+  height: 48px;
+  object-fit: scale-down;
+  overflow: hidden;
+  margin: 9px 0 0 12px;
 }
 
 @media (max-width: 425px) {
-  .${classPrefix}-stepContent {
+  .${classPrefix}-stepIcon {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    right: 0;
+    top: 14px;
+    margin: 0;
+  }
+}
+
+.${classPrefix}-img {
+  width: 360px;
+  height: 311px;
+  object-fit: scale-down;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #E9E9E9;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-img {
+    width: 102px;
+    height: 121px;
     margin-top: 24px;
   }
 }

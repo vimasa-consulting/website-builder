@@ -126,13 +126,13 @@ const solutionToUserPain2Component = (editor: Editor) => {
                   align-items: center;
                   border-radius: 10px;
                   background: #FFF;
-                  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+                  border-radius: 10px;
+                  border: 1px solid rgba(171, 171, 171, 0.70);
                   padding: 15px;
                   width: 100%;
-                  gap: 22px
               }
               .${classPrefix}-cardColumn {
-                gap: 50px;
+                gap: 21px;
                 display: flex;
                 justify-content: center;
                 width: 1341px;
@@ -202,6 +202,7 @@ const solutionToUserPain2Component = (editor: Editor) => {
                 object-fit: fill;
                 width: 20px;
                 height: 20px;
+                outline: none;
               }
               .${classPrefix}-description {
                 margin: 0;

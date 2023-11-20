@@ -55,8 +55,10 @@ const testimonials1Component = (editor: Editor) => {
                     class="${classPrefix}-image"
                     />
                   </div>
+                  <div class="${classPrefix}-contentWrapper">
+                  <img src="https://img.icons8.com/ios-filled/50/E9E9E9/quote-left.png" alt="quotes" class="${classPrefix}-quotes" />
                   <div class="${classPrefix}-content">
-                    <p class="${classPrefix}-description">
+                  <p class="${classPrefix}-description">
                     “Insert a realistic & relatable customer quote here. Be specific with the pointers. Make the language resonate with your target audience. Include customer results, delivery satisfaction, customer support satisfaction, etc.”
                     </p>
                     <h3 class="${classPrefix}-customerName">
@@ -65,6 +67,7 @@ const testimonials1Component = (editor: Editor) => {
                     <p class="${classPrefix}-designation">
                     Designation/Profile
                     </p>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -73,9 +76,9 @@ const testimonials1Component = (editor: Editor) => {
         .${classPrefix}-section {
             background-color: #fff;
             font-family: Inter, sans-serif;
-            padding: 66px 82px 125px;
-            padding-top: 99px;
-            padding-bottom: 113px;
+            padding: 99px 0px 113px;
+            margin: 0 auto;
+            max-width: 1440px;
           }
           .${classPrefix}-title {
             text-align: center;
@@ -90,7 +93,13 @@ const testimonials1Component = (editor: Editor) => {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 145px;
+            gap: 89px;
+          }
+          .${classPrefix}-quotes {
+            width: 40px;
+            height: 40px;
+            margin-top: -22px;
+            margin-right: 16px;
           }
           .${classPrefix}-imageWrapper {
             width: 317px;
@@ -109,7 +118,10 @@ const testimonials1Component = (editor: Editor) => {
           .${classPrefix}-content {
             display: flex;
             flex-direction: column;
-            max-width: 445px;
+            max-width: 466px;
+          }
+          .${classPrefix}-contentWrapper {
+            display: flex;
           }
           .${classPrefix}-description {
             font-size: 18px;
@@ -117,6 +129,7 @@ const testimonials1Component = (editor: Editor) => {
             font-weight: 400;
             line-height: 140%;
             margin-top: 0;
+            padding-right: 16px;
           }
           .${classPrefix}-customerName {
             margin-bottom: 10px;
@@ -126,25 +139,44 @@ const testimonials1Component = (editor: Editor) => {
           }
 
 
-        @media (max-width: 770px) {
+        @media (max-width: 400px) {
           .${classPrefix}-section {
-            padding: 20px;
+            padding: 22px 25px 35px;
           }
           .${classPrefix}-wrapper {
             flex-direction: column;
+            gap: 42px;
+            margin-bottom: 0px;
+
           }
           .${classPrefix}-descriptionContainer {
             min-width: unset;
           }
           .${classPrefix}-title {
-            font-size: 30px;
-            margin-bottom: 50px;
+            font-size: 26px;
+            padding: 0 60px;
+            margin-bottom: 39px;
           }
-        }
-        @media (max-width: 425px) {
           .${classPrefix}-imageWrapper {
-            width: 250px;
-            height: 250px;
+            width: 170px;
+            height: 170px;
+          }
+          .${classPrefix}-description {
+           font-size: 13px;
+           margin-bottom: 0px;
+           padding: unset;
+          }
+          .${classPrefix}-content {
+            max-width: 239px;
+          }
+          .${classPrefix}-customerName {
+            font-size: 15px;
+            margin-top: 23px;
+            margin-bottom: 0px;
+          }
+          .${classPrefix}-designation {
+            font-size: 12px;
+            margin-top: 2px;
           }
         }
         `,

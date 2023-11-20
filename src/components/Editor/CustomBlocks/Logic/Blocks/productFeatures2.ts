@@ -52,14 +52,12 @@ const productFeatures2Component = (editor: Editor) => {
       <span class="${classPrefix}-h1">Header for Key Features of Your Product</span>
     </div>
     <div class="${classPrefix}-cardContent">
-      <img loading="lazy" src="https://placehold.co/380x355" class="${classPrefix}-imgFill" />
+      <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
       <table class="${classPrefix}-featureTable">
         <tr>
-          <td>
+          <td class="${classPrefix}-column1">
             <div class="${classPrefix}-featureItem">
-              <div class="${classPrefix}-featureIcon">
-                <img loading="lazy" src="/editor/component-icons/tv-14.png" class="${classPrefix}-imgFill" />
-              </div>
+              <img loading="lazy" src="/editor/component-icons/tv-14.png" class="${classPrefix}-featureIcon" />
               <span class="${classPrefix}-h3">
                 Feature 1
               </span>
@@ -70,11 +68,9 @@ const productFeatures2Component = (editor: Editor) => {
           </td>
           <td>
             <div class="${classPrefix}-featureItem">
-              <div class="${classPrefix}-featureIcon">
-                <img loading="lazy" src="/editor/component-icons/charging-battery.png" class="${classPrefix}-imgFill" />
-              </div>
+              <img loading="lazy" src="/editor/component-icons/charging-battery.png" class="${classPrefix}-featureIcon" />
               <span class="${classPrefix}-h3">
-                Feature 2
+                Trial and Error
               </span>
               <span class="${classPrefix}-p">
                 Describe the feature crisply from your user&apos;s point of view
@@ -83,13 +79,11 @@ const productFeatures2Component = (editor: Editor) => {
           </td>
         </tr>
         <tr>
-          <td>
+          <td class="${classPrefix}-column1">
             <div class="${classPrefix}-featureItem">
-              <div class="${classPrefix}-featureIcon">
-                <img loading="lazy" src="/editor/component-icons/average-price.png" class="${classPrefix}-imgFill" />
-              </div>
+              <img loading="lazy" src="/editor/component-icons/average-price.png" class="${classPrefix}-featureIcon" />
               <span class="${classPrefix}-h3">
-                Feature 3
+                Trial and Error
               </span>
               <span class="${classPrefix}-p">
                 Describe the feature crisply from your user&apos;s point of view
@@ -98,11 +92,9 @@ const productFeatures2Component = (editor: Editor) => {
           </td>
           <td>
             <div class="${classPrefix}-featureItem">
-              <div class="${classPrefix}-featureIcon">
-                <img loading="lazy" src="/editor/component-icons/delivery.png" class="${classPrefix}-imgFill" />
-              </div>
+              <img loading="lazy" src="/editor/component-icons/delivery.png" class="${classPrefix}-featureIcon" />
               <span class="${classPrefix}-h3">
-                Feature 4
+                Trial and Error
               </span>
               <span class="${classPrefix}-p">
                 Describe the feature crisply from your user&apos;s point of view
@@ -113,11 +105,12 @@ const productFeatures2Component = (editor: Editor) => {
       </table>
     </div>
   </div>
-</section>
+</section>    
         `,
         styles: `
 .${classPrefix}-h1 {
   display: block;
+  font-family: Inter;
   font-size: 40px;
   font-weight: 600;
 }
@@ -147,11 +140,13 @@ const productFeatures2Component = (editor: Editor) => {
   font-family: Inter;
   font-size: 15px;
   font-weight: 400;
+  line-height: 21px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-p {
     font-size: 13px;
+    line-height: 18.5px;
   }
 }
 
@@ -167,48 +162,92 @@ const productFeatures2Component = (editor: Editor) => {
   }
 }
 
-.${classPrefix}-imgFill {
-  object-fit: fill;
-  object-position: center;
-  overflow: hidden;
-}
-
 .${classPrefix}-section {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 80px 100px;
+  padding: 86px 124px 76px;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-section {
-    padding: 40px 15px;
+    padding: 47px 0 116px;
   }
 }
 
 .${classPrefix}-card {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 68px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-card {
+    gap: 0;
+  }
+}
+
+.${classPrefix}-cardHeading .${classPrefix}-h1 {
+  width: 904px;
+  height: 46px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-cardHeading .${classPrefix}-h1 {
+    width: 330px;
+    height: auto;
+    margin: 0 44px 0 26px;
+    font-size: 26px;
+    line-height: 35px;
+  }
 }
 
 .${classPrefix}-cardContent {
-  margin-top: 70px;
   display: flex;
   flex-direction: row;
-  gap: 70px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-cardContent {
-    margin-top: 30px;
     flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-.${classPrefix}-cardContent > .${classPrefix}-imgFill {
-  max-height: 400px;
+.${classPrefix}-img {
+  width: 381px;
+  height: 355px;
+  object-fit: scale-down;
+  overflow: hidden;
   border-radius: 10px;
+  background: #E9E9E9;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-img {
+    width: 348px;
+    height: 335px;
+    margin: 37px 26px 34px 26px
+  }
+}
+
+.${classPrefix}-featureTable {
+  margin-left: 77px;
+  width: 734px;
+  height: 345px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-featureTable {
+    width: auto;
+    height: auto;
+    margin: 0 19.96px 0 26.5px;
+  }
 }
 
 .${classPrefix}-featureTable tr:first-child {
@@ -231,40 +270,71 @@ const productFeatures2Component = (editor: Editor) => {
   }
 }
 
-
-.${classPrefix}-featureItem {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 15px;
-  padding: 0 20px;
+.${classPrefix}-column1 {
+  padding-right: 76px;
 }
 
+@media (max-width: 425px) {
+  .${classPrefix}-column1 {
+    padding-right: 50.96px;
+  }
+}
 
 @media (max-width: 425px) {
-  .${classPrefix}-featureItem {
-    gap: 10px;
-    padding: 20px;
+  tr:last-child .${classPrefix}-featureItem {
+    padding-top: 50px;
   }
 }
 
 .${classPrefix}-featureItem {
-  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-featureItem {
+    gap: 0;
+  }
 }
 
 .${classPrefix}-featureIcon {
-  color: #000;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 50px;
+  height: 50px;
+  object-fit: scale-down;
+  overflow: hidden;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-featureIcon {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.${classPrefix}-featureItem .${classPrefix}-h3 {
+  width: 216px;
+  height: 17px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-featureItem .${classPrefix}-h3 {
+    width: 128px;
+    height: 17px;
+    margin-top: 12px;
+    margin-bottom: 9px;
+  }
+}
+
+.${classPrefix}-featureItem .${classPrefix}-p {
+  width: 329px;
+  height: 38px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-featureItem .${classPrefix}-p {
+    width: 150px;
+    height: 32px;
   }
 }
       `,
