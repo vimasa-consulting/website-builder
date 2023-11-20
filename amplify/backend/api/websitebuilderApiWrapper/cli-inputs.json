@@ -1,8 +1,8 @@
 {
   "version": 1,
   "paths": {
-    "/api/typeform": {
-      "name": "/api/typeform",
+    "/api/{resource}": {
+      "name": "/api/{resource}",
       "lambdaFunction": "websitebuilderApiWrapper",
       "permissions": {
         "setting": "open"

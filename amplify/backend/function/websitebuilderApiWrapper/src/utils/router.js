@@ -52,7 +52,7 @@ function Router({
         requestParameterSources.push(event.body);
       }
       requestParameterSources.push(event.queryStringParameters);
-      requestParameterSources.push(event.pathParameters);
+      // requestParameterSources.push(event.pathParameters);
       event.fullRequestParams = requestParameterSources.reduce(function (result, current) {
         return Object.assign(result, current);
       }, {});
@@ -96,7 +96,9 @@ function Router({
         status: statusCode.toString(),
         title: "error occured"
       }];
-      if (error.meta) {
+      if (error.errorJSON) {
+        body = error.errorJSON;
+      } else if (error.meta) {
         body = { meta: error.meta, errors: errors };
       } else {
         body = { errors: errors };
