@@ -28,8 +28,8 @@ const BlockPreviewPopup: React.FC<BlockPreviewPopupProps> = ({ grapeJSEditor }) 
                 </div>
             </div>
             {
-                blocks.length && blocks.map(block => (
-                    <div className="gjs-row">
+                blocks.length && blocks.map((block, index) => (
+                    <div className="gjs-row" key={index}>
                         <div className="gjs-cell">
                             {block.trim()}
                         </div>        
