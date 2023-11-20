@@ -14,6 +14,15 @@
     "categories": {
       "auth": {
         "websitebuilderAuth": {}
+      },
+      "function": {
+        "websitebuilderApiWrapper": {
+          "deploymentBucketName": "amplify-websitebuilder-dev-145151-deployment",
+          "s3Key": "amplify-builds/websitebuilderApiWrapper-583230745273382f776a-build.zip"
+        }
+      },
+      "api": {
+        "websitebuilderApiWrapper": {}
       }
     }
   }
