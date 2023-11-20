@@ -71,11 +71,16 @@ const signUp1Component = (editor: Editor) => {
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+                    padding: 72px 0px 80px;
+                    margin: 0 auto;
+                    max-width: 1440px;
                 }
                 .${classPrefix}-title {
                     text-align: center;
                     font-family: Inter, sans-serif;
                     font-size: 40px;
+                    margin: 0px;
+                    margin-bottom: 54px;
                 }
                 .${classPrefix}-formSection {
                     display: flex;
@@ -89,7 +94,7 @@ const signUp1Component = (editor: Editor) => {
                     height: 56px;
                     border: 1px solid #D9D9D9;
                     border-radius: 8px;
-                    padding: 0 26px;
+                    padding: 14px 26px;
                     color: #000;
                     font-family: Inter;
                     font-size: 24px;
@@ -102,7 +107,7 @@ const signUp1Component = (editor: Editor) => {
                 .${classPrefix}-submitCta {
                     background-color: #D9D9D9; 
                     height: 56px;
-                    max-width:  270px;
+                    max-width:  279px;
                     width: 100%;
                     border-radius: 8px;
                     border: none;
@@ -113,21 +118,30 @@ const signUp1Component = (editor: Editor) => {
                     font-weight: 400;
                     cursor: pointer;
                 }
-                @media (max-width: 425px) {
+                @media (max-width: 400px) {
+                    .${classPrefix}-section {
+                        padding: 34px 56px 42px;
+                    }
                     .${classPrefix}-formSection {
                         flex-direction: column;
                         justify-content: center;
-                        padding: 0 12px;
-                    }
-                    .${classPrefix}-submitCta {
-                        max-width: 100%;
-                        font-size: 20px;
+                        gap: 16px;
                     }
                     .${classPrefix}-title {
-                        font-size: 28px;
+                        font-size: 26px;
+                        padding: 0 14px;
+                        margin-bottom: 33px;
                     }
-                    .${classPrefix}-input {
+                    .${classPrefix}-input, .${classPrefix}-submitCta  {
                         font-size: 20px;
+                        max-width: 287px;
+                        height: 38px;
+                        font-size: 18px;
+                        border-radius: 5px;
+                        padding: 0px 11px;
+                    }
+                    .${classPrefix}-input::placeholder {
+                        text-align: center;
                     }
                 }
                 `,

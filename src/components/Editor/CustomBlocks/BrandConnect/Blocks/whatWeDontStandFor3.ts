@@ -34,7 +34,18 @@ const component = (editor: Editor) => {
           <section class="${classPrefix}-section">
             <div class="${classPrefix}-container">
               <div class="${classPrefix}-left-container">
-                <img class="${classPrefix}-image" src="https://placehold.co/664x712" alt="" />
+                <div class="${classPrefix}-imageWrapper">
+                  <img loading="lazy"
+                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                    class="${classPrefix}-image" />
+                </div>
               </div>
               <div class="${classPrefix}-right-container">
                 <div class="${classPrefix}-wrapper">
@@ -65,77 +76,139 @@ const component = (editor: Editor) => {
           </section>
         `,
         styles: `
+          .${classPrefix}-section {
+            max-width: 1440px;
+            margin: auto;
+          }
+
           .${classPrefix}-container {
-          margin: 0 auto;
-          display: flex;
-          gap: 50px;
-          align-items: center;
-          justify-content: center;
+            margin: 0 auto;
+            display: flex;
+            gap: 110px;
+            align-items: center;
+            justify-content: center;
           }
 
           .${classPrefix}-left-container {
-          width: 50%;
-          text-align: right;
+            width: 50%;
+            text-align: right;
+            background: #E9E9E9;
           }
 
           .${classPrefix}-right-container {
-          width: 50%;
+            width: 50%;
           }
 
           .${classPrefix}-wrapper {
-          max-width: 480px;
+            max-width: 480px;
           }
 
           .${classPrefix}-image {
-          max-width: 100%;
+            aspect-ratio: 1;
+            object-fit: contain;
+            object-position: center;
+            align-self: center;
+            width: 100%;
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            max-width: 664px;
+            max-height: 762px;
           }
 
           .${classPrefix}-heading {
-          color: #000;
-          font-family: Inter;
-          font-size: 40px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-          margin: 0;
-          margin-bottom: 26px;
+            color: #000;
+            font-family: Inter;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin: 0;
+            margin-bottom: 26px;
           }
 
           .${classPrefix}-content {
-          color: #000;
-          font-family: Inter;
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 140%;
-          margin: 0px;
-          margin-bottom: 10px;
+            color: #000;
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            margin: 0px;
+            margin-bottom: 10px;
           }
 
           .${classPrefix}-pointer-wrapper {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          margin-top: 24px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
           }
 
           .${classPrefix}-point {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          gap: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
           }
 
           .${classPrefix}-point-img {
-          width: 30px;
-          height: 30px;
-          }
-          @media (max-width: 770px) {
+            width: 30px;
+            height: 30px;
           }
 
           @media (max-width: 480px) {
+            .${classPrefix}-container {
+              flex-direction: column-reverse;
+              padding: 50px 10px;
+              gap: 50px;
+            }
+
+            .${classPrefix}-left-container {
+              width: 100%;
+            }
+            .${classPrefix}-right-container {
+              width: auto;
+            }
+
+            .${classPrefix}-heading {
+              color: #000;
+              font-family: Inter;
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 35px; /* 134.615% */
+            }
+
+            .${classPrefix}-content {
+              color: #000;
+              font-family: Inter;
+              font-size: 13px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%; /* 18.2px */
+            }
+
+            .${classPrefix}-point-text {
+              color: #000;
+              font-family: Inter;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+
+            .${classPrefix}-point-img {
+              width: 22px;
+              height: 22px;
+            }
+
+            .${classPrefix}-image {
+              width: 100%;
+              height: 250px;
+            }
           }
         `,
       },
