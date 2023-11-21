@@ -79,7 +79,7 @@ const fomo2Component = (editor: Editor) => {
                 line-height: 21px;
                 margin: 0;
                } 
-              @media (max-width: 770px) {
+              @media (max-width: 400px) {
                 .${classPrefix}-section {
                 height: 63px;
                 padding: 10px 31px 15px 30px;

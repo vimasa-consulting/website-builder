@@ -95,7 +95,7 @@ const fomo4Component = (editor: Editor) => {
                .${classPrefix}-text {
                 text-align: center;
                 font-family: Inter, sans-serif;
-                font-size: 16px;
+                font-size: 15px;
                 margin: 0;
                 margin-left: 8px;
                } 
@@ -121,7 +121,7 @@ const fomo4Component = (editor: Editor) => {
                 font-size: 15px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 140%; /* 21px */
+                line-height: 140%;
                 }
                .${classPrefix}-countdown .countdown-block .countdown-digit {
                 border-radius: 3px;
@@ -132,10 +132,10 @@ const fomo4Component = (editor: Editor) => {
                 font-size: 15px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 140%; /* 21px */
+                line-height: 140%;
                 margin-right: 4px;
                 }
-                @media (max-width: 770px) {
+                @media (max-width: 400px) {
                 .${classPrefix}-section {
                   height: 70px;
                   padding-top: 10px;
@@ -180,7 +180,7 @@ const fomo4Component = (editor: Editor) => {
                 font-size: 9px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 140%; /* 21px */
+                line-height: 140%;
                 }
                .${classPrefix}-countdown .countdown-block .countdown-digit {
                 border-radius: 3px;
@@ -191,7 +191,7 @@ const fomo4Component = (editor: Editor) => {
                 font-size: 9px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 140%; /* 21px */
+                line-height: 140%;
                 margin-right: 2px;
                 }
               }

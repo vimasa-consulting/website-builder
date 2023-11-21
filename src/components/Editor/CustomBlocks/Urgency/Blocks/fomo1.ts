@@ -56,26 +56,27 @@ const fomo1Component = (editor: Editor) => {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                font-family: Inter, sans-serif;
                } 
                .${classPrefix}-text {
                 text-align: center;
-                font-family: Inter, sans-serif;
                 font-size: 15px;
-                padding: 0 8px;
                 line-height: 1.5;
+                font-weight: 400;
+                margin: 0;
                } 
                 
-              @media (max-width: 770px) {
+              @media (max-width: 400px) {
                .${classPrefix}-section {
                  height: 38px;
                }
                 .${classPrefix}-text {
                 color: #000;
                 text-align: center;
-                font-family: Inter;
                 font-size: 11px;
                 font-style: normal;
                 font-weight: 400;
+                padding: 2px;
                 }
                 .${classPrefix}-text b {
                 display: block;

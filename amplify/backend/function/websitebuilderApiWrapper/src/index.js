@@ -1,11 +1,10 @@
 const { Router } = require('./utils/router');
 const ProxyService = require('./services/proxy-service');
 
-// TODO: make a generic proxy without route def
-
 // setup router
 const router = Router({ trimTrailingSlash: true });
-router.get('/api/typeform', (event) => ProxyService.process(event.fullRequestParams));
+// router.get('/api/typeform', (event) => ProxyService.process(event.fullRequestParams));
+router.unknown((event, context, path) => ProxyService.process(event, context, path));
 
 // exposed lambda handler
 exports.handler = async function (event, context) {
