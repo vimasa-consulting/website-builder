@@ -38,14 +38,14 @@ const component = (editor: Editor) => {
             <div class="${classPrefix}-mainImage">
               <img 
                 loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, httpscdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                src="https://placehold.co/"
                 class="${classPrefix}-image"      
               />
             </div>
             <div class="${classPrefix}-subImage">
               <img 
                 loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, httpscdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                src="https://placehold.co/"
                 class="${classPrefix}-image"      
               />
             </div>
@@ -54,9 +54,10 @@ const component = (editor: Editor) => {
         `,
         styles: `
           .${classPrefix}-section {
-            padding: 5.25rem;
             font-family: Inter, sans-serif;
-            padding-bottom: 282px;
+            padding: 76px 0px 78px;
+            margin: 0 auto;
+            max-width: 1440px;
           }
           .${classPrefix}-container {
             margin: 0 auto;
@@ -95,8 +96,7 @@ const component = (editor: Editor) => {
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            width: 430px;
-            max-width: 377px;
+            max-width: 402px;
             margin-top: 0px;
             margin-bottom: 75px;
             z-index: 2;
@@ -114,9 +114,10 @@ const component = (editor: Editor) => {
             align-items: center;
           }
           .${classPrefix}-mainImage img, .${classPrefix}-subImage img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
             outline: none;
-            width: 45px;
-            height: 45px;
           }
           .${classPrefix}-subImage {
             border-radius: 10px;
@@ -146,28 +147,38 @@ const component = (editor: Editor) => {
             align-items: center;
             justify-content: center;
           }
-          @media (max-width: 770px) {
-            .${classPrefix}-container {
-              position: unset;
-             flex-direction: column;
-             align-items: center;
-            }
-            .${classPrefix}-subImage {
-              position: unset;
-              margin-top: 50px;
-            }
-            .${classPrefix}-mainImage, .${classPrefix}-heading {
-              margin-right: 0px;
-            }
-          }
-
-          @media (max-width: 425px) {
+          @media (max-width: 400px) {
             .${classPrefix}-section {
-              padding: 20px;
+              padding: 53px 29px 69px;
+             }
+            .${classPrefix}-heading {
+              font-size: 26px;
+              margin-bottom: 10px;
+              margin-right: 0px;
+              margin-top: 0px;
              }
             .${classPrefix}-text {
               width: unset; 
+              font-size: 13px;
+              margin-bottom: 36px;
              }
+            .${classPrefix}-container {
+             flex-direction: column;
+             align-items: center;
+            }
+            .${classPrefix}-mainImage {
+              width: 231px;
+              height: 216px;
+              margin-top: 237px;
+              margin-left: auto;
+              margin-right: 0;
+            }
+            .${classPrefix}-subImage {
+              width: 292px;
+              height: 291px;
+              bottom: 162px;
+              top: unset;
+            }
           }
         `,
       },

@@ -109,7 +109,9 @@ const userAspirations1Component = (editor: Editor) => {
                 styles: `
                 .${classPrefix}-section {
                     background-color: #fff;
-                    padding: 63px 20px 181px;
+                    padding: 63px 0px 118px;
+                    max-width: 1440px;
+                    margin: 0 auto;
                     font-family: Inter, sans-serif;
                   }
                   
@@ -165,6 +167,7 @@ const userAspirations1Component = (editor: Editor) => {
                     margin-top: 12px;
                     font: 400 15px/140% Inter, -apple-system, Roboto, Helvetica, sans-serif;
                     margin: 0px;
+                    max-width: 450px;
                   }
                   
                   .${classPrefix}-column {
@@ -177,13 +180,13 @@ const userAspirations1Component = (editor: Editor) => {
 
                   
                   .${classPrefix}-cards {
-                    gap: 50px;
+                    gap: 84px;
                     display: flex;
-                    width: 1178px;
                     height: 561px;
                     margin: 0 auto;
                     max-width: 100%;
                     margin-top: 86px;
+                    justify-content: center;
                   }
                   
                   .${classPrefix}-card {
@@ -201,21 +204,21 @@ const userAspirations1Component = (editor: Editor) => {
                   .${classPrefix}-imageWrapper {
                     background-color: #e9e9e9;
                     display: flex;
-                    width: 100%;
+                    max-width: 100%;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
                     height: 100%;
                     max-height: 336.7px;
                     border-radius: 10px;
-                    min-height: 300px;
+                    width: 485px;
                   }
                   
                   .${classPrefix}-img {
                     object-fit: contain;
                     object-position: center;
-                    width: 45px;
-                    height: 45px;
+                    width: 100%;
+                    height: 100%;
                     mix-blend-mode: multiply;
                     overflow: hidden;
                     align-self: center;
@@ -234,9 +237,9 @@ const userAspirations1Component = (editor: Editor) => {
                   }
 
                   
-                  @media (max-width: 425px) {
+                  @media (max-width: 400px) {
                     .${classPrefix}-section {
-                      padding: 20px;
+                      padding: 45px 0px 68px;
                     }
                   
                     .${classPrefix}-cardNumber {
@@ -250,25 +253,39 @@ const userAspirations1Component = (editor: Editor) => {
                   
                     .${classPrefix}-cards {
                       flex-direction: column;
-                      gap: 40px;
+                      gap: 68px;
+                      margin-top: 53px;
+                      max-width: 320px;
                     }
                   
                     .${classPrefix}-card {
                       width: 100%;
+                      padding: 16.6px 17px 25px 18px;
+                      max-width: 320px;
                     }
                   
                     .${classPrefix}-img {
-                      margin-bottom: 10px;
+
+                    }
+                    .${classPrefix}-imageWrapper {
+                      width: 284px;
+                      height: 197px;                  
                     }
                     .${classPrefix}-title  {
-                      font-size: 28px;
-                      margin-bottom: 40px;
+                      font-size: 26px;
+                      margin-bottom: 0px;
                   }
-                  .${classPrefix}-cards {
-                    margin-top: 40px;
+                    .${classPrefix}-stepTitle  {
+                      font-size: 18px;
+                      margin-bottom: 16px;
+                      margin-top: 17.8px;
+                  }
+                  .${classPrefix}-stepDescription {
+                    font-size: 13px;
+                    padding: 0px;
                   }
 
-                    .${classPrefix}-subTitle, .${classPrefix}-stepDescription {
+                    .${classPrefix}-subTitle {
                         padding: 0px;
                     }
                   }

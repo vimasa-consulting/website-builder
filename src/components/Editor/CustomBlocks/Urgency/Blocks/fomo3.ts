@@ -116,9 +116,9 @@ const fomo3Component = (editor: Editor) => {
                 font-size: 38px;
                 font-style: normal;
                 font-weight: 600;
-                line-height: 1;
                 text-transform: uppercase;
                 margin: 0;
+                line-height: 140%;
               }
                .${classPrefix}-text {
                 color: #000;
