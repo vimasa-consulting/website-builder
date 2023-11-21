@@ -197,6 +197,21 @@ const faquc1Component = (editor: Editor) => {
           .${classPrefix}-input:checked ~ .${classPrefix}-label::after {
             transform: translateY(-50%) rotate(0.5turn);
           }
+
+          @media (max-width: 768px) {
+            .${classPrefix}-section {
+              align-items: center;
+              background-color: #fff;
+              display: block;
+              padding: 20px 24px;
+              max-height: 700px;
+              margin-top: 20px;
+            }
+
+            .${classPrefix}-title {
+              width: auto;
+            }
+          }
         `,
       },
     },
