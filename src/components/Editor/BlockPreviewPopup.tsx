@@ -59,7 +59,7 @@ const BlockPreviewPopup: React.FC<BlockPreviewPopupProps> = ({ grapeJSEditor }) 
     function getBlockDescription(firstChar:string){ 
         switch (firstChar) {
             case "S":
-              return "User Actions";
+              return "";
             case "T":
               return "This block helps your brand to position itself uniquely and to establish a connect with your users. This leads to brand love & increased recall, giving you a competitive advantage.";
             case "U":

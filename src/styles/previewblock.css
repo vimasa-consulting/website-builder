@@ -84,6 +84,7 @@
     .data {
       color:  grey;
       width: 320px;
+      margin-bottom: 10px;
     }
     .f60 {
       font-size: 60px;
