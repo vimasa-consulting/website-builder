@@ -201,9 +201,10 @@ const solutionToUserPain2Component = (editor: Editor) => {
                 border-radius: 10px;
               }
               .${classPrefix}-image {
-                object-fit: fill;
-                width: 20px;
-                height: 20px;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
                 outline: none;
               }
               .${classPrefix}-description {
