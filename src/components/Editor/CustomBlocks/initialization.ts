@@ -9,12 +9,12 @@ import initBrandConnect from "./BrandConnect";
 import initUserActions from "./UserActions";
 
 export default function init(editor: Editor) {
-  // initFirstImpression(editor);
-  // initTrust(editor);
-  // initLogic(editor);
-  // initEmotion(editor);
-  // initUrgency(editor);
-  // initValue(editor);
+  initFirstImpression(editor);
+  initTrust(editor);
+  initLogic(editor);
+  initEmotion(editor);
+  initUrgency(editor);
+  initValue(editor);
   initBrandConnect(editor);
-  // initUserActions(editor);
+  initUserActions(editor);
 }
