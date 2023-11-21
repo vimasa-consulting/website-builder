@@ -48,6 +48,7 @@ const personaUseCase1Component = (editor: Editor) => {
                 components: `
                 <section class="${classPrefix}-section">
             <h1 class="${classPrefix}-title" >Catchy Header about your Users’ Unique Identity</h1>
+            <hr class="${classPrefix}-hr"/>
             <p class="${classPrefix}-subTitle">Curiosity-inducing description about how your product is perfect for the below mentioned personas/use case</p>
               <div class="${classPrefix}-cardColumn">
                 <div class="${classPrefix}-descriptionContainer">
@@ -102,7 +103,9 @@ const personaUseCase1Component = (editor: Editor) => {
                 .${classPrefix}-section {
                   background-color: #fff;
                   font-family: Inter, sans-serif;
-                  padding: 62px 20px 117px;
+                  padding: 88px 20px 122px;
+                  margin: 0 auto;
+                  max-width: 1440px;
                 }
                 .${classPrefix}-title {
                   text-align: center;
@@ -110,14 +113,25 @@ const personaUseCase1Component = (editor: Editor) => {
                   font-style: normal;
                   font-weight: 600;
                   line-height: normal;
-                  margin-bottom: 18px;
+                  margin-bottom: 23px;
                   margin-top: 0px;
+                  line-height: 35px;
+                }
+                .${classPrefix}-hr {
+                  width: 73px;
+                  height: 4px;
+                  border-radius: 5px;
+                  background: #D9D9D9;
+                  border: none;
+                  margin: 0px auto;
+                  margin-bottom: 21px;
                 }
                 .${classPrefix}-subTitle {
                   text-align: center;
                   font-size: 15px;
-                  margin: 0px auto 90px;
-                  max-width: 606px;
+                  margin: 0px auto 126px;
+                  max-width: 687px;
+                  line-height: 140%;
                 }
               .${classPrefix}-descriptionContainer {
                   display: flex;
@@ -204,47 +218,70 @@ const personaUseCase1Component = (editor: Editor) => {
               }
               .${classPrefix}-image {
                 object-fit: fill;
-                width: 20px;
-                height: 20px;
+                width: 50px;
+                height: 50px;
+                outline: none;
               }
               .${classPrefix}-description {
                 margin: 0;
                 font-size: 15px;
-                padding-right: 56px;
+                padding-right: 40px;
+                line-height: 140%;
               }
       
-              @media (max-width: 770px) {
+              @media (max-width: 400px) {
                 .${classPrefix}-section {
-                  padding: 20px;
+                  padding: 22px 20px 117px;
                 }
                 .${classPrefix}-cardWrapper {
                   flex-direction: column;
+                }
+                .${classPrefix}-imageContainer {
+                  height: 55px;
+                  width: 55px;
+                }
+                .${classPrefix}-image {
+                  width: 33.5px;
+                  height: 33.5px;
+                }
+                .${classPrefix}-customerProfile {
+                  top: -30px;
+                  left: 30px;
+                }
+                .${classPrefix}-hr {
+                  margin-bottom: 15px;
                 }
                 .${classPrefix}-cardColumn {
                   flex-direction:  column;
                   align-items: center;
                   width: 100%;
                   height: 100%;
-                  gap: 60px;
+                  gap: 49px;
                 }
                 .${classPrefix}-descriptionContainer {
                   min-width: unset;
                   width: 100%;
                   padding: 30px;
-                }
-                .${classPrefix}-title {
-                  font-size: 30px;
-                }
-                .${classPrefix}-subTitle {
-                  margin-bottom: 60px;
-                }
-              }
-              @media (max-width: 425px) {
-                .${classPrefix}-descriptionContainer {
                   flex-direction: column;
                   justify-content: center;
                   align-items: center;
-                } 
+                }
+                .${classPrefix}-title {
+                  font-size: 26px;
+                  margin-bottom: 14px;
+                }
+                .${classPrefix}-userPainPoint {
+                  font-size: 18px;
+                  margin-bottom: 8px;
+                }
+                .${classPrefix}-description {
+                  font-size: 13px;
+                  padding-right: 16px;
+                }
+                .${classPrefix}-subTitle {
+                  font-size: 13px;
+                  margin-bottom: 73px;
+                }
               }
         `,
             },
