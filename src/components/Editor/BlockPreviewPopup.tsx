@@ -28,8 +28,8 @@ const BlockPreviewPopup: React.FC<BlockPreviewPopupProps> = ({ grapeJSEditor }) 
             </div>
             <div className="filter-container">
             {
-                blocks.length && blocks.map((block) => (
-                <div className="filter-section">
+                blocks.length && blocks.map((block, index) => (
+                <div key={index} className="filter-section">
                     <div className="left">
                         <p className="pill  bg-1">Above the Fold</p>
                         <p className="data"> this block helps you create powerful first impression by bringing together all the strengths of your prosuct and brands in one place</p>
