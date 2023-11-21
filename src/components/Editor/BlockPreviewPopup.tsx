@@ -61,19 +61,19 @@ const BlockPreviewPopup: React.FC<BlockPreviewPopupProps> = ({ grapeJSEditor }) 
             case "S":
               return "User Actions";
             case "T":
-              return "Brand Connect";
+              return "This block helps your brand to position itself uniquely and to establish a connect with your users. This leads to brand love & increased recall, giving you a competitive advantage.";
             case "U":
-              return "Trust";
+              return "This block helps develop trust in the your brand/product, effectively clearing their doubts & apprehensions. Increasing trust in your users is proven to increase conversions directly. ";
             case "V":
-              return "Value";
+              return "This block helps create a high value perception of your product in the users eyes, so that they feel your product gives great value for money. This will ultimately persuade them towards making the decision. ";
             case "W":
-              return "Urgency";
+              return "This block helps to create a sense of urgency and Fear-of-Missing-Out in your users, that can strongly persuade them towards making the purchase without delay.  ";
             case "X":
-              return "Emotion";
+              return "This block helps connect your product with the emotional needs of your users. For customers who are emotionally driven to shop, this will help persuade them powerfully towards the purchase.";
             case "Y":
-              return "Logic";
+              return "This block helps you logically convey the strengths & advantages of your product. For the buyer who emphasises on taking informed decisions, this will persuade them towards making their purchase ";
             case "Z":
-              return "First Impression";
+              return "This block helps you to create a powerful first impression, by bringing together all the strengths of your product & brand in one place, leading to increase in conversion and decrease in page drop-off.";
             default:
               return "";
           }
