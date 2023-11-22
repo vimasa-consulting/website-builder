@@ -54,7 +54,7 @@ const personaUseCase2Component = (editor: Editor) => {
                         <div class="${classPrefix}-imageWrapper">
                           <img
                             loading="lazy"
-                            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                            src="https://placehold.co/"
                             class="${classPrefix}-img"
                           />
                         </div>
@@ -64,20 +64,21 @@ const personaUseCase2Component = (editor: Editor) => {
                         <div class="${classPrefix}-imageWrapper">
                           <img
                             loading="lazy"
-                            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                            src="https://placehold.co/"
                             class="${classPrefix}-img"
                           />
                         </div>
                         <h3 class="${classPrefix}-stepTitle">Persona/Use Case 1</h3>
                       </div>
                     </div>
-                </section>
-                                `,
+                </section>`,
                 styles: `
                 .${classPrefix}-section {
                     background-color: #fff;
-                    padding: 87px 20px 97px;
+                    padding: 87px 0px 97px;
                     font-family: Inter, sans-serif;
+                    margin: 0 auto;
+                    max-width: 1440px;
                   }
                   
                   .${classPrefix}-title {
@@ -91,6 +92,7 @@ const personaUseCase2Component = (editor: Editor) => {
                     margin: 0 auto;
                     margin-bottom: 57px;
                     max-width: 687px;
+                    line-height: 140%;
                   }
                   
                   .${classPrefix}-cardTitle {
@@ -163,70 +165,60 @@ const personaUseCase2Component = (editor: Editor) => {
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    height: 100%;
-                    min-height: 297px;
+                    height: 297px;
                     border-radius: 10px;
                   }
                   
                   .${classPrefix}-img {
                     object-fit: contain;
-                    object-position: center;
-                    width: 45px;
-                    height: 45px;
+                    width: 100%;
+                    height: 100%;
                     mix-blend-mode: multiply;
-                    overflow: hidden;
-                    align-self: center;
                     max-width: 100%;
                   }
-                  @media (max-width: 770px) {
+                  
+                  @media (max-width: 400px) {
+                    .${classPrefix}-section {
+                      padding: 40px 13px;
+                    }
+                    .${classPrefix}-cardNumber {
+                      white-space: initial;
+                      padding: 0 20px;
+                    }
+                    .${classPrefix}-column {
+                      width: 100%;
+                    }
+                    .${classPrefix}-subTitle {
+                      margin-bottom: 39px;
+                      padding: 0px;
+                      font-size: 13px;
+                    }
+                    .${classPrefix}-imageWrapper {
+                      width: 182px;
+                      height: 127px;
+                    }
                     .${classPrefix}-cards {
-                      flex-direction: column;
+                      gap: 10px;
                       width: 100%;
                       justify-content: center;
                       align-items: center;
                       height: 100%;
                     }
-                    .${classPrefix}-subTitle {
-                      margin-bottom: 30px;
-                    }
-                  }
-
-                  
-                  @media (max-width: 425px) {
-                    .${classPrefix}-section {
-                      padding: 20px;
-                    }
-                  
-                    .${classPrefix}-cardNumber {
-                      white-space: initial;
-                      padding: 0 20px;
-                    }
-                  
-                    .${classPrefix}-column {
-                      width: 100%;
-                    }
-                  
-                    .${classPrefix}-cards {
-                      flex-direction: column;
-                      gap: 40px;
-                    }
-                  
                     .${classPrefix}-card {
                       width: 100%;
                     }
-                  
-                    .${classPrefix}-img {
+                    .${classPrefix}-title  {
+                      font-size: 26px;
                       margin-bottom: 10px;
                     }
-                    .${classPrefix}-title  {
-                      font-size: 28px;
-                  }
-
-                    .${classPrefix}-subTitle, .${classPrefix}-stepDescription {
+                    .${classPrefix}-stepTitle  {
+                      margin-top: 10px;
+                      font-size: 13px;
+                    }
+                    .${classPrefix}-stepDescription {
                         padding: 0px;
                     }
                   }
-                  
                 `,
             },
         },

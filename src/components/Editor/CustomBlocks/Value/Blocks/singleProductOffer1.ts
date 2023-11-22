@@ -52,10 +52,10 @@ const component = (editor: Editor) => {
           `,
         styles: `
             .${classPrefix}-section {
-              font-family: Inter;
               display: flex;
               flex-direction: row;
               height: 70vh;
+              font-family: Inter, sans-serif;
             }
 
             .${classPrefix}-left-column {

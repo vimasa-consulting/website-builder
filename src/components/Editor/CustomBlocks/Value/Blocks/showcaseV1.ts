@@ -148,6 +148,7 @@ const showcaseV1Component = (editor: Editor) => {
                     padding-top: 95px;
                     padding: 0 114px;
                     max-height: 800px;
+                    font-family: Inter, sans-serif;
                   }
 
                   .${classPrefix}-uniqueProduct {

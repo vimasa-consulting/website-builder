@@ -57,11 +57,7 @@ const howItWorks1Component = (editor: Editor) => {
           <div class="${classPrefix}-stepDescription">Description of the step</div>
         </div>
         <div class="${classPrefix}-imageWrapper">
-          <img
-            loading="lazy"
-            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
-            class="${classPrefix}-img"
-          />
+        <img class="${classPrefix}-image" src="https://placehold.co/381x381" alt="placeholder-image">
         </div>
       </div>
       <div class="${classPrefix}-card">
@@ -71,11 +67,7 @@ const howItWorks1Component = (editor: Editor) => {
           <div class="${classPrefix}-stepDescription">Description of the step 2</div>
         </div>
         <div class="${classPrefix}-imageWrapper">
-          <img
-            loading="lazy"
-            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
-            class="${classPrefix}-img"
-          />
+        <img class="${classPrefix}-image" src="https://placehold.co/381x381" alt="placeholder-image">
         </div>
       </div>
       <div class="${classPrefix}-card">
@@ -85,11 +77,7 @@ const howItWorks1Component = (editor: Editor) => {
           <div class="${classPrefix}-stepDescription">Description of the step 3</div>
         </div>
         <div class="${classPrefix}-imageWrapper">
-          <img
-            loading="lazy"
-            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, https/\/cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
-            class="${classPrefix}-img"
-          />
+        <img class="${classPrefix}-image" src="https://placehold.co/381x381" alt="placeholder-image">
         </div>
       </div>
     </div>
@@ -101,15 +89,18 @@ const howItWorks1Component = (editor: Editor) => {
                     background-color: #fff;
                     display: flex;
                     flex-direction: column;
-                    padding: 0 80px;
-                    max-height: 800px;
+                    padding: 65px 0px 86px;
+                    max-width: 1440px;
+                    margin: 0 auto;
+                    font-family: Inter, sans-serif;
                   }
                   
                   .${classPrefix}-title {
-                    font-size: 30px;
-                    font-family: Inter, sans-serif;
+                    font-size: 40px;
                     text-align: center;
-                    margin-top: 40px;
+                    margin-top: 0px;
+                    margin-bottom: 75px;
+                    font-weight: 600;
                   }
                   
                   .${classPrefix}-cardTitle {
@@ -136,15 +127,14 @@ const howItWorks1Component = (editor: Editor) => {
                   .${classPrefix}-stepTitle {
                     color: #000;
                     align-self: stretch;
-                    margin-top: 22px;
+                    margin-top: 18px;
                     font: 500 20px Inter, sans-serif;
                   }
                   
                   .${classPrefix}-stepDescription {
                     color: #000;
-                    align-self: stretch;
-                    margin-top: 12px;
-                    font: 400 15px/140% Inter, -apple-system, Roboto, Helvetica, sans-serif;
+                    margin-top: 19px;
+                    font: 400 15px;
                   }
                   
                   .${classPrefix}-column {
@@ -156,23 +146,23 @@ const howItWorks1Component = (editor: Editor) => {
                   }
                   
                   .${classPrefix}-cardsWrapper {
-                    margin: 49px 20px 86px;
+                    width: 1239px;
+                    margin: 0 auto;
                   }
                   
                   .${classPrefix}-cards {
-                    gap: 20px;
+                    gap: 48px;
                     display: flex;
                   }
                   
                   .${classPrefix}-card {
                     line-height: normal;
-                    width: 33%;
                     margin-left: 0px;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: flex-start;
-                    gap: 50px;
+                    gap: 47px;
                   }
                   
                   .${classPrefix}-imageWrapper {
@@ -184,21 +174,17 @@ const howItWorks1Component = (editor: Editor) => {
                     flex-grow: 1;
                     flex-direction: column;
                     margin: 0 auto;
-                    padding: 168px 80px;
                   }
                   
-                  .${classPrefix}-img {
+                  .${classPrefix}-image {
                     aspect-ratio: 1;
                     object-fit: contain;
-                    object-position: center;
-                    width: 45px;
-                    mix-blend-mode: multiply;
-                    overflow: hidden;
-                    align-self: center;
-                    margin-bottom: -34px;
+                    width: 100%;
+                    height: 100%;
                     max-width: 100%;
+                    border-radius: 10px;
                   }
-                  @media (max-width: 425px) {
+                  @media (max-width: 400px) {
                     .${classPrefix}-section {
                       padding: 0 20px;
                     }
