@@ -1,6 +1,6 @@
 import { Auth } from "aws-amplify"
 import { User } from "@/types/user";
-import { create as createUser, getBySub } from "@/adapters/api/core/users";
+import { create as createUser, getCurrent } from "@/adapters/api/core/users";
 import { create as createOrganization } from "@/adapters/api/core/organizations";
 
 export const signOut = async () => {
@@ -9,7 +9,7 @@ export const signOut = async () => {
 
 export const postSignInActions = async () => {
   const authUserInfo = await Auth.currentUserInfo();
-  const currentUserResponse = await getBySub(authUserInfo.attributes.sub).catch(() => { });
+  const currentUserResponse = await getCurrent().catch(() => { });
   let dbUser: User = currentUserResponse?.data;
   if (!dbUser) {
     // create user

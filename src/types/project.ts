@@ -4,7 +4,8 @@ export type Project = {
   imageURL?: string
   projectHostingAlias: string,
   ownerUserId: string,
-  collaborators: string[]
+  collaborators: string[],
+  organizationId: string
 }
 export interface ProjectTableData {
   _id: string;

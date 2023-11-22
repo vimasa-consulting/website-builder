@@ -11,7 +11,7 @@ import {
   getAllProjectsByOrganizationId,
 } from "@/services/ProjectsService";
 import { useState } from "react";
-import { FileTableData } from "@/types/file";
+import { FileStatus, FileTableData } from "@/types/file";
 import {
   createFileForProject,
   deleteFileByFileId,
@@ -37,7 +37,12 @@ export default function Page() {
     try {
       const newFilePayload = {
         name: payload.inputOneData,
-        url: payload.inputTwoData,
+        slug: payload.inputTwoData,
+        htmlHeadContent: '',
+        htmlBodyContent: '',
+        status: FileStatus.DRAFT,
+        builderData: '',
+        projectId: 'TODO'
       };
 
       const newFileResponse = await createFileForProject(newFilePayload);

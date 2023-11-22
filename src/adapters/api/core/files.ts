@@ -1,14 +1,23 @@
 import { File } from "@/types/file";
 import { apiInstance } from "./api";
+import { getAuthHeaders } from "./utils";
 
-export function getAllFiles(projectId: string) {
-    return apiInstance.get(`/files/?projectId=${projectId}`);
+const RESOURCE_PATH = '/files';
+
+export async function getAllFiles(projectId: string) {
+  return apiInstance.get(`${RESOURCE_PATH}/?projectId=${projectId}`, {
+    headers: (await getAuthHeaders()),
+  });
 }
 
-export function createFile(file: Omit<File, '_id' | 'createdAt' | 'updatedAt'>) {
-    return apiInstance.post('/file/', file);
+export async function createFile(file: Omit<File, '_id' | 'createdAt' | 'updatedAt'>) {
+  return apiInstance.post(`${RESOURCE_PATH}/`, file, {
+    headers: (await getAuthHeaders()),
+  });
 }
 
-export function deleteFile(fileId: string) {
-    return apiInstance.delete(`/file/${fileId}`);
+export async function deleteFile(fileId: string) {
+  return apiInstance.delete(`${RESOURCE_PATH}/${fileId}`, {
+    headers: (await getAuthHeaders()),
+  });
 } 
