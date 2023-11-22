@@ -94,7 +94,7 @@ const userAspirations2Component = (editor: Editor) => {
                 styles: `
                 .${classPrefix}-section {
                     background-color: #fff;
-                    padding: 80px 20px 71px;
+                    padding: 89px 0px 71px;
                     font-family: Inter, sans-serif;
                   }
                   
@@ -182,19 +182,20 @@ const userAspirations2Component = (editor: Editor) => {
                     align-items: center;
                     justify-content: center;
                     height: 100%;
-                    min-height: 435px;
                     border-radius: 10px;
                   }
                   
                   .${classPrefix}-img {
                     object-fit: contain;
                     object-position: center;
-                    width: 45px;
-                    height: 45px;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
                     mix-blend-mode: multiply;
                     overflow: hidden;
                     align-self: center;
                     max-width: 100%;
+                    outline: none;
                   }
                   @media (max-width: 770px) {
                     .${classPrefix}-cards {
@@ -207,9 +208,9 @@ const userAspirations2Component = (editor: Editor) => {
                   }
 
                   
-                  @media (max-width: 425px) {
+                  @media (max-width: 400px) {
                     .${classPrefix}-section {
-                      padding: 20px;
+                      padding: 38px 0px 52px;
                     }
                   
                     .${classPrefix}-cardNumber {
@@ -223,23 +224,31 @@ const userAspirations2Component = (editor: Editor) => {
                   
                     .${classPrefix}-cards {
                       flex-direction: column;
-                      gap: 40px;
+                      gap: 52px;
                     }
                   
                     .${classPrefix}-card {
                       width: 100%;
+                      max-width: 320px;
                     }
                   
-                    .${classPrefix}-img {
-                      margin-bottom: 10px;
+                    .${classPrefix}-imageWrapper {
+                      width: 320px;
+                      height: 409px;
                     }
                     .${classPrefix}-title  {
-                      font-size: 28px;
+                      font-size: 26px;
                       margin-bottom: 40px;
                   }
+                    .${classPrefix}-stepTitle  {
+                     margin-top: 26px;
+                     margin-bottom: 16px;
+                     font-size: 18px;
+                  }
 
-                    .${classPrefix}-subTitle, .${classPrefix}-stepDescription {
+                  .${classPrefix}-stepDescription {
                         padding: 0px;
+                        font-size: 13px;
                     }
                   }
                   
