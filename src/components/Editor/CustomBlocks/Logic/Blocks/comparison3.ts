@@ -130,7 +130,7 @@ const comparison3Component = (editor: Editor) => {
                   margin-top: 0;
                   margin-bottom: 56px;
                 }          
-                table {
+                .${classPrefix}-comparisonContainer table {
                   width: 100%;
                   border-collapse: collapse;
                   margin: 0 auto;
@@ -138,28 +138,28 @@ const comparison3Component = (editor: Editor) => {
                   max-width: 994px;
                 }
                 
-                table, th, td {
+                .${classPrefix}-comparisonContainer  table, th, td {
                   border: 1px solid #ddd;
                 }
                 
-                th, td {
+                .${classPrefix}-comparisonContainer  th, td {
                   text-align: center;
                   padding: 8px;
                   font-size: 20px;
                 }
                 
-                th {
+                .${classPrefix}-comparisonContainer  th {
                   background-color: #4B4B4B;
                   color: #FFF;
                   font-size: 20px;
                   font-weight: 500;
                 }
                 
-                tbody tr:nth-child(odd) {
+                .${classPrefix}-comparisonContainer  tbody tr:nth-child(odd) {
                   background-color: #E9E9E9;
                 }
 
-                tbody tr {
+                .${classPrefix}-comparisonContainer  tbody tr {
                   height: 100px;
                   max-height: 100%;
                 }
@@ -172,12 +172,20 @@ const comparison3Component = (editor: Editor) => {
                     font-size: 16px;
                     margin-bottom: 30px;
                   }
-                  table {
+                  .${classPrefix}-comparisonContainer  table {
                     word-break: break-all;
                   }
-                  th, td {
-                    font-size: 16px;
+                  .${classPrefix}-comparisonContainer  th, .${classPrefix}-comparisonContainer  td {
+                    font-size: 9px;
+                    padding: 0;
                   }      
+                  .${classPrefix}-comparisonContainer tbody tr {
+                    height: 37px;
+                  }
+                  .${classPrefix}-comparisonContainer {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                  }
                 }
                 `,
             },

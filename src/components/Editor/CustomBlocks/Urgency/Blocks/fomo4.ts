@@ -69,6 +69,7 @@ const fomo4Component = (editor: Editor) => {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                font-size: 15px;
                }
                .${classPrefix}-section-container img {
                 opacity: 0.5;
@@ -137,9 +138,8 @@ const fomo4Component = (editor: Editor) => {
                 }
                 @media (max-width: 400px) {
                 .${classPrefix}-section {
-                  height: 70px;
-                  padding-top: 10px;
-                  padding-bottom: 14px;
+                  height: unset;
+                  padding: 8px 0px;
                 }
                 .${classPrefix}-section-desktop-only{
                   display: none;

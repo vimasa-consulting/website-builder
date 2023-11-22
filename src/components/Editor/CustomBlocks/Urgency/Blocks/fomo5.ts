@@ -66,6 +66,7 @@ const fomo5Component = (editor: Editor) => {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                font-family: Inter, sans-serif;
                } 
                .${classPrefix}-section .${classPrefix}-section-mobile-only {
                   display: none;
@@ -93,28 +94,25 @@ const fomo5Component = (editor: Editor) => {
                .${classPrefix}-countdown .countdown-block .countdown-label {
                 color: #000;
                 text-align: center;
-                font-family: Inter;
                 font-size: 15px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 140%; /* 21px */
+                line-height: 140%;
                 }
                .${classPrefix}-countdown .countdown-block .countdown-digit {
                 border-radius: 3px;
                 background: #E9E9E9;
                 padding: 3px 7px;
                 text-align: center;
-                font-family: Inter;
                 font-size: 15px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 140%; /* 21px */
+                line-height: 140%;
                 margin-right: 4px;
                 }
                .${classPrefix}-h3 {
                 color: #000;
                 text-align: center;
-                font-family: Inter;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 500;
@@ -124,24 +122,21 @@ const fomo5Component = (editor: Editor) => {
               }
                .${classPrefix}-text {
                 text-align: center;
-                font-family: Inter, sans-serif;
                 font-size: 15px;
                 padding: 0 8px;
                 line-height: 0;
                 margin: 0;
                } 
-                @media (max-width: 770px) {
+                @media (max-width: 400px) {
                   .${classPrefix}-h3 {
                     margin-bottom: 10px;
                     text-align: center;
-                    font-family: Inter;
                     font-size: 13px;
                     font-style: normal;
                     font-weight: 500;
-                    line-height: 1; /* 18.2px */
+                    line-height: 1;
                   }
                   .${classPrefix}-section {
-                    height: 70px;
                     padding-top: 10px;
                     padding-bottom: 14px;
                   }
@@ -160,7 +155,6 @@ const fomo5Component = (editor: Editor) => {
                   }
                   .${classPrefix}-text {
                   text-align: center;
-                  font-family: Inter;
                   font-size: 9px;
                   font-style: normal;
                   font-weight: 400;
@@ -172,22 +166,20 @@ const fomo5Component = (editor: Editor) => {
                   .${classPrefix}-countdown .countdown-block .countdown-label {
                   color: #000;
                   text-align: center;
-                  font-family: Inter;
                   font-size: 9px;
                   font-style: normal;
                   font-weight: 400;
-                  line-height: 140%; /* 21px */
+                  line-height: 140%;
                   }
                  .${classPrefix}-countdown .countdown-block .countdown-digit {
                   border-radius: 3px;
                   background: #E9E9E9;
                   padding: 2px 3px;
                   text-align: center;
-                  font-family: Inter;
                   font-size: 9px;
                   font-style: normal;
                   font-weight: 400;
-                  line-height: 140%; /* 21px */
+                  line-height: 140%;
                   margin-right: 2px;
                   }
                 }

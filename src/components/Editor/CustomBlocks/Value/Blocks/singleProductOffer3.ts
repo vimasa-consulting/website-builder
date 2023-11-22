@@ -51,11 +51,11 @@ const component = (editor: Editor) => {
           `,
         styles: `
             .${classPrefix}-section {
-              font-family: Inter;
               display: flex;
               flex-direction: row;
               height: 70vh;
               background: #E9E9E9;
+              font-family: Inter, sans-serif;
             }
 
             .${classPrefix}-left-column {
