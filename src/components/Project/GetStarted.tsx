@@ -1,29 +1,28 @@
 "use client";
-import wizard from "../../../public/projects/wizard.png";
+
+import wizard from "../../public/projects/wizard.png";
 import Image from "next/image";
 // import BuilderCta from "../../../components/GetStarted/BuilderCta";
-import styles from "../../../styles/getStarted.module.scss";
+import styles from "../../styles/getStarted.module.scss";
 import Link from "next/link";
 import NewItemPopup from "@/components/Project/NewItemPopup";
-import {
-  createProjectForOrganization,
-  deleteProjectByProjectId,
-  getAllProjectsByOrganizationId,
-} from "@/services/ProjectsService";
 import { useState } from "react";
 import { FileStatus, FileTableData } from "@/types/file";
 import {
   createFileForProject,
-  deleteFileByFileId,
-  getAllFilesByProjectId,
 } from "@/services/FilesService";
 import { useRouter } from "next/navigation";
+
 export interface NewProjectPayload {
   inputOneData: string;
   inputTwoData: string;
 }
 
-export default function Page() {
+interface Props {
+  projectID: string
+}
+
+export default function GetStarted({ projectID }: Props) {
   const router = useRouter();
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] =
     useState(false);
@@ -42,7 +41,7 @@ export default function Page() {
         htmlBodyContent: '',
         status: FileStatus.DRAFT,
         builderData: '',
-        projectId: 'TODO'
+        projectId: projectID
       };
 
       const newFileResponse = await createFileForProject(newFilePayload);
@@ -50,7 +49,7 @@ export default function Page() {
       console.log(newFile, "newFile");
 
       setTableData((prevState) => [newFile, ...prevState]);
-      router.push("/projects");
+      router.push(`/editor/${newFile._id}`);
     } catch (error) {
       console.log(error);
     }

@@ -6,6 +6,7 @@ import RecentSection from "@/components/Project/RecentSection";
 import { useCallback, useEffect, useState } from "react";
 import { createFileForProject, deleteFileByFileId, getAllFilesByProjectId } from "@/services/FilesService";
 import { FileStatus, FileTableData } from "@/types/file";
+import GetStarted from "@/components/Project/GetStarted";
 
 export interface NewProjectPayload {
   inputOneData: string;
@@ -82,7 +83,8 @@ export default function Page({ params }: { params: { projectID: string } }) {
 
   return (
     <div className="flex flex-col pb-14">
-      <RecentSection itemType="File" recentItems={recentFiles} />
+      {/* <RecentSection itemType="File" recentItems={recentFiles} /> */}
+      <GetStarted projectID={params.projectID} />
       <NewItem itemType="File" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} />
       {
         isAddNewProjectModalOpen &&
