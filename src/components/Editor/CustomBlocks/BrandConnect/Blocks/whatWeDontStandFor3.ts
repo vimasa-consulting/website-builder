@@ -65,12 +65,13 @@ const component = (editor: Editor) => {
           </section>
         `,
         styles: `
-          .${classPrefix}-container {
+        .${classPrefix}-container {
           margin: 0 auto;
           display: flex;
-          gap: 50px;
+          gap: 96px;
           align-items: center;
           justify-content: center;
+          font-family: Inter, sans-serif;
           }
 
           .${classPrefix}-left-container {
@@ -92,7 +93,7 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-heading {
           color: #000;
-          font-family: Inter;
+          font-family: Inter, sans-serif;
           font-size: 40px;
           font-style: normal;
           font-weight: 600;
@@ -103,7 +104,7 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-content {
           color: #000;
-          font-family: Inter;
+          font-family: Inter, sans-serif;
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
@@ -127,15 +128,53 @@ const component = (editor: Editor) => {
           align-items: center;
           gap: 5px;
           }
+          .${classPrefix}-point-text{
+            color: #000;
+
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
 
           .${classPrefix}-point-img {
-          width: 30px;
+          width: 26px;
           height: 30px;
           }
           @media (max-width: 770px) {
           }
 
           @media (max-width: 480px) {
+            .${classPrefix}-section {
+              padding: 3.313rem 0.8rem;
+            }
+            .${classPrefix}-container {
+              gap: 40px;
+              flex-direction: column;
+            }
+            .${classPrefix}-left-container {
+              width: 100%;
+            }
+            .${classPrefix}-right-container {
+              width: 100%;
+              }
+            .${classPrefix}-heading {
+              font-size: 26px;
+            }
+            .${classPrefix}-content {
+              font-size: 13px;
+            }
+            .${classPrefix}-point-text{
+              font-size: 15px;
+            }
+            .${classPrefix}-point-img {
+              width: 18px;
+              height: 22px;
+              }
+              .${classPrefix}-point {
+                gap: 3px;
+              }
           }
         `,
       },

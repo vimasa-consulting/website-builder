@@ -83,7 +83,7 @@ const component = (editor: Editor) => {
             max-width: 100%;
             text-align: center;
             margin-top: 26px;
-            margin-bottom: 60px;
+            margin-bottom: 54px;
           }
 
           .${classPrefix}-image {
@@ -99,11 +99,21 @@ const component = (editor: Editor) => {
 
           @media (max-width: 425px) {
             .${classPrefix}-section {
-              padding: 20px;
+              padding: 40px;
              }
             .${classPrefix}-text {
-              width: unset; 
+              width: unset;               
+            margin-bottom: 34px;
              }
+             .${classPrefix}-heading {
+              font-size: 26px;
+            }
+            .${classPrefix}-text {
+              font-size: 13px;
+            }
+            .${classPrefix}-smallHeading {
+              font-size: 15px;
+            }
           }
         `,
       },

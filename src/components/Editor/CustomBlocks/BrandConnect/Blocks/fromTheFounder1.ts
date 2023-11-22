@@ -85,7 +85,7 @@ const component = (editor: Editor) => {
             max-width: 100%;
             text-align: center;
             margin-top: 26px;
-            margin-bottom: 60px;
+            margin-bottom: 52px;
           }
           .${classPrefix}-image {
             border-radius: 10px;
@@ -124,7 +124,17 @@ const component = (editor: Editor) => {
              }
             .${classPrefix}-text {
               width: unset; 
+              font-size: 13px;
              }
+             .${classPrefix}-smallHeading {
+              font-size: 15px;
+             }
+             .${classPrefix}-heading {
+              font-size: 26px;
+            }
+            .${classPrefix}-content-wrapper {
+              padding: 23px;
+            }
           }
         `,
       },

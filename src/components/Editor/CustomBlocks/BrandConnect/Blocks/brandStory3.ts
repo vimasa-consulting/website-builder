@@ -39,7 +39,7 @@ const brandStory3Component = (editor: Editor) => {
                 </div>
                 <div class="${classPrefix}-section-info">
                 Craft your brand story in a way that sounds authentic, evokes emotions in your users, and is consistent across channels. Tap into emotions such as joy, nostalgia, pain, etc, while narrating your journey.
-                Include the origin of the brand, its purpose & the values. Be very specific and simple with your brand message.
+                <br>Include the origin of the brand, its purpose & the values. Be very specific and simple with your brand message.
                 </div>
               </div>
               <div class="${classPrefix}-right-pane"></div>
@@ -62,19 +62,22 @@ const brandStory3Component = (editor: Editor) => {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 726px;
+          width: 642px;
           fill: #FFF;
           filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.15));        
           flex-direction: column;
           flex: 1;
           margin-left: 36px;
+          border-radius: 10px;
+          box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+
         }
 
 
         .${classPrefix}-section-header {
           color: #000;
           text-align: center;
-          font-family: Inter;
+              font-family: Inter, sans-serif;
           font-size: 40px;
           font-style: normal;
           font-weight: 600;
@@ -84,19 +87,54 @@ const brandStory3Component = (editor: Editor) => {
 
         .${classPrefix}-section-info {
           text-align: center;
-          font-family: Inter;
+              font-family: Inter, sans-serif;
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
           line-height: 140%; /* 21px */ 
+          color: #000;
         }
 
         .${classPrefix}-right-pane {
           flex: 1;
         }
 
-        @media (max-width: 770px) {
+        @media (max-width: 440px) {
           .${classPrefix}-section {
+            width: 100%;
+            height: 707px;
+            flex-shrink: 0;
+            background: #E9E9E9;            
+            flex-direction: column-reverse;
+          }
+          .${classPrefix}-section-container {
+            padding: 12px 18px; 
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 358px;
+            fill: #FFF;
+            filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.15));        
+            flex-direction: column;
+            flex: 1;
+            border-radius: 10px;
+            box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+            margin-left: unset;
+  
+          }
+          .${classPrefix}-section-header {
+            color: #000;
+            text-align: center;
+                font-family: Inter, sans-serif;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 36px;
+          }
+          .${classPrefix}-section-info {
+            font-size: 13px;
           }
         }
       `,

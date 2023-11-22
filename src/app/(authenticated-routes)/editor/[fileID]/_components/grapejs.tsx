@@ -38,11 +38,16 @@ import userActionsMapping from "@/components/Editor/CustomBlocks/UserActions/use
 import { BlockDetails } from "@/types/blockDetails";
 import initCustomBlocks from "@/components/Editor/CustomBlocks/initialization";
 
-import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, SearchBox,Hits,RefinementList } from 'react-instantsearch';
-import 'instantsearch.css/themes/satellite.css'
+import algoliasearch from "algoliasearch/lite";
+import {
+  InstantSearch,
+  SearchBox,
+  Hits,
+  RefinementList,
+} from "react-instantsearch";
+import "instantsearch.css/themes/satellite.css";
 
-import {decode as atob} from 'base-64';
+import { decode as atob } from "base-64";
 
 export interface BlockOptions {
   label: string;
@@ -86,7 +91,7 @@ function getBlockOptions(blockType: string) {
 }
 
 // @ts-ignore
-export default function GrapesJSComponent() {  
+export default function GrapesJSComponent() {
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] =
     useState(false);
   const [blockDetails, setBlockDetails] = useState<BlockDetails | null>(null);
@@ -95,20 +100,20 @@ export default function GrapesJSComponent() {
 
   const onEditor = (editor: Editor) => {
     const deviceManager = editor.Devices;
-    deviceManager.remove('tablet');
-    const mobileDevice=deviceManager.get("mobilePortrait");
-    mobileDevice?.set({"width": "400px"});
-    const desktopDevice=deviceManager.get("desktop");
-    desktopDevice?.set({"width": "1440px"});
-   
-    editor.Commands.add('openPersuasiveBlocks', {
+    deviceManager.remove("tablet");
+    const mobileDevice = deviceManager.get("mobilePortrait");
+    mobileDevice?.set({ width: "400px" });
+    const desktopDevice = deviceManager.get("desktop");
+    desktopDevice?.set({ width: "1440px" });
+
+    editor.Commands.add("openPersuasiveBlocks", {
       run(editor, sender) {
         // open a popup and pass editor as props?
-        const container=document.querySelector("#customModalPopup");
+        const container = document.querySelector("#customModalPopup");
         editor.Modal.open({
           title: "Persuasive Blocks",
           content: container,
-        }).onceClose(() => editor.stopCommand('openPersuasiveBlocks'));          
+        }).onceClose(() => editor.stopCommand("openPersuasiveBlocks"));
       },
       stop() {
         editor.Modal.close();
@@ -138,52 +143,55 @@ export default function GrapesJSComponent() {
     // });
     // loadBlocks(editor);
     // loadComponents(editor);
-      editor.Panels.addButton('views',{
-        id: 'persuasiveblocks',
-        label: `<u>PB</u>`,
-        className: 'persuasiveblocks',
-        command: () => editor.runCommand('openPersuasiveBlocks'),
-        attributes: { title: 'Persuasive Blocks'}
-      });
-      editor.Panels.addButton('options',{
-        id: 'savepage',
-        label: `<img width="24" height="24" src="https://img.icons8.com/nolan/64/save.png" alt="save"/>`,
-        className: 'savepage',
-        command: () => editor.runCommand('openPersuasiveBlocks'),
-        attributes: { title: 'save page'}
-      });
-      editor.Panels.addButton('options',{
-        id: 'publishepage',
-        label: `<img width="20" height="20" src="https://img.icons8.com/ios/50/upload--v1.png" alt="upload--v1"/>`,
-        className: 'publishepage',
-        command: () => editor.runCommand('openPersuasiveBlocks'),
-        attributes: { title: 'save page'}
-      });
+    editor.Panels.addButton("views", {
+      id: "persuasiveblocks",
+      label: `<u>PB</u>`,
+      className: "persuasiveblocks",
+      command: () => editor.runCommand("openPersuasiveBlocks"),
+      attributes: { title: "Persuasive Blocks" },
+    });
+    editor.Panels.addButton("options", {
+      id: "savepage",
+      label: `<img width="24" height="24" src="https://img.icons8.com/nolan/64/save.png" alt="save"/>`,
+      className: "savepage",
+      command: () => editor.runCommand("openPersuasiveBlocks"),
+      attributes: { title: "save page" },
+    });
+    editor.Panels.addButton("options", {
+      id: "publishepage",
+      label: `<img width="20" height="20" src="https://img.icons8.com/ios/50/upload--v1.png" alt="upload--v1"/>`,
+      className: "publishepage",
+      command: () => editor.runCommand("openPersuasiveBlocks"),
+      attributes: { title: "save page" },
+    });
 
-      editor.Panels.removeButton('devices-c', 'set-device-tablet');
-      const styleManager = editor.StyleManager;
-      var fonts=styleManager.getProperty("typography","font-family");
-      // @ts-ignore
-      var fontOptions=fonts?.attributes?.options;
-      fontOptions.push({id: 'Inter, sans-serif', label:'Inter'})
-      console.log(fontOptions);
-      // @ts-ignore
-      fonts?.set("options",fontOptions);
-    
+    editor.Panels.removeButton("devices-c", "set-device-tablet");
+    const styleManager = editor.StyleManager;
+    var fonts = styleManager.getProperty("typography", "font-family");
+    // @ts-ignore
+    var fontOptions = fonts?.attributes?.options;
+    fontOptions.push({ id: "Inter, sans-serif", label: "Inter" });
+    console.log(fontOptions);
+    // @ts-ignore
+    fonts?.set("options", fontOptions);
+
     initCustomBlocks(editor);
     setGrapeJSEditor(editor);
-    const url=new URL(window.location.href)
-    const block_sequence=url.searchParams.get("block_sequence")||"";
+    const url = new URL(window.location.href);
+    const block_sequence = url.searchParams.get("block_sequence") || "";
     //const block_sequence='WmIzLCBUYTEsIFlmMSwgWWIxLCBTYjEsIFVmMSwgVGMxLCAgVmExLCBVZDEsIFVjMQ=='
     // TODO: read query param from url block_sequence
-    const blocks=atob(block_sequence).split(",")    
+    // const blocks=atob(block_sequence).split(",")
+    const blocks = ["Te3"];
     blocks.forEach((item) => {
       console.log(item.trim());
-      editor.addComponents({ type: item.trim()});
-    }); 
-    
+      editor.addComponents({ type: item.trim() });
+    });
   };
-  const searchClient = algoliasearch('IO4B9E5Q45', 'a089c7660ed4fcbb8529e4a12ce2836c');
+  const searchClient = algoliasearch(
+    "IO4B9E5Q45",
+    "a089c7660ed4fcbb8529e4a12ce2836c"
+  );
 
   const lp = "./img/";
   const plp = "https://via.placeholder.com/350x250/";
@@ -499,18 +507,16 @@ export default function GrapesJSComponent() {
       },
     ],
   };
-// @ts-ignore
-function Hit({ hit }) {
-  const hitImage=`/editor/blocks/${hit.id}.png`;
-  return (
-    <article>
-      <img src={hitImage} width="240px"/>
-x
-      <h1>{hit.description}</h1>
-      <button>Add to page</button>
-    </article>
-  );
-}
+  // @ts-ignore
+  function Hit({ hit }) {
+    const hitImage = `/editor/blocks/${hit.id}.png`;
+    return (
+      <article>
+        <img src={hitImage} width="240px" />x<h1>{hit.description}</h1>
+        <button>Add to page</button>
+      </article>
+    );
+  }
 
   return (
     <>
@@ -589,20 +595,18 @@ x
             },
           },
           canvas: {
-            styles: [
-              'https://fonts.googleapis.com/css?family=Inter'
-            ]
-          }
+            styles: ["https://fonts.googleapis.com/css?family=Inter"],
+          },
         }}
         onEditor={onEditor}
       />
-      <div style={{display: 'none'}}>
+      <div style={{ display: "none" }}>
         <div id="customModalPopup">
-        <InstantSearch searchClient={searchClient} indexName="blocks">
-          <SearchBox />
-          <RefinementList attribute="category" />
-          <Hits hitComponent={Hit} />
-        </InstantSearch>
+          <InstantSearch searchClient={searchClient} indexName="blocks">
+            <SearchBox />
+            <RefinementList attribute="category" />
+            <Hits hitComponent={Hit} />
+          </InstantSearch>
         </div>
       </div>
       {isAddNewProjectModalOpen && (

@@ -33,7 +33,7 @@ const component = (editor: Editor) => {
         components: `
           <section class="${classPrefix}-section">
           <h1 class="${classPrefix}-title">What you stand for in one bold line</h1>
-          <p class="${classPrefix}-subTitle">Elaborate on your core belief & ideology as a brand. Mention specific pointers about what you stand for.</p>
+          <p class="${classPrefix}-subTitle">Elaborate on your core belief & ideology as a brand. <br>Mention specific pointers about what you stand for.</p>
             <div class="${classPrefix}-firstContainer">
               <div class="${classPrefix}-card">
                 <p class="${classPrefix}-text">Pointer 1</p>
@@ -60,7 +60,7 @@ const component = (editor: Editor) => {
         `,
         styles: `
           .${classPrefix}-section {
-            padding: 5.25rem 77px;;
+            padding: 5.25rem 77px;
             font-family: Inter, sans-serif;
             background-color: #E9E9E9;
           }
@@ -96,7 +96,7 @@ const component = (editor: Editor) => {
             width: 100%;
             height: 80px;
             border-radius: 10px;
-            box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -110,6 +110,9 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin-top: 0;
             margin-bottom: 18px;
+            color: #000;
+          text-align: center;
+             font-family: Inter, sans-serif;
           }
           .${classPrefix}-subTitle {
             text-align: center;
@@ -119,6 +122,8 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin: 0 auto;
             margin-bottom: 89px;
+            font-family: Inter, sans-serif;
+            color: #000;
           }
           .${classPrefix}-text {
             font-size: 28px;
@@ -127,6 +132,8 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin: 0;
             text-align: center;
+            font-family: Inter, sans-serif;
+            color: #000;
           }
           .${classPrefix}-imgWrapper {
             width: 90px;
@@ -141,7 +148,7 @@ const component = (editor: Editor) => {
           }
           .${classPrefix}-text {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
@@ -154,7 +161,37 @@ const component = (editor: Editor) => {
           @media (max-width: 770px) {
           }
 
-          @media (max-width: 480px) {
+          @media (max-width: 440px) {
+            .${classPrefix}-section {
+              padding: 3.13rem 1.6rem;
+            }
+            .${classPrefix}-firstContainer {
+              margin: 0 auto;
+              display: flex;
+              align-items: center;
+              margin-bottom: 27px;
+              justify-content: space-between;
+              gap: 28px;
+            }
+            .${classPrefix}-secondContainer {
+              margin: 0 auto;
+              display: flex;
+              gap: 28px;
+              justify-content: center;
+              align-items: center;
+            }
+            .${classPrefix}-title {
+              text-align: center;
+              font-size: 26px;
+            }
+            .${classPrefix}-subTitle {
+              text-align: center;
+              font-size: 13px;
+              margin-bottom: 44px;
+            }
+            .${classPrefix}-text {
+              font-size: 15px;
+            }
           }
         `,
       },

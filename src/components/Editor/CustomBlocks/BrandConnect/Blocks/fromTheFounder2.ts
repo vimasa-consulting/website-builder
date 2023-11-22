@@ -116,6 +116,12 @@ const component = (editor: Editor) => {
             .${classPrefix}-leftContainer {
               width: unset; 
             }
+            .${classPrefix}-heading {
+              font-size: 26px;
+            }
+            .${classPrefix}-content {
+              font-size: 13px;
+            }
           }
         `,
       },

@@ -51,6 +51,7 @@ const brandStory2Component = (editor: Editor) => {
           align-items: center;
           background-color: white;
           display: flex;
+          gap:90px;
           max-height: 700px;
         }
         
@@ -77,7 +78,7 @@ const brandStory2Component = (editor: Editor) => {
 
         .${classPrefix}-left-panel-heading {
           color: #000;
-          font-family: Inter;
+             font-family: Inter, sans-serif;
           font-size: 40px;
           font-style: normal;
           font-weight: 600;
@@ -87,7 +88,7 @@ const brandStory2Component = (editor: Editor) => {
 
         .${classPrefix}-left-panel-info {
           color: #000;
-          font-family: Inter;
+             font-family: Inter, sans-serif;
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
@@ -104,7 +105,6 @@ const brandStory2Component = (editor: Editor) => {
           justify-content: center;
           align-items: center;
           height: 595px;
-          margin-left: 90px;
         }
         
         .${classPrefix}-image {
@@ -138,7 +138,7 @@ const brandStory2Component = (editor: Editor) => {
           font-weight: 400;
         }
 
-        @media (max-width: 770px) {
+        @media (max-width: 440px) {
           .${classPrefix}-section {
             padding: 20px;
             height: 693px;
@@ -160,7 +160,7 @@ const brandStory2Component = (editor: Editor) => {
 
           .${classPrefix}-left-panel-info {
               color: #000;
-              font-family: Inter;
+                 font-family: Inter, sans-serif;
               font-size: 13px;
               font-style: normal;
               font-weight: 400;
@@ -177,8 +177,7 @@ const brandStory2Component = (editor: Editor) => {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 595px;
-            margin-left: 90px;
+            height: 360px;
           }
 
           .${classPrefix}-left-panel-heading {

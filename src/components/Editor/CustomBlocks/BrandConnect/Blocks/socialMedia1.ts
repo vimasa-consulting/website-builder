@@ -1,51 +1,51 @@
 import { Editor } from "grapesjs";
 
 const socialMedia1Block = (editor: Editor) => {
-    const options = {
-        id: "Td1",
-        label: "Social Media 1",
-        block: {},
-        props: {},
-        style: "",
-        category: "Brand Connect",
-        classPrefix: "brandConnect-socialMedia1",
-        styleAdditional: "",
-        media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
+  const options = {
+    id: "Td1",
+    label: "Social Media 1",
+    block: {},
+    props: {},
+    style: "",
+    category: "Brand Connect",
+    classPrefix: "brandConnect-socialMedia1",
+    styleAdditional: "",
+    media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
       <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z"/>
     </svg>`,
-    };
+  };
 
-    editor.Blocks.add(options.id, {
-        media: options.media,
-        label: options.label,
-        category: options.category,
-        content: { type: options.id },
-        ...options.block,
-    });
+  editor.Blocks.add(options.id, {
+    media: options.media,
+    label: options.label,
+    category: options.category,
+    content: { type: options.id },
+    ...options.block,
+  });
 };
 
 const socialMedia1Component = (editor: Editor) => {
-    const options = {
-        id: "Td1",
-        label: "Social Media 1",
-        block: {},
-        props: {},
-        style: "",
-        category: "Brand Connect",
-        classPrefix: "brandConnect-socialMedia1",
-        styleAdditional: "",
-        media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
+  const options = {
+    id: "Td1",
+    label: "Social Media 1",
+    block: {},
+    props: {},
+    style: "",
+    category: "Brand Connect",
+    classPrefix: "brandConnect-socialMedia1",
+    styleAdditional: "",
+    media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
     <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z"/>
     </svg>`,
-    };
-    const { classPrefix } = options;
+  };
+  const { classPrefix } = options;
 
-    editor.Components.addType(options.id, {
-        model: {
-            defaults: {
-                classes: [classPrefix],
-                traits: [],
-                components: `
+  editor.Components.addType(options.id, {
+    model: {
+      defaults: {
+        classes: [classPrefix],
+        traits: [],
+        components: `
                 <section class="${classPrefix}-section">
                 <h1 class="${classPrefix}-title">Introduce your social media community</h1>
                 <div class="${classPrefix}-wrapper">
@@ -115,7 +115,7 @@ const socialMedia1Component = (editor: Editor) => {
               </div>
               </section>
         `,
-                styles: `
+        styles: `
                 .${classPrefix}-section {
                   background-color: #fff;
                   font-family: Inter, sans-serif;
@@ -130,6 +130,7 @@ const socialMedia1Component = (editor: Editor) => {
                   line-height: normal;
                   margin-bottom: 83px;
                   margin-top: 0px;
+                  color: #000;
                 }
                 .${classPrefix}-wrapper {
                   display: flex;
@@ -192,9 +193,15 @@ const socialMedia1Component = (editor: Editor) => {
                   padding-right: 34px;
                 }
                 .${classPrefix}-designation {
-                  font-size: 15px;
                   margin: 0px;
                   max-width: 320px;
+                  color: #000;
+
+                  font-family: Inter, sans-serif;
+                  font-size: 15px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 140%; 
                 }
                 .${classPrefix}-customerName {
                   color: #000;
@@ -227,7 +234,7 @@ const socialMedia1Component = (editor: Editor) => {
               } 
               @media (max-width: 770px) {
                 .${classPrefix}-section {
-                  padding: 20px;
+                  padding: 22px 26px;
                 }
                 .${classPrefix}-wrapper {
                   width: 100%;
@@ -237,14 +244,20 @@ const socialMedia1Component = (editor: Editor) => {
                   padding: 0px;
                 }
                 .${classPrefix}-title {
-                  font-size: 30px;
+                  font-size: 26px;
                   margin-bottom: 50px;
+                }
+                .${classPrefix}-designation {
+                  font-size: 13px;
+                }
+                .${classPrefix}-customerName {
+                  font-size: 16px;
                 }
               }
         `,
-            },
-        },
-    });
+      },
+    },
+  });
 };
 
 export { socialMedia1Block, socialMedia1Component };

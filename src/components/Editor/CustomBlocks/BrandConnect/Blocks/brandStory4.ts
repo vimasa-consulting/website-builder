@@ -73,7 +73,7 @@ const brandStory4Component = (editor: Editor) => {
         .${classPrefix}-section-header-prefix {
           color: #000;
           text-align: center;
-          font-family: Inter;
+             font-family: Inter, sans-serif;
           font-size: 20px;
           font-style: normal;
           font-weight: 500;
@@ -84,7 +84,7 @@ const brandStory4Component = (editor: Editor) => {
         .${classPrefix}-section-header {
           color: #000;
           text-align: center;
-          font-family: Inter;
+             font-family: Inter, sans-serif;
           font-size: 40px;
           font-style: normal;
           font-weight: 600;
@@ -104,16 +104,47 @@ const brandStory4Component = (editor: Editor) => {
         .${classPrefix}-section-info {
 
           text-align: center;
-          font-family: Inter;
+             font-family: Inter, sans-serif;
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
           line-height: 140%; /* 21px */ 
         }
 
-        @media (max-width: 770px) {
+        @media (max-width: 440px) {
           .${classPrefix}-section {
+            width: 100%;
+            height: 707px;
+            flex-shrink: 0;
+            background: #E9E9E9;            
+            flex-direction: column-reverse;
           }
+          .${classPrefix}-section-container {
+            padding: 38px 18px; 
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 358px;
+            fill: #FFF;
+            filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.15));        
+            flex-direction: column;
+            border-radius: 10px;
+            box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+            margin-left: unset;
+  
+          }
+          .${classPrefix}-section-header-prefix {
+            font-size: 16px;
+            margin-bottom: unset;
+          }
+          .${classPrefix}-section-header {
+            font-size: 26px;
+          }
+          .${classPrefix}-section-info {
+            font-size: 13px;
+          }
+
         }
       `,
       },

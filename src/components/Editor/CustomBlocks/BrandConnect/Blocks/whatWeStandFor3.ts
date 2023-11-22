@@ -31,12 +31,12 @@ const component = (editor: Editor) => {
         classes: [classPrefix],
         traits: [],
         components: `
-           <section class="${classPrefix}section">
-            <div class="${classPrefix}container">
-              <h1 class="${classPrefix}heading">
+           <section class="${classPrefix}-section">
+            <div class="${classPrefix}-container">
+              <h1 class="${classPrefix}-heading">
                 Crisply and clearly communicate your brand’s<br> message and what it stands for, in one bold line
               </h1>
-              <span class="${classPrefix}text">Source Name</span>
+              <span class="${classPrefix}-text">Source Name</span>
             </div>
             </div>
           </section>
@@ -45,6 +45,7 @@ const component = (editor: Editor) => {
           .${classPrefix}-section {
             padding: 5.25rem 14.25rem;
             margin: auto;
+            font-family: Inter, sans-serif;
           }
 
           .${classPrefix}-container {
@@ -58,7 +59,7 @@ const component = (editor: Editor) => {
             text-align: center;
             font-size: 40px;
             font-style: normal;
-            font-weight: 600;
+            font-weight: 500;
             line-height: normal;
             margin: 0;
             margin-bottom: 36px;
@@ -91,6 +92,13 @@ const component = (editor: Editor) => {
 
             .${classPrefix}-container {
               max-width: 100%;
+            }
+            .${classPrefix}-heading {
+              font-size: 16px;
+              margin-bottom: 26px;
+            }
+            .${classPrefix}-text {
+              font-size: 13px;
             }
           }
       `,

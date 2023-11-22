@@ -93,6 +93,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin-top: 0;
             margin-bottom: 18px;
+            color: #000;
           }
           .${classPrefix}-subTitle {
             max-width: 830px;
@@ -103,6 +104,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin: 0 auto;
             margin-bottom: 100px;
+            color: #000;
           }
           .${classPrefix}-text {
             font-size: 20px;
@@ -111,6 +113,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin: 0;
             margin-top: 3px;
+            color: #000;
           }
 
           .${classPrefix}-small-heading {
@@ -119,6 +122,7 @@ const component = (editor: Editor) => {
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
+            color: #000;
             line-height: 140%; /* 28px */
           }
 
@@ -147,7 +151,38 @@ const component = (editor: Editor) => {
           @media (max-width: 770px) {
           }
 
-          @media (max-width: 480px) {
+          @media (max-width: 440px) {
+            .${classPrefix}-section {
+              padding: 3.313rem 0.8rem;
+            }
+            .${classPrefix}-container {
+              margin: 0 auto;
+              display: flex;
+              gap: 48px;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+            }
+            .${classPrefix}-contentWrapper {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 25px;
+            }
+            .${classPrefix}-content {
+              display: flex;
+              gap: 10px;
+              text-align: center;
+            }
+            .${classPrefix}-title {
+              font-size: 26px;
+            }
+            .${classPrefix}-subTitle {
+              font-size: 13px;
+            }
+            .${classPrefix}-text {
+              font-size: 15px;
+            }
           }
         `,
       },

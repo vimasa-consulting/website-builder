@@ -69,7 +69,7 @@ const component = (editor: Editor) => {
           .${classPrefix}-container {
             margin: 0 auto;
             display: flex;
-            gap: 108px;
+            gap: 116px;
             justify-content: center;
             align-items: center;
           }
@@ -94,6 +94,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin-top: 0;
             margin-bottom: 18px;
+            color: #000;
           }
           .${classPrefix}-subTitle {
             text-align: center;
@@ -103,6 +104,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin: 0 auto;
             margin-bottom: 94px;
+            color: #000;
           }
           .${classPrefix}-text {
             font-size: 20px;
@@ -111,34 +113,38 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin: 0;
             margin-top: 3px;
+            color: #000;
           }
 
           .${classPrefix}-small-heading {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
             line-height: 140%; /* 28px */
+            color: #000;
           }
 
           .${classPrefix}-heading {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 40px;
             font-style: normal;
             font-weight: 600;
             line-height: normal;
             margin: 0;
+            color: #000;
           }
 
           .${classPrefix}-text {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
             line-height: 140%; /* 21px */
+            color: #000;
           }
 
           .${classPrefix}-image {
@@ -148,6 +154,31 @@ const component = (editor: Editor) => {
           }
 
           @media (max-width: 480px) {
+            .${classPrefix}-section {
+              padding: 3.313rem 0.8rem;
+            }
+            .${classPrefix}-container {
+              gap: 40px;
+              flex-direction: column;
+            }
+            .${classPrefix}-title {
+              font-size: 26px;
+            }
+            .${classPrefix}-subTitle {
+              font-size: 13px;
+              margin-bottom: 40px;
+            }
+            .${classPrefix}-text {
+              font-size: 15px;
+            }
+            .${classPrefix}-content {
+              gap: 10px;
+            }
+            .${classPrefix}-content img {
+                  width: 41px;
+                  height: 41px;
+                }
+
           }
         `,
       },
@@ -156,4 +187,7 @@ const component = (editor: Editor) => {
   editor.Components.addType(options.id, methods);
 };
 
-export { block as whatWeDontStandFor1Block, component as whatWeDontStandFor1Component };
+export {
+  block as whatWeDontStandFor1Block,
+  component as whatWeDontStandFor1Component,
+};

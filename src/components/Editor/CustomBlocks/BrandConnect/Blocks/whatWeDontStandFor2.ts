@@ -59,103 +59,144 @@ const component = (editor: Editor) => {
           </section>
         `,
         styles: `
+        .${classPrefix}-section {
+          padding: 5.25rem 77px;
+          font-family: Inter, sans-serif;
+          background-color: #E9E9E9;
+        }
+        .${classPrefix}-firstContainer {
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          margin-bottom: 77px;
+          justify-content: space-between;
+          gap: 80px;
+        }
+        .${classPrefix}-secondContainer {
+          margin: 0 auto;
+          display: flex;
+          gap: 80px;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .${classPrefix}-contentWrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 45px;
+        }
+        .${classPrefix}-content {
+          display: flex;
+          gap: 20px;
+          text-align: center;
+        }
+        .${classPrefix}-card {
+          max-width: 376px;
+          width: 100%;
+          height: 80px;
+          border-radius: 10px;
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+        }
+        .${classPrefix}-title {
+          text-align: center;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          margin-top: 0;
+          margin-bottom: 18px;
+          color: #000;
+        text-align: center;
+           font-family: Inter, sans-serif;
+        }
+        .${classPrefix}-subTitle {
+          text-align: center;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          margin: 0 auto;
+          margin-bottom: 89px;
+          font-family: Inter, sans-serif;
+          color: #000;
+        }
+        .${classPrefix}-text {
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          margin: 0;
+          text-align: center;
+          font-family: Inter, sans-serif;
+          color: #000;
+        }
+        .${classPrefix}-imgWrapper {
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          border: 1px dashed gray;
+          margin: 0 auto;
+          margin-top: 64px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .${classPrefix}-text {
+          color: #000;
+          font-family: Inter, sans-serif;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%; /* 21px */
+        }
+
+        .${classPrefix}-image {
+          border-radius: 10px;
+        }
+        @media (max-width: 770px) {
+        }
+
+        @media (max-width: 440px) {
           .${classPrefix}-section {
-            padding: 5.25rem 77px;;
-            font-family: Inter, sans-serif;
-            background-color: #E9E9E9;
+            padding: 3.13rem 1.6rem;
           }
           .${classPrefix}-firstContainer {
             margin: 0 auto;
             display: flex;
             align-items: center;
-            margin-bottom: 77px;
+            margin-bottom: 27px;
             justify-content: space-between;
-            gap: 80px;
+            gap: 28px;
           }
           .${classPrefix}-secondContainer {
             margin: 0 auto;
             display: flex;
-            gap: 80px;
+            gap: 28px;
             justify-content: center;
             align-items: center;
-          }
-
-          .${classPrefix}-contentWrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 45px;
-          }
-          .${classPrefix}-content {
-            display: flex;
-            gap: 20px;
-            text-align: center;
-          }
-          .${classPrefix}-card {
-            max-width: 376px;
-            width: 100%;
-            height: 80px;
-            border-radius: 10px;
-            box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff;
           }
           .${classPrefix}-title {
             text-align: center;
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            margin-top: 0;
-            margin-bottom: 18px;
+            font-size: 26px;
           }
           .${classPrefix}-subTitle {
             text-align: center;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            margin: 0 auto;
-            margin-bottom: 89px;
+            font-size: 13px;
+            margin-bottom: 44px;
           }
           .${classPrefix}-text {
-            font-size: 28px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            margin: 0;
-            text-align: center;
-          }
-          .${classPrefix}-imgWrapper {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            border: 1px dashed gray;
-            margin: 0 auto;
-            margin-top: 64px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          .${classPrefix}-text {
-            color: #000;
-            font-family: Inter;
             font-size: 15px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 140%; /* 21px */
           }
-
-          .${classPrefix}-image {
-            border-radius: 10px;
+          .${classPrefix}-card {
+              width:158px;
+              height:56px;
           }
-          @media (max-width: 770px) {
-          }
-
-          @media (max-width: 480px) {
-          }
+        }
         `,
       },
     },
@@ -163,4 +204,7 @@ const component = (editor: Editor) => {
   editor.Components.addType(options.id, methods);
 };
 
-export { block as whatWeDontStandFor2Block, component as whatWeDontStandFor2Component };
+export {
+  block as whatWeDontStandFor2Block,
+  component as whatWeDontStandFor2Component,
+};

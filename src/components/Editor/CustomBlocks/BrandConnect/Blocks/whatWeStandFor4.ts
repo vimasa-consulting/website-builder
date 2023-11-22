@@ -35,9 +35,9 @@ const component = (editor: Editor) => {
             <div class="${classPrefix}-container">
               <img class="${classPrefix}-image" src="https://placehold.co/595x412" alt="" />
               <div class="${classPrefix}-content-wrapper">
-                <span class="${classPrefix}-small-heading">Highlight</span>
+                <p class="${classPrefix}-small-heading">Highlight</p>
                 <h1 class="${classPrefix}-heading">What you stand for in one bold line</h1>
-                <span class="${classPrefix}-text">Elaborate on your core belief & ideology as a brand. Mention specific pointers about what you stand for, and avoid being vague or generic.</span>
+                <p class="${classPrefix}-text">Elaborate on your core belief & ideology as a brand. Mention specific pointers about what you stand for, and avoid being vague or generic.</p>
               </div>
             </div>
           </section>
@@ -45,11 +45,12 @@ const component = (editor: Editor) => {
         styles: `
           .${classPrefix}-section {
             padding: 5.25rem;
+            font-family: Inter, sans-serif;
           }
           .${classPrefix}-container {
             margin: 0 auto;
             display: flex;
-            gap: 50px;
+            gap: 80px;
             justify-content: center;
             align-items: center;
           }
@@ -60,30 +61,35 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-small-heading {
             color: #000;
-            font-family: Inter;
+             font-family: Inter, sans-serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
             line-height: 140%; /* 28px */
+            margin-block-start: unset;
+            margin-block-end: unset;
           }
 
           .${classPrefix}-heading {
             color: #000;
-            font-family: Inter;
+             font-family: Inter, sans-serif;
             font-size: 40px;
             font-style: normal;
             font-weight: 600;
             line-height: normal;
-            margin: 0;
+            margin-block-start: unset;
+            margin-block-end: 24px;
           }
 
           .${classPrefix}-text {
             color: #000;
-            font-family: Inter;
+             font-family: Inter, sans-serif;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
             line-height: 140%; /* 21px */
+            margin-block-start: unset;
+            margin-block-end: unset;
           }
 
           .${classPrefix}-image {
@@ -93,6 +99,31 @@ const component = (editor: Editor) => {
           }
 
           @media (max-width: 480px) {
+            .${classPrefix}-section {
+              padding: 3.313rem 0.8rem;
+            }
+            .${classPrefix}-container {
+              gap: 30px;
+              flex-direction: column;
+            }
+            .${classPrefix}-small-heading {
+              font-size: 16px;
+              text-align:center;
+            }
+            .${classPrefix}-heading {
+              font-size: 26px;
+              margin: 12px 0;
+              text-align:center;
+            }
+            .${classPrefix}-text {
+              font-size: 13px;
+            }
+            
+          .${classPrefix}-content-wrapper {
+            width: unset;
+          }
+
+
           }
         `,
       },
