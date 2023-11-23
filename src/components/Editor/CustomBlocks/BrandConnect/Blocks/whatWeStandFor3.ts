@@ -48,11 +48,12 @@ const component = (editor: Editor) => {
             font-family: Inter, sans-serif;
           }
 
-          .${classPrefix}-container {
-            margin: auto;
-            border-radius: 10px;
-            text-align: center;
-          }
+        .${classPrefix}-container {
+        margin: auto;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 983px;
+        }
 
           .${classPrefix}-heading {
             color: #000;
@@ -65,25 +66,23 @@ const component = (editor: Editor) => {
             margin-bottom: 36px;
           }
 
-          .${classPrefix}-text {
-            color: #000;
-            text-align: center;
-            font-family: Inter;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%; /* 28px */
-          }
+        .${classPrefix}-text {
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 28px */
+        }
 
-          @media (max-width: 768px) {
-            .${classPrefix}-section {
-              padding: 2rem 1rem;
-            }
+        @media (max-width: 480px) {
+        .${classPrefix}-section {
+        padding: 1.8rem 1rem;
+        }
 
-            .${classPrefix}-container {
-              width: auto;
-            }
-          }
+        .${classPrefix}-container {
+        }
 
           @media (max-width: 480px) {
             .${classPrefix}-section {

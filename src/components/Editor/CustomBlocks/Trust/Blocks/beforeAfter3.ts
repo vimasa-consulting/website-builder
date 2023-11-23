@@ -53,21 +53,13 @@ const beforeAfter3Component = (editor: Editor) => {
                   <div class="${classPrefix}-cardWrapper">
                     <div class="${classPrefix}-card">
                       <div class="${classPrefix}-panel">
-                        <img
-                          loading="lazy"
-                          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
-                          class="${classPrefix}-image"
-                        />
+                        <img class="${classPrefix}-image" src="https://placehold.co/340x473" alt="Placeholder"/>
                       </div>
                       <p class="${classPrefix}-type" >Before</p>
                     </div>
-                    <div class="${classPrefix}-card-2">
-                      <div class="${classPrefix}-panel-2">
-                        <img
-                          loading="lazy"
-                          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, httpscdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
-                          class="${classPrefix}-image"
-                        />
+                    <div class="${classPrefix}-card">
+                      <div class="${classPrefix}-panel">
+                      <img class="${classPrefix}-image" src="https://placehold.co/340x473" alt="Placeholder"/>
                       </div>
                       <p class="${classPrefix}-type" >After</p>
                     </div>
@@ -75,21 +67,13 @@ const beforeAfter3Component = (editor: Editor) => {
                   <div class="${classPrefix}-cardWrapper">
                     <div class="${classPrefix}-card">
                       <div class="${classPrefix}-panel">
-                        <img
-                          loading="lazy"
-                          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
-                          class="${classPrefix}-image"
-                        />
+                      <img class="${classPrefix}-image" src="https://placehold.co/340x473" alt="Placeholder"/>
                       </div>
                       <p class="${classPrefix}-type" >Before</p>
                     </div>
-                    <div class="${classPrefix}-card-2">
-                      <div class="${classPrefix}-panel-2">
-                        <img
-                          loading="lazy"
-                          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, httpscdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/95b82ca4-4bdf-4600-869d-281c9b2e3aa7?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
-                          class="${classPrefix}-image"
-                        />
+                    <div class="${classPrefix}-card">
+                      <div class="${classPrefix}-panel">
+                      <img class="${classPrefix}-image" src="https://placehold.co/340x473" alt="Placeholder"/>
                       </div>
                       <p class="${classPrefix}-type" >After</p>
                     </div>
@@ -105,13 +89,16 @@ const beforeAfter3Component = (editor: Editor) => {
             background-color: #fff;
             display: flex;
             flex-direction: column;
-            padding: 20px 80px;
+            padding: 101px 0px 127px;
+            max-width: 1440px;
+            margin: 0 auto;
           }
         .${classPrefix}-title {
            text-align: center;
            font: 40px Inter, sans-serif; 
            margin-bottom: 93px;
            font-weight: 600;
+           margin-top: 0px;
           }
           
           .${classPrefix}-wrapper {
@@ -132,6 +119,8 @@ const beforeAfter3Component = (editor: Editor) => {
           .${classPrefix}-type {
             font: 20px Inter, sans-serif;
             text-align: center;
+            margin-top: 17px;
+            margin-bottom: 0px;
           }
 
 
@@ -161,14 +150,9 @@ const beforeAfter3Component = (editor: Editor) => {
           }
           
           .${classPrefix}-image {
-            aspect-ratio: 1;
-            object-fit: contain;
-            object-position: center;
-            width: 45px;
-            mix-blend-mode: multiply;
-            overflow: hidden;
-            align-self: center;
-            max-width: 100%;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 10px;
           }
           
           .${classPrefix}-caption {
@@ -184,78 +168,6 @@ const beforeAfter3Component = (editor: Editor) => {
             margin-top: 197px;
             width: 100%;
             font: 500 20px Inter, sans-serif;
-          }
-          
-          .${classPrefix}-image-2 {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-          }
-          
-          .${classPrefix}-div-6 {
-            position: relative;
-          }
-          
-          .${classPrefix}-card-2 {
-            display: flex;
-            flex-direction: column;
-            line-height: normal;
-            width: 50%;
-          }
-          
-          .${classPrefix}-panel-2 {
-            border-radius: 10px;
-            background-color: #e9e9e9;
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-            height: 473px;
-            align-items: center;
-            justify-content: center;
-          }
-          
-          .${classPrefix}-caption-2 {
-            display: flex;
-            flex-direction: column;
-            color: #000;
-            text-align: center;
-            position: relative;
-            fill: #fff;
-            overflow: hidden;
-            align-self: stretch;
-            aspect-ratio: 5.6;
-            margin-top: 197px;
-            width: 100%;
-            padding: 20px 80px;
-            font: 500 20px Inter, sans-serif;
-          }
-          
-          .${classPrefix}-image-3 {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-          }
-          
-          .${classPrefix}-div-9 {
-            position: relative;
-          }
-          
-          .${classPrefix}-card-3 {
-            display: flex;
-            flex-direction: column;
-            line-height: normal;
-            width: 35%;
-          }
-          
-          .${classPrefix}-panel-3 {
-            display: flex;
-            flex-direction: column;
-            margin: auto 0;
-            padding-right: 100px;
           }
           
           .${classPrefix}-button {
@@ -284,27 +196,33 @@ const beforeAfter3Component = (editor: Editor) => {
             font: 400 15px/140% Inter, -apple-system, Roboto, Helvetica, sans-serif;
           }
           
-          @media (max-width: 700px) {
+          @media (max-width: 400px) {
             .${classPrefix}-section {
-              padding: 0 20px;
+              padding: 47px 15px 73px;
             }
           
             .${classPrefix}-wrapper {
               max-width: 100%;
-              margin: 40px 0;
+              margin: 0;
             }
           
             .${classPrefix}-content {
               flex-direction: column;
-              gap: 0px;
+              gap: 30px;
+              padding: 0;
             }
           
             .${classPrefix}-card {
-              width: 100%;
+              width: unset;
             }
           
             .${classPrefix}-panel {
-              padding: 100px 20px 0;
+              height: unset;
+              width: 171px;
+            }
+            .${classPrefix}-image {
+              height: 238px;
+              width: 171px;
             }
           
             .${classPrefix}-caption {
@@ -312,37 +230,23 @@ const beforeAfter3Component = (editor: Editor) => {
               padding: 0 20px;
               margin-bottom: 20px;
             }
-          
-            .${classPrefix}-card-2 {
-              width: 100%;
-            }
 
             .${classPrefix}-cardWrapper {
                 width: 100%;
+                justify-content: space-between;
+                gap: unset;
               }
-          
-            .${classPrefix}-panel-2 {
-              padding: 100px 20px 0;
-            }
-          
-            .${classPrefix}-caption-2 {
-              margin-top: 40px;
-              padding: 0 20px;
-              margin-bottom: 20px;
-            }
-          }
-
-          @media (max-width: 425px) {
             .${classPrefix}-content  {
-                padding: 0px;
-            }
-            .${classPrefix}-title  {
-                font-size: 28px;
-                margin-bottom: 40px;
-            }
-            .${classPrefix}-cardWrapper  {
-                flex-direction: column;
-            }
+              padding: 0px;
+          }
+            .${classPrefix}-type  {
+              font-size: 15px;
+              margin-top: 10px;
+          }
+          .${classPrefix}-title  {
+            font-size: 26px;
+            margin-bottom: 51px;
+        }
           }
           
         `,

@@ -42,18 +42,83 @@ const brandStory3Component = (editor: Editor) => {
                 <br>Include the origin of the brand, its purpose & the values. Be very specific and simple with your brand message.
                 </div>
               </div>
-              <div class="${classPrefix}-right-pane"></div>
-           </section>
+              <div class="${classPrefix}-right-container">
+                <video class="${classPrefix}-video-1" controls>
+                  <source src="" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </section>
         `,
         styles: `
         .${classPrefix}-section {
+        max-height: 700px;
+        max-width: 1440px;
+        padding: 84px 162px;
+        background: #e9e9e9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        }
+
+        .${classPrefix}-container {
+        width: 100%;
+        max-width: 1117px;
+        max-height: 595px;
+        display: flex;
+        justify-content: space-between;
+        }
+
+        .${classPrefix}-left-container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+        width: 500px;
+        height: 300px;
+        padding: 70px;
+        }
+
+        .${classPrefix}-left-panel-heading {
+        color: #000;
+        font-family: Inter;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0;
+        }
+
+        .${classPrefix}-left-panel-info {
+        color: #000;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 21px */
+        padding-top: 26px;
+        margin: 0px;
+        }
+
+        .${classPrefix}-right-container {
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex:1;
+        }
+
+        .${classPrefix}-video-1 {
+          height: 100%;
           width: 100%;
-          height: 707px;
-          flex-shrink: 0;
-          background: #E9E9E9;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        border-radius: 10px;
         }
 
         .${classPrefix}-section-container {
@@ -95,8 +160,14 @@ const brandStory3Component = (editor: Editor) => {
           color: #000;
         }
 
-        .${classPrefix}-right-pane {
-          flex: 1;
+        .${classPrefix}-left-panel-heading {
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 35px; /* 134.615% */
         }
 
         @media (max-width: 440px) {
@@ -137,6 +208,25 @@ const brandStory3Component = (editor: Editor) => {
             font-size: 13px;
           }
         }
+
+        .${classPrefix}-right-container {
+        justify-items: center;
+        align-content: center;
+        height: auto;
+        margin: 0;
+        }
+
+        .${classPrefix}-video-1 {
+        width: 100%;
+        height: 300px;
+        }
+        .${classPrefix}-cardWrapper {
+        width: 100%;
+        }
+        .${classPrefix}-description {
+        padding: 30px;
+        }
+      }
       `,
       },
     },

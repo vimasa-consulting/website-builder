@@ -56,7 +56,7 @@ const component = (editor: Editor) => {
           }
 
           .${classPrefix}-content-wrapper {
-            width: 400px;
+          width: 400px;
           }
 
           .${classPrefix}-small-heading {
@@ -93,9 +93,7 @@ const component = (editor: Editor) => {
           }
 
           .${classPrefix}-image {
-            border-radius: 10px;
-          }
-          @media (max-width: 770px) {
+          border-radius: 10px;
           }
 
           @media (max-width: 480px) {

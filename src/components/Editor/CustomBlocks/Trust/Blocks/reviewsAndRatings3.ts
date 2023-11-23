@@ -72,8 +72,10 @@ const reviewsAndRatings3Component = (editor: Editor) => {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 95px 215px;
+            padding: 95px 0px 85px;
             align-items: center;
+            max-width: 1440px;
+            margin: 0 auto;
           }
 
           .${classPrefix}-rating-wrapper {
@@ -81,12 +83,12 @@ const reviewsAndRatings3Component = (editor: Editor) => {
             flex-direction: row;
             align-items: center;
             gap: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 31px;
           }
 
           .${classPrefix}-rating-img {
-            width: 25px;
-            height: 25px;
+            width: 36px;
+            height: 36px;
           }
 
           .${classPrefix}-rating {
@@ -102,14 +104,15 @@ const reviewsAndRatings3Component = (editor: Editor) => {
             margin: 0;
             text-align: center;
             margin-bottom: 40px;
+            max-width: 983px;
           }
           .${classPrefix}-sourceName {
             text-align: center;
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 400;
             line-height: 140%;
-            margin-bottom: 0px;
+            margin: 0px;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
           }
           .${classPrefix}-offer-cta {
             color: #000;
@@ -131,26 +134,22 @@ const reviewsAndRatings3Component = (editor: Editor) => {
             width: 100%;
             height: 100%;
           }
-
-          @media (max-width: 770px) {
+          @media (max-width: 400px) {
             .${classPrefix}-section {
-                padding: 95px;
+              padding: 45px 20px 41px;
             }
-          }
-
-          @media (max-width: 425px) {
             .${classPrefix}-rating-wrapper {
               flex-direction: row;
               gap: 10px;
-              margin-bottom: 20px;
+              margin-bottom: 14px;
             }
             .${classPrefix}-rating-img {
-              width: 18px;
-              height: 18px;
+              width: 17.2px;
+              height: 17.2px;
             }
             
             .${classPrefix}-rating {
-              font-size: 10px;
+              font-size: 13px;
               font-style: normal;
               font-weight: 400;
               line-height: 140%;
@@ -163,11 +162,9 @@ const reviewsAndRatings3Component = (editor: Editor) => {
               line-height: 140%;
             }
             .${classPrefix}-title {
-              font-size: 28px;
+              font-size: 16px;
               line-height: unset;
-            }
-            .${classPrefix}-section {
-                padding: 95px 20px;
+              margin-bottom: 19px;
             }
           }
         `,

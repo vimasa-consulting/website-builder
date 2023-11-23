@@ -102,7 +102,9 @@ const solutionToUserPain2Component = (editor: Editor) => {
                 .${classPrefix}-section {
                   background-color: #fff;
                   font-family: Inter, sans-serif;
-                  padding: 62px 20px 117px;
+                  padding: 62px 0px 117px;
+                  margin: 0 auto;
+                  max-width: 1440px;
                 }
                 .${classPrefix}-title {
                   text-align: center;
@@ -126,13 +128,13 @@ const solutionToUserPain2Component = (editor: Editor) => {
                   align-items: center;
                   border-radius: 10px;
                   background: #FFF;
-                  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+                  border-radius: 10px;
+                  border: 1px solid rgba(171, 171, 171, 0.70);
                   padding: 15px;
                   width: 100%;
-                  gap: 22px
               }
               .${classPrefix}-cardColumn {
-                gap: 50px;
+                gap: 21px;
                 display: flex;
                 justify-content: center;
                 width: 1341px;
@@ -181,7 +183,7 @@ const solutionToUserPain2Component = (editor: Editor) => {
                   font-style: normal;
                   font-weight: 500;
                   margin-right: auto;
-                  margin-bottom: 10px;
+                  margin-bottom: 16px;
                   margin-top: 0px;
                 }
               .${classPrefix}-customerProfile {
@@ -199,19 +201,21 @@ const solutionToUserPain2Component = (editor: Editor) => {
                 border-radius: 10px;
               }
               .${classPrefix}-image {
-                object-fit: fill;
-                width: 20px;
-                height: 20px;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                outline: none;
               }
               .${classPrefix}-description {
                 margin: 0;
                 font-size: 15px;
-                padding-right: 20px;
+                padding-right: 35px;
               }
       
-              @media (max-width: 770px) {
+              @media (max-width: 400px) {
                 .${classPrefix}-section {
-                  padding: 20px;
+                  padding: 44px 0 64px;
                 }
                 .${classPrefix}-cardWrapper {
                   flex-direction: column;
@@ -223,23 +227,31 @@ const solutionToUserPain2Component = (editor: Editor) => {
                   height: 100%;
                 }
                 .${classPrefix}-descriptionContainer {
-                  min-width: unset;
-                  width: 100%;
-                  padding: 30px;
-                }
-                .${classPrefix}-title {
-                  font-size: 30px;
-                }
-                .${classPrefix}-subTitle {
-                  margin-bottom: 40px;
-                }
-              }
-              @media (max-width: 425px) {
-                .${classPrefix}-descriptionContainer {
-                  flex-direction: column;
                   justify-content: center;
                   align-items: center;
+                  padding: 11px;
+                  max-width: 320px;
+                  gap: 13px;
                 } 
+                .${classPrefix}-title {
+                  font-size: 26px;
+                  margin-bottom: 50px;
+                }
+                .${classPrefix}-subTitle {
+                  display: none;
+                }
+                .${classPrefix}-imageContainer {
+                  height: 131px;
+                  width: 131px;
+                }
+                .${classPrefix}-userPainPoint {
+                  font-size: 16px;
+                  margin-bottom: 10px;
+                }
+                .${classPrefix}-description {
+                  font-size: 13px;
+                  padding: 0px;
+                }
               }
         `,
             },

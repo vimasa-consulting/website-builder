@@ -105,7 +105,9 @@ const testimonials2Component = (editor: Editor) => {
                 .${classPrefix}-section {
                   background-color: #fff;
                   font-family: Inter, sans-serif;
-                  padding: 99px 82px 125px;
+                  padding: 99px 0px 135px;
+                  margin: 0 auto;
+                  max-width: 1440px;
                 }
                 .${classPrefix}-title {
                   text-align: center;
@@ -113,7 +115,7 @@ const testimonials2Component = (editor: Editor) => {
                   font-style: normal;
                   font-weight: 600;
                   line-height: normal;
-                  margin-bottom: 78px;
+                  margin-bottom: 83px;
                   margin-top: 0px;
                 }
                 .${classPrefix}-card {
@@ -134,7 +136,7 @@ const testimonials2Component = (editor: Editor) => {
                   box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
                   padding-top: 69px;
                   padding-left: 38px;
-                  padding-bottom: 25px;
+                  padding-bottom: 90px;
                   padding-right: 38px;
                   width: 350px;
                   gap: 33px
@@ -177,7 +179,6 @@ const testimonials2Component = (editor: Editor) => {
                   font-weight: 400;
                   line-height: 140%;
                   margin: 0;
-                  margin-bottom: 31px;
               }
               .${classPrefix}-customerName {
                   color: #000;
@@ -186,13 +187,13 @@ const testimonials2Component = (editor: Editor) => {
                   font-style: normal;
                   font-weight: 500;
                   margin-right: auto;
-                  margin-bottom: 10px;
+                  margin-bottom: 2px;
                   margin-top: 0px;
                 }
               .${classPrefix}-customerProfile {
                 display: flex;
                 align-items: center;
-                gap: 24px;
+                gap: 23px;
               }
               .${classPrefix}-imageContainer {
                 height: 82px;
@@ -202,20 +203,21 @@ const testimonials2Component = (editor: Editor) => {
                 justify-content: center;
                 align-items: center;
                 background: #E9E9E9;
+                padding: 15px;
               }
               .${classPrefix}-image {
                 object-fit: fill;
-                width: 20px;
-                height: 20px;
+                width: 100%;
+                height: 100%;
               }
               .${classPrefix}-designation {
                 margin: 0;
                 font-size: 15px;
               }
       
-              @media (max-width: 770px) {
+              @media (max-width: 400px) {
                 .${classPrefix}-section {
-                  padding: 20px;
+                  padding: 45px 25px 52px;
                 }
                 .${classPrefix}-cardWrapper {
                   flex-direction: column;
@@ -227,11 +229,31 @@ const testimonials2Component = (editor: Editor) => {
                 .${classPrefix}-descriptionContainer {
                   min-width: unset;
                   width: 100%;
-                  padding: 30px;
+                  padding: 38px 27px;
+                  gap: 26px;
                 }
                 .${classPrefix}-title {
-                  font-size: 30px;
+                  font-size: 26px;
                   margin-bottom: 50px;
+                  padding: 0 50px;
+                }
+                .${classPrefix}-customerName {
+                 font-size: 15px;
+                }
+                .${classPrefix}-customerProfile {
+                 gap: 18px;
+                }
+                .${classPrefix}-imageContainer {
+                 width: 80px;
+                 height: 80px;
+                }
+                .${classPrefix}-designation {
+                  font-size: 12px;
+                }
+                .${classPrefix}-review {
+                  font-size: 13px;
+                  padding-right: 24px;
+                  margin-bottom: 18px;
                 }
               }
         `,

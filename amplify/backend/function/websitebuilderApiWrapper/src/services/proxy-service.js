@@ -2,34 +2,50 @@ const axios = require('axios').default;
 const Logger = require('../utils/logger');
 const { HTTP_STATUS_CODES } = require('../utils/status-codes');
 const config = require('../config');
-const { AppError } = require('../utils/error')
+const { AppError } = require('../utils/error');
 
 class ProxyService {
 
-  static async process({ formId, responseId }) {
-    Logger.info('ProxyService.process', { formId, responseId });
-    // delete eventData.proxy; // remove lambda proxy payload data
-    const targetAppBaseURL = `http://52.23.192.205/typeform?formId=${formId}&responseId=${responseId}`;
-    Logger.info('ProxyService.process proxying to target', { targetAppBaseURL });
-    return ProxyService.proxyToTarget(targetAppBaseURL, {});
+  static async process(event, context, path) {
+    const { httpMethod, fullRequestParams } = event;
+    Logger.info('ProxyService.process', { httpMethod, fullRequestParams, path });
+    const targetPath = path.replace('/api', '');
+    const targetURL = `http://54.234.111.81${targetPath}`;
+    const targetHeaders = {};
+    if (event.headers?.['Authorization']) {
+      targetHeaders['Authorization'] = event.headers['Authorization'];
+    }
+    return ProxyService.proxyToTarget(targetURL, httpMethod, targetHeaders, fullRequestParams);
   }
 
-  static async proxyToTarget(url, payload) {
+  static async proxyToTarget(url, method, headers, payload) {
+    const requestConfig = { url, method, headers, timeout: 20000 }
+    if (method === 'GET') {
+      requestConfig.params = payload;
+    } else {
+      requestConfig.data = payload;
+    }
+    Logger.info('ProxyService.proxyToTarget', { requestConfig });
     try {
-      const response = await axios.get(url); // TODO: make generic
+      const response = await axios(requestConfig);
       return response.data;
     } catch (error) {
       if (error.response) {
-        Logger.error('ProxyService.proxyToTarget failed', {
-          url, payload, status: error.response.status, response: error.response.data
+        Logger.info('ProxyService.proxyToTarget failure response received', {
+          requestConfig, status: error.response.status, response: error.response.data
+        });
+        throw new AppError({
+          message: "Error response from proxy",
+          statusCode: error.response.status,
+          errorJSON: error.response.data
         });
       } else if (error.request) {
-        Logger.error('ProxyService.proxyToTarget failed', { url, payload, request: error.request });
+        Logger.error('ProxyService.proxyToTarget failed', { requestConfig, request: error.request });
       } else {
-        Logger.error('ProxyService.proxyToTarget failed', { url, payload, error });
+        Logger.error('ProxyService.proxyToTarget failed', { requestConfig, error });
       }
       throw new AppError({
-        message: "Failed to proxy webhook",
+        message: "Failed to proxy",
         statusCode: HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR,
         errors: [{
           status: HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR.toString(),

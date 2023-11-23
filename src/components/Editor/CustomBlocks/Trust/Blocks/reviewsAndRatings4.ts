@@ -201,7 +201,9 @@ const reviewsAndRatings4Component = (editor: Editor) => {
         .${classPrefix}-section {
             background-color: #fff;
             font-family: Inter, sans-serif;
-            padding: 66px 82px 125px;
+            padding: 66px 0px 125px;
+            max-width: 1440px;
+            margin: 0 auto;
           }
           .${classPrefix}-title {
             text-align: center;
@@ -215,6 +217,7 @@ const reviewsAndRatings4Component = (editor: Editor) => {
           .${classPrefix}-cardWrapper {
             display: flex;
             gap: 37px;
+            justify-content: center;
           }
           .${classPrefix}-card {
             display: flex;
@@ -236,7 +239,7 @@ const reviewsAndRatings4Component = (editor: Editor) => {
             padding-left: 30px;
             padding-bottom: 25px;
             padding-right: 32px;
-            min-width: 401px;
+            max-width: 401px;
         }
         .${classPrefix}-cardColumn {
           gap: 52px;
@@ -267,7 +270,7 @@ const reviewsAndRatings4Component = (editor: Editor) => {
         }
         .${classPrefix}-ratingsContainer {
             margin-right: auto;
-            margin-bottom: 16px;
+            margin-bottom: 23.5px;
         }
         .${classPrefix}-review {
             color: #000;
@@ -276,7 +279,7 @@ const reviewsAndRatings4Component = (editor: Editor) => {
             font-weight: 400;
             line-height: 140%;
             margin: 0;
-            margin-bottom: 31px;
+            margin-bottom: 27.5px;
         }
         .${classPrefix}-customerName {
             color: #000;
@@ -312,19 +315,41 @@ const reviewsAndRatings4Component = (editor: Editor) => {
           font-size: 15px;
         }
 
-        @media (max-width: 770px) {
+        @media (max-width: 400px) {
           .${classPrefix}-section {
-            padding: 20px;
+            padding: 46px 25px 60px;
           }
           .${classPrefix}-cardWrapper {
             flex-direction: column;
           }
           .${classPrefix}-descriptionContainer {
-            min-width: unset;
+            padding: 26px 23px 25px 30px;
           }
+          .${classPrefix}-ratingsContainer {
+            margin-right: auto;
+            margin-bottom: 10.7px;
+        }
+          .${classPrefix}-review {
+           font-size: 13px;
+           padding-right: 15px;
+        }
+          .${classPrefix}-customerName {
+           font-size: 15px;
+           margin-bottom: 0px;
+        }
+          .${classPrefix}-designation {
+           font-size: 12px;
+        }
+          .${classPrefix}-customerProfile {
+           gap: 14px;
+        }
           .${classPrefix}-title {
-            font-size: 30px;
-            margin-bottom: 50px;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 35px;
+            margin-bottom: 38px;
+            padding: 0 50px;
           }
         }
         `,

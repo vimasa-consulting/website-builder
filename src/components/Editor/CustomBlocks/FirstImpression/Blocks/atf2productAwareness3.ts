@@ -36,16 +36,51 @@ const atf2ProductAwareness3Component = (editor: Editor) => {
         traits: [],
         // @ts-ignore
         components: `
-            <section class="${classPrefix}-section">
+          <section class="${classPrefix}-section">
             <div class="${classPrefix}-two-column-wrapper">
               <div class="${classPrefix}-left-column">
                 <div class="${classPrefix}-rating-wrapper">
                   <div class="${classPrefix}-image-wrapper">
-                    <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
+                    <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-rating-img" />
+                    <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-rating-img" />
+                    <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-rating-img" />
+                    <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-rating-img" />
+                    <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-rating-img" />
                   </div>
                   <span class="${classPrefix}-rating">4.5/5 (2400 reviews)</span>
                 </div>
@@ -71,280 +106,336 @@ const atf2ProductAwareness3Component = (editor: Editor) => {
                 <button class="${classPrefix}-offer-cta">Shop Now ></button>
               </div>
               <div class="${classPrefix}-right-column">
-                <img class="${classPrefix}-right-image" />
+                <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                                      https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                                      https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                                      https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                                      https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                                      https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                                      https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                                      https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
               </div>
             </div>
             <div class="${classPrefix}-three-column-wrapper">
               <div class="${classPrefix}-benefits-wrapper">
-                <img class="${classPrefix}-benefit-img" src="https://img.icons8.com/ios-glyphs/50/000000/star--v1.png" />
+                <img class="${classPrefix}-benefit-img" loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" />
                 <span class="${classPrefix}-benefits-text">Brand Benefit 1</span>
               </div>
               <div class="${classPrefix}-benefits-wrapper">
-                <img class="${classPrefix}-benefit-img" src="https://img.icons8.com/ios-glyphs/50/000000/star--v1.png" />
+                <img class="${classPrefix}-benefit-img" loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" />
                 <span class="${classPrefix}-benefits-text">Brand Benefit 2</span>
               </div>
               <div class="${classPrefix}-benefits-wrapper">
-                <img class="${classPrefix}-benefit-img" src="https://img.icons8.com/ios-glyphs/50/000000/star--v1.png" />
+                <img class="${classPrefix}-benefit-img" loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                                                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" />
                 <span class="${classPrefix}-benefits-text">Brand Benefit 3</span>
               </div>
             </div>
           </section>
           `,
         styles: `
-          .${classPrefix}-section {
-              font-family: Inter;
-              margin-left: auto;
-              margin-right: auto;
-              background: #E9E9E9;
-            }
+        .${classPrefix}-section {
+  font-family: Inter;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  background: #e9e9e9;
+  
+}
 
-            .${classPrefix}-two-column-wrapper {
-              display: flex;
-              flex-direction: row;
-            }
+.${classPrefix}-two-column-wrapper {
+  display: flex;
+  flex-direction: row;
+}
 
-            .${classPrefix}-left-column {
-              width: 50vw;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: center;
-              padding: 10rem 5rem;
-            }
+.${classPrefix}-left-column {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10rem 5rem;
+}
 
-            .${classPrefix}-rating-wrapper {
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              gap: 20px;
-              margin-bottom: 20px;
-            }
+.${classPrefix}-rating-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 20px;
+}
 
-            .${classPrefix}-rating-img {
-              width: 25px;
-              height: 25px;
-            }
+.${classPrefix}-image-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
-            .${classPrefix}-rating {
-              color: rgba(0, 0, 0, 0.5);
-            }
+.${classPrefix}-rating-img {
+  width: 25px;
+  height: 25px;
+}
 
-            .${classPrefix}-h1 {
-              color: #000;
-              font-size: 48px;
-              font-style: normal;
-              font-weight: 600;
-              line-height: 64px;
-              margin: 0;
-            }
+.${classPrefix}-rating {
+  color: rgba(0, 0, 0, 0.5);
+}
 
-            .${classPrefix}-h2 {
-              color: #000;
-              font-size: 15px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 140%;
-              margin-bottom: 40px;
-            }
+.${classPrefix}-h1 {
+  color: #000;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+  margin: 0;
+}
 
-            .${classPrefix}-offer-cta {
-              color: #fff;
-              text-align: center;
-              font-size: 25px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: normal;
-              padding: 10px 20px;
-              background: #676767;
-              border-radius: 8px;
-              margin-top: 40px;
-            }
+.${classPrefix}-h2 {
+  color: #000;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 40px;
+}
 
-            .${classPrefix}-right-column {
-              width: 50vw;
-            }
+.${classPrefix}-offer-cta {
+  padding: 10px 36px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 40px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: #676767;
+  color: #fff;
+}
 
-            .${classPrefix}-right-image {
-              width: 100%;
-              height: 100%;
-            }
+.${classPrefix}-right-column {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: #e9e9e9;
+  border-radius: 8px;
+}
 
-            .${classPrefix}-list-item {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              gap: 10px;
-              margin-bottom: 10px;
-            }
+.${classPrefix}-image {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  mix-blend-mode: multiply;
+  overflow: hidden;
+  align-self: center;
+  max-width: 100%;
+}
 
-            .${classPrefix}-item-image {
-              width: 33px;
-              height: 33px;
-            }
+.${classPrefix}-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-            /* THREE COLUMN */
-            .${classPrefix}-three-column-wrapper {
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: center;
-              gap: 200px;
-              margin: 5rem auto;
-              padding: 2rem;
-              border-radius: 10px;
-              background: #fff;
-              box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.18);
-              width: 80vw;
-            }
+.${classPrefix}-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
 
-            .${classPrefix}-benefit-img {
-              margin-bottom: 20px;
-            }
+.${classPrefix}-item-image {
+  width: 25px;
+  height: 25px;
+}
 
-            .${classPrefix}-benefits-wrapper {
-              display: flex;
-              flex-direction: column;
-            }
+/* THREE COLUMN */
+.${classPrefix}-three-column-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  margin: 5rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.18);
+  width: 80vw;
+}
 
-          @media only screen and (min-width: 601px) and (max-width: 768px) {
-            .${classPrefix}-section {
-              padding: 1rem;
-            }
+.${classPrefix}-benefit-img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
 
-            .${classPrefix}-two-column-wrapper {
-                display: flex;
-                flex-direction: column;
-            }
+.${classPrefix}-benefits-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-            .${classPrefix}-left-column {
-              width: auto;
-              padding: 2rem 0;
-              align-items: center;
-            }
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .${classPrefix}-section {
+    padding: 1rem;
+  }
 
-            .h1,
-            .${classPrefix}-h2 {
-              text-align: center;
-            }
+  .${classPrefix}-two-column-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 
-            .${classPrefix}-right-column {
-              width: auto;
-              padding: 2rem 0;
-            }
+  .${classPrefix}-left-column {
+    width: auto;
+    padding: 2rem 0;
+    align-items: center;
+  }
 
-            .${classPrefix}-right-image {
-              width: 100%;
-              height: 100%;
-            }
+  .h1,
+  .${classPrefix}-h2 {
+    text-align: center;
+  }
 
-            /* Benefits */
-            .${classPrefix}-three-column-wrapper {
-              margin: 4rem auto;
-              padding: 2rem;
-              width: 80vw;
-              justify-content: center;
-              gap: 100px;
-            }
-            }
+  .${classPrefix}-right-column {
+    width: auto;
+    padding: 2rem 0;
+  }
 
-          @media only screen and (max-width: 600px) {
-            .${classPrefix}-section {
-              padding: 1rem;
-            }
+  .${classPrefix}-right-image {
+    width: 100%;
+    height: 100%;
+  }
+}
 
-            .${classPrefix}-two-column-wrapper {
-              display: flex;
-              flex-direction: column;
-            }
+@media only screen and (max-width: 600px) {
+  .${classPrefix}-section {
+    padding: 10px 10px 50px 10px;
+    height: auto;
+  }
 
-            .${classPrefix}-left-column {
-              padding: 2rem 0;
-              width: auto;
-              align-items: center;
-            }
+  .${classPrefix}-two-column-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 
-            .${classPrefix}-rating-wrapper {
-              flex-direction: row;
-              gap: 10px;
-              margin-bottom: 20px;
-            }
+  .${classPrefix}-left-column {
+    padding: 2rem 0;
+    width: auto;
+    align-items: center;
+  }
 
-            .${classPrefix}-rating-img {
-              width: 18px;
-              height: 18px;
-            }
+  .${classPrefix}-rating-wrapper {
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
 
-            .${classPrefix}-rating {
-              font-size: 10px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 140%;
-            }
+  .${classPrefix}-image-wrapper {
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
 
-            .${classPrefix}-h1 {
-              text-align: center;
-              font-size: 26px;
-              font-weight: 600;
-              line-height: 35px;
-              margin-bottom: 20px;
-            }
+  .${classPrefix}-rating-img {
+    width: 18px;
+    height: 18px;
+  }
 
-            .${classPrefix}-h2 {
-              text-align: center;
-              font-size: 13px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 140%;
-              margin-bottom: 38px;
-            }
+  .${classPrefix}-rating {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
 
-            .${classPrefix}-offer-cta {
-              font-size: 18px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: normal;
-            }
+  .${classPrefix}-h1 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
 
-            .${classPrefix}-right-column {
-              padding: 2rem 0;
-              width: 100%;
-              height: 100%;
-            }
+  .${classPrefix}-h2 {
+    text-align: center;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 38px;
+  }
 
-            .${classPrefix}-right-image {
-              width: 100%;
-              height: 100%;
-            }
+  .${classPrefix}-offer-cta {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
 
-            /* Benefits */
-            .${classPrefix}-three-column-wrapper {
-              gap: 10px;
-              padding: 10px;
-              margin: 2rem auto;
-              width: 90vw;
-              box-shadow: none;
-              justify-content: space-between;
-            }
+  .${classPrefix}-right-column {
+    padding: 2rem 0;
+    width: 100%;
+    height: 100%;
+  }
 
-            .${classPrefix}-benefits-wrapper {
-              gap: 5px;
-              flex-direction: row;
-            }
+  .${classPrefix}-image {
+    width: 321px;
+    height: 299px;
+  }
 
-            .${classPrefix}-benefit-text {
-              color: #000;
-              font-family: Inter;
-              font-size: 12px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 140%;
-            }
+  /* Benefits */
+  .${classPrefix}-three-column-wrapper {
+    gap: 10px;
+    padding: 10px;
+    margin: 2rem auto;
+    width: 90vw;
+    box-shadow: none;
+    justify-content: space-between;
+  }
 
-            .${classPrefix}-benefit-img {
-              width: 18px;
-              height: 18px;
-            }
-          }
+  .${classPrefix}-benefits-wrapper {
+    gap: 5px;
+    flex-direction: row;
+  }
+
+  .${classPrefix}-benefit-text {
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+  }
+
+  .${classPrefix}-benefit-img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
           `,
       },
     },

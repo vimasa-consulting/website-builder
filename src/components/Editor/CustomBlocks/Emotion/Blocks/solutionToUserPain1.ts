@@ -102,24 +102,34 @@ const solutionToUserPain1Component = (editor: Editor) => {
                     background-color: #fff;
                     display: flex;
                     flex-direction: column;
-                    padding: 0 80px;
-                    max-height: 800px;
-                    height: 70vh;
+                    padding: 86px 107px;
+                    margin: 0 auto;
+                    max-width: 1440px;
                   }
                   
                   .${classPrefix}-title {
-                    font-size: 30px;
-                    font-family: Inter, sans-serif;
+                    color: #000;
                     text-align: center;
-                    margin-top: 80px;
-                    margin-bottom: 8px;
+                    font-family: Inter;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin-top: 0px;
+                    margin-bottom: 18px;
                   }
 
                   .${classPrefix}-subTitle {
                     text-align: center;
-                    padding: 0 31%;
+                    padding: 0px 27%;
                     font-family: Inter, sans-serif;
                     font-weight: 500;
+                    color: #000;
+                    margin: 0;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
                   }
                   
                   .${classPrefix}-cardTitle {
@@ -147,17 +157,19 @@ const solutionToUserPain1Component = (editor: Editor) => {
                   
                   .${classPrefix}-stepTitle {
                     color: #000;
-                    margin-top: 22px;
+                    margin-top: 13px;
                     font: 500 20px Inter, sans-serif;
                     text-align: center;
                   }
                   
                   .${classPrefix}-stepDescription {
                     color: #000;
-                    margin-top: 12px;
+                    margin-top: 19px;
                     font: 400 15px/140% Inter, -apple-system, Roboto, Helvetica, sans-serif;
                     text-align: center;
-                    padding: 0 90px;
+                    padding: 0 48px;
+                    height: 79px;
+                    width: 299px;
                   }
                   
                   .${classPrefix}-column {
@@ -169,17 +181,17 @@ const solutionToUserPain1Component = (editor: Editor) => {
                   }
                   
                   .${classPrefix}-cardsWrapper {
-                    margin: 49px 20px 86px;
+                    margin: 49px 20px 0px;
                   }
                   
                   .${classPrefix}-cards {
-                    gap: 20px;
+                    gap: 77px;
                     display: flex;
+                    justify-content: center;
                   }
                   
                   .${classPrefix}-card {
                     line-height: normal;
-                    width: 33%;
                     margin-left: 0px;
                     display: flex;
                     flex-direction: column;
@@ -209,14 +221,22 @@ const solutionToUserPain1Component = (editor: Editor) => {
                     overflow: hidden;
                     align-self: center;
                     max-width: 100%;
+                    outline: none; 
                   }
-                  @media (max-width: 425px) {
+                  @media (max-width: 400px) {
                     .${classPrefix}-section {
-                      padding: 0 20px;
+                      padding: 55px 9px 58px;
                     }
                   
                     .${classPrefix}-cardNumber {
                       white-space: initial;
+                      padding: 0 20px;
+                    }
+                    .${classPrefix}-title {
+                      font-size: 26px;
+                    }
+                    .${classPrefix}-subTitle {
+                      font-size: 15px;
                       padding: 0 20px;
                     }
                   

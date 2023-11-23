@@ -31,44 +31,61 @@ const brandStory4Component = (editor: Editor) => {
         classes: [classPrefix],
         traits: [],
         components: `
-           <section class="${classPrefix}-section">
-              <div class="${classPrefix}-section-container">
-                <div class="${classPrefix}-section-header-prefix">
-                  Compelling header for
-                </div>
-                <div class="${classPrefix}-section-header">
-                  Your Brand Story
-                </div>
-                <div class="${classPrefix}-section-header-seperator"></div>
-                <div class="${classPrefix}-section-info">
-                Craft your brand story in a way that sounds authentic, evokes emotions in your users, and is consistent across channels. Tap into emotions such as joy, nostalgia, pain, etc, while narrating your journey.
-                Include the origin of the brand, its purpose & the values. Be very specific and simple with your brand message.
-                </div>
-              </div>
-           </section>
+          <section class="${classPrefix}-section">
+  <div class="${classPrefix}-container">
+    <div class="${classPrefix}-top-container">
+      <div class="${classPrefix}-imageWrapper">
+        <img loading="lazy"
+          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+          class="${classPrefix}-image" />
+      </div>
+    </div>
+    <div class="${classPrefix}-bottom-container">
+      <span class="${classPrefix}-section-header-prefix">
+        Compelling header for
+      </span>
+      <span class="${classPrefix}-section-header">
+        Your Brand Story
+      </span>
+      <div class="${classPrefix}-section-header-seperator"></div>
+      <div class="${classPrefix}-section-info">
+        Craft your brand story in a way that sounds authentic, evokes emotions in your users, and is consistent across
+        channels. Tap into emotions such as joy, nostalgia, pain, etc, while narrating your journey.
+        Include the origin of the brand, its purpose & the values. Be very specific and simple with your brand message.
+      </div>
+      <div class="${classPrefix}-section-info">
+        Include the origin of the brand, its purpose & the values. Be very specific and simple with your brand message.
+      </div>
+    </div>
+  </div>
+</section>
         `,
         styles: `
         .${classPrefix}-section {
-          width: 100%;
-          height: 707px;
-          flex-shrink: 0;
-          background: #E9E9E9;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+width: 100%;
+height: 707px;
+flex-shrink: 0;
+background: #e9e9e9;
+padding-top: 30px;
+margin: 0 auto auto auto;
+}
 
-        .${classPrefix}-section-container {
-          padding: 62px 72px 72px; 
-          background: #fff;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 726px;
-          fill: #FFF;
-          filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.15));        
-          flex-direction: column;
-        }
+.${classPrefix}-container {
+display: flex;
+flex-direction: column;
+justify-items: center;
+align-content: center;
+align-items: center;
+justify-content: space-between;
+row-gap: 30px;
+}
 
         .${classPrefix}-section-header-prefix {
           color: #000;
@@ -91,17 +108,26 @@ const brandStory4Component = (editor: Editor) => {
           line-height: normal;
         }
 
-        .${classPrefix}-section-header-seperator {
-          width: 73px;
-          height: 4px;
-          flex-shrink: 0;
-          border-radius: 5px;
-          background: #D9D9D9;
-          margin-top: 22px;
-          margin-bottom: 29px;
-        }
+.${classPrefix}-section-header-prefix {
+color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-bottom: 19px;
+}
 
-        .${classPrefix}-section-info {
+.${classPrefix}-section-header {
+color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
 
           text-align: center;
              font-family: Inter, sans-serif;

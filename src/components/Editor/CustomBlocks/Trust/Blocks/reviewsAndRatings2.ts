@@ -51,11 +51,7 @@ const reviewsAndRatings2Component = (editor: Editor) => {
                 <h1 class="${classPrefix}-title">Header for Customer Reviews</h1>
                 <div class="${classPrefix}-reviewsContainer">
                 <div class="${classPrefix}-panel">
-                <img
-                  loading="lazy"
-                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
-                  class="${classPrefix}-image"
-                />
+                <img class="${classPrefix}-img" src="https://placehold.co/289x339" alt="Placeholder"/>
               </div>
                 <div class="${classPrefix}-descriptionContainer">
                 <div class="${classPrefix}-ratingsContainer">
@@ -74,8 +70,10 @@ const reviewsAndRatings2Component = (editor: Editor) => {
                 styles: `
         .${classPrefix}-section {
             background-color: #fff;
-            padding: 20px 80px;
+            padding: 91px 0px;
             font-family: Inter, sans-serif;
+            max-width: 1440px;
+            margin: 0 auto;
           }
         .${classPrefix}-title{
             color: #000;
@@ -85,13 +83,14 @@ const reviewsAndRatings2Component = (editor: Editor) => {
             font-weight: 600;
             line-height: normal;
             margin-bottom: 83px;
-
+            margin-top: 0px;
         }
         .${classPrefix}-reviewsContainer {
             display: flex;
             justify-content: center;
             align-items: flex-end;
             gap: 105px;
+            
         }
         .${classPrefix}-card {
             display: flex;
@@ -111,8 +110,8 @@ const reviewsAndRatings2Component = (editor: Editor) => {
             max-width: 391px;
         }
         .${classPrefix}-ratingImg {
-            width: 25px;
-            height: 25px;
+            width: 27.7px;
+            height: 27.7px;
           }
         .${classPrefix}-horizontalLine {
             width: 78.5px;
@@ -131,25 +130,28 @@ const reviewsAndRatings2Component = (editor: Editor) => {
         }
         .${classPrefix}-ratingsContainer {
             margin-right: auto;
-            margin-bottom: 16px;
+            margin-bottom: 16.28px;
         }
         .${classPrefix}-review {
             color: #000;
-            font-size: 15px;
+            font-size: 18px;
             font-style: normal;
             font-weight: 400;
             line-height: 140%;
             margin: 0;
+            line-height: 140%;
+            height: 137px;
         }
         .${classPrefix}-customerName {
             color: #000;
             text-align: center;
-            font-size: 16px;
+            font-size: 20px;
             font-style: normal;
             font-weight: 500;
             line-height: 140%;
             margin-right: auto;
-            margin-top: 30px;
+            margin-top: 0px;
+            margin-bottom: 0px;
         }
         .${classPrefix}-verifiedCheckMark {
             font-size: 22px;
@@ -167,15 +169,12 @@ const reviewsAndRatings2Component = (editor: Editor) => {
             align-items: center;
             justify-content: center;
         }
-          .${classPrefix}-image {
-            aspect-ratio: 1;
+          .${classPrefix}-img {
             object-fit: contain;
-            object-position: center;
-            width: 45px;
-            mix-blend-mode: multiply;
             overflow: hidden;
             align-self: center;
             max-width: 100%;
+            border-radius: 10px;
           }
         .${classPrefix}-verifiedBuyer {
             color: #5F5F5F;
@@ -184,33 +183,53 @@ const reviewsAndRatings2Component = (editor: Editor) => {
             font-weight: 400;
             line-height: 140%;
         } 
-        @media (max-width: 770px) {
+        @media (max-width: 400px) {
+            .${classPrefix}-section {
+                padding: 53px 26px 68px 34px;
+            } 
             .${classPrefix}-reviewsContainer {
                 display: flex;
                 justify-content: center;
-                gap: 29px;
+                gap: 37px;
                 flex-direction: column;
                 align-items: center;
             } 
-            .${classPrefix}-ratingsContainer, .${classPrefix}-customerName  {
-              margin-right: unset;
-              margin-left: unset;
+            .${classPrefix}-ratingsContainer {
+                margin-bottom: 11.5px;
+            } 
+            .${classPrefix}-descriptionContainer {
+                align-items: flex-start;
+                margin-bottom: 0px;
             } 
             .${classPrefix}-title {
-                margin-bottom: 60px;
+                font-size: 26px;
+                margin-bottom: 43px;
+                line-height: 35px;
+                padding: 0 40px;
+              } 
+            .${classPrefix}-panel {
+                width: 100%;
+                height: 294px;
+              } 
+            .${classPrefix}-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
               } 
             .${classPrefix}-review {
-                text-align: center;
+                color: #000;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; 
+                height: unset;
+                padding-right: 10px;
               } 
-        }
-
-        @media (max-width: 425px) {
-            .${classPrefix}-section {
-                padding: 20px;
-            }
-            .${classPrefix}-title { 
-            font-size: 30px;
-            }
+            .${classPrefix}-customerName {
+                text-align: unset;
+                font-size: 15px;
+                margin-top: 8px;
+              } 
         }
         `,
             },

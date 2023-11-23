@@ -48,7 +48,7 @@ const signUp2Component = (editor: Editor) => {
                 components: `
                 <section class="${classPrefix}-section">
                   <h2 class="${classPrefix}-title">Attention grabbing header to sign up</h2>
-                  <h3 class="${classPrefix}-subtitle">Write a short creative description about the benefits your users will get by signing up   </h3>
+                  <h3 class="${classPrefix}-subTitle">Write a short creative description about the benefits your users will get by signing up   </h3>
                 <form class="${classPrefix}-formSection">
                   <input
                     type="email"
@@ -72,40 +72,55 @@ const signUp2Component = (editor: Editor) => {
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+                    padding: 57px 0 75px;
+                    margin: 0 auto;
+                    max-width: 1440px;
+                    font-family: Inter, sans-serif;
                 }
                 .${classPrefix}-title {
                     text-align: center;
                     font-family: Inter, sans-serif;
                     font-size: 40px;
+                    margin-top: 0px;
+                    margin-bottom: 19px;
+                }
+                .${classPrefix}-subTitle {
+                    margin-top: 0px;
+                    margin-bottom: 62px;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
                 }
                 .${classPrefix}-formSection {
                     display: flex;
-                    gap: 24px; 
+                    gap: 25px; 
                     justify-content: center;
                     width: 100%;
+                    flex-direction: column;
+                    align-items: center;
                 }
                 .${classPrefix}-input {
                     max-width: 397px;
                     width: 100%;   
                     height: 56px;
                     border: 1px solid #D9D9D9;
-                    border-radius: 8px;
-                    padding: 0 26px;
+                    border-radius: 10px;
+                    padding: 0px 34px;
                     color: #000;
                     font-family: Inter;
                     font-size: 24px;
                     font-weight: 400;
-
                 }
                 input::placeholder {
                     color: #000;
+                    text-align: center;
                 }
                 .${classPrefix}-submitCta {
                     background-color: #D9D9D9; 
                     height: 56px;
-                    max-width:  270px;
+                    max-width:  397px;
                     width: 100%;
-                    border-radius: 8px;
+                    border-radius: 10px;
                     border: none;
                     color: #000;
                     text-align: center;
@@ -114,21 +129,30 @@ const signUp2Component = (editor: Editor) => {
                     font-weight: 400;
                     cursor: pointer;
                 }
-                @media (max-width: 425px) {
-                    .${classPrefix}-formSection {
-                        flex-direction: column;
-                        justify-content: center;
-                        padding: 0 12px;
+                @media (max-width: 400px) {
+                    .${classPrefix}-section {
+                        padding: 40px 36px 51px;
                     }
-                    .${classPrefix}-submitCta {
-                        max-width: 100%;
-                        font-size: 20px;
+                    .${classPrefix}-formSection {
+                        max-width: 287px;
+                        gap: 17px;
                     }
                     .${classPrefix}-title {
-                        font-size: 28px;
+                        font-size: 26px;
+                        padding: 0 10px;
+                        margin-bottom: 13px;
+                        line-height: 35px;
                     }
-                    .${classPrefix}-input {
-                        font-size: 20px;
+                    .${classPrefix}-subTitle {
+                        font-size: 13px;
+                        text-align: center;
+                        margin-bottom: 39px;
+                        line-height: 140%;
+                    }
+                    .${classPrefix}-input, .${classPrefix}-submitCta {
+                        font-size: 18px;
+                        height: 38px;
+                        border-radius: 5px;
                     }
                 }
                 `,

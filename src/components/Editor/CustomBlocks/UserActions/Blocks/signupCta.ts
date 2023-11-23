@@ -57,32 +57,32 @@ const signUpCtaComponent = (editor: Editor) => {
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    padding: 16px;
+                    padding: 18px 0 16px;
+                    font-family: Inter, sans-serif;
                 }
                 .${classPrefix}-submitCta {
                     background-color: #D9D9D9; 
-                    height: 56px;
-                    max-width:  270px;
-                    width: 100%;
+                    height: 62px;
+                    max-width:  100%;
+                    width: 587px;
                     border-radius: 8px;
                     border: none;
                     color: #000;
                     text-align: center;
-                    font-family: Inter;
-                    font-size: 24px;
+                    font-size: 28px;
                     font-weight: 400;
                     cursor: pointer;
-                    padding: 16px;
+                    padding: 17px;
                 }
-                @media (max-width: 425px) {
-                    .${classPrefix}-formSection {
-                        flex-direction: column;
-                        justify-content: center;
-                        padding: 0 12px;
+                @media (max-width: 400px) {
+                    .${classPrefix}-section {
+                        padding: 12px;
                     }
                     .${classPrefix}-submitCta {
-                        max-width: 100%;
-                        font-size: 20px;
+                        max-width: 235px;
+                        height: 38px;
+                        font-size: 18px;
+                        padding: 8px;
                     }
                 }
                 `,

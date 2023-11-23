@@ -35,16 +35,29 @@ const component = (editor: Editor) => {
             <div class="${classPrefix}-container">
             <h1 class="${classPrefix}-heading">Hopeful & Optimistic header about User’s aspirations</h1>
             <p class="${classPrefix}-text">Describe how your user’s aspiration will be achieved with the help of your product. Make an emotional connection between your user’s desire and your product</p>
-            <img class="${classPrefix}-mainImage" src="https://placehold.co/424x387" alt="" />
-            <img class="${classPrefix}-subImage" src="https://placehold.co/468x556" alt="" />
+            <div class="${classPrefix}-mainImage">
+              <img 
+                loading="lazy"
+                src="https://placehold.co/"
+                class="${classPrefix}-image"      
+              />
+            </div>
+            <div class="${classPrefix}-subImage">
+              <img 
+                loading="lazy"
+                src="https://placehold.co/"
+                class="${classPrefix}-image"      
+              />
+            </div>
             </div>
           </section>
         `,
         styles: `
           .${classPrefix}-section {
-            padding: 5.25rem;
             font-family: Inter, sans-serif;
-            padding-bottom: 282px;
+            padding: 76px 0px 78px;
+            margin: 0 auto;
+            max-width: 1440px;
           }
           .${classPrefix}-container {
             margin: 0 auto;
@@ -83,8 +96,7 @@ const component = (editor: Editor) => {
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
-            width: 430px;
-            max-width: 377px;
+            max-width: 402px;
             margin-top: 0px;
             margin-bottom: 75px;
             z-index: 2;
@@ -93,6 +105,19 @@ const component = (editor: Editor) => {
             border-radius: 10px;
             max-width: 100%;
             margin-right: 110px;
+            background: #E9E9E9;
+            box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+            width: 424px;
+            height: 387px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .${classPrefix}-mainImage img, .${classPrefix}-subImage img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            outline: none;
           }
           .${classPrefix}-subImage {
             border-radius: 10px;
@@ -103,6 +128,11 @@ const component = (editor: Editor) => {
             z-index: 1;
             background: #E9E9E9;
             box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+            width: 468px;
+            height: 556px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
 
           .${classPrefix}-content-wrapper {
@@ -117,28 +147,38 @@ const component = (editor: Editor) => {
             align-items: center;
             justify-content: center;
           }
-          @media (max-width: 770px) {
-            .${classPrefix}-container {
-              position: unset;
-             flex-direction: column;
-             align-items: center;
-            }
-            .${classPrefix}-subImage {
-              position: unset;
-              margin-top: 50px;
-            }
-            .${classPrefix}-mainImage, .${classPrefix}-heading {
-              margin-right: 0px;
-            }
-          }
-
-          @media (max-width: 425px) {
+          @media (max-width: 400px) {
             .${classPrefix}-section {
-              padding: 20px;
+              padding: 53px 29px 69px;
+             }
+            .${classPrefix}-heading {
+              font-size: 26px;
+              margin-bottom: 10px;
+              margin-right: 0px;
+              margin-top: 0px;
              }
             .${classPrefix}-text {
               width: unset; 
+              font-size: 13px;
+              margin-bottom: 36px;
              }
+            .${classPrefix}-container {
+             flex-direction: column;
+             align-items: center;
+            }
+            .${classPrefix}-mainImage {
+              width: 231px;
+              height: 216px;
+              margin-top: 237px;
+              margin-left: auto;
+              margin-right: 0;
+            }
+            .${classPrefix}-subImage {
+              width: 292px;
+              height: 291px;
+              bottom: 162px;
+              top: unset;
+            }
           }
         `,
       },
