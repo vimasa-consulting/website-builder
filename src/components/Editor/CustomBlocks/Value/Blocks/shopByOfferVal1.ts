@@ -43,8 +43,8 @@ const component = (editor: Editor) => {
                 <h1 class="${classPrefix}-box-text">50%</h1>
               </div>
               <div class="${classPrefix}-box">
-                <span class="${classPrefix}-box-heading">Save up to</span>
-                <h1 class="${classPrefix}-box-text">50%</h1>
+                <span class="${classPrefix}-box-heading">Starting from</span>
+                <h1 class="${classPrefix}-box-text">₹99</h1>
               </div>
               <div class="${classPrefix}-box">
                 <span class="${classPrefix}-box-heading">Save up to</span>
@@ -56,6 +56,7 @@ const component = (editor: Editor) => {
         styles: `
           .${classPrefix}-section-container {
             padding: 5.5rem 1rem;
+            font-family: Inter, sans-serif;
           }
 
           .${classPrefix}-heading-wrapper {

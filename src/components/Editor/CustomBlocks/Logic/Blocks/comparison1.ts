@@ -102,7 +102,7 @@ const comparison1Component = (editor: Editor) => {
                 }
                 .${classPrefix}-title {
                   text-align: center;
-                  margin-top: 5.25rem;
+                  margin-top: 109px;
                   margin-bottom: 75px;
                   font-size: 40px;
                   font-weight: 600;
@@ -125,10 +125,13 @@ const comparison1Component = (editor: Editor) => {
                   font-size: 20px;
                 }
 
-                li {
+               .${classPrefix}-shortComingList li {
                   margin-bottom: 47px;
                 }
-                @media (max-width: 770px) {
+               .${classPrefix}-advantageList li {
+                  margin-bottom: 47px;
+                }
+                @media (max-width: 400px) {
                   .${classPrefix}-container {
                     flex-direction: column;
                     align-items: center;
@@ -140,11 +143,6 @@ const comparison1Component = (editor: Editor) => {
 
                   .${classPrefix}-title {
                     margin-bottom: 30px;
-                  }
-                }
-
-                @media (max-width: 425px) {
-                  .${classPrefix}-title {
                     font-size: 25px;
                   }
                 }

@@ -301,18 +301,31 @@ const shopByOfferVal3Component = (editor: Editor) => {
                       flex-direction: column;
                       align-items: stretch;
                       gap: 40px;
+                      margin-left: 37px;
                     }
                   
                     .${classPrefix}-card {
                       width: 100%;
-                    }
-                  
-                    .${classPrefix}-imageWrapper {
-                      padding: 100px 20px;
+                      margin-bottom: 67px;
                     }
                   
                     .${classPrefix}-img {
                       margin-bottom: 10px;
+                    }
+                  }
+
+                  @media (max-width: 768px) {
+                    .${classPrefix}-section {
+                      align-items: center;
+                      background-color: #fff;
+                      display: block;
+                      padding: 20px 24px;
+                      max-height: 700px;
+                      margin-top: 20px;
+                    }
+        
+                    .${classPrefix}-title {
+                      width: auto;
                     }
                   }
                   

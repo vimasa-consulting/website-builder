@@ -64,7 +64,12 @@ const personaUseCase3Component = (editor: Editor) => {
                     <h3 class="${classPrefix}-userPainPoint">Persona</h3>
                     <p class="${classPrefix}-descriptionOne">Use emotionally bonding words to describe how the user’s persona and your product is made for each other, by highlighting different lifestyle scenarios in which the product plays a crucial role in favour of the user.</p>
                     <p class="${classPrefix}-descriptionTwo">Make sure to include words and sentences that your persona will use on a daily basis.</p>
-                    <p class="${classPrefix}-quote">“Write appreciative words about your product from the User’s point of view”</p>
+                    <div class="${classPrefix}-quoteWrapper">
+                    <img src="https://img.icons8.com/ios-filled/50/999999/quote-left.png" alt="quotes" class="${classPrefix}-quotes" />
+                    <p class="${classPrefix}-quote"> 
+                    “Write appreciative words about your product from the User’s point of view”
+                    </p>
+                    </div>
                 </div>
                 </div>
                 </div>
@@ -75,7 +80,9 @@ const personaUseCase3Component = (editor: Editor) => {
                 .${classPrefix}-section {
                   background-color: #fff;
                   font-family: Inter, sans-serif;
-                  padding: 62px 20px 67px;
+                  padding: 62px 0px 67px;
+                  margin: 0 auto;
+                  max-width: 1440px;
                 }
                 .${classPrefix}-title {
                   text-align: center;
@@ -99,7 +106,7 @@ const personaUseCase3Component = (editor: Editor) => {
                   display: flex;
                   border-radius: 20px;;
                   background: #FFF;
-                  padding: 65px 92px;
+                  padding: 65px 92px 105px;
                   width: 100%;
                   gap: 22px;
                   position: relative;
@@ -110,14 +117,21 @@ const personaUseCase3Component = (editor: Editor) => {
                 display: flex;
                 justify-content: center;
                 width: 602px;
-                height: 524px;
                 margin: 0 auto;
                 max-width: 100%;
+              }
+              .${classPrefix}-quoteWrapper {
+                display: flex;
+              }
+              .${classPrefix}-quotes {
+                width: 40px;
+                height: 40px;
+                margin-right: 19px;
               }
               .${classPrefix}-ratingImg {
                   width: 25px;
                   height: 25px;
-                }
+              }
               .${classPrefix}-largerSection {
                 min-height: 131px;
               }
@@ -183,13 +197,14 @@ const personaUseCase3Component = (editor: Editor) => {
               }
               .${classPrefix}-image {
                 object-fit: fill;
-                width: 20px;
-                height: 20px;
+                width: 45px;
+                height: 45px;
+                outline: none;
               }
               .${classPrefix}-descriptionOne {
                 margin: 0;
                 font-size: 15px;
-                padding-right: 75px;
+                padding-right: 60px;
                 margin-bottom: 32px;
                 line-height: 21px;
               }
@@ -204,48 +219,64 @@ const personaUseCase3Component = (editor: Editor) => {
                 margin: 0;
                 color: #595959;
                 font-size: 15px;
+                padding-right: 20px;
+                line-height: 140%;
               }
       
-              @media (max-width: 770px) {
+              @media (max-width: 400px) {
                 .${classPrefix}-section {
-                  padding: 20px;
+                  padding: 32px 20px 82px;
                 }
-                .${classPrefix}-cardWrapper {
-                  flex-direction: column;
+                .${classPrefix}-imageContainer {
+                  height: 121px;
+                  width: 121px;
                 }
-                .${classPrefix}-cardColumn {
-                  flex-direction:  column;
-                  align-items: center;
-                  width: 100%;
-                  height: 100%;
-                  gap: 60px;
+                .${classPrefix}-image {
+                  width: 25px;
+                  height: 25px;
                 }
-                .${classPrefix}-customerProfile {
-                  position: unset;
-                }
-                .${classPrefix}-descriptionContainer {
-                  min-width: unset;
-                  width: 100%;
-                  padding: 30px;
+                .${classPrefix}-userPainPoint {
+                  margin-bottom: 13px;
                 }
                 .${classPrefix}-title {
-                  font-size: 30px;
+                  font-size: 26px;
+                  margin-bottom: 102px;
                 }
-                .${classPrefix}-subTitle {
-                  margin-bottom: 60px;
+                .${classPrefix}-customerProfile {
+                  top: -62px;
+                  left: -56px;
+                  flex-direction: row;
                 }
-              }
-              @media (max-width: 425px) {
+                .${classPrefix}-cardColumn {
+                  width: 295px;
+                  margin-right: 0;
+                }
+                .${classPrefix}-descriptionOne {
+                  font-size: 13px;
+                  padding: 0px;
+                }
+                .${classPrefix}-descriptionTwo {
+                  font-size: 13px;
+                  padding: 0px;
+                  margin-bottom: 44px;
+                }
                 .${classPrefix}-descriptionContainer {
-                  flex-direction: column;
-                  justify-content: center;
-                  align-items: center;
-                } 
-                .${classPrefix}-descriptionOne,  .${classPrefix}-descriptionTwo {
-                  padding: 0
+                  padding: 65px 21px 41px 33px;
                 }
+                .${classPrefix}-quote {
+                  padding: 0;
+                  font-size: 13px;
               }
-        `,
+                .${classPrefix}-quotes {
+                  margin-right: 9px;
+                  width: 35px;
+                  height: 35px;
+              }
+                .${classPrefix}-name {
+                  margin-top: -43px;
+                  font-size: 13px;
+              }
+              }`,
             },
         },
     });
