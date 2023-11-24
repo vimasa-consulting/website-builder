@@ -161,8 +161,24 @@ export default function GrapesJSComponent({ fileID }: Props) {
           title: "Publishing",
           content: 'Please wait!',
         }).onceClose(() => editor.stopCommand("publishPage"));
-        // save file
-        publishFile(fileID).then(() => {
+        // build html content
+        const htmlBody = editor.getHtml();
+        const cssBody = editor.getCss();
+        const fullHTML = `
+        < !DOCTYPE html>
+        <html>
+          <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+            <style>${cssBody}</style>
+          </head>
+          ${htmlBody}
+        </html>`;
+        // publish file
+        publishFile({
+          _id: fileID,
+          builderData: JSON.stringify(editor.getProjectData()),
+          htmlString: fullHTML,
+        }).then(() => {
           editor.Modal.close();
         }).catch((error) => {
           console.log('Failed to publish', error);

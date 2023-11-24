@@ -1,5 +1,6 @@
 export enum FileStatus {
-  DRAFT = 'draft'
+  DRAFT = 'draft',
+  PUBLISHED = 'published'
 }
 
 export type File = {
@@ -21,6 +22,7 @@ export type FileUpdatePayload = {
   slug?: string,
   htmlHeadContent?: string,
   htmlBodyContent?: string,
+  htmlString?: string,
   builderData?: string,
 }
 

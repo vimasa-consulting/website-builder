@@ -1,4 +1,4 @@
-import { File, FileUpdatePayload } from "@/types/file";
+import { File, FileStatus, FileUpdatePayload } from "@/types/file";
 import { apiInstance } from "./api";
 import { getAuthHeaders } from "./utils";
 
@@ -32,11 +32,13 @@ export async function update(file: FileUpdatePayload) {
   });
 }
 
-export async function publish(fileID: string) {
+export async function publish(file: FileUpdatePayload) {
   const payload: any = {
-    status: 'published'
+    ...file,
+    status: FileStatus.PUBLISHED
   };
-  return apiInstance.post(`${RESOURCE_PATH}/publish/${fileID}`, payload, {
+  delete payload._id;
+  return apiInstance.post(`${RESOURCE_PATH}/publish/${file._id}`, payload, {
     headers: (await getAuthHeaders()),
   });
 }

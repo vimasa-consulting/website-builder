@@ -17,8 +17,8 @@ export async function updateFile(file: FileUpdatePayload) {
   return update(file);
 }
 
-export async function publishFile(fileID: string) {
-  return publish(fileID);
+export async function publishFile(file: FileUpdatePayload) {
+  return publish(file);
 }
 
 export async function deleteFileByFileId(fileId: string) {
