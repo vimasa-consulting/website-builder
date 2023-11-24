@@ -153,6 +153,14 @@ const component = (editor: Editor) => {
             align-items: center;
             gap: 5px;
           }
+          .${classPrefix}-point-text {
+            color: #000;
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
 
           .${classPrefix}-point-img {
             width: 30px;

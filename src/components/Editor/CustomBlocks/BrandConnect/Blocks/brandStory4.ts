@@ -152,6 +152,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 140%; /* 21px */
 margin-bottom: 20px;
+color: #000;
 }
 
 @media (max-width: 770px) {

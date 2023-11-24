@@ -93,6 +93,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin-top: 0;
             margin-bottom: 18px;
+            color: #000;
           }
           .${classPrefix}-subTitle {
             max-width: 830px;
@@ -103,6 +104,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin: 0 auto;
             margin-bottom: 100px;
+            color: #000;
           }
           .${classPrefix}-text {
             font-size: 20px;
@@ -111,6 +113,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin: 0;
             margin-top: 3px;
+            color: #000;
           }
 
           .${classPrefix}-small-heading {
@@ -120,6 +123,7 @@ const component = (editor: Editor) => {
             font-style: normal;
             font-weight: 500;
             line-height: 140%; /* 28px */
+            color: #000;
           }
 
           .${classPrefix}-heading {
@@ -130,6 +134,7 @@ const component = (editor: Editor) => {
             font-weight: 600;
             line-height: normal;
             margin: 0;
+            color: #000;
           }
 
           .${classPrefix}-text {
@@ -139,6 +144,7 @@ const component = (editor: Editor) => {
             font-style: normal;
             font-weight: 400;
             line-height: 140%; /* 21px */
+            color: #000;
           }
 
           .${classPrefix}-image {
