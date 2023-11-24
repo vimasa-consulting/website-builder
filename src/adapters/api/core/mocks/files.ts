@@ -47,7 +47,7 @@ export default function registerMocks(mockInstance: MockAdapter) {
     },
   ]);
 
-  const createFileRegex = new RegExp('\/file\/');
+  const createFileRegex = new RegExp('\/files\/');
   mockInstance.onPost(createFileRegex).reply(config => {
     const requestData = JSON.parse(config.data);
 
@@ -63,7 +63,7 @@ export default function registerMocks(mockInstance: MockAdapter) {
     return [200, sampleResponse];
   });
 
-  const deleteFileRegex = new RegExp('\/file\/.*');
+  const deleteFileRegex = new RegExp('\/files\/.*');
   mockInstance.onDelete(deleteFileRegex).reply(200, {
     "_id": "653a238e5d63a9f6d5965d36",
     "name": "File 1",

@@ -3,7 +3,7 @@ import MockAdapter from "axios-mock-adapter";
 export default function registerMocks(mockInstance: MockAdapter) {
 
   // CREATE USER
-  mockInstance.onPost('/users').reply(201, {
+  mockInstance.onPost('/user').reply(201, {
     "organizations": [],
     "authProviders": [
       {
@@ -18,8 +18,7 @@ export default function registerMocks(mockInstance: MockAdapter) {
   });
 
   // GET USER
-  const getUserPathRegex = new RegExp('\/users\/*');
-  mockInstance.onGet(getUserPathRegex).reply(200, {
+  mockInstance.onGet('/user').reply(200, {
     "_id": "653bb1338e285cb5ea546390",
     "organizations": [
       "653bb2163aaab59822ea7ae3",

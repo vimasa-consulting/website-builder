@@ -3,7 +3,7 @@ import MockAdapter from "axios-mock-adapter";
 export default function registerMocks(mockInstance: MockAdapter) {
 
     // GET ALL PROJECTS
-    const getAllProjectsPathRegex = new RegExp('\/projects\/\\?organizationId=*');
+    const getAllProjectsPathRegex = new RegExp('\/project\/\\?organizationId=*');
     mockInstance.onGet(getAllProjectsPathRegex).reply(200, [
         {
             "_id": "653bb903e0484085b1e898b8",
