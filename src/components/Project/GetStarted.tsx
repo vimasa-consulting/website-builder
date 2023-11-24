@@ -72,7 +72,7 @@ export default function GetStarted({ projectID }: Props) {
         </div>
         <div className={styles.callToAction}>
           {/* <BuilderCta handleNavigation={handleNavigation} /> */}
-          <Link href="/questionnaire">
+          <Link href={`/questionnaire?projectId=${projectID}`}>
             {" "}
             <button className={styles.smartBuilder}> Use Smart Builder</button>
           </Link>
