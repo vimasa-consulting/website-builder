@@ -26,7 +26,7 @@ const ItemListing = ({
 
     const columns = columnHeaders.map((header:string) => {
         if (header === 'Path') {
-            return columnHelper.accessor((row: File) => row?.url, {
+            return columnHelper.accessor((row: any) => row?.slug, {
                 id: 'Path',
                 cell: info => info.getValue(),
                 header: () => <span>Path</span>,

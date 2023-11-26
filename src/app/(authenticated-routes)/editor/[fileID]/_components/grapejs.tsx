@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GjsEditor from "@grapesjs/react";
 import { grapesjs, type Editor, PropertyProps } from "grapesjs";
 import "grapesjs/dist/css/grapes.min.css";
@@ -43,6 +43,7 @@ import "../../../../../styles/previewblock.css";
 import { decode as atob } from "base-64";
 import BlockSearchPopup from "@/components/Editor/BlockSearchPopup";
 import BlockPreviewPopup from "@/components/Editor/BlockPreviewPopup";
+import { publishFile, updateFile } from "@/services/FilesService";
 
 export interface BlockOptions {
   label: string;
@@ -85,8 +86,11 @@ function getBlockOptions(blockType: string) {
   }
 }
 
-// @ts-ignore
-export default function GrapesJSComponent() {
+interface Props {
+  fileID: string
+}
+
+export default function GrapesJSComponent({ fileID }: Props) {
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] =
     useState(false);
   const [blockDetails, setBlockDetails] = useState<BlockDetails | null>(null);
@@ -126,7 +130,64 @@ export default function GrapesJSComponent() {
       stop() {
         editor.Modal.close();
       },
-    });    
+    });
+    editor.Commands.add("savePage", {
+      run(editor, sender) {
+        // open a popup and pass editor as props?
+        // const container = document.querySelector("#customModalPopup");
+        editor.Modal.open({
+          title: "Saving",
+          content: 'Please wait!',
+        }).onceClose(() => editor.stopCommand("savePage"));
+        // save file
+        updateFile({
+          _id: fileID,
+          builderData: JSON.stringify(editor.getProjectData())
+        }).then(() => {
+          editor.Modal.close();
+        }).catch((error) => {
+          console.log('Failed to save', error);
+        });
+      },
+      stop() {
+        editor.Modal.close();
+      },
+    });
+    editor.Commands.add("publishPage", {
+      run(editor, sender) {
+        // open a popup and pass editor as props?
+        // const container = document.querySelector("#customModalPopup");
+        editor.Modal.open({
+          title: "Publishing",
+          content: 'Please wait!',
+        }).onceClose(() => editor.stopCommand("publishPage"));
+        // build html content
+        const htmlBody = editor.getHtml();
+        const cssBody = editor.getCss();
+        const fullHTML = `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+            <style>${cssBody}</style>
+          </head>
+          ${htmlBody}
+        </html>`;
+        // publish file
+        publishFile({
+          _id: fileID,
+          builderData: JSON.stringify(editor.getProjectData()),
+          htmlString: fullHTML,
+        }).then(() => {
+          editor.Modal.close();
+        }).catch((error) => {
+          console.log('Failed to publish', error);
+        });
+      },
+      stop() {
+        editor.Modal.close();
+      },
+    });
     editor.Panels.addButton("views", {
       id: "persuasiveblocks",
       label: `<u>PB</u>`,
@@ -136,17 +197,17 @@ export default function GrapesJSComponent() {
     });
     editor.Panels.addButton("options", {
       id: "savepage",
-      label: `<img width="24" height="24" src="https://img.icons8.com/nolan/64/save.png" alt="save"/>`,
+      label: `<img width="22" height="22" src="https://img.icons8.com/ios/50/ffffff/save--v1.png" alt="save"/>`,
       className: "savepage",
-      command: () => editor.runCommand("openPersuasiveBlocks"),
+      command: () => editor.runCommand("savePage"),
       attributes: { title: "save page" },
     });
     editor.Panels.addButton("options", {
       id: "publishepage",
-      label: `<img width="20" height="20" src="https://img.icons8.com/ios/50/upload--v1.png" alt="upload--v1"/>`,
+      label: `<img width="22" height="22" src="https://img.icons8.com/ios/50/ffffff/upload--v1.png" alt="upload--v1"/>`,
       className: "publishepage",
-      command: () => editor.runCommand("openPersuasiveBlocks"),
-      attributes: { title: "save page" },
+      command: () => editor.runCommand("publishPage"),
+      attributes: { title: "publish page" },
     });
     /*editor.Panels.addButton("options", {
       id: "previewpage",
@@ -176,12 +237,12 @@ export default function GrapesJSComponent() {
     blocks.forEach((item) => {
       console.log(item.trim());
       editor.addComponents({ type: item.trim() });
-    });    
-    if(blocks.length>1){
+    });
+    if (blocks.length > 1) {
       editor.runCommand("openPreviewBlocks")
     }
   };
-  
+
 
   const lp = "./img/";
   const plp = "https://via.placeholder.com/350x250/";
@@ -497,7 +558,7 @@ export default function GrapesJSComponent() {
       },
     ],
   };
-  
+
 
   return (
     <>
@@ -506,7 +567,12 @@ export default function GrapesJSComponent() {
         // grapesjsCss="https://unpkg.com/grapesjs/dist/css/grapes.min.css"
         options={{
           height: "100vh", // TODO: fix bad height
-          storageManager: false, // check persistance per file id & remove
+          storageManager: {
+            type: 'local',
+            options: {
+              local: { key: `gjsFile-${fileID}` }
+            }
+          },
           blockManager: {
             // blocks: customBlockMapping,
             blocks: [],
@@ -586,7 +652,7 @@ export default function GrapesJSComponent() {
       </div>
       <div style={{ display: "none" }}>
         <BlockPreviewPopup grapeJSEditor={grapeJSEditor} />
-      </div>      
+      </div>
       {isAddNewProjectModalOpen && (
         <CustomBlockPopup
           onClose={() => setIsAddNewProjectModalOpen(false)}

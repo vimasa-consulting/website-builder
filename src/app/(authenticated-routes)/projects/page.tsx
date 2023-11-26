@@ -3,12 +3,13 @@ import ItemListing from "@/components/Project/ItemListing";
 import NewItem from "@/components/Project/NewItem";
 import NewItemPopup from "@/components/Project/NewItemPopup";
 import RecentSection from "@/components/Project/RecentSection";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { createProjectForOrganization, deleteProjectByProjectId, getAllProjectsByOrganizationId } from "@/services/ProjectsService";
-import { getUserBySub } from "@/services/UserService";
+import { getCurrentUser } from "@/services/UserService";
 import { Auth } from "aws-amplify";
 import { CellContext } from "@tanstack/react-table";
 import { ProjectTableData } from "@/types/project";
+import AuthContext from "@/context/identity/AuthContext";
 
 export interface NewProjectPayload {
   inputOneData: string;
@@ -24,6 +25,7 @@ export type Project = {
 export default function Page() {
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] = useState(false)
   const [tableData, setTableData] = useState<ProjectTableData[]>([])
+  const { cachedUser } = useContext(AuthContext);
 
   const columnHeaders = [
     'Name',
@@ -42,6 +44,8 @@ export default function Page() {
       const newProjectPayload = {
         name: payload.inputOneData,
         projectHostingAlias: payload.inputTwoData,
+        collaborators: [],
+        organizationId: cachedUser?.organizations[0] || '',
       }
 
       const newProjectResponse = await createProjectForOrganization(newProjectPayload)
@@ -58,9 +62,7 @@ export default function Page() {
 
   async function loadProjectDetails() {
     try {
-      const authUserInfo = await Auth.currentUserInfo();
-      const userDetails = await getUserBySub(authUserInfo.attributes?.sub)
-      const organizationId = userDetails?.data?.organizations[0] || 'abcd'
+      const organizationId = cachedUser?.organizations[0] || '';
       const allProjects = await getAllProjectsByOrganizationId(organizationId)
       setTableData(allProjects.data)
     } catch (error) {
@@ -83,7 +85,7 @@ export default function Page() {
 
   return (
     <div className="flex flex-col pb-14">
-      <RecentSection itemType="Project"  recentItems={recentProjects} />
+      <RecentSection itemType="Project" recentItems={recentProjects} />
       <NewItem itemType="Project" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} />
       {
         isAddNewProjectModalOpen &&

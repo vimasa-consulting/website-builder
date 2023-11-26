@@ -5,8 +5,8 @@ import NewItemPopup from "@/components/Project/NewItemPopup";
 import RecentSection from "@/components/Project/RecentSection";
 import { useCallback, useEffect, useState } from "react";
 import { createFileForProject, deleteFileByFileId, getAllFilesByProjectId } from "@/services/FilesService";
-import { CellContext } from "@tanstack/react-table";
-import { FileTableData } from "@/types/file";
+import { FileStatus, FileTableData } from "@/types/file";
+import GetStarted from "@/components/Project/GetStarted";
 
 export interface NewProjectPayload {
   inputOneData: string;
@@ -39,7 +39,12 @@ export default function Page({ params }: { params: { projectID: string } }) {
     try {
       const newFilePayload = {
         name: payload.inputOneData,
-        url: payload.inputTwoData,
+        slug: payload.inputTwoData,
+        htmlHeadContent: '',
+        htmlBodyContent: '',
+        status: FileStatus.DRAFT,
+        builderData: '',
+        projectId: params.projectID
       }
 
       const newFileResponse = await createFileForProject(newFilePayload);
@@ -78,7 +83,8 @@ export default function Page({ params }: { params: { projectID: string } }) {
 
   return (
     <div className="flex flex-col pb-14">
-      <RecentSection itemType="File" recentItems={recentFiles} />
+      {/* <RecentSection itemType="File" recentItems={recentFiles} /> */}
+      <GetStarted projectID={params.projectID} />
       <NewItem itemType="File" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} />
       {
         isAddNewProjectModalOpen &&

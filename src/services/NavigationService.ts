@@ -3,7 +3,6 @@ export const ROUTES = {
   SIGN_UP: '/signup',
   DASHBOARD: '/dashboard',
   EDITOR: '/editor',
-  GET_STARTED: '/get-started',
   PROJECTS: '/projects',
   NEW_PROJECT: '/projects/new',
   TIPS: '/tips',

@@ -3,7 +3,7 @@ import { Auth, Hub } from "aws-amplify";
 
 import React, { useEffect, useState } from "react";
 import AuthContext from "@/context/identity/AuthContext";
-import { getUserBySub } from "@/services/UserService";
+import { getCurrentUser } from "@/services/UserService";
 import { User } from "@/types/user";
 
 export default function AuthProvider({
@@ -20,7 +20,7 @@ export default function AuthProvider({
   const loadCurrentUserInfo = async () => {
     try {
       const authUserInfo = await Auth.currentUserInfo();
-      const { data: dbUser } = await getUserBySub(authUserInfo.attributes?.sub);
+      const { data: dbUser } = await getCurrentUser();
       setAuthUser({
         username: authUserInfo.username,
         attributes: {

@@ -1,7 +1,7 @@
 import { apiInstance } from "./api";
 import { getAuthHeaders } from "./utils";
 
-const RESOURCE_PATH = '/users';
+const RESOURCE_PATH = '/user';
 
 export async function create() {
   return apiInstance.post(RESOURCE_PATH, {}, {
@@ -9,8 +9,8 @@ export async function create() {
   });
 }
 
-export async function getBySub(sub: string) {
-  return apiInstance.get(`${RESOURCE_PATH}/${sub}`, {
+export async function getCurrent() {
+  return apiInstance.get(`${RESOURCE_PATH}/`, {
     headers: (await getAuthHeaders()),
   });
 }

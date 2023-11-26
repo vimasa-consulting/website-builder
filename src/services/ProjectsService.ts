@@ -5,7 +5,7 @@ export async function getAllProjectsByOrganizationId(organizationId: string) {
     return getAllProjects(organizationId);
 }
 
-export async function createProjectForOrganization(project: Omit<Project, "_id">) {
+export async function createProjectForOrganization(project: Omit<Project, '_id' | 'imageURL' | 'ownerUserId'>) {
     return createProject(project);
 }
 
