@@ -23,7 +23,7 @@ export default function AdsBanner() {
             })
         }
 
-        load();
+        //load();
 
         return () => {
             adEl.innerHTML = '';

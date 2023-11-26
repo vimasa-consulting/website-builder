@@ -2,7 +2,6 @@ import { SelectorsProvider, StylesProvider, TraitsProvider } from "@grapesjs/rea
 import { observer } from "mobx-react-lite";
 import { useAppEditorStore } from "../../store/appEditorStore";
 import cx from '../../utils/makeCls';
-import AdsBanner from "../AdsBanner";
 import Grid from "../Grid";
 import GridItem from "../GridItem";
 import SelectorManager from '../SelectorManager';
@@ -59,8 +58,7 @@ export default observer(function DesignManager() {
                         )
                     }
                 ]}
-            />
-            { ads && !!editorKey && <AdsBanner/> }
+            />            
         </Grid>
     );
   });
