@@ -1,0 +1,297 @@
+const lang = {
+    add: 'Add',
+    delete: 'Delete',
+    duplicate: 'Duplicate',
+    rename: 'Rename',
+    remove: 'Remove',
+    select: 'Select',
+    selectList: 'Select from the list',
+    search: 'Search',
+    update: 'Update',
+    confirm: 'Confirm',
+    cancel: 'Cancel',
+    enable: 'Enable',
+    disable: 'Disable',
+    upload: 'Upload',
+    close: 'Close',
+    load: 'Load',
+    toggleCss: 'Toggle CSS',
+    selectTarget: 'Target Component',
+    noCode: 'No code available',
+    noItems: 'No items found',
+    confirmAction: 'Do you confirm this action?',
+    eyeDropper: 'Eyedropper',
+    noEyeDropper: 'Eyedropper not supported',
+    unauthorized: 'Unauthorized project',
+    notItemsFound: 'No items found',
+    actions: {
+        componentOutline: { title: 'Component outline' },
+        preview: { title: 'Preview' },
+        fullscreen: { title: 'Fullscreen' },
+        showCode: {
+            title: 'Code',
+            exportButton: 'Export to ZIP',
+        },
+        undo: { title: 'Undo' },
+        redo: { title: 'Redo' },
+        save: { title: 'Save project' },
+        open: { title: 'Open project' },
+        importCode: {
+            title: 'Import code',
+            content: 'Paste here your HTML/CSS and click Import',
+            button: 'Import',
+        },
+        clearCanvas: {
+            title: 'Clear page',
+            content: 'Are you sure you want to clear the page?'
+        },
+        about: {
+            title: 'About',
+        },
+        newProject: {
+            title: 'Load project',
+        },
+        installApp: {
+            title: 'Install App',
+            installed: 'App installed',
+        }
+    },
+    modals: {
+        styleCatalog: {
+            title: 'Style Catalog',
+            noStyles: 'No styles found',
+        },
+        openProject: {
+            title: 'Open project',
+        }
+    },
+    pluginManager: {
+        plugins: 'Plugins',
+        all: 'Available',
+        installed: 'Installed',
+        install: 'Install',
+        uninstall: 'Uninstall',
+        allPlugins: 'All plugins',
+        updateStudio: 'Restart Studio for plugin updates',
+    },
+    projectManager: {
+        existentProjects: 'Your projects',
+        templates: 'Templates',
+        notAvailable: 'No projects available',
+        notFound: 'No projects found',
+        projectName: 'Project name',
+        pages: 'Pages',
+    },
+    assetManager: {
+        addUrl: 'Add URL',
+    },
+    blockManager: {
+        blocks: 'Blocks',
+        add: 'Add more blocks',
+        labels: {
+            section: 'Section',
+            column1: '1 Column',
+            column2: '2 Columns',
+            column3: '3 Columns',
+            'column3-7': '2 Columns 3/7',
+            gridRow: 'Grid',
+            heading: 'Heading',
+            divider: 'Divider',
+            imageBox: 'Image Box',
+            linkBox: 'Link Box',
+        },
+        categories: {
+            // 'category-id': 'Category Label',
+        },
+    },
+    domComponents: {
+        names: {
+            section: 'Section',
+            gridRow: 'Row',
+            gridColumn: 'Column',
+            heading: 'Heading',
+            divider: 'Divider',
+            imageBox: 'Image Box',
+            linkBox: 'Link Box',
+        }
+    },
+    traitManager: {
+        traits: {
+          labels: {
+            loading: 'Lazy load',
+            target: 'Open in new tab',
+            showList: 'Show element list',
+          },
+          attributes: {
+            // href: { placeholder: 'eg. https://google.com' },
+          },
+        },
+    },
+    deviceManager: {
+        allDevices: 'All devices',
+    },
+    selectorManager: {
+        noSelecton: `You don't have any selected element.`,
+        selectFromCanvas: 'Select an element from the canvas.',
+        selectFromList: 'Pick any style from the Style Catalog.',
+        selectCustom: 'Add your custom style selector.',
+        selection: 'Selection',
+        selector: 'Selector',
+        addNewSelector: 'Add new selector',
+        removeSelector: 'Remove selector',
+        target: 'Target',
+        device: 'Device',
+        state: 'State',
+        deleteStyle: 'Delete style',
+        showCSS: 'Show CSS code',
+        searchStyle: 'Search style',
+        applyOnSelector: 'Apply style changes on Selectors',
+        noSelectors: 'No Selectors applied',
+        applyOnComponents: 'Apply style changes on Components',
+        noComponents: 'No Components selected',
+        currentSelection: 'The current selection from which styles are displayed of',
+        // label: 'Classes',
+        // selected: 'Selected',
+        // emptyState: '- State -',
+        // states: {
+        //   hover: 'Hover',
+        //   active: 'Click',
+        //   'nth-of-type(2n)': 'Even/Odd',
+        // },
+    },
+    styleManager: {
+        layout: {
+            flexChild: 'Flex child',
+            display: {
+                tips: {
+                    block: 'Block generates a block element box, generating line breaks both before and after the element when in the normal flow.',
+                    inline: 'Inline generates one or more inline element boxes that do not generate line breaks. The inline is generally default for text content.',
+                    'inline-block': 'Inline-block is similar to inline but allows to define width and height properties.',
+                    flex: 'Flex behaves like a block element and lays out its child elements on a vertical/horizontal axis',
+                    none: 'The element is hidden from the layout',
+                },
+            },
+            direction: {
+                title: {
+                    row: 'Horizontal',
+                    'row-reverse': 'Horizontal reversed',
+                    column: 'Vertical',
+                    'column-reverse': 'Vertical reversed',
+                }
+            }
+        },
+        position: {
+            tips: {
+                static: 'Default position',
+                relative: 'Similar to Static but with the ability to be moved relative to itself',
+                absolute: 'Absolute position, relative to its closest non-static parent',
+                fixed: 'Fixed position (even when the page is scrolled), relative to the browser viewport',
+                sticky: 'Elements are keept in place but moved when the page is scrolled, based on indicated distance',
+            },
+            presets: {
+                title: 'Presets',
+                options: {
+                    topLeft: 'Top left',
+                    topRight: 'Top right',
+                    bottomLeft: 'Bottom left',
+                    bottomRight: 'Bottom right',
+                    left: 'Left',
+                    right: 'Right',
+                    bottom: 'Bottom',
+                    top: 'Top',
+                    full: 'Full',
+                }
+            },
+        },
+        properties: {
+          'margin-top': 'Top',
+          'margin-right': 'Right',
+          'margin-bottom': 'Bottom',
+          'margin-left': 'Left',
+          'padding-top': 'Top',
+          'padding-right': 'Right',
+          'padding-bottom': 'Bottom',
+          'padding-left': 'Left',
+          'border-top-left-radius': 'Top Left',
+          'border-top-right-radius': 'Top Right',
+          'border-bottom-right-radius': 'Bottom Right',
+          'border-bottom-left-radius': 'Bottom Left',
+          'mix-blend-mode': 'Blend mode',
+          'transform-style': 'Type',
+          'backface-visibility': 'Backface',
+          'perspective-origin': 'Perspective origin',
+          'perspective-origin-x': 'Left',
+          'perspective-origin-y': 'Top',
+          'transform-origin-x': 'Left',
+          'transform-origin-y': 'Top',
+          'align-items': 'Align',
+          'align-self': 'Align',
+          'justify-content': 'Justify',
+          'row-gap': 'Row',
+          'column-gap': 'Column',
+          // Typography
+          'font-family': 'Font',
+          'font-size': 'Size',
+          'font-weight': 'Weight',
+          'letter-spacing': 'Spacing',
+          'text-align': 'Align',
+          'text-decoration': 'Decoration',
+          'text-transform': 'Transform',
+          'white-space': 'Breaking',
+          // Borders
+          'border-top-width': 'Top',
+          'border-right-width': 'Right',
+          'border-bottom-width': 'Bottom',
+          'border-left-width': 'Left',
+          'border-top-style': 'Top',
+          'border-right-style': 'Right',
+          'border-bottom-style': 'Bottom',
+          'border-left-style': 'Left',
+          'border-top-color': 'Top',
+          'border-right-color': 'Right',
+          'border-bottom-color': 'Bottom',
+          'border-left-color': 'Left',
+          // Bg
+          'background-position': 'Position',
+          'background-position-x': 'Left',
+          'background-position-y': 'Top',
+          'background-size': 'Size',
+          'background-size-x': 'Left',
+          'background-size-y': 'Top',
+          'background-repeat': 'Repeat',
+          'background-attachment': 'Attachment',
+          'background-origin': 'Origin',
+          'background-clip': 'Clip',
+          // Effects
+          'overflow-x': 'X',
+          'overflow-y': 'Y',
+        },
+        options: {
+            '__background-type': {
+                image: 'Image',
+                gradient: 'Gradient',
+                color: 'Color',
+            },
+            display: {
+                block: 'Block',
+                inline: 'Inline',
+                'inline-block': 'Inline block',
+                flex: 'Flex',
+                none: 'None',
+            },
+            overflow: {
+                visible: 'Visible',
+                hidden: 'Hidden',
+                scroll: 'Scroll',
+                auto: 'Auto',
+            },
+            'flex-wrap': {
+                nowrap: 'No wrap',
+                wrap: 'Wrap',
+                'wrap-reverse': 'Reverse wrap',
+            }
+        }
+      },
+};
+
+export default lang;
