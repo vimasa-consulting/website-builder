@@ -169,45 +169,19 @@ const component = (editor: Editor) => {
             left: 0.6rem;
           }
 
-          @media (max-width: 768px) {
-            .${classPrefix}-section {
-              padding: 2rem 1rem;
-            }
-
-            .${classPrefix}-container {
-              width: auto;
-            }
-
-            .${classPrefix}-subheading-wrapper {
-              margin: 0 auto 36px auto;
-            }
-
-            .${classPrefix}-box-container {
-              gap: 1rem;
-              flex-direction: row;
-            }
-
-            .${classPrefix}-box {
-              padding: 1.5rem 1.2rem;
-            }
-
-            .${classPrefix}-box-text {
-              font-size: 44px;
-            }
-
-            .${classPrefix}-supertext {
-              top: -1.2rem;
-              left: 0.1rem;
-            }
-          }
-
           @media (max-width: 480px) {
             .${classPrefix}-section {
               padding: 1.8rem 1rem;
             }
 
+            .${classPrefix}-container {
+              width: auto;
+              display: flex;
+              flex-direction: column;
+            }
+
             .${classPrefix}-heading-wrapper {
-              margin: 0 auto 36px 0;
+              margin: 0 auto 10px auto;
             }
 
             .${classPrefix}-box-container {
@@ -229,12 +203,22 @@ const component = (editor: Editor) => {
               font-style: normal;
               font-weight: 600;
               line-height: 35px;
+              margin: 0;
+            }
+
+            .${classPrefix}-subheading-wrapper {
+              margin: 0 auto 10px auto;
+            }
+
+            .${classPrefix}-section-subheading {
+              font-size: 13px;
+              margin: 0;
             }
 
             .${classPrefix}-box-heading {
               color: #000;
               text-align: center;
-              font-size: 13px;
+              font-size: 18px;
               font-style: normal;
               font-weight: 500;
               line-height: 140%;
@@ -243,9 +227,20 @@ const component = (editor: Editor) => {
             .${classPrefix}-box-text {
               color: #2c2c2c;
               text-align: center;
-              font-size: 38px;
+              font-family: Inter;
+              font-size: 44px;
               font-style: normal;
               font-weight: 600;
+              line-height: normal;
+            }
+
+            .${classPrefix}-box-footer-text {
+              color: #2c2c2c;
+              text-align: center;
+              font-family: Inter;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 500;
               line-height: normal;
             }
 
