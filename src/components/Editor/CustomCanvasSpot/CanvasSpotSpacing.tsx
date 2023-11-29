@@ -32,7 +32,7 @@ export default function CanvasSpotSpacing({ spot, className }: CanvasSpotWrapper
         boxSizing: 'content-box',
     };
 
-    const elStyle = window.getComputedStyle(el!);
+    const elStyle = getComputedStyle(el!);
 
     stylePadding.borderTopWidth = elStyle.paddingTop;
     stylePadding.borderRightWidth = elStyle.paddingRight;
