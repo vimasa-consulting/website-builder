@@ -83,4 +83,4 @@ export const getStore = (): Store => {
 };
 
 // @ts-ignore
-window.getStore = getStore;
+// window.getStore = getStore;

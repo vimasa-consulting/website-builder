@@ -10,6 +10,7 @@ import { Auth } from "aws-amplify";
 import { CellContext } from "@tanstack/react-table";
 import { ProjectTableData } from "@/types/project";
 import AuthContext from "@/context/identity/AuthContext";
+import "@/styles/editor-legacy.css";
 
 export interface NewProjectPayload {
   inputOneData: string;
