@@ -33,30 +33,38 @@ const component = (editor: Editor) => {
         classes: [classPrefix],
         traits: [],
         components: `
-          <section class="${classPrefix}-section-container">
-            <div class="${classPrefix}-heading-wrapper">
-              <h1 class="${classPrefix}-section-heading">Catchy Headline about Offers & Budget Price Points</h1>
-            </div>
-            <div class="${classPrefix}-box-container">
-              <div class="${classPrefix}-box">
-                <span class="${classPrefix}-box-heading">Save up to</span>
-                <h1 class="${classPrefix}-box-text">50%</h1>
+          <section class="${classPrefix}-section">
+            <div class="${classPrefix}-container">
+              <div class="${classPrefix}-heading-wrapper">
+                <h1 class="${classPrefix}-section-heading">Catchy Headline about Offers & Budget Price Points</h1>
               </div>
-              <div class="${classPrefix}-box">
-                <span class="${classPrefix}-box-heading">Starting from</span>
-                <h1 class="${classPrefix}-box-text">₹99</h1>
-              </div>
-              <div class="${classPrefix}-box">
-                <span class="${classPrefix}-box-heading">Save up to</span>
-                <h1 class="${classPrefix}-box-text">50%</h1>
+              <div class="${classPrefix}-box-container">
+                <div class="${classPrefix}-box">
+                  <span class="${classPrefix}-box-heading">Save up to</span>
+                  <h1 class="${classPrefix}-box-text">50%</h1>
+                </div>
+                <div class="${classPrefix}-box">
+                  <span class="${classPrefix}-box-heading">Starting from</span>
+                  <h1 class="${classPrefix}-box-text">₹99</h1>
+                </div>
+                <div class="${classPrefix}-box">
+                  <span class="${classPrefix}-box-heading">Save up to</span>
+                  <h1 class="${classPrefix}-box-text">50%</h1>
+                </div>
               </div>
             </div>
           </section>
         `,
         styles: `
-          .${classPrefix}-section-container {
+          .${classPrefix}-section {
             padding: 5.5rem 1rem;
             font-family: Inter, sans-serif;
+            max-width: 1440px;
+            margin: auto;
+          }
+
+          .${classPrefix}-container {
+            padding: 0 150px;
           }
 
           .${classPrefix}-heading-wrapper {
@@ -86,10 +94,9 @@ const component = (editor: Editor) => {
             flex-grow: 1;
             background: #ccc;
             justify-content: center;
-            padding: 6rem 1.2rem;
             border-radius: 10px;
-            max-width: 349px;
-            max-height: 355px;
+            width: 349px;
+            height: 355px;
           }
 
           .${classPrefix}-box-text {
@@ -111,28 +118,12 @@ const component = (editor: Editor) => {
             line-height: 140%;
           }
 
-          @media (max-width: 768px) {
-            .${classPrefix}-section-container {
-              padding: 2rem 1rem;
-            }
-
-            .${classPrefix}-box-container {
-              gap: 1rem;
-              flex-direction: row;
-            }
-
-            .${classPrefix}-box {
-              padding: 4rem 1.2rem;
-            }
-
-            .${classPrefix}-box-text {
-              font-size: 76px;
-            }
-          }
-
           @media (max-width: 480px) {
-            .${classPrefix}-section-container {
+            .${classPrefix}-section {
               padding: 1.8rem 1rem;
+            }
+            .${classPrefix}-container {
+              padding: 0;
             }
 
             .${classPrefix}-heading-wrapper {
@@ -146,7 +137,7 @@ const component = (editor: Editor) => {
 
             .${classPrefix}-box {
               width: 90%;
-              padding: 2rem 1rem;
+              padding: 0;
               max-width: 113px;
               max-height: 113px;
             }
