@@ -14,7 +14,7 @@ export interface PopoverConfirmProps extends PopoverProps {
 export default function PopoverConfirm({ children, text, onConfirm, onCancel, className = 'w-[200px]', ...props }: PopoverConfirmProps) {
     const i18nStore = useI18nStore();
     return (
-        <Popover {...props} overlay title={false} buttonAs="span" /*handler={children}*/>
+        <Popover {...props} overlay title={false} buttonAs="span" handler={children}>
             {({ close }) => (
                 <Grid className={className} space="m" col>
                     <GridItem grow>

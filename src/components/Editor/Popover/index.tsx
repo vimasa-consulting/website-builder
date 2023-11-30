@@ -61,9 +61,7 @@ export default function Popover({ children, handler, title, fixed, size, padding
       }
     }, [refBtn, refPanel, open]); // eslint-disable-line
     /*
-    {
-                  !open ? null : (typeof children === 'function' ? children({ close }) : children)
-                }
+    
     */
     return (
       <PO className={cx('popover relative flex', className)}>
@@ -91,7 +89,9 @@ export default function Popover({ children, handler, title, fixed, size, padding
               static
             >              
               <Card ref={refPanel} title={title} onClose={close} padding={padding}>
-                
+              {
+                  !open ? null : (typeof children === 'function' ? children({ close }) : children)
+                }
               </Card>
             </PO.Panel>
         </Transition>
