@@ -4,7 +4,7 @@ import {
     mdiCog, mdiContentSave,
     mdiDelete, mdiEye,
     mdiFolder,
-    mdiFullscreen, mdiHelpCircle, mdiNewspaperVariantOutline, mdiTrayArrowDown, mdiXml
+    mdiFullscreen, mdiHelpCircle, mdiNewspaperVariantOutline, mdiPublish, mdiTrayArrowDown, mdiXml
 } from '@mdi/js';
 import Icon from '@mdi/react';
 import { fileOpen, fileSave } from 'browser-fs-access';
@@ -62,7 +62,7 @@ export default observer(function ActionButtons() {
     const t = (key: string) => i18nStore.t(`actions.${key}`);
 
     const buttons: ActionButton[] = [
-        {
+        /*{
             id: 'component-outline',
             cmd: 'core:component-outline',
             iconPath: mdiBorderRadius,
@@ -80,7 +80,7 @@ export default observer(function ActionButtons() {
             iconPath: mdiFullscreen,
             options: { target: '#root' },
             title: 'fullscreen.title',
-        },
+        },*/
         /*{
             id: 'open-code',
             cmd: () => modalStore.open({
@@ -99,7 +99,7 @@ export default observer(function ActionButtons() {
             iconPath: mdiTrayArrowDown,
             title: 'importCode.title',
         },*/
-        {
+        /*{
             id: 'clear-canvas',
             cmd: () => modalStore.confirm({
                 title: t('clearCanvas.title'),
@@ -108,7 +108,7 @@ export default observer(function ActionButtons() {
             }),
             iconPath: mdiDelete,
             title: 'clearCanvas.title',
-        },
+        },*/
         {
             id: 'undo',
             cmd: 'core:undo',
@@ -121,6 +121,19 @@ export default observer(function ActionButtons() {
             cmd: 'core:redo',
             iconPath: mdiArrowURightTop,
             disabled: () => !UndoManager.hasRedo(),
+            title: '',
+        },
+        {
+            id: 'save',
+            cmd: 'core:undo',
+            iconPath: mdiContentSave,
+            //disabled: () => !UndoManager.hasUndo(),
+            title: '',
+        },
+        {
+            id: 'publish',
+            cmd: 'core:redo',
+            iconPath: mdiPublish,            
             title: '',
         },
     ];
@@ -241,7 +254,7 @@ export default observer(function ActionButtons() {
     }
 
     return (
-        <Grid space="s" items="center" justify="end" className={cx(pad.xS)}>
+        <Grid space="s" items="center" justify="end" className={cx(pad.xyS2)}>
             {buttons.map(({ id, cmd, iconPath, disabled, options, title }) => (
                 <GridItem key={id}>
                     <ButtonWithTooltip
@@ -255,7 +268,7 @@ export default observer(function ActionButtons() {
                     </ButtonWithTooltip>
                 </GridItem>
             ))}
-            <GridItem>
+            {/*<GridItem>
                 <Popover pos={posActions} title={false} padding={false} handler={<Icon path={mdiCog} size={icon.s}/>} overlay>
                     {({ close }) => <>
                         {
@@ -270,7 +283,7 @@ export default observer(function ActionButtons() {
                         }
                     </>}
                 </Popover>
-            </GridItem>
+                </GridItem>*/}
         </Grid>
     );
   });

@@ -51,8 +51,11 @@ export default observer(function BlockManagerContainer() {
                     title={t('blocks')}
                     onClose={toggleOpen}
                     className={pad.xyS}
-                    actions={actions}
+                    //actions={actions}
                 />
+            </GridItem>
+            <GridItem>
+                Pesuasion Blocks Add
             </GridItem>
             <GridItem className="overflow-hidden" grow>
                 <WithEditor>

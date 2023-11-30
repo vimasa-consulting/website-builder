@@ -48,9 +48,9 @@ export default observer(function BlockManager() {
 
     return (
         <Grid col full>
-            <GridItem className={cx('pb-3', pad.xyS, br.bb, cl.br)}>
+            {/*<GridItem className={cx('pb-3', pad.xyS, br.bb, cl.br)}>
                 <InputField size="s" value={searchValue} onInput={setSearchValue} placeholder="Search..." type="search"/>
-            </GridItem>
+            </GridItem>*/}
             <GridItem grow className={fx.scrollY}>
                 {allBlocksMap.map((cat, index) => (
                     <Accordion

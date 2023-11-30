@@ -30,6 +30,10 @@ export default observer(function EditorApp() {
     (window as any).editor = editor;    
     const deviceManager = editor.Devices;
     deviceManager.remove("tablet");
+    const mobileDevice = deviceManager.get("mobilePortrait");
+    //mobileDevice?.set({ width: "400px" });
+    const desktopDevice = deviceManager.get("desktop");
+    //desktopDevice?.set({ width: "1440px" });
 
     initCustomBlocks(editor);
     // Test infinite canvas
