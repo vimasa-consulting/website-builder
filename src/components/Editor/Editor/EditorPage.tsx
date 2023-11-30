@@ -85,12 +85,7 @@ export default observer(function EditorPage() {
 
     return (
         <Grid className={cx('relative transition-colors h-full', cl.bg, cl.txt)} justify="center" items="center" col>
-            {
-                isAuthorized ?
-                <>{!!editorKey && <EditorApp/>}</>
-                :
-                <div>{i18nStore.t('unauthorized')}</div>
-            }
+            <EditorApp/>
             <Transition show={!projectIdToLoad || !editorKey} as={Fragment} {...tsOpac}>
                 <Spinner className={cx('z-10', cl.bg)} abs/>
             </Transition>
