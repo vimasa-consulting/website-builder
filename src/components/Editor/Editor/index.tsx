@@ -1,5 +1,5 @@
 import GjsEditor, { AssetsProvider, Canvas, ModalProvider } from '@grapesjs/react';
-import type { Editor } from 'grapesjs';
+import { grapesjs, type Editor, PropertyProps } from "grapesjs";
 import { observer } from 'mobx-react-lite';
 import { useMemo } from 'react';
 import { useAppEditorStore } from "../../store/appEditorStore";
@@ -59,7 +59,8 @@ export default observer(function EditorApp() {
     <GjsEditor
       key={editorKey}
       className={cx('app-editor h-full w-full', br.b, cl.br)}
-      grapesjs={editorConfig.gjsScript!}
+      grapesjs={grapesjs}
+      //grapesjs={editorConfig.gjsScript!}
       grapesjsCss={editorConfig.gjsStyle}
       options={gjsOpts}
       plugins={gjsPlugins}

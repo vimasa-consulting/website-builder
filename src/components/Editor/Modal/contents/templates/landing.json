@@ -1,5 +1,9 @@
 {
-    "id": "",
-    "name": "",
-    "pages": []
+    "id": "landingPage",
+    "name": "Landing page",    
+    "pages": [
+        {
+            "name": "Home"
+        }
+    ]    
 }
