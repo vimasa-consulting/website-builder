@@ -6,12 +6,14 @@ import Image from "next/image";
 import styles from "../../styles/getStarted.module.scss";
 import Link from "next/link";
 import NewItemPopup from "@/components/Project/NewItemPopup";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FileStatus, FileTableData } from "@/types/file";
 import {
   createFileForProject,
 } from "@/services/FilesService";
 import { useRouter } from "next/navigation";
+import AuthContext from "@/context/identity/AuthContext";
+import checkMark from '../../public/checkmark.png'
 
 export interface NewProjectPayload {
   inputOneData: string;
@@ -22,21 +24,24 @@ interface Props {
   projectID: string
 }
 
+const videoURL = "https://www.youtube.com/embed/L3tsYC5OYhQ"
+
 export default function GetStarted({ projectID }: Props) {
   const router = useRouter();
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] =
     useState(false);
   const [tableData, setTableData] = useState<FileTableData[]>([]);
+  const { cachedAuthUser } = useContext(AuthContext);
 
   function closeModalHandler() {
     setIsAddNewProjectModalOpen(false);
   }
 
-  async function handleNewFileSubmit(payload: NewProjectPayload) {
+  async function handleNewFileSubmit() {
     try {
       const newFilePayload = {
-        name: payload.inputOneData,
-        slug: payload.inputTwoData,
+        name: "test",
+        slug: "test-test",
         htmlHeadContent: '',
         htmlBodyContent: '',
         status: FileStatus.DRAFT,
@@ -56,40 +61,48 @@ export default function GetStarted({ projectID }: Props) {
 
     closeModalHandler();
   }
-  const handlePopup = () => {
-    setIsAddNewProjectModalOpen(!isAddNewProjectModalOpen);
-  };
+  // const handlePopup = async () => {
+  //   await handleNewFileSubmit()
+  //   // setIsAddNewProjectModalOpen(!isAddNewProjectModalOpen);
+  // };
+
   return (
     <div className={styles.mainContainer}>
       <div className={styles.mainContainerItems}>
         <h4 className={styles.componentHeader}>
-          Hi , what are you building today?
+        Hi <span className={styles.userName}>{cachedAuthUser?.attributes?.givenName}</span>, what are we building today?
         </h4>
-        {/* temporary placeholder */}
         <div className={styles.videoSection}>
-          <div className={styles.tempPlaceholder}></div>
+          <iframe
+            src={videoURL}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title="Embedded YouTube Video"
+            className={styles.video}
+            ></iframe>
           <Image src={wizard} alt="wizard" />
         </div>
         <div className={styles.callToAction}>
           {/* <BuilderCta handleNavigation={handleNavigation} /> */}
           <Link href={`/questionnaire?projectId=${projectID}`}>
             {" "}
-            <button className={styles.smartBuilder}> Use Smart Builder</button>
+            <button className={styles.smartBuilder}> Use Smart Builder {'>'}</button>
           </Link>
-          <button className={styles.buildIt} onClick={handlePopup}>
-            Build it YourSelf{" "}
+          <button className={styles.buildIt} onClick={handleNewFileSubmit}>
+            Build it Yourself {'>'}
           </button>
         </div>
         <h2 className={styles.subHeader}>
-          Build in 5 mins with <span>Smart Builder</span>
+          Build in 5 min with <span>Smart Builder</span>
         </h2>
-        <ul className={styles.listItem}>
-          <li>Answer our expert crafted questions</li>
-          <li>Get a personalised page built for your goals</li>
-          <li>Add powerful copy & images to finish the page</li>
+        <ul className={styles.list}>
+          <li className={styles.listItem}><Image src={checkMark} alt="checkmark" className={styles.checkmark}/>Answer our expert crafted questions</li>
+          <li className={styles.listItem}><Image src={checkMark} alt="checkmark" className={styles.checkmark}/>Get a personalised page built for your goals</li>
+          <li className={styles.listItem}><Image src={checkMark} alt="checkmark" className={styles.checkmark}/>Add powerful copy & images to finish the page</li>
         </ul>
+        <p className={styles.successNote}>Voila, your persuasive page is ready to publish! <span className={styles.partyEmoji}>🥳</span></p>
       </div>
-
+{/* 
       {isAddNewProjectModalOpen && (
         <NewItemPopup
           inputOneLabel="File Name"
@@ -100,7 +113,7 @@ export default function GetStarted({ projectID }: Props) {
           handleSubmit={handleNewFileSubmit}
           popupTitle="Add New File"
         />
-      )}
+      )} */}
     </div>
   );
 }
