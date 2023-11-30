@@ -30,20 +30,7 @@ export default function Navbar() {
           Website Builder
         </span>
       </FlowbiteNavbar.Brand>
-      <div className="flex gap-4">
-        <Dropdown
-          arrowIcon={true}
-          inline
-          label={
-            <div>
-              Workspace 1
-            </div>
-          }
-        >
-          <Dropdown.Item>Workspace 2</Dropdown.Item>
-          <Dropdown.Item>Workspace 3</Dropdown.Item>
-          <Dropdown.Item>Workspace 4</Dropdown.Item>
-        </Dropdown>
+      <div className="flex gap-4">    
         <Dropdown
           arrowIcon={false}
           inline

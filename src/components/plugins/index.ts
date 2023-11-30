@@ -28,9 +28,9 @@ export const PLUGINS_BY_PROJECT: Record<ProjectType | 'global', PluginToLoad[]> 
         { id: 'grapesjs-parser-postcss', src: 'https://unpkg.com/grapesjs-parser-postcss@1.0.1/dist/index.js' },
         { id: 'grapesjs-tui-image-editor', src: 'https://unpkg.com/grapesjs-tui-image-editor@1.0.1/dist/index.js' },
 
-        // { id: 'grapesjs-component-countdown', src: 'https://unpkg.com/grapesjs-component-countdown@1.0.1/dist/index.js' },
-        // { id: 'grapesjs-tabs', src: 'https://unpkg.com/grapesjs-tabs@1.0.6/dist/grapesjs-tabs.min.js', options: { tabsBlock: { category: 'Extra' } } },
-        // { id: 'grapesjs-custom-code', src: 'https://unpkg.com/grapesjs-custom-code@1.0.1/dist/index.js' },
+        { id: 'grapesjs-component-countdown', src: 'https://unpkg.com/grapesjs-component-countdown@1.0.1/dist/index.js' },
+        //{ id: 'grapesjs-tabs', src: 'https://unpkg.com/grapesjs-tabs@1.0.6/dist/grapesjs-tabs.min.js', options: { tabsBlock: { category: 'Extra' } } },
+        //{ id: 'grapesjs-custom-code', src: 'https://unpkg.com/grapesjs-custom-code@1.0.1/dist/index.js' },
         // { id: 'grapesjs-tooltip', src: 'https://unpkg.com/grapesjs-tooltip@0.1.7/dist/index.js' },
         // { id: 'grapesjs-typed', src: 'https://unpkg.com/grapesjs-typed@1.0.5/dist/grapesjs-typed.min.js', options: { block: { category: 'Extra' } } },
         // TODO remove empty state
