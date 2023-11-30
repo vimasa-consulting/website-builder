@@ -55,7 +55,11 @@ export default observer(function BlockManagerContainer() {
                 />
             </GridItem>
             <GridItem>
-                Pesuasion Blocks Add
+                <Grid className="grid grid-cols- gap-2 p-2">
+                    <div className="flex p-2 border-t border-gray-300 dark:border-zinc-700 flex-wrap items-center">
+                        Place Holder Image to triger Block Popup
+                    </div>
+                </Grid>
             </GridItem>
             <GridItem className="overflow-hidden" grow>
                 <WithEditor>
