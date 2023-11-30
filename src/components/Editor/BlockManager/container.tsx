@@ -55,10 +55,16 @@ export default observer(function BlockManagerContainer() {
                 />
             </GridItem>
             <GridItem>
-                <Grid className="grid grid-cols- gap-2 p-2">
-                    <div className="flex p-2 border-t border-gray-300 dark:border-zinc-700 flex-wrap items-center">
-                        Place Holder Image to triger Block Popup
-                    </div>
+                <Grid className="grid grid-cols-1 gap-2 p-2">                    
+                    <Grid className={cx('cursor-pointer py-2 px-5 transition-colors', br.b, br.rnd, cl.br, cl.hTAo, cl.hBgH)}
+                        //onDragStart={() => onDragStart(block)}
+                        //onDragEnd={onDragEnd}
+                        items="center"
+                        col>
+                            <div>Persuation Blocks</div>
+                            <div className="block-media" ><img width="300px" height="300px" src="/editor/block-library.png"/></div>
+                            <div></div>
+                    </Grid>
                 </Grid>
             </GridItem>
             <GridItem className="overflow-hidden" grow>
