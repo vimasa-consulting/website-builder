@@ -47,46 +47,181 @@ const solutionToUserPain3Component = (editor: Editor) => {
                 traits: [],
                 components: `
                 <section class="${classPrefix}-section">
-                  <h1 class="${classPrefix}-title">Highlight User’s Emotional Struggles</h1>
-                  <h3 class="${classPrefix}-subTitle">
-                     In empathetic words, give hope that your product can solve their
-                     emotional pain & challenges
-                  </h3>                  
+                  <div class="${classPrefix}-contentContainer">
+                    <h1 class="${classPrefix}-title">Highlight User’s Emotional Struggles</h1>
+                    <hr class="${classPrefix}-hr" />
+                    <p class="${classPrefix}-subTitle">
+                      In empathetic words, give hope that your product can solve their
+                      emotional pain & challenges
+                    </p>          
+                    <div class="${classPrefix}-painPointsContainer">
+                      <div class="${classPrefix}-painPointsWrapper">
+                        <div class="${classPrefix}-painPoint">
+                        <p class="${classPrefix}-painPointText">Pain Point 1</p>
+                        </div>
+                        <div class="${classPrefix}-painPoint">
+                        <p class="${classPrefix}-painPointText">Pain Point 2</p>
+                        </div>
+                      </div>
+                      <div class="${classPrefix}-painPointsWrapper">
+                        <div class="${classPrefix}-painPoint">
+                        <p class="${classPrefix}-painPointText">Pain Point 3</p>
+                        </div>
+                        <div class="${classPrefix}-painPoint">
+                        <p class="${classPrefix}-painPointText">Pain Point 4</p>
+                        </div>
+                      </div>
+                      <div class="${classPrefix}-painPointsWrapper">
+                        <div class="${classPrefix}-painPoint">
+                        <p class="${classPrefix}-painPointText">Pain Point 5</p>
+                        </div>
+                        <div class="${classPrefix}-painPoint">
+                        <p class="${classPrefix}-painPointText">Pain Point 6</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="${classPrefix}-imageWrapper">
+                    <img class="${classPrefix}-image" src="https://placehold.co/403x793" alt="Image" />
+                  </div>
                 </section>
                                 `,
                 styles: `
                 .${classPrefix}-section {
                     background-color: #fff;
                     display: flex;
-                    flex-direction: column;
-                    padding: 0 80px;
-                    max-height: 800px;
-                    height: 70vh;
+                    justify-content: flex-end;
+                    gap: 190px;
+                    max-width: 1440px;
+                    margin: 0 auto;
                   }
-                  
+                 .${classPrefix}-contentContainer {
+                  margin-top: 145px;
+                  margin-bottom: 195px;
+                  max-width: 552px;
+                 } 
                   .${classPrefix}-title {
-                    font-size: 30px;
                     font-family: Inter, sans-serif;
-                    text-align: center;
-                    margin-top: 80px;
-                    margin-bottom: 8px;
+                    margin: 0px;
+                    margin-bottom: 27px;
+                    max-width: 450px;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
                   }
-
                   .${classPrefix}-subTitle {
-                    text-align: center;
-                    padding: 0 31%;
                     font-family: Inter, sans-serif;
-                    font-weight: 500;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                    margin-top: 27px;
+                    margin-bottom: 50px;
+                    padding-right: 100px;
                   }
-
-                  @media (max-width: 425px) {
+                  .${classPrefix}-imageWrapper {
+                    width: 403px;
+                    height: 793px;
+                    border-top-left-radius: 30px;
+                    border-bottom-left-radius: 30px;
+                  }
+                  .${classPrefix}-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-top-left-radius: 30px;
+                    border-bottom-left-radius: 30px;
+                  }
+                  .${classPrefix}-painPointsContainer {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 34px;
+                  }
+                  .${classPrefix}-painPointsWrapper {
+                    display: flex;
+                    gap: 65px;
+                  }
+                  .${classPrefix}-painPoint {
+                    border-radius: 20px;
+                    background: #E9E9E9;
+                    width: 244px;
+                    height: 48px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  }
+                  .${classPrefix}-painPointText {
+                    color: #000;
+                    text-align: center;
+                    font-family: Inter, sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    margin: 0px;
+                  }
+                  @media (max-width: 400px) {
                     .${classPrefix}-section {
-                      padding: 0 20px;
+                      flex-direction: column;
                     }
-
-                    .${classPrefix}-subTitle, .${classPrefix}-stepDescription {
-                        padding: 0px;
+                    .${classPrefix}-title {
+                      margin-bottom: 13px;
+                      max-width: 310px;
+                      font-size: 26px;
+                      line-height: 35px;
                     }
+                    .${classPrefix}-subTitle {
+                      font-size: 13px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 140%;
+                      margin-top: 19px;
+                      margin-bottom: 35px;
+                      padding-right: 50px;
+                    }
+                    .${classPrefix}-hr {
+                      max-width: 320px;
+                      margin-left: 0;
+                    } 
+                    .${classPrefix}-contentContainer {
+                      margin-top: 41px;
+                      margin-left: 30px;
+                      margin-bottom: 37px;
+                     }
+                     .${classPrefix}-painPointsContainer {
+                      gap: 20px;
+                      margin-top: 20px;
+                      padding-top: 20px;
+                    }
+                     .${classPrefix}-painPointsWrapper {
+                      flex-direction: column;
+                      gap: 20px;
+                    }
+                    .${classPrefix}-painPoint {
+                      width: 148px;
+                      height: 30px;
+                      border-radius: 20px;
+                    }
+                    .${classPrefix}-painPointText {
+                      font-size: 13px;
+                      font-style: normal;
+                      font-weight: 500;
+                      line-height: normal;
+                    }
+                     .${classPrefix}-imageWrapper {
+                      position: absolute;
+                      width: 167px;
+                      height: 267px;
+                      right: 0;
+                      top: 215px;
+                      border-top-left-radius: 10px;
+                      border-bottom-left-radius: 10px;
+                    } 
+                     .${classPrefix}-image {
+                      border-top-left-radius: 10px;
+                      border-bottom-left-radius: 10px;
+                    } 
                   }
                   
                 `,
