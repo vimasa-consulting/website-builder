@@ -8,5 +8,6 @@ export const ROUTES = {
   TIPS: '/tips',
   ANALYTICS: '/analytics',
   DOMAINS: '/domains',
-  SETTINGS: '/settings'
+  SETTINGS: '/settings',
+  STUDIO: '/studio'
 }
