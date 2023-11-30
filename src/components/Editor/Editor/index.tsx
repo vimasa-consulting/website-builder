@@ -17,7 +17,7 @@ import EditorLeftSidebar from "./EditorLeftSidebar";
 import EditorRightSidebar from "./EditorRightSidebar";
 import EditorTopbar from "./EditorTopbar";
 import { getEditorOptions } from "./editorOptions";
-
+import initCustomBlocks from "@/components/Editor/CustomBlocks/initialization";
 
 export default observer(function EditorApp() {
   const { projectType, editorConfig, editorKey, setEditor } = useAppEditorStore();
@@ -27,8 +27,11 @@ export default observer(function EditorApp() {
   ], [projectType, editorKey]);
   const onEditor = (editor: Editor) => {
     setEditor(editor);
-    (window as any).editor = editor;
+    (window as any).editor = editor;    
+    const deviceManager = editor.Devices;
+    deviceManager.remove("tablet");
 
+    initCustomBlocks(editor);
     // Test infinite canvas
     editor.onReady(() => {
       // editor.Canvas.setZoom(70);
