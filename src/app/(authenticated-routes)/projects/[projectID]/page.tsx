@@ -7,6 +7,9 @@ import { useCallback, useEffect, useState } from "react";
 import { createFileForProject, deleteFileByFileId, getAllFilesByProjectId } from "@/services/FilesService";
 import { FileStatus, FileTableData } from "@/types/file";
 import GetStarted from "@/components/Project/GetStarted";
+import NewItemCard from "@/components/Project/NewItemCard";
+import ItemCard from "@/components/Project/ItemCard";
+import CardItemSkeleton from "@/components/Project/CardItemSkeleton";
 
 export interface NewProjectPayload {
   inputOneData: string;
@@ -85,8 +88,8 @@ export default function Page({ params }: { params: { projectID: string } }) {
     <div className="flex flex-col pb-14">
       {/* <RecentSection itemType="File" recentItems={recentFiles} /> */}
       <GetStarted projectID={params.projectID} />
-      <NewItem itemType="File" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} />
-      {
+      {/* <NewItem itemType="File" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} /> */}
+      {/* {
         isAddNewProjectModalOpen &&
         <NewItemPopup
           inputOneLabel="File Name"
@@ -97,13 +100,21 @@ export default function Page({ params }: { params: { projectID: string } }) {
           handleSubmit={handleNewFileSubmit}
           popupTitle="Add New File"
         />
-      }
-      <ItemListing
+      } */}
+      <h3 className="text-xl">All Files</h3>
+      <div className="flex flex-wrap mt-5 gap-3">
+        {tableData?.length ?
+            tableData.map((project: any) => <ItemCard itemType="File" key={project._id} project={project} />)
+         :
+        Array.from({length: 2}).map((_, index) => <CardItemSkeleton key={index} />)
+        }
+      </div>
+      {/* <ItemListing
         tableData={tableData}
         navigationBaseURL="/editor"
         handleItemDeletion={handleFileDeletion}
         columnHeaders={columnHeaders}
-      />
+      /> */}
     </div>
   );
 }

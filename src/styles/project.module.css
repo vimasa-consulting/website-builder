@@ -1,8 +1,35 @@
 .itemImage {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 10px;
+  width: 286px;
+  height: 166px;
 }
 
 .newItem > div {
   padding: 1rem;
+}
+
+.title {
+  display: flex;
+
+}
+
+.projectName {
+  font-family: Inter, sans-serif;
+  font-size: 14.039px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25.002px;
+  letter-spacing: 0.421px;
+  margin: 0px;
+}
+
+.recentlyEdited {
+  color: #FFF;
+  font-family: Inter, sans-serif;
+  font-size: 12.033px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25.002px;
+  letter-spacing: 0.361px;
+  margin: 0px;
 }
