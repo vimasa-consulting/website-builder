@@ -5,6 +5,7 @@ import GrapesJSComponent from "./_components/grapejs";
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { getFile } from "@/services/FilesService";
+import "@/styles/editor-legacy.css";
 
 const EditorPage = () => {
 

@@ -14,6 +14,7 @@ import RecentItem from "@/components/Project/RecentItem";
 import CardItemSkeleton from "@/components/Project/CardItemSkeleton";
 import ItemCard from "@/components/Project/ItemCard";
 import NewItemCard from "@/components/Project/NewItemCard";
+import "@/styles/editor-legacy.css";
 
 export interface NewProjectPayload {
   inputOneData: string;

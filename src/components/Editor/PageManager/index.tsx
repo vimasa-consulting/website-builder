@@ -70,9 +70,9 @@ export default function PageManager({ pages, selected, select, add, remove }: Pa
                     <Icon path={mdiTextBoxMultiple} size={icon.s}/>
                 </GridItem>
                 <GridItem grow>Pages</GridItem>
-                <GridItem onClick={addPage}>
+                {/*<GridItem onClick={addPage}>
                     <Icon path={mdiPlus} size={icon.s}/>
-                </GridItem>
+                </GridItem>*/}
             </Grid>
         )} open>
             <Resizable className={cx(['text-sm overflow-auto', br.bt, cl.br])} height={200} bottom>

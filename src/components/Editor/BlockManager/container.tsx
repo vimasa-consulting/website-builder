@@ -51,8 +51,21 @@ export default observer(function BlockManagerContainer() {
                     title={t('blocks')}
                     onClose={toggleOpen}
                     className={pad.xyS}
-                    actions={actions}
+                    //actions={actions}
                 />
+            </GridItem>
+            <GridItem>
+                <Grid className="grid grid-cols-1 gap-2 p-2">                    
+                    <Grid className={cx('cursor-pointer py-2 px-5 transition-colors', br.b, br.rnd, cl.br, cl.hTAo, cl.hBgH)}
+                        //onDragStart={() => onDragStart(block)}
+                        //onDragEnd={onDragEnd}
+                        items="center"
+                        col>
+                            <div>Persuation Blocks</div>
+                            <div className="block-media" ><img width="300px" height="300px" src="/editor/block-library.png"/></div>
+                            <div></div>
+                    </Grid>
+                </Grid>
             </GridItem>
             <GridItem className="overflow-hidden" grow>
                 <WithEditor>

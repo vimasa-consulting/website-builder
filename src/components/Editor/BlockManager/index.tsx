@@ -22,17 +22,19 @@ export default observer(function BlockManager() {
     const blockLabel = (block: Block) => t(block.getId()) || block.getLabel();
     // @ts-ignore
     const blocksMap = Blocks.getAll().reduce((res, item) => {
-        const ctg = item.getCategoryLabel();
-
+        const ctg = item.getCategoryLabel(); 
+        const skipCat=['Logic','Emotion','Value','Urgency','Trust','First Impression','Brand Connect','User Actions'].includes(ctg);
         if (searchValue &&  !includesSearch(ctg, searchValue) && !includesSearch(blockLabel(item), searchValue)) {
             return res;
         }
 
         const ctgItem = res[ctg];
-        if (!ctgItem) {
-            res[ctg] = [item];
-        } else {
-            ctgItem.push(item);
+        if(!skipCat){
+            if (!ctgItem) {
+                res[ctg] = [item];
+            } else {
+                ctgItem.push(item);
+            }    
         }
         return res;
     }, {} as MapCategoryBlocks);
@@ -48,9 +50,9 @@ export default observer(function BlockManager() {
 
     return (
         <Grid col full>
-            <GridItem className={cx('pb-3', pad.xyS, br.bb, cl.br)}>
+            {/*<GridItem className={cx('pb-3', pad.xyS, br.bb, cl.br)}>
                 <InputField size="s" value={searchValue} onInput={setSearchValue} placeholder="Search..." type="search"/>
-            </GridItem>
+            </GridItem>*/}
             <GridItem grow className={fx.scrollY}>
                 {allBlocksMap.map((cat, index) => (
                     <Accordion

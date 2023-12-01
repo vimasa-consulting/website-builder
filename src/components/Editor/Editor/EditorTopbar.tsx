@@ -40,11 +40,6 @@ export default observer(function EditorTopbar() {
               </GridItem>
             </Grid>
         </GridItem>
-        <GridItem className={cx('transition-transform absolute top-0 left-0 z-10', !isInPreview && '-translate-y-full')}>
-          <Button className={cx('m-4', cl.bg)} onClick={() => editor?.Commands.stop('core:preview')}>
-              <Icon path={mdiEyeOff} size={icon.s}/>
-          </Button>
-        </GridItem>
       </>
     );
   });
