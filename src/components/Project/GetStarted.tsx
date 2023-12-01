@@ -14,6 +14,7 @@ import {
 import { useRouter } from "next/navigation";
 import AuthContext from "@/context/identity/AuthContext";
 import checkMark from '../../public/checkmark.png'
+import { createProjectForOrganization } from "@/services/ProjectsService";
 
 export interface NewProjectPayload {
   inputOneData: string;
@@ -21,17 +22,18 @@ export interface NewProjectPayload {
 }
 
 interface Props {
-  projectID: string
+  projectID?: string
 }
 
 const videoURL = "https://www.youtube.com/embed/L3tsYC5OYhQ"
 
-export default function GetStarted({ projectID }: Props) {
+export default function GetStarted({ projectID = '' }: Props) {
   const router = useRouter();
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] =
     useState(false);
   const [tableData, setTableData] = useState<FileTableData[]>([]);
-  const { cachedAuthUser } = useContext(AuthContext);
+  const { cachedAuthUser, cachedUser } = useContext(AuthContext);
+  const [loadingSmartBuilder, setLoadingSmartBuilder] = useState(false)
 
   function closeModalHandler() {
     setIsAddNewProjectModalOpen(false);
@@ -39,21 +41,33 @@ export default function GetStarted({ projectID }: Props) {
 
   async function handleNewFileSubmit() {
     try {
+      let id = projectID
+      if(!id) {
+        setLoadingSmartBuilder(true)
+        const newProjectPayload = {
+          name: 'Untitled',
+          projectHostingAlias: '',
+          collaborators: [],
+          organizationId: cachedUser?.organizations[0] || '',
+        }
+  
+        const newProjectResponse = await createProjectForOrganization(newProjectPayload)
+  
+        id = newProjectResponse.data._id
+      }
       const newFilePayload = {
-        name: "test",
-        slug: "test-test",
+        name: "Untitled",
+        slug: "test",
         htmlHeadContent: '',
         htmlBodyContent: '',
         status: FileStatus.DRAFT,
         builderData: '',
-        projectId: projectID
+        projectId: id
       };
 
       const newFileResponse = await createFileForProject(newFilePayload);
       const newFile = newFileResponse.data;
-      console.log(newFile, "newFile");
 
-      setTableData((prevState) => [newFile, ...prevState]);
       router.push(`/editor/${newFile._id}`);
     } catch (error) {
       console.log(error);
@@ -65,6 +79,51 @@ export default function GetStarted({ projectID }: Props) {
   //   await handleNewFileSubmit()
   //   // setIsAddNewProjectModalOpen(!isAddNewProjectModalOpen);
   // };
+
+  const navigateToSmartBuilder = async () => {
+    try {
+      let id = projectID
+    if(!id) {
+      setLoadingSmartBuilder(true)
+      const newProjectPayload = {
+        name: 'Untitled',
+        projectHostingAlias: '',
+        collaborators: [],
+        organizationId: cachedUser?.organizations[0] || '',
+      }
+
+      const newProjectResponse = await createProjectForOrganization(newProjectPayload)
+
+      id = newProjectResponse.data._id
+
+      const newFilePayload = {
+        name: "Untitled",
+        slug: "test",
+        htmlHeadContent: '',
+        htmlBodyContent: '',
+        status: FileStatus.DRAFT,
+        builderData: '',
+        projectId: id
+      };
+
+      await createFileForProject(newFilePayload);
+    }
+    router.push(`/questionnaire?projectId=${id}`)
+  } catch(error) {
+    console.log(error)
+  }
+  }
+
+  if(loadingSmartBuilder) {
+    return (
+      <div className="bg-black fixed inset-0 flex items-center justify-center z-50">
+            <div className="relative z-50">
+            <iframe src="https://giphy.com/embed/TuZ8v66TzGeYJW23as" width="480" height="400" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
+            </div>
+      </div>
+    )
+  }
+
 
   return (
     <div className={styles.mainContainer}>
@@ -84,10 +143,10 @@ export default function GetStarted({ projectID }: Props) {
         </div>
         <div className={styles.callToAction}>
           {/* <BuilderCta handleNavigation={handleNavigation} /> */}
-          <Link href={`/questionnaire?projectId=${projectID}`}>
-            {" "}
-            <button className={styles.smartBuilder}> Use Smart Builder {'>'}</button>
-          </Link>
+          {/* <Link href={`/questionnaire?projectId=${projectID}`}>
+            {" "} */}
+            <button className={styles.smartBuilder} onClick={navigateToSmartBuilder}> Use Smart Builder {'>'}</button>
+          {/* </Link> */}
           <button className={styles.buildIt} onClick={handleNewFileSubmit}>
             Build it Yourself {'>'}
           </button>

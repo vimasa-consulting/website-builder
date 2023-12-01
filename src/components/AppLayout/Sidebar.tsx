@@ -14,9 +14,19 @@ export default function Sidebar() {
   // TODO: refactor items
 
   return (
-    <FlowbiteSidebar aria-label="sidebar" className={`${styles.navBar} lg:w-72`}>
-      <FlowbiteSidebar.Items className="">
+    <FlowbiteSidebar aria-label="sidebar" className={`${styles.navBar} w-[304px]`}>
+      <FlowbiteSidebar.Items className="w-[304px] pr-[20px]">
         <FlowbiteSidebar.ItemGroup>
+          <FlowbiteSidebar.Item
+            href={ROUTES.GET_STARTED}
+            as={Link}
+            className={`text-white hover:bg-zinc-600 active:bg-zinc-700 p-3 ${pathname === ROUTES.GET_STARTED ? 'bg-zinc-700' : ''}`}
+          >
+            <p>
+              <span className='pr-2'>🚀</span>
+              Get Started
+            </p>
+          </FlowbiteSidebar.Item>
           <FlowbiteSidebar.Item
             href={ROUTES.PROJECTS}
             as={Link}

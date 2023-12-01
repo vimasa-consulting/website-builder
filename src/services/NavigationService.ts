@@ -9,5 +9,6 @@ export const ROUTES = {
   ANALYTICS: '/analytics',
   DOMAINS: '/domains',
   SETTINGS: '/settings',
-  STUDIO: '/studio'
+  STUDIO: '/studio',
+  GET_STARTED: '/get-started'
 }
