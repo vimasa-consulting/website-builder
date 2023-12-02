@@ -49,22 +49,46 @@ const comparison1Component = (editor: Editor) => {
                 <div class="${classPrefix}-container">
                 <div class="${classPrefix}-card">
                   <h2 class="${classPrefix}-title">Your Product Name</h2>
-                  <img src="https://placehold.co/446x303" alt="Your Product">
+                  <img class="${classPrefix}-mainImage" src="https://placehold.co/446x303" alt="Your Product">
                   <ul class="${classPrefix}-advantageList">
-                    <li>Your brand's key advantage 1</li>
-                    <li>Your brand's key advantage 2</li>
-                    <li>Your brand's key advantage 3</li>
-                    <li>Your brand's key advantage 4</li>
+                    <li>
+                      <img class="${classPrefix}-checkMark"  src="https://img.icons8.com/ios-filled/25/checkmark--v1.png" alt="checkmark--v1"/>
+                      <p class="${classPrefix}-listText">Your brand's key advantage 1</p>
+                    </li>
+                    <li>
+                      <img class="${classPrefix}-checkMark"  src="https://img.icons8.com/ios-filled/25/checkmark--v1.png" alt="checkmark--v1"/>
+                      <p class="${classPrefix}-listText">Your brand's key advantage 2</p>
+                    </li>
+                    <li>
+                      <img class="${classPrefix}-checkMark"  src="https://img.icons8.com/ios-filled/25/checkmark--v1.png" alt="checkmark--v1"/>
+                      <p class="${classPrefix}-listText">Your brand's key advantage 3</p>
+                    </li>
+                    <li>
+                      <img class="${classPrefix}-checkMark"  src="https://img.icons8.com/ios-filled/25/checkmark--v1.png" alt="checkmark--v1"/>
+                      <p class="${classPrefix}-listText">Your brand's key advantage 4</p>
+                    </li>
                   </ul>
                 </div>
                 <div class="${classPrefix}-card">
                   <h2 class="${classPrefix}-title">Others</h2>
-                  <img src="https://placehold.co/446x303" alt="Competitor Product">
+                  <img class="${classPrefix}-mainImage" src="https://placehold.co/446x303" alt="Competitor Product">
                   <ul class="${classPrefix}-shortComingList">
-                    <li>Competitor's Shortcoming 1</li>
-                    <li>Competitor's Shortcoming 2</li>
-                    <li>Competitor's Shortcoming 3</li>
-                    <li>Competitor's Shortcoming 4</li>
+                    <li>
+                    <img class="${classPrefix}-checkMark" src="https://img.icons8.com/material-rounded/25/multiply--v1.png" alt="multiply--v1"/>
+                    <p class="${classPrefix}-listText">Competitor's Shortcoming 1</p>
+                    </li>
+                    <li>
+                     <img class="${classPrefix}-checkMark" src="https://img.icons8.com/material-rounded/25/multiply--v1.png" alt="multiply--v1"/>
+                    <p class="${classPrefix}-listText">Competitor's Shortcoming 2</p>
+                    </li>
+                    <li>
+                     <img class="${classPrefix}-checkMark" src="https://img.icons8.com/material-rounded/25/multiply--v1.png" alt="multiply--v1"/>
+                    <p class="${classPrefix}-listText">Competitor's Shortcoming 3</p>
+                    </li>
+                    <li>
+                     <img class="${classPrefix}-checkMark" src="https://img.icons8.com/material-rounded/25/multiply--v1.png" alt="multiply--v1"/>
+                    <p class="${classPrefix}-listText">Competitor's Shortcoming 4</p>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -73,7 +97,6 @@ const comparison1Component = (editor: Editor) => {
                 .${classPrefix}-container {
                   display: flex;
                   justify-content: space-around;
-                  padding: 0 20px;
                   font-family: Inter, sans-serif;
                   max-width: 1440px;
                   margin: 0 auto;
@@ -92,13 +115,10 @@ const comparison1Component = (editor: Editor) => {
                   border-left: 1px solid #ccc;
                   padding-left: 10px;
                 }
-                .${classPrefix}-card img {
-                  max-width: 100%;
-                  height: auto;
-                  display: block;
-                  margin: 0 auto 20px;
-                  background: #f0f0f0;
-                  border-radius: 10px;
+                .${classPrefix}-checkMark {
+                  display: inline-block;
+                  margin-bottom: -6px;
+                  margin-right: 6px;
                 }
                 .${classPrefix}-title {
                   text-align: center;
@@ -110,40 +130,76 @@ const comparison1Component = (editor: Editor) => {
                 .${classPrefix}-advantageList, .${classPrefix}-shortComingList {
                   list-style: none;
                   padding: 0;
-                  margin-top: 50px;
+                  margin-top: 70px;
+                  margin-bottom: 37px;
                 }
                 .${classPrefix}-advantageList li::before, .${classPrefix}-shortComingList li::before {
                   padding-right: 10px;
                   font-weight: bold;
                 }
-                .${classPrefix}-advantageList li::before {
-                  content: '✓';
-                  font-size: 20px;
-                }
-                .${classPrefix}-shortComingList li::before {
-                  content: '✕';
-                  font-size: 20px;
-                }
-
-               .${classPrefix}-shortComingList li {
+                .${classPrefix}-shortComingList li {
                   margin-bottom: 47px;
+                  font-size: 15px;
                 }
-               .${classPrefix}-advantageList li {
+                .${classPrefix}-advantageList li {
                   margin-bottom: 47px;
+                  font-size: 15px;
+                }
+                .${classPrefix}-mainImage {
+                  border-radius: 10px;
+                }
+                .${classPrefix}-listText {
+                  margin: 0px;
+                  display: inline-block;
                 }
                 @media (max-width: 400px) {
                   .${classPrefix}-container {
-                    flex-direction: column;
                     align-items: center;
                   }
                   .${classPrefix}-card {
                     width: 100%;
                     border: none !important;
                   }
+                  .${classPrefix}-mainImage {
+                    width: 172px;
+                    height: 117px;
+                  }
+                  .${classPrefix}-shortComingList li {
+                    margin-bottom: 16px;
+                    font-size: 13px;
+                    display: flex;
+                    align-items: center;
+                    gap: 2px;
+                    line-height: normal;
+                  }
+                  .${classPrefix}-advantageList {
+                    padding-left: 14px;
+                    margin-top: 37px;
+                    margin-bottom: 41px;
+                  }
+                  .${classPrefix}-shortComingList {
+                    padding-left: 14px;
+                    padding-right: 14px;
+                    margin-top: 37px;
+                    margin-bottom: 41px;
+                  }
 
+                  .${classPrefix}-advantageList li {
+                    margin-bottom: 16px;
+                    font-size: 13px;
+                    display: flex;
+                    align-items: center;
+                    gap: 2px;
+                    line-height: normal;
+                  }
+                  .${classPrefix}-checkMark {
+                    height: 20px;
+                    margin-bottom: unset;
+                  }
                   .${classPrefix}-title {
-                    margin-bottom: 30px;
-                    font-size: 25px;
+                    margin-bottom: 28px;
+                    font-size: 18px;
+                    margin-top: 45px;
                   }
                 }
                 `,
