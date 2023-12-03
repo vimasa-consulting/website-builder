@@ -426,40 +426,60 @@ const showcaseV1Component = (editor: Editor) => {
                     max-width: 100%;
                   }
                   @media (max-width: 425px) {
-                    .${classPrefix}-section {
-                      padding: 0 20px;
-                    }
-                  
-                    .${classPrefix}-cardNumber {
-                      white-space: initial;
-                      padding: 0 20px;
-                    }
-                  
-                    .${classPrefix}-column {
-                      width: 100%;
-                    }
-                  
-                    .${classPrefix}-cardsWrapper {
-                      max-width: 100%;
-                      margin: 40px 0;
-                    }
-                  
                     .${classPrefix}-cards {
-                      flex-direction: column;
-                      align-items: stretch;
-                      gap: 40px;
-                    }
-                  
-                    .${classPrefix}-card {
+                      gap: 20px;
                       width: 100%;
+                      display: flex;
+                      flex-direction: column;
                     }
-                  
-                    .${classPrefix}-imageWrapper {
-                      padding: 100px 20px;
+
+                    .${classPrefix}-cardUnique {
+                      position: relative;
+                      line-height: normal;
+                      width: 82%;
+                      margin-left: 0px;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      gap: 50px;
+                      max-width: 262px;
+                      max-height: 262px;
+                      border-radius: 10px;
+                      margin-bottom: 204px;
+                      margin-top: -77px;
                     }
-                  
-                    .${classPrefix}-img {
-                      margin-bottom: 10px;
+
+                    .${classPrefix}-section {
+                      background-color: #fff;
+                      display: flex;
+                      flex-direction: column;
+                      padding-top: 95px;
+                      padding: 0 40px;
+                      max-height: 800px;
+                      font-family: Inter, sans-serif;
+                    }
+
+                    .${classPrefix}-cardsWrapper:last-child {
+                      margin-top: 10  px;
+                      margin-left: 17px;
+                    }
+
+                    .${classPrefix}-cardsWrapper:first-child {
+                      margin-bottom: 0px;
+                    }
+
+                    .${classPrefix}-descWrapper {
+                      margin-left: 20px;
+                    }
+
+                    .${classPrefix}-imageWrapperRounded {
+                      margin-top: 0px;
+                    }
+
+                    .${classPrefix}-card {
+                      width: 82%;
+                      max-height: 344px;
                     }
                   }
                   
