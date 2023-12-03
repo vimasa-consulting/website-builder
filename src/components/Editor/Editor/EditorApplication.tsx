@@ -53,8 +53,8 @@ function EditorApplication({ options }: AppProps) {
       editorConfig: {
         // project: blankWebProject,
         defaultProject: landingPageProject,
-        gjsScript: `https://unpkg.com/grapesjs@${GJS_VERSION}`,
-        gjsStyle: `https://unpkg.com/grapesjs@${GJS_VERSION}/dist/css/grapes.min.css`,
+        gjsScript: `/unpkg.com/grapesjs@${GJS_VERSION}`,
+        gjsStyle: `/unpkg.com/grapesjs@${GJS_VERSION}/dist/css/grapes.min.css`,
       }
     },
   };

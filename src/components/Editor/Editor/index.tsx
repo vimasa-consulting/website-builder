@@ -18,6 +18,22 @@ import EditorRightSidebar from "./EditorRightSidebar";
 import EditorTopbar from "./EditorTopbar";
 import { getEditorOptions } from "./editorOptions";
 import initCustomBlocks from "@/components/Editor/CustomBlocks/initialization";
+import blocksBasicPlugin from "grapesjs-blocks-basic";
+import formsPlugin from "grapesjs-plugin-forms";
+import countdownPlugin from "grapesjs-component-countdown";
+import exportPlugin from "grapesjs-plugin-export";
+// @ts-ignore
+import tabsPlugin from "grapesjs-tabs";
+import customCodePlugin from "grapesjs-custom-code";
+// @ts-ignore
+import touchPlugin from "grapesjs-touch";
+import parserPostCSSPlugin from "grapesjs-parser-postcss";
+import tooltipPlugin from "grapesjs-tooltip";
+import tuiImageEditorPlugin from "grapesjs-tui-image-editor";
+import typedPlugin from "grapesjs-typed";
+import styleBGPlugin from "grapesjs-style-bg";
+import presetWebpagePlugin from "grapesjs-preset-webpage";
+import navbar from "grapesjs-navbar";
 
 export default observer(function EditorApp() {
   const { projectType, editorConfig, editorKey, setEditor } = useAppEditorStore();
@@ -96,6 +112,25 @@ export default observer(function EditorApp() {
       // editor.Canvas.fitViewport({ ignoreHeight: true, gap: 50 });
     });
   }
+  const plugins=[
+    blocksBasicPlugin,
+    formsPlugin,
+    countdownPlugin,
+    exportPlugin,
+    tabsPlugin,
+    customCodePlugin,
+    touchPlugin,
+    parserPostCSSPlugin,
+    tooltipPlugin,
+    tuiImageEditorPlugin,
+    typedPlugin,
+    styleBGPlugin,
+    //presetWebpagePlugin,
+    navbar,
+    // TODO: Undo once fixed
+    // lorySlider,
+    // table,
+  ];
 
   return (
     <GjsEditor
@@ -105,7 +140,7 @@ export default observer(function EditorApp() {
       //grapesjs={editorConfig.gjsScript!}
       grapesjsCss={editorConfig.gjsStyle}
       options={gjsOpts}
-      plugins={gjsPlugins}
+      plugins={plugins}
       onEditor={onEditor}
     >
       <Grid className="h-full overflow-hidden">
