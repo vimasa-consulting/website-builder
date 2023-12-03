@@ -5,14 +5,6 @@
         {
             "id":"page-1",
             "name": "Home"
-        },
-        {
-            "id":"page-2",
-            "name": "About Us"
-        },    
-        {
-            "id":"page-3",
-            "name": "Contact Us"
         }
     ]    
 }

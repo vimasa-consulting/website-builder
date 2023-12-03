@@ -14,6 +14,7 @@ import Spinner from "../Spinner";
 import { cl, tsOpac } from "../theme";
 import PluginManager from "../Modal/contents/PluginManager";
 import { usePluginStore } from "../../store/pluginStore";
+import BlockSearchPopup from "../BlockSearchPopup";
 
 export default observer(function EditorPage() {
     const appEditorStore = useAppEditorStore();
@@ -86,6 +87,9 @@ export default observer(function EditorPage() {
     return (
         <Grid className={cx('relative transition-colors h-full', cl.bg, cl.txt)} justify="center" items="center" col>
             <EditorApp/>
+            <div style={{ display: "none" }}>
+                <BlockSearchPopup />
+            </div>
             <Transition show={!projectIdToLoad || !editorKey} as={Fragment} {...tsOpac}>
                 <Spinner className={cx('z-10', cl.bg)} abs/>
             </Transition>

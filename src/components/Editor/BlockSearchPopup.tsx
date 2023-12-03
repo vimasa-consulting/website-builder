@@ -9,13 +9,14 @@ import {
   RefinementList,
 } from "react-instantsearch";
 import "instantsearch.css/themes/satellite.css";
+import { useAppEditorStore } from '../store/appEditorStore';
 
 
-interface BlockSearchPopupProps {
-    grapeJSEditor: Editor | null
+interface BlockSearchPopupProps {    
 }
 
-const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) => {
+const BlockSearchPopup: React.FC<BlockSearchPopupProps> = () => {
+  const { editor } = useAppEditorStore();
     const searchClient = algoliasearch(
         "IO4B9E5Q45",
         "a089c7660ed4fcbb8529e4a12ce2836c"
@@ -25,7 +26,7 @@ const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) =>
     function Hit({ hit }) {
         const hitImage = `/editor/blocks/${hit.id}.png`;
         function add(id:string) {
-            grapeJSEditor?.addComponents({ type: id}); grapeJSEditor?.Modal.close();
+          editor?.addComponents({ type: id}); editor?.Modal.close();
         }
         return (
         <article className="articleSection">

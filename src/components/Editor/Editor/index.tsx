@@ -34,6 +34,7 @@ import typedPlugin from "grapesjs-typed";
 import styleBGPlugin from "grapesjs-style-bg";
 import presetWebpagePlugin from "grapesjs-preset-webpage";
 import navbar from "grapesjs-navbar";
+import BlockSearchPopup from '../BlockSearchPopup';
 
 export default observer(function EditorApp() {
   const { projectType, editorConfig, editorKey, setEditor } = useAppEditorStore();
@@ -86,10 +87,10 @@ export default observer(function EditorApp() {
       editor.Commands.add("openPersuasiveBlocks", {
         run(editor, sender) {
           // open a popup and pass editor as props?
-          //const container = document.querySelector("#customModalPopup");
+          const container = document.querySelector("#customModalPopup");
           editor.Modal.open({
             title: "Persuasive Blocks",
-            //content: container,
+            content: container,
           }).onceClose(() => editor.stopCommand("openPersuasiveBlocks"));
         },
         stop() {
@@ -166,7 +167,14 @@ export default observer(function EditorApp() {
             <AssetManager assets={assets} select={select} close={close}/>
           </Container>
         )}
-      </AssetsProvider>      
+      </AssetsProvider>
+      {/* <ModalProvider>
+        {({ open, title, close, content }) => (
+          <Modal open={open} onClose={close} title={title} size="l">
+            { content }
+          </Modal>
+        )}
+        </ModalProvider>*/}
       <CanvasSpots/>
       <BuiltInRTE/>
     </GjsEditor>
