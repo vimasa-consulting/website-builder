@@ -166,14 +166,7 @@ export default observer(function EditorApp() {
             <AssetManager assets={assets} select={select} close={close}/>
           </Container>
         )}
-      </AssetsProvider>
-      <ModalProvider>
-        {({ open, title, close, content }) => (
-          <Modal open={open} onClose={close} title={title} size="l">
-            { content }
-          </Modal>
-        )}
-      </ModalProvider>
+      </AssetsProvider>      
       <CanvasSpots/>
       <BuiltInRTE/>
     </GjsEditor>
