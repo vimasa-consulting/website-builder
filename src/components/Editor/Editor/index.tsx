@@ -141,7 +141,7 @@ export default observer(function EditorApp() {
       //grapesjs={editorConfig.gjsScript!}
       grapesjsCss={editorConfig.gjsStyle}
       options={gjsOpts}
-      plugins={plugins}
+      plugins={gjsPlugins}
       onEditor={onEditor}
     >
       <Grid className="h-full overflow-hidden">
