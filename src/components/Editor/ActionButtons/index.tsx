@@ -125,14 +125,14 @@ export default observer(function ActionButtons() {
         },
         {
             id: 'save',
-            cmd: 'core:undo',
+            cmd: 'saveProject',
             iconPath: mdiContentSave,
             //disabled: () => !UndoManager.hasUndo(),
             title: '',
         },
         {
             id: 'publish',
-            cmd: 'core:redo',
+            cmd: 'publishProject',
             iconPath: mdiPublish,            
             title: '',
         },

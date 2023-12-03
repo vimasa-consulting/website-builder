@@ -38,6 +38,48 @@ export default observer(function EditorApp() {
     initCustomBlocks(editor);
     // Test infinite canvas
     editor.onReady(() => {
+      editor.Commands.add("publishProject", {      
+        run(editor, sender) {
+          console.log('publish project');         
+        },
+        stop() {
+          editor.Modal.close();
+        },
+      });
+      
+      editor.Commands.add("saveProject", {
+        run(editor, sender) {
+          // open a popup and pass editor as props?
+          console.log('saving project');
+        },
+        stop() {
+          editor.Modal.close();
+        },
+      });
+      const projectId="dummy-project";
+      /*editor.Storage.add('remote', {
+        async load() {
+          return await axios.get(`projects/${projectId}`);
+        },
+      
+        async store(data) {
+          return await axios.patch(`projects/${projectId}`, { data });
+        },
+      });*/
+      
+      editor.Commands.add("openPersuasiveBlocks", {
+        run(editor, sender) {
+          // open a popup and pass editor as props?
+          //const container = document.querySelector("#customModalPopup");
+          editor.Modal.open({
+            title: "Persuasive Blocks",
+            //content: container,
+          }).onceClose(() => editor.stopCommand("openPersuasiveBlocks"));
+        },
+        stop() {
+          editor.Modal.close();
+        },
+      });
       // editor.Canvas.setZoom(70);
       // editor.Canvas.setCoords(-30, -30);
       // const firstFrame = editor.Canvas.getFrames()[0];

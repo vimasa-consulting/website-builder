@@ -43,7 +43,9 @@ export default observer(function BlockManagerContainer() {
             icon: mdiViewGridPlus,
         }
     ]), [editor]);
-
+    const onPersuasiveBlockClick=function () {
+        editor?.Commands.run("openPersuasiveBlocks");
+    }
     return (
         <Grid className={classMain} style={{ width: 240 }} col nowrap>
             <GridItem>
@@ -57,8 +59,7 @@ export default observer(function BlockManagerContainer() {
             <GridItem>
                 <Grid className="grid grid-cols-1 gap-2 p-2">                    
                     <Grid className={cx('cursor-pointer py-2 px-5 transition-colors', br.b, br.rnd, cl.br, cl.hTAo, cl.hBgH)}
-                        //onDragStart={() => onDragStart(block)}
-                        //onDragEnd={onDragEnd}
+                        onClick={onPersuasiveBlockClick}
                         items="center"
                         col>
                             <div>Persuation Blocks</div>
