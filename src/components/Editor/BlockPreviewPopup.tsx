@@ -1,15 +1,22 @@
 
-import { Editor } from 'grapesjs';
-import React from 'react';
+import React, { useContext } from 'react';
+import '../../styles/previewblock.css'
+import '../../styles/persuasiveblock.css'
+import AuthContext from '@/context/identity/AuthContext';
+import { useRouter } from 'next/navigation';
+import magicWand from '../../public/projects/magic-wand.png'
+import Image from 'next/image';
 
 interface BlockPreviewPopupProps {
-    grapeJSEditor: Editor | null
+    blockSequence: string
+    handleStartEditing: () => void
 }
 
-const BlockPreviewPopup: React.FC<BlockPreviewPopupProps> = ({ grapeJSEditor }) => {
-    const url = new URL(window.location.href);
-    const block_sequence = url.searchParams.get("block_sequence") || "";     
-    const blocks:string[] = atob(block_sequence).split(",");
+const BlockPreviewPopup: React.FC<BlockPreviewPopupProps> = ({blockSequence, handleStartEditing}) => {
+  const {cachedAuthUser} = useContext(AuthContext)
+  const router = useRouter();
+
+    const blocks:string[] = atob(blockSequence).split(",");
     var uniqueBlocks:string[]=[];
     var uniqueBlocksCount:number[]=[];
     var totalBlocks=blocks.length;
@@ -54,7 +61,6 @@ const BlockPreviewPopup: React.FC<BlockPreviewPopupProps> = ({ grapeJSEditor }) 
             default:
               return "";
           }
-        return ""
     }
     function getBlockDescription(firstChar:string){ 
         switch (firstChar) {
@@ -77,7 +83,6 @@ const BlockPreviewPopup: React.FC<BlockPreviewPopupProps> = ({ grapeJSEditor }) 
             default:
               return "";
           }
-        return ""
     }
     function getBlockStyle(firstChar:string){
         switch (firstChar) {
@@ -100,7 +105,6 @@ const BlockPreviewPopup: React.FC<BlockPreviewPopupProps> = ({ grapeJSEditor }) 
             default:
               return "";
           }
-        return ""
     }
     function getSpanStyle(firstChar:string){
         switch (firstChar) {
@@ -123,12 +127,22 @@ const BlockPreviewPopup: React.FC<BlockPreviewPopupProps> = ({ grapeJSEditor }) 
             default:
               return "";
           }
-        return ""
+    }
+
+    const cancelEditingHandler = ()=> {
+      router.push(`/get-started`)
     }
     return (
         <div id="customModalPreviewPopup" className="preview-modal">     
             <div className="container">
-                <p className="f25">Hi Adarsh!</p>
+                <div className='flex justify-between'>
+                  <button onClick={cancelEditingHandler} className='cancelCta'>Cancel</button>
+                  <button className='startEditingCta' onClick={handleStartEditing}>
+                    <Image src={magicWand} alt="Magic Wand" className='magicWand' />
+                    Start Editing
+                    </button>
+                </div>
+                <p className="f25">Hi {cachedAuthUser?.attributes?.givenName}!</p>
                 <p className="f30">Our experts have built your page for maximum pursuasion</p>
                 <p className="f60">Its built with &nbsp;
                 {

@@ -102,7 +102,7 @@ export default function ItemCard({ item, itemType, setTableData }: Props) {
         console.log(error)
     }
     }
-
+    
     return (
         <div className="max-w-xs mr-[32px] mb-[15px]">
             <Link href={`${itemType === 'Project' ? ROUTES.PROJECTS : ROUTES.EDITOR}/${item._id}`}>

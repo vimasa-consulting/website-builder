@@ -119,17 +119,17 @@ export default function GrapesJSComponent({ fileID }: Props) {
       },
     });
     editor.Commands.add("openPreviewBlocks", {
-      run(editor, sender) {
-        // open a popup and pass editor as props?
-        const container = document.querySelector("#customModalPreviewPopup");
-        editor.Modal.open({
-          title: "Preview Blocks",
-          content: container,
-        }).onceClose(() => editor.stopCommand("openPreviewBlocks"));
-      },
-      stop() {
-        editor.Modal.close();
-      },
+      // run(editor, sender) {
+      //   // open a popup and pass editor as props?
+      //   const container = document.querySelector("#customModalPreviewPopup");
+      //   editor.Modal.open({
+      //     title: "Preview Blocks",
+      //     content: container,
+      //   }).onceClose(() => editor.stopCommand("openPreviewBlocks"));
+      // },
+      // stop() {
+      //   editor.Modal.close();
+      // },
     });
     editor.Commands.add("savePage", {
       run(editor, sender) {
@@ -649,9 +649,6 @@ export default function GrapesJSComponent({ fileID }: Props) {
       />
       <div style={{ display: "none" }}>
         <BlockSearchPopup grapeJSEditor={grapeJSEditor} />
-      </div>
-      <div style={{ display: "none" }}>
-        <BlockPreviewPopup grapeJSEditor={grapeJSEditor} />
       </div>
       {isAddNewProjectModalOpen && (
         <CustomBlockPopup

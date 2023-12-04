@@ -4,7 +4,7 @@ import Image from "next/image";
 // import BuilderCta from "../../../components/GetStarted/BuilderCta";
 import "../../../styles/questionnaire.scss";
 import wizard from "../../../public/projects/Wizard2.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { PopupButton } from "@typeform/embed-react";
 import NewItemPopup from "@/components/Project/NewItemPopup";
 import { createProjectForOrganization } from "@/services/ProjectsService";
@@ -14,6 +14,9 @@ import axios from "axios";
 import { encode as btoa } from 'base-64';
 import { FileStatus } from "@/types/file";
 import { createFileForProject } from "@/services/FilesService";
+import AuthContext from "@/context/identity/AuthContext";
+import BlockPreviewPopup from "@/components/Editor/BlockPreviewPopup";
+import "../../../styles/previewblock.css";
 
 export interface NewProjectPayload {
   inputOneData: string;
@@ -261,9 +264,12 @@ const fetchFormResponse = async (formId: string, responseId: string): Promise<st
 export default function Page() {
   const router = useRouter();
   const [startQuiz1, setStartQuiz1] = useState(false);
-  const [tableData, setTableData] = useState<ProjectTableData[]>([]);
+  const [loadingSmartBuilder, setLoadingSmartBuilder] = useState(false)
+  const [showPreviewPopup, setShowPreviewPopup] = useState(false)
+  const [blockSequenceState, setBlockSequenceState] = useState('')
 
   const searchParams = useSearchParams();
+  const { cachedUser } = useContext(AuthContext);
   const projectID = searchParams.get('projectId');
 
   // const startQuiz = () => {
@@ -273,24 +279,59 @@ export default function Page() {
   const onFormSubmit = async (typeformObject: any) => {
     const formId = typeformObject.formId;
     const responseId = typeformObject.responseId
-    const blockSequence = await fetchFormResponse(formId, responseId);
-    // create file
-    const newFilePayload = {
-      name: 'Home', // TODO
-      slug: '/home', // TODO
-      htmlHeadContent: '',
-      htmlBodyContent: '',
-      status: FileStatus.DRAFT,
-      builderData: '',
-      projectId: projectID!
-    };
-    const newFileResponse = await createFileForProject(newFilePayload);
-    const newFile = newFileResponse.data;
-    router.push(`/editor/${newFile._id}?block_sequence=${blockSequence}`);
+    setLoadingSmartBuilder(true)
+
+    try {
+      const blockSequence = await fetchFormResponse(formId, responseId);
+      console.log('x', blockSequence)
+      setBlockSequenceState(blockSequence)
+      setLoadingSmartBuilder(false)
+      setShowPreviewPopup(true)
+    } catch(error) {
+      console.log(error)
+      setLoadingSmartBuilder(false)
+    }
   };
 
   function closeModalHandler() {
     setStartQuiz1(!startQuiz1);
+  }
+
+  const startEditingHandler = async () => {
+    try {
+      setShowPreviewPopup(false)
+      setLoadingSmartBuilder(true)
+      let id = projectID || ''
+      
+      if(!projectID) {
+        const newProjectPayload = {
+          name: 'Untitled',
+          projectHostingAlias: '',
+          collaborators: [],
+          organizationId: cachedUser?.organizations[0] || '',
+        }
+  
+        const newProjectResponse = await createProjectForOrganization(newProjectPayload)
+        id = newProjectResponse.data._id
+      }
+  
+        const newFilePayload = {
+          name: "Untitled",
+          slug: "/untitled",
+          htmlHeadContent: '',
+          htmlBodyContent: '',
+          status: FileStatus.DRAFT,
+          builderData: '',
+          projectId: id 
+        };
+  
+      const newFileResponse = await createFileForProject(newFilePayload);
+      const newFile = newFileResponse.data;
+      router.push(`/editor/${newFile._id}?block_sequence=${blockSequenceState}`);
+      } catch(error) {
+        console.log(error)
+        setLoadingSmartBuilder(false)
+      }
   }
 
   async function handleNewProjectSubmit(payload: NewProjectPayload) {
@@ -314,6 +355,16 @@ export default function Page() {
     // }
 
     // closeModalHandler();
+  }
+
+  if(loadingSmartBuilder) {
+    return (
+      <div className="bg-black fixed inset-0 flex items-center justify-center z-50">
+            <div className="relative z-50">
+            <iframe src="https://giphy.com/embed/TuZ8v66TzGeYJW23as" width="480" height="400" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
+            </div>
+      </div>
+    )
   }
 
   return (
@@ -345,7 +396,7 @@ export default function Page() {
                     onSubmit={onFormSubmit}
                     className="smart-builder"
                   >
-                    Lets get started{" "}
+                    Let&apos;s Get Started {">"}
                   </PopupButton>
                 </div>
                 {/* <TypeformModal /> */}
@@ -354,6 +405,10 @@ export default function Page() {
           )}
         </div>
       </div>
+      {
+        showPreviewPopup && 
+        <BlockPreviewPopup blockSequence={blockSequenceState} handleStartEditing={startEditingHandler}/>
+      }
       {startQuiz1 && (
         <NewItemPopup
           inputOneLabel="Project Name"
