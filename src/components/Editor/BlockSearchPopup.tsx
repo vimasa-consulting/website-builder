@@ -12,11 +12,11 @@ import "instantsearch.css/themes/satellite.css";
 import { useAppEditorStore } from '../store/appEditorStore';
 
 
-interface BlockSearchPopupProps {    
+interface BlockSearchPopupProps {
+  grapeJSEditor: Editor | null
 }
 
-const BlockSearchPopup: React.FC<BlockSearchPopupProps> = () => {
-  const { editor } = useAppEditorStore();
+const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) => {  
     const searchClient = algoliasearch(
         "IO4B9E5Q45",
         "a089c7660ed4fcbb8529e4a12ce2836c"
@@ -26,7 +26,7 @@ const BlockSearchPopup: React.FC<BlockSearchPopupProps> = () => {
     function Hit({ hit }) {
         const hitImage = `/editor/blocks/${hit.id}.png`;
         function add(id:string) {
-          editor?.addComponents({ type: id}); editor?.Modal.close();
+          grapeJSEditor?.addComponents({ type: id}); grapeJSEditor?.Modal.close();
         }
         return (
         <article className="articleSection">

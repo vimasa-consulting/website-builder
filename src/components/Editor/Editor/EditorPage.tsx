@@ -87,9 +87,7 @@ export default observer(function EditorPage() {
     return (
         <Grid className={cx('relative transition-colors h-full', cl.bg, cl.txt)} justify="center" items="center" col>
             <EditorApp/>
-            <div style={{ display: "none" }}>
-                <BlockSearchPopup />
-            </div>
+            <div style={{ display: "none" }}>hello</div>
             <Transition show={!projectIdToLoad || !editorKey} as={Fragment} {...tsOpac}>
                 <Spinner className={cx('z-10', cl.bg)} abs/>
             </Transition>
