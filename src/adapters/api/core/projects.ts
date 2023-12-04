@@ -21,3 +21,13 @@ export async function deleteProject(projectId: string) {
     headers: (await getAuthHeaders()),
   });
 }
+
+export async function update(project: Project) {
+  const payload: any = {
+    ...project
+  };
+  delete payload._id;
+  return apiInstance.patch(`${RESOURCE_PATH}/${project._id}`, payload, {
+    headers: (await getAuthHeaders()),
+  });
+}
