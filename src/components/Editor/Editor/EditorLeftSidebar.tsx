@@ -38,11 +38,11 @@ export default observer(function EditorLeftSidebar() {
             onResizeStop={onResizeStop}
         >
           <Grid full col>
-            <GridItem className="w-full">
+            {/*<GridItem className="w-full">
               <PagesProvider>
                 {(props) => <PageManager {...props}/>}
               </PagesProvider>
-            </GridItem>
+            </GridItem>*/}
             <GridItem className={cx(['w-full', 'overflow-hidden', br.bt, cl.br])} grow>
               <LayersProvider>
                 {(props) => <LayerManager {...props}/>}

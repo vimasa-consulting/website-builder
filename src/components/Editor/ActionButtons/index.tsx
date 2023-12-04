@@ -67,14 +67,14 @@ export default observer(function ActionButtons() {
             cmd: 'core:component-outline',
             iconPath: mdiBorderRadius,
             title: 'componentOutline.title',
-        },
+        },*/
         {
             id: 'preview',
             cmd: 'core:preview',
             iconPath: mdiEye,
             title: 'preview.title',
         },
-        {
+        /*{
             id: 'fullscreen',
             cmd: 'core:fullscreen',
             iconPath: mdiFullscreen,
@@ -82,6 +82,7 @@ export default observer(function ActionButtons() {
             title: 'fullscreen.title',
         },*/
         /*{
+        
             id: 'open-code',
             cmd: () => modalStore.open({
                 title: t('showCode.title'),
@@ -89,8 +90,8 @@ export default observer(function ActionButtons() {
             }),
             iconPath: mdiXml,
             title: 'showCode.title',
-        },
-        {
+        },*/
+        /*{{
             id: 'import-code',
             cmd: () => modalStore.open({
                 title: t('importCode.title'),
