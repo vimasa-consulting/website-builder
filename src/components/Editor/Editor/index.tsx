@@ -35,6 +35,10 @@ import styleBGPlugin from "grapesjs-style-bg";
 import presetWebpagePlugin from "grapesjs-preset-webpage";
 import navbar from "grapesjs-navbar";
 import BlockSearchPopup from '../BlockSearchPopup';
+import { usePlugin } from 'grapesjs'
+import grapesjsIcons from 'grapesjs-icons'
+//@ts-ignore
+import type { PluginOptions } from 'grapesjs-icons'
 
 export default observer(function EditorApp() {
   const { projectType, editorConfig, editorKey, setEditor } = useAppEditorStore();
@@ -113,21 +117,32 @@ export default observer(function EditorApp() {
       // editor.Canvas.fitViewport({ ignoreHeight: true, gap: 50 });
     });
   }
+
+const options: PluginOptions = {
+  // see https://icon-sets.iconify.design/
+  collections: [
+    'ri', // Remix Icon by Remix Design,
+    'mdi', // Material Design Icons by Pictogrammers
+    'uim', // Unicons Monochrome by Iconscout
+    'streamline-emojis' // Streamline Emojis by Streamline
+  ]
+}
   const plugins=[
     blocksBasicPlugin,
     formsPlugin,
     countdownPlugin,
     exportPlugin,
-    tabsPlugin,
+    //tabsPlugin,
     customCodePlugin,
     touchPlugin,
     parserPostCSSPlugin,
     tooltipPlugin,
     tuiImageEditorPlugin,
-    typedPlugin,
+    //typedPlugin,
     styleBGPlugin,
     //presetWebpagePlugin,
     navbar,
+    usePlugin(grapesjsIcons, options)
     // TODO: Undo once fixed
     // lorySlider,
     // table,
@@ -141,7 +156,7 @@ export default observer(function EditorApp() {
       //grapesjs={editorConfig.gjsScript!}
       grapesjsCss={editorConfig.gjsStyle}
       options={gjsOpts}
-      plugins={gjsPlugins}
+      plugins={plugins}
       onEditor={onEditor}
     >
       <Grid className="h-full overflow-hidden">
