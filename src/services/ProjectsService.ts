@@ -1,4 +1,4 @@
-import { getAllProjects, createProject, deleteProject } from "@/adapters/api/core/projects";
+import { getAllProjects, createProject, deleteProject, update } from "@/adapters/api/core/projects";
 import { Project } from "@/types/project";
 
 export async function getAllProjectsByOrganizationId(organizationId: string) {
@@ -12,3 +12,7 @@ export async function createProjectForOrganization(project: Omit<Project, '_id' 
 export async function deleteProjectByProjectId(projectId: string) {
     return deleteProject(projectId)
 }
+
+export async function updateProject(project: Project) {
+    return update(project);
+  }

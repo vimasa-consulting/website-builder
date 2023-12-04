@@ -14,6 +14,7 @@ export type File = {
   projectId: string,
   createdAt: string,
   updatedAt: string,
+  imageURL?: string
 }
 
 export type FileUpdatePayload = {

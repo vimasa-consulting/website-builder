@@ -1,10 +1,55 @@
-
-.gjs-mdl-content {
-  padding: unset;
-  #customModalPreviewPopup{
-    background-color:  #fff;
-  }
-  #customModalPreviewPopup {
+ #customModalPreviewPopup {
+    position: absolute;
+    background: white;
+    overflow-y: scroll;
+    height: 100%;
+    padding-top: 37px;
+    .startEditingCta {
+      padding: 10px;
+      border-radius: 5px;
+      background: linear-gradient(272deg, #A601F3 2.16%, #FE7126 99.58%), linear-gradient(272deg, #A601F3 45.04%, #FE7126 99.58%);
+      outline: none;
+      border: none;
+      color: #FFF;
+      font-family: Inter, sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 25px;
+      letter-spacing: 0.6px;
+      width: 187px;
+      height: 50px;
+      margin-bottom: 60px;
+      .magicWand {
+        width: 30px;
+        height: 30px;
+        display: inline;
+        margin-right: 10px;
+      }
+    }
+    .cancelCta {
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #e51818e0;
+      outline: none;
+      border: none;
+      color: #FFF;
+      font-family: Inter, sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 25px;
+      letter-spacing: 0.6px;
+      width: 187px;
+      height: 50px;
+      margin-bottom: 60px;
+      .magicWand {
+        width: 30px;
+        height: 30px;
+        display: inline;
+        margin-right: 10px;
+      }
+    }
     .bg-1 {
       background-color:  #26d626;
     }
@@ -99,7 +144,6 @@
       font-weight: bold;
       margin: 0px;
       padding-bottom: 5px;
-      padding-top: 20px;
     }
     .f30 {
       color:  #000;
@@ -109,4 +153,3 @@
       padding-bottom: 30px;
     }
   }
-}

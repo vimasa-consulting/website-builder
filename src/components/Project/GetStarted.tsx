@@ -75,40 +75,10 @@ export default function GetStarted({ projectID = '' }: Props) {
 
     closeModalHandler();
   }
-  // const handlePopup = async () => {
-  //   await handleNewFileSubmit()
-  //   // setIsAddNewProjectModalOpen(!isAddNewProjectModalOpen);
-  // };
 
   const navigateToSmartBuilder = async () => {
     try {
-      let id = projectID
-    if(!id) {
-      setLoadingSmartBuilder(true)
-      const newProjectPayload = {
-        name: 'Untitled',
-        projectHostingAlias: '',
-        collaborators: [],
-        organizationId: cachedUser?.organizations[0] || '',
-      }
-
-      const newProjectResponse = await createProjectForOrganization(newProjectPayload)
-
-      id = newProjectResponse.data._id
-
-      const newFilePayload = {
-        name: "Untitled",
-        slug: "test",
-        htmlHeadContent: '',
-        htmlBodyContent: '',
-        status: FileStatus.DRAFT,
-        builderData: '',
-        projectId: id
-      };
-
-      await createFileForProject(newFilePayload);
-    }
-    router.push(`/questionnaire?projectId=${id}`)
+    router.push(`/questionnaire?projectId=${projectID}`)
   } catch(error) {
     console.log(error)
   }
@@ -123,7 +93,6 @@ export default function GetStarted({ projectID = '' }: Props) {
       </div>
     )
   }
-
 
   return (
     <div className={styles.mainContainer}>

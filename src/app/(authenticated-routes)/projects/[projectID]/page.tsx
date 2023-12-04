@@ -104,7 +104,7 @@ export default function Page({ params }: { params: { projectID: string } }) {
       <h3 className="text-xl">All Files</h3>
       <div className="flex flex-wrap mt-5 gap-3">
         {tableData?.length ?
-            tableData.map((project: any) => <ItemCard itemType="File" key={project._id} project={project} />)
+            tableData.map((project: any) => <ItemCard itemType="File" key={project._id} item={project} setTableData={setTableData} />)
          :
         Array.from({length: 2}).map((_, index) => <CardItemSkeleton key={index} />)
         }

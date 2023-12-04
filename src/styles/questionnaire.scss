@@ -3,6 +3,7 @@
   color: #fff;
   margin-top: 250px;
   justify-content: center;
+  height: 100%;
   .smart-builder-item {
     display: flex;
     width: 1200px;
@@ -11,50 +12,58 @@
     gap: 98px;
     .right-section {
       width: 60%;
+      margin-top: 64px;
       .component-header {
         color: #fff;
 
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 26.971px;
         font-style: normal;
         font-weight: 500;
-        line-height: 39.985px; /* 148.254% */
+        line-height: 39.985px;
         letter-spacing: 0.54px;
         padding-bottom: 32px;
       }
       .component-sub-header {
         color: #fff;
 
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 17.993px;
         font-style: normal;
         font-weight: 300;
-        line-height: 27.969px; /* 155.444% */
+        line-height: 27.969px;
         letter-spacing: 0.18px;
       }
       p {
         color: #fff;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 17.993px;
         font-style: normal;
         font-weight: 300;
-        line-height: 27.969px; /* 155.444% */
+        line-height: 27.969px;
         letter-spacing: 0.18px;
+        max-width: 500px;
       }
       button {
         border: none;
         cursor: pointer;
         outline: none;
-        font-size: 20px;
-        height: 30px;
-        width: 180px;
-        font-size: 14px;
-        padding: 4px 23px;
-        margin-top: 34px;
+        height: 56px;
+        width: 238px;
+        padding: 15.5px 0;
+        margin-top: 46px;
+        font-family: Inter, sans-serif;
+        font-size: 19.992px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24.991px;
+        letter-spacing: 0.6px;
+        border-radius: 6px;
+
       }
       .smart-builder {
         color: #fff;
-        background: linear-gradient(to right, #ea7959, #994bed);
+        background: linear-gradient(272deg, #A601F3 2.16%, #FE7126 99.58%), linear-gradient(242deg, #A600F3 8.2%, #B610F4 91.8%, #FF7225 91.8%), #3A26FB;
         background-color: green;
       }
     }

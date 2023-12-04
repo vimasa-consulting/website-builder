@@ -6,9 +6,21 @@ import Link from "next/link";
 
 import styles from '@/styles/project.module.css';
 import placeHolderImage from '@/public/projects/placeholder.png';
-import { Project } from "@/types/project";
+import { Project, ProjectTableData } from "@/types/project";
 import { ROUTES } from "@/services/NavigationService";
 import { useRouter } from "next/navigation";
+import { deleteProjectByProjectId, updateProject } from "@/services/ProjectsService";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import DeleteItemPopup from "./DeleteItemPopup";
+import { deleteFileByFileId, updateFile } from "@/services/FilesService";
+import { File, FileTableData } from "@/types/file";
+import EditItemPopup from "./EditItemPopup";
+
+interface Props {
+    item: Project & {updatedAt: string} | File, 
+    itemType: string,
+    setTableData: Dispatch<SetStateAction<ProjectTableData[]>> | Dispatch<SetStateAction<FileTableData[]>>
+}
 
 const getImageComponent = (url?: string) => {
     if (url) {
@@ -21,28 +33,91 @@ const getImageComponent = (url?: string) => {
     );
 }
 
-export default function ItemCard({ project, itemType }: { project: Project & {updatedAt: string}, itemType: string }) {
+export default function ItemCard({ item, itemType, setTableData }: Props) {
+    const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false)
+    const [isUpdateModalOpen, setIsUpdateModalOpen] = useState(false)
     const router = useRouter();
 
-    const handleProjectOpen = () => {
-        return router.push(`${itemType === 'Project' ? ROUTES.PROJECTS : ROUTES.EDITOR}/${project._id}`)
+    const firstAttribute = item.name
+    const secondAttribute = itemType === 'Project' ? (item as Project).projectHostingAlias : (item as File).slug
+    const inputLabelOne = 'Name'
+    const inputLabelTwo = itemType === 'Project' ? 'Domain Name' : 'Path'
+
+    const handleItemOpen = () => {
+        return router.push(`${itemType === 'Project' ? ROUTES.PROJECTS : ROUTES.EDITOR}/${item._id}`)
     }
 
+    const deleteItemHandler = () => {
+            setIsDeleteModalOpen(true)
+    }
+
+    const deleteItem = async() => {
+        let deleteItem: any;
+        try {
+        if(itemType === 'Project') {
+            deleteItem = await deleteProjectByProjectId(item._id)
+        } else {
+            deleteItem = await deleteFileByFileId(item._id)
+        }
+
+        setTableData((prevState: any) => (prevState.filter((data: FileTableData) => data._id !== deleteItem?.data?._id)))
+    } catch(error) {
+        console.log(error)
+    }
+        setIsDeleteModalOpen(false)
+    }
+
+    const openUpdateModal = () => {
+        setIsUpdateModalOpen(true)
+    }
+
+    const updateItemHandler = async (firstInput: string, secondInput: string) => {
+        let updatedItem: any;
+        try {
+        if(itemType === 'Project') {
+            const updatedProject: Project = {
+                ...(item as Project),
+                name: firstInput,
+                projectHostingAlias: secondInput
+            }
+            updatedItem = await updateProject(updatedProject)
+        } else {
+            const updatedFile: File = {
+                ...(item as File),
+                name: firstInput,
+                slug: secondInput
+            } 
+            updatedItem = await updateFile(updatedFile)
+        }
+
+
+        setTableData((prevState: any) => prevState.map((data: any) => {
+            if(data._id === updatedItem.data._id) {
+                return updatedItem.data
+            }
+
+            return data
+        } ))
+    }catch(error) {
+        console.log(error)
+    }
+    }
+    
     return (
         <div className="max-w-xs mr-[32px] mb-[15px]">
-            <Link href={`${itemType === 'Project' ? ROUTES.PROJECTS : ROUTES.EDITOR}/${project._id}`}>
+            <Link href={`${itemType === 'Project' ? ROUTES.PROJECTS : ROUTES.EDITOR}/${item._id}`}>
             <div
             >
-                {getImageComponent(project.imageURL)}
+                {getImageComponent(item.imageURL)}
             </div>
             </Link>
             <div className={`text-xl font-semibold tracking-tight text-white-700 flex justify-between px-[10px] mt-[12px]`}>
                 <div>
                     <p className={styles.projectName}>
-                        {project.name}
+                        {item.name}
                     </p>
                     <p className={styles.recentlyEdited}>
-                        {project?.updatedAt ? project.updatedAt : 'Mahalaxmi Gupta - Edited 2 months ago '}
+                        {item?.updatedAt ? item.updatedAt : 'Mahalaxmi Gupta - Edited 2 months ago '}
                     </p>
                 </div>
                 <div>
@@ -51,20 +126,36 @@ export default function ItemCard({ project, itemType }: { project: Project & {up
                         inline
                         arrowIcon={false}
                         label={
-                            // eslint-disable-next-line @next/next/no-img-element
                             <img
                                 src="https://img.icons8.com/ios-glyphs/20/52525b/ellipsis.png"
                                 alt="ellipsis" />
+                            }
+                            >
+                        <Dropdown.Item onClick={handleItemOpen}>Open</Dropdown.Item>
+                        <Dropdown.Item onClick={openUpdateModal}>Rename</Dropdown.Item>
+                        <Dropdown.Item onClick={deleteItemHandler}>Delete</Dropdown.Item>
+                        {
+                            itemType !== 'File' &&  <Dropdown.Item>Share</Dropdown.Item>
                         }
-                    >
-                        <Dropdown.Item onClick={handleProjectOpen}>Open</Dropdown.Item>
-                        <Dropdown.Item>Duplicate</Dropdown.Item>
-                        <Dropdown.Item>Rename</Dropdown.Item>
-                        <Dropdown.Item>Delete</Dropdown.Item>
-                        <Dropdown.Item>Share</Dropdown.Item>
                     </Dropdown>
                 </div>
             </div>
+            {
+                isDeleteModalOpen &&
+                <DeleteItemPopup handleDelete={deleteItem} closeHandler={() => setIsDeleteModalOpen(false)} itemType={itemType} />
+            }
+            {
+                isUpdateModalOpen &&
+                <EditItemPopup 
+                    handleUpdate={updateItemHandler} 
+                    closeHandler={() => setIsUpdateModalOpen(false)} 
+                    itemType={itemType} 
+                    firstAttribute={firstAttribute}
+                    secondAttribute={secondAttribute}
+                    inputLabelOne={inputLabelOne}
+                    inputLabelTwo={inputLabelTwo}
+                    />
+            }
         </div>
     )
 }
