@@ -4,32 +4,29 @@ import { NewProjectPayload } from '@/app/(authenticated-routes)/projects/page';
 import React, { useState } from 'react';
 
 interface PopupProps {
-    inputOneLabel: string;
-    inputTwoLabel: string;
-    inputOnePlaceHolder: string;
-    inputTwoPlaceHolder: string;
-    closeHandler(): void;
-    handleSubmit(payload: NewProjectPayload): void;
-    popupTitle: string;
+    firstAttribute: string;
+    secondAttribute: string;
+    itemType: string;
+    closeHandler: () =>  void;
+    handleUpdate: (firstInput: string, secondInput: string) => void;
+    inputLabelOne: string;
+    inputLabelTwo: string;
 }
 
-const NewItemPopup: React.FC<PopupProps> = ({ 
-    inputOneLabel,
-    inputTwoLabel,
-    inputOnePlaceHolder,
-    inputTwoPlaceHolder,
+const EditItemPopup: React.FC<PopupProps> = ({ 
+    firstAttribute,
+    secondAttribute,
+    itemType,
     closeHandler,
-    handleSubmit,
-    popupTitle
+    handleUpdate,
+    inputLabelOne,
+    inputLabelTwo
 }) => {
-    const [input1, setInput1] = useState('');
-    const [input2, setInput2] = useState('');
+    const [input1, setInput1] = useState(firstAttribute);
+    const [input2, setInput2] = useState(secondAttribute);
 
     function handlePopupSubmit() {
-        handleSubmit({
-            inputOneData: input1,
-            inputTwoData: input2
-        });
+        handleUpdate(input1, input2);
         handlePopupClose()
     }
 
@@ -49,15 +46,14 @@ const NewItemPopup: React.FC<PopupProps> = ({
                 >
                     ✖️
                 </button>
-                <h2 className="text-xl font-semibold mb-4 text-white text-center">{popupTitle}</h2>
+                <h2 className="text-xl font-semibold mb-4 text-white text-center">Update your {itemType.toLowerCase()}</h2>
                 <div className="mb-6 mt-6">
                     <div>
-                    <label htmlFor="input-field-one" className="block mb-2 text-[12px] font-small text-[#797979] cursor-pointer">{inputOneLabel}</label>
+                    <label htmlFor="input-field-one" className="block mb-2 text-[12px] font-small text-[#797979] cursor-pointer">{inputLabelOne}</label>
                 </div>
                     <input
                         id='input-field-one'
                         type="text"
-                        placeholder={inputOnePlaceHolder}
                         className="w-full p-2 border-2 border-transparent rounded text-[15px] text-white bg-[#313131]"
                         value={input1}
                         onChange={(e) => setInput1(e.target.value)}
@@ -65,12 +61,11 @@ const NewItemPopup: React.FC<PopupProps> = ({
                 </div>
                 <div className="mb-6">
                 <div>
-                    <label htmlFor="input-field-two" className="block mb-2 text-[12px] font-small text-[#797979] cursor-pointer">{inputTwoLabel}</label>
+                    <label htmlFor="input-field-two" className="block mb-2 text-[12px] font-small text-[#797979] cursor-pointer">{inputLabelTwo}</label>
                 </div>
                     <input
                         id="input-field-two"
                         type="text"
-                        placeholder={inputTwoPlaceHolder}
                         className="w-full p-2 border-2 border-transparent rounded text-[15px] text-white bg-[#313131]"
                         value={input2}
                         onChange={(e) => setInput2(e.target.value)}
@@ -80,11 +75,11 @@ const NewItemPopup: React.FC<PopupProps> = ({
                     className="w-full h-[44px] mt-[15px] bg-[#DD00FF] text-white text-[15px] rounded hover:bg-hover cursor-pointer"
                     onClick={handlePopupSubmit}
                 >
-                    Submit
+                    Update
                 </button>
             </div>
         </div>
     );
 };
 
-export default NewItemPopup;
+export default EditItemPopup;

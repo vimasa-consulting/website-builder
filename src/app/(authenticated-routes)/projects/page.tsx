@@ -95,9 +95,9 @@ export default function Page() {
       <div className="flex flex-wrap mt-5 gap-3">
         {tableData?.length ?
         <>
-          <NewItemCard itemType="Project" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen}/>
+          <NewItemCard itemType="Project" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} />
           {
-            tableData.map((project: any) => <ItemCard itemType="Project" key={project._id} project={project} />)
+            tableData.map((project: any) => <ItemCard itemType="Project" key={project._id} item={project} setTableData={setTableData}/>)
           }
           </>
          :
@@ -123,7 +123,7 @@ export default function Page() {
         navigationBaseURL="/projects"
         handleItemDeletion={handleProjectDeletion}
         columnHeaders={columnHeaders}
-      /> */}
+      /> */} 
     </div>
   );
 }
