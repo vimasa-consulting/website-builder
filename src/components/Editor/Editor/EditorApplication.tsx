@@ -48,11 +48,12 @@ function EditorApplication({ options, fileID}: AppProps) {
   const initialState: StoreProviderProps['initialState'] = {
     localSettingsStore: getLocalState(),
     appEditorStore: {
-      isDev,
+      isDev,      
       projectType: ProjectType.web,
       rootEl: document.querySelector("#root") as HTMLElement,
       updateAppShell: true,
       editorConfig: {
+        defaultProject: landingPageProject,
         gjsScript: `https://unpkg.com/grapesjs@${GJS_VERSION}/grapes.min.js`,
         gjsStyle: `/unpkg.com/grapesjs@${GJS_VERSION}/dist/css/grapes.min.css`,
       }
