@@ -51,9 +51,11 @@ export default observer(function EditorApp({fileID}: AppProps) {
   ], [projectType, editorKey]);
   const onEditor = (editor: Editor) => {    
     const item:any=localStorage.getItem(`gjsFile-${fileID}`)  
-    const landingProject=JSON.parse(item);
-    editor.loadProjectData(landingProject);
-    editor.UndoManager.clear();
+    if(item){
+      const landingProject=JSON.parse(item);
+      editor.loadProjectData(landingProject);
+      editor.UndoManager.clear()  
+    }
         
     setEditor(editor);
     (window as any).editor = editor;    
