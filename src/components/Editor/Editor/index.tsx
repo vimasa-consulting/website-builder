@@ -39,6 +39,7 @@ import { usePlugin } from 'grapesjs'
 import grapesjsIcons from 'grapesjs-icons'
 //@ts-ignore
 import type { PluginOptions } from 'grapesjs-icons'
+import { publishFile, updateFile } from "@/services/FilesService";
 export interface AppProps {    
   fileID: string
 };
@@ -59,16 +60,44 @@ export default observer(function EditorApp({fileID}: AppProps) {
     const deviceManager = editor.Devices;
     deviceManager.remove("tablet");
     const mobileDevice = deviceManager.get("mobilePortrait");
-    //mobileDevice?.set({ width: "400px" });
+    mobileDevice?.set({ width: "400px" });
     const desktopDevice = deviceManager.get("desktop");
-    //desktopDevice?.set({ width: "1440px" });
+    desktopDevice?.set({ width: "1440px" });
 
     initCustomBlocks(editor);
     // Test infinite canvas
     editor.onReady(() => {
       editor.Commands.add("publishProject", {      
         run(editor, sender) {
-          console.log('publish project');         
+          console.log('publish project');    
+          // open a popup and pass editor as props?
+          // const container = document.querySelector("#customModalPopup");
+          editor.Modal.open({
+            title: "Publishing",
+            content: 'Please wait!',
+          }).onceClose(() => editor.stopCommand("publishPage"));
+          // build html content
+          const htmlBody = editor.getHtml();
+          const cssBody = editor.getCss();
+          const fullHTML = `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+              <style>${cssBody}</style>
+            </head>
+            ${htmlBody}
+          </html>`;
+          // publish file
+          publishFile({
+            _id: fileID,
+            builderData: JSON.stringify(editor.getProjectData()),
+            htmlString: fullHTML,
+          }).then(() => {
+            editor.Modal.close();
+          }).catch((error) => {
+            console.log('Failed to publish', error);
+          });     
         },
         stop() {
           editor.Modal.close();
@@ -79,6 +108,19 @@ export default observer(function EditorApp({fileID}: AppProps) {
         run(editor, sender) {
           // open a popup and pass editor as props?
           console.log('saving project');
+          editor.Modal.open({
+            title: "Saving",
+            content: 'Please wait!',
+          }).onceClose(() => editor.stopCommand("savePage"));
+          // save file
+          updateFile({
+            _id: fileID,
+            builderData: JSON.stringify(editor.getProjectData())
+          }).then(() => {
+            editor.Modal.close();
+          }).catch((error:any) => {
+            console.log('Failed to save', error);
+          });
         },
         stop() {
           editor.Modal.close();
