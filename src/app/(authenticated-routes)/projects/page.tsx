@@ -107,18 +107,19 @@ export default function Page() {
        
         }
       </div>
-      <h3 className="text-xl mt-[50px]">Shared To Me</h3>
-      <div className="flex flex-wrap mt-5 gap-3">
-        {sharedToMeProjects?.length ?
-        <>
-          {
-            sharedToMeProjects.map((project: any) => <ItemCard sharedProject itemType="Project" key={project._id} item={project} setTableData={setTableData}/>)
-          }
+      {
+        sharedToMeProjects.length > 0 && (
+          <>
+            <h3 className="text-xl mt-[50px]">Shared To Me</h3>
+            <div className="flex flex-wrap mt-5 gap-3">
+                {
+                  sharedToMeProjects.map((project: any) => <ItemCard sharedProject itemType="Project" key={project._id} item={project} setTableData={setTableData}/>)
+                }
+            </div>
           </>
-         :
-        Array.from({length: 2}).map((_, index) => <CardItemSkeleton key={index} />)
-        }
-      </div>
+        )
+      }
+     
       {/* <hr className="h-px my-8 bg-gray-600 border-0 w-3/4" />
       <NewItem itemType="Project" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} /> */}
       {

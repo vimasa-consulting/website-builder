@@ -101,14 +101,18 @@ export default function Page({ params }: { params: { projectID: string } }) {
           popupTitle="Add New File"
         />
       } */}
-      <h3 className="text-xl">All Files</h3>
-      <div className="flex flex-wrap mt-5 gap-3">
-        {tableData?.length ?
-            tableData.map((project: any) => <ItemCard itemType="File" key={project._id} item={project} setTableData={setTableData} />)
-         :
-        Array.from({length: 2}).map((_, index) => <CardItemSkeleton key={index} />)
-        }
-      </div>
+      {
+        tableData.length > 0 && 
+        <>
+          <h3 className="text-xl">All Files</h3>
+          <div className="flex flex-wrap mt-5 gap-3">
+            {
+              tableData.map((project: any) => <ItemCard itemType="File" key={project._id} item={project} setTableData={setTableData} />)
+            }
+          </div>
+        </>
+      }
+  
       {/* <ItemListing
         tableData={tableData}
         navigationBaseURL="/editor"
