@@ -148,6 +148,23 @@ export default observer(function EditorApp({fileID}: AppProps) {
           editor.Modal.close();
         },
       });
+      const styleManager = editor.StyleManager;
+      var fonts = styleManager.getProperty("typography", "font-family");
+      // @ts-ignore
+      var fontOptions = fonts?.attributes?.options;
+      fontOptions.push({ id: "Inter, sans-serif", label: "Inter" });
+      console.log(fontOptions);
+      // @ts-ignore
+      fonts?.set("options", fontOptions);
+      const url = new URL(window.location.href);
+      const block_sequence = url.searchParams.get("block_sequence") || "";
+      //const block_sequence='WmIzLCBUYTEsIFlmMSwgWWIxLCBTYjEsIFVmMSwgVGMxLCAgVmExLCBVZDEsIFVjMQ=='
+      // TODO: read query param from url block_sequence
+      const blocks = atob(block_sequence).split(",");
+      blocks.forEach((item) => {
+        console.log(item.trim());
+        editor.addComponents({ type: item.trim() });
+      });
       // editor.Canvas.setZoom(70);
       // editor.Canvas.setCoords(-30, -30);
       // const firstFrame = editor.Canvas.getFrames()[0];
