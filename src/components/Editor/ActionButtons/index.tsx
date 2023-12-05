@@ -256,6 +256,7 @@ export default observer(function ActionButtons() {
 
     return (
         <Grid space="s" items="center" justify="end" className={cx(pad.xyS2)}>
+            <GridItem><input type="text" value="File Name"></input></GridItem>
             {buttons.map(({ id, cmd, iconPath, disabled, options, title }) => (
                 <GridItem key={id}>
                     <ButtonWithTooltip

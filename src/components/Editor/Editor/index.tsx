@@ -60,9 +60,9 @@ export default observer(function EditorApp({fileID}: AppProps) {
     const deviceManager = editor.Devices;
     deviceManager.remove("tablet");
     const mobileDevice = deviceManager.get("mobilePortrait");
-    mobileDevice?.set({ width: "400px" });
+    //mobileDevice?.set({ width: "400px" });
     const desktopDevice = deviceManager.get("desktop");
-    desktopDevice?.set({ width: "1440px" });
+    //desktopDevice?.set({ width: "1440px" });
 
     initCustomBlocks(editor);
     // Test infinite canvas
@@ -126,7 +126,6 @@ export default observer(function EditorApp({fileID}: AppProps) {
           editor.Modal.close();
         },
       });
-      const projectId="dummy-project";
       /*editor.Storage.add('remote', {
         async load() {
           return await axios.get(`projects/${projectId}`);
@@ -136,7 +135,6 @@ export default observer(function EditorApp({fileID}: AppProps) {
           return await axios.patch(`projects/${projectId}`, { data });
         },
       });*/
-      
       editor.Commands.add("openPersuasiveBlocks", {
         run(editor, sender) {
           // open a popup and pass editor as props?
