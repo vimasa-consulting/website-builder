@@ -32,7 +32,7 @@ export default function Navbar() {
           alt="Website Builder Logo"
         /> */}
         <span className="self-center whitespace-nowrap text-xl font-semibold">
-          Website Builder
+          <img width="48" height="48" src="https://img.icons8.com/color/48/redux.png" alt="redux"/>
         </span>
       </FlowbiteNavbar.Brand>
       <div className="flex gap-4">
@@ -45,6 +45,7 @@ export default function Navbar() {
             <p className="block text-[16px]">{cachedAuthUser?.attributes.givenName} {cachedAuthUser?.attributes.familyName}</p>
           }
         >
+          <Dropdown.Item onClick={openProfilePopup}>Settings</Dropdown.Item>
           <Dropdown.Item onClick={signOut}>Sign out</Dropdown.Item>
         </Dropdown>
         <p className="block truncate text-[10px] font-medium text-[#BDBDBD]">{cachedAuthUser?.attributes.email}</p>

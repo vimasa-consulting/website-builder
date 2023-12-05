@@ -4,7 +4,7 @@ import NewItem from "@/components/Project/NewItem";
 import NewItemPopup from "@/components/Project/NewItemPopup";
 import RecentSection from "@/components/Project/RecentSection";
 import { useContext, useEffect, useState } from "react";
-import { createProjectForOrganization, deleteProjectByProjectId, getAllProjectsByOrganizationId } from "@/services/ProjectsService";
+import { createProjectForOrganization, deleteProjectByProjectId, getAllProjectsByOrganizationId, getAllProjectsSharedToMe } from "@/services/ProjectsService";
 import { getCurrentUser } from "@/services/UserService";
 import { Auth } from "aws-amplify";
 import { CellContext } from "@tanstack/react-table";
@@ -30,15 +30,8 @@ export type Project = {
 export default function Page() {
   const [isAddNewProjectModalOpen, setIsAddNewProjectModalOpen] = useState(false)
   const [tableData, setTableData] = useState<ProjectTableData[]>([])
-  const { cachedUser } = useContext(AuthContext);
-
-  const columnHeaders = [
-    'Name',
-    'Domain',
-    'Actions'
-  ]
-
-  const recentProjects = tableData.slice(0, 2);
+  const [sharedToMeProjects, setSharedToMeProjects] = useState<ProjectTableData[]>([])
+  const { cachedUser, cachedAuthUser } = useContext(AuthContext);
 
   function closeModalHandler() {
     setIsAddNewProjectModalOpen(false)
@@ -54,7 +47,6 @@ export default function Page() {
       }
 
       const newProjectResponse = await createProjectForOrganization(newProjectPayload)
-
       const newProject = newProjectResponse.data
 
       setTableData(prevState => [newProject, ...prevState])
@@ -68,8 +60,11 @@ export default function Page() {
   async function loadProjectDetails() {
     try {
       const organizationId = cachedUser?.organizations[0] || '';
-      const allProjects = await getAllProjectsByOrganizationId(organizationId)
+      const email = cachedAuthUser?.attributes?.email || ''
+      const promises = [getAllProjectsByOrganizationId(organizationId), getAllProjectsSharedToMe(email)]
+      const [allProjects, allSharedProjects] = await Promise.all(promises)
       setTableData(allProjects.data)
+      setSharedToMeProjects(allSharedProjects?.data)
     } catch (error) {
       console.log(error)
     }
@@ -85,8 +80,10 @@ export default function Page() {
   }
 
   useEffect(() => {
-    loadProjectDetails()
-  }, [])
+    if(cachedAuthUser && cachedUser) {
+      loadProjectDetails()
+    }
+  }, [cachedAuthUser, cachedUser])
 
   return (
     <div className="flex flex-col pb-14">
@@ -98,6 +95,24 @@ export default function Page() {
           <NewItemCard itemType="Project" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} />
           {
             tableData.map((project: any) => <ItemCard itemType="Project" key={project._id} item={project} setTableData={setTableData}/>)
+          }
+          </>
+         :
+         <>
+          <NewItemCard itemType="Project" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} />
+          {
+             Array.from({length: 2}).map((_, index) => <CardItemSkeleton key={index} />)
+          }
+         </>
+       
+        }
+      </div>
+      <h3 className="text-xl mt-[50px]">Shared To Me</h3>
+      <div className="flex flex-wrap mt-5 gap-3">
+        {sharedToMeProjects?.length ?
+        <>
+          {
+            sharedToMeProjects.map((project: any) => <ItemCard sharedProject itemType="Project" key={project._id} item={project} setTableData={setTableData}/>)
           }
           </>
          :

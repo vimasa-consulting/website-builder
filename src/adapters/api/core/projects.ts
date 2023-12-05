@@ -31,3 +31,9 @@ export async function update(project: Project) {
     headers: (await getAuthHeaders()),
   });
 }
+
+export async function getAllProjectShared(email: string) {
+  return apiInstance.get(`${RESOURCE_PATH}/shared/?email=${email}`, {
+    headers: (await getAuthHeaders()),
+  });
+}

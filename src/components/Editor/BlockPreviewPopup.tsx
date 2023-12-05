@@ -135,8 +135,8 @@ const BlockPreviewPopup: React.FC<BlockPreviewPopupProps> = ({blockSequence, han
     return (
         <div id="customModalPreviewPopup" className="preview-modal">     
             <div className="container">
-                <div className='flex justify-between'>
-                  <button onClick={cancelEditingHandler} className='cancelCta'>Cancel</button>
+                <div className='flex justify-end'>
+                  {/* <button onClick={cancelEditingHandler} className='cancelCta'>Cancel</button> */}
                   <button className='startEditingCta' onClick={handleStartEditing}>
                     <Image src={magicWand} alt="Magic Wand" className='magicWand' />
                     Start Editing

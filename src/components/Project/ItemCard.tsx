@@ -15,11 +15,13 @@ import DeleteItemPopup from "./DeleteItemPopup";
 import { deleteFileByFileId, updateFile } from "@/services/FilesService";
 import { File, FileTableData } from "@/types/file";
 import EditItemPopup from "./EditItemPopup";
+import ShareProjectPopup from "./ShareProjectPopup";
 
 interface Props {
     item: Project & {updatedAt: string} | File, 
     itemType: string,
     setTableData: Dispatch<SetStateAction<ProjectTableData[]>> | Dispatch<SetStateAction<FileTableData[]>>
+    sharedProject?: boolean
 }
 
 const getImageComponent = (url?: string) => {
@@ -33,9 +35,11 @@ const getImageComponent = (url?: string) => {
     );
 }
 
-export default function ItemCard({ item, itemType, setTableData }: Props) {
+export default function ItemCard({ item, itemType, setTableData, sharedProject = false }: Props) {
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false)
     const [isUpdateModalOpen, setIsUpdateModalOpen] = useState(false)
+    const [isShareModalOpen, setIsShareModalOpen] = useState(false)
+    const [collaboratorsArray, setCollaboratorsArray] = useState<string[]>((item as Project).collaborators)
     const router = useRouter();
 
     const firstAttribute = item.name
@@ -102,6 +106,21 @@ export default function ItemCard({ item, itemType, setTableData }: Props) {
         console.log(error)
     }
     }
+
+    const handleProjectShare = () => {
+        setIsShareModalOpen(true)
+    }
+
+    const shareProjectHandler = async (collaborators: string[]) => {
+        const updatedProjectData: any = {
+            ...item,
+            collaborators 
+        }
+        const updatedProjectCollaborators = await updateProject(updatedProjectData);
+
+        setCollaboratorsArray(updatedProjectCollaborators?.data?.collaborators)
+        console.log('updated collaborators', updatedProjectCollaborators)
+    }
     
     return (
         <div className="max-w-xs mr-[32px] mb-[15px]">
@@ -132,10 +151,16 @@ export default function ItemCard({ item, itemType, setTableData }: Props) {
                             }
                             >
                         <Dropdown.Item onClick={handleItemOpen}>Open</Dropdown.Item>
-                        <Dropdown.Item onClick={openUpdateModal}>Rename</Dropdown.Item>
-                        <Dropdown.Item onClick={deleteItemHandler}>Delete</Dropdown.Item>
                         {
-                            itemType !== 'File' &&  <Dropdown.Item>Share</Dropdown.Item>
+                            !sharedProject && (
+                                <>
+                                <Dropdown.Item onClick={openUpdateModal}>Rename</Dropdown.Item>
+                                <Dropdown.Item onClick={deleteItemHandler}>Delete</Dropdown.Item>
+                                {
+                                    itemType !== 'File' &&  <Dropdown.Item onClick={handleProjectShare}>Share</Dropdown.Item>
+                                }
+                                </>
+                            )
                         }
                     </Dropdown>
                 </div>
@@ -155,6 +180,14 @@ export default function ItemCard({ item, itemType, setTableData }: Props) {
                     inputLabelOne={inputLabelOne}
                     inputLabelTwo={inputLabelTwo}
                     />
+            }
+            {
+                isShareModalOpen &&
+                <ShareProjectPopup
+                collaborators={collaboratorsArray}
+                shareProjectHandler={shareProjectHandler}
+                closeHandler={() => setIsShareModalOpen(false)}
+                />
             }
         </div>
     )

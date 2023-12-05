@@ -13,11 +13,10 @@ import {
 import { Project } from '@/app/(authenticated-routes)/projects/page';
 import { File } from '@/types/file';
 
-const columnHelper = createColumnHelper<Project | File>()
+const columnHelper = createColumnHelper<{email: string}>()
 
 const ItemListing = ({
     tableData,
-    navigationBaseURL,
     handleItemDeletion,
     columnHeaders
 }: any) => {
@@ -25,44 +24,28 @@ const ItemListing = ({
     const router = useRouter();
 
     const columns = columnHeaders.map((header:string) => {
-        if (header === 'Path') {
-            return columnHelper.accessor((row: any) => row?.slug, {
-                id: 'Path',
+        if (header === 'Invited emails') {
+            return columnHelper.accessor((row: any) => row?.email, {
+                id: 'Invited emails',
                 cell: info => info.getValue(),
-                header: () => <span>Path</span>,
+                header: () => <span>Invited emails</span>,
             })
         }
 
-        if (header === 'Actions') {
-            return columnHelper.accessor((row: Project | File) => row.name, {
+        if (header === 'Delete Invite') {
+            return columnHelper.accessor((row: any) => row?.email, {
                 id: 'Actions',
                 cell: (info: any) => <div>
-                    <button onClick={() => console.log('row', info)} className='mr-2'>⚙️</button>
                     <button onClick={() => handleEntryDeletion(info)}>🗑️</button>
                 </div>,
                 header: () => <span>Actions</span>,
             })
         }
-
-        if (header === 'Domain') {
-            return columnHelper.accessor((row: any) => row.projectHostingAlias, {
-                id: 'projectHostingAlias',
-                cell: info => info.getValue(),
-                header: () => <span>Domain</span>,
-            })
-        }
-
-        if (header === 'Name') {
-            return columnHelper.accessor('name', {
-                cell: info => info.getValue(),
-                header: () => <span>Name</span>
-            })
-        }
     })
 
-    async function handleEntryDeletion(info: CellContext<Project | File, string>) {
+    async function handleEntryDeletion(info: CellContext<{email: string}, string>) {
         try {
-            const cellId = info?.row?.original?.['_id']
+            const cellId = info?.row?.original?.email
             if (cellId) {
                 await handleItemDeletion(info?.row?.original)
             }
@@ -91,33 +74,16 @@ const ItemListing = ({
         },
     })
 
-    function handleTableCellClick(cell: Cell<Project | File, unknown>) {
-        const cellId = cell?.row?.original?.["_id"]
-        const isActionsColumn = cell?.column?.id === 'Actions'
-        if (cellId && !isActionsColumn) {
-            router.push(`${navigationBaseURL}/${cellId}`)
-
-        }
-    }
-
     return (
-        <div className="p-2 bg-white text-black rounded mt-8 w-3/4 min-h-475 flex flex-col justify-between">
+        <div className="p-2 bg-white text-black rounded mt-8 w-full h-[427px] flex flex-col justify-between">
             <div>
-                <div className='flex'>
-                    <input
-                        value={globalFilter ?? ''}
-                        onChange={e => setGlobalFilter(String(e.target.value))}
-                        className="p-2 font-lg shadow border-2 border-gray-200 border-block text-black ml-auto rounded"
-                        placeholder="Search all columns..."
-                    />
-                </div>
                 <div className="h-2" />
                 <table className='w-full text-black border border-gray-300'>
-                    <thead className='border border-gray-300 h-16 bg-rgb-249-250-251'>
+                    <thead className='border border-gray-300 h-[44px] bg-rgb-249-250-251'>
                         {table.getHeaderGroups().map(headerGroup => (
                             <tr key={headerGroup.id}>
                                 {headerGroup.headers.map(header => (
-                                    <th key={header.id} className='border border-gray-300 text-xl'>
+                                    <th key={header.id} className='border border-gray-300 text-[18px]'>
                                         {header.isPlaceholder
                                             ? null
                                             : flexRender(
@@ -134,7 +100,7 @@ const ItemListing = ({
                             return (
                                 <tr key={row.id} className='h-60 border-b border-gray-300'>
                                     {row.getVisibleCells().map((cell: any) => (
-                                        <td key={cell.id} className='text-center cursor-pointer' onClick={() => handleTableCellClick(cell)}>
+                                        <td key={cell.id} className='text-center cursor-pointer text-[16px]'>
                                             <p className='text-center min-w-100 inline-block'>{flexRender(cell.column.columnDef.cell, cell.getContext())}</p>
                                         </td>
                                     ))}

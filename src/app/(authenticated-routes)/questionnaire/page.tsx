@@ -277,13 +277,11 @@ export default function Page() {
   // };
 
   const onFormSubmit = async (typeformObject: any) => {
+    setLoadingSmartBuilder(true)
     const formId = typeformObject.formId;
     const responseId = typeformObject.responseId
-    setLoadingSmartBuilder(true)
-
     try {
       const blockSequence = await fetchFormResponse(formId, responseId);
-      console.log('x', blockSequence)
       setBlockSequenceState(blockSequence)
       setLoadingSmartBuilder(false)
       setShowPreviewPopup(true)
