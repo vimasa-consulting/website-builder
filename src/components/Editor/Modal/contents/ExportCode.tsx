@@ -69,11 +69,11 @@ export default observer(function ExportCode() {
     const ASSETS_DIR = 'assets';
 
     editor.runCommand('gjs-export-zip', {
-      filenamePfx: 'gjs-export',
+      filenamePfx: 'builder-',
       root: async (editor: Editor) => {
         const pages = editor.Pages.getAll();
         const pagesHTML = pages.reduce((acc, page) => {
-          const filename = getPageSlug(editor, page);
+          const filename = "page";//getPageSlug(editor, page);
           let html = `<!doctype html>
             <html lang="en">
               <head>

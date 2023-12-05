@@ -23,7 +23,8 @@ export default observer(function BlockManager() {
     // @ts-ignore
     const blocksMap = Blocks.getAll().reduce((res, item) => {
         const ctg = item.getCategoryLabel(); 
-        const skipCat=['Logic','Emotion','Value','Urgency','Trust','First Impression','Brand Connect','User Actions'].includes(ctg);
+        //const skipCat=['Logic','Emotion','Value','Urgency','Trust','First Impression','Brand Connect','User Actions'].includes(ctg);
+        const skipCat=false;
         if (searchValue &&  !includesSearch(ctg, searchValue) && !includesSearch(blockLabel(item), searchValue)) {
             return res;
         }

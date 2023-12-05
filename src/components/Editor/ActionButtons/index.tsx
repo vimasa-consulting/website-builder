@@ -67,14 +67,14 @@ export default observer(function ActionButtons() {
             cmd: 'core:component-outline',
             iconPath: mdiBorderRadius,
             title: 'componentOutline.title',
-        },
+        },*/
         {
             id: 'preview',
             cmd: 'core:preview',
             iconPath: mdiEye,
             title: 'preview.title',
         },
-        {
+        /*{
             id: 'fullscreen',
             cmd: 'core:fullscreen',
             iconPath: mdiFullscreen,
@@ -82,6 +82,7 @@ export default observer(function ActionButtons() {
             title: 'fullscreen.title',
         },*/
         /*{
+        
             id: 'open-code',
             cmd: () => modalStore.open({
                 title: t('showCode.title'),
@@ -89,8 +90,8 @@ export default observer(function ActionButtons() {
             }),
             iconPath: mdiXml,
             title: 'showCode.title',
-        },
-        {
+        },*/
+        /*{{
             id: 'import-code',
             cmd: () => modalStore.open({
                 title: t('importCode.title'),
@@ -125,14 +126,14 @@ export default observer(function ActionButtons() {
         },
         {
             id: 'save',
-            cmd: 'core:undo',
+            cmd: 'saveProject',
             iconPath: mdiContentSave,
             //disabled: () => !UndoManager.hasUndo(),
             title: '',
         },
         {
             id: 'publish',
-            cmd: 'core:redo',
+            cmd: 'publishProject',
             iconPath: mdiPublish,            
             title: '',
         },
@@ -255,6 +256,7 @@ export default observer(function ActionButtons() {
 
     return (
         <Grid space="s" items="center" justify="end" className={cx(pad.xyS2)}>
+            <GridItem><input type="text" value="File Name"></input></GridItem>
             {buttons.map(({ id, cmd, iconPath, disabled, options, title }) => (
                 <GridItem key={id}>
                     <ButtonWithTooltip

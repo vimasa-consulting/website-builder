@@ -2253,3 +2253,11 @@ html {
     --tw-text-opacity: 1;
     color: rgb(167 139 250/var(--tw-text-opacity))
 }
+.slack-button {
+    background-color: #4a154b;
+    display:flex;
+    color: #fff;
+    width: 134px;
+    padding: 4px;
+    font-size: larger;
+}

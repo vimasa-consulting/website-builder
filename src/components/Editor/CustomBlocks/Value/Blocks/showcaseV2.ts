@@ -413,7 +413,7 @@ const showcaseV2Component = (editor: Editor) => {
                     }
                   
                     .${classPrefix}-cardsWrapper {
-                      max-width: 100%;
+                      max-width: 85%;
                       margin: 40px 0;
                     }
                   
@@ -425,14 +425,20 @@ const showcaseV2Component = (editor: Editor) => {
                   
                     .${classPrefix}-card {
                       width: 100%;
+                      max-height: 397px;
+                      margin-left: 43px;
                     }
                   
                     .${classPrefix}-imageWrapper {
-                      padding: 100px 20px;
+                      padding: 0px;
                     }
                   
                     .${classPrefix}-img {
                       margin-bottom: 10px;
+                    }
+
+                    .${classPrefix}-imageWrapperRounded {
+                      margin-left: 30px;
                     }
                   }
                   

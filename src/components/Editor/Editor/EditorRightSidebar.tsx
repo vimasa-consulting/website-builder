@@ -5,6 +5,7 @@ import cx from "../../utils/makeCls";
 import DesignManager from '../DesignManager';
 import Resizable from '../Resizable';
 import { br, cl } from '../theme';
+import Grid from '../Grid';
 
 export default observer(function EditorRightSidebar() {
     const { rightSidebarSize, setRightSidebarSize, editor, isInPreview, isRightSidebarOpen } = useAppEditorStore();
@@ -33,6 +34,10 @@ export default observer(function EditorRightSidebar() {
             onResize={onResize}
             onResizeStop={onResizeStop}
         >
+                <Grid className="grid grid-cols-2 gap-2 p-2">
+                    <a className="slack-button" href="https://slack.com" target="_blank"><p>Join our </p><img width="50px" src="/slack.png"></img></a>
+                    <a href="https://google.com" target="_blank">Get Help</a>                
+                </Grid>
           <DesignManager/>
         </Resizable>
     );
