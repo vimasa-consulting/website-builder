@@ -61,10 +61,11 @@ export default observer(function EditorApp({fileID}: AppProps) {
     (window as any).editor = editor;    
     const deviceManager = editor.Devices;
     deviceManager.remove("tablet");
+    deviceManager.remove("mobileLandscape");
     const mobileDevice = deviceManager.get("mobilePortrait");
-    //mobileDevice?.set({ width: "400px" });
+    mobileDevice?.set({ width: "400px" });
     const desktopDevice = deviceManager.get("desktop");
-    //desktopDevice?.set({ width: "1440px" });
+    desktopDevice?.set({ width: "1440px" });
 
     initCustomBlocks(editor);
     // Test infinite canvas
