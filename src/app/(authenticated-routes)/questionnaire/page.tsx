@@ -327,7 +327,7 @@ export default function Page() {
   
       const newFileResponse = await createFileForProject(newFilePayload);
       const newFile = newFileResponse.data;
-      router.push(`/editor/${newFile._id}?block_sequence=${blockSequenceState}`);
+      router.push(`/studio/${newFile._id}?block_sequence=${blockSequenceState}`);
       } catch(error) {
         console.log(error)
         setLoadingSmartBuilder(false)

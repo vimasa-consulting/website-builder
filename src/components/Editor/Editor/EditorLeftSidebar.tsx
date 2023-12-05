@@ -42,7 +42,7 @@ export default observer(function EditorLeftSidebar() {
               <PagesProvider>
                 {(props) => <PageManager {...props}/>}
               </PagesProvider>
-            </GridItem>*/}
+    </GridItem>*/}
             <GridItem className={cx(['w-full', 'overflow-hidden', br.bt, cl.br])} grow>
               <LayersProvider>
                 {(props) => <LayerManager {...props}/>}

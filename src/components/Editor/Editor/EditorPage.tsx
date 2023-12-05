@@ -15,8 +15,10 @@ import { cl, tsOpac } from "../theme";
 import PluginManager from "../Modal/contents/PluginManager";
 import { usePluginStore } from "../../store/pluginStore";
 import BlockSearchPopup from "../BlockSearchPopup";
-
-export default observer(function EditorPage() {
+export interface AppProps {    
+    fileID: string
+  };
+export default observer(function EditorPage({fileID}: AppProps) {
     const appEditorStore = useAppEditorStore();
     const { projectIdToLoad, editor, updateAppShell, analytics, isDev, editorKey, isAuthorized, setIsAuthorized } = appEditorStore;
     const modalStore = useModalStore();
@@ -86,7 +88,7 @@ export default observer(function EditorPage() {
 
     return (
         <Grid className={cx('relative transition-colors h-full', cl.bg, cl.txt)} justify="center" items="center" col>
-            <EditorApp/>
+            <EditorApp fileID={fileID}/>
             <div style={{ display: "none" }}>hello</div>
             <Transition show={!projectIdToLoad || !editorKey} as={Fragment} {...tsOpac}>
                 <Spinner className={cx('z-10', cl.bg)} abs/>

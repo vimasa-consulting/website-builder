@@ -39,14 +39,21 @@ import { usePlugin } from 'grapesjs'
 import grapesjsIcons from 'grapesjs-icons'
 //@ts-ignore
 import type { PluginOptions } from 'grapesjs-icons'
-
-export default observer(function EditorApp() {
+export interface AppProps {    
+  fileID: string
+};
+export default observer(function EditorApp({fileID}: AppProps) {
   const { projectType, editorConfig, editorKey, setEditor } = useAppEditorStore();
   const pluginStore = usePluginStore();
   const [gjsOpts, gjsPlugins] = useMemo(() => [
     getEditorOptions(projectType), pluginStore.getPluginsToLoad(projectType),
   ], [projectType, editorKey]);
-  const onEditor = (editor: Editor) => {
+  const onEditor = (editor: Editor) => {    
+    const item:any=localStorage.getItem(`gjsFile-${fileID}`)  
+    const landingProject=JSON.parse(item);
+    editor.loadProjectData(landingProject);
+    editor.UndoManager.clear();
+        
     setEditor(editor);
     (window as any).editor = editor;    
     const deviceManager = editor.Devices;
@@ -157,7 +164,7 @@ const options: PluginOptions = {
       grapesjsCss={editorConfig.gjsStyle}
       options={gjsOpts}
       plugins={plugins}
-      onEditor={onEditor}
+      onEditor={onEditor}    
     >
       <Grid className="h-full overflow-hidden">
         <EditorLeftSidebar />

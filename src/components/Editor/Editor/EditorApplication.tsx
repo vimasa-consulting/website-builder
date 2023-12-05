@@ -2,8 +2,9 @@ import { landingPageProject } from '../Modal/contents/ProjectManager';
 import AppWrapper from '../AppWrapper';
 import { StoreProvider, StoreProviderProps } from './../../store';
 import { getLocalState } from './../../utils/localState';
-import { ProjectType } from './../../utils/types';
+import { ProjectItem, ProjectType } from './../../utils/types';
 import EditorPage from './EditorPage';
+import { ProjectData } from 'grapesjs';
 
 export interface CreateEditorOptions {
   /**
@@ -37,11 +38,12 @@ export interface CreateEditorOptions {
 
 export interface AppProps {
   options: CreateEditorOptions
+  fileID: string
 };
 
 const GJS_VERSION = '0.21.7';
 
-function EditorApplication({ options }: AppProps) {  
+function EditorApplication({ options, fileID}: AppProps) {  
   const isDev = process.env.NODE_ENV !== 'production';
   const initialState: StoreProviderProps['initialState'] = {
     localSettingsStore: getLocalState(),
@@ -51,8 +53,6 @@ function EditorApplication({ options }: AppProps) {
       rootEl: document.querySelector("#root") as HTMLElement,
       updateAppShell: true,
       editorConfig: {
-        // project: blankWebProject,
-        defaultProject: landingPageProject,
         gjsScript: `https://unpkg.com/grapesjs@${GJS_VERSION}/grapes.min.js`,
         gjsStyle: `/unpkg.com/grapesjs@${GJS_VERSION}/dist/css/grapes.min.css`,
       }
@@ -62,7 +62,7 @@ function EditorApplication({ options }: AppProps) {
   return (
     <StoreProvider initialState={initialState}>
       <AppWrapper>
-        <EditorPage/>
+        <EditorPage fileID={fileID}/>
         <div id="headlessui-portal-root">
           {/*
               This is necessary to make modals work in fullscreen mode.
