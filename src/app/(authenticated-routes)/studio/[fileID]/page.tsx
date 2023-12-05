@@ -20,7 +20,7 @@ const EditorPage = () => {
   const fetchEditorData = async (fileID: string) => {
     const { data } = await getFile(fileID);
     // update local storage    
-    localStorage.setItem(`gjsFile-${fileID}`, data.builderData || '')
+    localStorage.setItem(`wb-${fileID}`, data.builderData || '')
     setEditorDataLoaded(true);
   }
       

@@ -49,14 +49,30 @@ export default observer(function EditorApp({fileID}: AppProps) {
   const [gjsOpts, gjsPlugins] = useMemo(() => [
     getEditorOptions(projectType), pluginStore.getPluginsToLoad(projectType),
   ], [projectType, editorKey]);
-  const onEditor = (editor: Editor) => {    
+  const onEditor = (editor: Editor) => {
+    initCustomBlocks(editor); 
+    /*
     const item:any=localStorage.getItem(`gjsFile-${fileID}`)  
     if(item){
       const landingProject=JSON.parse(item);
       editor.loadProjectData(landingProject);
       editor.UndoManager.clear()  
-    }
-        
+    }    
+    */
+    const item:any=localStorage.getItem(`wb-${fileID}`)  
+    if(item){
+      const landingProject=JSON.parse(item);
+      editor.loadProjectData(landingProject);
+      editor.UndoManager.clear()  
+    } else {
+      const url = new URL(window.location.href);
+      const block_sequence = url.searchParams.get("block_sequence") || "";
+      const blocks = atob(block_sequence).split(",");        
+      blocks.forEach((item) => {
+        console.log(item.trim());
+        editor.addComponents({ type: item.trim() });
+      });
+    }    
     setEditor(editor);
     (window as any).editor = editor;    
     const deviceManager = editor.Devices;
@@ -67,7 +83,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
     const desktopDevice = deviceManager.get("desktop");
     desktopDevice?.set({ width: "1440px" });
 
-    initCustomBlocks(editor);
+    
     // Test infinite canvas
     editor.onReady(() => {
       editor.Commands.add("publishProject", {      
@@ -159,7 +175,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
       console.log(fontOptions);
       // @ts-ignore
       fonts?.set("options", fontOptions);
-      if(editor.getComponents().length<2){
+      /*if(editor.getComponents().length<2){
         const url = new URL(window.location.href);
         const block_sequence = url.searchParams.get("block_sequence") || "";
         const blocks = atob(block_sequence).split(",");
@@ -167,7 +183,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
           console.log(item.trim());
           editor.addComponents({ type: item.trim() });
         });
-      }
+      }*/
       
       // editor.Canvas.setZoom(70);
       // editor.Canvas.setCoords(-30, -30);
