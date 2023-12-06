@@ -68,7 +68,7 @@ export default observer(function SelectorManager({
     const targetLabel = isTargetComponents ? 'Components' : 'Selectors';
     const t = (key: string) => i18nStore.t(`selectorManager.${key}`);
     const styleCatalogLabel = i18nStore.t(`modals.styleCatalog.title`);
-    const openStyles = () => modalStore.open({ title: styleCatalogLabel, content: <StyleCatalog/> });
+    const openStyles = () => modalStore.open({ title: styleCatalogLabel, children: <StyleCatalog/> });
     const selectorsAsOptions = allRes
         .filter(sel => sel.isClass())
         .map((sel) => ({

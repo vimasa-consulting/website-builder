@@ -57,7 +57,7 @@ const replaceDataUrlAssets = (str: string, dataUrlMap: AssetDataUrlMap, opts: { 
   return result;
 }
 
-export default observer(function ExportCode() {
+export default function ExportCode() {
   const i18nStore = useI18nStore();
   const editor = useAppEditorStore().editor!;
   const [html] = useState(() => editor.getHtml());
@@ -144,4 +144,4 @@ export default observer(function ExportCode() {
       </Grid>
     </Grid>
   );
-});
+};

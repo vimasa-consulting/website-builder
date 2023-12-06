@@ -81,16 +81,16 @@ export default observer(function ActionButtons() {
             options: { target: '#root' },
             title: 'fullscreen.title',
         },*/
-        /*{
+        {
         
             id: 'open-code',
             cmd: () => modalStore.open({
                 title: t('showCode.title'),
-                content: () => <ExportCode/>,
+                children: <ExportCode />
             }),
             iconPath: mdiXml,
             title: 'showCode.title',
-        },*/
+        },
         /*{{
             id: 'import-code',
             cmd: () => modalStore.open({
@@ -256,7 +256,7 @@ export default observer(function ActionButtons() {
 
     return (
         <Grid space="s" items="center" justify="end" className={cx(pad.xyS2)}>
-            <GridItem><input type="text" value="File Name"></input></GridItem>
+            <GridItem><input type="text" value="File Name" onChange={() => null}></input></GridItem>
             {buttons.map(({ id, cmd, iconPath, disabled, options, title }) => (
                 <GridItem key={id}>
                     <ButtonWithTooltip
@@ -270,7 +270,7 @@ export default observer(function ActionButtons() {
                     </ButtonWithTooltip>
                 </GridItem>
             ))}
-            {/*<GridItem>
+            <GridItem>
                 <Popover pos={posActions} title={false} padding={false} handler={<Icon path={mdiCog} size={icon.s}/>} overlay>
                     {({ close }) => <>
                         {
@@ -285,7 +285,7 @@ export default observer(function ActionButtons() {
                         }
                     </>}
                 </Popover>
-                </GridItem>*/}
+                </GridItem>
         </Grid>
     );
   });
