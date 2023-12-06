@@ -51,6 +51,97 @@ export default observer(function EditorApp({fileID}: AppProps) {
   ], [projectType, editorKey]);
   const onEditor = (editor: Editor) => {
     initCustomBlocks(editor); 
+    editor.Commands.add("publishProject", {      
+      run(editor, sender) {
+        console.log('publish project');    
+        // open a popup and pass editor as props?
+        // const container = document.querySelector("#customModalPopup");
+        editor.Modal.open({
+          title: "Publishing",
+          content: 'Please wait!',
+        }).onceClose(() => editor.stopCommand("publishProject"));
+        // build html content
+        const htmlBody = editor.getHtml();
+        const cssBody = editor.getCss();
+        const fullHTML = `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+            <style>${cssBody}</style>
+          </head>
+          ${htmlBody}
+        </html>`;
+        // publish file
+        publishFile({
+          _id: fileID,
+          builderData: JSON.stringify(editor.getProjectData()),
+          htmlString: fullHTML,
+          slug: 'example.com'
+        }).then(() => {
+          editor.Modal.close();
+        }).catch((error) => {
+          console.log('Failed to publish', error);
+        });     
+      },
+      stop() {
+        editor.Modal.close();
+      },
+    });
+    
+    editor.Commands.add("saveProject", {
+      run(editor, sender) {
+        // open a popup and pass editor as props?
+        console.log('saving project');
+        editor.Modal.open({
+          title: "Saving",
+          content: 'Please wait!',
+        }).onceClose(() => editor.stopCommand("saveProject"));
+        // save file
+        updateFile({
+          _id: fileID,
+          builderData: JSON.stringify(editor.getProjectData()),
+          slug: 'example.com'
+        }).then(() => {
+          editor.Modal.close();
+        }).catch((error:any) => {
+          console.log('Failed to save', error);
+        });
+      },
+      stop() {
+        editor.Modal.close();
+      },
+    });
+    /*editor.Storage.add('remote', {
+      async load() {
+        return await axios.get(`projects/${projectId}`);
+      },
+    
+      async store(data) {
+        return await axios.patch(`projects/${projectId}`, { data });
+      },
+    });*/
+    editor.Commands.add("openPersuasiveBlocks", {
+      run(editor, sender) {
+        // open a popup and pass editor as props?
+        const container = document.querySelector("#customModalPopup");
+        editor.Modal.open({
+          title: "Persuasive Blocks",
+          content: container,
+        }).onceClose(() => editor.stopCommand("openPersuasiveBlocks"));
+      },
+      stop() {
+        editor.Modal.close();
+      },
+    });
+    const styleManager = editor.StyleManager;
+    var fonts = styleManager.getProperty("typography", "font-family");
+    // @ts-ignore
+    var fontOptions = fonts?.attributes?.options;
+    fontOptions.push({ id: "Inter, sans-serif", label: "Inter" });
+    console.log(fontOptions);
+    // @ts-ignore
+    fonts?.set("options", fontOptions);
     /*
     const item:any=localStorage.getItem(`gjsFile-${fileID}`)  
     if(item){
@@ -86,95 +177,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
     
     // Test infinite canvas
     editor.onReady(() => {
-      editor.Commands.add("publishProject", {      
-        run(editor, sender) {
-          console.log('publish project');    
-          // open a popup and pass editor as props?
-          // const container = document.querySelector("#customModalPopup");
-          editor.Modal.open({
-            title: "Publishing",
-            content: 'Please wait!',
-          }).onceClose(() => editor.stopCommand("publishPage"));
-          // build html content
-          const htmlBody = editor.getHtml();
-          const cssBody = editor.getCss();
-          const fullHTML = `
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-              <style>${cssBody}</style>
-            </head>
-            ${htmlBody}
-          </html>`;
-          // publish file
-          publishFile({
-            _id: fileID,
-            builderData: JSON.stringify(editor.getProjectData()),
-            htmlString: fullHTML,
-          }).then(() => {
-            editor.Modal.close();
-          }).catch((error) => {
-            console.log('Failed to publish', error);
-          });     
-        },
-        stop() {
-          editor.Modal.close();
-        },
-      });
-      
-      editor.Commands.add("saveProject", {
-        run(editor, sender) {
-          // open a popup and pass editor as props?
-          console.log('saving project');
-          editor.Modal.open({
-            title: "Saving",
-            content: 'Please wait!',
-          }).onceClose(() => editor.stopCommand("savePage"));
-          // save file
-          updateFile({
-            _id: fileID,
-            builderData: JSON.stringify(editor.getProjectData())
-          }).then(() => {
-            editor.Modal.close();
-          }).catch((error:any) => {
-            console.log('Failed to save', error);
-          });
-        },
-        stop() {
-          editor.Modal.close();
-        },
-      });
-      /*editor.Storage.add('remote', {
-        async load() {
-          return await axios.get(`projects/${projectId}`);
-        },
-      
-        async store(data) {
-          return await axios.patch(`projects/${projectId}`, { data });
-        },
-      });*/
-      editor.Commands.add("openPersuasiveBlocks", {
-        run(editor, sender) {
-          // open a popup and pass editor as props?
-          const container = document.querySelector("#customModalPopup");
-          editor.Modal.open({
-            title: "Persuasive Blocks",
-            content: container,
-          }).onceClose(() => editor.stopCommand("openPersuasiveBlocks"));
-        },
-        stop() {
-          editor.Modal.close();
-        },
-      });
-      const styleManager = editor.StyleManager;
-      var fonts = styleManager.getProperty("typography", "font-family");
-      // @ts-ignore
-      var fontOptions = fonts?.attributes?.options;
-      fontOptions.push({ id: "Inter, sans-serif", label: "Inter" });
-      console.log(fontOptions);
-      // @ts-ignore
-      fonts?.set("options", fontOptions);
+
       /*if(editor.getComponents().length<2){
         const url = new URL(window.location.href);
         const block_sequence = url.searchParams.get("block_sequence") || "";
@@ -273,7 +276,7 @@ const options: PluginOptions = {
             { content }
           </Modal>
         )}
-        </ModalProvider>*/}
+        </ModalProvider> */}
       <CanvasSpots/>
       <BuiltInRTE/>
     </GjsEditor>

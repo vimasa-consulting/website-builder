@@ -21,7 +21,7 @@ export default function Navbar() {
     <FlowbiteNavbar
       fluid={true}
       rounded={false}
-      className="bg-black m-5"
+      className="bg-black m-5 navbarBackground"
     >
       <FlowbiteNavbar.Brand href={ROUTES.PROJECTS}>
         {/* <Image

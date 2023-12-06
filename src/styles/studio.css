@@ -2257,7 +2257,9 @@ html {
     background-color: #4a154b;
     display:flex;
     color: #fff;
-    width: 134px;
     padding: 4px;
     font-size: larger;
+    display: flex;
+    justify-content: center;
+    height: 33px;
 }

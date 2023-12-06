@@ -34,9 +34,9 @@ export default observer(function EditorRightSidebar() {
             onResize={onResize}
             onResizeStop={onResizeStop}
         >
-                <Grid className="grid grid-cols-2 gap-2 p-2">
-                    <a className="slack-button" href="https://slack.com" target="_blank"><p>Join our </p><img width="50px" src="/slack.png"></img></a>
-                    <a href="https://google.com" target="_blank">Get Help</a>                
+                <Grid className="flex flex-col pt-[1px]">
+                    <a className="slack-button" href="https://slack.com" target="_blank"><p>Join our </p><img className='w-[80px] mt-[-3px]' src="/slack.png"></img></a>
+                    <a className='text-center pt-[4px]' href="https://google.com" target="_blank">Get Help</a>                
                 </Grid>
           <DesignManager/>
         </Resizable>
