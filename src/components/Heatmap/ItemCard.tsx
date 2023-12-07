@@ -1,0 +1,27 @@
+'use client'
+import { Project } from "@/types/project";
+import { usePathname, useRouter } from "next/navigation";
+import { ROUTES } from "@/services/NavigationService";
+
+interface Props {
+    item: Project & {updatedAt: string};
+    itemType: string
+}
+
+export default function HeatmapItemCard({ item, itemType}: Props) {
+    const router  = useRouter();
+    const pathname = usePathname();
+
+const openDomainSettingsHandler = () => {
+    router.push(`${itemType === 'Project' ? `${ROUTES.HEAT_MAPS}/projectID/${item._id}` : `${pathname}/fileID/${item._id}`}`)
+}
+
+    return (
+        <div className="max-w-xs mr-[32px]">
+                <div onClick={openDomainSettingsHandler} className="w-[286px] h-[166px] bg-gray-300 border-none flex flex-col justify-center rounded-[10px] p-[40px] text-black gap-[10px] cursor-pointer">
+                    <h2 className="font-[600] text-[20px]">{item.name}</h2>
+                    <p className="text-[16px]">{item.projectHostingAlias}</p>
+                </div>
+        </div>
+    )
+}

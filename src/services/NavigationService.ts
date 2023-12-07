@@ -10,5 +10,6 @@ export const ROUTES = {
   DOMAINS: '/domains',
   SETTINGS: '/settings',
   STUDIO: '/studio',
-  GET_STARTED: '/get-started'
+  GET_STARTED: '/get-started',
+  HEAT_MAPS: '/heatmap'
 }
