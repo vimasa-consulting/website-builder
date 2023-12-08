@@ -51,6 +51,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
   ], [projectType, editorKey]);
   const onEditor = (editor: Editor) => {
     initCustomBlocks(editor); 
+    const matomoProjectId='1';
     editor.Commands.add("publishProject", {      
       run(editor, sender) {
         console.log('publish project');    
@@ -69,6 +70,22 @@ export default observer(function EditorApp({fileID}: AppProps) {
           <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" >
             <style>${cssBody}</style>
+            <!-- Matomo -->
+            <script>
+              var _paq = window._paq = window._paq || [];
+              /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+              _paq.push(['trackPageView']);
+              _paq.push(['enableLinkTracking']);
+              (function() {
+                var u="https://aayushsoftwarescom.matomo.cloud/";
+                _paq.push(['setTrackerUrl', u+'matomo.php']);
+                _paq.push(['setSiteId', '${matomoProjectId}']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.async=true; g.src='//cdn.matomo.cloud/aayushsoftwarescom.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+              })();
+            </script>
+            <!-- End Matomo Code -->
+
           </head>
           ${htmlBody}
         </html>`;
