@@ -870,17 +870,17 @@ export function getEditorOptions(projectType: ProjectType) {
         selectorManager: {
           componentFirst: true,
         },
-        storageManager: {
+        /*storageManager: {
           onStore: (data: any) => {
             const custom = getStore().appEditorStore.projectDataCustom;
             data.custom = custom ? JSON.parse(JSON.stringify(custom)) : {};
             return data;
           },
-          // onLoad: (data: any) => {
-          //   getStore().appEditorStore.setProjectDataCustom(data.custom);
-          //   return data;
-          // },
-        },
+           onLoad: (data: any) => {
+             getStore().appEditorStore.setProjectDataCustom(data.custom);
+             return data;
+           },
+        },*/
         i18n: {
           messagesAdd: {
             en: localeEn,
