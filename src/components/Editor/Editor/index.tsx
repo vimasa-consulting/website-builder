@@ -137,7 +137,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
         const container = document.querySelector("#customModalPopup");
         setShowPersuasiveBlocks(true)
         editor.Modal.open({
-          title: "Persuasive Blocks",
+          title: "Persuation Blocks",
           content: container,
         }).onceClose(() => editor.stopCommand("openPersuasiveBlocks"));
       },

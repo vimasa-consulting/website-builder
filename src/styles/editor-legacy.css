@@ -646,9 +646,9 @@
   background-color: rgb(0, 0, 0) !important;
 }
 
-.gjs-two-color {
+/* .gjs-two-color {
   color: rgba(255, 255, 255, 0.7) !important;
-}
+} */
 
 .gjs-three-bg {
   background-color: #871097 !important;

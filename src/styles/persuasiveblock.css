@@ -3,16 +3,27 @@
 .gjs-mdl-dialog {
   max-width: unset;
   margin-top: 22px;
+  width: 1298px !important;
+  margin-top: 70px !important;
+  border-radius: 18px !important;
+  height: 755px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+.gjs-mdl-dialog::-webkit-scrollbar {
+  display: none;
 }
 .gjs-mdl-header {
   background-color: #ffffff;
-
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
+  padding-top: 33px !important;
+  padding-bottom: 58px !important;
   .gjs-mdl-title {
     color: #000;
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 28.004px;
     font-style: normal;
     font-weight: 500;
@@ -28,6 +39,7 @@
 .gjs-mdl-content {
   padding: unset;
   background-color: white;
+  padding: 0 !important;
   #customModalPopup {
     display: flex;
     flex-direction: row;
@@ -60,7 +72,7 @@
             .ais-RefinementList-labelText {
               color: #000;
 
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 18.003px;
               font-style: normal;
               font-weight: 400;
@@ -70,7 +82,7 @@
             .ais-RefinementList-count {
               color: #524747;
 
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 12.003px;
               font-style: normal;
               font-weight: 400;
@@ -80,24 +92,21 @@
       }
     }
     .rightSection {
-      padding-right: 30px;
-      padding: 12px;
+      padding-top: 24px;
+      padding-left: 37px;
       width: 74%;
       .topSection {
-        h2 {
-          color: #11ec7d;
-
-          font-family: Inter;
+        /* h2 {
+          font-family: Inter, sans-serif;
           font-size: 26.004px;
           font-style: normal;
           font-weight: 600;
-          line-height: 39.808px; /* 153.083% */
+          line-height: 39.808px;
           letter-spacing: 0.65px;
-        }
+        } */
         p {
           color: #919090;
-
-          font-family: Inter;
+          font-family: Inter, sans-serif;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -107,24 +116,37 @@
       }
       .bottomSection {
         padding: 14px 0;
-
         .ais-Hits-list {
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
-          gap: 68px;
+          gap: 35px
+;
           .ais-Hits-item {
-            width: 28%;
-            background-color: #bbfbe5;
+            width: 272px;
             justify-content: center;
-            padding: 1.1rem;
             padding-bottom: unset;
+            padding: 0;
+            border: none !important;
+            box-shadow: none;        
             .articleSection {
+              width: 100%;
               background-color: #ffffff;
               height: 100%;
               img {
                 height: 80px;
                 max-width: 180px;
+              }
+              .imageContainer {
+                padding: 1.1rem;
+                padding-bottom: 0px;
+                width: 100%;
+                height: 169px;
+                .image {
+                  width: 100%;
+                  max-width: unset;
+                  height: 100%;
+                }
               }
               .description {
                 display: flex;
@@ -134,8 +156,7 @@
                 justify-content: space-between;
                 h1 {
                   color: #000;
-
-                  font-family: Inter;
+                  font-family: Inter, sans-serif;
                   font-size: 15.002px;
                   font-style: normal;
                   font-weight: 500;
@@ -145,8 +166,7 @@
                   background-color: #f3f4f6;
                   color: #d0f;
                   padding: 6px 12px;
-
-                  font-family: Inter;
+                  font-family: Inter, sans-serif;
                   font-size: 14.002px;
                   font-style: normal;
                   font-weight: 500;
@@ -166,6 +186,11 @@
   display: flex;
   flex-direction: row;
   background-color: #ffffff;
+  font-family: Inter, sans-serif;
+  min-height: 624px;
+  .subTitle {
+    color: #919090 !important;
+  }
   .leftSection {
     width: 25%;
     border-right: 1px solid rgb(176, 176, 176);
@@ -193,8 +218,7 @@
           }
           .ais-RefinementList-labelText {
             color: #000;
-
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 18.003px;
             font-style: normal;
             font-weight: 400;
@@ -203,8 +227,7 @@
           }
           .ais-RefinementList-count {
             color: #524747;
-
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 12.003px;
             font-style: normal;
             font-weight: 400;
@@ -214,45 +237,46 @@
     }
   }
   .rightSection {
-    padding-right: 30px;
-    padding: 12px;
+    padding-top: 24px;
+    padding-left: 37px;
     width: 74%;
     .topSection {
       h2 {
-        color: #11ec7d;
-
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 26.004px;
         font-style: normal;
         font-weight: 600;
-        line-height: 39.808px; /* 153.083% */
+        line-height: 39.808px;
         letter-spacing: 0.65px;
+        background-color: white !important;
       }
       p {
         color: #919090;
-
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         /* line-height: 39.802px; 248.761% */
         letter-spacing: 0.4px;
+        margin-bottom: 16px;
+        margin-top: 10px;
       }
     }
     .bottomSection {
       padding: 14px 0;
-
       .ais-Hits-list {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 68px;
+        gap: 35px;
+        border: none !important;
+        box-shadow: none;    
         .ais-Hits-item {
-          width: 28%;
+          width: 272px;
           background-color: #bbfbe5;
           justify-content: center;
-          padding: 1.1rem;
           padding-bottom: unset;
+          padding: 0;
           .articleSection {
             background-color: #ffffff;
             height: 100%;
@@ -268,8 +292,7 @@
               justify-content: space-between;
               h1 {
                 color: #000;
-
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-size: 15.002px;
                 font-style: normal;
                 font-weight: 500;
@@ -279,8 +302,7 @@
                 background-color: #f3f4f6;
                 color: #d0f;
                 padding: 6px 12px;
-
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-size: 14.002px;
                 font-style: normal;
                 font-weight: 500;
@@ -293,4 +315,33 @@
       }
     }
   }
+}
+
+.trust {
+  color: #11EC7D;
+  background-color: #BBFBE5;
+}
+.logic {
+  color: #7E9CFF;
+  background-color: #D8DFF1;
+}
+.brand-connect {
+  color: #FF971D;
+  background-color: #FFEBD2;
+}
+.emotion {
+  color: #FF7FE5;
+  background-color: #FFE6FB;
+}
+.fomo {
+  color: #FFE512;
+  background-color: #FFFACF;
+}
+.value {
+  color: #E064FF;
+  background-color: #FFE1FF;
+}
+.first-impression {
+  color: #919090;
+  background-color: #EEEEEE;
 }
