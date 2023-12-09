@@ -33,7 +33,8 @@ const EditorPage = () => {
   return (
     <div>
       <div id="editor"></div>
-      <EditorApplication options={editor} fileID={fileID}/>
+      {editorDataLoaded && <EditorApplication options={editor} fileID={fileID}/>}
+      
     </div>
   );
 };
