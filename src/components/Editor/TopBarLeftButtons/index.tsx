@@ -21,6 +21,14 @@ export default observer(function TopBarLeftButtons() {
                     </Button>
                 </Tooltip>
             </GridItem>
+            <GridItem>
+                <Tooltip title="Layers">
+                    <Button onClick={toggleOpen}>
+                        Layers
+                    </Button>
+                </Tooltip>
+            </GridItem>
+
         </Grid>
     );
   });

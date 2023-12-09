@@ -7,13 +7,16 @@ import {
   SearchBox,
   Hits,
   RefinementList,
+  HierarchicalMenu,
 } from "react-instantsearch";
 import "instantsearch.css/themes/satellite.css";
 import { useAppEditorStore } from '../store/appEditorStore';
-
+import CustomRadioRefinementList from './CustomRefinementList';
+import "../../styles/persuasiveblock.css";
+// import "../../styles/previewblock.css";
 
 interface BlockSearchPopupProps {
-  grapeJSEditor: Editor | null
+  grapeJSEditor: Editor | null | undefined
 }
 
 const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) => {  
@@ -40,13 +43,20 @@ const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) =>
     }
     return (
         <div id="customModalPopup">
-        <InstantSearch searchClient={searchClient} indexName="blocks">
+        <InstantSearch searchClient={searchClient} indexName="blocks_list_new">
           <div className="leftSection">            
               <div className="searchSection">
                 <SearchBox />
               </div>
-              <div className="refinementList">
-                <RefinementList attribute="category" />
+              <div className="refinementList text-black">
+                {/* <RefinementList operator='or' attribute="category" /> */}
+                {/* <CustomRadioRefinementList attribute="category" /> */}
+                <HierarchicalMenu
+                  attributes={[
+                    "heirarchy.category",
+                    "heirarchy.subcategory"
+                  ]}
+                />
               </div>            
           </div>
           <div className="rightSection">
