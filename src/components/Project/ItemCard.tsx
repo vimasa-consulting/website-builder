@@ -124,7 +124,7 @@ export default function ItemCard({ item, itemType, setTableData, sharedProject =
     
     return (
         <div className="max-w-xs mr-[32px] mb-[15px]">
-            <Link href={`${itemType === 'Project' ? ROUTES.PROJECTS : ROUTES.EDITOR}/${item._id}`}>
+            <Link href={`${itemType === 'Project' ? ROUTES.PROJECTS : ROUTES.STUDIO}/${item._id}`}>
             <div
             >
                 {getImageComponent(item.imageURL)}

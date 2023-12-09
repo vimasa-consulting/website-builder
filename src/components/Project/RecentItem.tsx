@@ -25,7 +25,7 @@ export default function RecentItem({ project, itemType }: { project: Project, it
   const router = useRouter();
   
   const handleProjectOpen = () => {
-    return router.push(`${itemType === 'Project' ? ROUTES.PROJECTS : ROUTES.EDITOR}/${project._id}`)
+    return router.push(`${itemType === 'Project' ? ROUTES.PROJECTS : ROUTES.STUDIO}/${project._id}`)
   }
 
   return (
