@@ -1,7 +1,7 @@
-import GjsEditor, { AssetsProvider, Canvas, ModalProvider } from '@grapesjs/react';
+import GjsEditor, { AssetsProvider, Canvas, ModalProvider, WithEditor } from '@grapesjs/react';
 import { grapesjs, type Editor, PropertyProps } from "grapesjs";
 import { observer } from 'mobx-react-lite';
-import { useMemo } from 'react';
+import { useMemo, useEffect, useState } from 'react';
 import { useAppEditorStore } from "../../store/appEditorStore";
 import { usePluginStore } from '../../store/pluginStore';
 import cx from '../../utils/makeCls';
@@ -44,11 +44,13 @@ export interface AppProps {
   fileID: string
 };
 export default observer(function EditorApp({fileID}: AppProps) {
-  const { projectType, editorConfig, editorKey, setEditor } = useAppEditorStore();
+  const [showPersuasiveBlocks, setShowPersuasiveBlocks] = useState(false)
+  const { projectType, editorConfig, editorKey, setEditor, editor } = useAppEditorStore();
   const pluginStore = usePluginStore();
   const [gjsOpts, gjsPlugins] = useMemo(() => [
     getEditorOptions(projectType), pluginStore.getPluginsToLoad(projectType),
   ], [projectType, editorKey]);
+
   const onEditor = (editor: Editor) => {
     initCustomBlocks(editor); 
     const matomoProjectId='1';
@@ -105,6 +107,15 @@ export default observer(function EditorApp({fileID}: AppProps) {
         editor.Modal.close();
       },
     });
+
+    editor.on('component:selected', (component) => {
+      // Your update logic here
+      console.log('Component selected:', component);
+      console.log('Component selected:', editor);
+      grapesjs.editors[0] = editor
+      setEditor(editor)
+      // Update your editor instance or perform other actions
+  });
     
     editor.Commands.add("saveProject", {
       run(editor, sender) {
@@ -142,6 +153,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
       run(editor, sender) {
         // open a popup and pass editor as props?
         const container = document.querySelector("#customModalPopup");
+        setShowPersuasiveBlocks(true)
         editor.Modal.open({
           title: "Persuasive Blocks",
           content: container,
@@ -229,7 +241,10 @@ const options: PluginOptions = {
     'mdi', // Material Design Icons by Pictogrammers
     'uim', // Unicons Monochrome by Iconscout
     'streamline-emojis' // Streamline Emojis by Streamline
-  ]
+  ],
+  modal: {
+    title: 'Icons'
+  }
 }
   const plugins=[
     blocksBasicPlugin,
@@ -261,7 +276,7 @@ const options: PluginOptions = {
       grapesjsCss={editorConfig.gjsStyle}
       options={gjsOpts}
       plugins={plugins}
-      onEditor={onEditor}    
+      onEditor={onEditor}
     >
       <Grid className="h-full overflow-hidden">
         <EditorLeftSidebar />
@@ -269,10 +284,10 @@ const options: PluginOptions = {
           <Grid className="relative" col full>
             <EditorTopbar />
             <GridItem grow>
-              <Canvas className="app-canvas relative bg-gray-50 dark:bg-zinc-800">
-                {/* <WithEditor>
-                  <CanvasDebug/>
-                </WithEditor> */}
+              <Canvas className="gjs-editor-wrapper relative bg-gray-50 dark:bg-zinc-800">
+                <WithEditor>
+                  
+                </WithEditor>
               </Canvas>
             </GridItem>
           </Grid>
@@ -294,6 +309,10 @@ const options: PluginOptions = {
           </Modal>
         )}
         </ModalProvider> */}
+        {
+        editor?.Components &&
+          <BlockSearchPopup grapeJSEditor={editor} />
+        }
       <CanvasSpots/>
       <BuiltInRTE/>
     </GjsEditor>
