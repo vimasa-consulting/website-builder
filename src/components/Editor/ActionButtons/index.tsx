@@ -157,7 +157,7 @@ export default observer(function ActionButtons() {
             editor.off(runEvent, onCommand);
             editor.off(stopEvent, onCommand);
             editor.off(dirtyChange, onDirtyChange);
-        }
+        }        
     }, [editor]); // eslint-disable-line
 
     const infoItems: MenuListItem[] = [
@@ -253,10 +253,11 @@ export default observer(function ActionButtons() {
             close();
         }
     }
-
+    const fileName:any=localStorage.getItem(`wb-active-filename`);
+    console.log(fileName);
     return (
         <Grid space="s" items="center" justify="end" className={cx(pad.xyS2)}>
-            <GridItem><input type="text" value="File Name" onChange={() => null}></input></GridItem>
+            <GridItem><input type="text" value={fileName} onChange={() => null}></input></GridItem>
             {buttons.map(({ id, cmd, iconPath, disabled, options, title }) => (
                 <GridItem key={id}>
                     <ButtonWithTooltip
@@ -270,22 +271,6 @@ export default observer(function ActionButtons() {
                     </ButtonWithTooltip>
                 </GridItem>
             ))}
-            <GridItem>
-                <Popover pos={posActions} title={false} padding={false} handler={<Icon path={mdiCog} size={icon.s}/>} overlay>
-                    {({ close }) => <>
-                        {
-                            infoItems.map(item => (
-                                <MenuItem
-                                    key={item.id}
-                                    action={onMenuItemClick(item.action, close)}
-                                    icon={item.icon}
-                                    label={item.label}
-                                />
-                            ))
-                        }
-                    </>}
-                </Popover>
-                </GridItem>
         </Grid>
     );
   });
