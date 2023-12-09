@@ -128,8 +128,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
         // save file
         updateFile({
           _id: fileID,
-          builderData: JSON.stringify(editor.getProjectData()),
-          slug: 'example.com'
+          builderData: JSON.stringify(editor.getProjectData())          
         }).then(() => {
           editor.Modal.close();
         }).catch((error:any) => {

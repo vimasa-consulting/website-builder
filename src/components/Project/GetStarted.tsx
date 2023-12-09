@@ -68,7 +68,7 @@ export default function GetStarted({ projectID = '' }: Props) {
       const newFileResponse = await createFileForProject(newFilePayload);
       const newFile = newFileResponse.data;
 
-      router.push(`/editor/${newFile._id}`);
+      router.push(`/studio/${newFile._id}`);
     } catch (error) {
       console.log(error);
     }

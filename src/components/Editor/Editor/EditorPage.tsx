@@ -42,16 +42,16 @@ export default observer(function EditorPage({fileID}: AppProps) {
             bodyEl.classList.add(...cl.bg.split(' '), 'overflow-hidden');
         }
 
-        if (analytics && !isDev) {
+        /*if (analytics && !isDev) {
             loadScript('https://www.googletagmanager.com/gtag/js?id=G-5ZWDJH0H6G');
             (window as any).dataLayer = (window as any).dataLayer || [];
             const gtag = function(...args: any) { (window as any).dataLayer.push(arguments) };
             (window as any).gtag = gtag;
             gtag('js', new Date());
             gtag('config', 'G-5ZWDJH0H6G');
-        }
+        }*/
 
-        if (![
+        /*if (![
             'studio.grapesjs.com',
             'studio-stage.grapesjs.com',
             'localhost'
@@ -59,7 +59,7 @@ export default observer(function EditorPage({fileID}: AppProps) {
             setTimeout(() => {
                 setIsAuthorized(false);
             }, 1000);
-        }
+        }*/
     }, []);
 
     useEffect(() => {

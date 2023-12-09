@@ -870,6 +870,11 @@ export function getEditorOptions(projectType: ProjectType) {
         selectorManager: {
           componentFirst: true,
         },
+        storageManager: {
+          type: 'local', // Storage type. Available: local | remote
+          autosave: false, // Store data automatically
+          autoload: false, // Autoload stored data on init
+        },
         /*storageManager: {
           onStore: (data: any) => {
             const custom = getStore().appEditorStore.projectDataCustom;
