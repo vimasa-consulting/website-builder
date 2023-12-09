@@ -28,6 +28,8 @@ import ProjectManager from '../Modal/contents/ProjectManager';
 import Popover from '../Popover';
 import Tabs, { TabOption } from '../Tabs';
 import { icon, pad } from '../theme';
+import { useLayerManagerStore } from '@/components/store/layerManager';
+import { useStyleManagerStore } from '@/components/store/styleManager';
 
 interface ActionButton {
     id: string,
@@ -60,8 +62,11 @@ export default observer(function ActionButtons() {
     const { installEvent, appInstalled, isBrowserMode, setInstallEvent } = appEditorStore;
     const modalStore = useModalStore();
     const i18nStore = useI18nStore();
+    const layerManagerStore = useLayerManagerStore();
+    const styleManagerStore = useStyleManagerStore();
     const t = (key: string) => i18nStore.t(`actions.${key}`);
-
+    
+    
     const buttons: ActionButton[] = [
         /*{
             id: 'component-outline',
@@ -71,13 +76,13 @@ export default observer(function ActionButtons() {
         },*/
         {
             id: 'layers',
-            cmd: 'toggleLayers',
+            cmd: () => layerManagerStore.toggleOpen(),
             iconPath: mdiLayers,
             title: 'layer.title',
         },
         {
             id: 'style',
-            cmd: 'toggleStyle',
+            cmd: () => styleManagerStore.toggleOpen(),
             iconPath: mdiPaletteSwatch,
             title: 'style.title',
         },

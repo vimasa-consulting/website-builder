@@ -2287,3 +2287,6 @@ html {
     background-size: contain;
     background-image: url('/editor/block-library.png');
 }
+.sidebar-open {
+    display: none;
+}
