@@ -32,7 +32,7 @@ export default function Modal({ open = false, title, description, children, onCl
         cl.br,
         cl.bg,
         cl.txt,
-        size === 'l' ? 'max-w-5xl' : (size === 's' ? 'max-w-sm': 'max-w-md'),
+        size === 'l' ? 'max-w-[1500px]' : (size === 's' ? 'max-w-sm': 'max-w-md'),
     ]);
 
     return (

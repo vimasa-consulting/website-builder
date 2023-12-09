@@ -57,7 +57,7 @@ export default function GetStarted({ projectID = '' }: Props) {
       }
       const newFilePayload = {
         name: "Untitled",
-        slug: "test",
+        slug: "",
         htmlHeadContent: '',
         htmlBodyContent: '',
         status: FileStatus.DRAFT,

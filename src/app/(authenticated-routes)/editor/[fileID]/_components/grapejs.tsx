@@ -647,9 +647,9 @@ export default function GrapesJSComponent({ fileID }: Props) {
         }}
         onEditor={onEditor}
       />
-      <div style={{ display: "none" }}>
+      {/* <div style={{ display: "none" }}>
         <BlockSearchPopup grapeJSEditor={grapeJSEditor} />
-      </div>
+      </div> */}
       {isAddNewProjectModalOpen && (
         <CustomBlockPopup
           onClose={() => setIsAddNewProjectModalOpen(false)}
