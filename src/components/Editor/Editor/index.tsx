@@ -278,7 +278,7 @@ const options: PluginOptions = {
       onEditor={onEditor}
     >
       <Grid className="h-full overflow-hidden">
-        <EditorLeftSidebar />
+        {/*<EditorLeftSidebar />*/}
         <GridItem grow>
           <Grid className="relative" col full>
             <EditorTopbar />
@@ -291,7 +291,7 @@ const options: PluginOptions = {
             </GridItem>
           </Grid>
         </GridItem>
-        <EditorRightSidebar />
+        {/*<EditorRightSidebar />*/}
       </Grid>
       <BlockManagerContainer/>
       <AssetsProvider>
