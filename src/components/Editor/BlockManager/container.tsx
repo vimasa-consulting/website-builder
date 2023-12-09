@@ -50,21 +50,21 @@ export default observer(function BlockManagerContainer() {
         <Grid className={classMain} style={{ width: 240 }} col nowrap>
             <GridItem>
                 <CardTitle
-                    title={t('blocks')}
+                    title={"Persuation Blocks"}
                     onClose={toggleOpen}
                     className={pad.xyS}
                     //actions={actions}
                 />
             </GridItem>
-            <GridItem>
+            <GridItem className='persuasive-block-container'>
                 <Grid className="grid grid-cols-1 gap-2 p-2">                    
-                    <Grid className={cx('cursor-pointer py-2 px-5 transition-colors', br.b, br.rnd, cl.br, cl.hTAo, cl.hBgH)}
+                    <Grid className={cx('cursor-pointer py-2', br.rnd, cl.br)}
                         onClick={onPersuasiveBlockClick}
                         items="center"
-                        col>
-                            <div>Persuation Blocks</div>
-                            <div className="block-media" ><img width="300px" height="300px" src="/editor/block-library.png"/></div>
-                            <div></div>
+                        col>                            
+                            <div className="persuasive-block-block-media" ></div>
+                            <div className="persuasive-block-subheading">Blocks Library</div>
+                            <div  className="persuasive-block-description">Browse from our wide range of blocks, designed to persuade your customers</div>
                     </Grid>
                 </Grid>
             </GridItem>

@@ -4,6 +4,7 @@ import {
     mdiCog, mdiContentSave,
     mdiDelete, mdiEye,
     mdiFolder,
+    mdiLayers, mdiPaletteSwatch,
     mdiFullscreen, mdiHelpCircle, mdiNewspaperVariantOutline, mdiPublish, mdiTrayArrowDown, mdiXml
 } from '@mdi/js';
 import Icon from '@mdi/react';
@@ -68,6 +69,18 @@ export default observer(function ActionButtons() {
             iconPath: mdiBorderRadius,
             title: 'componentOutline.title',
         },*/
+        {
+            id: 'layers',
+            cmd: 'toggleLayers',
+            iconPath: mdiLayers,
+            title: 'layer.title',
+        },
+        {
+            id: 'style',
+            cmd: 'toggleStyle',
+            iconPath: mdiPaletteSwatch,
+            title: 'style.title',
+        },
         {
             id: 'preview',
             cmd: 'core:preview',
@@ -267,7 +280,7 @@ export default observer(function ActionButtons() {
                         title={t(title)}
                         border={false}
                     >
-                        <Icon path={iconPath} size={icon.s}/>
+                        <Icon path={iconPath} size={icon.l}/>
                     </ButtonWithTooltip>
                 </GridItem>
             ))}

@@ -7,7 +7,7 @@ export interface UserLocalState {
 
 export const getDefaultUserLocalState = (): UserLocalState => {
     return {
-      theme: 'dark',
+      theme: 'light',
       lastProjectId: '',
     };
   }

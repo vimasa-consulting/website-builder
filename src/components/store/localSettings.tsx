@@ -25,7 +25,7 @@ const updateTheme = (theme: ThemeOptions, store: Store) => {
 
 export class LocalSettingsStore {
     store: Store;
-    theme: ThemeOptions = 'dark';
+    theme: ThemeOptions = 'light';
     lastProjectId: string = '';
     debug = false;
 

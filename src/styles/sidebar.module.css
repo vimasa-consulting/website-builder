@@ -6,6 +6,9 @@
 .navBar {
   max-width: 304px;
 }
+.persuasive-block-container{
+  background: linear-gradient(272deg, #A601F3 2.16%, #FE7126 99.58%);
+}
 
 /* .navBar>div:after {
   content: "";

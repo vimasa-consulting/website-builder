@@ -12,6 +12,7 @@ import Grid from "../Grid";
 import GridItem from "../GridItem";
 import TopBarLeftButtons from '../TopBarLeftButtons';
 import { br, cl, icon } from '../theme';
+import Tooltip from '../Tooltip';
 
 export default observer(function EditorTopbar() {
     const { topBarSize, isInPreview, editor } = useAppEditorStore();
@@ -25,13 +26,16 @@ export default observer(function EditorTopbar() {
       <>
         <GridItem className={cx(['transition-spacing w-full', br.bb, cl.br])} style={style}>
             <Grid className="h-full" items="center">
-              <GridItem grow>
+              <GridItem className="flex-2">
                 <TopBarLeftButtons/>
               </GridItem>
               <GridItem>
                   <DevicesProvider>
                     {(props) => <DeviceSelector {...props}/>}
                   </DevicesProvider>
+                  <GridItem>                 
+              </GridItem>
+
               </GridItem>
               <GridItem grow>
                 <WithEditor>
