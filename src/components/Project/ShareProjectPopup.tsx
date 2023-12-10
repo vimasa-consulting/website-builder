@@ -1,29 +1,35 @@
 'use client'
 
-import { NewProjectPayload } from '@/app/(authenticated-routes)/projects/page';
-import { Project } from '@/types/project';
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import React, { useState } from 'react';
 import ItemListing from './ItemListing';
+import EmailMultiSelect from './EmailMultiSelectInput';
+import SendEmailPopup from './SendEmailPopup';
+import { Project } from '@/types/project';
 
 interface PopupProps {
     collaborators: string[];
     closeHandler(): void;
     shareProjectHandler: (invites: string[]) => Promise<void>;
+    item: Project
 }
 
 const ShareProjectPopup: React.FC<PopupProps> = ({ 
     collaborators,
     closeHandler,
-    shareProjectHandler
+    shareProjectHandler,
+    item
 }) => {
     const [input1, setInput1] = useState('');
     const [emails, setEmails] = useState<string[]>([])
+    const [showSendEmailPopup, setShowSendEmailPopup] = useState(false)
 
     async function handlePopupSubmit() {
         try {
-            await shareProjectHandler([...emails, ...collaborators]);
-            setEmails([]);
-            setInput1('');
+            if(emails.length) {
+                await shareProjectHandler([...emails, ...collaborators]);
+                setShowSendEmailPopup(true)
+                setInput1('');
+            }
         } catch(error) {
             console.log(error)
         }
@@ -53,6 +59,11 @@ const ShareProjectPopup: React.FC<PopupProps> = ({
             console.log(error)
         }
       }
+
+      const closeSendEmailPopup = () => {
+        setShowSendEmailPopup(false); 
+        setEmails([]);
+      }
    
       const modifiedTableData = collaborators?.map((collaborator) => ({email: collaborator}))
 
@@ -72,7 +83,8 @@ const ShareProjectPopup: React.FC<PopupProps> = ({
                     <label htmlFor="input-field-one" className="block mb-2 text-[12px] font-small text-[#797979] cursor-pointer">Invite users by Email</label>
                 </div>
                 <div className='flex height-[44px] gap-[30px]'>
-                    <input
+                  <EmailMultiSelect setEmails={setEmails} emails={emails}/>
+                  {/* <input
                         id='input-field-one'
                         type="text"
                         placeholder="Add emails to invite"
@@ -80,7 +92,7 @@ const ShareProjectPopup: React.FC<PopupProps> = ({
                         value={input1}
                         onChange={(e) => setInput1(e.target.value)}
                         onKeyUp={handleKeyPress}
-                    />
+                    /> */}
                     <button
                     className="w-[130px] h-[44px] bg-[#DD00FF] text-white text-[15px] rounded hover:bg-hover cursor-pointer"
                     onClick={handlePopupSubmit}
@@ -88,21 +100,30 @@ const ShareProjectPopup: React.FC<PopupProps> = ({
                         Invite
                     </button>
                 </div>
-                <ul className='w-[77%] bg-[#ada8aefc] text-[#131010] font-[600] py[6px px-[8px] rounded-bl-md rounded-br-md absolute'>
+                {/* <ul className='w-[77%] bg-[#ada8aefc] text-[#131010] font-[600] py[6px px-[8px] rounded-bl-md rounded-br-md absolute'>
                     { emails.length > 0 && emails.map(email => (
                     <li key={email} className="flex justify-between items-center h-[44px]">
                         {email}
                         <button onClick={() => handleRemoveEmail(email)} className="ml-4">X</button>
                     </li>
                     ))}
-                </ul>
+                </ul> */}
                 <ItemListing 
                     tableData={modifiedTableData}
                     handleItemDeletion={removeCollaboratorsHandler}
                     columnHeaders={['Invited emails', 'Delete Invite']}
+                    item={item}
                 />
             </div>
             </div>
+            {
+                showSendEmailPopup &&
+                <SendEmailPopup 
+                    closeHandler={closeSendEmailPopup} 
+                    emails={emails}
+                    item={item}
+                />
+            }
         </div>
     );
 };

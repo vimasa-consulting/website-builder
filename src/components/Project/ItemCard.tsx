@@ -121,6 +121,10 @@ export default function ItemCard({ item, itemType, setTableData, sharedProject =
         setCollaboratorsArray(updatedProjectCollaborators?.data?.collaborators)
         console.log('updated collaborators', updatedProjectCollaborators)
     }
+
+    const duplicateItemHandler = (item: Project | File) => {
+        setTableData((prevState: any) => ([item, ...prevState]))
+    }
     
     return (
         <div className="max-w-xs mr-[32px] mb-[15px]">
@@ -156,6 +160,7 @@ export default function ItemCard({ item, itemType, setTableData, sharedProject =
                                 <>
                                 <Dropdown.Item onClick={openUpdateModal}>Rename</Dropdown.Item>
                                 <Dropdown.Item onClick={deleteItemHandler}>Delete</Dropdown.Item>
+                                <Dropdown.Item onClick={() => duplicateItemHandler(item)}>Duplicate</Dropdown.Item>
                                 {
                                     itemType !== 'File' &&  <Dropdown.Item onClick={handleProjectShare}>Share</Dropdown.Item>
                                 }
@@ -187,6 +192,7 @@ export default function ItemCard({ item, itemType, setTableData, sharedProject =
                 collaborators={collaboratorsArray}
                 shareProjectHandler={shareProjectHandler}
                 closeHandler={() => setIsShareModalOpen(false)}
+                item={item as Project}
                 />
             }
         </div>
