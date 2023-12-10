@@ -95,8 +95,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
         publishFile({
           _id: fileID,
           builderData: JSON.stringify(editor.getProjectData()),
-          htmlString: fullHTML,
-          slug: 'example.com'
+          htmlString: fullHTML,          
         }).then(() => {
           editor.Modal.close();
         }).catch((error) => {
