@@ -9,10 +9,10 @@ import placeHolderImage from '@/public/projects/placeholder.png';
 import { Project, ProjectTableData } from "@/types/project";
 import { ROUTES } from "@/services/NavigationService";
 import { useRouter } from "next/navigation";
-import { deleteProjectByProjectId, updateProject } from "@/services/ProjectsService";
+import { cloneProjectByProjectId, deleteProjectByProjectId, updateProject } from "@/services/ProjectsService";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import DeleteItemPopup from "./DeleteItemPopup";
-import { deleteFileByFileId, updateFile } from "@/services/FilesService";
+import { cloneFileByFileId, deleteFileByFileId, updateFile } from "@/services/FilesService";
 import { File, FileTableData } from "@/types/file";
 import EditItemPopup from "./EditItemPopup";
 import ShareProjectPopup from "./ShareProjectPopup";
@@ -122,8 +122,17 @@ export default function ItemCard({ item, itemType, setTableData, sharedProject =
         console.log('updated collaborators', updatedProjectCollaborators)
     }
 
-    const duplicateItemHandler = (item: Project | File) => {
+    const duplicateItemHandler = async (item: Project | File) => {
+        try {
+            if(itemType === 'Project') {
+                await cloneProjectByProjectId(item._id)    
+            } else {
+                await cloneFileByFileId(item._id)
+            }
         setTableData((prevState: any) => ([item, ...prevState]))
+        }catch(error) {
+            console.log(error)
+        }
     }
     
     return (

@@ -1,7 +1,7 @@
 'use client'
 import { Project } from "@/types/project";
 import { useState } from "react";
-import NewItemPopup from "./NewItemPopup";
+import NewItemPopup from "./DomainPopup";
 
 interface Props {
     item: Project & {updatedAt: string};

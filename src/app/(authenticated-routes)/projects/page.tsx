@@ -1,17 +1,9 @@
 'use client'
-import ItemListing from "@/components/Project/ItemListing";
-import NewItem from "@/components/Project/NewItem";
 import NewItemPopup from "@/components/Project/NewItemPopup";
-import RecentSection from "@/components/Project/RecentSection";
 import { useContext, useEffect, useState } from "react";
 import { createProjectForOrganization, deleteProjectByProjectId, getAllProjectsByOrganizationId, getAllProjectsSharedToMe } from "@/services/ProjectsService";
-import { getCurrentUser } from "@/services/UserService";
-import { Auth } from "aws-amplify";
-import { CellContext } from "@tanstack/react-table";
 import { ProjectTableData } from "@/types/project";
 import AuthContext from "@/context/identity/AuthContext";
-import RecentItem from "@/components/Project/RecentItem";
-import CardItemSkeleton from "@/components/Project/CardItemSkeleton";
 import ItemCard from "@/components/Project/ItemCard";
 import NewItemCard from "@/components/Project/NewItemCard";
 import "@/styles/editor-legacy.css";
@@ -87,24 +79,12 @@ export default function Page() {
 
   return (
     <div className="flex flex-col pb-14">
-      {/* <RecentSection itemType="Project" recentItems={recentProjects} /> */}
       <h3 className="text-xl">All Projects</h3>
       <div className="flex flex-wrap mt-5 gap-3">
-        {tableData?.length ?
-        <>
-          <NewItemCard itemType="Project" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} />
-          {
+        <NewItemCard itemType="Project" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} />
+        {tableData?.length > 0 && 
+          
             tableData.map((project: any) => <ItemCard itemType="Project" key={project._id} item={project} setTableData={setTableData}/>)
-          }
-          </>
-         :
-         <>
-          <NewItemCard itemType="Project" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} />
-          {
-             Array.from({length: 2}).map((_, index) => <CardItemSkeleton key={index} />)
-          }
-         </>
-       
         }
       </div>
       {
@@ -119,9 +99,6 @@ export default function Page() {
           </>
         )
       }
-     
-      {/* <hr className="h-px my-8 bg-gray-600 border-0 w-3/4" />
-      <NewItem itemType="Project" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} /> */}
       {
         isAddNewProjectModalOpen &&
         <NewItemPopup
@@ -134,12 +111,6 @@ export default function Page() {
           popupTitle="Add New Project"
         />
       }
-      {/* <ItemListing
-        tableData={tableData}
-        navigationBaseURL="/projects"
-        handleItemDeletion={handleProjectDeletion}
-        columnHeaders={columnHeaders}
-      /> */} 
     </div>
   );
 }

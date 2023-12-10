@@ -1,4 +1,4 @@
-import { getAllFiles, createFile, deleteFile, get, update, publish } from "@/adapters/api/core/files";
+import { getAllFiles, createFile, deleteFile, get, update, publish, cloneFile } from "@/adapters/api/core/files";
 import { File, FileUpdatePayload } from "@/types/file";
 
 export async function getAllFilesByProjectId(organizationId: string) {
@@ -23,4 +23,8 @@ export async function publishFile(file: FileUpdatePayload) {
 
 export async function deleteFileByFileId(fileId: string) {
   return deleteFile(fileId)
+}
+
+export async function cloneFileByFileId(fileId: string) {
+  return cloneFile(fileId)
 }

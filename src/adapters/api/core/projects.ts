@@ -37,3 +37,9 @@ export async function getAllProjectShared(email: string) {
     headers: (await getAuthHeaders()),
   });
 }
+
+export async function cloneProject(projectId: string) {
+  return apiInstance.get(`${RESOURCE_PATH}/clone?id=${projectId}`, {
+    headers: (await getAuthHeaders()),
+  });
+}
