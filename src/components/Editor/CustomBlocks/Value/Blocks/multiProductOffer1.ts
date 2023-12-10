@@ -105,6 +105,7 @@ const component = (editor: Editor) => {
           }
 
           .${classPrefix}-container {
+            max-width: 1440px;
             margin: 0 auto;
           }
 
@@ -169,33 +170,6 @@ const component = (editor: Editor) => {
             /* 21px */
           }
 
-          @media (max-width: 768px) {
-            .${classPrefix}-section {
-              padding: 2rem 1rem;
-            }
-
-            .${classPrefix}-container {
-              width: auto;
-            }
-
-            .${classPrefix}-subheading-wrapper {
-              margin: 0 auto 36px auto;
-            }
-
-            .${classPrefix}-box-container {
-              gap: 1rem;
-              flex-direction: row;
-            }
-
-            .${classPrefix}-box {
-              padding: 1.5rem 1.2rem;
-            }
-
-            .${classPrefix}-image-item {
-              flex: 0 0 calc(50% - 10px);
-            }
-          }
-
           @media (max-width: 480px) {
             .${classPrefix}-section {
               padding: 1.8rem 1rem;
@@ -205,27 +179,32 @@ const component = (editor: Editor) => {
               max-width: 100%;
             }
 
-            .${classPrefix}-section-heading {
-              text-align: center;
-              font-size: 26px;
-              line-height: 35px;
-            }
-
             .${classPrefix}-heading-wrapper {
               margin: 0 auto 36px 0;
             }
 
             .${classPrefix}-section-heading {
+              color: black;
               font-size: 26px;
+              font-family: Inter;
+              font-weight: 600;
+              line-height: 35px;
+              word-wrap: break-word;
             }
 
             .${classPrefix}-image-item {
               width: 100%;
-              max-width: 163px;
+              max-width: 154px;
+              flex: none;
             }
 
             .${classPrefix}-heading {
+              color: #000;
+              font-family: Inter;
               font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 140%; /* 22.4px */
               margin-bottom: 5px;
             }
 
@@ -237,6 +216,7 @@ const component = (editor: Editor) => {
               column-gap: 30px;
             }
           }
+
         `,
       },
     },
