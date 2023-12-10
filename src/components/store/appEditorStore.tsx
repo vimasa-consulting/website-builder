@@ -30,7 +30,7 @@ export class AppEditorStore {
     leftSidebarSize = 240;
     rightSidebarSize = 240;
     transitionTime = 152;
-    topBarSize = 35;
+    topBarSize = 54;
     updateAppShell = true;
     isDev  = false;
     isAuthorized = true;

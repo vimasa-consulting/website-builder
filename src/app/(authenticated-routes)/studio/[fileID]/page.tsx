@@ -21,6 +21,8 @@ const EditorPage = () => {
     const { data } = await getFile(fileID);
     // update local storage    
     localStorage.setItem(`wb-${fileID}`, data.builderData || '')
+    localStorage.setItem(`wb-active-filename`, data.name || '')
+    localStorage.setItem(`wb-${fileID}-matomo_projectid`, data.matamoProjectId || '')
     setEditorDataLoaded(true);
   }
       
@@ -33,7 +35,8 @@ const EditorPage = () => {
   return (
     <div>
       <div id="editor"></div>
-      <EditorApplication options={editor} fileID={fileID}/>
+      {editorDataLoaded && <EditorApplication options={editor} fileID={fileID}/>}
+      
     </div>
   );
 };

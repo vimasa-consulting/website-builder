@@ -52,6 +52,8 @@ export default observer(function EditorApp({fileID}: AppProps) {
   ], [projectType, editorKey]);
 
   const onEditor = (editor: Editor) => {
+    initCustomBlocks(editor); 
+    const matomoProjectId='1';
     editor.Commands.add("publishProject", {      
       run(editor, sender) {
         console.log('publish project');    
@@ -70,6 +72,22 @@ export default observer(function EditorApp({fileID}: AppProps) {
           <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" >
             <style>${cssBody}</style>
+            <!-- Matomo -->
+            <script>
+              var _paq = window._paq = window._paq || [];
+              /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+              _paq.push(['trackPageView']);
+              _paq.push(['enableLinkTracking']);
+              (function() {
+                var u="https://aayushsoftwarescom.matomo.cloud/";
+                _paq.push(['setTrackerUrl', u+'matomo.php']);
+                _paq.push(['setSiteId', '${matomoProjectId}']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.async=true; g.src='//cdn.matomo.cloud/aayushsoftwarescom.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+              })();
+            </script>
+            <!-- End Matomo Code -->
+
           </head>
           ${htmlBody}
         </html>`;
@@ -110,8 +128,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
         // save file
         updateFile({
           _id: fileID,
-          builderData: JSON.stringify(editor.getProjectData()),
-          slug: 'example.com'
+          builderData: JSON.stringify(editor.getProjectData())          
         }).then(() => {
           editor.Modal.close();
         }).catch((error:any) => {
@@ -175,7 +192,6 @@ export default observer(function EditorApp({fileID}: AppProps) {
         editor.addComponents({ type: item.trim() });
       });
     }    
-    initCustomBlocks(editor); 
     setEditor(editor);
     (window as any).editor = editor;    
     const deviceManager = editor.Devices;
@@ -262,7 +278,7 @@ const options: PluginOptions = {
       onEditor={onEditor}
     >
       <Grid className="h-full overflow-hidden">
-        <EditorLeftSidebar />
+        {<EditorLeftSidebar />}
         <GridItem grow>
           <Grid className="relative" col full>
             <EditorTopbar />
@@ -275,7 +291,7 @@ const options: PluginOptions = {
             </GridItem>
           </Grid>
         </GridItem>
-        <EditorRightSidebar />
+        {<EditorRightSidebar />}
       </Grid>
       <BlockManagerContainer/>
       <AssetsProvider>

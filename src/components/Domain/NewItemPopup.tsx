@@ -36,7 +36,7 @@ const NewItemPopup: React.FC<PopupProps> = ({
                 </div>
                 <div className="mb-6">
                     <div>
-                        <label htmlFor="input-field-two" className="block mb-2 text-[12px] font-small text-[#797979] cursor-pointer">{project.projectHostingAlias || 'www.example.com'}</label>
+                        <label htmlFor="input-field-two" className="block mb-2 text-[12px] font-small text-[#797979] cursor-pointer">{project.projectHostingAlias}</label>
                     </div>
                 </div>
                 <div className="mb-6">

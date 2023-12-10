@@ -17,18 +17,10 @@ export default observer(function TopBarLeftButtons() {
             <GridItem>
                 <Tooltip title="Blocks">
                     <Button onClick={toggleOpen}>
-                        <Icon path={mdiPlus} size={icon.s} className={cx('transition-transform', isOpen && 'rotate-45')}/>
+                        <Icon path={mdiPlus} size={icon.l} className={cx('transition-transform', isOpen && 'rotate-45')}/>
                     </Button>
                 </Tooltip>
-            </GridItem>
-            <GridItem>
-                <Tooltip title="Layers">
-                    <Button onClick={toggleOpen}>
-                        Layers
-                    </Button>
-                </Tooltip>
-            </GridItem>
-
+            </GridItem>            
         </Grid>
     );
   });

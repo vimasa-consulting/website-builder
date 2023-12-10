@@ -567,12 +567,12 @@ export default function GrapesJSComponent({ fileID }: Props) {
         // grapesjsCss="https://unpkg.com/grapesjs/dist/css/grapes.min.css"
         options={{
           height: "100vh", // TODO: fix bad height
-          storageManager: {
+          /*storageManager: {
             type: 'local',
             options: {
               local: { key: `gjsFile-${fileID}` }
             }
-          },
+          },*/
           blockManager: {
             // blocks: customBlockMapping,
             blocks: [],

@@ -2263,3 +2263,30 @@ html {
     justify-content: center;
     height: 33px;
 }
+
+.persuasive-block-container{
+    border: 0;
+    background: linear-gradient(272deg, #A601F3 2.16%, #FE7126 99.58%);
+    color: #fff;
+}
+.persuasive-block-heading{
+    align-items: left;
+}
+.persuasive-block-subheading{
+    width: 225px;
+    font-weight: bold;
+}
+.persuasive-block-description{
+    width: 225px;
+    font-size: smaller;
+}
+.persuasive-block-block-media{
+    width: 225px;
+    height: 140px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/editor/block-library.png');
+}
+.sidebar-open {
+    display: none;
+}

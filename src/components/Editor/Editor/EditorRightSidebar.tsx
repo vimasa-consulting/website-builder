@@ -6,10 +6,10 @@ import DesignManager from '../DesignManager';
 import Resizable from '../Resizable';
 import { br, cl } from '../theme';
 import Grid from '../Grid';
-
+import { useStyleManagerStore } from '@/components/store/styleManager';
 export default observer(function EditorRightSidebar() {
     const { rightSidebarSize, setRightSidebarSize, editor, isInPreview, isRightSidebarOpen } = useAppEditorStore();
-
+    const { isOpen } = useStyleManagerStore();
     const style = useMemo(() => ({
         marginRight: isInPreview || !isRightSidebarOpen ? `-${rightSidebarSize}px` : 0,
     }), [rightSidebarSize, isInPreview, isRightSidebarOpen])
@@ -21,15 +21,16 @@ export default observer(function EditorRightSidebar() {
     const onResizeStop = (ev: any, dir: any, el: HTMLElement) => {
       setRightSidebarSize(el.getBoundingClientRect().width);
     };
-
+    
+    const classMain = cx('h-full transition-spacing', br.bl, cl.br,!isOpen && 'sidebar-open')
     return (
         <Resizable
-            className={cx(['h-full transition-spacing', br.bl, cl.br])}
+            className={classMain}
             left
             style={style}
             height="100%"
             width={rightSidebarSize}
-            minWidth={200}
+            minWidth={0}
             maxWidth={400}
             onResize={onResize}
             onResizeStop={onResizeStop}

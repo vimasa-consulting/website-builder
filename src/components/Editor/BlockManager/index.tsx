@@ -23,16 +23,19 @@ export default observer(function BlockManager() {
     // @ts-ignore
     const blocksMap = Blocks.getAll().reduce((res, item) => {
         const ctg = item.getCategoryLabel(); 
-        //const skipCat=['Logic','Emotion','Value','Urgency','Trust','First Impression','Brand Connect','User Actions'].includes(ctg);
-        const skipCat=false;
+        const skipCat=['Forms','Extra','Logic','Emotion','Value','Urgency','Trust','First Impression','Brand Connect','User Actions'].includes(ctg);        
         if (searchValue &&  !includesSearch(ctg, searchValue) && !includesSearch(blockLabel(item), searchValue)) {
             return res;
         }
-
-        const ctgItem = res[ctg];
+        const skipComponent=['map','textarea','input','select','label','checkbox','radio','form'].includes(item.id);
         if(!skipCat){
+            console.log(item);
+        }        
+        const ctgKey='Basic';
+        const ctgItem = res[ctgKey];
+        if(!skipCat && !skipComponent){
             if (!ctgItem) {
-                res[ctg] = [item];
+                res[ctgKey] = [item];
             } else {
                 ctgItem.push(item);
             }    

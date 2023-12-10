@@ -9,14 +9,19 @@ import LayerManager from '../LayerManager';
 import PageManager from '../PageManager';
 import Resizable from '../Resizable';
 import { br, cl } from '../theme';
+import { useLayerManagerStore } from '@/components/store/layerManager';
 
 export default observer(function EditorLeftSidebar() {
     const { leftSidebarSize, setLeftSidebarSize, editor, isInPreview, isLeftSidebarOpen } = useAppEditorStore();
-
+    const { isOpen } = useLayerManagerStore();
     const style = useMemo(() => ({
         marginLeft: isInPreview || !isLeftSidebarOpen ? `-${leftSidebarSize}px` : 0,
     }), [leftSidebarSize, isInPreview, isLeftSidebarOpen])
-
+    const classMain = cx(
+      'absolute left-0 top-0 h-full transition-transform z-10',
+      !isOpen && '-translate-x-full',
+      br.br, cl.br, cl.bg,
+  );
     const onResize = () => {
         editor?.refresh();
     };
@@ -25,30 +30,13 @@ export default observer(function EditorLeftSidebar() {
         setLeftSidebarSize(el.getBoundingClientRect().width);
     };
 
-    return (
-        <Resizable
-            className={cx(['h-full transition-spacing', br.br, cl.br])}
-            right
-            style={style}
-            height="100%"
-            width={leftSidebarSize}
-            minWidth={200}
-            maxWidth={400}
-            onResize={onResize}
-            onResizeStop={onResizeStop}
-        >
-          <Grid full col>
-            {/*<GridItem className="w-full">
-              <PagesProvider>
-                {(props) => <PageManager {...props}/>}
-              </PagesProvider>
-    </GridItem>*/}
-            <GridItem className={cx(['w-full', 'overflow-hidden', br.bt, cl.br])} grow>
-              <LayersProvider>
-                {(props) => <LayerManager {...props}/>}
-              </LayersProvider>
-            </GridItem>
-          </Grid>
-        </Resizable>
+    return (        
+          <Grid className={classMain} style={{ width: 240 }}>            
+              <GridItem className={cx(['w-full', 'overflow-hidden', br.bt, cl.br])} grow>
+                <LayersProvider>
+                  {(props) => <LayerManager {...props}/>}
+                </LayersProvider>
+              </GridItem>            
+          </Grid>          
     );
   });

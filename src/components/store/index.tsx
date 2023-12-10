@@ -7,6 +7,8 @@ import { I18nStore } from './I18nStore';
 import { ToastStore } from './ToastStore';
 import { PluginStore } from './pluginStore';
 import { PointerBadgeStore } from './PointerBadgeStore';
+import { LayerManagerStore } from './layerManager';
+import { StyleManagerStore } from './styleManager';
 
 let store: Store;
 
@@ -37,6 +39,8 @@ export class Store {
     localSettingsStore: LocalSettingsStore;
     appEditorStore: AppEditorStore;
     blockManagerStore: BlockManagerStore;
+    layerManagerStore: LayerManagerStore;
+    styleManagerStore: StyleManagerStore;
     modalStore: ModalStore;
     toastStore: ToastStore;
     i18nStore: I18nStore;
@@ -45,6 +49,8 @@ export class Store {
 
     constructor(initialState?: InitialStoreState<Store>) {
         this.blockManagerStore = new BlockManagerStore(this);
+        this.layerManagerStore = new LayerManagerStore(this);
+        this.styleManagerStore = new StyleManagerStore(this);
         this.appEditorStore = new AppEditorStore(this, initialState?.appEditorStore);
         this.localSettingsStore = new LocalSettingsStore(this, initialState?.localSettingsStore);
         this.toastStore = new ToastStore(this);

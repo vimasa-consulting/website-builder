@@ -111,6 +111,7 @@ export const icon = {
     s2x: '14px',
     sx: '16px',
     s: '18px',
+    l: '36px',
 };
 
 export const fx = {
