@@ -37,6 +37,7 @@ import navbar from "grapesjs-navbar";
 import BlockSearchPopup from '../BlockSearchPopup';
 import { usePlugin } from 'grapesjs'
 import grapesjsIcons from 'grapesjs-icons'
+import plugin from '@silexlabs/grapesjs-fonts';
 //@ts-ignore
 import type { PluginOptions } from 'grapesjs-icons'
 import { publishFile, updateFile } from "@/services/FilesService";
@@ -95,8 +96,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
         publishFile({
           _id: fileID,
           builderData: JSON.stringify(editor.getProjectData()),
-          htmlString: fullHTML,
-          slug: 'example.com'
+          htmlString: fullHTML,          
         }).then(() => {
           editor.Modal.close();
         }).catch((error) => {
@@ -233,7 +233,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
     });
   }
 
-const options: PluginOptions = {
+const iconPluginOptions: PluginOptions = {
   // see https://icon-sets.iconify.design/
   collections: [
     'ri', // Remix Icon by Remix Design,
@@ -245,6 +245,9 @@ const options: PluginOptions = {
     title: 'Icons'
   }
 }
+const fontPluginOptions: PluginOptions = {
+  api_key: "AIzaSyAdJTYSLPlKz4w5Iqyy-JAF2o8uQKd1FKc"  
+};
   const plugins=[
     blocksBasicPlugin,
     formsPlugin,
@@ -259,8 +262,9 @@ const options: PluginOptions = {
     //typedPlugin,
     styleBGPlugin,
     //presetWebpagePlugin,
-    navbar,
-    usePlugin(grapesjsIcons, options)
+    navbar,    
+    usePlugin(grapesjsIcons, iconPluginOptions),
+    usePlugin(plugin, fontPluginOptions)    
     // TODO: Undo once fixed
     // lorySlider,
     // table,
