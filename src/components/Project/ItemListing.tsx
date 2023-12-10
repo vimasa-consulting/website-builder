@@ -18,7 +18,8 @@ const columnHelper = createColumnHelper<{email: string}>()
 const ItemListing = ({
     tableData,
     handleItemDeletion,
-    columnHeaders
+    columnHeaders,
+    item
 }: any) => {
     const [globalFilter, setGlobalFilter] = React.useState('')
     const router = useRouter();
@@ -37,6 +38,11 @@ const ItemListing = ({
                 id: 'Actions',
                 cell: (info: any) => <div>
                     <button onClick={() => handleEntryDeletion(info)}>🗑️</button>
+                    <button className='ml-[10px]'>
+                    <a href={`mailto:${info?.row?.original?.email}?subject=Exclusive Invitation to Collaborate on ${item.name}&body=Hi, you are invited to ${item.name} project. Come and be part of this project.`}>
+                        📩
+                    </a>
+                    </button>
                 </div>,
                 header: () => <span>Actions</span>,
             })
@@ -75,10 +81,10 @@ const ItemListing = ({
     })
 
     return (
-        <div className="p-2 bg-white text-black rounded mt-8 w-full h-[427px] flex flex-col justify-between">
+        <div className="p-2 bg-black text-white rounded mt-8 w-full h-[427px] flex flex-col justify-between">
             <div>
                 <div className="h-2" />
-                <table className='w-full text-black border border-gray-300'>
+                <table className='w-full text-white border border-gray-300'>
                     <thead className='border border-gray-300 h-[44px] bg-rgb-249-250-251'>
                         {table.getHeaderGroups().map(headerGroup => (
                             <tr key={headerGroup.id}>
@@ -117,14 +123,14 @@ const ItemListing = ({
             </div>
             <div className="flex items-center gap-2">
                 <button
-                    className="border rounded p-1 disabled:bg-gray-100"
+                    className="border text-black rounded p-1 bg-gray-100"
                     onClick={() => table.previousPage()}
                     disabled={!table.getCanPreviousPage()}
                 >
                     {'<'}
                 </button>
                 <button
-                    className="border rounded p-1 disabled:bg-gray-100"
+                    className="border text-black rounded p-1 bg-gray-100"
                     onClick={() => table.nextPage()}
                     disabled={!table.getCanNextPage()}
                 >

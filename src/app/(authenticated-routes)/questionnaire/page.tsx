@@ -315,7 +315,7 @@ export default function Page() {
   
         const newFilePayload = {
           name: "Untitled",
-          slug: "/untitled",
+          slug: "",
           htmlHeadContent: '',
           htmlBodyContent: '',
           status: FileStatus.DRAFT,

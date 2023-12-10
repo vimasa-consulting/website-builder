@@ -45,11 +45,12 @@
     flex-direction: row;
     background-color: #ffffff;
     .leftSection {
-      width: 25%;
+      width: 26%;
       border-right: 1px solid rgb(176, 176, 176);
       padding: 12px;
+      padding-left: 33px;
       .searchSection {
-        padding: 14px 0;
+        padding: 19px 0 16px;
         .ais-SearchBox {
           .ais-SearchBox-input {
             background-color: #f5f9ff;
@@ -59,7 +60,6 @@
         }
       }
       .refinementList {
-        background-color: #f5f9ff;
         .ais-RefinementList-list {
           display: flex;
           flex-direction: column;
@@ -192,11 +192,12 @@
     color: #919090 !important;
   }
   .leftSection {
-    width: 25%;
+    width: 26%;
     border-right: 1px solid rgb(176, 176, 176);
     padding: 12px;
+    padding-left: 33px;
     .searchSection {
-      padding: 14px 0;
+      padding: 19px 0 16px;
       .ais-SearchBox {
         .ais-SearchBox-input {
           background-color: #f5f9ff;
@@ -206,7 +207,6 @@
       }
     }
     .refinementList {
-      background-color: #f5f9ff;
       .ais-RefinementList-list {
         display: flex;
         flex-direction: column;
@@ -317,6 +317,28 @@
   }
 }
 
+.search-trust {
+  background-color: #11EC7D;
+}
+.search-logic {
+  background-color: #7E9CFF;
+}
+.search-brand-connect {
+  background-color: #FF971D;
+}
+.search-emotion {
+  background-color: #FF7FE5;
+}
+.search-fomo {
+  background-color: #FFE512;
+}
+.search-value {
+  background-color: #E064FF;
+}
+.search-first-impression {
+  background-color: #919090;
+}
+
 .trust {
   color: #11EC7D;
   background-color: #BBFBE5;
@@ -344,4 +366,17 @@
 .first-impression {
   color: #919090;
   background-color: #EEEEEE;
+}
+
+.ais-SearchBox-form::before {
+  background: none !important;
+}
+
+.ais-SearchBox-input {
+  height: 40px;
+  font-size: 17.003px;
+  font-style: normal;
+  font-weight: 400;
+  margin-right: 50px;
+  box-shadow: none;
 }

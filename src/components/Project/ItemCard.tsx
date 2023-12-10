@@ -9,10 +9,10 @@ import placeHolderImage from '@/public/projects/placeholder.png';
 import { Project, ProjectTableData } from "@/types/project";
 import { ROUTES } from "@/services/NavigationService";
 import { useRouter } from "next/navigation";
-import { deleteProjectByProjectId, updateProject } from "@/services/ProjectsService";
+import { cloneProjectByProjectId, deleteProjectByProjectId, updateProject } from "@/services/ProjectsService";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import DeleteItemPopup from "./DeleteItemPopup";
-import { deleteFileByFileId, updateFile } from "@/services/FilesService";
+import { cloneFileByFileId, deleteFileByFileId, updateFile } from "@/services/FilesService";
 import { File, FileTableData } from "@/types/file";
 import EditItemPopup from "./EditItemPopup";
 import ShareProjectPopup from "./ShareProjectPopup";
@@ -121,6 +121,19 @@ export default function ItemCard({ item, itemType, setTableData, sharedProject =
         setCollaboratorsArray(updatedProjectCollaborators?.data?.collaborators)
         console.log('updated collaborators', updatedProjectCollaborators)
     }
+
+    const duplicateItemHandler = async (item: Project | File) => {
+        try {
+            if(itemType === 'Project') {
+                await cloneProjectByProjectId(item._id)    
+            } else {
+                await cloneFileByFileId(item._id)
+            }
+        setTableData((prevState: any) => ([item, ...prevState]))
+        }catch(error) {
+            console.log(error)
+        }
+    }
     
     return (
         <div className="max-w-xs mr-[32px] mb-[15px]">
@@ -156,6 +169,7 @@ export default function ItemCard({ item, itemType, setTableData, sharedProject =
                                 <>
                                 <Dropdown.Item onClick={openUpdateModal}>Rename</Dropdown.Item>
                                 <Dropdown.Item onClick={deleteItemHandler}>Delete</Dropdown.Item>
+                                <Dropdown.Item onClick={() => duplicateItemHandler(item)}>Duplicate</Dropdown.Item>
                                 {
                                     itemType !== 'File' &&  <Dropdown.Item onClick={handleProjectShare}>Share</Dropdown.Item>
                                 }
@@ -187,6 +201,7 @@ export default function ItemCard({ item, itemType, setTableData, sharedProject =
                 collaborators={collaboratorsArray}
                 shareProjectHandler={shareProjectHandler}
                 closeHandler={() => setIsShareModalOpen(false)}
+                item={item as Project}
                 />
             }
         </div>

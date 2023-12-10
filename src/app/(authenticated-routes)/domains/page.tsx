@@ -4,7 +4,7 @@ import CardItemSkeleton from "@/components/Project/CardItemSkeleton";
 import ItemCard from "@/components/Project/ItemCard";
 import AuthContext from "@/context/identity/AuthContext";
 import { getAllProjectsByOrganizationId } from "@/services/ProjectsService";
-import { ProjectTableData } from "@/types/project";
+import { Project, ProjectTableData } from "@/types/project";
 import { useContext, useEffect, useState } from "react";
 
 export default function Page() {
@@ -30,14 +30,8 @@ export default function Page() {
     <>
     <h2 className="text-xl">Domains</h2>
     <div className="flex flex-wrap mt-5 gap-3">
-    {tableData?.length ?
-    <>
-      {
-        tableData.map((project: any) => <DomainItemCard key={project._id} item={project} />)
-      }
-      </>
-     :
-    Array.from({length: 2}).map((_, index) => <CardItemSkeleton key={index} />)
+    {tableData?.length > 0 &&
+        tableData.filter((project: Project) => project.projectHostingAlias).map((project: any) => <DomainItemCard key={project._id} item={project} />)
     }
   </div>
   </>

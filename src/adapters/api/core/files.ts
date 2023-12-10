@@ -48,3 +48,9 @@ export async function deleteFile(fileId: string) {
     headers: (await getAuthHeaders()),
   });
 } 
+
+export async function cloneFile(fileId: string) {
+  return apiInstance.get(`${RESOURCE_PATH}/clone?id=${fileId}`, {
+    headers: (await getAuthHeaders()),
+  });
+}
