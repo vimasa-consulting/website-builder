@@ -34,39 +34,75 @@ const component = (editor: Editor) => {
         traits: [],
         components: `
           <section class="${classPrefix}-section">
-              <div class="${classPrefix}-container">
-                <div class="${classPrefix}-benefits-wrapper">
-                  <div class="${classPrefix}-benefit-item">
-                    <div class="${classPrefix}-circlular-div">
-                      <img class="${classPrefix}-cir-image" src="" alt"" />
-                      <div class="${classPrefix}-cir-text">Brand Benefit 1</div>
-                    </div>
-                    <span class="${classPrefix}-item-description">Short description</span>
+            <div class="${classPrefix}-container">
+              <div class="${classPrefix}-benefits-wrapper">
+                <div class="${classPrefix}-benefit-item">
+                  <div class="${classPrefix}-circlular-div">
+                    <img loading="lazy"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                      class="${classPrefix}-image" />
+                    <div class="${classPrefix}-cir-text">Brand Benefit 1</div>
                   </div>
-                  <div class="${classPrefix}-benefit-item">
-                    <div class="${classPrefix}-circlular-div">
-                      <img class="${classPrefix}-cir-image" src="" alt"" />
-                      <div class="${classPrefix}-cir-text">Brand Benefit 2</div>
-                    </div>
-                    <span class="${classPrefix}-item-heading">Short description</span>
+                  <span class="${classPrefix}-item-description">Short description</span>
+                </div>
+                <div class="${classPrefix}-benefit-item">
+                  <div class="${classPrefix}-circlular-div">
+                    <img loading="lazy"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                      class="${classPrefix}-image" />
+                    <div class="${classPrefix}-cir-text">Brand Benefit 2</div>
                   </div>
-                  <div class="${classPrefix}-benefit-item">
-                    <div class="${classPrefix}-circlular-div">
-                      <img class="${classPrefix}-cir-image" src="" alt"" />
-                      <div class="${classPrefix}-cir-text">Brand Benefit 3</div>
-                    </div>
-                    <span class="${classPrefix}-item-heading">Short description</span>
+                  <span class="${classPrefix}-item-heading">Short description</span>
+                </div>
+                <div class="${classPrefix}-benefit-item">
+                  <div class="${classPrefix}-circlular-div">
+                    <img loading="lazy"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                      class="${classPrefix}-image" />
+                    <div class="${classPrefix}-cir-text">Brand Benefit 3</div>
                   </div>
-                  <div class="${classPrefix}-benefit-item">
-                    <div class="${classPrefix}-circlular-div">
-                      <img class="${classPrefix}-cir-image" src="" alt"" />
-                      <div class="${classPrefix}-cir-text">Brand Benefit 4</div>
-                    </div>
-                    <span class="${classPrefix}-item-heading">Short description</span>
+                  <span class="${classPrefix}-item-heading">Short description</span>
+                </div>
+                <div class="${classPrefix}-benefit-item">
+                  <div class="${classPrefix}-circlular-div">
+                    <img loading="lazy"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                      class="${classPrefix}-image" />
+                    <div class="${classPrefix}-cir-text">Brand Benefit 4</div>
                   </div>
+                  <span class="${classPrefix}-item-heading">Short description</span>
                 </div>
               </div>
-            </section>
+            </div>
+          </section>
         `,
         styles: `
           .${classPrefix}-section {
@@ -76,15 +112,17 @@ const component = (editor: Editor) => {
           }
 
           .${classPrefix}-container {
-            width: 50vw;
+            max-width: 1440px;
             margin: 0 auto;
           }
 
           .${classPrefix}-benefits-wrapper {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            column-gap: 100px;
+            flex-wrap: wrap;
           }
 
           .${classPrefix}-benefit-item {
@@ -101,8 +139,10 @@ const component = (editor: Editor) => {
             border-radius: 50%;
             background-color: #e9e9e9;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            row-gap: 16px;
           }
 
           .${classPrefix}-cir-text {
@@ -118,30 +158,50 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-item-description {
             color: #000;
+            text-align: center;
+            font-family: Inter;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
-            line-height: 140%;
-            /* 25.2px */
+            line-height: 140%; /* 25.2px */
           }
 
-          @media (max-width: 768px) {
-            .${classPrefix}-section {
-              padding: 2rem 1rem;
-            }
-
-            .${classPrefix}-container {
-              width: auto;
-            }
+          .${classPrefix}-image {
+            width: 50px;
+            height: 50px;
           }
 
           @media (max-width: 480px) {
             .${classPrefix}-section {
-              padding: 1.8rem 1rem;
+              padding: 10px;
             }
 
             .${classPrefix}-container {
               max-width: 100%;
+            }
+            .${classPrefix}-benefits-wrapper {
+              gap: 36px;
+            }
+            .${classPrefix}-circlular-div {
+              width: 146px;
+              height: 146px;
+              gap: 5px;
+            }
+
+            .${classPrefix}-image {
+              width: 35px;
+              height: 35px;
+            }
+
+            .${classPrefix}-cir-text {
+              color: #4b4b4b;
+              text-align: center;
+              font-family: Inter;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              width: 70%;
             }
           }
         `,
