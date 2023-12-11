@@ -37,7 +37,7 @@ import navbar from "grapesjs-navbar";
 import BlockSearchPopup from '../BlockSearchPopup';
 import { usePlugin } from 'grapesjs'
 import grapesjsIcons from 'grapesjs-icons'
-import plugin from '@silexlabs/grapesjs-fonts';
+//import plugin from '@silexlabs/grapesjs-fonts';
 //@ts-ignore
 import type { PluginOptions } from 'grapesjs-icons'
 import { publishFile, updateFile } from "@/services/FilesService";
@@ -54,7 +54,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
 
   const onEditor = (editor: Editor) => {
     initCustomBlocks(editor); 
-    const matomoProjectId='1';
+    const matomoProjectId=localStorage.getItem(`wb-${fileID}-matomo_projectid`);    
     editor.Commands.add("publishProject", {      
       run(editor, sender) {
         console.log('publish project');    
@@ -264,7 +264,7 @@ const fontPluginOptions: PluginOptions = {
     //presetWebpagePlugin,
     navbar,    
     usePlugin(grapesjsIcons, iconPluginOptions),
-    usePlugin(plugin, fontPluginOptions)    
+    //usePlugin(plugin, fontPluginOptions)    
     // TODO: Undo once fixed
     // lorySlider,
     // table,
