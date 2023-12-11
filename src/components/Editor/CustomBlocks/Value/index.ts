@@ -51,10 +51,17 @@ import {
   singleProductOffer3Component,
   singleProductOffer3block,
 } from "./Blocks/singleProductOffer3";
-import { shopByOfferVal3Block, shopByOfferVal3Component } from "./Blocks/shopByOfferVal3";
+import {
+  shopByOfferVal3Block,
+  shopByOfferVal3Component,
+} from "./Blocks/shopByOfferVal3";
 import { showcaseV2Block, showcaseV2Component } from "./Blocks/showcaseV2";
 import { showcaseV1Block, showcaseV1Component } from "./Blocks/showcaseV1";
-import { singleProductOffer2Block, singleProductOffer2Component } from "./Blocks/singleProductOffer2";
+import {
+  singleProductOffer2Block,
+  singleProductOffer2Component,
+} from "./Blocks/singleProductOffer2";
+import { showcaseV3Block, showcaseV3Component } from "./Blocks/showcaseV3";
 
 export default function initValue(editor: Editor) {
   showcaseV1Block(editor);
@@ -81,8 +88,11 @@ export default function initValue(editor: Editor) {
   multiProductOffers3Block(editor);
   multiProductOffers3Component(editor);
 
-  productShowcase3Block(editor);
-  productShowcase3Component(editor);
+  // productShowcase3Block(editor);
+  // productShowcase3Component(editor);
+
+  showcaseV3Block(editor);
+  showcaseV3Component(editor);
 
   brandBenefits1Block(editor);
   brandBenefits1Component(editor);

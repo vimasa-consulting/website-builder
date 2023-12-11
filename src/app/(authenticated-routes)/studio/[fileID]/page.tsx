@@ -22,7 +22,7 @@ const EditorPage = () => {
     // update local storage    
     localStorage.setItem(`wb-${fileID}`, data.builderData || '')
     localStorage.setItem(`wb-active-filename`, data.name || '')
-    localStorage.setItem(`wb-${fileID}-matomo_projectid`, data.matamoProjectId || '')
+    localStorage.setItem(`wb-${fileID}-matomo_projectid`, data.projectinfo?.matomoProjectId || '')
     setEditorDataLoaded(true);
   }
       

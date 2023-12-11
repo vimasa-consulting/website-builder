@@ -33,208 +33,207 @@ const component = (editor: Editor) => {
         classes: [classPrefix],
         traits: [],
         components: `
-          <section class="${classPrefix}-section">
-            <div class="${classPrefix}-container">
-              <div class="${classPrefix}-heading-wrapper">
-                <h1 class="${classPrefix}-section-heading">Catchy headline about product range & offers</h1>
-              </div>
-              <div class="${classPrefix}-image-container">
-                <div class="${classPrefix}-image-item">
-                  <img class="${classPrefix}-image"
-                    src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg"
-                    alt="Image 1">
-                  <div class="${classPrefix}-wrapper">
-                    <div class="${classPrefix}-heading">Up to 60% Off</div>
-                    <div class="${classPrefix}-sub-heading">Product Name 1</div>
-                  </div>
-                </div>
-                <div class="${classPrefix}-image-item">
-                  <img class="${classPrefix}-image"
-                    src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg"
-                    alt="Image 1">
-                  <div class="${classPrefix}-wrapper">
-                    <div class="${classPrefix}-heading">Up to 60% Off</div>
-                    <div class="${classPrefix}-sub-heading">Product Name 1</div>
-                  </div>
-                </div>
-                <div class="${classPrefix}-image-item">
-                  <img class="${classPrefix}-image"
-                    src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg"
-                    alt="Image 1">
-                  <div class="${classPrefix}-wrapper">
-                    <div class="${classPrefix}-heading">Up to 60% Off</div>
-                    <div class="${classPrefix}-sub-heading">Product Name 1</div>
-                  </div>
-                </div>
-                <div class="${classPrefix}-image-item">
-                  <img class="${classPrefix}-image"
-                    src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg"
-                    alt="Image 1">
-                  <div class="${classPrefix}-wrapper">
-                    <div class="${classPrefix}-heading">Up to 60% Off</div>
-                    <div class="${classPrefix}-sub-heading">Product Name 1</div>
-                  </div>
-                </div>
-                <div class="${classPrefix}-image-item">
-                  <img class="${classPrefix}-image"
-                    src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg"
-                    alt="Image 1">
-                  <div class="${classPrefix}-wrapper">
-                    <div class="${classPrefix}-heading">Up to 60% Off</div>
-                    <div class="${classPrefix}-sub-heading">Product Name 1</div>
-                  </div>
-                </div>
-                <div class="${classPrefix}-image-item">
-                  <img class="${classPrefix}-image"
-                    src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg"
-                    alt="Image 1">
-                  <div class="${classPrefix}-wrapper">
-                    <div class="${classPrefix}-heading">Up to 60% Off</div>
-                    <div class="${classPrefix}-sub-heading">Product Name 1</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+<section class="${classPrefix}-section">
+  <div class="${classPrefix}-container">
+    <div class="${classPrefix}-heading-wrapper">
+      <h1 class="${classPrefix}-section-heading">Catchy headline about product range & offers</h1>
+    </div>
+    <div class="${classPrefix}-image-container">
+      <div class="${classPrefix}-image-item">
+        <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
+        <div class="${classPrefix}-wrapper">
+          <div class="${classPrefix}-sub-heading">Product Name 1</div>
+          <div class="${classPrefix}-heading">Up to 60% Off</div>
+        </div>
+      </div>
+      <div class="${classPrefix}-image-item">
+        <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
+        <div class="${classPrefix}-wrapper">
+          <div class="${classPrefix}-sub-heading">Product Name 1</div>
+          <div class="${classPrefix}-heading">Up to 60% Off</div>
+        </div>
+      </div>
+      <div class="${classPrefix}-image-item">
+        <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
+        <div class="${classPrefix}-wrapper">
+          <div class="${classPrefix}-sub-heading">Product Name 1</div>
+          <div class="${classPrefix}-heading">Up to 60% Off</div>
+        </div>
+      </div>
+      <div class="${classPrefix}-image-item">
+        <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
+        <div class="${classPrefix}-wrapper">
+          <div class="${classPrefix}-sub-heading">Product Name 1</div>
+          <div class="${classPrefix}-heading">Up to 60% Off</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
         `,
         styles: `
-          .${classPrefix}-section {
-            padding: 3.5rem 1rem;
-            margin: 0 auto;
-            font-family: Inter, sans-serif;
-          }
+.${classPrefix}-section {
+  padding: 3.5rem 1rem;
+  margin: auto;
+  font-family: Inter, sans-serif;
+}
 
-          .${classPrefix}-container {
-            margin: 0 auto;
-          }
+.${classPrefix}-container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
 
-          .${classPrefix}-heading-wrapper {
-            margin: 0 auto 7rem 0;
-          }
+.${classPrefix}-heading-wrapper {
+  margin: 0 auto 26px 0;
+}
 
-          .${classPrefix}-section-heading {
-            color: #000;
-            text-align: center;
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            margin: 0;
-          }
+.${classPrefix}-section-heading {
+  color: #000;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
 
-          .${classPrefix}-image-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 100%;
-            column-gap: 32px;
-          }
+.${classPrefix}-image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  column-gap: 32px;
+  margin-top: 70px;
+}
 
-          .${classPrefix}-image-item {
-            max-width: 215px;
-            margin-bottom: 20px;
-            text-align: center;
-          }
+.${classPrefix}-image-item {
+  max-width: 215px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-          .${classPrefix}-image {
-            height: 201px;
-            width: 201px;
-            background: grey;
-            border-radius: 50%;
-            height: auto;
-            max-width: 100%;
-          }
+.${classPrefix}-image {
+  background: grey;
+  border-radius: 50%;
+  width: 215px;
+}
 
-          .${classPrefix}-wrapper {
-            padding: 1rem 0 0;
-            text-align: left;
-          }
+.${classPrefix}-wrapper {
+  padding: 1rem 0 0;
+  text-align: left;
+}
 
-          .${classPrefix}-heading {
-            color: #000;
-            text-align: center;
-            font-family: Inter;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-          }
+.${classPrefix}-heading {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
 
-          .${classPrefix}-sub-heading {
-            color: #000;
-            text-align: center;
-            font-family: Inter;
-            font-size: 15px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 140%;
-            /* 21px */
-          }
+.${classPrefix}-sub-heading {
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  margin-bottom: 10px;
+}
 
-          @media (max-width: 768px) {
-            .${classPrefix}-section {
-              padding: 2rem 1rem;
-            }
+@media (max-width: 480px) {
+  .${classPrefix}-section {
+    padding: 10px;
+  }
 
-            .${classPrefix}-container {
-              width: auto;
-            }
+  .${classPrefix}-container {
+    max-width: 100%;
+  }
 
-            .${classPrefix}-subheading-wrapper {
-              margin: 0 auto 36px auto;
-            }
+  .${classPrefix}-section-heading {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35px; /* 134.615% */
+  }
 
-            .${classPrefix}-box-container {
-              gap: 1rem;
-              flex-direction: row;
-            }
+  .${classPrefix}-heading-wrapper {
+    margin: 0 auto 36px 0;
+  }
 
-            .${classPrefix}-box {
-              padding: 1.5rem 1.2rem;
-            }
-          }
+  .${classPrefix}-section-heading {
+    font-size: 26px;
+  }
 
-          @media (max-width: 480px) {
-            .${classPrefix}-section {
-              padding: 1.8rem 1rem;
-            }
+  .${classPrefix}-image-item {
+    width: 100%;
+    max-width: 87px;
+  }
 
-            .${classPrefix}-container {
-              max-width: 100%;
-            }
+  .${classPrefix}-image {
+    width: 87px;
+    height: auto;
+  }
 
-            .${classPrefix}-section-heading {
-              text-align: center;
-              font-size: 26px;
-              line-height: 35px;
-            }
+  .${classPrefix}-heading {
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 16.8px */
+  }
 
-            .${classPrefix}-heading-wrapper {
-              margin: 0 auto 36px 0;
-            }
+  .${classPrefix}-sub-heading {
+    color: #000;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 14px */
+    margin-bottom: 5px;
+  }
 
-            .${classPrefix}-section-heading {
-              font-size: 26px;
-            }
+  .${classPrefix}-image-container {
+    margin-top: 0;
+    column-gap: 5px;
+  }
+}
 
-            .${classPrefix}-image-item {
-              width: 100%;
-              max-width: 163px;
-            }
-
-            .${classPrefix}-heading {
-              font-size: 16px;
-              margin-bottom: 5px;
-            }
-
-            .${classPrefix}-sub-heading {
-              font-size: 13px;
-            }
-
-            .${classPrefix}-image-container {
-              column-gap: 30px;
-            }
-          }
         `,
       },
     },

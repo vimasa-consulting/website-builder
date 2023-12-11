@@ -37,15 +37,42 @@ const component = (editor: Editor) => {
             <div class="${classPrefix}-container">
               <div class="${classPrefix}-benefits-wrapper">
                 <div class="${classPrefix}-benefit-item">
-                  <img class="${classPrefix}-item-image" src="" alt="" />
+                  <img loading="lazy"
+                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                    class="${classPrefix}-image" />
                   <span class="${classPrefix}-item-heading">Free Shipping above $100</span>
                 </div>
                 <div class="${classPrefix}-benefit-item">
-                  <img class="${classPrefix}-item-image" src="" alt="" />
+                  <img loading="lazy"
+                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                    class="${classPrefix}-image" />
                   <span class="${classPrefix}-item-heading">60 days return and refund</span>
                 </div>
                 <div class="${classPrefix}-benefit-item">
-                  <img class="${classPrefix}-item-image" src="" alt="" />
+                  <img loading="lazy"
+                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                    class="${classPrefix}-image" />
                   <span class="${classPrefix}-item-heading">Refer a friend to earn $20</span>
                 </div>
               </div>
@@ -54,21 +81,21 @@ const component = (editor: Editor) => {
         `,
         styles: `
           .${classPrefix}-section {
-            padding: 3.5rem 1rem;
+            padding: 1rem;
             margin: 0 auto;
             font-family: Inter, sans-serif;
           }
 
           .${classPrefix}-container {
-            width: 50vw;
+            max-width: 1440px;
             margin: 0 auto;
           }
 
           .${classPrefix}-benefits-wrapper {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
-            align-item: center;
+            justify-content: center;
+            column-gap: 68px;
           }
 
           .${classPrefix}-benefit-item {
@@ -76,10 +103,10 @@ const component = (editor: Editor) => {
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 16px;
           }
 
-          .${classPrefix}-item-image {
+          .${classPrefix}-image {
             height: 30px;
             width: 30px;
           }
@@ -92,25 +119,34 @@ const component = (editor: Editor) => {
             line-height: 140%;
           }
 
-          @media (max-width: 768px) {
-            .${classPrefix}-section {
-              padding: 2rem 1rem;
-            }
-
-            .${classPrefix}-container {
-              width: auto;
-            }
-          }
-
           @media (max-width: 480px) {
             .${classPrefix}-section {
-              padding: 1.8rem 1rem;
+              padding: 10px;
             }
 
             .${classPrefix}-container {
               max-width: 100%;
             }
+            
+            .${classPrefix}-benefits-wrapper {
+              column-gap: 10px;
+            }
+
+            .${classPrefix}-item-heading {
+              color: #000;
+              font-family: Inter;
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%; /* 14px */
+            }
+
+            .${classPrefix}-image {
+              width: 18px;
+              height: 18px;
+            }
           }
+
         `,
       },
     },

@@ -40,57 +40,99 @@ const component = (editor: Editor) => {
               </div>
               <div class="${classPrefix}-image-container">
                 <div class="${classPrefix}-image-item">
-                  <img class="${classPrefix}-image"
-                    src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg"
-                    alt="Image 1">
+                  <img loading="lazy"
+                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                    class="${classPrefix}-image" />
                   <div class="${classPrefix}-wrapper">
                     <div class="${classPrefix}-heading">Up to 60% Off</div>
                     <div class="${classPrefix}-sub-heading">Product Name 1</div>
                   </div>
                 </div>
                 <div class="${classPrefix}-image-item">
-                  <img class="${classPrefix}-image"
-                    src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg"
-                    alt="Image 1">
+                  <img loading="lazy"
+                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                    class="${classPrefix}-image" />
                   <div class="${classPrefix}-wrapper">
                     <div class="${classPrefix}-heading">Up to 60% Off</div>
-                    <div class="${classPrefix}-sub-heading">Product Name 1</div>
+                    <div class="${classPrefix}-sub-heading">Product Name 2</div>
                   </div>
                 </div>
                 <div class="${classPrefix}-image-item">
-                  <img class="${classPrefix}-image"
-                    src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg"
-                    alt="Image 1">
+                  <img loading="lazy"
+                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                    class="${classPrefix}-image" />
                   <div class="${classPrefix}-wrapper">
                     <div class="${classPrefix}-heading">Up to 60% Off</div>
-                    <div class="${classPrefix}-sub-heading">Product Name 1</div>
+                    <div class="${classPrefix}-sub-heading">Product Name 3</div>
                   </div>
                 </div>
                 <div class="${classPrefix}-image-item">
-                  <img class="${classPrefix}-image"
-                    src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg"
-                    alt="Image 1">
+                  <img loading="lazy"
+                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                    class="${classPrefix}-image" />
                   <div class="${classPrefix}-wrapper">
                     <div class="${classPrefix}-heading">Up to 60% Off</div>
-                    <div class="${classPrefix}-sub-heading">Product Name 1</div>
+                    <div class="${classPrefix}-sub-heading">Product Name 4</div>
                   </div>
                 </div>
                 <div class="${classPrefix}-image-item">
-                  <img class="${classPrefix}-image"
-                    src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg"
-                    alt="Image 1">
+                  <img loading="lazy"
+                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                    class="${classPrefix}-image" />
                   <div class="${classPrefix}-wrapper">
                     <div class="${classPrefix}-heading">Up to 60% Off</div>
-                    <div class="${classPrefix}-sub-heading">Product Name 1</div>
+                    <div class="${classPrefix}-sub-heading">Product Name 5</div>
                   </div>
                 </div>
                 <div class="${classPrefix}-image-item">
-                  <img class="${classPrefix}-image"
-                    src="https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg"
-                    alt="Image 1">
+                  <img loading="lazy"
+                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
+                    class="${classPrefix}-image" />
                   <div class="${classPrefix}-wrapper">
                     <div class="${classPrefix}-heading">Up to 60% Off</div>
-                    <div class="${classPrefix}-sub-heading">Product Name 1</div>
+                    <div class="${classPrefix}-sub-heading">Product Name 6</div>
                   </div>
                 </div>
               </div>
@@ -105,6 +147,7 @@ const component = (editor: Editor) => {
           }
 
           .${classPrefix}-container {
+            max-width: 1440px;
             margin: 0 auto;
           }
 
@@ -140,8 +183,9 @@ const component = (editor: Editor) => {
           .${classPrefix}-image {
             background: grey;
             border-radius: 10px;
-            height: auto;
-            max-width: 100%;
+            height: 214px;
+            max-width: 350px;
+            width: 100%;
           }
 
           .${classPrefix}-wrapper {
@@ -169,46 +213,13 @@ const component = (editor: Editor) => {
             /* 21px */
           }
 
-          @media (max-width: 768px) {
-            .${classPrefix}-section {
-              padding: 2rem 1rem;
-            }
-
-            .${classPrefix}-container {
-              width: auto;
-            }
-
-            .${classPrefix}-subheading-wrapper {
-              margin: 0 auto 36px auto;
-            }
-
-            .${classPrefix}-box-container {
-              gap: 1rem;
-              flex-direction: row;
-            }
-
-            .${classPrefix}-box {
-              padding: 1.5rem 1.2rem;
-            }
-
-            .${classPrefix}-image-item {
-              flex: 0 0 calc(50% - 10px);
-            }
-          }
-
           @media (max-width: 480px) {
             .${classPrefix}-section {
-              padding: 1.8rem 1rem;
+              padding: 22px 18px;
             }
 
             .${classPrefix}-container {
               max-width: 100%;
-            }
-
-            .${classPrefix}-section-heading {
-              text-align: center;
-              font-size: 26px;
-              line-height: 35px;
             }
 
             .${classPrefix}-heading-wrapper {
@@ -216,16 +227,39 @@ const component = (editor: Editor) => {
             }
 
             .${classPrefix}-section-heading {
+              color: black;
               font-size: 26px;
+              font-family: Inter;
+              font-weight: 600;
+              line-height: 35px;
+              word-wrap: break-word;
             }
 
             .${classPrefix}-image-item {
               width: 100%;
+              max-width: 154px;
+              flex: none;
+            }
+
+            .${classPrefix}-image {
+              background: grey;
+              border-radius: 10px;
+              height: 109px;
               max-width: 163px;
+              width: 100%;
+            }
+
+            .${classPrefix}-wrapper {
+              padding-top: 10px;
             }
 
             .${classPrefix}-heading {
+              color: #000;
+              font-family: Inter;
               font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 140%; /* 22.4px */
               margin-bottom: 5px;
             }
 

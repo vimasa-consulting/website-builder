@@ -16,7 +16,12 @@ export default function Page({ params }: { params: { fileID: string } }) {
 
   return (
     <>
-      <iframe src={`/matamo/heatmap/${params.fileID}`} width="1280px" height="100%"></iframe>
+      <iframe 
+        src={`/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=11&idSiteHsr=23`} 
+        width="1280px" height="100%">          
+        </iframe>
     </>
   );
 }
+
+

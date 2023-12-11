@@ -33,43 +33,75 @@ const component = (editor: Editor) => {
         classes: [classPrefix],
         traits: [],
         components: `
-          <section class="${classPrefix}-section">
-              <div class="${classPrefix}-container">
-                <div class="${classPrefix}-heading-wrapper">
-                  <h1 class="${classPrefix}-section-heading">Header for Brand Benefits</h1>
-                </div>
-                <div class="${classPrefix}-benefits-wrapper">
-                  <div class="${classPrefix}-benefit-item">
-                    <img class="${classPrefix}-item-image" src="" alt="benefit-image" />
-                    <div class="${classPrefix}-item-content-wrapper">
-                      <span class="${classPrefix}-item-heading">Benefit 1</span>
-                      <span class="${classPrefix}-sub-heading">Short description</span>
-                    </div>
-                  </div>
-                  <div class="${classPrefix}-benefit-item">
-                    <img class="${classPrefix}-item-image" src="" alt="benefit-image" />
-                    <div class="${classPrefix}-item-content-wrapper">
-                      <span class="${classPrefix}-item-heading">Benefit 2</span>
-                      <span class="${classPrefix}-sub-heading">Short description</span>
-                    </div>
-                  </div>
-                  <div class="${classPrefix}-benefit-item">
-                    <img class="${classPrefix}-item-image" src="" alt="benefit-image" />
-                    <div class="${classPrefix}-item-content-wrapper">
-                      <span class="${classPrefix}-item-heading">Benefit 3</span>
-                      <span class="${classPrefix}-sub-heading">Short description</span>
-                    </div>
-                  </div>
-                  <div class="${classPrefix}-benefit-item">
-                    <img class="${classPrefix}-item-image" src="" alt="benefit-image" />
-                    <div class="${classPrefix}-item-content-wrapper">
-                      <span class="${classPrefix}-item-heading">Benefit 4</span>
-                      <span class="${classPrefix}-sub-heading">Short description</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+<section class="${classPrefix}-section">
+  <div class="${classPrefix}-container">
+    <div class="${classPrefix}-heading-wrapper">
+      <h1 class="${classPrefix}-section-heading">Header for Brand Benefits</h1>
+    </div>
+    <div class="${classPrefix}-benefits-wrapper">
+      <div class="${classPrefix}-row1">
+        <div class="${classPrefix}-benefit-item">
+          <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
+          <div class="${classPrefix}-item-content-wrapper">
+            <span class="${classPrefix}-item-heading">Benefit 1</span>
+            <span class="${classPrefix}-sub-heading">Short description</span>
+          </div>
+        </div>
+        <div class="${classPrefix}-benefit-item">
+          <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
+          <div class="${classPrefix}-item-content-wrapper">
+            <span class="${classPrefix}-item-heading">Benefit 2</span>
+            <span class="${classPrefix}-sub-heading">Short description</span>
+          </div>
+        </div>
+      </div>
+      <div class="${classPrefix}-row2">
+        <div class="${classPrefix}-benefit-item">
+          <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
+          <div class="${classPrefix}-item-content-wrapper">
+            <span class="${classPrefix}-item-heading">Benefit 3</span>
+            <span class="${classPrefix}-sub-heading">Short description</span>
+          </div>
+        </div>
+        <div class="${classPrefix}-benefit-item">
+          <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
+          <div class="${classPrefix}-item-content-wrapper">
+            <span class="${classPrefix}-item-heading">Benefit 4</span>
+            <span class="${classPrefix}-sub-heading">Short description</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
         `,
         styles: `
           .${classPrefix}-section {
@@ -79,7 +111,7 @@ const component = (editor: Editor) => {
           }
 
           .${classPrefix}-container {
-            width: 40vw;
+            max-width: 1440px;
             margin: 0 auto;
           }
 
@@ -107,6 +139,22 @@ const component = (editor: Editor) => {
             justify-content: space-between;
           }
 
+          .${classPrefix}-row1 {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 10vw;
+          }
+
+          .${classPrefix}-row2 {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 10vw;
+          }
+
           .${classPrefix}-benefit-item {
             display: flex;
             flex-direction: row;
@@ -123,7 +171,7 @@ const component = (editor: Editor) => {
           .${classPrefix}-item-heading {
             display: block;
             color: #000;
-            text-align: center;
+            text-align: left;
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
@@ -140,23 +188,9 @@ const component = (editor: Editor) => {
             /* 21px */
           }
 
-          @media (max-width: 768px) {
-            .${classPrefix}-section {
-              padding: 2rem 1rem;
-            }
-
-            .${classPrefix}-container {
-              width: auto;
-            }
-
-            .${classPrefix}-subheading-wrapper {
-              margin: 0 auto 36px auto;
-            }
-          }
-
           @media (max-width: 480px) {
             .${classPrefix}-section {
-              padding: 1.8rem 1rem;
+              padding: 10px;
             }
 
             .${classPrefix}-container {
@@ -164,17 +198,50 @@ const component = (editor: Editor) => {
             }
 
             .${classPrefix}-section-heading {
+              color: #000;
               text-align: center;
+              font-family: Inter;
               font-size: 26px;
-              line-height: 35px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 35px; /* 134.615% */
             }
 
             .${classPrefix}-heading-wrapper {
               margin: 0 auto 36px 0;
             }
 
-            .${classPrefix}-section-heading {
-              font-size: 26px;
+            .${classPrefix}-item-heading {
+              color: #000;
+              font-family: Inter;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 140%; /* 22.4px */
+              display: inline;
+            }
+            .${classPrefix}-row1 {
+              width: auto;
+              justify-content: center;
+              column-gap: 70px;
+            }
+            .${classPrefix}-row2 {
+              width: auto;
+              justify-content: center;
+              column-gap: 70px;
+            }
+            .${classPrefix}-sub-heading {
+              color: #000;
+              font-family: Inter;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%; /* 16.8px */
+            }
+
+            .${classPrefix}-benefits-wrapper {
+              flex-direction: column;
+              row-gap: 40px;
             }
           }
         `,

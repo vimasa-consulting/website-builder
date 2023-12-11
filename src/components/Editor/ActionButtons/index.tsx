@@ -5,6 +5,7 @@ import {
     mdiDelete, mdiEye,
     mdiFolder,
     mdiLayers, mdiPaletteSwatch,
+    mdiFontAwesome,
     mdiFullscreen, mdiHelpCircle, mdiNewspaperVariantOutline, mdiPublish, mdiTrayArrowDown, mdiXml
 } from '@mdi/js';
 import Icon from '@mdi/react';
@@ -85,6 +86,11 @@ export default observer(function ActionButtons() {
             cmd: () => styleManagerStore.toggleOpen(),
             iconPath: mdiPaletteSwatch,
             title: 'style.title',
+        },{
+            id: 'fonts',
+            cmd: 'open-fonts',
+            iconPath: mdiFontAwesome,
+            title: 'layer.title',
         },
         {
             id: 'preview',
