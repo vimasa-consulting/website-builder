@@ -1,4 +1,5 @@
 import AuthContext from '@/context/identity/AuthContext';
+import { updateUserName } from '@/services/CognitoService';
 import React, { useCallback, useContext, useEffect, useRef, useState } from 'react'
 
 
@@ -10,7 +11,7 @@ const Profile = () => {
     });
     const [profilePic, setProfilePic] = useState('https://flowbite.com/docs/images/people/profile-picture-5.jpg');
     const inputRef = useRef<HTMLInputElement>(null)
-    const { cachedAuthUser } = useContext(AuthContext);
+    const { cachedAuthUser, setCachedAuthUser } = useContext(AuthContext);
 
 
     const handleImageChange = (e: any) => {
@@ -30,8 +31,20 @@ const Profile = () => {
         }
     };
 
-    const handleProfileUpdate = () => {
-        console.log('Profile updated')
+    const handleProfileUpdate = async() => {
+        try {
+            await updateUserName(cachedAuthUser?.username || '', userDetails.firstName, userDetails.lastName)
+            setCachedAuthUser((prevState: any) => ({
+                username: prevState?.username,
+                attributes: {
+                    ...prevState?.attributes,
+                    givenName: userDetails.firstName,
+                    familyName: userDetails.lastName
+                }
+            }))
+        }catch(error) {
+            console.log(error)
+        }
     }
 
     const loadDependencies = useCallback(() => {
