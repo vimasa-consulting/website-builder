@@ -51,6 +51,7 @@
     "grapesjs-touch": "^0.1.1",
     "grapesjs-tui-image-editor": "^1.0.2",
     "grapesjs-typed": "^2.0.1",
+    "heatmap.js": "^2.0.5",
     "instantsearch.css": "^8.1.0",
     "lucide-react": "^0.287.0",
     "mobx": "^6.11.0",
@@ -71,6 +72,7 @@
   },
   "devDependencies": {
     "@types/base-64": "^1.0.2",
+    "@types/heatmap.js": "^2.0.41",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
