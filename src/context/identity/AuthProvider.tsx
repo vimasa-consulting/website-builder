@@ -63,7 +63,7 @@ export default function AuthProvider({
   }, []);
 
   return (
-    <AuthContext.Provider value={{ status: authStatus, cachedAuthUser: authUser, cachedUser: user }}>
+    <AuthContext.Provider value={{ status: authStatus, cachedAuthUser: authUser, cachedUser: user, setCachedAuthUser: setAuthUser }}>
       {children}
     </AuthContext.Provider>
   )

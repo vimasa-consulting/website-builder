@@ -105,7 +105,7 @@ const comparison3Component = (editor: Editor) => {
                 .${classPrefix}-comparisonContainer {
                   max-width: 1440px;
                   margin: auto;
-                  padding: 5.24rem 20px;
+                  padding: 92px 0px 131px ;
                   font-family: Inter, sans-serif;
                 }
                 .${classPrefix}-tableHeader {
@@ -164,9 +164,18 @@ const comparison3Component = (editor: Editor) => {
                   max-height: 100%;
                 }
 
-                @media (max-width: 425px) {
+                @media (max-width: 400px) {
+                  .${classPrefix}-comparisonContainer {
+                    padding: 46px 0px;
+                  }
                   .${classPrefix}-title {
-                    font-size: 25px;
+                    font-size: 26px;
+                    line-height: 35px;
+                    margin-bottom: 12px;
+                    padding: 0 20px;
+                  }
+                  .${classPrefix}-tableHeader {
+                  height: 37px;
                   }
                   .${classPrefix}-subTitle {
                     font-size: 16px;

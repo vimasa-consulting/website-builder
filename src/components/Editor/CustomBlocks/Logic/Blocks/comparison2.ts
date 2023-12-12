@@ -53,7 +53,7 @@ const comparison2Component = (editor: Editor) => {
                 <div class="${classPrefix}-card ${classPrefix}-advantagesCard">
                   <h2 class="${classPrefix}-title">Your Product Name</h2>
                   <div class="${classPrefix}-imageWrapper">
-                   <img src="https://placehold.co/45x45" alt="Your Product">
+                   <img class="${classPrefix}-image" src="https://placehold.co/45x45" alt="Your Product">
                   </div>
                   <div class="${classPrefix}-iconWrapper">
                   <img class="${classPrefix}-icon" src="https://img.icons8.com/ios-glyphs/40/FFFFFF/checkmark--v2.png" alt="Check Mark" />
@@ -69,7 +69,7 @@ const comparison2Component = (editor: Editor) => {
                 <div class="${classPrefix}-card ${classPrefix}-shortComingsCard">
                   <h2 class="${classPrefix}-title">Others</h2>
                   <div class="${classPrefix}-imageWrapper">
-                    <img src="https://placehold.co/45x45" alt="Competitor Product">
+                    <img class="${classPrefix}-image" src="https://placehold.co/45x45" alt="Competitor Product">
                   </div>
                   <div class="${classPrefix}-iconWrapper">
                   <img class="${classPrefix}-icon" src="https://img.icons8.com/fluency-systems-filled/40/FFFFFF/x.png" alt="X Mark" />
@@ -125,7 +125,7 @@ const comparison2Component = (editor: Editor) => {
                   font-weight: 600;
                 }
                 .${classPrefix}-imageWrapper {
-                  border: 1px dashed #AEAEAE;
+                  border: 3px dashed #AEAEAE;
                   width: 90px;
                   height: 90px;
                   display: flex;
@@ -184,33 +184,56 @@ const comparison2Component = (editor: Editor) => {
                   text-align: center;
                   
                 }
-                @media (max-width: 770px) {
+                @media (max-width: 400px) {
                   .${classPrefix}-container {
-                    flex-direction: column;
                     align-items: center;
                   }
                   .${classPrefix}-card {
                     width: 100%;
                     border: none !important;
+                    padding: 0px;
                   }
                   .${classPrefix}-vsWrapper {
                     display: none;
                   }
                   .${classPrefix}-iconWrapper {
-                    margin-top: 60px;
+                    width: 25px;
+                    height: 25px;
+                    margin-top: 65px;                
+                  }
+                  .${classPrefix}-icon {
+                    padding: 4px;               
+                  }
+                  .${classPrefix}-imageWrapper {
+                    width: 47px;
+                    height: 47px;
+                  }
+                  .${classPrefix}-image {
+                    width: 25px;
+                    height: 25px;
                   }
                   .${classPrefix}-title {
-                    margin-bottom: 30px;
-                  }
-                }
-
-                @media (max-width: 425px) {
-                  .${classPrefix}-title {
-                    font-size: 25px;
+                    font-size: 18px;
+                    margin-top: 44px;
+                    margin-bottom: 58px;
                   }
                   li {
-                    font-size: 16px;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 400;
+                    margin: 0px;
                   }
+                  .${classPrefix}-advantageList, .${classPrefix}-shortComingList {
+                    margin-top: 25px;
+                    margin-bottom: 54px;
+                    height: 89px;
+                  }
+                  hr {
+                    width: 75%;
+                  }
+                  .${classPrefix}-card:nth-child(2) {
+                    padding-left: unset;
+                }
                 }
                 `,
             },

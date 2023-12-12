@@ -19,5 +19,6 @@ export type AuthUser = {
 export type AuthProps = {
   status: AuthStatus,
   cachedAuthUser: AuthUser | null,
-  cachedUser: User | null
+  cachedUser: User | null,
+  setCachedAuthUser: (value: React.SetStateAction<AuthUser | null>) => void
 }

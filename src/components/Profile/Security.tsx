@@ -1,3 +1,4 @@
+import { changePassword } from '@/services/CognitoService'
 import React, { useState } from 'react'
 
 const Security = () => {
@@ -6,8 +7,16 @@ const Security = () => {
         newPassword: ''
     })
 
-    const handlePasswordUpdate = () => {
-        console.log('Password updated')
+    const handlePasswordUpdate = async() => {
+        try {
+            await changePassword(passwordDetails.oldPassword, passwordDetails.newPassword)
+            setPasswordDetails({
+                oldPassword: '',
+                newPassword: ''
+            })
+        } catch(error) {
+            console.log(error)
+        }
     }
 
   return (
@@ -35,7 +44,7 @@ const Security = () => {
                     <input
                         id="input-field-two"
                         type="password"
-                        className="w-full h-[33px] p-2 border-2 border-transparent text-[15px] rounded text-[#797979] bg-[#313131]"
+                        className="w-full h-[33px] p-2 border-2 border-transparent text-[15px] text-white rounded text-[#797979] bg-[#313131]"
                         value={passwordDetails.newPassword}
                         placeholder='********'
                         onChange={(e) => setPasswordDetails(prevState => ({...prevState, newPassword: e.target.value}))}
