@@ -25,8 +25,8 @@ export default function Page({ params }: { params: { fileID: string } }) {
     //@ts-ignore
     const iframeWindow=heamapIframe.contentWindow;
     //@ts-ignore
-    const docElem = iframeWindow.document.documentElement;
-    var el=iframeWindow.document.querySelector(selector);
+    const docElem = iframeWindow.top.document.documentElement;
+    var el=iframeWindow.top.document.querySelector(selector);
     const box = el.getBoundingClientRect();    
     return {
       top: box.top + iframeWindow.pageYOffset - docElem.clientTop,
@@ -38,9 +38,9 @@ export default function Page({ params }: { params: { fileID: string } }) {
     //@ts-ignore
     const iframeWindow=heamapIframe.contentWindow;
     //@ts-ignore
-    const docElem = iframeWindow.document.documentElement;
-    var el=iframeWindow.document.querySelector(selector);
-    const style = iframeWindow.getComputedStyle(el);
+    const docElem = iframeWindow.top.document.documentElement;
+    var el=iframeWindow.top.document.querySelector(selector);
+    const style = iframeWindow.top.getComputedStyle(el);
     return (
       el.getBoundingClientRect().width +
       parseFloat(style.marginLeft) +
@@ -48,14 +48,14 @@ export default function Page({ params }: { params: { fileID: string } }) {
     );
   }
   const outerHeight=function(selector:string) {
-    var heamapIframe=document.querySelector("#heatmapContainerIframe")
+    var heamapIframe=window.document.querySelector("#heatmapContainerIframe")
     //@ts-ignore
     const iframeWindow=heamapIframe.contentWindow;
     //@ts-ignore
-    const docElem = iframeWindow.document.documentElement;
-    var el=iframeWindow.document.querySelector(selector);
+    const docElem = iframeWindow.top.document.documentElement;
+    var el=iframeWindow.top.document.querySelector(selector);
 
-    const style = iframeWindow.getComputedStyle(el);
+    const style = iframeWindow.top.getComputedStyle(el);
     return (
       el.getBoundingClientRect().height +
       parseFloat(style.marginTop) +
@@ -104,7 +104,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
       points.push(converted);
     }
     var config = {
-      container: document.getElementById('heatmapContainer'),
+      container: document.getElementById('heatmapContainer')!,
        radius: 10,
        maxOpacity: .5,
        minOpacity: 0,
@@ -117,7 +117,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
          '.95': 'white'
        }
      };
-    //@ts-ignore    
+     
     var heatmapInstance = h337.create(config);
     console.log(heatmapInstance, points);
     var pointsData = {      
