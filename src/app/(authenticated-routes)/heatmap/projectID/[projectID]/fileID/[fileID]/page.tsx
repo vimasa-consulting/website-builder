@@ -21,7 +21,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
   const [matomoProjectId, setMatomoProjectId] = useState<string>('11')
 
   const offset=function(selector:string) {
-    var heamapIframe=document.querySelector("#heatmapContainer")
+    var heamapIframe=document.querySelector("#heatmapContainerIframe")
     //@ts-ignore
     const iframeWindow=heamapIframe.contentWindow;
     //@ts-ignore
@@ -34,7 +34,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
     };
   }
    const outerWidth=function(selector:string) {
-    var heamapIframe=document.querySelector("#heatmapContainer")
+    var heamapIframe=document.querySelector("#heatmapContainerIframe")
     //@ts-ignore
     const iframeWindow=heamapIframe.contentWindow;
     //@ts-ignore
@@ -48,7 +48,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
     );
   }
   const outerHeight=function(selector:string) {
-    var heamapIframe=document.querySelector("#heatmapContainer")
+    var heamapIframe=document.querySelector("#heatmapContainerIframe")
     //@ts-ignore
     const iframeWindow=heamapIframe.contentWindow;
     //@ts-ignore
@@ -119,11 +119,12 @@ export default function Page({ params }: { params: { fileID: string } }) {
      };
     //@ts-ignore    
     var heatmapInstance = h337.create(config);
+    console.log(heatmapInstance, points);
     var pointsData = {      
       data: points
     };
     //@ts-ignore
-    heatmapInstance.setData(pointsData);
+    heatmapInstance.setData(pointsData);    
   }
   useEffect(() => {    
     fetchFileData(params.fileID);
@@ -135,9 +136,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
         src={`https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}`} 
         width="400px" height="100%">
         </iframe> 
-        </div>
+      </div>
     </>
   );
 }
-
-
