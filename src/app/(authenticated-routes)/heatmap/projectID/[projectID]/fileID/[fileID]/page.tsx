@@ -54,10 +54,11 @@ export default function Page({ params }: { params: { fileID: string } }) {
     //}
     const response:any = await getFileWithHeatmapDataByFileId('11','23');    
     var pointsdata=response.data;
+    var points=[];
     for(var index=0;index<pointsdata.length;index++){
       const point=pointsdata[index];
-      let converted=getCoordinatesInFrame(point.selector,point.offset_x,point.offset_y,100,false,point?.value);      
-      console.log(point,converted);
+      let converted=getCoordinatesInFrame(point.selector,point.offset_x,point.offset_y,2000,false,point?.value);      
+      points.push(converted);
     }
     var config = {
       container: document.getElementById('heatmapContainer'),
@@ -75,14 +76,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
      };
     //@ts-ignore    
     var heatmapInstance = h337.create(config);
-    var point = {
-      x: Math.floor(Math.random()*0),
-      y: Math.floor(Math.random()*0),
-      value: 0
-     };
-    var points=[point];
-    var pointsData = {
-      max: 0,
+    var pointsData = {      
       data: points
     };
     //@ts-ignore
