@@ -132,7 +132,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
     <>
       <iframe id="heatmapContainer"
         src={`https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}`} 
-        width="1280px" height="100%">          
+        width="600px" height="100%">
         </iframe> 
     </>
   );
