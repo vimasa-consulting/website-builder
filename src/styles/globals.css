@@ -177,3 +177,7 @@ textarea:not([rows]) {
     @apply bg-background text-foreground;
   }
 }
+.heatmapContainer {
+  width: 400px;
+  height: 3000px;
+}

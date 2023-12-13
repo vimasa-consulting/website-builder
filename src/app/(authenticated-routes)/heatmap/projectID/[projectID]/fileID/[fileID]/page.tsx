@@ -130,10 +130,12 @@ export default function Page({ params }: { params: { fileID: string } }) {
    }, []);
   return (
     <>
-      <iframe id="heatmapContainer"
+      <div id="heatmapContainer" className="heatmapContainer">
+        <iframe id="heatmapContainerIframe"
         src={`https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}`} 
-        width="600px" height="100%">
+        width="400px" height="100%">
         </iframe> 
+        </div>
     </>
   );
 }
