@@ -25,8 +25,8 @@ export default function Page({ params }: { params: { fileID: string } }) {
     //@ts-ignore
     const iframeWindow=heamapIframe.contentWindow;
     //@ts-ignore
-    const docElem = iframeWindow.top.document.documentElement;
-    var el=iframeWindow.top.document.querySelector(selector);
+    const docElem = iframeWindow.document.documentElement;
+    var el=iframeWindow.document.querySelector(selector);
     const box = el.getBoundingClientRect();    
     return {
       top: box.top + iframeWindow.pageYOffset - docElem.clientTop,
@@ -38,9 +38,9 @@ export default function Page({ params }: { params: { fileID: string } }) {
     //@ts-ignore
     const iframeWindow=heamapIframe.contentWindow;
     //@ts-ignore
-    const docElem = iframeWindow.top.document.documentElement;
-    var el=iframeWindow.top.document.querySelector(selector);
-    const style = iframeWindow.top.getComputedStyle(el);
+    const docElem = iframeWindow.document.documentElement;
+    var el=iframeWindow.document.querySelector(selector);
+    const style = iframeWindow.getComputedStyle(el);
     return (
       el.getBoundingClientRect().width +
       parseFloat(style.marginLeft) +
@@ -48,14 +48,14 @@ export default function Page({ params }: { params: { fileID: string } }) {
     );
   }
   const outerHeight=function(selector:string) {
-    var heamapIframe=window.document.querySelector("#heatmapContainerIframe")
+    var heamapIframe=document.querySelector("#heatmapContainerIframe")
     //@ts-ignore
     const iframeWindow=heamapIframe.contentWindow;
     //@ts-ignore
-    const docElem = iframeWindow.top.document.documentElement;
-    var el=iframeWindow.top.document.querySelector(selector);
+    const docElem = iframeWindow.document.documentElement;
+    var el=iframeWindow.document.querySelector(selector);
 
-    const style = iframeWindow.top.getComputedStyle(el);
+    const style = iframeWindow.getComputedStyle(el);
     return (
       el.getBoundingClientRect().height +
       parseFloat(style.marginTop) +
