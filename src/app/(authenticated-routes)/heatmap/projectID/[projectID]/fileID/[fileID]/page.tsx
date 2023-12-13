@@ -22,11 +22,13 @@ export default function Page({ params }: { params: { fileID: string } }) {
 
   const getCoordinatesInFrame = function (selector:string, offsetx:number, offsety:number, offsetAccuracy:number, ignoreHiddenElement:boolean,value:number) {
     var $node = $(selector);
+    console.log($node);
     var width =  Number($node.outerWidth());
     var height = Number($node.outerHeight());
-
+    console.log(width,height);
     if (ignoreHiddenElement && ignoreHiddenElement === true && width === 0 || height === 0 || !$node.is(':visible')) {
         // not visible
+        console.log('here?');
         return;
     }
 
@@ -39,7 +41,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
         y: parseInt(coordinates.top, 10) + parseInt(String(offsety * height), 10),
         value: value
     }
-
+    console.log('here??');
     return dataPoint;
 };
   const fetchFileData = async (fileID: string) => {
@@ -57,7 +59,8 @@ export default function Page({ params }: { params: { fileID: string } }) {
     var points=[];
     for(var index=0;index<pointsdata.length;index++){
       const point=pointsdata[index];
-      let converted=getCoordinatesInFrame(point.selector,point.offset_x,point.offset_y,2000,false,point?.value);      
+      let converted=getCoordinatesInFrame(point.selector,point.offset_x,point.offset_y,2000,false,point?.value);
+      console.log(point,converted);
       points.push(converted);
     }
     var config = {
