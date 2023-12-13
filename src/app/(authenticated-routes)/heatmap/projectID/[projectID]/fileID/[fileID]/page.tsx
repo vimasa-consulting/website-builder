@@ -20,11 +20,53 @@ export default function Page({ params }: { params: { fileID: string } }) {
   const [hsr, setHsr] = useState<string>()
   const [matomoProjectId, setMatomoProjectId] = useState<string>()
 
+  const offset=function(selector:string) {
+    var heamapIframe=document.querySelector("#heatmapContainer")
+    //@ts-ignore
+    const iframeWindow=heamapIframe.contentWindow;
+    //@ts-ignore
+    const docElem = iframeWindow.document.documentElement;
+    var el=iframeWindow.document.querySelector(selector);
+    const box = el.getBoundingClientRect();    
+    return {
+      top: box.top + iframeWindow.pageYOffset - docElem.clientTop,
+      left: box.left + iframeWindow.pageXOffset - docElem.clientLeft
+    };
+  }
+   const outerWidth=function(selector:string) {
+    var heamapIframe=document.querySelector("#heatmapContainer")
+    //@ts-ignore
+    const iframeWindow=heamapIframe.contentWindow;
+    //@ts-ignore
+    const docElem = iframeWindow.document.documentElement;
+    var el=iframeWindow.document.querySelector(selector);
+    const style = iframeWindow.getComputedStyle(el);
+    return (
+      el.getBoundingClientRect().width +
+      parseFloat(style.marginLeft) +
+      parseFloat(style.marginRight)
+    );
+  }
+  const outerHeight=function(selector:string) {
+    var heamapIframe=document.querySelector("#heatmapContainer")
+    //@ts-ignore
+    const iframeWindow=heamapIframe.contentWindow;
+    //@ts-ignore
+    const docElem = iframeWindow.document.documentElement;
+    var el=iframeWindow.document.querySelector(selector);
+
+    const style = iframeWindow.getComputedStyle(el);
+    return (
+      el.getBoundingClientRect().height +
+      parseFloat(style.marginTop) +
+      parseFloat(style.marginBottom)
+    );
+  }
   const getCoordinatesInFrame = function (selector:string, offsetx:number, offsety:number, offsetAccuracy:number, ignoreHiddenElement:boolean,value:number) {
     var $node = $(selector);
     console.log($node);
-    var width =  Number($node.outerWidth());
-    var height = Number($node.outerHeight());
+    var width =  Number(outerWidth(selector));  
+    var height = Number(outerHeight(selector));
     console.log(width,height);
     if (ignoreHiddenElement && ignoreHiddenElement === true && width === 0 || height === 0 || !$node.is(':visible')) {
         // not visible
@@ -34,7 +76,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
 
     var width = width / offsetAccuracy;
     var height = height / offsetAccuracy;
-    var coordinates:any = $node.offset()||{};
+    var coordinates:any = offset(selector)||{};
 
     var dataPoint = {
         x: parseInt(coordinates.left, 10) + parseInt(String(offsetx * width), 10),
