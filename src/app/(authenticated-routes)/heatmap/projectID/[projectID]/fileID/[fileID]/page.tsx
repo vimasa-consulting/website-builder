@@ -64,11 +64,10 @@ export default function Page({ params }: { params: { fileID: string } }) {
   }
   const getCoordinatesInFrame = function (selector:string, offsetx:number, offsety:number, offsetAccuracy:number, ignoreHiddenElement:boolean,value:number) {
     var $node = $(selector);
-    console.log($node);
     var width =  Number(outerWidth(selector));  
     var height = Number(outerHeight(selector));
-    console.log(width,height);
-    if (ignoreHiddenElement && ignoreHiddenElement === true && width === 0 || height === 0 || !$node.is(':visible')) {
+    //|| !$node.is(':visible')
+    if (ignoreHiddenElement && ignoreHiddenElement === true && width === 0 || height === 0 ) {
         // not visible
         console.log('here?');
         return;
@@ -83,7 +82,6 @@ export default function Page({ params }: { params: { fileID: string } }) {
         y: parseInt(coordinates.top, 10) + parseInt(String(offsety * height), 10),
         value: value
     }
-    console.log('here??');
     return dataPoint;
 };
   const fetchFileData = async (fileID: string) => {
