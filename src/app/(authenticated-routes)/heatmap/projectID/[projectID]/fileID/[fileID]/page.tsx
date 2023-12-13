@@ -18,6 +18,28 @@ export default function Page({ params }: { params: { fileID: string } }) {
   const [fileDataLoaded, setFileDataLoaded] = useState(false);  
   const [hsr, setHsr] = useState<string>()
   const [matomoProjectId, setMatomoProjectId] = useState<string>()
+
+  const getCoordinatesInFrame = function (selector:string, offsetx:number, offsety:number, offsetAccuracy:number, ignoreHiddenElement:boolean) {
+    var $node = $(selector);
+    var width =  Number($node.outerWidth());
+    var height = Number($node.outerHeight());
+
+    if (ignoreHiddenElement && ignoreHiddenElement === true && width === 0 || height === 0 || !$node.is(':visible')) {
+        // not visible
+        return;
+    }
+
+    var width = width / offsetAccuracy;
+    var height = height / offsetAccuracy;
+    var coordinates:any = $node.offset()||{};
+
+    var dataPoint = {
+        x: parseInt(coordinates.left, 10) + parseInt(String(offsetx * width), 10),
+        y: parseInt(coordinates.top, 10) + parseInt(String(offsety * height), 10),
+    }
+
+    return dataPoint;
+};
   const fetchFileData = async (fileID: string) => {
     const { data } = await getFile(fileID);    
 
@@ -28,8 +50,12 @@ export default function Page({ params }: { params: { fileID: string } }) {
       setMatomoProjectId('11');
       setHsr('23');
     //}
-    const response = await getFileWithHeatmapDataByFileId('11','23');    
+    const response:any = await getFileWithHeatmapDataByFileId('11','23');    
     console.log(response);
+    var pointsdata=response.data;
+    for(var index=0;index<pointsdata.length;index++){
+      console.log(pointsdata[index]);
+    }
     var config = {
       container: document.getElementById('heatmapContainer'),
        radius: 10,
