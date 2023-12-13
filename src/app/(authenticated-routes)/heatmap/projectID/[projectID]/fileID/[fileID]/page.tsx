@@ -17,8 +17,8 @@ export type File = {
 
 export default function Page({ params }: { params: { fileID: string } }) {
   const [fileDataLoaded, setFileDataLoaded] = useState(false);  
-  const [hsr, setHsr] = useState<string>()
-  const [matomoProjectId, setMatomoProjectId] = useState<string>()
+  const [hsr, setHsr] = useState<string>('23')
+  const [matomoProjectId, setMatomoProjectId] = useState<string>('11')
 
   const offset=function(selector:string) {
     var heamapIframe=document.querySelector("#heatmapContainer")
