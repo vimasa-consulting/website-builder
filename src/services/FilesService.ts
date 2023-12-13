@@ -1,4 +1,4 @@
-import { getAllFiles, createFile, deleteFile, get, update, publish, cloneFile } from "@/adapters/api/core/files";
+import { getAllFiles, createFile, deleteFile, get, getFileHeatmapData, update, publish, cloneFile } from "@/adapters/api/core/files";
 import { File, FileUpdatePayload } from "@/types/file";
 
 export async function getAllFilesByProjectId(organizationId: string) {
@@ -27,4 +27,8 @@ export async function deleteFileByFileId(fileId: string) {
 
 export async function cloneFileByFileId(fileId: string) {
   return cloneFile(fileId)
+}
+
+export async function getFileWithHeatmapDataByFileId(siteId: string,hsr:string) {
+  return getFileHeatmapData(siteId,hsr);
 }

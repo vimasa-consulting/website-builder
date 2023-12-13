@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import { getFile } from "@/services/FilesService";
+import { getFile, getFileWithHeatmapDataByFileId } from "@/services/FilesService";
 import h337 from "heatmap.js";
 
 export interface NewProjectPayload {
@@ -20,7 +20,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
   const [matomoProjectId, setMatomoProjectId] = useState<string>()
   const fetchFileData = async (fileID: string) => {
     const { data } = await getFile(fileID);    
-    console.log(data);
+
     setFileDataLoaded(true)
     setMatomoProjectId(data.projectinfo?.matomoProjectId)
     setHsr(data.heatmapId);
@@ -28,6 +28,8 @@ export default function Page({ params }: { params: { fileID: string } }) {
       setMatomoProjectId('11');
       setHsr('23');
     //}
+    const response = await getFileWithHeatmapDataByFileId('11','23');    
+    console.log(response);
     var config = {
       container: document.getElementById('heatmapContainer'),
        radius: 10,
@@ -42,7 +44,8 @@ export default function Page({ params }: { params: { fileID: string } }) {
          '.95': 'white'
        }
      };
-    //@ts-ignore
+    console.log(h337);
+    //@ts-ignore    
     var heatmapInstance = h337.create(config);
     var point = {
       x: Math.floor(Math.random()*0),
@@ -62,10 +65,10 @@ export default function Page({ params }: { params: { fileID: string } }) {
    }, []);
   return (
     <>
-    {fileDataLoaded &&  <iframe id="heatmapContainer"
+      <iframe id="heatmapContainer"
         src={`https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}`} 
         width="1280px" height="100%">          
-        </iframe>}     
+        </iframe> 
     </>
   );
 }
