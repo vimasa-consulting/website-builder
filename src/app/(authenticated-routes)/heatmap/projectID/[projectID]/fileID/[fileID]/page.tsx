@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { getFile, getFileWithHeatmapDataByFileId } from "@/services/FilesService";
 import h337 from "heatmap.js";
+import $ from 'jquery';
 
 export interface NewProjectPayload {
   inputOneData: string;
@@ -19,7 +20,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
   const [hsr, setHsr] = useState<string>()
   const [matomoProjectId, setMatomoProjectId] = useState<string>()
 
-  const getCoordinatesInFrame = function (selector:string, offsetx:number, offsety:number, offsetAccuracy:number, ignoreHiddenElement:boolean) {
+  const getCoordinatesInFrame = function (selector:string, offsetx:number, offsety:number, offsetAccuracy:number, ignoreHiddenElement:boolean,value:number) {
     var $node = $(selector);
     var width =  Number($node.outerWidth());
     var height = Number($node.outerHeight());
@@ -36,6 +37,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
     var dataPoint = {
         x: parseInt(coordinates.left, 10) + parseInt(String(offsetx * width), 10),
         y: parseInt(coordinates.top, 10) + parseInt(String(offsety * height), 10),
+        value: value
     }
 
     return dataPoint;
@@ -51,10 +53,11 @@ export default function Page({ params }: { params: { fileID: string } }) {
       setHsr('23');
     //}
     const response:any = await getFileWithHeatmapDataByFileId('11','23');    
-    console.log(response);
     var pointsdata=response.data;
     for(var index=0;index<pointsdata.length;index++){
-      console.log(pointsdata[index]);
+      const point=pointsdata[index];
+      let converted=getCoordinatesInFrame(point.selector,point.offset_x,point.offset_y,100,false,point?.value);      
+      console.log(point,converted);
     }
     var config = {
       container: document.getElementById('heatmapContainer'),
@@ -70,7 +73,6 @@ export default function Page({ params }: { params: { fileID: string } }) {
          '.95': 'white'
        }
      };
-    console.log(h337);
     //@ts-ignore    
     var heatmapInstance = h337.create(config);
     var point = {
