@@ -155,10 +155,18 @@ const component = (editor: Editor) => {
             align-items: center;
             gap: 5px;
           }
+          .${classPrefix}-point-text {
+            color: #000;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
 
           .${classPrefix}-point-img {
             width: 30px;
-            height: 30px;
+            height: 25px;
           }
 
           @media (max-width: 480px) {
@@ -196,7 +204,7 @@ const component = (editor: Editor) => {
             .${classPrefix}-point-text {
               color: #000;
               font-family: Inter;
-              font-size: 15px;
+              font-size: 18px;
               font-style: normal;
               font-weight: 400;
               line-height: normal;

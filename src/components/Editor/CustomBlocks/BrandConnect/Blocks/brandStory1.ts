@@ -109,6 +109,7 @@ const brandStory1Component = (editor: Editor) => {
           margin: 0;
           margin-top: 22px;
           width: 45rem;
+          color: #000;
         }
 
         @media (max-width: 770px) {

@@ -71,6 +71,7 @@ const component = (editor: Editor) => {
             margin-bottom: 77px;
             justify-content: space-between;
             gap: 80px;
+            color: #000;
           }
           .${classPrefix}-secondContainer {
             margin: 0 auto;
@@ -110,6 +111,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin-top: 0;
             margin-bottom: 18px;
+            color: #000;
           }
           .${classPrefix}-subTitle {
             text-align: center;
@@ -119,6 +121,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin: 0 auto;
             margin-bottom: 89px;
+            color: #000;
           }
           .${classPrefix}-text {
             font-size: 28px;
@@ -127,6 +130,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin: 0;
             text-align: center;
+            color: #000;
           }
           .${classPrefix}-imgWrapper {
             width: 90px;
