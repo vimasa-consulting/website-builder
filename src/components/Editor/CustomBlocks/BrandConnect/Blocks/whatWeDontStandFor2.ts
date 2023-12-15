@@ -110,6 +110,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin-top: 0;
             margin-bottom: 18px;
+            color: #000;
           }
           .${classPrefix}-subTitle {
             text-align: center;
@@ -119,6 +120,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin: 0 auto;
             margin-bottom: 89px;
+            color: #000;
           }
           .${classPrefix}-text {
             font-size: 28px;
@@ -127,6 +129,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin: 0;
             text-align: center;
+            color: #000;
           }
           .${classPrefix}-imgWrapper {
             width: 90px;
@@ -163,4 +166,7 @@ const component = (editor: Editor) => {
   editor.Components.addType(options.id, methods);
 };
 
-export { block as whatWeDontStandFor2Block, component as whatWeDontStandFor2Component };
+export {
+  block as whatWeDontStandFor2Block,
+  component as whatWeDontStandFor2Component,
+};
