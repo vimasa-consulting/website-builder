@@ -200,7 +200,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
     const mobileDevice = deviceManager.get("mobilePortrait");
     mobileDevice?.set({ width: "400px" });
     const desktopDevice = deviceManager.get("desktop");
-    desktopDevice?.set({ width: "1440px" });
+    //desktopDevice?.set({ width: "1440px" });
 
     
     // Test infinite canvas
