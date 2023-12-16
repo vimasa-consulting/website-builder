@@ -74,7 +74,26 @@ export default function ItemCard({ item, itemType, setTableData, sharedProject =
     const openUpdateModal = () => {
         setIsUpdateModalOpen(true)
     }
-
+    const openUrl =() => {
+        if(itemType === 'Project') {
+            const url=`https://${item._id}.aayushsoftwares.com/`;
+            navigator.clipboard.writeText(url);
+            console.log(url);
+            //TODO: toast
+        } else {
+            //@ts-ignore
+            if(item.slug){
+                const url=`https://${item.projectId}.aayushsoftwares.com/${item.slug}/`;
+                navigator.clipboard.writeText(url);
+                console.log(url);
+                //TODO: toast
+            } else {
+                const url=`https://${item.projectId}.aayushsoftwares.com/`;
+                navigator.clipboard.writeText(url);  
+                //TODO: toast              
+            }                    
+        }
+    }
     const updateItemHandler = async (firstInput: string, secondInput: string) => {
         let updatedItem: any;
         try {
@@ -168,6 +187,7 @@ export default function ItemCard({ item, itemType, setTableData, sharedProject =
                             !sharedProject && (
                                 <>
                                 <Dropdown.Item onClick={openUpdateModal}>Rename</Dropdown.Item>
+                                <Dropdown.Item onClick={openUrl}>Copy URL</Dropdown.Item>
                                 <Dropdown.Item onClick={deleteItemHandler}>Delete</Dropdown.Item>
                                 <Dropdown.Item onClick={() => duplicateItemHandler(item)}>Duplicate</Dropdown.Item>
                                 {
