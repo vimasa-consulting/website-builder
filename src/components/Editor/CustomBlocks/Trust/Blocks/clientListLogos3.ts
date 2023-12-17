@@ -95,7 +95,7 @@ const clientListLogos3Component = (editor: Editor) => {
             font-family: Inter, sans-serif;
             color: #000;
             text-align: center;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 15px;
             font-weight: 400;
             margin: 0 0 35px;

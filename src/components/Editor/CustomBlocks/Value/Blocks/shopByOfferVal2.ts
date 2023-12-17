@@ -227,7 +227,7 @@ const component = (editor: Editor) => {
             .${classPrefix}-box-text {
               color: #2c2c2c;
               text-align: center;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 44px;
               font-style: normal;
               font-weight: 600;
@@ -237,7 +237,7 @@ const component = (editor: Editor) => {
             .${classPrefix}-box-footer-text {
               color: #2c2c2c;
               text-align: center;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 18px;
               font-style: normal;
               font-weight: 500;

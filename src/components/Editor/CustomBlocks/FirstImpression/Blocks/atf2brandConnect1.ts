@@ -67,7 +67,7 @@ const atf2BrandConnect1Component = (editor: Editor) => {
               background: #E9E9E9
             }
             .${classPrefix}-container {
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               display: flex;
               flex-direction: row;
               width: 100%;

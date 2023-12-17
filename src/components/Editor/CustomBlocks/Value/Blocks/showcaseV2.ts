@@ -164,7 +164,7 @@ const showcaseV2Component = (editor: Editor) => {
                     color: #000;
                     width: 305px;
                     text-align: center;
-                    font-family: Inter;
+                    font-family: Inter, sans-serif;
                     font-size: 40px;
                     font-style: normal;
                     font-weight: 600;
@@ -200,7 +200,7 @@ const showcaseV2Component = (editor: Editor) => {
                   .${classPrefix}-bigText {
                     color: #FFF;
                     text-align: center;
-                    font-family: Inter;
+                    font-family: Inter, sans-serif;
                     font-size: 32px;
                     font-style: normal;
                     font-weight: 500;
@@ -247,7 +247,7 @@ const showcaseV2Component = (editor: Editor) => {
                     color: #2C2C2C;
                     width: 218px;
                     text-align: center;
-                    font-family: Inter;
+                    font-family: Inter, sans-serif;
                     font-size: 20px;
                     font-style: normal;
                     font-weight: 400;

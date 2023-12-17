@@ -137,7 +137,7 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-item-heading {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
@@ -147,7 +147,7 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-item-sub-heading {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;

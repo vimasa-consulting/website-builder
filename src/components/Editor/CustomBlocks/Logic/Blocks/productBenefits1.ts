@@ -139,7 +139,7 @@ const productBenefits1Component = (editor: Editor) => {
         styles: `
 .${classPrefix}-h1 {
   display: block;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 40px;
   font-weight: 600;
 }
@@ -152,7 +152,7 @@ const productBenefits1Component = (editor: Editor) => {
 
 .${classPrefix}-h3 {
   display: block;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: normal;
@@ -166,7 +166,7 @@ const productBenefits1Component = (editor: Editor) => {
 
 .${classPrefix}-p {
   display: block;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 21px;

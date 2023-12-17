@@ -116,7 +116,7 @@ filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.15));
 .${classPrefix}-section-header-prefix {
 color: #000;
 text-align: center;
-font-family: Inter;
+font-family: Inter, sans-serif;
 font-size: 20px;
 font-style: normal;
 font-weight: 500;
@@ -127,7 +127,7 @@ margin-bottom: 19px;
 .${classPrefix}-section-header {
 color: #000;
 text-align: center;
-font-family: Inter;
+font-family: Inter, sans-serif;
 font-size: 40px;
 font-style: normal;
 font-weight: 600;
@@ -146,7 +146,7 @@ margin-bottom: 29px;
 
 .${classPrefix}-section-info {
 text-align: center;
-font-family: Inter;
+font-family: Inter, sans-serif;
 font-size: 15px;
 font-style: normal;
 font-weight: 400;
@@ -173,7 +173,7 @@ max-height: none;
 .${classPrefix}-section-header-prefix {
 color: #000;
 text-align: center;
-font-family: Inter;
+font-family: Inter, sans-serif;
 font-size: 16px;
 font-style: normal;
 font-weight: 500;
@@ -183,7 +183,7 @@ margin: 0;
 .${classPrefix}-section-header {
 color: #000;
 text-align: center;
-font-family: Inter;
+font-family: Inter, sans-serif;
 font-size: 26px;
 font-style: normal;
 font-weight: 600;
@@ -192,7 +192,7 @@ line-height: normal;
 .${classPrefix}-section-info {
 color: #000;
 text-align: center;
-font-family: Inter;
+font-family: Inter, sans-serif;
 font-size: 13px;
 font-style: normal;
 font-weight: 400;

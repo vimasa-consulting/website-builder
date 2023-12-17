@@ -107,7 +107,7 @@ const signUp2Component = (editor: Editor) => {
                     border-radius: 10px;
                     padding: 0px 34px;
                     color: #000;
-                    font-family: Inter;
+                    font-family: Inter, sans-serif;
                     font-size: 24px;
                     font-weight: 400;
                 }
@@ -124,7 +124,7 @@ const signUp2Component = (editor: Editor) => {
                     border: none;
                     color: #000;
                     text-align: center;
-                    font-family: Inter;
+                    font-family: Inter, sans-serif;
                     font-size: 24px;
                     font-weight: 400;
                     cursor: pointer;

@@ -117,7 +117,7 @@ const userAspirations1Component = (editor: Editor) => {
                   
                   .${classPrefix}-title {
                     text-align: center;
-                    font-family: Inter;
+                    font-family: Inter, sans-serif;
                     font-size: 40px;
                     font-style: normal;
                     font-weight: 600;

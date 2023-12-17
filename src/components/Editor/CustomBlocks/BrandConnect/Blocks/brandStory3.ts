@@ -86,7 +86,7 @@ const brandStory3Component = (editor: Editor) => {
 
         .${classPrefix}-left-panel-heading {
         color: #000;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 40px;
         font-style: normal;
         font-weight: 600;
@@ -96,7 +96,7 @@ const brandStory3Component = (editor: Editor) => {
 
         .${classPrefix}-left-panel-info {
         color: #000;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
@@ -145,7 +145,7 @@ const brandStory3Component = (editor: Editor) => {
         .${classPrefix}-left-panel-heading {
         color: #000;
         text-align: center;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 26px;
         font-style: normal;
         font-weight: 600;
@@ -154,7 +154,7 @@ const brandStory3Component = (editor: Editor) => {
 
         .${classPrefix}-left-panel-info {
         color: #000;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 13px;
         font-style: normal;
         font-weight: 400;

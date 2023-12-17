@@ -149,7 +149,7 @@ const faquc2Component = (editor: Editor) => {
             width: 580px;
             color: #000;
             text-align: center;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 40px;
             font-style: normal;
             font-weight: 600;
@@ -161,7 +161,7 @@ const faquc2Component = (editor: Editor) => {
           .${classPrefix}-accordion {
             max-width: 945px;
             margin: 0 auto;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             overflow: hidden;
             background: #ffffff;
           }

@@ -195,7 +195,7 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-heading {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
@@ -205,7 +205,7 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-sub-heading {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
@@ -229,7 +229,7 @@ const component = (editor: Editor) => {
             .${classPrefix}-section-heading {
               color: black;
               font-size: 26px;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-weight: 600;
               line-height: 35px;
               word-wrap: break-word;
@@ -255,7 +255,7 @@ const component = (editor: Editor) => {
 
             .${classPrefix}-heading {
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 500;

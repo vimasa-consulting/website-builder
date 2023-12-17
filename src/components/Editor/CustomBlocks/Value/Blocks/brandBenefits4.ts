@@ -134,7 +134,7 @@ const component = (editor: Editor) => {
 
             .${classPrefix}-item-heading {
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 10px;
               font-style: normal;
               font-weight: 400;

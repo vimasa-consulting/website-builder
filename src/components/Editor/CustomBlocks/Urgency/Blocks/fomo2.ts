@@ -64,7 +64,7 @@ const fomo2Component = (editor: Editor) => {
                .${classPrefix}-h2 {
                 color: #1E1E1E;
                 font-size: 38px;
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 53.2px;
@@ -87,7 +87,7 @@ const fomo2Component = (editor: Editor) => {
                 .${classPrefix}-h2 {
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 500;
@@ -96,7 +96,7 @@ const fomo2Component = (editor: Editor) => {
                 .${classPrefix}-text {
                 color: #000;
                 text-align: center;
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-size: 10px;
                 font-style: normal;
                 font-weight: 400;

@@ -165,7 +165,7 @@ const timeline3Component = (editor: Editor) => {
         styles: `
 .${classPrefix}-h1 {
   display: block;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 40px;
   font-weight: 600;
 }
@@ -207,7 +207,7 @@ const timeline3Component = (editor: Editor) => {
 .${classPrefix}-textWrapper > p {
   color: #000;
   text-align: center;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -248,7 +248,7 @@ const timeline3Component = (editor: Editor) => {
 .${classPrefix}-title {
   margin-bottom: 0px;
   color: #000;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -258,7 +258,7 @@ const timeline3Component = (editor: Editor) => {
 .${classPrefix}-desc {
   margin-bottom: 10px;
   color: #000;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 400;

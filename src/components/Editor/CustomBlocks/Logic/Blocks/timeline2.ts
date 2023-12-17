@@ -157,7 +157,7 @@ const timeline2Component = (editor: Editor) => {
 
         .${classPrefix}-rankWrapperRight {
           color: #000;
-          font-family: Inter;
+          font-family: Inter, sans-serif;
           font-size: 24px;
           font-style: normal;
           font-weight: 500;
@@ -170,7 +170,7 @@ const timeline2Component = (editor: Editor) => {
           margin-left: 16px;
           margin-top: -71px;
           color: #000;
-          font-family: Inter;
+          font-family: Inter, sans-serif;
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
@@ -201,7 +201,7 @@ const timeline2Component = (editor: Editor) => {
         .${classPrefix}-rankWrapper {
           color: #000;
           text-align: right;
-          font-family: Inter;
+          font-family: Inter, sans-serif;
           font-size: 24px;
           font-style: normal;
           font-weight: 500;
@@ -217,7 +217,7 @@ const timeline2Component = (editor: Editor) => {
           margin-top: -71px;
           color: #000;
           text-align: right;
-          font-family: Inter;
+          font-family: Inter, sans-serif;
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
@@ -263,7 +263,7 @@ const timeline2Component = (editor: Editor) => {
         .${classPrefix}-headerText {
           color: #000;
           text-align: center;
-          font-family: Inter;
+          font-family: Inter, sans-serif;
           font-size: 40px;
           font-style: normal;
           font-weight: 600;

@@ -145,7 +145,7 @@ const component = (editor: Editor) => {
           }
           .${classPrefix}-text {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;

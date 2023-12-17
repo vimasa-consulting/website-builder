@@ -71,7 +71,7 @@ const atf2Conversion1Component = (editor: Editor) => {
           `,
         styles: `
             .${classPrefix}-section {
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             display: flex;
             flex-direction: row;
             height: 744px;

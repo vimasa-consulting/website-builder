@@ -118,7 +118,7 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-small-heading {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
@@ -128,7 +128,7 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-heading {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 40px;
             font-style: normal;
             font-weight: 600;
@@ -139,7 +139,7 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-text {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;

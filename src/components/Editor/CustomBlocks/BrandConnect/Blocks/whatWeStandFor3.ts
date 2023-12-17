@@ -59,7 +59,7 @@ const component = (editor: Editor) => {
         text-align: center;
         font-size: 40px;
         font-style: normal;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-weight: 600;
         line-height: normal;
         margin: 0;
@@ -69,7 +69,7 @@ const component = (editor: Editor) => {
         .${classPrefix}-text {
         color: #000;
         text-align: center;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
@@ -87,7 +87,7 @@ const component = (editor: Editor) => {
         .${classPrefix}-heading {
         color: #000;
         text-align: center;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -97,7 +97,7 @@ const component = (editor: Editor) => {
         .${classPrefix}-text {
         color: #000;
         text-align: center;
-        font-family: Inter;
+        font-family: Inter, sans-serif;
         font-size: 13px;
         font-style: normal;
         font-weight: 400;

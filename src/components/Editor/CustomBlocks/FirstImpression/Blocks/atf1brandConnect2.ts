@@ -117,7 +117,7 @@ const atf1BrandConnect2Component = (editor: Editor) => {
   max-height: 744px;
 }
 .${classPrefix}-container {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -215,7 +215,7 @@ const atf1BrandConnect2Component = (editor: Editor) => {
 
 .${classPrefix}-item-text {
   color: #000;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -310,7 +310,7 @@ const atf1BrandConnect2Component = (editor: Editor) => {
   }
   .${classPrefix}-item-text {
     color: #000;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 500;

@@ -121,7 +121,7 @@ const component = (editor: Editor) => {
           .${classPrefix}-item-decription {
             color: #000;
             text-align: center;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;

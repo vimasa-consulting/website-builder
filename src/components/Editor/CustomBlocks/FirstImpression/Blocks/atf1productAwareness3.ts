@@ -155,7 +155,7 @@ const atf1ProductAwareness3Component = (editor: Editor) => {
           `,
         styles: `
           .${classPrefix}-section {
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             margin-left: auto;
             margin-right: auto;
             max-width: 1440px;
@@ -419,7 +419,7 @@ const atf1ProductAwareness3Component = (editor: Editor) => {
 
             .${classPrefix}-benefit-text {
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 12px;
               font-style: normal;
               font-weight: 500;

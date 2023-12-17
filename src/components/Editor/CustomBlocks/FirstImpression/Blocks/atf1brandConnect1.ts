@@ -66,7 +66,7 @@ const atf1BrandConnect1Component = (editor: Editor) => {
   max-height: 744px;
 }
 .${classPrefix}-container {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   display: flex;
   flex-direction: row;
   width: 100%;

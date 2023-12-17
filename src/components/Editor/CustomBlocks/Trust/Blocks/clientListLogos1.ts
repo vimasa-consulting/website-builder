@@ -118,7 +118,7 @@ const clientListLogos1Component = (editor: Editor) => {
             }
             .${classPrefix}-title {
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 13px;
               font-style: normal;
               font-weight: 500;

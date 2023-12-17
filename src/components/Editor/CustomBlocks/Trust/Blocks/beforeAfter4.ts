@@ -139,7 +139,7 @@ const beforeAfter4Component = (editor: Editor) => {
           .${classPrefix}-before {
             margin-top: 19px;
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
@@ -149,7 +149,7 @@ const beforeAfter4Component = (editor: Editor) => {
           .${classPrefix}-after {
             text-align: right;
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
@@ -297,7 +297,7 @@ const beforeAfter4Component = (editor: Editor) => {
           .${classPrefix}-description-2  {
             color: #000;
             align-self: stretch;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             width: 346px;
             display: flex;
             text-align: right;
@@ -314,7 +314,7 @@ const beforeAfter4Component = (editor: Editor) => {
             .${classPrefix}-before {
               margin-top: 5px;
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 15px;
               font-style: normal;
               font-weight: 400;
@@ -329,7 +329,7 @@ const beforeAfter4Component = (editor: Editor) => {
               display: flex;
               margin-top: 85px;
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 15px;
               font-style: normal;
               font-weight: 400;
@@ -342,7 +342,7 @@ const beforeAfter4Component = (editor: Editor) => {
               margin-right: 10px;
               text-align: right;
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 15px;
               font-style: normal;
               font-weight: 400;
@@ -411,7 +411,7 @@ const beforeAfter4Component = (editor: Editor) => {
             .${classPrefix}-title {
               color: #000;
               width: 265px;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 26px;
               font-style: normal;
               font-weight: 600;
@@ -420,7 +420,7 @@ const beforeAfter4Component = (editor: Editor) => {
 
             .${classPrefix}-description {
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 13px;
               font-style: normal;
               font-weight: 400;
@@ -435,7 +435,7 @@ const beforeAfter4Component = (editor: Editor) => {
             .${classPrefix}-description-mobile {
               display: flex;
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 13px;
               font-style: normal;
               font-weight: 400;

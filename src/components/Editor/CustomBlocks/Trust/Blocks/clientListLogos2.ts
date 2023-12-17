@@ -220,7 +220,7 @@ const clientListLogos2Component = (editor: Editor) => {
            .${classPrefix}-brand {
             color: #000;
             text-align: center;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 10px;
             font-style: normal;
             font-weight: 400;

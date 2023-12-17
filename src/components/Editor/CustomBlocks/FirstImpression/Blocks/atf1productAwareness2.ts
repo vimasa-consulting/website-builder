@@ -120,7 +120,7 @@ const atf1ProductAwareness2Component = (editor: Editor) => {
           `,
         styles: `
         .${classPrefix}-section {
-          font-family: Inter;
+          font-family: Inter, sans-serif;
           margin-left: auto;
           margin-right: auto;
           max-width: 1440px;

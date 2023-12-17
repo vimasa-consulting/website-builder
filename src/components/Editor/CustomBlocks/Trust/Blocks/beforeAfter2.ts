@@ -134,7 +134,7 @@ const beforeAfter2Component = (editor: Editor) => {
             margin-top: 19px;
             margin-left: 50px;
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
@@ -146,7 +146,7 @@ const beforeAfter2Component = (editor: Editor) => {
             margin-right: 50px;
             text-align: right;
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
@@ -285,7 +285,7 @@ const beforeAfter2Component = (editor: Editor) => {
               margin-top: 5px;
               margin-left: 10px;
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 15px;
               font-style: normal;
               font-weight: 400;
@@ -297,7 +297,7 @@ const beforeAfter2Component = (editor: Editor) => {
               margin-right: 10px;
               text-align: right;
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 15px;
               font-style: normal;
               font-weight: 400;
@@ -367,7 +367,7 @@ const beforeAfter2Component = (editor: Editor) => {
             .${classPrefix}-title {
               color: #000;
               width: 265px;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 26px;
               font-style: normal;
               font-weight: 600;
@@ -376,7 +376,7 @@ const beforeAfter2Component = (editor: Editor) => {
 
             .${classPrefix}-description {
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 13px;
               font-style: normal;
               font-weight: 400;

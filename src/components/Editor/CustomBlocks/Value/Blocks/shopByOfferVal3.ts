@@ -131,7 +131,7 @@ const shopByOfferVal3Component = (editor: Editor) => {
                   .${classPrefix}-bigText {
                     color: #FFF;
                     text-align: center;
-                    font-family: Inter;
+                    font-family: Inter, sans-serif;
                     font-size: 32px;
                     font-style: normal;
                     font-weight: 500;
@@ -177,7 +177,7 @@ const shopByOfferVal3Component = (editor: Editor) => {
                     color: #2C2C2C;
                     width: 218px;
                     text-align: center;
-                    font-family: Inter;
+                    font-family: Inter, sans-serif;
                     font-size: 20px;
                     font-style: normal;
                     font-weight: 400;

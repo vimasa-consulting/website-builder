@@ -118,7 +118,7 @@ const fomo4Component = (editor: Editor) => {
                .${classPrefix}-countdown .countdown-block .countdown-label {
                 color: #000;
                 text-align: center;
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-size: 15px;
                 font-style: normal;
                 font-weight: 400;
@@ -129,7 +129,7 @@ const fomo4Component = (editor: Editor) => {
                 background: #E9E9E9;
                 padding: 3px 7px;
                 text-align: center;
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-size: 15px;
                 font-style: normal;
                 font-weight: 400;
@@ -153,14 +153,14 @@ const fomo4Component = (editor: Editor) => {
                 .${classPrefix}-h2 {
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-size: 19px;
                 font-style: normal;
                 font-weight: 400;
                 }
                 .${classPrefix}-text {
                 text-align: center;
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-size: 10px;
                 font-style: normal;
                 font-weight: 400;
@@ -176,7 +176,7 @@ const fomo4Component = (editor: Editor) => {
                 .${classPrefix}-countdown .countdown-block .countdown-label {
                 color: #000;
                 text-align: center;
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-size: 9px;
                 font-style: normal;
                 font-weight: 400;
@@ -187,7 +187,7 @@ const fomo4Component = (editor: Editor) => {
                 background: #E9E9E9;
                 padding: 2px 3px;
                 text-align: center;
-                font-family: Inter;
+                font-family: Inter, sans-serif;
                 font-size: 9px;
                 font-style: normal;
                 font-weight: 400;

@@ -148,7 +148,7 @@ const component = (editor: Editor) => {
           .${classPrefix}-cir-text {
             color: #4b4b4b;
             text-align: center;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 22px;
             font-style: normal;
             font-weight: 500;
@@ -159,7 +159,7 @@ const component = (editor: Editor) => {
           .${classPrefix}-item-description {
             color: #000;
             text-align: center;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
@@ -196,7 +196,7 @@ const component = (editor: Editor) => {
             .${classPrefix}-cir-text {
               color: #4b4b4b;
               text-align: center;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 18px;
               font-style: normal;
               font-weight: 500;

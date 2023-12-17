@@ -120,7 +120,7 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-heading {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 40px;
             font-style: normal;
             font-weight: 600;
@@ -131,7 +131,7 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-content {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
@@ -157,7 +157,7 @@ const component = (editor: Editor) => {
           }
           .${classPrefix}-point-text {
             color: #000;
-            font-family: Inter;
+            font-family: Inter, sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
@@ -185,7 +185,7 @@ const component = (editor: Editor) => {
 
             .${classPrefix}-heading {
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 26px;
               font-style: normal;
               font-weight: 600;
@@ -194,7 +194,7 @@ const component = (editor: Editor) => {
 
             .${classPrefix}-content {
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 13px;
               font-style: normal;
               font-weight: 400;
@@ -203,7 +203,7 @@ const component = (editor: Editor) => {
 
             .${classPrefix}-point-text {
               color: #000;
-              font-family: Inter;
+              font-family: Inter, sans-serif;
               font-size: 18px;
               font-style: normal;
               font-weight: 400;
