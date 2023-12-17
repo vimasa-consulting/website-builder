@@ -83,11 +83,13 @@ export default function ItemCard({ item, itemType, setTableData, sharedProject =
         } else {
             //@ts-ignore
             if(item.slug){
+                //@ts-ignore
                 const url=`https://${item.projectId}.aayushsoftwares.com/${item.slug}/`;
                 navigator.clipboard.writeText(url);
                 console.log(url);
                 //TODO: toast
             } else {
+                //@ts-ignore
                 const url=`https://${item.projectId}.aayushsoftwares.com/`;
                 navigator.clipboard.writeText(url);  
                 //TODO: toast              
