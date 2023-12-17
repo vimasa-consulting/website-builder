@@ -86,6 +86,11 @@ export default observer(function EditorApp({fileID}: AppProps) {
                 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
                 g.async=true; g.src='//cdn.matomo.cloud/aayushsoftwarescom.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
               })();
+              document.querySelectorAll('a').forEach(function(item) { 
+                item.onclick=function() { 
+                    _paq.push(['trackEvent', 'Click', item.innerText, item.attributes.href,1]);
+                } 
+              });
             </script>
             <!-- End Matomo Code -->
 
