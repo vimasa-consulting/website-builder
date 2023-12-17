@@ -31,12 +31,29 @@ export default observer(function EditorLeftSidebar() {
     };
 
     return (        
-          <Grid className={classMain} style={{ width: 240 }}>            
-              <GridItem className={cx(['w-full', 'overflow-hidden', br.bt, cl.br])} grow>
-                <LayersProvider>
-                  {(props) => <LayerManager {...props}/>}
-                </LayersProvider>
-              </GridItem>            
-          </Grid>          
+      <Resizable
+      className={cx(['h-full transition-spacing', br.br, cl.br])}
+      right
+      style={style}
+      height="100%"
+      width={leftSidebarSize}
+      minWidth={200}
+      maxWidth={400}
+      onResize={onResize}
+      onResizeStop={onResizeStop}
+  >
+    <Grid full col>
+      {/*<GridItem className="w-full">
+        <PagesProvider>
+          {(props) => <PageManager {...props}/>}
+        </PagesProvider>
+</GridItem>*/}
+      <GridItem className={cx(['w-full', 'overflow-hidden', br.bt, cl.br])} grow>
+        <LayersProvider>
+          {(props) => <LayerManager {...props}/>}
+        </LayersProvider>
+      </GridItem>
+    </Grid>
+  </Resizable>       
     );
   });
