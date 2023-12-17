@@ -62,7 +62,12 @@ export default observer(function EditorApp({fileID}: AppProps) {
         // const container = document.querySelector("#customModalPopup");
         editor.Modal.open({
           title: "Publishing",
-          content: 'Please wait!',
+          content: `<div className="bg-black fixed inset-0 flex items-center justify-center z-50">
+                  <div className="relative z-50">
+                  <iframe src="https://giphy.com/embed/TuZ8v66TzGeYJW23as" width="720" height="400" frameBorder="0" className="giphy-embed">
+                  </iframe>
+                </div>
+          </div>`,
         }).onceClose(() => editor.stopCommand("publishProject"));
         // build html content
         const htmlBody = editor.getHtml();
@@ -103,7 +108,11 @@ export default observer(function EditorApp({fileID}: AppProps) {
           builderData: JSON.stringify(editor.getProjectData()),
           htmlString: fullHTML,          
         }).then(() => {
-          editor.Modal.close();
+          editor.Modal.setContent('<div><img src="/editor/completed.gif" /></div>');
+          setTimeout(function(){
+            editor.Modal.close();
+          },2000)
+
         }).catch((error) => {
           console.log('Failed to publish', error);
         });     
@@ -128,7 +137,12 @@ export default observer(function EditorApp({fileID}: AppProps) {
         console.log('saving project');
         editor.Modal.open({
           title: "Saving",
-          content: 'Please wait!',
+          content: `<div className="bg-black fixed inset-0 flex items-center justify-center z-50">
+                  <div className="relative z-50">
+                  <iframe src="https://giphy.com/embed/TuZ8v66TzGeYJW23as" width="720" height="400" frameBorder="0" className="giphy-embed">
+                  </iframe>
+                </div>
+          </div>`,
         }).onceClose(() => editor.stopCommand("saveProject"));
         // save file
         updateFile({
@@ -136,7 +150,11 @@ export default observer(function EditorApp({fileID}: AppProps) {
           name: localStorage.getItem(`wb-active-filename`)||'',
           builderData: JSON.stringify(editor.getProjectData())          
         }).then(() => {
-          editor.Modal.close();
+          editor.Modal.setContent('<div><img src="/editor/completed.gif" /></div>');
+          setTimeout(function(){
+            editor.Modal.close();
+          },2000)
+        
         }).catch((error:any) => {
           console.log('Failed to save', error);
         });
