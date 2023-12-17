@@ -40,7 +40,7 @@ import grapesjsIcons from 'grapesjs-icons'
 //import plugin from '@silexlabs/grapesjs-fonts';
 //@ts-ignore
 import type { PluginOptions } from 'grapesjs-icons'
-import { publishFile, updateFile } from "@/services/FilesService";
+import { publishFile, updateFile,getFile } from "@/services/FilesService";
 export interface AppProps {    
   fileID: string
 };
@@ -128,6 +128,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
         // save file
         updateFile({
           _id: fileID,
+          name: localStorage.getItem(`wb-active-filename`)||'',
           builderData: JSON.stringify(editor.getProjectData())          
         }).then(() => {
           editor.Modal.close();
@@ -139,6 +140,38 @@ export default observer(function EditorApp({fileID}: AppProps) {
         editor.Modal.close();
       },
     });
+
+    editor.Commands.add("openProjectUrl", {
+      run(editor, sender) {
+        // open a popup and pass editor as props?
+        console.log('opening project url in a new tab');
+        /*editor.Modal.open({
+          title: "Saving",
+          content: 'Please wait!',
+        }).onceClose(() => editor.stopCommand("saveProject"));*/
+        // save file
+        getFile(fileID).then((response) => {
+          console.log(response);
+          if(response.data){
+            var data=response.data;
+            if(data.slug){
+              const url=`https://${data.projectinfo._id}.aayushsoftwares.com/${data.slug}/`;
+              window.open(url,"_blank");
+            }else{
+              const url=`https://${data.projectinfo._id}.aayushsoftwares.com/`;              
+              window.open(url,"_blank");
+            }            
+          }          
+          //editor.Modal.close();
+        }).catch((error:any) => {
+          //console.log('Failed to save', error);
+        });
+      },
+      stop() {
+        //editor.Modal.close();
+      },
+    });
+    
     /*editor.Storage.add('remote', {
       async load() {
         return await axios.get(`projects/${projectId}`);

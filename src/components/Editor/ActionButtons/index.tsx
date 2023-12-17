@@ -6,7 +6,7 @@ import {
     mdiFolder,
     mdiLayers, mdiPaletteSwatch,
     mdiFontAwesome,
-    mdiFullscreen, mdiHelpCircle, mdiNewspaperVariantOutline, mdiPublish, mdiTrayArrowDown, mdiXml
+    mdiFullscreen, mdiHelpCircle, mdiNewspaperVariantOutline, mdiPublish, mdiTrayArrowDown, mdiXml, mdiDownload
 } from '@mdi/js';
 import Icon from '@mdi/react';
 import { fileOpen, fileSave } from 'browser-fs-access';
@@ -31,6 +31,8 @@ import Tabs, { TabOption } from '../Tabs';
 import { icon, pad } from '../theme';
 import { useLayerManagerStore } from '@/components/store/layerManager';
 import { useStyleManagerStore } from '@/components/store/styleManager';
+import InputField from '../InputField';
+import DownloadCode from '../Modal/contents/DownloadCode';
 
 interface ActionButton {
     id: string,
@@ -94,7 +96,7 @@ export default observer(function ActionButtons() {
         },
         {
             id: 'preview',
-            cmd: 'core:preview',
+            cmd: 'openProjectUrl',
             iconPath: mdiEye,
             title: 'preview.title',
         },
@@ -113,6 +115,16 @@ export default observer(function ActionButtons() {
                 children: <ExportCode />
             }),
             iconPath: mdiXml,
+            title: 'showCode.title',
+        },
+        {
+        
+            id: 'download-code',
+            cmd: () => modalStore.open({
+                title: t('showCode.title'),
+                children: <DownloadCode />
+            }),
+            iconPath: mdiDownload,
             title: 'showCode.title',
         },
         /*{{
@@ -181,7 +193,8 @@ export default observer(function ActionButtons() {
             editor.off(runEvent, onCommand);
             editor.off(stopEvent, onCommand);
             editor.off(dirtyChange, onDirtyChange);
-        }        
+        }
+                
     }, [editor]); // eslint-disable-line
 
     const infoItems: MenuListItem[] = [
@@ -277,11 +290,17 @@ export default observer(function ActionButtons() {
             close();
         }
     }
-    const fileName:any=localStorage.getItem(`wb-active-filename`);
-    console.log(fileName);
+    const fileName:any=localStorage.getItem(`wb-active-filename`); 
+
+    const setActiveFileName = function(newValue:string){        
+        localStorage.setItem(`wb-active-filename`,newValue);
+    }
     return (
         <Grid space="s" items="center" justify="end" className={cx(pad.xyS2)}>
-            <GridItem><input type="text" value={fileName} onChange={() => null}></input></GridItem>
+            <GridItem>
+                <InputField size="s" type="text" value={fileName}
+                onInput={setActiveFileName}/>
+            </GridItem>            
             {buttons.map(({ id, cmd, iconPath, disabled, options, title }) => (
                 <GridItem key={id}>
                     <ButtonWithTooltip
