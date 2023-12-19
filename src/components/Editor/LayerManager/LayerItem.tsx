@@ -85,7 +85,7 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
         }
     };
 
-
+    console.log(component.getView());
     return (
         <div className="move-ref">
             <Grid col className={cx('layer-item', selected && cl.cmpBgSoftX, (!visible || isDragging) && 'opacity-50')}>
@@ -133,7 +133,7 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
                     </Grid>
                 </GridItem>
                 {
-                    !!(open && components.length) &&
+                    !!(open && components.length && level<1) &&
                     <GridItem className={cx('max-w-full', !open && 'hidden')}>
                         { cmpToRender }
                     </GridItem>
