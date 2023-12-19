@@ -8,6 +8,9 @@ import Grid from "../Grid";
 import GridItem from "../GridItem";
 import { br, cl, icon, pad } from '../theme';
 import LayerItem from './LayerItem';
+import Tooltip from '../Tooltip';
+import Button from '../Button';
+import { useBlockManagerStore } from '../../store/blockManager';
 
 export type DragRect = {
     y: number,
@@ -122,7 +125,7 @@ export default function LayerManager({ root }: LayersResultProps) {
             doc.removeEventListener('keydown', onKeyDown);
         }
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
+    const { isOpen, toggleOpen } = useBlockManagerStore();
     return (
       <Grid col full nowrap>
         <GridItem>
@@ -131,6 +134,13 @@ export default function LayerManager({ root }: LayersResultProps) {
                     <Icon path={mdiLayers} size={icon.s}/>
                 </GridItem>
                 <GridItem grow>Layers</GridItem>
+                <GridItem grow>
+                    <Tooltip title="Blocks">
+                        <Button onClick={toggleOpen}>
+                            Blocks
+                        </Button>
+                    </Tooltip>
+                </GridItem>
                 {/* <GridItem>
                     <Icon path={mdiMagnify} size={icon.s}/>
                 </GridItem> */}
