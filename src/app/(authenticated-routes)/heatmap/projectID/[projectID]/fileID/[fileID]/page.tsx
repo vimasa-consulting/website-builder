@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { getFile, getFileWithHeatmapDataByFileId } from "@/services/FilesService";
 import h337 from "heatmap.js";
 import $ from 'jquery';
+import ToggleComponent from '@/components/Heatmap/ToggleButton';
 
 export interface NewProjectPayload {
   inputOneData: string;
@@ -19,6 +20,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
   const [fileDataLoaded, setFileDataLoaded] = useState(false);  
   const [hsr, setHsr] = useState<string>('23')
   const [matomoProjectId, setMatomoProjectId] = useState<string>('11')
+  const [isMobileView, setIsMobileView] = useState(false)
 
   const offset=function(selector:string) {
     var heamapIframe=document.querySelector("#heatmapContainerIframe")
@@ -126,15 +128,27 @@ export default function Page({ params }: { params: { fileID: string } }) {
     //@ts-ignore
     heatmapInstance.setData(pointsData);    
   }
+
+  const handleMobileToggle = () => {
+    setIsMobileView((prevState) => !prevState)
+  }
+
+  const iFrameSrc = isMobileView ? `https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}` :
+  `https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}`
+
   useEffect(() => {    
     fetchFileData(params.fileID);
    }, []);
+
   return (
     <>
       <div id="heatmapContainer" className="heatmapContainer">
+        <div>
+          <ToggleComponent isMobileView={isMobileView} handleMobileToggle={handleMobileToggle} />
+        </div>
         <iframe id="heatmapContainerIframe"
-        src={`https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}`} 
-        width="400px" height="100%">
+        src={iFrameSrc} 
+        width={isMobileView ? '400px' : '1220px'} height="100%">
         </iframe> 
       </div>
     </>
