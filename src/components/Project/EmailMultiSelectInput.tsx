@@ -2,21 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 interface Props {
     setEmails: React.Dispatch<React.SetStateAction<string[]>>;
-    emails: string[]
+    emails: string[];
+    textInput: string;
+    setTextInput: React.Dispatch<React.SetStateAction<string>>; 
 }
 
-const EmailMultiSelect:React.FC<Props> = ({ emails, setEmails }) => {
-  const [textInput, setTextInput] = useState('');
+const EmailMultiSelect:React.FC<Props> = ({ emails, setEmails, textInput, setTextInput }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-//   useEffect(() => {
-//     // Dispatch custom event 'emails-update' whenever emails change
-//     const event = new CustomEvent('emails-update', {
-//       detail: { emails },
-//       bubbles: true,
-//     });
-//     window.dispatchEvent(event);
-//   }, [emails]);
 
   const addTag = (tag: any) => {
     tag = tag.trim();

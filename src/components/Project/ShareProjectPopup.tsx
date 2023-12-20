@@ -25,8 +25,9 @@ const ShareProjectPopup: React.FC<PopupProps> = ({
 
     async function handlePopupSubmit() {
         try {
-            if(emails.length) {
-                await shareProjectHandler([...emails, ...collaborators]);
+            const emailList =  input1.length ? [...emails, input1] : [...emails] 
+            if(emailList.length) {
+                await shareProjectHandler([...emailList, ...collaborators]);
                 setShowSendEmailPopup(true)
                 setInput1('');
             }
@@ -44,12 +45,12 @@ const ShareProjectPopup: React.FC<PopupProps> = ({
         setEmails((prevState) => prevState.filter(data => data !== email))
     }
 
-    function handleKeyPress(event: any) {
-        if (event.key === 'Enter' && input1) {
-          setEmails([...emails, input1]);
-          setInput1('');
-        }
-      };
+    // function handleKeyPress(event: any) {
+    //     if (event.key === 'Enter' && input1) {
+    //       setEmails([...emails, input1]);
+    //       setInput1('');
+    //     }
+    //   };
 
       async function removeCollaboratorsHandler(data: any) {
         const remainingCollaborators = collaborators.filter(col => col !== data.email)
@@ -83,7 +84,7 @@ const ShareProjectPopup: React.FC<PopupProps> = ({
                     <label htmlFor="input-field-one" className="block mb-2 text-[12px] font-small text-[#797979] cursor-pointer">Invite users by Email</label>
                 </div>
                 <div className='flex height-[44px] gap-[30px]'>
-                  <EmailMultiSelect setEmails={setEmails} emails={emails}/>
+                  <EmailMultiSelect setEmails={setEmails} emails={emails} setTextInput={setInput1} textInput={input1}/>
                   {/* <input
                         id='input-field-one'
                         type="text"
