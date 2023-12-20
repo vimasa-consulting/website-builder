@@ -10,7 +10,7 @@ function ToggleComponent({
 }) {
 
   return (
-    <div className="flex items-center justify-center w-full mb-12">
+    <div className="flex items-center w-full mb-12">
       <label htmlFor="toggleB" className="flex items-center cursor-pointer">
         <div className="relative">
           <input
