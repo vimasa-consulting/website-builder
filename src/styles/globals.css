@@ -178,11 +178,8 @@ textarea:not([rows]) {
   }
 }
 .heatmapContainer {
-  width: 400px;
   height: 4000px;
-  background-color: white;
 }
-.heatmapContainer {
-  width: 400px;
-  height: 4000px;
+#heatmapContainerIframe {
+  background-color: white;
 }
