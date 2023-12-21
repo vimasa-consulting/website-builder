@@ -306,6 +306,7 @@ export default function Page() {
           name: 'Untitled',
           projectHostingAlias: '',
           collaborators: [],
+          files:[],
           organizationId: cachedUser?.organizations[0] || '',
         }
   
