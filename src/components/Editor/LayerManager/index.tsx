@@ -109,7 +109,7 @@ export default function LayerManager({ root }: LayersResultProps) {
     const dragLevel = (cmpPointerOver ? cmpPointerOver.parents() : []).length;
     const showIndicator = !!(dragging && dragRect && canMoveRes?.result && !dragRect.pointerInside);
     const indicatorStyle = showIndicator ? { top: dragRect.y, left: 0, marginLeft: dragLevel*10+20 } : {};
-
+    
     useEffect(() => {
         const doc = window.document;
         const onKeyDown = (ev: KeyboardEvent) => {
@@ -126,6 +126,11 @@ export default function LayerManager({ root }: LayersResultProps) {
         }
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
     const { isOpen, toggleOpen } = useBlockManagerStore();
+    const { Layers } = editor;
+    if(root) {
+        Layers.setLayerData(root,{ open: true });
+    }
+    
     return (
       <Grid col full nowrap>
         <GridItem>
@@ -154,6 +159,7 @@ export default function LayerManager({ root }: LayersResultProps) {
             onPointerUp={onDragEnd}
             grow
         >
+
             {
                 !!root && <LayerItem component={root} level={-1} draggingCmp={dragging} dragParent={dragParent}/>
             }

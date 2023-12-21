@@ -40,7 +40,7 @@ export default function CanvasSpotSelect({ spot, className }: CanvasSpotWrapperP
             command?.(editor, '', {});
         }
     }
-
+    //custom canvas spots
     return (
         <CanvasSpotWrapper spot={spot} spotStyles={spotStyle} className={cx('border-2', cl.cmpBr, className)}>
             {
@@ -64,7 +64,7 @@ export default function CanvasSpotSelect({ spot, className }: CanvasSpotWrapperP
                         </Grid>
                     </Badge>
                 </CanvasSpotPlacer>
-            }
+                        }
         </CanvasSpotWrapper>
     )
 }

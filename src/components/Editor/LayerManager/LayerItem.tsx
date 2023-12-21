@@ -1,6 +1,6 @@
 
 import { useEditor } from '@grapesjs/react';
-import { mdiEyeOffOutline, mdiEyeOutline, mdiLock, mdiLockOpenVariant, mdiMenuDown } from '@mdi/js';
+import { mdiEyeOffOutline, mdiEyeOutline, mdiLock, mdiLockOpenVariant, mdiMenuDown, mdiPlus } from '@mdi/js';
 import Icon from '@mdi/react';
 import type { Component } from 'grapesjs';
 import { MouseEvent, useEffect, useMemo, useRef, useState } from 'react';
@@ -11,6 +11,8 @@ import GridItem from "../GridItem";
 import InputRename from '../InputRename';
 import SvgIcon from '../SvgIcon';
 import { br, cl, icon, pad } from '../theme';
+import Button from '../Button';
+import Tooltip from '../Tooltip';
 
 export declare interface Props extends React.HTMLProps<HTMLDivElement> {
     component: Component,
@@ -26,9 +28,10 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
     const { Layers } = editor;
     const layerRef = useRef<HTMLDivElement>(null);
     const [rename, setRename] = useState(false);
-    const [layerData, setLayerData] = useState(Layers.getLayerData(component));
-    const { open, selected, hovered, components, visible, locked, name } = layerData;
+    const [layerData, setLayerData] = useState(Layers.getLayerData(component));    
+    const { open, selected, hovered, components, visible, locked, name } = layerData;    
     const componentsIds = components.map((c) => c.getId());
+    console.log(component, layerData,componentsIds);
     const isDragging = draggingCmp === component;
     const cmpHash = componentsIds.join('-');
     const level = props.level + 1;
@@ -83,13 +86,12 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
         if (!hovered || !draggingCmp) {
             Layers.setLayerData(component, { hovered })
         }
-    };
-
-    console.log(component.getView());
+    };    
+    const componentUrl=`/editor/blocks/${component.getName()}.png`
     return (
         <div className="move-ref">
             <Grid col className={cx('layer-item', selected && cl.cmpBgSoftX, (!visible || isDragging) && 'opacity-50')}>
-                <GridItem
+                {name!='Body' &&<GridItem
                     onClick={select}
                     onMouseEnter={() => hover(true)}
                     onMouseLeave={() => hover(false)}
@@ -106,13 +108,12 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
                             ...(selected ? [cl.cmpBgSoft, cl.cmpTxtActive] : [])
                         ])}
                     >
-                        <GridItem
-                            style={{marginLeft: `${level*10}px` }}
+                        {/*<GridItem                            
                             className={cx('cursor-pointer', !components.length && 'pointer-events-none opacity-0')}
                             onClick={toggleOpen}
                         >
                             <Icon path={mdiMenuDown} size={icon.sx} rotate={open ? 0 : -90}/>
-                        </GridItem>
+                    </GridItem>*/}
                         <GridItem>
                             <SvgIcon className="w-[13px]" svg={component.getIcon()}/>
                         </GridItem>
@@ -131,7 +132,21 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
                             </>
                         }
                     </Grid>
-                </GridItem>
+                    <Grid>
+                        <GridItem>
+                            <img src={componentUrl} />
+                        </GridItem>
+                    </Grid>
+                    <Grid>
+                        <GridItem>
+                            <Tooltip title="Blocks">
+                                <Button>
+                                    <Icon path={mdiPlus} size={icon.l} className={cx('transition-transform', false && 'rotate-45')}/>
+                                </Button>
+                            </Tooltip>
+                        </GridItem>
+                    </Grid>
+                </GridItem>}
                 {
                     !!(open && components.length && level<1) &&
                     <GridItem className={cx('max-w-full', !open && 'hidden')}>
