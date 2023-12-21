@@ -155,10 +155,12 @@ export default function ItemCard({ item, itemType, setTableData, sharedProject =
             console.log(error)
         }
     }
-    
+    console.log(item);
+    //@ts-ignore
+    const firstFileId=item.files[0];
     return (
-        <div className="max-w-xs mr-[32px] mb-[15px]">
-            <Link href={`${itemType === 'Project' ? ROUTES.PROJECTS : ROUTES.STUDIO}/${item._id}`}>
+        <div className="max-w-xs mr-[32px] mb-[15px]">            
+            <Link href={`${ROUTES.STUDIO}/${firstFileId}`}>
             <div
             >
                 {getImageComponent(item.imageURL)}

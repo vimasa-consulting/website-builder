@@ -81,7 +81,7 @@ export default function Page() {
     <div className="flex flex-col pb-14">
       <h3 className="text-xl">All Projects</h3>
       <div className="flex flex-wrap mt-5 gap-3">
-        <NewItemCard itemType="Project" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} />
+        {/*<NewItemCard itemType="Project" setIsAddNewProjectModalOpen={setIsAddNewProjectModalOpen} />*/}
         {tableData?.length > 0 && 
           
             tableData.map((project: any) => <ItemCard itemType="Project" key={project._id} item={project} setTableData={setTableData}/>)

@@ -1,6 +1,7 @@
 export type Project = {
   _id: string,
   name: string,
+  files: any[];
   imageURL?: string
   projectHostingAlias: string,
   ownerUserId: string,

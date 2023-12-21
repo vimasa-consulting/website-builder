@@ -13,7 +13,8 @@ export default function HeatmapItemCard({ item, itemType}: Props) {
     const pathname = usePathname();
 
 const openDomainSettingsHandler = () => {
-    router.push(`${itemType === 'Project' ? `${ROUTES.HEAT_MAPS}/projectID/${item._id}` : `${pathname}/fileID/${item._id}`}`)
+    console.log(item);
+    router.push(`${itemType === 'Project' ? `${ROUTES.HEAT_MAPS}/projectID/${item._id}/fileID/${item.files[0]}/` : `${pathname}/fileID/${item._id}`}`)
 }
 
     return (
