@@ -18,6 +18,7 @@ export type File = {
 
 export default function Page({ params }: { params: { fileID: string } }) {
   const [fileDataLoaded, setFileDataLoaded] = useState(false);  
+  const [heatmapInstance, setHeatmapInstance] = useState(null);  
   const [hsr, setHsr] = useState<string>('23')
   const [matomoProjectId, setMatomoProjectId] = useState<string>('11')
   const [isMobileView, setIsMobileView] = useState(false)
@@ -96,15 +97,30 @@ export default function Page({ params }: { params: { fileID: string } }) {
       setMatomoProjectId('11');
       setHsr('23');
     //}
-    const response:any = await getFileWithHeatmapDataByFileId('11','23');    
+    const response:any = await getFileWithHeatmapDataByFileId('11','23',isMobileView);    
     var pointsdata=response.data;
     var points=[];
     for(var index=0;index<pointsdata.length;index++){
       const point=pointsdata[index];
       let converted=getCoordinatesInFrame(point.selector,point.offset_x,point.offset_y,2000,false,point?.value);
-      console.log(point,converted);
       points.push(converted);
-    }
+    }    
+    var pointsData = {      
+      data: points
+    };
+    //@ts-ignore
+    heatmapInstance.setData(pointsData);    
+  }
+
+  const handleMobileToggle = () => {
+    setIsMobileView((prevState) => !prevState)
+    fetchFileData(params.fileID);
+  }
+
+  const iFrameSrc = isMobileView ? `https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}` :
+  `https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}`
+
+  useEffect(() => {    
     var config = {
       container: document.getElementById('heatmapContainer')!,
        radius: 10,
@@ -119,36 +135,20 @@ export default function Page({ params }: { params: { fileID: string } }) {
          '.95': 'white'
        }
      };
-     
-    var heatmapInstance = h337.create(config);
-    console.log(heatmapInstance, points);
-    var pointsData = {      
-      data: points
-    };
-    //@ts-ignore
-    heatmapInstance.setData(pointsData);    
-  }
-
-  const handleMobileToggle = () => {
-    setIsMobileView((prevState) => !prevState)
-  }
-
-  const iFrameSrc = isMobileView ? `https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}` :
-  `https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}`
-
-  useEffect(() => {    
+    var heatmapInstance:any = h337.create(config);
+    setHeatmapInstance(heatmapInstance);
     fetchFileData(params.fileID);
    }, []);
 
   return (
     <>
-      <div id="heatmapContainer" className="heatmapContainer">
-        <div>
+      <div>
           <ToggleComponent isMobileView={isMobileView} handleMobileToggle={handleMobileToggle} />
-        </div>
+      </div>
+      <div id="heatmapContainer" className="heatmapContainer">  
         <iframe id="heatmapContainerIframe"
         src={iFrameSrc} 
-        width={isMobileView ? '400px' : '1220px'} height="100%">
+        width={isMobileView ? '400px' : '1400px'} height="100%">
         </iframe> 
       </div>
     </>

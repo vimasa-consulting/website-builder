@@ -29,6 +29,6 @@ export async function cloneFileByFileId(fileId: string) {
   return cloneFile(fileId)
 }
 
-export async function getFileWithHeatmapDataByFileId(siteId: string,hsr:string) {
-  return getFileHeatmapData(siteId,hsr);
+export async function getFileWithHeatmapDataByFileId(siteId: string,hsr:string, isMobileView:boolean) {
+  return getFileHeatmapData(siteId,hsr,isMobileView);
 }

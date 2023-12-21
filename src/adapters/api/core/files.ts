@@ -56,9 +56,9 @@ export async function cloneFile(fileId: string) {
   });
 }
 
-export async function getFileHeatmapData(siteId: string, hsr:string) {
+export async function getFileHeatmapData(siteId: string, hsr:string,isMobileView:boolean) {
   const heatmapType=2;
-  const deviceType=3;
+  const deviceType=isMobileView?3:1;
   //&period=range&filter_limit=-1&segment=&method=HeatmapSessionRecording.getRecordedHeatmap&idSite=11
   return matomoInstance.get(`/index.php?module=API&format=json&date=2023-12-10,2023-12-12&idSiteHsr=${hsr}&heatmapType=${heatmapType}&deviceType=${deviceType}
   &period=range&filter_limit=-1&segment=&method=HeatmapSessionRecording.getRecordedHeatmap&idSite=${siteId}`, {
