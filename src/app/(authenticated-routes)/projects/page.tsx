@@ -35,6 +35,7 @@ export default function Page() {
         name: payload.inputOneData,
         projectHostingAlias: payload.inputTwoData,
         collaborators: [],
+        files:[],
         organizationId: cachedUser?.organizations[0] || '',
       }
 
