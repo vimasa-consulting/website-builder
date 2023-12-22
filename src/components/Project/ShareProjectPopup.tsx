@@ -25,14 +25,19 @@ const ShareProjectPopup: React.FC<PopupProps> = ({
 
     async function handlePopupSubmit() {
         try {
-            const emailList =  input1.length ? [...emails, input1] : [...emails] 
+            let emailList: string[] = [...emails];
+            if(input1.length) {
+                emailList = [...emailList, input1] 
+                setEmails(emailList);
+            }
+            setInput1('')
+            
             if(emailList.length) {
                 await shareProjectHandler([...emailList, ...collaborators]);
-                setShowSendEmailPopup(true)
-                setInput1('');
+                setShowSendEmailPopup(true);
             }
         } catch(error) {
-            console.log(error)
+            console.log(error);
         }
     }
 

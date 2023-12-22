@@ -25,12 +25,12 @@ const EmailMultiSelect:React.FC<Props> = ({ emails, setEmails, textInput, setTex
     setEmails(newemails);
   };
 
-  const search = (q: any) => {
-    if (q.includes(',')) {
-      q.split(',').forEach((val: any) => addTag(val));
-    }
-    toggleSearch();
-  };
+  // const search = (q: any) => {
+  //   if (q.includes(',')) {
+  //     q.split(',').forEach((val: any) => addTag(val));
+  //   }
+  //   toggleSearch();
+  // };
 
   const clearSearch = () => {
     setTextInput('');
@@ -47,11 +47,11 @@ const EmailMultiSelect:React.FC<Props> = ({ emails, setEmails, textInput, setTex
         <input
           value={textInput}
           onChange={(e) => setTextInput(e.target.value)}
-          onInput={(e: any) => search(e.target.value)}
           className="shadow appearance-none border rounded w-full h-[100%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           placeholder="Enter some emails"
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
+
               e.preventDefault();
               addTag(textInput);
             } else if (e.key === 'Escape') {
