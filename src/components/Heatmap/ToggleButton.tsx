@@ -11,26 +11,8 @@ function ToggleComponent({
 
   return (
     <div className="flex items-center w-full mb-12">
-      <label htmlFor="toggleB" className="flex items-center cursor-pointer">
-        <div className="relative">
-          <input
-            type="checkbox"
-            id="toggleB"
-            className="sr-only toggleCta"
-            checked={isMobileView}
-            onChange={handleMobileToggle}
-          />
-          <div className="block bg-gray-600 w-14 h-8 rounded-full"></div>
-          <div
-            className={`dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition ${
-              isMobileView ? 'transform translate-x-6' : ''
-            }`}
-          ></div>
-        </div>
-        <div className="ml-3 text-white-700 font-medium">
-            Mobile View
-        </div>
-      </label>
+      <button onClick={handleMobileToggle} className={`px-[18px] py[0px] rounded-tl-[4px] rounded-bl-[4px] ${isMobileView ? 'purpleBackground' : 'whiteBackground'}`}><img src="https://img.icons8.com/sf-regular/40/iphone-x.png" alt='Icon' /></button>
+      <button onClick={handleMobileToggle} className={`px-[18px] py[0px] rounded-tr-[4px] rounded-br-[4px] ${isMobileView ? 'whiteBackground' : 'purpleBackground'}`}><img src="https://img.icons8.com/material-outlined/40/imac.png" alt='Icon' /></button>
     </div>
   );
 }
