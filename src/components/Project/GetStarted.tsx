@@ -47,6 +47,7 @@ export default function GetStarted({ projectID = '' }: Props) {
         const newProjectPayload = {
           name: 'Untitled',
           projectHostingAlias: '',
+          files:[],
           collaborators: [],
           organizationId: cachedUser?.organizations[0] || '',
         }
