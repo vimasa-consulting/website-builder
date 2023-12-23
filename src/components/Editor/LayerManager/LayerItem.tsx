@@ -88,14 +88,20 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
         }
     };    
     const componentUrl=`/editor/blocks/${component.getName()}.png`
+
+    const handleButtonClick = () => {
+        console.log(`The component that was clicked ${component.getName()}`)
+        editor?.addComponents({ type: component.getName()});
+    }
+
     return (
         <div className="move-ref">
-            <Grid col className={cx('layer-item', selected && cl.cmpBgSoftX, (!visible || isDragging) && 'opacity-50')}>
+            <Grid col className={cx('layer-item', 'cursor-pointer', selected && cl.cmpBgSoftX, (!visible || isDragging) && 'opacity-50')}>
                 {name!='Body' &&<GridItem
                     onClick={select}
                     onMouseEnter={() => hover(true)}
                     onMouseLeave={() => hover(false)}
-                    className={cx('group max-w-full')}
+                    className={cx('group max-w-full bg-white')}
                     data-layer-item
                     ref={layerRef}
                 >
@@ -104,6 +110,7 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
                         space="xs"
                         className={cx([
                             pad.xyS, br.b,
+                            "bg-white",
                             isHovered ? cl.cmpBr : br.bT,
                             ...(selected ? [cl.cmpBgSoft, cl.cmpTxtActive] : [])
                         ])}
@@ -137,11 +144,11 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
                             <img src={componentUrl} />
                         </GridItem>
                     </Grid>
-                    <Grid>
+                    <Grid className='flex flex-wrap justify-center my-[6px]'>
                         <GridItem>
                             <Tooltip title="Blocks">
-                                <Button>
-                                    <Icon path={mdiPlus} size={icon.l} className={cx('transition-transform', false && 'rotate-45')}/>
+                                <Button onClick={handleButtonClick}>
+                                    <Icon path={mdiPlus} size="25px" className={cx('transition-transform', false && 'rotate-45')}/>
                                 </Button>
                             </Tooltip>
                         </GridItem>

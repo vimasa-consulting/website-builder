@@ -10,7 +10,8 @@ interface PopupProps {
 
 const initialTextAreaValue = `Dear,
 
-We are reaching out to invite you to collaborate with us on a project that we believe aligns well with your expertise and interests. Your unique skills and insights would be an invaluable addition, and we are excited about the potential for us to create something impactful together.
+We are reaching out to invite you to collaborate with us on a project that we believe aligns well with your expertise and interests. Your unique skills and insights would be an invaluable addition, and we are excited about the potential for us to create something impactful together. 
+Join us at https://development.d13nogs6jpk1jf.amplifyapp.com/signup/
 
 Looking forward to hearing from you.
 
@@ -106,7 +107,7 @@ const SendEmailPopup: React.FC<PopupProps> = ({
                     className="w-full h-[35px] mt-[15px] bg-[#DD00FF] text-white text-[15px] rounded hover:bg-hover cursor-pointer"
                     onClick={handlePopupSubmit}
                 >
-                    <a href={`mailto:${emailString}?subject=Exclusive Invitation to Collaborate on ${item.name}&body=Hi, you are invited to ${item.name} project. Come and be part of this project.`}>
+                    <a href={`mailto:${emailString}?subject=Exclusive Invitation to Collaborate on ${item.name}&body=Hi, you are invited to ${item.name} project. Come and be part of this project at https://development.d13nogs6jpk1jf.amplifyapp.com/signup/.`}>
                     Send Emails
                     </a>
                 </button>

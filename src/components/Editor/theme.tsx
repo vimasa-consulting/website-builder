@@ -26,7 +26,7 @@ export const cl = {
     sel: 'bg-pink-200 text-pink-900',
     selBr: 'border-pink-900',
     cmp: 'bg-blue-450 text-white',
-    cmpBgSoft: 'bg-black dark:bg-black',
+    cmpBgSoft: '',
     cmpBgSoftX: 'bg-black dark:bg-black',
     cmpTxtActive: 'dark:text-gray-300',
     cmpBr: 'border-blue-450',
