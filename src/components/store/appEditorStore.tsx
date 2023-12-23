@@ -168,7 +168,7 @@ export class AppEditorStore {
         this.setProjectDataCustom(custom);
     }
 
-    setLeftSidebarSize(value: number) {
+    setLeftSidebarSize(value: any) {
         this.leftSidebarSize = value;
     }
 

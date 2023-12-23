@@ -41,11 +41,13 @@ import grapesjsIcons from 'grapesjs-icons'
 //@ts-ignore
 import type { PluginOptions } from 'grapesjs-icons'
 import { publishFile, updateFile,getFile } from "@/services/FilesService";
+import { getStore } from '@/components/store';
 export interface AppProps {    
   fileID: string
 };
 export default observer(function EditorApp({fileID}: AppProps) {
   const [showPersuasiveBlocks, setShowPersuasiveBlocks] = useState(false)
+  const { appEditorStore, blockManagerStore } = getStore()
   const { projectType, editorConfig, editorKey, setEditor, editor } = useAppEditorStore();
   const pluginStore = usePluginStore();
   const [gjsOpts, gjsPlugins] = useMemo(() => [
@@ -194,6 +196,20 @@ export default observer(function EditorApp({fileID}: AppProps) {
         //editor.Modal.close();
       },
     });
+
+    editor.Commands.add("core:preview", {
+      run(editor, sender) {
+        appEditorStore.setLeftSidebarSize("0px");
+        appEditorStore.setPreview(true);
+        blockManagerStore.setOpen(false);
+        appEditorStore.setSelectingTarget(true)
+      },
+      stop() {
+        appEditorStore.setLeftSidebarSize("300px");
+        appEditorStore.setPreview(false);
+        appEditorStore.setSelectingTarget(false);
+      },
+    });
     
     /*editor.Storage.add('remote', {
       async load() {
@@ -326,6 +342,10 @@ const fontPluginOptions: PluginOptions = {
     // table,
   ];
 
+  const disablePreviewMode = () => {
+    editor?.Commands.stop('core:preview')
+  }
+
   return (
     <GjsEditor
       key={editorKey}
@@ -374,6 +394,9 @@ const fontPluginOptions: PluginOptions = {
         }
       <CanvasSpots/>
       <BuiltInRTE/>
+      {
+        appEditorStore.isInPreview && <button onClick={disablePreviewMode} className='z-100 absolute top-[1px] left-[15px] w-[30px] h-[30px] previewIcon'><img className='z-111 absolute cursor-pointer' width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/hide.png" alt="hide"/></button>
+      }
     </GjsEditor>
   );
 });

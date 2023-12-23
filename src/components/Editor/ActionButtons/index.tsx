@@ -204,7 +204,8 @@ export default observer(function ActionButtons() {
         },
         {
             id: 'preview',
-            cmd: 'openProjectUrl',
+            // cmd: 'openProjectUrl',
+            cmd: 'core:preview',
             iconPath: mdiEye,
             title: 'preview.title',
         },

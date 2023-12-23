@@ -2290,3 +2290,7 @@ html {
 .sidebar-open {
     display: none;
 }
+
+.previewIcon {
+    z-index: 100;
+}
