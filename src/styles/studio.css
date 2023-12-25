@@ -2294,3 +2294,18 @@ html {
 .previewIcon {
     z-index: 100;
 }
+
+.popupGifWrapper {
+    padding-top: 100px;
+}
+.giphy-style {
+    margin: 0 auto;
+}
+.savePopupSubTitle {
+    position: absolute;
+    top: 85px;
+    right: 469px;
+    color: #000000a1;
+    font-size: 18px;
+    font-weight: 500;
+}

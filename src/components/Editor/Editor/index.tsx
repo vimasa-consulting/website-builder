@@ -42,6 +42,8 @@ import grapesjsIcons from 'grapesjs-icons'
 import type { PluginOptions } from 'grapesjs-icons'
 import { publishFile, updateFile,getFile } from "@/services/FilesService";
 import { getStore } from '@/components/store';
+import SavePopupContent from './SavePopupContent';
+import CheckMark from './CheckMark';
 export interface AppProps {    
   fileID: string
 };
@@ -137,22 +139,20 @@ export default observer(function EditorApp({fileID}: AppProps) {
       run(editor, sender) {
         // open a popup and pass editor as props?
         console.log('saving project');
+        const savePopupContent = document.querySelector("#savePopupContent")
+        const checkMarkContent = document.querySelector("#checkMarkContent")
         editor.Modal.open({
           title: "Saving",
-          content: `<div className="bg-black fixed inset-0 flex items-center justify-center z-50">
-                  <div className="relative z-50">
-                  <iframe src="https://giphy.com/embed/TuZ8v66TzGeYJW23as" width="720" height="400" frameBorder="0" className="giphy-embed">
-                  </iframe>
-                </div>
-          </div>`,
-        }).onceClose(() => editor.stopCommand("saveProject"));
+          content: savePopupContent,
+        })
+        .onceClose(() => editor.stopCommand("saveProject"));
         // save file
         updateFile({
           _id: fileID,
           name: localStorage.getItem(`wb-active-filename`)||'',
           builderData: JSON.stringify(editor.getProjectData())          
         }).then(() => {
-          editor.Modal.setContent('<div><img src="/editor/completed.gif" /></div>');
+          editor.Modal.setContent(checkMarkContent as HTMLElement);
           setTimeout(function(){
             editor.Modal.close();
           },2000)
@@ -397,6 +397,10 @@ const fontPluginOptions: PluginOptions = {
       {
         appEditorStore.isInPreview && <button onClick={disablePreviewMode} className='z-100 absolute top-[1px] left-[15px] w-[30px] h-[30px] previewIcon'><img className='z-111 absolute cursor-pointer' width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/hide.png" alt="hide"/></button>
       }
+      <div style={{display: 'none'}}>
+        <SavePopupContent />
+        <CheckMark />
+      </div>
     </GjsEditor>
   );
 });
