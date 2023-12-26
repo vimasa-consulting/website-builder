@@ -30,8 +30,7 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
     const [rename, setRename] = useState(false);
     const [layerData, setLayerData] = useState(Layers.getLayerData(component));    
     const { open, selected, hovered, components, visible, locked, name } = layerData;    
-    const componentsIds = components.map((c) => c.getId());
-    console.log(component, layerData,componentsIds);
+    const componentsIds = components.map((c) => c.getId());    
     const isDragging = draggingCmp === component;
     const cmpHash = componentsIds.join('-');
     const level = props.level + 1;

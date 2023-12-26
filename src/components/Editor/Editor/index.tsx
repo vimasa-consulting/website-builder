@@ -112,7 +112,7 @@ export default observer(function EditorApp({ fileID }: AppProps) {
         // publish file
         publishFile({
           _id: fileID,
-          builderData: JSON.stringify(editor.getProjectData()),
+          //builderData: JSON.stringify(editor.getProjectData()),
           htmlString: fullHTML,
         }).then(() => {
           editor.Modal.setContent(checkMarkContent as HTMLElement);
@@ -263,7 +263,7 @@ export default observer(function EditorApp({ fileID }: AppProps) {
       const block_sequence = url.searchParams.get("block_sequence") || "";
       const blocks = atob(block_sequence).split(",");
       blocks.forEach((item) => {
-        console.log(item.trim());
+        //console.log(item.trim());
         editor.addComponents({ type: item.trim() });
       });
     }
