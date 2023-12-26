@@ -3,7 +3,7 @@ import { Store, useStore } from ".";
 
 export class BlockManagerStore {
     store: Store;
-    isOpen = false;
+    isOpen = true;
 
     constructor(store: Store) {
         this.store = store;
