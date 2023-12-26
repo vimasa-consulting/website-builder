@@ -13,6 +13,7 @@ import SvgIcon from '../SvgIcon';
 import { br, cl, icon, pad } from '../theme';
 import Button from '../Button';
 import Tooltip from '../Tooltip';
+import { useAppEditorStore } from '@/components/store/appEditorStore';
 
 export declare interface Props extends React.HTMLProps<HTMLDivElement> {
     component: Component,
@@ -25,12 +26,13 @@ const itemStyle = { maxWidth: `${SIDEBAR_LEFT_WIDTH}px` };
 
 export default function LayerItem({ component, draggingCmp, dragParent, ...props }: Props) {
     const editor = useEditor();
+    const { setSelectedComponent } = useAppEditorStore();
     const { Layers } = editor;
     const layerRef = useRef<HTMLDivElement>(null);
     const [rename, setRename] = useState(false);
     const [layerData, setLayerData] = useState(Layers.getLayerData(component));    
     const { open, selected, hovered, components, visible, locked, name } = layerData;    
-    const componentsIds = components.map((c) => c.getId());    
+    const componentsIds = components.map((c) => c.getId());
     const isDragging = draggingCmp === component;
     const cmpHash = componentsIds.join('-');
     const level = props.level + 1;
@@ -58,8 +60,7 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
         return components.map((cmp) => (
             <LayerItem key={cmp.getId()} component={cmp} level={level} draggingCmp={draggingCmp} dragParent={dragParent}/>
         ))
-    }, [cmpHash, draggingCmp, dragParent]);
-
+    }, [draggingCmp, dragParent, components, level]);
     const onRename = (name: string) => {
         Layers.setLayerData(component, { name });
         setRename(false);
@@ -89,9 +90,13 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
     const componentUrl=`/editor/blocks/${component.getName()}.png`
 
     const handleButtonClick = () => {
-        console.log(`The component that was clicked ${component.getName()}`)
-        editor?.addComponents({ type: component.getName()});
+        const selectedDiv = editor?.getWrapper()?.find(`#${component.getId()}`);
+        if(selectedDiv) {
+            setSelectedComponent(selectedDiv[0])
+        }
+        editor?.Commands.run("openPersuasiveBlocks");
     }
+
 
     return (
         <div className="move-ref">

@@ -1,6 +1,6 @@
 
 import { Editor } from 'grapesjs';
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import algoliasearch from "algoliasearch/lite";
 import {
   InstantSearch,
@@ -11,6 +11,7 @@ import "instantsearch.css/themes/satellite.css";
 import "../../styles/persuasiveblock.css";
 import ConnectedCustomHierarchicalMenu from './CustomHierarchicalMenu';
 import categoryStyleMapping from './categoryStyleMapping'
+import { useAppEditorStore } from '../store/appEditorStore';
 
 interface BlockSearchPopupProps {
   grapeJSEditor: Editor | null | undefined
@@ -25,24 +26,39 @@ const initialUIState = {
 };
 
 const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) => {
-  const [selectedCategory, setSelectedCategory] = useState<any>()
+  const [selectedCategory, setSelectedCategory] = useState<any>(categoryStyleMapping['Brand Connect'])
   const [categorySelected, setCategorySelected] = useState(false)
-    const searchClient = algoliasearch(
+  const { selectedComponent, setSelectedComponent } = useAppEditorStore();
+    const searchClient = useMemo(() => {
+      return algoliasearch(
         "IO4B9E5Q45",
         "a089c7660ed4fcbb8529e4a12ce2836c"
-      );
+      )
+    }, []);
 
     // @ts-ignore
     function Hit({ hit }: any) {
         const hitImage = `/editor/blocks/${hit.id}.png`;
         let categoryInfo: any;
         const category = hit?.heirarchy?.category
-        categoryInfo = categoryStyleMapping[category|| 'Logic']
-        setSelectedCategory(categoryInfo)
+        categoryInfo = categoryStyleMapping[category|| 'Logic'] 
+        // setSelectedCategory(categoryInfo)
 
         function add(hit:any) {
-          grapeJSEditor?.addComponents({ type: hit.id}); grapeJSEditor?.Modal.close();
+          if(selectedComponent) {
+            const selectedComponentId = selectedComponent.getId();
+            const selected = grapeJSEditor!.getWrapper()!.find(`#${selectedComponentId}`)[0];
+            const parent = selected.parent();
+            const index = parent?.components().indexOf(selected) || 0
+            parent?.components().add({type: hit.id}, { at: index + 1 });
+            setSelectedComponent(null)
+          } else {
+            grapeJSEditor?.addComponents({ type: hit.id}); 
+          }
+
+          grapeJSEditor?.Modal.close();
         }
+
         return (
         <article className="articleSection">
           <div className={`imageContainer ${categoryInfo?.style ? categoryInfo.style : '#BBFBE5'}`}>
@@ -57,6 +73,7 @@ const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) =>
         </article>
         );
     }
+
     return (
         <div id="customModalPopup">
           <p className='text-black absolute top-[78px] right-[307px] text-[16px] subTitle'>Explore a range of content blocks designed by UX & Marketing Experts for maximum persuasion</p>
@@ -72,6 +89,7 @@ const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) =>
                     "heirarchy.subcategory"
                   ]}
                   sortBy={['name']}
+                  setSelectedCategory={setSelectedCategory}
                   />
               </div>            
           </div>

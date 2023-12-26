@@ -3,18 +3,28 @@ import React, { useState } from 'react';
 import { useHierarchicalMenu, UseHierarchicalMenuProps } from 'react-instantsearch';
 import categoryStyleMapping from './categoryStyleMapping';
 
-function CustomHierarchicalMenu(props: UseHierarchicalMenuProps) {
+interface Props  {
+  setSelectedCategory: React.Dispatch<any>
+}
+
+function CustomHierarchicalMenu(props: UseHierarchicalMenuProps & Props) {
     const [currentSelectedCategory, setCurrentSelectedCategory] = useState('')
   const {
     items,
     refine,
   } = useHierarchicalMenu(props);
+  const { setSelectedCategory } = props
+
+  const selectedCategoryHandler = (label: string) => {
+    const categoryInfo = categoryStyleMapping[label] 
+    setSelectedCategory(categoryInfo)
+  }
 
   return (
     <>
       <ul>
         {items.map((item) => (
-          <li className={`${currentSelectedCategory === item.label ? 'font-semibold' : ''} my-[16px]`}  key={item.label}>
+          <li onClick={() => selectedCategoryHandler(item.label)} className={`${currentSelectedCategory === item.label ? 'font-semibold' : ''} my-[16px]`}  key={item.label}>
             <label className='text-black cursor-pointer' onClick={() => refine(item.value)}>
               <h2 className={`flex text-[24.004px] font-normal font-medium gap-[12px] items-center px-[22px] py-[6px] rounded-lg ${categoryStyleMapping[item.label].searchStyle} w-max text-[white]`}>
                 <img className='w-[24px] h-[24px]' src={`/editor/${categoryStyleMapping[item.label].searchIcon}`} alt={categoryStyleMapping[item.label].alt} />
