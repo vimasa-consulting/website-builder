@@ -37,10 +37,7 @@ export default observer(function EditorLeftSidebar() {
       style={style}
       height="100%"
       width={leftSidebarSize}
-      minWidth={200}
-      maxWidth={400}
-      onResize={onResize}
-      onResizeStop={onResizeStop}
+      maxWidth={leftSidebarSize}
   >
     <Grid full col>
       {/*<GridItem className="w-full">

@@ -40,12 +40,16 @@ import grapesjsIcons from 'grapesjs-icons'
 //import plugin from '@silexlabs/grapesjs-fonts';
 //@ts-ignore
 import type { PluginOptions } from 'grapesjs-icons'
-import { publishFile, updateFile,getFile } from "@/services/FilesService";
-export interface AppProps {    
+import { publishFile, updateFile, getFile } from "@/services/FilesService";
+import { getStore } from '@/components/store';
+import SavePopupContent from './SavePopupContent';
+import CheckMark from './CheckMark';
+export interface AppProps {
   fileID: string
 };
-export default observer(function EditorApp({fileID}: AppProps) {
+export default observer(function EditorApp({ fileID }: AppProps) {
   const [showPersuasiveBlocks, setShowPersuasiveBlocks] = useState(false)
+  const { appEditorStore, blockManagerStore } = getStore()
   const { projectType, editorConfig, editorKey, setEditor, editor } = useAppEditorStore();
   const pluginStore = usePluginStore();
   const [gjsOpts, gjsPlugins] = useMemo(() => [
@@ -53,21 +57,24 @@ export default observer(function EditorApp({fileID}: AppProps) {
   ], [projectType, editorKey]);
 
   const onEditor = (editor: Editor) => {
-    initCustomBlocks(editor); 
-    const matomoProjectId=localStorage.getItem(`wb-${fileID}-matomo_projectid`);    
-    editor.Commands.add("publishProject", {      
+    initCustomBlocks(editor);
+    const matomoProjectId = localStorage.getItem(`wb-${fileID}-matomo_projectid`);
+    editor.Commands.add("publishProject", {
       run(editor, sender) {
-        console.log('publish project');    
+        console.log('publish project');
         // open a popup and pass editor as props?
         // const container = document.querySelector("#customModalPopup");
+        const savePopupContent = document.querySelector("#savePopupContent")
+        const checkMarkContent = document.querySelector("#checkMarkContent")
+        const popupSubTitle = savePopupContent?.querySelector(".savePopupSubTitle")
+        const checkmarkSubTitle = checkMarkContent?.querySelector(".savePopupSubTitle")
+        if (popupSubTitle && checkmarkSubTitle) {
+          popupSubTitle.textContent = "On our way to publish your content"
+          checkmarkSubTitle.textContent = "On our way to publish your content"
+        }
         editor.Modal.open({
           title: "Publishing",
-          content: `<div className="bg-black fixed inset-0 flex items-center justify-center z-50">
-                  <div className="relative z-50">
-                  <iframe src="https://giphy.com/embed/TuZ8v66TzGeYJW23as" width="720" height="400" frameBorder="0" className="giphy-embed">
-                  </iframe>
-                </div>
-          </div>`,
+          content: savePopupContent,
         }).onceClose(() => editor.stopCommand("publishProject"));
         // build html content
         const htmlBody = editor.getHtml();
@@ -106,16 +113,16 @@ export default observer(function EditorApp({fileID}: AppProps) {
         publishFile({
           _id: fileID,
           builderData: JSON.stringify(editor.getProjectData()),
-          htmlString: fullHTML,          
+          htmlString: fullHTML,
         }).then(() => {
-          editor.Modal.setContent('<div><img src="/editor/completed.gif" /></div>');
-          setTimeout(function(){
+          editor.Modal.setContent(checkMarkContent as HTMLElement);
+          setTimeout(function () {
             editor.Modal.close();
-          },2000)
+          }, 2000)
 
         }).catch((error) => {
           console.log('Failed to publish', error);
-        });     
+        });
       },
       stop() {
         editor.Modal.close();
@@ -124,38 +131,36 @@ export default observer(function EditorApp({fileID}: AppProps) {
 
     editor.on('component:selected', (component) => {
       // Your update logic here
-      console.log('Component selected:', component);
-      console.log('Component selected:', editor);
+      // console.log('Component selected:', component);
+      // console.log('Component selected:', editor);
       grapesjs.editors[0] = editor
       setEditor(editor)
       // Update your editor instance or perform other actions
-  });
-    
+    });
+
     editor.Commands.add("saveProject", {
       run(editor, sender) {
         // open a popup and pass editor as props?
         console.log('saving project');
+        const savePopupContent = document.querySelector("#savePopupContent")
+        const checkMarkContent = document.querySelector("#checkMarkContent")
         editor.Modal.open({
           title: "Saving",
-          content: `<div className="bg-black fixed inset-0 flex items-center justify-center z-50">
-                  <div className="relative z-50">
-                  <iframe src="https://giphy.com/embed/TuZ8v66TzGeYJW23as" width="720" height="400" frameBorder="0" className="giphy-embed">
-                  </iframe>
-                </div>
-          </div>`,
-        }).onceClose(() => editor.stopCommand("saveProject"));
+          content: savePopupContent,
+        })
+          .onceClose(() => editor.stopCommand("saveProject"));
         // save file
         updateFile({
           _id: fileID,
-          name: localStorage.getItem(`wb-active-filename`)||'',
-          builderData: JSON.stringify(editor.getProjectData())          
+          name: localStorage.getItem(`wb-active-filename`) || '',
+          builderData: JSON.stringify(editor.getProjectData())
         }).then(() => {
-          editor.Modal.setContent('<div><img src="/editor/completed.gif" /></div>');
-          setTimeout(function(){
+          editor.Modal.setContent(checkMarkContent as HTMLElement);
+          setTimeout(function () {
             editor.Modal.close();
-          },2000)
-        
-        }).catch((error:any) => {
+          }, 2000)
+
+        }).catch((error: any) => {
           console.log('Failed to save', error);
         });
       },
@@ -175,18 +180,18 @@ export default observer(function EditorApp({fileID}: AppProps) {
         // save file
         getFile(fileID).then((response) => {
           console.log(response);
-          if(response.data){
-            var data=response.data;
-            if(data.slug){
-              const url=`https://${data.projectinfo._id}.aayushsoftwares.com/${data.slug}/`;
-              window.open(url,"_blank");
-            }else{
-              const url=`https://${data.projectinfo._id}.aayushsoftwares.com/`;              
-              window.open(url,"_blank");
-            }            
-          }          
+          if (response.data) {
+            var data = response.data;
+            if (data.slug) {
+              const url = `https://${data.projectinfo._id}.aayushsoftwares.com/${data.slug}/`;
+              window.open(url, "_blank");
+            } else {
+              const url = `https://${data.projectinfo._id}.aayushsoftwares.com/`;
+              window.open(url, "_blank");
+            }
+          }
           //editor.Modal.close();
-        }).catch((error:any) => {
+        }).catch((error: any) => {
           //console.log('Failed to save', error);
         });
       },
@@ -194,7 +199,21 @@ export default observer(function EditorApp({fileID}: AppProps) {
         //editor.Modal.close();
       },
     });
-    
+
+    editor.Commands.add("core:preview", {
+      run(editor, sender) {
+        appEditorStore.setLeftSidebarSize("0px");
+        appEditorStore.setPreview(true);
+        blockManagerStore.setOpen(false);
+        appEditorStore.setSelectingTarget(true)
+      },
+      stop() {
+        appEditorStore.setLeftSidebarSize("300px");
+        appEditorStore.setPreview(false);
+        appEditorStore.setSelectingTarget(false);
+      },
+    });
+
     /*editor.Storage.add('remote', {
       async load() {
         return await axios.get(`projects/${projectId}`);
@@ -234,22 +253,22 @@ export default observer(function EditorApp({fileID}: AppProps) {
       editor.UndoManager.clear()  
     }    
     */
-    const item:any=localStorage.getItem(`wb-${fileID}`)  
-    if(item){
-      const landingProject=JSON.parse(item);
+    const item: any = localStorage.getItem(`wb-${fileID}`)
+    if (item) {
+      const landingProject = JSON.parse(item);
       editor.loadProjectData(landingProject);
-      editor.UndoManager.clear()  
+      editor.UndoManager.clear()
     } else {
       const url = new URL(window.location.href);
       const block_sequence = url.searchParams.get("block_sequence") || "";
-      const blocks = atob(block_sequence).split(",");        
+      const blocks = atob(block_sequence).split(",");
       blocks.forEach((item) => {
         console.log(item.trim());
         editor.addComponents({ type: item.trim() });
       });
-    }    
+    }
     setEditor(editor);
-    (window as any).editor = editor;    
+    (window as any).editor = editor;
     const deviceManager = editor.Devices;
     deviceManager.remove("tablet");
     deviceManager.remove("mobileLandscape");
@@ -258,7 +277,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
     const desktopDevice = deviceManager.get("desktop");
     //desktopDevice?.set({ width: "1440px" });
 
-    
+
     // Test infinite canvas
     editor.onReady(() => {
 
@@ -271,7 +290,7 @@ export default observer(function EditorApp({fileID}: AppProps) {
           editor.addComponents({ type: item.trim() });
         });
       }*/
-      
+
       // editor.Canvas.setZoom(70);
       // editor.Canvas.setCoords(-30, -30);
       // const firstFrame = editor.Canvas.getFrames()[0];
@@ -289,22 +308,22 @@ export default observer(function EditorApp({fileID}: AppProps) {
     });
   }
 
-const iconPluginOptions: PluginOptions = {
-  // see https://icon-sets.iconify.design/
-  collections: [
-    'ri', // Remix Icon by Remix Design,
-    'mdi', // Material Design Icons by Pictogrammers
-    'uim', // Unicons Monochrome by Iconscout
-    'streamline-emojis' // Streamline Emojis by Streamline
-  ],
-  modal: {
-    title: 'Icons'
+  const iconPluginOptions: PluginOptions = {
+    // see https://icon-sets.iconify.design/
+    collections: [
+      'ri', // Remix Icon by Remix Design,
+      'mdi', // Material Design Icons by Pictogrammers
+      'uim', // Unicons Monochrome by Iconscout
+      'streamline-emojis' // Streamline Emojis by Streamline
+    ],
+    modal: {
+      title: 'Icons'
+    }
   }
-}
-const fontPluginOptions: PluginOptions = {
-  api_key: "AIzaSyAdJTYSLPlKz4w5Iqyy-JAF2o8uQKd1FKc"  
-};
-  const plugins=[
+  const fontPluginOptions: PluginOptions = {
+    api_key: "AIzaSyAdJTYSLPlKz4w5Iqyy-JAF2o8uQKd1FKc"
+  };
+  const plugins = [
     blocksBasicPlugin,
     formsPlugin,
     countdownPlugin,
@@ -318,13 +337,17 @@ const fontPluginOptions: PluginOptions = {
     //typedPlugin,
     styleBGPlugin,
     //presetWebpagePlugin,
-    navbar,    
+    navbar,
     usePlugin(grapesjsIcons, iconPluginOptions),
     //usePlugin(plugin, fontPluginOptions)    
     // TODO: Undo once fixed
     // lorySlider,
     // table,
   ];
+
+  const disablePreviewMode = () => {
+    editor?.Commands.stop('core:preview')
+  }
 
   return (
     <GjsEditor
@@ -345,7 +368,7 @@ const fontPluginOptions: PluginOptions = {
             <GridItem grow>
               <Canvas className="gjs-editor-wrapper relative bg-gray-50 dark:bg-zinc-800">
                 <WithEditor>
-                  
+
                 </WithEditor>
               </Canvas>
             </GridItem>
@@ -353,11 +376,11 @@ const fontPluginOptions: PluginOptions = {
         </GridItem>
         {<EditorRightSidebar />}
       </Grid>
-      <BlockManagerContainer/>
+      <BlockManagerContainer />
       <AssetsProvider>
         {({ assets, select, close, Container }) => (
           <Container>
-            <AssetManager assets={assets} select={select} close={close}/>
+            <AssetManager assets={assets} select={select} close={close} />
           </Container>
         )}
       </AssetsProvider>
@@ -368,12 +391,19 @@ const fontPluginOptions: PluginOptions = {
           </Modal>
         )}
         </ModalProvider> */}
-        {
+      {
         editor?.Components &&
-          <BlockSearchPopup grapeJSEditor={editor} />
-        }
-      <CanvasSpots/>
-      <BuiltInRTE/>
+        <BlockSearchPopup grapeJSEditor={editor} />
+      }
+      <CanvasSpots />
+      <BuiltInRTE />
+      {
+        appEditorStore.isInPreview && <button onClick={disablePreviewMode} className='z-100 absolute top-[1px] left-[15px] w-[30px] h-[30px] previewIcon'><img className='z-111 absolute cursor-pointer' width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/hide.png" alt="hide" /></button>
+      }
+      <div style={{ display: 'none' }}>
+        <SavePopupContent />
+        <CheckMark />
+      </div>
     </GjsEditor>
   );
 });

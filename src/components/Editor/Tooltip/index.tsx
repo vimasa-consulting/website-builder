@@ -178,7 +178,7 @@ export default function Tooltip({ className, classNameWrp, children, title, onCl
                 style={pos}
                 static
               >
-                <Card ref={refPanel} className={toolt.txt} bg={toolt.bg} size="s" border={false}>
+                <Card ref={refPanel} className={toolt.txt} bg={toolt.bg} size="xs" border={false}>
                   { title }
                 </Card>
               </Popover.Panel>

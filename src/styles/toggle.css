@@ -1,4 +1,7 @@
-.toggleCta:checked ~ .dot {
-    transform: translateX(100%);
-    background-color: #871097;
+  .purpleBackground {
+    background-color: #871097; 
+  }
+
+  .whiteBackground {
+    background-color: white;
   }

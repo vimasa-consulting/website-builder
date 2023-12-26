@@ -157,7 +157,7 @@ export default function ItemCard({ item, itemType, setTableData, sharedProject =
     }
     console.log(item);
     //@ts-ignore
-    const firstFileId=item.files[0];
+    const firstFileId=item?.files?.length ? item?.files[0] : ''
     return (
         <div className="max-w-xs mr-[32px] mb-[15px]">            
             <Link href={`${ROUTES.STUDIO}/${firstFileId}`}>
