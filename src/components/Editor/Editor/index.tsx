@@ -41,9 +41,11 @@ import grapesjsIcons from 'grapesjs-icons'
 //@ts-ignore
 import type { PluginOptions } from 'grapesjs-icons'
 import { publishFile, updateFile, getFile } from "@/services/FilesService";
+import { updateProject } from '@/services/ProjectsService';
 import { getStore } from '@/components/store';
 import SavePopupContent from './SavePopupContent';
 import CheckMark from './CheckMark';
+import { Project } from '@/types/project';
 export interface AppProps {
   fileID: string
 };
@@ -151,18 +153,23 @@ export default observer(function EditorApp({ fileID }: AppProps) {
         })
           .onceClose(() => editor.stopCommand("saveProject"));
         // save file
-        updateFile({
-          _id: fileID,
-          name: localStorage.getItem(`wb-active-filename`) || '',
-          builderData: JSON.stringify(editor.getProjectData())
-        }).then(() => {
-          editor.Modal.setContent(checkMarkContent as HTMLElement);
-          setTimeout(function () {
-            editor.Modal.close();
-          }, 2000)
-
-        }).catch((error: any) => {
-          console.log('Failed to save', error);
+        //@ts-ignore
+        let updatedProject: Project = JSON.parse(localStorage.getItem(`wb-${fileID}-project`));
+        updatedProject.name=String(localStorage.getItem(`wb-active-filename`));
+        updateProject(updatedProject).then(() => {
+          updateFile({
+            _id: fileID,
+            //name: localStorage.getItem(`wb-active-filename`) || '',
+            builderData: JSON.stringify(editor.getProjectData())
+          }).then(() => {
+            editor.Modal.setContent(checkMarkContent as HTMLElement);
+            setTimeout(function () {
+              editor.Modal.close();
+            }, 2000)
+  
+          }).catch((error: any) => {
+            console.log('Failed to save', error);
+          });          
         });
       },
       stop() {
