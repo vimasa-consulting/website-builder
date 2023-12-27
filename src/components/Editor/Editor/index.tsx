@@ -243,7 +243,7 @@ export default observer(function EditorApp({ fileID }: AppProps) {
     // @ts-ignore
     var fontOptions = fonts?.attributes?.options;
     fontOptions.push({ id: "Inter, sans-serif", label: "Inter" });
-    console.log(fontOptions);
+    //console.log(fontOptions);
     // @ts-ignore
     fonts?.set("options", fontOptions);
     /*
