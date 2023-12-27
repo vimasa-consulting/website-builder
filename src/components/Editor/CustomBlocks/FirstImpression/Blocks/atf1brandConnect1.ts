@@ -63,7 +63,7 @@ const atf1BrandConnect1Component = (editor: Editor) => {
             .${classPrefix}-section {
   margin: auto;
   max-width: 1440px;
-  max-height: 744px;
+  height: auto;
 }
 .${classPrefix}-container {
   font-family: Inter, sans-serif;
@@ -114,7 +114,7 @@ const atf1BrandConnect1Component = (editor: Editor) => {
 
 .${classPrefix}-right-column {
   width: 50%;
-  height: 744px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;

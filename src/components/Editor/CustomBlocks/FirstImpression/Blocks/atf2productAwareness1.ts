@@ -76,7 +76,7 @@ const atf2ProductAwareness1Component = (editor: Editor) => {
             font-family: Inter, sans-serif;
             display: flex;
             flex-direction: row;
-            height: 744px;
+            height: auto;
             max-width: 1440px;
             margin: auto;
             background: #E9E9E9;
