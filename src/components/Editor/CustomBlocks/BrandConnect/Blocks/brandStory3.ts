@@ -45,7 +45,6 @@ const brandStory3Component = (editor: Editor) => {
               <div class="${classPrefix}-right-container">
                 <video class="${classPrefix}-video-1" controls>
                   <source src="" type="video/mp4">
-                  Your browser does not support the video tag.
                 </video>
               </div>
             </div>
@@ -53,14 +52,13 @@ const brandStory3Component = (editor: Editor) => {
         `,
         styles: `
         .${classPrefix}-section {
-        max-height: 700px;
         max-width: 1440px;
         padding: 84px 162px;
         background: #e9e9e9;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: auto;
+        margin-inline: auto;
         }
 
         .${classPrefix}-container {
@@ -92,6 +90,7 @@ const brandStory3Component = (editor: Editor) => {
         font-weight: 600;
         line-height: normal;
         margin: 0;
+        width: 420px;
         }
 
         .${classPrefix}-left-panel-info {
@@ -100,7 +99,7 @@ const brandStory3Component = (editor: Editor) => {
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
-        line-height: 140%; /* 21px */
+        line-height: 140%;
         padding-top: 26px;
         margin: 0px;
         }
@@ -131,7 +130,6 @@ const brandStory3Component = (editor: Editor) => {
         justify-items: center;
         max-width: none;
         max-height: none;
-        width: auto;
         justify-content: space-between;
         row-gap: 30px;
         }
@@ -149,7 +147,8 @@ const brandStory3Component = (editor: Editor) => {
         font-size: 26px;
         font-style: normal;
         font-weight: 600;
-        line-height: 35px; /* 134.615% */
+        line-height: 35px;
+        width: 340px;
         }
 
         .${classPrefix}-left-panel-info {
@@ -158,7 +157,7 @@ const brandStory3Component = (editor: Editor) => {
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
-        line-height: 140%; /* 18.2px */
+        line-height: 140%;
         text-align: center;
         }
 

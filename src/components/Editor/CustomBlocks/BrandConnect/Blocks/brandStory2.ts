@@ -42,7 +42,6 @@ const brandStory2Component = (editor: Editor) => {
               <div class="${classPrefix}-right-container">
                 <video class="${classPrefix}-video" controls>
                   <source src="" type="video/mp4">
-                  Your browser does not support the video tag.
                 </video>
               </div>
             </div>
@@ -50,15 +49,13 @@ const brandStory2Component = (editor: Editor) => {
         `,
         styles: `
         .${classPrefix}-section {
-          max-height: 762;
           max-width: 1440px;
-          padding: 84px 162px;
+          padding: 84px 0px;
           display: flex;
           align-items: center;
-          align-items: center;
-          justify-content: center;
           justify-content: center;
           background-color: white;
+          margin: 0 auto;
           }
 
           .${classPrefix}-container {
@@ -83,6 +80,7 @@ const brandStory2Component = (editor: Editor) => {
           font-weight: 600;
           line-height: normal;
           margin: 0;
+          padding-right: 10px;
           }
 
           .${classPrefix}-left-panel-info {
@@ -91,9 +89,10 @@ const brandStory2Component = (editor: Editor) => {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: 140%; /* 21px */
+          line-height: 140%;
           padding-top: 26px;
           margin: 0px;
+          padding-right: 50px;
           }
 
           .${classPrefix}-right-container {
@@ -145,9 +144,10 @@ const brandStory2Component = (editor: Editor) => {
           font-weight: 400;
           }
 
-          @media (max-width: 770px) {
+          @media (max-width: 400px) {
           .${classPrefix}-section {
           padding: 30px 20px;
+          padding-bottom: 60px;
           }
 
           .${classPrefix}-container {
@@ -165,7 +165,7 @@ const brandStory2Component = (editor: Editor) => {
           font-size: 26px;
           font-style: normal;
           font-weight: 600;
-          line-height: 35px; /* 134.615% */
+          line-height: 35px;
           padding: 0 20px;
           }
 
@@ -175,8 +175,9 @@ const brandStory2Component = (editor: Editor) => {
           font-size: 13px;
           font-style: normal;
           font-weight: 400;
-          line-height: 140%; /* 18.2px */
+          line-height: 140%;
           text-align: center;
+          padding: unset;
           }
 
           .${classPrefix}-right-container {

@@ -65,6 +65,8 @@ const component = (editor: Editor) => {
           .${classPrefix}-section {
             padding: 5.25rem;
             font-family: Inter, sans-serif;
+            max-width: 1440px;
+            margin-inline: auto;
           }
           .${classPrefix}-container {
             margin: 0 auto;
@@ -150,7 +152,45 @@ const component = (editor: Editor) => {
           .${classPrefix}-image {
             border-radius: 10px;
           }
-          @media (max-width: 770px) {
+          @media (max-width: 400px) {
+            .${classPrefix}-section {
+              padding: 53px 40px 58px;
+            }
+            .${classPrefix}-title {
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 35px;
+            }
+            .${classPrefix}-subTitle {
+              font-size: 13px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+              margin-bottom: 40px;
+            }
+            .${classPrefix}-image {
+              width: 310px;
+              height: 277px;
+            }
+            .${classPrefix}-container {
+              flex-direction: column;
+              gap: 43px;
+              align-items: flex-start;
+            }
+            .${classPrefix}-content {
+              gap: 10px;
+            }
+            .${classPrefix}-contentWrapper {
+              align-items: flex-start;
+              gap: 30px;
+            }
+            .${classPrefix}-text {
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            }
           }
 
           @media (max-width: 480px) {

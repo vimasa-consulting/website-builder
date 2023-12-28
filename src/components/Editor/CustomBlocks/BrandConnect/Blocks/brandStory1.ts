@@ -54,11 +54,9 @@ const brandStory1Component = (editor: Editor) => {
         .${classPrefix}-section {
           width: auto;
           align-items: center;
-          padding: 80px;
-          max-height: 700px;
-          margin-left: auto;
-          margin-right: auto;
+          margin-inline: auto;
           max-width: 1440px;
+          padding: 83px 0px; 
         }
         .${classPrefix}-panel {
           border-radius: 10px;
@@ -108,11 +106,11 @@ const brandStory1Component = (editor: Editor) => {
           line-height: 140%;
           margin: 0;
           margin-top: 22px;
-          width: 45rem;
+          max-width: 710px;
           color: #000;
         }
 
-        @media (max-width: 770px) {
+        @media (max-width: 400px) {
           .${classPrefix}-section {
                 padding: 10px;
                 max-height: 422px;

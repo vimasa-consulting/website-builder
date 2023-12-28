@@ -44,7 +44,8 @@ const component = (editor: Editor) => {
         styles: `
         .${classPrefix}-section {
         padding: 5.25rem 14.25rem;
-        margin: auto;
+        max-width: 1440px;
+        margin-inline: auto;
         }
 
         .${classPrefix}-container {

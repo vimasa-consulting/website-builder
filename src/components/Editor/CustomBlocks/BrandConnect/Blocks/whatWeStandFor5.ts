@@ -127,6 +127,7 @@ const component = (editor: Editor) => {
             line-height: normal;
             margin: 0;
             margin-bottom: 26px;
+            max-width: 400px;
           }
 
           .${classPrefix}-content {
@@ -169,10 +170,10 @@ const component = (editor: Editor) => {
             height: 25px;
           }
 
-          @media (max-width: 480px) {
+          @media (max-width: 400px) {
             .${classPrefix}-container {
               flex-direction: column-reverse;
-              padding: 50px 10px;
+              padding: 50px 20px;
               gap: 50px;
             }
 
@@ -189,7 +190,8 @@ const component = (editor: Editor) => {
               font-size: 26px;
               font-style: normal;
               font-weight: 600;
-              line-height: 35px; /* 134.615% */
+              line-height: 35px; 
+              padding-right: 110px;
             }
 
             .${classPrefix}-content {
@@ -204,12 +206,11 @@ const component = (editor: Editor) => {
             .${classPrefix}-point-text {
               color: #000;
               font-family: Inter, sans-serif;
-              font-size: 18px;
+              font-size: 14px;
               font-style: normal;
               font-weight: 400;
               line-height: normal;
             }
-
             .${classPrefix}-point-img {
               width: 22px;
               height: 22px;

@@ -58,7 +58,6 @@ const brandStory4Component = (editor: Editor) => {
       <div class="${classPrefix}-section-info">
         Craft your brand story in a way that sounds authentic, evokes emotions in your users, and is consistent across
         channels. Tap into emotions such as joy, nostalgia, pain, etc, while narrating your journey.
-        Include the origin of the brand, its purpose & the values. Be very specific and simple with your brand message.
       </div>
       <div class="${classPrefix}-section-info">
         Include the origin of the brand, its purpose & the values. Be very specific and simple with your brand message.
@@ -69,12 +68,13 @@ const brandStory4Component = (editor: Editor) => {
         `,
         styles: `
         .${classPrefix}-section {
-width: 100%;
-height: 707px;
-flex-shrink: 0;
-background: #e9e9e9;
-padding-top: 30px;
-margin: 0 auto auto auto;
+        width: 100%;
+        height: 707px;
+        flex-shrink: 0;
+        background: #e9e9e9;
+        padding-top: 30px;
+        max-width: 1440px;
+        margin: 0 auto
 }
 
 .${classPrefix}-container {
@@ -153,6 +153,7 @@ font-weight: 400;
 line-height: 140%; /* 21px */
 margin-bottom: 20px;
 color: #000;
+padding: 0px 13px;
 }
 
 @media (max-width: 770px) {

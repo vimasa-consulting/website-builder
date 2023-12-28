@@ -58,7 +58,12 @@ const component = (editor: Editor) => {
           }
 
           .${classPrefix}-content-wrapper {
-          width: 400px;
+          max-width: 400px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          gap: 10px;
+      
           }
 
           .${classPrefix}-small-heading {
@@ -67,7 +72,7 @@ const component = (editor: Editor) => {
           font-size: 20px;
           font-style: normal;
           font-weight: 500;
-          line-height: 140%; /* 28px */
+          line-height: 140%; 
           }
 
           .${classPrefix}-heading {
@@ -86,7 +91,9 @@ const component = (editor: Editor) => {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: 140%; /* 21px */
+          line-height: 140%;
+          display: block;
+          width: 350px;
           }
 
           .${classPrefix}-image {
@@ -96,6 +103,7 @@ const component = (editor: Editor) => {
           @media (max-width: 480px) {
           .${classPrefix}-section {
           padding: 10px;
+          padding-bottom: 60px;
           }
           .${classPrefix}-container {
           gap: 30px;
@@ -106,6 +114,7 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-content-wrapper {
           width: auto;
+          gap: 0px;
           }
 
           .${classPrefix}-image {
