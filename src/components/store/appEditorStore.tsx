@@ -1,4 +1,4 @@
-import type { Editor } from 'grapesjs';
+import type { Component, Editor } from 'grapesjs';
 import { makeAutoObservable } from 'mobx';
 import { useEffect, useState } from 'react';
 import { getStore, InitialStoreState, Store, useStore } from ".";
@@ -46,6 +46,7 @@ export class AppEditorStore {
     queryParams: Record<string, string> = {};
     isCanvasPanning = false;
     selectedDesignerTab: DesignerTab = 'style';
+    selectedComponent: Component | null = null;
 
     constructor(store: Store, initialState?: InitialStoreState<AppEditorStore>) {
         this.store = store;
@@ -168,7 +169,7 @@ export class AppEditorStore {
         this.setProjectDataCustom(custom);
     }
 
-    setLeftSidebarSize(value: number) {
+    setLeftSidebarSize(value: any) {
         this.leftSidebarSize = value;
     }
 
@@ -204,6 +205,10 @@ export class AppEditorStore {
 
     setCanvasPanning(value: boolean) {
         this.isCanvasPanning = value;
+    }
+
+    setSelectedComponent(value: Component | null) {
+        this.selectedComponent = value;
     }
 
     setSelectingTarget(value: boolean) {

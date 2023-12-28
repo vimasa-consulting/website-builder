@@ -179,42 +179,19 @@ export default observer(function ActionButtons() {
         
       }
     const buttons: ActionButton[] = [
-        /*{
-            id: 'component-outline',
-            cmd: 'core:component-outline',
-            iconPath: mdiBorderRadius,
-            title: 'componentOutline.title',
-        },*/
-        {
-            id: 'layers',
-            cmd: () => layerManagerStore.toggleOpen(),
-            iconPath: mdiLayers,
-            title: 'layer.title',
-        },
         {
             id: 'style',
             cmd: () => styleManagerStore.toggleOpen(),
             iconPath: mdiPaletteSwatch,
             title: 'style.title',
-        },{
-            id: 'fonts',
-            cmd: 'open-fonts',
-            iconPath: mdiFontAwesome,
-            title: 'layer.title',
         },
         {
             id: 'preview',
-            cmd: 'openProjectUrl',
+            // cmd: 'openProjectUrl',
+            cmd: 'core:preview',
             iconPath: mdiEye,
             title: 'preview.title',
         },
-        /*{
-            id: 'fullscreen',
-            cmd: 'core:fullscreen',
-            iconPath: mdiFullscreen,
-            options: { target: '#root' },
-            title: 'fullscreen.title',
-        },*/
         {
         
             id: 'open-code',

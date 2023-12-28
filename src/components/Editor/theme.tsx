@@ -83,9 +83,9 @@ export const pop = {
 };
 
 export const toolt = {
-    bg: 'bg-zinc-700', //'bg-gray-800',
-    txt: 'text-white',
-    block: 'text-xs mt-1 bg-white/10 rounded px-2 py-1',
+    bg: 'bg-white', //'bg-gray-800',
+    txt: 'text-black',
+    block: 'text-xs bg-white/10 rounded px-2',
 };
 
 export const br = {

@@ -19,8 +19,8 @@ export type File = {
 export default function Page({ params }: { params: { fileID: string } }) {
   const [fileDataLoaded, setFileDataLoaded] = useState(false);  
   const [heatmapInstance, setHeatmapInstance] = useState(null);  
-  const [hsr, setHsr] = useState<string>('23')
-  const [matomoProjectId, setMatomoProjectId] = useState<string>('11')
+  const [hsr, setHsr] = useState<string>('')
+  const [matomoProjectId, setMatomoProjectId] = useState<string>('')
   const [isMobileView, setIsMobileView] = useState(false)
 
   const offset=function(selector:string) {
@@ -93,23 +93,25 @@ export default function Page({ params }: { params: { fileID: string } }) {
     setFileDataLoaded(true)
     setMatomoProjectId(data.projectinfo?.matomoProjectId)
     setHsr(data.heatmapId);
-    //if(!data.heatmapId) {
+    if(!data.heatmapId) {
+      console.log(data);
       setMatomoProjectId('11');
       setHsr('23');
-    //}
-    const response:any = await getFileWithHeatmapDataByFileId('11','23',isMobileView);    
-    var pointsdata=response.data;
-    var points=[];
-    for(var index=0;index<pointsdata.length;index++){
-      const point=pointsdata[index];
-      let converted=getCoordinatesInFrame(point.selector,point.offset_x,point.offset_y,2000,false,point?.value);
-      points.push(converted);
-    }    
-    var pointsData = {      
-      data: points
-    };
-    //@ts-ignore
-    heatmapInstance.setData(pointsData);    
+    } else {
+      const response:any = await getFileWithHeatmapDataByFileId(matomoProjectId,hsr,isMobileView);    
+      var pointsdata=response.data;
+      var points=[];
+      for(var index=0;index<pointsdata.length;index++){
+        const point=pointsdata[index];
+        let converted=getCoordinatesInFrame(point.selector,point.offset_x,point.offset_y,2000,false,point?.value);
+        points.push(converted);
+      }    
+      var pointsData = {      
+        data: points
+      };
+      //@ts-ignore
+      heatmapInstance.setData(pointsData);  
+    }
   }
 
   const handleMobileToggle = () => {

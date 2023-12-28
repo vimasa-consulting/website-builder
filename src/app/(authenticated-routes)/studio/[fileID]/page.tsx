@@ -19,9 +19,10 @@ const EditorPage = () => {
   const [editorDataLoaded, setEditorDataLoaded] = useState(false);
   const fetchEditorData = async (fileID: string) => {
     const { data } = await getFile(fileID);
-    // update local storage    
+    // update local storage        
     localStorage.setItem(`wb-${fileID}`, data.builderData || '')
-    localStorage.setItem(`wb-active-filename`, data.name || '')
+    localStorage.setItem(`wb-active-filename`, data.projectinfo?.name || '')
+    localStorage.setItem(`wb-${fileID}-project`, JSON.stringify(data.projectinfo));
     localStorage.setItem(`wb-${fileID}-matomo_projectid`, data.projectinfo?.matomoProjectId || '')
     setEditorDataLoaded(true);
   }

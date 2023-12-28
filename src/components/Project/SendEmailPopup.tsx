@@ -1,6 +1,7 @@
 'use client'
+import AuthContext from '@/context/identity/AuthContext';
 import { Project } from '@/types/project';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 interface PopupProps {
     closeHandler(): void;
@@ -8,22 +9,25 @@ interface PopupProps {
     item: Project;
 }
 
-const initialTextAreaValue = `Dear,
-
-We are reaching out to invite you to collaborate with us on a project that we believe aligns well with your expertise and interests. Your unique skills and insights would be an invaluable addition, and we are excited about the potential for us to create something impactful together. 
-Join us at https://development.d13nogs6jpk1jf.amplifyapp.com/signup/
-
-Looking forward to hearing from you.
-
-Regards,`
-
-const initialSubjectValue = 'Invitation to Collaborate on a project'
-
 const SendEmailPopup: React.FC<PopupProps> = ({ 
     closeHandler,
     emails,
     item,
 }) => {
+    const { cachedAuthUser } = useContext(AuthContext);
+    const userName=cachedAuthUser?.attributes.givenName;
+    const projectName=item.name;
+
+    const initialSubjectValue = `Invitation to Collaborate on ${projectName}`;
+    const initialTextAreaValue = `Hello,
+
+    I invite you to collaborate on this project ${projectName}, 
+    which you can join by using this link
+    https://development.d13nogs6jpk1jf.amplifyapp.com/signup/
+
+    Regards,
+    ${userName}
+    `   
     const [textAreaValue, setTextAreaValue] = useState(initialTextAreaValue)
     const [subjectText, setSubjectText] = useState(initialSubjectValue)
 
