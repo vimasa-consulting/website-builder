@@ -59,7 +59,7 @@ const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) =>
     }
     return (
         <div id="customModalPopup">
-          <p className='text-black absolute top-[78px] right-[307px] text-[16px] subTitle'>Explore a range of content blocks designed by UX & Marketing Experts for maximum persuasion</p>
+          <p className='text-black absolute top-[-43px] right-[307px] text-[16px] subTitle'>Explore a range of content blocks designed by UX & Marketing Experts for maximum persuasion</p>
         <InstantSearch searchClient={searchClient} indexName="blocks_list_new" initialUiState={initialUIState}>
           <div className="leftSection">            
               <div className="searchSection">

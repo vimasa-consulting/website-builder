@@ -55,6 +55,7 @@ const component = (editor: Editor) => {
           align-items: center;
           justify-content: space-between;
           font-family: Inter, sans-serif;
+          max-width: 1440px;
           }
           .${classPrefix}-section {
             max-width: 1440px;

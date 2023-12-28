@@ -44,9 +44,10 @@ const component = (editor: Editor) => {
         `,
         styles: `
           .${classPrefix}-section {
-            padding: 5.25rem;
+            padding: 86px 0 186px;
             font-family: Inter, sans-serif;
-            padding-bottom: 282px;
+            max-width: 1440px;
+            margin-inline: auto;
           }
           .${classPrefix}-container {
             margin: 0 auto;
@@ -62,7 +63,7 @@ const component = (editor: Editor) => {
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
-            line-height: 140%; /* 28px */
+            line-height: 140%;
             text-align: center;
           }
 
@@ -107,24 +108,48 @@ const component = (editor: Editor) => {
             align-items: center;
             justify-content: center;
           }
-          @media (max-width: 770px) {
+          @media (max-width: 400px) {
+            .${classPrefix}-section {
+             padding-top: 59px;
+             padding-bottom: 300px;
+            }
             .${classPrefix}-container {
-              position: unset;
-             flex-direction: column;
-             gap: 50px;
+             width: 366px;
+            }
+            .${classPrefix}-content-wrapper {
+              width: 366px; 
+              justify-content: flex-start;
+              padding: 0 31px;
+              height: 314px;
             }
             .${classPrefix}-image {
-              position: unset;
+              width: 215px;
+              bottom: -207px;
+              right: -2px;
             }
-          }
-
-          @media (max-width: 425px) {
-            .${classPrefix}-section {
-              padding: 20px;
-             }
+            .${classPrefix}-heading {
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 35px;
+              margin-bottom: 13px;
+              margin-top: 31px;
+            }
+            .${classPrefix}-smallHeading {
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 140%;
+              margin: 0px;
+            }
             .${classPrefix}-text {
-              width: unset; 
-             }
+              font-size: 13px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+              margin-bottom: 31px;
+            }
+   
           }
         `,
       },

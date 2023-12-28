@@ -242,7 +242,8 @@ export default observer(function EditorApp({fileID}: AppProps) {
     } else {
       const url = new URL(window.location.href);
       const block_sequence = url.searchParams.get("block_sequence") || "";
-      const blocks = atob(block_sequence).split(",");        
+      // const blocks = atob(block_sequence).split(",");  
+      const blocks = ['Te1', 'Te2', 'Te3', 'Td2']      
       blocks.forEach((item) => {
         console.log(item.trim());
         editor.addComponents({ type: item.trim() });

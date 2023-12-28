@@ -1,6 +1,6 @@
 
 import { useEditor } from '@grapesjs/react';
-import { mdiEyeOffOutline, mdiEyeOutline, mdiLock, mdiLockOpenVariant, mdiMenuDown, mdiPlus } from '@mdi/js';
+import { mdiEyeOffOutline, mdiEyeOutline, mdiLock, mdiLockOpenVariant, mdiMenuDown, mdiPlus, mdiDelete } from '@mdi/js';
 import Icon from '@mdi/react';
 import type { Component } from 'grapesjs';
 import { MouseEvent, useEffect, useMemo, useRef, useState } from 'react';
@@ -74,6 +74,10 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
         ev.stopPropagation();
         Layers.setLayerData(component, { visible: !visible })
     };
+    const deleteComponent = (ev: MouseEvent) => {
+        ev.stopPropagation();
+        component.remove()
+    };
     const toggleLock = (ev: MouseEvent) => {
         ev.stopPropagation();
         Layers.setLayerData(component, { locked: !locked })
@@ -135,6 +139,9 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
                                 </GridItem>
                                 <GridItem className={cx('group-hover:opacity-100 cursor-pointer', visible ? 'opacity-0' : 'opacity-100')} onClick={toggleVisibility}>
                                     <Icon path={visible ? mdiEyeOutline : mdiEyeOffOutline} size={icon.sx}/>
+                                </GridItem>
+                                <GridItem className={cx('group-hover:opacity-100 cursor-pointer', visible ? 'opacity-0' : 'opacity-100')} onClick={deleteComponent}>
+                                    <Icon path={mdiDelete} size={icon.sx}/>
                                 </GridItem>
                             </>
                         }

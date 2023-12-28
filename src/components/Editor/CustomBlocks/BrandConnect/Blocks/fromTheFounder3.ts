@@ -44,8 +44,10 @@ const component = (editor: Editor) => {
         `,
         styles: `
           .${classPrefix}-section {
-            padding: 5.25rem;
+            padding: 88px 0px;
             font-family: Inter, sans-serif;
+            max-width: 1440px;
+            margin-inline: auto;
           }
           .${classPrefix}-container {
             margin: 0 auto;
@@ -99,7 +101,7 @@ const component = (editor: Editor) => {
 
           @media (max-width: 425px) {
             .${classPrefix}-section {
-              padding: 20px;
+              padding: 71px 20px 69px;
              }
             .${classPrefix}-text {
               width: unset; 
