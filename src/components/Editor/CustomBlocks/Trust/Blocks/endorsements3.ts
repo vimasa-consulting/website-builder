@@ -149,7 +149,7 @@ const endorsements3Component = (editor: Editor) => {
                   line-height: 140%;
                   margin: 0px;
                   text-indent: 0px;
-                  padding-right: 0px;
+                  padding-right: 10px;
                 }
                 .${classPrefix}-designation {
                   margin: 10px 0px 45px;

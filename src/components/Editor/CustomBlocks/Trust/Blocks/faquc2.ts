@@ -47,8 +47,10 @@ const faquc2Component = (editor: Editor) => {
         traits: [],
         components: `
               <section class="${classPrefix}-section">
+              <div class="${classPrefix}-wrapper">
+              <div class="${classPrefix}-mobile-title">Frequently Asked Questions</div>
               <div class="${classPrefix}-left">
-                <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-image" />
+                <img loading="lazy" src="https://placehold.co/" class="${classPrefix}-image" />
               </div>
               <div class="${classPrefix}-right">
               <div class="${classPrefix}-title">Frequently Asked Questions</div>
@@ -115,6 +117,7 @@ const faquc2Component = (editor: Editor) => {
           </div>
             </div>
             </div>
+            </div>
           </section>
                             
         `,
@@ -123,15 +126,23 @@ const faquc2Component = (editor: Editor) => {
             align-items: center;
             background-color: #fff;
             display: flex;
-            padding: 50px 80px;
-            max-height: 700px;
-            margin-top: 20px;
+            padding: 109px 0;
+            max-width: 1440px;
+            margin: 0 auto;
+          }
+
+          .${classPrefix}-wrapper {
+            background-color: #fff;
+            display: flex;
+            max-width: 1187px;
+            margin-inline: auto; 
           }
 
           .${classPrefix}-left {
             flex: 0.2;
             margin-right: 100px;
             background: #E9E9E9;
+            border-radius: 10px;
           }
 
           .${classPrefix}-right {
@@ -141,7 +152,7 @@ const faquc2Component = (editor: Editor) => {
 
           .${classPrefix}-image {
             width: 441px;
-            height: 496px;
+            height: 100%;
             border-radius: 10px;
           }
 
@@ -154,8 +165,10 @@ const faquc2Component = (editor: Editor) => {
             font-style: normal;
             font-weight: 600;
             line-height: normal;
-            margin-bottom: 57px;
-            margin-top: 40px;
+            margin-bottom: 64px;
+          }
+          .${classPrefix}-mobile-title {
+            display: none;
           }
 
           .${classPrefix}-accordion {
@@ -176,6 +189,7 @@ const faquc2Component = (editor: Editor) => {
             transition: background 0.1s;
             padding: 24px 20px;
             border-bottom: 1px solid #ABABAB;
+            height: 83px;
           }
           
           .${classPrefix}-label:hover {
@@ -217,26 +231,42 @@ const faquc2Component = (editor: Editor) => {
 
           @media (max-width: 768px) {
             .${classPrefix}-section {
-              align-items: center;
-              background-color: #fff;
-              display: block;
-              padding: 20px 24px;
-              max-height: 700px;
-              margin-top: 20px;
+             padding: 57px 18px; 
+            }
+
+            .${classPrefix}-wrapper {
+              flex-direction: column;
             }
 
             .${classPrefix}-title {
+              display: none;
+            }
+            .${classPrefix}-mobile-title {
               width: auto;
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 35px;
+              margin-bottom: 48px;
+              display: unset;
+              font-family: Inter, sans-serif;
+            }
+            .${classPrefix}-label {
+              padding-right: 38px;
             }
 
             .${classPrefix}-image {
-              width: 340px;
+              width: 100%;
+              height: 324px;
               height: 340px;
               border-radius: 10px;
             }
 
             .${classPrefix}-left {
-              background: none;
+              margin: unset;
+              margin-bottom: 56px;
+              display: flex;
+              justify-content: center;
             }
           }
         `,

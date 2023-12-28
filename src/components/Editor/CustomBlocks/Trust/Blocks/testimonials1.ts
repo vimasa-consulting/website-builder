@@ -154,7 +154,7 @@ const testimonials1Component = (editor: Editor) => {
           }
           .${classPrefix}-title {
             font-size: 26px;
-            padding: 0 60px;
+            padding: 0 50px;
             margin-bottom: 39px;
           }
           .${classPrefix}-imageWrapper {

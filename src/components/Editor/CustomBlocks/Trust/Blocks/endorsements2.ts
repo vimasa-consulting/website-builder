@@ -158,7 +158,7 @@ const endorsements2Component = (editor: Editor) => {
           }
           .${classPrefix}-description {
             font-size: 13px;
-            padding-right: 48px;
+            padding-right: 58px;
           }
           .${classPrefix}-mobileTitle {
             display: unset;

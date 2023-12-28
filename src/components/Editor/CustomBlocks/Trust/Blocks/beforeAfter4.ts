@@ -86,9 +86,7 @@ const beforeAfter4Component = (editor: Editor) => {
             background-color: #fff;
             display: flex;
             flex-direction: column;
-            padding: 20px 80px;
-            max-height: 700px;
-            margin-top: 20px;
+            padding-top: 84px;
           }
 
           .${classPrefix}-after-mobile {
@@ -108,12 +106,13 @@ const beforeAfter4Component = (editor: Editor) => {
           .${classPrefix}-content {
             display: flex;
             gap: 57px;
+            margin-left: 200px;
           }
 
           .${classPrefix}-cardWrapper {
             display: flex;
-            height: 550px;
             width: 500px;
+            margin-bottom: 140px;
           }
           
           .${classPrefix}-card {
@@ -327,7 +326,6 @@ const beforeAfter4Component = (editor: Editor) => {
 
             .${classPrefix}-after-mobile {
               display: flex;
-              margin-top: 85px;
               color: #000;
               font-family: Inter, sans-serif;
               font-size: 15px;
@@ -335,6 +333,8 @@ const beforeAfter4Component = (editor: Editor) => {
               font-weight: 400;
               line-height: normal;
               justify-content: right;
+              padding-right: 30px;
+              margin-bottom: 6px;
             }
 
             .${classPrefix}-after-2 {
@@ -353,6 +353,7 @@ const beforeAfter4Component = (editor: Editor) => {
               display: flex;
               height: 230px;
               width: 170px;
+              margin-bottom: 90px; 
             }
             
             .${classPrefix}-card {
@@ -460,6 +461,7 @@ const beforeAfter4Component = (editor: Editor) => {
               flex-direction: column;
               align-items: stretch;
               gap: 0px;
+              margin-left: 43px;
             }
           
             .${classPrefix}-card {
@@ -482,6 +484,7 @@ const beforeAfter4Component = (editor: Editor) => {
 
             .${classPrefix}-cardWrapper {
                 width: 100%;
+                margin-bottom: 90px;
               }
           
             .${classPrefix}-panel-2 {
