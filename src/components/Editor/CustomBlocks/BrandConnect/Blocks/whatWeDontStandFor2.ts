@@ -44,14 +44,15 @@ const component = (editor: Editor) => {
               <div class="${classPrefix}-card">
                 <p class="${classPrefix}-text">Pointer 3</p>
               </div>
+              <div class="${classPrefix}-card">
+              <p class="${classPrefix}-text">Pointer 4</p>
+            </div>
+            <div class="${classPrefix}-card">
+              <p class="${classPrefix}-text">Pointer 5</p>
+            </div>
             </div>
             <div class="${classPrefix}-secondContainer">
-              <div class="${classPrefix}-card">
-                <p class="${classPrefix}-text">Pointer 4</p>
-              </div>
-              <div class="${classPrefix}-card">
-                <p class="${classPrefix}-text">Pointer 5</p>
-              </div>
+          
             </div>
             <div class="${classPrefix}-imgWrapper">
               <img src="https://placehold.co/45x45" alt="Placeholder"/>
@@ -63,14 +64,18 @@ const component = (editor: Editor) => {
             padding: 5.25rem 77px;;
             font-family: Inter, sans-serif;
             background-color: #E9E9E9;
+            max-width: 1440px;
+            margin-inline: auto;
           }
           .${classPrefix}-firstContainer {
             margin: 0 auto;
             display: flex;
             align-items: center;
             margin-bottom: 77px;
-            justify-content: space-between;
             gap: 80px;
+            color: #000;
+            flex-wrap: wrap;
+            justify-content: center;
           }
           .${classPrefix}-secondContainer {
             margin: 0 auto;
@@ -92,8 +97,7 @@ const component = (editor: Editor) => {
             text-align: center;
           }
           .${classPrefix}-card {
-            max-width: 376px;
-            width: 100%;
+            width: 375px;
             height: 80px;
             border-radius: 10px;
             box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
@@ -137,7 +141,6 @@ const component = (editor: Editor) => {
             border-radius: 50%;
             border: 1px dashed gray;
             margin: 0 auto;
-            margin-top: 64px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -154,7 +157,39 @@ const component = (editor: Editor) => {
           .${classPrefix}-image {
             border-radius: 10px;
           }
-          @media (max-width: 770px) {
+          @media (max-width: 400px) {
+            .${classPrefix}-section {
+              padding: 53px 18px 34px;
+            } 
+            .${classPrefix}-title {
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 35px;
+            } 
+            .${classPrefix}-subTitle {
+              font-size: 13px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+              margin-bottom: 44px;
+            } 
+            .${classPrefix}-text {
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              width: 100px;
+            } 
+            .${classPrefix}-card {
+              padding: 8px 29px;
+              border-radius: 8px;
+              height: unset;
+              width: 158px;
+            } 
+            .${classPrefix}-firstContainer {
+              gap: 28px;
+            } 
           }
 
           @media (max-width: 480px) {

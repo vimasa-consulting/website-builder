@@ -7,7 +7,7 @@ const options = {
   props: {},
   style: "",
   category: "Brand Connect",
-  classPrefix: "brandConnect-whatWeDontStandFor5",
+  classPrefix: "brandConnect-whatWeDontStandFor3",
   styleAdditional: "",
   media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
     <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z"/>
@@ -167,10 +167,10 @@ const component = (editor: Editor) => {
             height: 30px;
           }
 
-          @media (max-width: 480px) {
+          @media (max-width: 400px) {
             .${classPrefix}-container {
               flex-direction: column-reverse;
-              padding: 50px 10px;
+              padding: 50px 20px;
               gap: 50px;
             }
 
@@ -187,7 +187,8 @@ const component = (editor: Editor) => {
               font-size: 26px;
               font-style: normal;
               font-weight: 600;
-              line-height: 35px; /* 134.615% */
+              line-height: 35px; 
+              padding-right: 50px;
             }
 
             .${classPrefix}-content {
@@ -196,18 +197,17 @@ const component = (editor: Editor) => {
               font-size: 13px;
               font-style: normal;
               font-weight: 400;
-              line-height: 140%; /* 18.2px */
+              line-height: 140%;
             }
 
             .${classPrefix}-point-text {
               color: #000;
               font-family: Inter, sans-serif;
-              font-size: 15px;
+              font-size: 14px;
               font-style: normal;
               font-weight: 400;
               line-height: normal;
             }
-
             .${classPrefix}-point-img {
               width: 22px;
               height: 22px;

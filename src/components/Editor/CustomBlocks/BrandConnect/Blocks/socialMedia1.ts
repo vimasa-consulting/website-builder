@@ -119,8 +119,10 @@ const socialMedia1Component = (editor: Editor) => {
                 .${classPrefix}-section {
                   background-color: #fff;
                   font-family: Inter, sans-serif;
-                  padding: 5.25rem 77px;
+                  padding: 116px 0 106px;
                   padding-bottom: 106px;
+                  max-width: 1440px;
+                  margin-inline: auto;
                 }
                 .${classPrefix}-title {
                   text-align: center;
@@ -198,13 +200,11 @@ const socialMedia1Component = (editor: Editor) => {
                   margin: 0px;
                   max-width: 320px;
                   color: #000;
-                  color: #000;
-
-font-family: Inter, sans-serif;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: 140%; /* 21px */
+                  font-family: Inter, sans-serif;
+                  font-size: 15px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 140%;
                 }
                 .${classPrefix}-customerName {
                   color: #000;
@@ -236,9 +236,9 @@ line-height: 140%; /* 21px */
                 width: 20px;
                 height: 20px;
               } 
-              @media (max-width: 770px) {
+              @media (max-width: 400px) {
                 .${classPrefix}-section {
-                  padding: 20px;
+                  padding: 54px 20px 26px;
                 }
                 .${classPrefix}-wrapper {
                   width: 100%;

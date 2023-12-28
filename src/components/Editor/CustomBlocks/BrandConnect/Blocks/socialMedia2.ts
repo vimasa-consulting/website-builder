@@ -87,8 +87,10 @@ const socialMedia2Component = (editor: Editor) => {
                 .${classPrefix}-section {
                   background-color: #fff;
                   font-family: Inter, sans-serif;
-                  padding: 5.25rem 88px;
+                  padding: 73px 0px 70px;
                   padding-bottom: 106px;
+                  max-width: 1440px;
+                  margin-inline: auto;
                 }
                 .${classPrefix}-title {
                   text-align: center;
@@ -122,6 +124,7 @@ const socialMedia2Component = (editor: Editor) => {
                   margin: 0 auto;
                   justify-content: space-between;
                   gap: 16px;
+                  max-width: 1264px;
                 }
                 .${classPrefix}-card {
                   height: 100%;
@@ -210,20 +213,26 @@ const socialMedia2Component = (editor: Editor) => {
                 width: 20px;
                 height: 20px;
               } 
-              @media (max-width: 770px) {
+              @media (max-width: 400px) {
                 .${classPrefix}-section {
-                  padding: 20px;
+                  padding: 51px 20px 44px;
                 }
                 .${classPrefix}-wrapper {
                   width: 100%;
                   flex-direction: column;
+                }
+                .${classPrefix}-iconWrapper {
+                  margin-bottom: 31px;
                 }
                 .${classPrefix}-review {
                   padding: 0px;
                 }
                 .${classPrefix}-title {
                   font-size: 30px;
-                  margin-bottom: 50px;
+                  margin-bottom: 17px;
+                }
+                .${classPrefix}-playerWrapper > .${classPrefix}-img {
+                  width: 100%;
                 }
               }
         `,
