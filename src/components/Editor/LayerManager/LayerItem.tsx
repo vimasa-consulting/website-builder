@@ -152,7 +152,7 @@ export default function LayerItem({ component, draggingCmp, dragParent, ...props
                     </Grid>
                     <Grid>
                         <GridItem>
-                            <img src={componentUrl} />
+                            <img className='max-h-[140px]' src={componentUrl} />
                         </GridItem>
                     </Grid>
                     <Grid className='flex flex-wrap justify-center my-[6px]'>
