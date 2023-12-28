@@ -88,9 +88,8 @@ const beforeAfter2Component = (editor: Editor) => {
             background-color: #fff;
             display: flex;
             flex-direction: column;
-            padding: 20px 80px;
-            max-height: 700px;
-            margin-top: 20px;
+            padding: 79px 0;
+            padding-bottom: 340px;
           }
           
           .${classPrefix}-wrapper {
@@ -308,6 +307,8 @@ const beforeAfter2Component = (editor: Editor) => {
               display: flex;
               height: 230px;
               width: 170px;
+              margin-left: 56px;
+              margin-top: 33px;
             }
             
             .${classPrefix}-card {
@@ -382,14 +383,16 @@ const beforeAfter2Component = (editor: Editor) => {
               font-weight: 400;
               line-height: 140%;
               max-width: 320px;
+              padding-right: unset;
             }
             .${classPrefix}-section {
-              padding: 0 20px;
+              padding: unset;
+              padding-bottom: 110px;
             }
           
             .${classPrefix}-wrapper {
               max-width: 100%;
-              margin: 40px 0;
+              margin: 53px 0;
             }
           
             .${classPrefix}-content {
@@ -435,8 +438,7 @@ const beforeAfter2Component = (editor: Editor) => {
             }
           
             .${classPrefix}-panel-3 {
-              margin-top: 40px;
-              padding-right: 0px;
+              padding: 0 40px;
             }
             .${classPrefix}-button {
                 font-size: 14px;

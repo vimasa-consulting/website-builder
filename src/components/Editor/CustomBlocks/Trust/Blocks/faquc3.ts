@@ -118,9 +118,9 @@ const faquc3Component = (editor: Editor) => {
             align-items: center;
             background-color: #fff;
             display: block;
-            padding: 20px 80px;
-            max-height: 700px;
-            margin-top: 20px;
+            padding: 86px 0 64px;
+            max-width: 1440px;
+            margin: 0 auto;
           }
 
           .${classPrefix}-title {
@@ -134,7 +134,6 @@ const faquc3Component = (editor: Editor) => {
             font-weight: 600;
             line-height: normal;
             margin-bottom: 74px;
-            margin-top: 40px;
           }
 
           .${classPrefix}-accordion {
@@ -196,18 +195,21 @@ const faquc3Component = (editor: Editor) => {
             transform: translateY(-50%) rotate(0.5turn);
           }
 
-          @media (max-width: 768px) {
+          @media (max-width: 400px) {
             .${classPrefix}-section {
-              align-items: center;
-              background-color: #fff;
-              display: block;
-              padding: 20px 24px;
-              max-height: 700px;
-              margin-top: 20px;
+              padding: 57px 18px 42px;
             }
 
             .${classPrefix}-title {
-              width: auto;
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 35px;
+              margin-bottom: 47px;
+              width: unset;
+            }
+            .${classPrefix}-label {
+              padding-right: 30px;
             }
           }
         `,

@@ -135,7 +135,7 @@ const endorsements1Component = (editor: Editor) => {
             font-weight: 400;
             line-height: 140%;
             margin-top: 0;
-            padding-right: 30px;
+            padding-right: 52px;
             margin-bottom: 71px;
           }
           .${classPrefix}-endorserName {

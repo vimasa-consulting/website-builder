@@ -288,7 +288,7 @@ const beforeAfter1Component = (editor: Editor) => {
               font-size: 13px;
               margin-top:8px;
               margin-bottom: 37px;
-              margin-right: 20px;
+              margin-right: 41px;
             }
           
             .${classPrefix}-panel {
