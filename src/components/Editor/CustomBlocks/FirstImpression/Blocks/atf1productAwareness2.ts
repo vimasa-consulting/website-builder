@@ -103,7 +103,7 @@ const atf1ProductAwareness2Component = (editor: Editor) => {
                       <span class="${classPrefix}-item-content">Product Feature 3</span>
                     </div>
                   </div>
-                  <button class="${classPrefix}-offer-cta">Shop Now ></button>
+                  <a class="${classPrefix}-offer-cta">Shop Now ></a>
                 </div>
                 <div class="${classPrefix}-right-column">
                   <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
@@ -124,7 +124,8 @@ const atf1ProductAwareness2Component = (editor: Editor) => {
           margin-left: auto;
           margin-right: auto;
           max-width: 1440px;
-          height: 744px;
+          height: auto;
+          padding-bottom: 2rem;
         }
 
         .${classPrefix}-two-column-wrapper {
@@ -138,7 +139,7 @@ const atf1ProductAwareness2Component = (editor: Editor) => {
           flex-direction: column;
           align-items: flex-start;
           justify-content: center;
-          padding: 10rem 5rem;
+          padding: 8rem 5rem;
         }
 
         .${classPrefix}-rating-wrapper {

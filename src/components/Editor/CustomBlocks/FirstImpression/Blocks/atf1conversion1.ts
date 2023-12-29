@@ -74,7 +74,7 @@ const atf1Conversion1Component = (editor: Editor) => {
             font-family: Inter, sans-serif;
             display: flex;
             flex-direction: row;
-            height: 744px;
+            height: auto;
             max-width: 1440px;
             margin: auto;
           }

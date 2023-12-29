@@ -104,7 +104,7 @@ const atf1Conversion2Component = (editor: Editor) => {
                       <span class="${classPrefix}-item-content">Mention a point to bring trust</span>
                     </div>
                   </div>
-                  <button class="${classPrefix}-offer-cta">Offer based CTA ></button>
+                  <a class="${classPrefix}-offer-cta">Offer based CTA ></a>
                 </div>
                 <div class="${classPrefix}-right-column">
                   <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
@@ -125,7 +125,7 @@ const atf1Conversion2Component = (editor: Editor) => {
           margin-left: auto;
           margin-right: auto;
           max-width: 1440px;
-          height: 744px;
+          height: auto;
         }
 
         .${classPrefix}-two-column-wrapper {

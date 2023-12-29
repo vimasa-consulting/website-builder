@@ -114,7 +114,7 @@ const atf1BrandConnect2Component = (editor: Editor) => {
             .${classPrefix}-section {
   margin: auto;
   max-width: 1440px;
-  max-height: 744px;
+  height: auto;
 }
 .${classPrefix}-container {
   font-family: Inter, sans-serif;
@@ -122,10 +122,11 @@ const atf1BrandConnect2Component = (editor: Editor) => {
   flex-direction: row;
   width: 100%;
   height: 100%;
+  justify-content: space-between;
 }
 
 .${classPrefix}-left-column {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -165,7 +166,7 @@ const atf1BrandConnect2Component = (editor: Editor) => {
 
 .${classPrefix}-right-column {
   width: 684px;
-  height: 744px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;

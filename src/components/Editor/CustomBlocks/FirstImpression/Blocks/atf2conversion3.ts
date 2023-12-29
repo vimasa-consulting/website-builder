@@ -104,7 +104,7 @@ const atf2Conversion3Component = (editor: Editor) => {
                     <span class="${classPrefix}-item-content">Mention a point to bring trust</span>
                   </div>
                 </div>
-                <button class="${classPrefix}-offer-cta">Offer based CTA ></button>
+                <a class="${classPrefix}-offer-cta">Offer based CTA ></a>
               </div>
               <div class="${classPrefix}-right-column">
                 <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
@@ -279,12 +279,12 @@ const atf2Conversion3Component = (editor: Editor) => {
   align-items: center;
   justify-content: center;
   gap: 200px;
-  margin: 5rem auto;
+  margin: 3rem auto 0 auto;
   padding: 2rem;
   border-radius: 10px;
   background: #fff;
   box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.18);
-  width: 80vw;
+  width: 1083px;
 }
 
 .${classPrefix}-benefit-img {
@@ -412,7 +412,7 @@ const atf2Conversion3Component = (editor: Editor) => {
     gap: 10px;
     padding: 10px;
     margin: 2rem auto;
-    width: 90vw;
+    width: auto;
     box-shadow: none;
     justify-content: space-between;
   }

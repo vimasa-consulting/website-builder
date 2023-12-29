@@ -39,7 +39,7 @@ const component = (editor: Editor) => {
                 <h1 class="${classPrefix}-heading">Product Name</h1>
                 <p class="${classPrefix}-firstText">Use this section to describe the important aspects of your product, and make sure to bring out your product’s USP.</p>
                 <p class="${classPrefix}-secondText">You can talk about features, benefits, dimensions, etc. You can also talk about the value of the product, in terms of how it will make your user’s life better.</p>
-                <button type="button" class="${classPrefix}-cta">CTA ></button>
+                <a type="button" class="${classPrefix}-cta">CTA ></a>
               </div>
             </div>
           </section>
@@ -164,4 +164,7 @@ const component = (editor: Editor) => {
   editor.Components.addType(options.id, methods);
 };
 
-export { block as singleProductOffer2Block, component as singleProductOffer2Component };
+export {
+  block as singleProductOffer2Block,
+  component as singleProductOffer2Component,
+};
