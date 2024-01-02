@@ -28,7 +28,7 @@ export default observer(function DesignManager() {
                         label: 'Styles',
                         content: (
                             <Grid col full>
-                                    <GridItem className={cx(pad.xyS, br.bb, cl.br)}>
+                                    <GridItem className={`${cx(pad.xyS, br.bb, cl.br)} max-w-full`}>
                                         <SelectorsProvider>
                                             {(props) => <SelectorManager {...props}/>}
                                         </SelectorsProvider>
