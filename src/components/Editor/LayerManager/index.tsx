@@ -11,6 +11,7 @@ import LayerItem from './LayerItem';
 import Tooltip from '../Tooltip';
 import Button from '../Button';
 import { useBlockManagerStore } from '../../store/blockManager';
+import DesignManager from '../DesignManager';
 
 export type DragRect = {
     y: number,
@@ -138,7 +139,7 @@ export default function LayerManager({ root }: LayersResultProps) {
                 <GridItem>
                     <Icon path={mdiLayers} size={icon.s}/>
                 </GridItem>
-                <GridItem grow>Layers</GridItem>
+                <GridItem grow>Design Manager</GridItem>
                 {/* <GridItem grow>
                     <Tooltip title="Blocks">
                         <Button onClick={toggleOpen}>
@@ -151,7 +152,8 @@ export default function LayerManager({ root }: LayersResultProps) {
                 </GridItem> */}
             </Grid>
         </GridItem>
-        <GridItem
+        <DesignManager/>
+        {/*<GridItem
             className="overflow-y-auto overflow-x-hidden text-sm select-none relative"
             style={wrapGridStyle}
             onPointerDown={onDragStart}
@@ -167,7 +169,7 @@ export default function LayerManager({ root }: LayersResultProps) {
                 showIndicator &&
                 <div ref={indicatorRef} className={cx('absolute w-full h-0.5', cl.cmp)} style={indicatorStyle}></div>
             }
-        </GridItem>
+        </GridItem>*/}
       </Grid>
     );
   }

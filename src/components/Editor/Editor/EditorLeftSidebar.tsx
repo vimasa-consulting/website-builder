@@ -10,6 +10,7 @@ import PageManager from '../PageManager';
 import Resizable from '../Resizable';
 import { br, cl } from '../theme';
 import { useLayerManagerStore } from '@/components/store/layerManager';
+import DesignManager from '../DesignManager';
 
 export default observer(function EditorLeftSidebar() {
     const { leftSidebarSize, setLeftSidebarSize, editor, isInPreview, isLeftSidebarOpen } = useAppEditorStore();
@@ -49,7 +50,7 @@ export default observer(function EditorLeftSidebar() {
         <LayersProvider>
           {(props) => <LayerManager {...props}/>}
         </LayersProvider>
-      </GridItem>
+</GridItem>
     </Grid>
   </Resizable>       
     );
