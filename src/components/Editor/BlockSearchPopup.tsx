@@ -38,7 +38,7 @@ const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) =>
 
     // @ts-ignore
     function Hit({ hit }: any) {
-        const hitImage = `/editor/blocks/${hit.id}.png`;
+        const hitImage = `/editor/blocks/${hit.id}.svg`;
         let categoryInfo: any;
         const category = hit?.heirarchy?.category
         categoryInfo = categoryStyleMapping[category|| 'Logic'] 
