@@ -1,5 +1,6 @@
 export default function Page({ params }: { params: { projectID: string } }) {
-  const idSite='11'; // TODO: update from project data;
+
+  const idSite=params.projectID; // TODO: update from project data;
   const linkRealTime=`https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=Widgetize&action=iframe&disableLink=1&widget=1&moduleToWidgetize=Live&actionToWidgetize=getSimpleLastVisitCount&idSite=${idSite}&period=day&date=yesterday`;
   const linkVisitorsOverTime=`https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?forceView=1&viewDataTable=graphEvolution&module=Widgetize&action=iframe&disableLink=1&widget=1&moduleToWidgetize=VisitsSummary&actionToWidgetize=getEvolutionGraph&idSite=${idSite}&period=day&date=yesterday`;
   const linkVisitorsOverview=`https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=Widgetize&action=iframe&containerId=VisitOverviewWithGraph&disableLink=1&widget=1&moduleToWidgetize=CoreHome&actionToWidgetize=renderWidgetContainer&idSite=${idSite}&period=day&date=yesterday`;

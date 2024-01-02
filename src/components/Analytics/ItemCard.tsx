@@ -14,7 +14,7 @@ export default function AnalyticsItemCard({ item, itemType}: Props) {
 
 const openDomainSettingsHandler = () => {
     console.log(item);
-    router.push(`${itemType === 'Project' ? `${ROUTES.ANALYTICS}/project/${item._id}/` : `${pathname}/fileID/${item._id}`}`)
+    router.push(`${ROUTES.ANALYTICS}/project/${item.matomoProjectId}/`)
 }
 
     return (

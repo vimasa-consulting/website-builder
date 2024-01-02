@@ -3,6 +3,7 @@ export type Project = {
   name: string,
   files: any[];
   imageURL?: string
+  matomoProjectId?: string
   projectHostingAlias: string,
   ownerUserId: string,
   collaborators: string[],
