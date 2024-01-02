@@ -52,9 +52,10 @@ export default observer(function BlockManager() {
         Blocks.endDrag(false);
     }
     const getMedia = (block:Block) => {
-        console.log(block.getMedia());
-        console.log(block.getId());
-        return block.getMedia();
+        return `/editor/blocks/${block.getId()}.png`;
+    }
+    const getBlockId = (block:Block) => {
+        return `blocks-${block.getId()}`;
     }
     return (
         <Grid col full>
@@ -73,17 +74,23 @@ export default observer(function BlockManager() {
                         <Grid className="grid grid-cols-2 gap-2 p-2">
                             {blocksMap[cat].map((block) => (
                                 
-                                <Grid key={block.getId()} draggable
-                                    className={cx('cursor-pointer py-2 px-5 transition-colors', br.b, br.rnd, cl.br, cl.hTAo, cl.hBgH)}
+                                <Grid key={block.getId()} draggable                                    
                                     onDragStart={() => onDragStart(block)}
                                     onDragEnd={onDragEnd}
                                     items="center"
                                     col
-                                >
-                                    <div className="h-10 w-10 block-media" dangerouslySetInnerHTML={{ __html: getMedia(block)! }}></div>
-                                    <div className={cx('text-sm text-center w-full', fx.txtEllips)} title={block.getLabel()}>
-                                        {blockLabel(block)}
+                                >   
+                                    <GridItem
+                                    id={getBlockId(block)}
+                                    className={cx('cursor-pointer py-2 px-5 transition-colors', br.b, cl.br, cl.hTAo, cl.hBgH)}>
+                                    <div className="block-media" >
+                                        <img height='70px' src={getMedia(block)} />
                                     </div>
+                                    </GridItem>
+                                    <GridItem>                                    
+                                        <div className={cx('text-sm text-center w-full', fx.txtEllips)} title={block.getLabel()}>
+                                        {blockLabel(block)}
+                                    </div></GridItem>
                                 </Grid>
                                 
                             ))}

@@ -2348,3 +2348,9 @@ html {
     letter-spacing: 0.54px;
     height: 31px;   
 }
+#blocks-image, #blocks-video, #blocks-customButton, #blocks-icon {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+}
