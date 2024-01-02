@@ -11,21 +11,21 @@ import Grid from '../Grid';
 import GridItem from '../GridItem';
 import PopoverConfirm from '../Popover/PopoverConfirm';
 import { cl, fx, icon } from '../theme';
+import { UnsplashResponse } from '@/types/unsplashResponse';
 
 export interface AssetCardProps extends Omit<React.HTMLProps<HTMLDivElement>, 'onSelect'> {
-    asset: Asset;
-    onSelect?: (asset: Asset) => void;
-    onRemove?: (asset: Asset) => void;
+    asset: UnsplashResponse;
+    onSelect?: (asset: UnsplashResponse) => void;
   };
 
-export default observer(function AssetCard({ asset, onSelect, onRemove, className }: AssetCardProps) {
+export default observer(function AssetCard({ asset, onSelect, className }: AssetCardProps) {
     const i18nStore = useI18nStore();
 
     return (
         <Card padding={false} className={cx('overflow-hidden max-w-full group', className)}>
             <Grid col>
-                <GridItem className={cx('relative group h-[100px] cursor-pointer bg-checker')} onClick={() => onSelect?.(asset)}>
-                    <div className="w-full h-full bg-contain bg-no-repeat bg-center" style={{ backgroundImage: `url("${asset.getSrc()}")` }} />
+                <GridItem className={cx('relative group h-[150px] cursor-pointer bg-checker')} onClick={() => onSelect?.(asset)}>
+                    <div className="w-full h-full bg-contain bg-no-repeat bg-center" style={{ backgroundImage: `url("${asset.urls.regular}")` }} />
                     <Grid
                         justify="center"
                         items="center"
@@ -36,16 +36,6 @@ export default observer(function AssetCard({ asset, onSelect, onRemove, classNam
                         </Button>
                     </Grid>
                 </GridItem>
-                <Grid className="p-1 max-w-full" space="s" items="center" nowrap>
-                    <GridItem className={cx(fx.txtEllips, 'text-sm mr-auto')}>
-                        { asset.get('name' as any) || asset.getFilename() }
-                    </GridItem>
-                    <PopoverConfirm onConfirm={() => onRemove?.(asset)}>
-                        <ButtonWithTooltip title={i18nStore.t('delete')}>
-                            <Icon path={mdiDelete} size={icon.sx}/>
-                        </ButtonWithTooltip>
-                    </PopoverConfirm>
-                </Grid>
             </Grid>
         </Card>
     )
