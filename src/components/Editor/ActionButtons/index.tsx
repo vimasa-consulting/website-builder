@@ -64,7 +64,7 @@ export default observer(function ActionButtons() {
     const [, setCmdUp] = useState(0);
     const { theme, setTheme } = useLocalSettingsStore();
     const appEditorStore = useAppEditorStore();
-    const { installEvent, appInstalled, isBrowserMode, setInstallEvent } = appEditorStore;
+    const { installEvent, appInstalled, isBrowserMode, setInstallEvent, toggleLeftSidebar } = appEditorStore;
     const modalStore = useModalStore();
     const i18nStore = useI18nStore();
     const layerManagerStore = useLayerManagerStore();
@@ -178,10 +178,15 @@ export default observer(function ActionButtons() {
         });
         
       }
+
+      const toggleStyleBar = () => {
+        toggleLeftSidebar()
+        return styleManagerStore.toggleOpen();
+      }
     const buttons: ActionButton[] = [
         {
             id: 'style',
-            cmd: () => styleManagerStore.toggleOpen(),
+            cmd: () => toggleStyleBar(),
             iconPath: mdiPaletteSwatch,
             title: 'style.title',
         },
