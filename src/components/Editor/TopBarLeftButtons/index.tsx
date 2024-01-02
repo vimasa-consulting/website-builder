@@ -14,6 +14,9 @@ export default observer(function TopBarLeftButtons() {
 
     return (
         <Grid space="s" items="center" justify="start" className={cx(pad.xS)}>
+            <GridItem>
+                <Button>Home</Button>
+            </GridItem>
             {/*<GridItem>
                 <Tooltip title="Blocks">
                     <Button onClick={toggleOpen}>

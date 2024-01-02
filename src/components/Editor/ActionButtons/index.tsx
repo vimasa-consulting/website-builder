@@ -36,6 +36,7 @@ import DownloadCode from '../Modal/contents/DownloadCode';
 import { Asset, Editor } from 'grapesjs';
 import { getPageSlug, toSafeFilename } from '@/components/plugins/web/utils';
 import DeviceSelector from '../DeviceSelector';
+import SvgIcon from '../SvgIcon';
 
 interface ActionButton {
     id: string,
@@ -259,28 +260,35 @@ export default observer(function ActionButtons() {
         },
     ];*/
     const buttons: ActionButton[] = [
-        {
+        /*{
             id: 'style',
             cmd: () => styleManagerStore.toggleOpen(),
             iconPath: mdiPaletteSwatch,
             title: 'Style',
-        },
+        },*/
         {
             id: 'preview',
             cmd: 'core:preview',
-            iconPath: mdiEye,
+            iconPath: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9998 12C14.9998 13.6569 13.6566 15 11.9998 15C10.3429 15 8.99976 13.6569 8.99976 12C8.99976 10.3431 10.3429 9 11.9998 9C13.6566 9 14.9998 10.3431 14.9998 12Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.0002 5C7.52257 5 3.73228 7.94288 2.45801 12C3.73226 16.0571 7.52256 19 12.0002 19C16.4778 19 20.2681 16.0571 21.5424 12C20.2681 7.94291 16.4778 5 12.0002 5Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
             title: 'Preview',
+        },
+        {
+            
+            id: 'download-code',
+            cmd: () => exportProject(),
+            iconPath: '',
+            title: 'Download',
         },
         {
             id: 'save',
             cmd: 'saveProject',
-            iconPath: mdiContentSave,
+            iconPath: '',
             title: 'Save',
         },
         {
             id: 'publish',
             cmd: 'publishProject',
-            iconPath: mdiPublish,            
+            iconPath: '',            
             title: 'Publish',
         },
     ];
@@ -289,14 +297,14 @@ export default observer(function ActionButtons() {
         {
             id: 'undo',
             cmd: 'core:undo',
-            iconPath: mdiArrowULeftTop,
+            iconPath: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 20V17.6C20 14.2397 20 12.5595 19.346 11.2761C18.7708 10.1471 17.8529 9.2292 16.7239 8.65396C15.4405 8 13.7603 8 10.4 8H4M4 8L8 12M4 8L8 4" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
             disabled: () => !editor?.UndoManager.hasUndo(),
             title: 'Undo',
         },
         {
             id: 'redo',
             cmd: 'core:redo',
-            iconPath: mdiArrowURightTop,
+            iconPath: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20V17.6C4 14.2397 4 12.5595 4.65396 11.2761C5.2292 10.1471 6.14708 9.2292 7.27606 8.65396C8.55953 8 10.2397 8 13.6 8H20M20 8L16 12M20 8L16 4" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
             disabled: () => !editor?.UndoManager.hasRedo(),
             title: 'Redo',
         },   
@@ -427,13 +435,14 @@ export default observer(function ActionButtons() {
              {buttonsLeft.map(({ id, cmd, iconPath, disabled, options, title }) => (
                 <GridItem key={id}>
                     <ButtonWithTooltip
+                        className='flex'
                         active={Commands.isActive(cmd as string)}
                         onClick={toggleCommand(cmd, options)}
                         disabled={disabled ? disabled() : false}
                         title={t(title)}
                         border={false}
                     >
-                        <Icon path={iconPath} size={icon.l}/>
+                        <SvgIcon svg={iconPath}></SvgIcon>
                         <GridItem grow>{title}</GridItem>
                     </ButtonWithTooltip>
                 </GridItem>
@@ -450,13 +459,14 @@ export default observer(function ActionButtons() {
             {buttons.map(({ id, cmd, iconPath, disabled, options, title }) => (
                 <GridItem key={id}>
                     <ButtonWithTooltip
+                        className='flex'
                         active={Commands.isActive(cmd as string)}
                         onClick={toggleCommand(cmd, options)}
                         disabled={disabled ? disabled() : false}
                         title={t(title)}
                         border={false}
                     >
-                        <Icon path={iconPath} size={icon.l} title={title}/>
+                        <SvgIcon svg={iconPath}></SvgIcon>                        
                         <GridItem grow>{title}</GridItem>   
                     </ButtonWithTooltip>
                 </GridItem>

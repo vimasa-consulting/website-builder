@@ -26,9 +26,9 @@ export default observer(function EditorTopbar() {
       <>
         <GridItem className={cx(['transition-spacing w-full', br.bb, cl.br])} style={style}>
             <Grid className="h-full" items="center">
-              {/*<GridItem className="flex-2">
+              {<GridItem className="flex-2">
                 <TopBarLeftButtons/>
-              </GridItem>*/}
+              </GridItem>}
               {/*<GridItem>
                   <DevicesProvider>
                     {(props) => <DeviceSelector {...props}/>}
