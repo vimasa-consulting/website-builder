@@ -458,8 +458,9 @@ export default observer(function ActionButtons() {
         <Grid space="s" items="center" justify="end" className={cx(pad.xyS2)}>
             <GridItem>
                 <Tooltip title="Blocks">
-                    <Button onClick={toggleOpen}>
-                        <Icon path={mdiPlus} size={icon.l} className={cx('transition-transform', isOpen && 'rotate-45')}/>
+                    <Button onClick={toggleOpen} className='flex'>
+                        <Icon path={mdiPlus} size={icon.s} className={cx('transition-transform', isOpen && 'rotate-45')}/>
+                        <GridItem grow>{'Add'} </GridItem>
                     </Button>
                 </Tooltip>
             </GridItem>
@@ -485,7 +486,7 @@ export default observer(function ActionButtons() {
                   </DevicesProvider>                  
             </GridItem>*/}
             <GridItem>
-                <InputField size="m" type="text" value={fileName}
+                <InputField size="s" type="text" value={fileName}
                 onInput={setActiveFileName}/>
             </GridItem>            
             {buttons.map(({ id, cmd, iconPath, disabled, options, title }) => (

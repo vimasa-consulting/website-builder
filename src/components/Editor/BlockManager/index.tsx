@@ -27,7 +27,7 @@ export default observer(function BlockManager() {
         if (searchValue &&  !includesSearch(ctg, searchValue) && !includesSearch(blockLabel(item), searchValue)) {
             return res;
         }
-        const skipComponent=['column2','column1','column3','column3-7','map','textarea','input','select','label','checkbox','radio','form'].includes(item.id);
+        const skipComponent=['text','link','column2','column1','column3','column3-7','map','textarea','input','select','label','checkbox','radio','form'].includes(item.id);
         if(!skipCat){
             //console.log(item);
         }        
@@ -51,14 +51,19 @@ export default observer(function BlockManager() {
     const onDragEnd = () => {
         Blocks.endDrag(false);
     }
-
+    const getMedia = (block:Block) => {
+        console.log(block.getMedia());
+        console.log(block.getId());
+        return block.getMedia();
+    }
     return (
         <Grid col full>
             {/*<GridItem className={cx('pb-3', pad.xyS, br.bb, cl.br)}>
                 <InputField size="s" value={searchValue} onInput={setSearchValue} placeholder="Search..." type="search"/>
             </GridItem>*/}
             <GridItem grow className={fx.scrollY}>
-                {allBlocksMap.map((cat, index) => (
+                { allBlocksMap.map((cat, index) => (
+                    
                     <Accordion
                         sticky open
                         key={cat}
@@ -67,6 +72,7 @@ export default observer(function BlockManager() {
                     >
                         <Grid className="grid grid-cols-2 gap-2 p-2">
                             {blocksMap[cat].map((block) => (
+                                
                                 <Grid key={block.getId()} draggable
                                     className={cx('cursor-pointer py-2 px-5 transition-colors', br.b, br.rnd, cl.br, cl.hTAo, cl.hBgH)}
                                     onDragStart={() => onDragStart(block)}
@@ -74,11 +80,12 @@ export default observer(function BlockManager() {
                                     items="center"
                                     col
                                 >
-                                    <div className="h-10 w-10 block-media" dangerouslySetInnerHTML={{ __html: block.getMedia()! }}></div>
+                                    <div className="h-10 w-10 block-media" dangerouslySetInnerHTML={{ __html: getMedia(block)! }}></div>
                                     <div className={cx('text-sm text-center w-full', fx.txtEllips)} title={block.getLabel()}>
                                         {blockLabel(block)}
                                     </div>
                                 </Grid>
+                                
                             ))}
                         </Grid>
                     </Accordion>
