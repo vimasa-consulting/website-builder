@@ -22,7 +22,7 @@ export default observer(function EditorRightSidebar() {
       setRightSidebarSize(el.getBoundingClientRect().width);
     };
     
-    const classMain = cx('h-full transition-spacing', br.bl, cl.br,!isOpen && 'sidebar-open')
+    const classMain = cx('h-full transition-spacing', br.br, cl.br,!isOpen && 'sidebar-open')
     return (
         <Resizable
             className={classMain}

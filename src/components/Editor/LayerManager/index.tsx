@@ -159,7 +159,7 @@ export default function LayerManager({ root }: LayersResultProps) {
             onPointerUp={onDragEnd}
             grow
         >
-
+            
             {
                 !!root && <LayerItem component={root} level={-1} draggingCmp={dragging} dragParent={dragParent}/>
             }
