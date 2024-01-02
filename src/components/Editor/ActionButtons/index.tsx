@@ -261,7 +261,7 @@ export default observer(function ActionButtons() {
 
     const toggleStyleBar = () => {
         toggleLeftSidebar()
-        styleManagerStore.toggleOpen();
+        return styleManagerStore.toggleOpen();
       }
     const buttons: ActionButton[] = [
         {
