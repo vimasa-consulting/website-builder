@@ -16,14 +16,7 @@ export default observer(function TopBarLeftButtons() {
         <Grid space="s" items="center" justify="start" className={cx(pad.xS)}>
             <GridItem>
                 <Button>Home</Button>
-            </GridItem>
-            {/*<GridItem>
-                <Tooltip title="Blocks">
-                    <Button onClick={toggleOpen}>
-                        <Icon path={mdiPlus} size={icon.l} className={cx('transition-transform', isOpen && 'rotate-45')}/>
-                    </Button>
-                </Tooltip>
-    </GridItem>*/}      
+            </GridItem>            
         </Grid>
     );
   });

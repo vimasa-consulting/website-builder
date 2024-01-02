@@ -139,13 +139,13 @@ export default function LayerManager({ root }: LayersResultProps) {
                     <Icon path={mdiLayers} size={icon.s}/>
                 </GridItem>
                 <GridItem grow>Layers</GridItem>
-                <GridItem grow>
+                {/* <GridItem grow>
                     <Tooltip title="Blocks">
                         <Button onClick={toggleOpen}>
                             Blocks
                         </Button>
                     </Tooltip>
-                </GridItem>
+                </GridItem>*/}
                 {/* <GridItem>
                     <Icon path={mdiMagnify} size={icon.s}/>
                 </GridItem> */}

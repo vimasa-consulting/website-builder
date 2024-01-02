@@ -6,7 +6,7 @@ import {
     mdiFolder,
     mdiLayers, mdiPaletteSwatch,
     mdiFontAwesome,
-    mdiFullscreen, mdiHelpCircle, mdiNewspaperVariantOutline, mdiPublish, mdiTrayArrowDown, mdiXml, mdiDownload
+    mdiFullscreen, mdiHelpCircle, mdiNewspaperVariantOutline, mdiPublish, mdiTrayArrowDown, mdiXml, mdiDownload, mdiPlus
 } from '@mdi/js';
 import Icon from '@mdi/react';
 import { fileOpen, fileSave } from 'browser-fs-access';
@@ -37,6 +37,9 @@ import { Asset, Editor } from 'grapesjs';
 import { getPageSlug, toSafeFilename } from '@/components/plugins/web/utils';
 import DeviceSelector from '../DeviceSelector';
 import SvgIcon from '../SvgIcon';
+import Tooltip from '../Tooltip';
+import Button from '../Button';
+import { useBlockManagerStore } from '@/components/store/blockManager';
 
 interface ActionButton {
     id: string,
@@ -263,7 +266,10 @@ export default observer(function ActionButtons() {
     const toggleStyleBar = () => {
         toggleLeftSidebar()
         return styleManagerStore.toggleOpen();
-      }
+    }
+    const toggleDevice= (deviceId:string) => {
+        editor?.DeviceManager.select(deviceId);        
+    }
     const buttons: ActionButton[] = [
         /*{
             id: 'style',
@@ -297,7 +303,7 @@ export default observer(function ActionButtons() {
             title: 'Publish',
         },
     ];
-
+    
     const buttonsLeft: ActionButton[] = [              
         {
             id: 'undo',
@@ -312,7 +318,20 @@ export default observer(function ActionButtons() {
             iconPath: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20V17.6C4 14.2397 4 12.5595 4.65396 11.2761C5.2292 10.1471 6.14708 9.2292 7.27606 8.65396C8.55953 8 10.2397 8 13.6 8H20M20 8L16 12M20 8L16 4" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
             disabled: () => !editor?.UndoManager.hasRedo(),
             title: 'Redo',
-        },   
+        },
+        {
+            id: 'desktop',
+            cmd: () => toggleDevice('desktop'),
+            iconPath: '<svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect x="0.5" y="0.5" width="21" height="15" fill="url(#pattern0)"/><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0_608_2937" transform="scale(0.047619 0.0666667)"/></pattern><image id="image0_608_2937" width="21" height="15" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAPCAYAAAALWoRrAAAA2klEQVQ4je3TsUoDQRSF4S8xShor7YxgiqQQFMRKi7yGhWDncyz7IkKqPEHKFCGtJvYqiIWRIFgqIoxFZmWLGGFdOw9cOAN3fs4wHLhCKHEmlWi6GKKiuAKOcJ5BOxgVIaVp+uWTJDnEZTWet36RMK8GVH/aKqJ/6N9BQ0m8kIdOS4I+Mm9QwBNuLG7ULWrYwQPe0P4mZRONFayijvV4OZspnnGGffPGneIg+nds5PbXYrjesq5vYxMDzHCCC+ziGC+4z9c0U20JtI89vManX8d0HxjjDi0LPvkT6NE+9jAgaiYAAAAASUVORK5CYII="/></defs></svg>',
+            title: 'Desktop',
+        },
+        {
+            id: 'mobile',
+            cmd: () => toggleDevice('mobilePortrait'),
+            iconPath: '<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect x="0.5" y="0.5" width="12" height="21" fill="url(#pattern0)"/><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0_608_2950" transform="scale(0.0833333 0.047619)"/></pattern><image id="image0_608_2950" width="12" height="21" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAVCAYAAAByrA+0AAAAw0lEQVQ4je3TIU4DQRgF4G92BejSIzQYTkAwXIFjYNAVTTZjuEGvUMEVuAAJIcgKAhqDYVXTbYvobNIdQnYloi+ZzPvfvPerNwF3mOEUNZa6GGGS+HPALjPcH/AdrnHVCgENXvCJAmUyHi5r0nzRipcxxic9qKpqUSR+1mdOOGkD5cBAKPo9XRwD/yvwNdC/CtjgFo/2jZTugG0WmMO3fWOHnLrw+wPBA6ZYZ3rpj03nMUZ4y98CPjDONr3iHTe61a9/AJeyNnVDf/LqAAAAAElFTkSuQmCC"/></defs></svg>',
+            title: 'Mobile',
+        }
+
     ];
 
     useEffect(() => {
@@ -431,15 +450,23 @@ export default observer(function ActionButtons() {
         }
     }
     const fileName:any=localStorage.getItem(`wb-active-filename`); 
-    console.log(mdiContentSave)
     const setActiveFileName = function(newValue:string){        
         localStorage.setItem(`wb-active-filename`,newValue);
     }
+    const { isOpen, toggleOpen } = useBlockManagerStore();
     return (
         <Grid space="s" items="center" justify="end" className={cx(pad.xyS2)}>
+            <GridItem>
+                <Tooltip title="Blocks">
+                    <Button onClick={toggleOpen}>
+                        <Icon path={mdiPlus} size={icon.l} className={cx('transition-transform', isOpen && 'rotate-45')}/>
+                    </Button>
+                </Tooltip>
+            </GridItem>
              {buttonsLeft.map(({ id, cmd, iconPath, disabled, options, title }) => (
                 <GridItem key={id}>
                     <ButtonWithTooltip
+                        id={id}
                         className='flex'
                         active={Commands.isActive(cmd as string)}
                         onClick={toggleCommand(cmd, options)}
@@ -448,22 +475,23 @@ export default observer(function ActionButtons() {
                         border={false}
                     >
                         <SvgIcon svg={iconPath}></SvgIcon>
-                        <GridItem grow>{title}</GridItem>
+                        <GridItem className='px-1' grow>{title} </GridItem>
                     </ButtonWithTooltip>
                 </GridItem>
             ))} 
-            <GridItem>
+            {/*<GridItem>
                   <DevicesProvider>
                     {(props) => <DeviceSelector {...props}/>}
                   </DevicesProvider>                  
-              </GridItem>
+            </GridItem>*/}
             <GridItem>
-                <InputField size="s" type="text" value={fileName}
+                <InputField size="m" type="text" value={fileName}
                 onInput={setActiveFileName}/>
             </GridItem>            
             {buttons.map(({ id, cmd, iconPath, disabled, options, title }) => (
                 <GridItem key={id}>
                     <ButtonWithTooltip
+                        id={id}
                         className='flex'
                         active={Commands.isActive(cmd as string)}
                         onClick={toggleCommand(cmd, options)}
@@ -472,7 +500,7 @@ export default observer(function ActionButtons() {
                         border={false}
                     >
                         <SvgIcon svg={iconPath}></SvgIcon>                        
-                        <GridItem grow>{title}</GridItem>   
+                        <GridItem className='px-1' grow>{title}</GridItem>   
                     </ButtonWithTooltip>
                 </GridItem>
             ))}

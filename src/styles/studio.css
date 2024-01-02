@@ -2291,6 +2291,7 @@ html {
     display: none;
 }
 
+
 .previewIcon {
     z-index: 100;
 }
@@ -2308,4 +2309,30 @@ html {
     color: #000000a1;
     font-size: 18px;
     font-weight: 500;
+}
+
+#publish {
+    background-color: #D0F;
+    width: 87px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.54px;
+    height: 31px;
+}
+
+#save {
+    background-color: #4A4A4A;
+    width: 87px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.54px;
+    height: 31px;
 }
