@@ -1,4 +1,4 @@
-import { useEditor } from '@grapesjs/react';
+import { DevicesProvider, useEditor } from '@grapesjs/react';
 import {
     mdiApplicationBracketsOutline, mdiArrowULeftTop, mdiArrowURightTop, mdiBorderRadius,
     mdiCog, mdiContentSave,
@@ -35,6 +35,7 @@ import InputField from '../InputField';
 import DownloadCode from '../Modal/contents/DownloadCode';
 import { Asset, Editor } from 'grapesjs';
 import { getPageSlug, toSafeFilename } from '@/components/plugins/web/utils';
+import DeviceSelector from '../DeviceSelector';
 
 interface ActionButton {
     id: string,
@@ -178,7 +179,7 @@ export default observer(function ActionButtons() {
         });
         
       }
-    const buttons: ActionButton[] = [
+    /*const buttons: ActionButton[] = [
         {
             id: 'style',
             cmd: () => styleManagerStore.toggleOpen(),
@@ -227,7 +228,8 @@ export default observer(function ActionButtons() {
             }),
             iconPath: mdiDelete,
             title: 'clearCanvas.title',
-        },*/
+        },*
+        /*
         {
             id: 'undo',
             cmd: 'core:undo',
@@ -246,7 +248,7 @@ export default observer(function ActionButtons() {
             id: 'save',
             cmd: 'saveProject',
             iconPath: mdiContentSave,
-            //disabled: () => !UndoManager.hasUndo(),
+            
             title: '',
         },
         {
@@ -255,6 +257,49 @@ export default observer(function ActionButtons() {
             iconPath: mdiPublish,            
             title: '',
         },
+    ];*/
+    const buttons: ActionButton[] = [
+        {
+            id: 'style',
+            cmd: () => styleManagerStore.toggleOpen(),
+            iconPath: mdiPaletteSwatch,
+            title: 'Style',
+        },
+        {
+            id: 'preview',
+            cmd: 'core:preview',
+            iconPath: mdiEye,
+            title: 'Preview',
+        },
+        {
+            id: 'save',
+            cmd: 'saveProject',
+            iconPath: mdiContentSave,
+            title: 'Save',
+        },
+        {
+            id: 'publish',
+            cmd: 'publishProject',
+            iconPath: mdiPublish,            
+            title: 'Publish',
+        },
+    ];
+
+    const buttonsLeft: ActionButton[] = [              
+        {
+            id: 'undo',
+            cmd: 'core:undo',
+            iconPath: mdiArrowULeftTop,
+            disabled: () => !editor?.UndoManager.hasUndo(),
+            title: 'Undo',
+        },
+        {
+            id: 'redo',
+            cmd: 'core:redo',
+            iconPath: mdiArrowURightTop,
+            disabled: () => !editor?.UndoManager.hasRedo(),
+            title: 'Redo',
+        },   
     ];
 
     useEffect(() => {
@@ -373,12 +418,31 @@ export default observer(function ActionButtons() {
         }
     }
     const fileName:any=localStorage.getItem(`wb-active-filename`); 
-
+    console.log(mdiContentSave)
     const setActiveFileName = function(newValue:string){        
         localStorage.setItem(`wb-active-filename`,newValue);
     }
     return (
         <Grid space="s" items="center" justify="end" className={cx(pad.xyS2)}>
+             {buttonsLeft.map(({ id, cmd, iconPath, disabled, options, title }) => (
+                <GridItem key={id}>
+                    <ButtonWithTooltip
+                        active={Commands.isActive(cmd as string)}
+                        onClick={toggleCommand(cmd, options)}
+                        disabled={disabled ? disabled() : false}
+                        title={t(title)}
+                        border={false}
+                    >
+                        <Icon path={iconPath} size={icon.l}/>
+                        <GridItem grow>{title}</GridItem>
+                    </ButtonWithTooltip>
+                </GridItem>
+            ))} 
+            <GridItem>
+                  <DevicesProvider>
+                    {(props) => <DeviceSelector {...props}/>}
+                  </DevicesProvider>                  
+              </GridItem>
             <GridItem>
                 <InputField size="s" type="text" value={fileName}
                 onInput={setActiveFileName}/>
@@ -392,7 +456,8 @@ export default observer(function ActionButtons() {
                         title={t(title)}
                         border={false}
                     >
-                        <Icon path={iconPath} size={icon.l}/>
+                        <Icon path={iconPath} size={icon.l} title={title}/>
+                        <GridItem grow>{title}</GridItem>   
                     </ButtonWithTooltip>
                 </GridItem>
             ))}
