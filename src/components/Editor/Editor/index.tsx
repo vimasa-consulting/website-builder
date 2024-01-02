@@ -370,6 +370,7 @@ export default observer(function EditorApp({ fileID }: AppProps) {
     >
       <Grid className="h-full overflow-hidden">
         {<EditorLeftSidebar />}
+        {<EditorRightSidebar />}
         <GridItem grow>
           <Grid className="relative" col full>
             <EditorTopbar />
@@ -382,7 +383,6 @@ export default observer(function EditorApp({ fileID }: AppProps) {
             </GridItem>
           </Grid>
         </GridItem>
-        {<EditorRightSidebar />}
       </Grid>
       <BlockManagerContainer />
       <AssetsProvider>
