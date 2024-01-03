@@ -2312,6 +2312,7 @@ html {
 }
 
 #publish {
+    font-family: Inter, sans-serif;
     background-color: #D0F;
     width: 87px;
     color: #FFF;
@@ -2325,6 +2326,7 @@ html {
 }
 
 #save {
+    font-family: Inter, sans-serif;
     background-color: #4A4A4A;
     width: 87px;
     color: #FFF;
@@ -2337,6 +2339,7 @@ html {
     height: 31px;
 }
 #home_button {
+    font-family: Inter, sans-serif;
     background-color: #4A4A4A;
     width: 60px;
     color: #FFF;
@@ -2348,7 +2351,7 @@ html {
     letter-spacing: 0.54px;
     height: 31px;   
 }
-#blocks-image, #blocks-video, #blocks-customButton, #blocks-icon {
+#blocks-image, #blocks-video, #blocks-customButton, #blocks-icon {    
     width: 100px;
     height: 100px;
     align-items: center;
