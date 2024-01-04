@@ -183,3 +183,6 @@ textarea:not([rows]) {
 #heatmapContainerIframe {
   background-color: white;
 }
+.heatmap-canvas {
+  height: 100%;
+}
