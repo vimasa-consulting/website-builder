@@ -13,7 +13,7 @@ import Grid from "../Grid";
 import GridItem from '../GridItem';
 import PluginManager from '../Modal/contents/PluginManager';
 import { br, cl, pad } from "../theme";
-
+import ExistingDesignManager from '../DesignManager/designermanager';
 export default observer(function BlockManagerContainer() {
     const { isOpen, toggleOpen } = useBlockManagerStore();
     const { editor } = useAppEditorStore();
@@ -48,7 +48,8 @@ export default observer(function BlockManagerContainer() {
     }
     return (
         <Grid className={classMain} style={{ width: 240 }} col nowrap>
-            <GridItem className='mt-[84.1px]'>
+            <ExistingDesignManager/>
+            {/*<GridItem className='mt-[84.1px]'>
                 <CardTitle
                     title={"Persuation Blocks"}
                     onClose={toggleOpen}
@@ -72,7 +73,8 @@ export default observer(function BlockManagerContainer() {
                 <WithEditor>
                     <BlockManager/>
                 </WithEditor>
-            </GridItem>
+            </GridItem>*/}
+            Exis
         </Grid>
     );
 });

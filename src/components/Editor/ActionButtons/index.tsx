@@ -456,14 +456,14 @@ export default observer(function ActionButtons() {
     const { isOpen, toggleOpen } = useBlockManagerStore();
     return (
         <Grid space="s" items="center" justify="end" className={cx(pad.xyS2)}>
-            <GridItem>
+            {/*<GridItem>
                 <Tooltip title="Blocks">
                     <Button onClick={toggleOpen} className='flex'>
                         <Icon path={mdiPlus} size={icon.s} className={cx('transition-transform', isOpen && 'rotate-45')}/>
                         <GridItem grow>{'Add'} </GridItem>
                     </Button>
                 </Tooltip>
-            </GridItem>
+            </GridItem>*/}
              {buttonsLeft.map(({ id, cmd, iconPath, disabled, options, title }) => (
                 <GridItem key={id}>
                     <ButtonWithTooltip

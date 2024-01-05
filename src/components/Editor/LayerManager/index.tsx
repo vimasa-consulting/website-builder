@@ -135,11 +135,8 @@ export default function LayerManager({ root }: LayersResultProps) {
     return (
       <Grid col full nowrap>
         <GridItem>
-            <Grid space="s" items="center" className={cx([pad.xy, br.bb, cl.br])}>
-                <GridItem>
-                    <Icon path={mdiLayers} size={icon.s}/>
-                </GridItem>
-                <GridItem grow>Design Manager</GridItem>
+            <Grid space="s" items="center" className={cx([pad.xy, br.bb, cl.br])}>                
+                <GridItem grow>Persuasion Blocks</GridItem>
                 {/* <GridItem grow>
                     <Tooltip title="Blocks">
                         <Button onClick={toggleOpen}>
