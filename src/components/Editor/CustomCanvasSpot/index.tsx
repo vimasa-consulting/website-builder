@@ -2,6 +2,7 @@ import { useEditor } from "@grapesjs/react";
 import { CanvasSpot } from "../Grapesjs/CanvasSpotWrapper";
 import CanvasSpotHover from "./CanvasSpotHover";
 import CanvasSpotSelect from "./CanvasSpotSelect";
+import CanvasSpotAddBlock from "./CanvasSpotAddBlock";
 import CanvasSpotSpacing from "./CanvasSpotSpacing";
 import CanvasSpotTarget from "./CanvasSpotTarget";
 import { useAppEditorStore } from "../../store/appEditorStore";
@@ -35,10 +36,11 @@ export default function CustomCanvasSpot({ spot }: CustomCanvasSpotProps) {
 
     return (
         <>
-            {(isSpacing || isSelect) && <CanvasSpotSpacing spot={spot} className="z-0"/>}
-            {isHover && <CanvasSpotHover spot={spot} className="z-10"/>}
+            {isHover && <CanvasSpotHover spot={spot} className="z-0"/>}            
+            {(isSpacing || isSelect) && <CanvasSpotSpacing spot={spot} className="z-0"/>}            
             {isTarget && <CanvasSpotTarget spot={spot} className="z-20"/>}
             {isSelect && <CanvasSpotSelect spot={spot} className="z-30"/>}
+            {isSelect && <CanvasSpotAddBlock spot={spot} className="z-30"/>}
         </>
     )
 };
