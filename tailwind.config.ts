@@ -87,6 +87,9 @@ const config: Config = {
       },
       minWidth: {
         '100': '100px'
+      },
+      boxShadow: {
+        custom: '3.6px 1.8px 10px rgba(0, 0, 0, 0.12)',
       }
     },
   },

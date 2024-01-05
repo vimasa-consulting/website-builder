@@ -48,7 +48,7 @@ export default observer(function BlockManagerContainer() {
     }
     return (
         <Grid className={classMain} style={{ width: 240 }} col nowrap>
-            <GridItem>
+            <GridItem className='mt-[84.1px]'>
                 <CardTitle
                     title={"Persuation Blocks"}
                     onClose={toggleOpen}

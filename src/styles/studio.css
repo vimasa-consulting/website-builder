@@ -2257,11 +2257,22 @@ html {
     background-color: #4a154b;
     display:flex;
     color: #fff;
-    padding: 4px;
-    font-size: larger;
+    padding: 8px 12px;
+    font-size: 18px;
     display: flex;
     justify-content: center;
-    height: 33px;
+    border-radius: 6px;
+}
+
+.create-account-button {
+    background-color: #DD00FF;
+    display:flex;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px; 
 }
 
 .persuasive-block-container{

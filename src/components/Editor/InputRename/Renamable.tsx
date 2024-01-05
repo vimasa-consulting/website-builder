@@ -30,7 +30,7 @@ export default function Renamable({ className, value, active, unstyled, activabl
     };
 
     return (
-        <div className={cx('truncate', className)} {...rest} onDoubleClick={() => activable && handleActive(true)}>
+        <div className={`${cx('truncate', className)} text-wrap`} {...rest} onDoubleClick={() => activable && handleActive(true)}>
             { isActive ? <InputRename className={cx(unstyled && fx.noFocusOut)} value={value} onChange={handleChange}/> : <>{ value }</> }
         </div>
     )

@@ -46,11 +46,13 @@ import { getStore } from '@/components/store';
 import SavePopupContent from './SavePopupContent';
 import CheckMark from './CheckMark';
 import { Project } from '@/types/project';
+import SlackAndHelp from './SlackAndHelp';
 export interface AppProps {
   fileID: string
 };
 export default observer(function EditorApp({ fileID }: AppProps) {
   const [showPersuasiveBlocks, setShowPersuasiveBlocks] = useState(false)
+  const [showSlackAndHelp, setShowSlackAndHelp] = useState(true);
   const { appEditorStore, blockManagerStore } = getStore()
   const { projectType, editorConfig, editorKey, setEditor, editor } = useAppEditorStore();
   const pluginStore = usePluginStore();
@@ -374,6 +376,10 @@ export default observer(function EditorApp({ fileID }: AppProps) {
         <GridItem grow>
           <Grid className="relative" col full>
             <EditorTopbar />
+            {
+              showSlackAndHelp && 
+              <SlackAndHelp setShowSlackAndHelp={setShowSlackAndHelp} />
+            }
             <GridItem grow>
               <Canvas className="gjs-editor-wrapper relative bg-gray-50 dark:bg-zinc-800">
                 <WithEditor>
