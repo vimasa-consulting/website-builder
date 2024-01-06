@@ -177,12 +177,6 @@ textarea:not([rows]) {
     @apply bg-background text-foreground;
   }
 }
-.heatmapContainer {
-  height: 100%;
-}
 #heatmapContainerIframe {
   background-color: white;
-}
-.heatmap-canvas {
-  height: 100%;
 }
