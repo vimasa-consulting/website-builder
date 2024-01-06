@@ -150,7 +150,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
       <div id="heatmapContainer" className="heatmapContainer">  
         <iframe id="heatmapContainerIframe"
         src={iFrameSrc} 
-        width={isMobileView ? '400px' : '1400px'} height="100%">
+        width={isMobileView ? '400px' : '1400px'} height="2400px">
         </iframe> 
       </div>
     </>
