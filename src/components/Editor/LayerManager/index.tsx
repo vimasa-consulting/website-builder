@@ -134,9 +134,9 @@ export default function LayerManager({ root }: LayersResultProps) {
     
     return (
       <Grid col full nowrap>
-        <GridItem>
-            <Grid space="s" items="center" className={cx([pad.xy, br.bb, cl.br])}>                
-                <GridItem grow>Persuasion Blocks</GridItem>
+        <GridItem className='mt-[84.1px]'>
+            <Grid space="s" items="center" className={`${cx([pad.xy, cl.br])} mb-[4px]`}>                
+                <GridItem className='text-[18px] font-500' grow>Persuasion Blocks</GridItem>
                 {/* <GridItem grow>
                     <Tooltip title="Blocks">
                         <Button onClick={toggleOpen}>

@@ -14,7 +14,7 @@ import { br, cl, fx, pad, utils } from "../theme";
 export type MapCategoryBlocks = Record<string, Block[]>;
 
 export default observer(function BlockManager() {
-    const { Blocks } = useEditor();
+    const { Blocks, editor } = useEditor();
     const i18nStore = useI18nStore();
     const [searchValue, setSearchValue] = useState('');
     const t = i18nStore.tScoped('blockManager.labels');
@@ -49,6 +49,7 @@ export default observer(function BlockManager() {
         Blocks.startDrag(block);
     };
     const onDragEnd = () => {
+        editor
         Blocks.endDrag(false);
     }
     const getMedia = (block:Block) => {
@@ -64,14 +65,7 @@ export default observer(function BlockManager() {
             </GridItem>*/}
             <GridItem grow className={fx.scrollY}>
                 { allBlocksMap.map((cat, index) => (
-                    
-                    <Accordion
-                        sticky open
-                        key={cat}
-                        handler={cat}
-                        className={(open) => cx(utils.itemList({ index, open, length: allBlocksMap.length }))}
-                    >
-                        <Grid className="grid grid-cols-2 gap-2 p-2">
+                        <Grid key={cat} className="grid grid-cols-2 gap-2 p-2">
                             {blocksMap[cat].map((block) => (
                                 
                                 <Grid key={block.getId()} draggable                                    
@@ -79,6 +73,7 @@ export default observer(function BlockManager() {
                                     onDragEnd={onDragEnd}
                                     items="center"
                                     col
+                                    className="mb-[10px]"
                                 >   
                                     <GridItem
                                     id={getBlockId(block)}
@@ -88,14 +83,13 @@ export default observer(function BlockManager() {
                                     </div>
                                     </GridItem>
                                     <GridItem>                                    
-                                        <div className={cx('text-sm text-center w-full', fx.txtEllips)} title={block.getLabel()}>
+                                        <div className={cx('text-[15px] text-center w-full', fx.txtEllips)} title={block.getLabel()}>
                                         {blockLabel(block)}
                                     </div></GridItem>
                                 </Grid>
                                 
                             ))}
                         </Grid>
-                    </Accordion>
                 ))}
             </GridItem>
         </Grid>

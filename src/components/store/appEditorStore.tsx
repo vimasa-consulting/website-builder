@@ -27,7 +27,7 @@ export class AppEditorStore {
     isLeftSidebarOpen = true;
     isRightSidebarOpen = true;
     isSelectingTarget = false;
-    leftSidebarSize = 240;
+    leftSidebarSize = 305;
     rightSidebarSize = 240;
     transitionTime = 152;
     topBarSize = 54;

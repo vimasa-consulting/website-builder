@@ -47,7 +47,7 @@ export default observer(function BlockManagerContainer() {
         editor?.Commands.run("openPersuasiveBlocks");
     }
     return (
-        <Grid className={classMain} style={{ width: 240 }} col nowrap>
+        <Grid className={classMain} style={{ width: 305 }} col nowrap>
             <ExistingDesignManager/>
             {/*<GridItem className='mt-[84.1px]'>
                 <CardTitle
