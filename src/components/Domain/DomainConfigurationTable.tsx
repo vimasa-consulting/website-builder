@@ -40,7 +40,7 @@ const DNSConfigurationTable = ({project}: {project: Project}) => {
               <td className="px-5 py-5 200 bg-[#666464] text-sm">A</td>
               <td className="px-5 py-5 200 bg-[#666464] text-sm">@</td>
               <td className="px-5 py-5 200 bg-[#666464] text-sm">
-                34.239.102.138
+                54.174.96.41
               </td>
             </tr>
           </tbody>
