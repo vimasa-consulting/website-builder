@@ -40,7 +40,7 @@ export default function CustomCanvasSpot({ spot }: CustomCanvasSpotProps) {
             {(isSpacing || isSelect) && <CanvasSpotSpacing spot={spot} className="z-0"/>}            
             {isTarget && <CanvasSpotTarget spot={spot} className="z-20"/>}
             {isSelect && <CanvasSpotSelect spot={spot} className="z-30"/>}
-            {isSelect && <CanvasSpotAddBlock spot={spot} className="z-30"/>}
+            {/*isSelect && <CanvasSpotAddBlock spot={spot} className="z-30"/>*/}
         </>
     )
 };
