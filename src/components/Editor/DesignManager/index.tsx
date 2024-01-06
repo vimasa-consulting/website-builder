@@ -23,10 +23,10 @@ export default observer(function DesignManager() {
     return (
         <Grid col full nowrap>           
             <GridItem className='persuasive-block-container'>
-                <Grid className="grid grid-cols-1 gap-2 p-2">                    
-                    <Grid className={cx('cursor-pointer py-2', br.rnd, cl.br)}
+                <Grid className="grid grid-cols-1 gap-2 p-[10px]">                    
+                    <Grid className={cx('cursor-pointer p-0', br.rnd, cl.br)}
                         onClick={onPersuasiveBlockClick}
-                        items="center"
+                        // items="center"
                         col>                            
                             <div className="persuasive-block-block-media" ></div>
                             <div className="persuasive-block-subheading">Blocks Library</div>
