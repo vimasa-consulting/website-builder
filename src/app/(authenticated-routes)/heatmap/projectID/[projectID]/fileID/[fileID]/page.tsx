@@ -19,8 +19,8 @@ export type File = {
 export default function Page({ params }: { params: { fileID: string } }) {
   const [fileDataLoaded, setFileDataLoaded] = useState(false);  
   const [heatmapInstance, setHeatmapInstance] = useState(null);  
-  const [hsr, setHsr] = useState<string>('')
-  const [matomoProjectId, setMatomoProjectId] = useState<string>('')
+  const [hsr, setHsr] = useState<string>('23')
+  const [matomoProjectId, setMatomoProjectId] = useState<string>('11')
   const [isMobileView, setIsMobileView] = useState(false)
 
   const offset=function(selector:string) {
@@ -136,7 +136,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
          '.8': 'red',
          '.95': 'white'
        }
-     };
+    };
     var heatmapInstance:any = h337.create(config);
     setHeatmapInstance(heatmapInstance);
     fetchFileData(params.fileID);
