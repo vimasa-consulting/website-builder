@@ -12,6 +12,8 @@ import Tabs from "../Tabs";
 import TraitManager from "../TraitManager";
 import { br, cl, pad } from '../theme';
 import CardTitle from "../Card/CardTitle";
+import { useRouter } from "next/navigation";
+import { ROUTES } from "@/services/NavigationService";
 
 const clsPanel = 'overflow-y-auto overflow-x-hidden max-w-full';
 
@@ -19,13 +21,22 @@ export default observer(function ExistingDesignManager() {
     const { isCssPanelActive, ads, editorKey, selectedDesignerTab, setSelectedDesignerTab } = useAppEditorStore();
     const smCls = cx(isCssPanelActive && 'hidden');
     const { toggleOpen } = useBlockManagerStore();
+    const router = useRouter()
+
+    const homePageHandler = () => {
+        router.push(`${ROUTES.PROJECTS}/`)
+    }
+
     return (
         <Grid col full nowrap>
-            <GridItem className='mt-[84.1px]'>
+            <span  className="self-center whitespace-nowrap text-xl font-semibold block w-full ml-[55px] mt-[5px]">
+                <img onClick={homePageHandler} className="cursor-pointer" width="48" height="48" src="https://img.icons8.com/color/48/redux.png" alt="redux"/>
+            </span>
+            <GridItem className='mt-[36px]'>
                 <CardTitle
                     title={"Styles"}
                     onClose={toggleOpen}
-                    className={pad.xyS}
+                    className={`${pad.xyS} text-[18px] font-500`}
                 />
             </GridItem>
             <Tabs
