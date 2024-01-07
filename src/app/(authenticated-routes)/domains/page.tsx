@@ -31,7 +31,7 @@ export default function Page() {
     <h2 className="text-xl">Domains</h2>
     <div className="flex flex-wrap mt-5 gap-3">
     {tableData?.length > 0 &&
-        tableData.filter((project: Project) => project.projectHostingAlias).map((project: any) => <DomainItemCard key={project._id} item={project} />)
+        tableData.map((project: any) => <DomainItemCard setTableData={setTableData} key={project._id} item={project} />)
     }
   </div>
   </>

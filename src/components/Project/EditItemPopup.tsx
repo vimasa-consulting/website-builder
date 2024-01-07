@@ -8,7 +8,7 @@ interface PopupProps {
     secondAttribute: string;
     itemType: string;
     closeHandler: () =>  void;
-    handleUpdate: (firstInput: string, secondInput: string) => void;
+    handleUpdate: (firstInput: string, secondInput: string) => Promise<void>;
     inputLabelOne: string;
     inputLabelTwo: string;
 }
@@ -25,8 +25,8 @@ const EditItemPopup: React.FC<PopupProps> = ({
     const [input1, setInput1] = useState(firstAttribute);
     const [input2, setInput2] = useState(secondAttribute);
 
-    function handlePopupSubmit() {
-        handleUpdate(input1, input2);
+    async function handlePopupSubmit() {
+        await handleUpdate(input1, input2);
         handlePopupClose()
     }
 
