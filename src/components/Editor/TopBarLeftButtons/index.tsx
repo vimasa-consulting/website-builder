@@ -15,7 +15,7 @@ export default observer(function TopBarLeftButtons() {
     return (
         <Grid space="s" items="center" justify="start" className={cx(pad.xS)}>
             <GridItem>
-                <Button id="home_button">Home</Button>
+                {/* <Button id="home_button">Home</Button> */}
             </GridItem>            
         </Grid>
     );

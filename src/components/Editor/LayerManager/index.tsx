@@ -12,6 +12,8 @@ import Tooltip from '../Tooltip';
 import Button from '../Button';
 import { useBlockManagerStore } from '../../store/blockManager';
 import DesignManager from '../DesignManager';
+import { ROUTES } from "@/services/NavigationService";
+import { useRouter } from "next/navigation";
 
 export type DragRect = {
     y: number,
@@ -52,6 +54,8 @@ export default function LayerManager({ root }: LayersResultProps) {
     const [dragParent, setDragParent] = useState<Component>();
     const [dragRect, setDragRect] = useState<DragRect>();
     const indicatorRef = useRef<HTMLDivElement>(null);
+
+    const router = useRouter()
 
     // DND
     const onDragStart = () => {
@@ -131,10 +135,17 @@ export default function LayerManager({ root }: LayersResultProps) {
     if(root) {
         Layers.setLayerData(root,{ open: true });
     }
+
+    const homePageHandler = () => {
+        router.push(`${ROUTES.PROJECTS}/`)
+    }
     
     return (
       <Grid col full nowrap>
-        <GridItem className='mt-[84.1px]'>
+          <span  className="self-center whitespace-nowrap text-xl font-semibold block w-full ml-[55px] mt-[5px]">
+          <img onClick={homePageHandler} className='cursor-pointer' width="48" height="48" src="https://img.icons8.com/color/48/redux.png" alt="redux"/>
+        </span>
+        <GridItem className='mt-[36px]'>
             <Grid space="s" items="center" className={`${cx([pad.xy, cl.br])} mb-[4px]`}>                
                 <GridItem className='text-[18px] font-500' grow>Persuasion Blocks</GridItem>
                 {/* <GridItem grow>
