@@ -33,7 +33,7 @@ export default observer(function EditorLeftSidebar() {
 
     return (        
       <Resizable
-      className={cx(['h-full transition-spacing', br.br, cl.br])}
+      className={cx(['h-full transition-spacing', cl.br])}
       right
       style={style}
       height="100%"

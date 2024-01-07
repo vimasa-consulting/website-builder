@@ -23,7 +23,7 @@ export default observer(function BlockManagerContainer() {
     const classMain = cx(
         'absolute left-0 top-0 h-full transition-transform z-10',
         !isOpen && '-translate-x-full',
-        br.br, cl.br, cl.bg,
+        cl.br, cl.bg,
     );
 
     const openPlugins = () => {
