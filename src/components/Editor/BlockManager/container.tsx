@@ -74,7 +74,6 @@ export default observer(function BlockManagerContainer() {
                     <BlockManager/>
                 </WithEditor>
             </GridItem>*/}
-            Exis
         </Grid>
     );
 });
