@@ -27,7 +27,7 @@ export default observer(function BlockManager() {
         if (searchValue &&  !includesSearch(ctg, searchValue) && !includesSearch(blockLabel(item), searchValue)) {
             return res;
         }
-        const skipComponent=['text','link','column2','column1','column3','column3-7','map','textarea','input','select','label','checkbox','radio','form'].includes(item.id);
+        const skipComponent=['icon','text','link','column2','column1','column3','column3-7','map','textarea','input','select','label','checkbox','radio','form'].includes(item.id);
         if(!skipCat){
             //console.log(item);
         }        

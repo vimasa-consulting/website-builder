@@ -37,6 +37,8 @@ import navbar from "grapesjs-navbar";
 import BlockSearchPopup from '../BlockSearchPopup';
 import { usePlugin } from 'grapesjs'
 import grapesjsIcons from 'grapesjs-icons'
+import plugin from 'grapesjs-google-material-icons';
+
 //import plugin from '@silexlabs/grapesjs-fonts';
 //@ts-ignore
 import type { PluginOptions } from 'grapesjs-icons'
@@ -90,6 +92,9 @@ export default observer(function EditorApp({ fileID }: AppProps) {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0" >
             <style>${cssBody}</style>
+            <link href="//fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&v=1704404084845"/>
+            <link href="//fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&v=1704404087635"/>
+            <link href="//fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&v=1704404089108"/>
             <!-- Matomo -->
             <script>
               var _paq = window._paq = window._paq || [];
@@ -336,6 +341,8 @@ export default observer(function EditorApp({ fileID }: AppProps) {
   const fontPluginOptions: PluginOptions = {
     api_key: "AIzaSyAdJTYSLPlKz4w5Iqyy-JAF2o8uQKd1FKc"
   };
+  const iconPluginOptions2: PluginOptions = {
+  }
   const plugins = [
     blocksBasicPlugin,
     formsPlugin,
@@ -351,7 +358,10 @@ export default observer(function EditorApp({ fileID }: AppProps) {
     styleBGPlugin,
     //presetWebpagePlugin,
     navbar,
-    usePlugin(grapesjsIcons, iconPluginOptions),
+    //@ts-ignore
+    usePlugin(plugin,iconPluginOptions2),
+    //usePlugin(grapesjsIcons, iconPluginOptions),
+    //usePlugin(plugin, iconPluginOptions),
     //usePlugin(plugin, fontPluginOptions)    
     // TODO: Undo once fixed
     // lorySlider,
@@ -370,7 +380,7 @@ export default observer(function EditorApp({ fileID }: AppProps) {
       //grapesjs={editorConfig.gjsScript!}
       grapesjsCss={editorConfig.gjsStyle}
       options={gjsOpts}
-      plugins={plugins}
+      plugins={plugins}      
       onEditor={onEditor}
     >
       <Grid className="h-full overflow-hidden">
