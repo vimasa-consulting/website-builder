@@ -21,7 +21,8 @@ export default function Page({ params }: { params: { fileID: string } }) {
   const [heatmapInstance, setHeatmapInstance] = useState(null);  
   const [hsr, setHsr] = useState<string>('23')
   const [matomoProjectId, setMatomoProjectId] = useState<string>('11')
-  const [isMobileView, setIsMobileView] = useState(false)
+  const [isMobileView, setIsMobileView] = useState(false);
+  const [iframeHeight, setIframeHeight] = useState('')
 
   const offset=function(selector:string) {
     var heamapIframe=document.querySelector("#heatmapContainerIframe")
@@ -112,6 +113,11 @@ export default function Page({ params }: { params: { fileID: string } }) {
       //@ts-ignore
       heatmapInstance.setData(pointsData);  
     }
+    const iframe: any = document?.getElementById('heatmapContainerIframe');
+    const innerDoc = iframe?.contentDocument || iframe?.contentWindow?.document;
+    const html = innerDoc.querySelector("html");
+    const iframeHeight = html?.offsetHeight || '2400px'
+    setIframeHeight(iframeHeight)
   }
 
   const handleMobileToggle = () => {
@@ -150,7 +156,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
       <div id="heatmapContainer" className="heatmapContainer">  
         <iframe id="heatmapContainerIframe"
         src={iFrameSrc} 
-        width={isMobileView ? '400px' : '1400px'} height="2400px">
+        width={isMobileView ? '400px' : '1400px'} height={iframeHeight}>
         </iframe> 
       </div>
     </>
