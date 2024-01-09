@@ -90,7 +90,6 @@ export default function Page({ params }: { params: { fileID: string } }) {
 };
   const fetchFileData = async (fileID: string) => {
     const { data } = await getFile(fileID);    
-
     setFileDataLoaded(true)
     setMatomoProjectId(data.projectinfo?.matomoProjectId)
     setHsr(data.heatmapId);
@@ -113,11 +112,6 @@ export default function Page({ params }: { params: { fileID: string } }) {
       //@ts-ignore
       heatmapInstance.setData(pointsData);  
     }
-    const iframe: any = document?.getElementById('heatmapContainerIframe');
-    const innerDoc = iframe?.contentDocument || iframe?.contentWindow?.document;
-    const html = innerDoc.querySelector("html");
-    const iframeHeight = html?.offsetHeight || '2400px'
-    setIframeHeight(iframeHeight)
   }
 
   const handleMobileToggle = () => {
@@ -127,6 +121,15 @@ export default function Page({ params }: { params: { fileID: string } }) {
 
   const iFrameSrc = isMobileView ? `https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}` :
   `https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}`
+
+  const getIframeHeight = () => {
+    const iframe: any = document?.getElementById('heatmapContainerIframe');
+    const innerDoc = iframe?.contentDocument || iframe?.contentWindow?.document;
+    const html = innerDoc?.querySelector("html");
+    const iframeHeight = html?.offsetHeight || '2400px'
+    console.log('iframe height', html?.offsetHeight)
+    return iframeHeight;
+  }
 
   useEffect(() => {    
     var config = {
@@ -146,7 +149,9 @@ export default function Page({ params }: { params: { fileID: string } }) {
     var heatmapInstance:any = h337.create(config);
     setHeatmapInstance(heatmapInstance);
     fetchFileData(params.fileID);
-   }, []);
+   }, [params.fileID]);
+
+  const iFrameComputedHeight = getIframeHeight() 
 
   return (
     <>
@@ -156,7 +161,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
       <div id="heatmapContainer" className="heatmapContainer">  
         <iframe id="heatmapContainerIframe"
         src={iFrameSrc} 
-        width={isMobileView ? '400px' : '1400px'} height={iframeHeight}>
+        width={isMobileView ? '400px' : '1400px'} height={iFrameComputedHeight}>
         </iframe> 
       </div>
     </>
