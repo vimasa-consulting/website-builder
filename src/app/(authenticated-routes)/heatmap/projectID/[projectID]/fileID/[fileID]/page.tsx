@@ -114,11 +114,13 @@ export default function Page({ params }: { params: { fileID: string } }) {
       //@ts-ignore
       heatmapInstance.setData(pointsData);  
     }
+    
   }
 
-  const handleMobileToggle = () => {
+  const handleMobileToggle = async () => {
     setIsMobileView((prevState) => !prevState)
-    fetchFileData(params.fileID);
+    await fetchFileData(params.fileID);
+    handleLoad(iframeRef.current)
   }
 
   const iFrameSrc = isMobileView ? `https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}` :
@@ -153,24 +155,24 @@ export default function Page({ params }: { params: { fileID: string } }) {
     fetchFileData(params.fileID);
    }, [params.fileID]);
 
+   const handleLoad = (iframe: any) => {
+    console.log('handle load was called')
+    if (iframe?.contentWindow?.document?.body) {
+      const height = iframe.contentWindow.document.body.offsetHeight;
+      setIframeHeight(`${height}px`);
+    }
+  };
+
    useEffect(() => {
     const iframe = iframeRef.current;
   
-    const handleLoad = () => {
-      console.log('handle load was called')
-      if (iframe?.contentWindow?.document?.body) {
-        const height = iframe.contentWindow.document.body.offsetHeight;
-        setIframeHeight(`${height}px`);
-      }
-    };
-  
     if (iframe) {
-      iframe.addEventListener('load', handleLoad);
+      iframe.addEventListener('load', () => handleLoad(iframe));
     }
   
     return () => {
       if (iframe) {
-        iframe.removeEventListener('load', handleLoad);
+        iframe.removeEventListener('load', () => handleLoad(iframe));
       }
     };
   }, []);
