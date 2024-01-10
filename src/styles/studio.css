@@ -2392,3 +2392,20 @@ letter-spacing: 0.4px;
     margin-bottom: 6px;
     justify-content: center;
 }
+.googleIconPicker__filterBar {
+    padding-left: 35px !important;
+    padding-top: 60px !important;
+}
+.googleIconPicker__search {
+    border-radius: 4px !important;
+}
+.googleIconPicker__search > input {
+    border: 2px solid transparent !important;
+    border-radius: 4px;
+}
+.gjs-field {
+    border-radius: 4px !important; 
+}
+.googleIconPicker__customization > div {
+    width: 150px;
+}
