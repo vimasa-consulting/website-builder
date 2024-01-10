@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { getFile, getFileWithHeatmapDataByFileId } from "@/services/FilesService";
 import h337 from "heatmap.js";
 import $ from 'jquery';
@@ -22,7 +22,8 @@ export default function Page({ params }: { params: { fileID: string } }) {
   const [hsr, setHsr] = useState<string>('23')
   const [matomoProjectId, setMatomoProjectId] = useState<string>('11')
   const [isMobileView, setIsMobileView] = useState(false);
-  const [iframeHeight, setIframeHeight] = useState('')
+  const [iframeHeight, setIframeHeight] = useState('0px')
+  const iframeRef = useRef<any>();
 
   const offset=function(selector:string) {
     var heamapIframe=document.querySelector("#heatmapContainerIframe")
@@ -98,6 +99,7 @@ export default function Page({ params }: { params: { fileID: string } }) {
       setMatomoProjectId('11');
       setHsr('23');
     } else {
+      console.log('else block')
       const response:any = await getFileWithHeatmapDataByFileId(matomoProjectId,hsr,isMobileView);    
       var pointsdata=response.data;
       var points=[];
@@ -122,14 +124,14 @@ export default function Page({ params }: { params: { fileID: string } }) {
   const iFrameSrc = isMobileView ? `https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}` :
   `https://development.d13nogs6jpk1jf.amplifyapp.com/matomo/?module=HeatmapSessionRecording&action=embedPage&idSite=${matomoProjectId}&idSiteHsr=${hsr}`
 
-  const getIframeHeight = () => {
-    const iframe: any = document?.getElementById('heatmapContainerIframe');
-    const innerDoc = iframe?.contentDocument || iframe?.contentWindow?.document;
-    const html = innerDoc?.querySelector("html");
-    const iframeHeight = html?.offsetHeight || '2400px'
-    console.log('iframe height', html?.offsetHeight)
-    return iframeHeight;
-  }
+  // const getIframeHeight = () => {
+  //   const iframe: any = document?.getElementById('heatmapContainerIframe');
+  //   const innerDoc = iframe?.contentDocument || iframe?.contentWindow?.document;
+  //   const html = innerDoc?.querySelector("html");
+  //   const iframeHeight = html?.offsetHeight || '2400px'
+  //   console.log('iframe height', html?.offsetHeight)
+  //   return iframeHeight;
+  // }
 
   useEffect(() => {    
     var config = {
@@ -151,7 +153,29 @@ export default function Page({ params }: { params: { fileID: string } }) {
     fetchFileData(params.fileID);
    }, [params.fileID]);
 
-  const iFrameComputedHeight = getIframeHeight() 
+   useEffect(() => {
+    const iframe = iframeRef.current;
+  
+    const handleLoad = () => {
+      console.log('handle load was called')
+      if (iframe?.contentWindow?.document?.body) {
+        const height = iframe.contentWindow.document.body.offsetHeight;
+        setIframeHeight(`${height}px`);
+      }
+    };
+  
+    if (iframe) {
+      iframe.addEventListener('load', handleLoad);
+    }
+  
+    return () => {
+      if (iframe) {
+        iframe.removeEventListener('load', handleLoad);
+      }
+    };
+  }, []);
+
+  // const iFrameComputedHeight = getIframeHeight() 
 
   return (
     <>
@@ -159,9 +183,9 @@ export default function Page({ params }: { params: { fileID: string } }) {
           <ToggleComponent isMobileView={isMobileView} handleMobileToggle={handleMobileToggle} />
       </div>
       <div id="heatmapContainer" className="heatmapContainer">  
-        <iframe id="heatmapContainerIframe"
+        <iframe ref={iframeRef} id="heatmapContainerIframe"
         src={iFrameSrc} 
-        width={isMobileView ? '400px' : '1400px'} height={iFrameComputedHeight}>
+        width={isMobileView ? '400px' : '1400px'} height={iframeHeight}>
         </iframe> 
       </div>
     </>
