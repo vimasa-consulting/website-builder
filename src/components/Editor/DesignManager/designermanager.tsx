@@ -20,11 +20,15 @@ const clsPanel = 'overflow-y-auto overflow-x-hidden max-w-full';
 export default observer(function ExistingDesignManager() {
     const { isCssPanelActive, ads, editorKey, selectedDesignerTab, setSelectedDesignerTab } = useAppEditorStore();
     const smCls = cx(isCssPanelActive && 'hidden');
-    const { toggleOpen } = useBlockManagerStore();
+    const { toggleOpen, isOpen } = useBlockManagerStore();
     const router = useRouter()
 
     const homePageHandler = () => {
         router.push(`${ROUTES.PROJECTS}/`)
+    }
+
+    if(!isOpen) {
+        return <></>
     }
 
     return (

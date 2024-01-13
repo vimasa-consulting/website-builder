@@ -15,6 +15,7 @@ import DesignManager from '../DesignManager';
 export default observer(function EditorLeftSidebar() {
     const { leftSidebarSize, setLeftSidebarSize, editor, isInPreview, isLeftSidebarOpen } = useAppEditorStore();
     const { isOpen } = useLayerManagerStore();
+  
     const style = useMemo(() => ({
         marginLeft: isInPreview || !isLeftSidebarOpen ? `-${leftSidebarSize}px` : 0,
     }), [leftSidebarSize, isInPreview, isLeftSidebarOpen])
@@ -30,6 +31,10 @@ export default observer(function EditorLeftSidebar() {
     const onResizeStop = (ev: any, dir: any, el: HTMLElement) => {
         setLeftSidebarSize(el.getBoundingClientRect().width);
     };
+
+    if(!isOpen) {
+      return <></>
+  }
 
     return (        
       <Resizable

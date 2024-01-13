@@ -55,7 +55,7 @@ export interface AppProps {
 export default observer(function EditorApp({ fileID }: AppProps) {
   const [showPersuasiveBlocks, setShowPersuasiveBlocks] = useState(false)
   const [showSlackAndHelp, setShowSlackAndHelp] = useState(true);
-  const { appEditorStore, blockManagerStore } = getStore()
+  const { appEditorStore, blockManagerStore, layerManagerStore } = getStore()
   const { projectType, editorConfig, editorKey, setEditor, editor } = useAppEditorStore();
   const pluginStore = usePluginStore();
   const [gjsOpts, gjsPlugins] = useMemo(() => [
@@ -140,7 +140,7 @@ export default observer(function EditorApp({ fileID }: AppProps) {
     });
 
     editor.on('component:selected', (component) => {
-      if(!blockManagerStore.isOpen){
+      if(!blockManagerStore.isOpen && !appEditorStore.isInPreview){
         blockManagerStore.toggleOpen();
       }        
       // Your update logic here
@@ -224,11 +224,15 @@ export default observer(function EditorApp({ fileID }: AppProps) {
         appEditorStore.setPreview(true);
         blockManagerStore.setOpen(false);
         appEditorStore.setSelectingTarget(true)
+        layerManagerStore.setOpen(false);
+        setShowSlackAndHelp(false);
       },
       stop() {
         appEditorStore.setLeftSidebarSize("300px");
         appEditorStore.setPreview(false);
         appEditorStore.setSelectingTarget(false);
+        layerManagerStore.setOpen(true);
+        setShowSlackAndHelp(true);
       },
     });
 
@@ -423,7 +427,9 @@ export default observer(function EditorApp({ fileID }: AppProps) {
         <BlockSearchPopup grapeJSEditor={editor} />
       }
       <CanvasSpots />
-      <BuiltInRTE />
+      {
+        !appEditorStore.isInPreview && <BuiltInRTE />
+      }
       {
         appEditorStore.isInPreview && <button onClick={disablePreviewMode} className='z-100 absolute top-[1px] left-[15px] w-[30px] h-[30px] previewIcon'><img className='z-111 absolute cursor-pointer' width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/hide.png" alt="hide" /></button>
       }

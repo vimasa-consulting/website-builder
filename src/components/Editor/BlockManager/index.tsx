@@ -77,14 +77,14 @@ export default observer(function BlockManager() {
                                 >   
                                     <GridItem
                                     id={getBlockId(block)}
-                                    className={cx('cursor-pointer py-2 px-5 transition-colors', br.b, cl.br, cl.hTAo, cl.hBgH)}>
+                                    className={cx('cursor-pointer py-2 px-5 transition-colors h-[135px] w-full flex justify-center items-center bg-[#f3f5ff] mb-[6px]', cl.br)}>
                                     <div className="block-media" >
                                         <img height='70px' src={getMedia(block)} />
                                     </div>
                                     </GridItem>
                                     <GridItem>                                    
                                         <div className={cx('text-[15px] text-center w-full', fx.txtEllips)} title={block.getLabel()}>
-                                        {blockLabel(block)}
+                                        {blockLabel(block) === 'Material Icon' ? 'Icon' : blockLabel(block)}
                                     </div></GridItem>
                                 </Grid>
                                 
@@ -95,3 +95,10 @@ export default observer(function BlockManager() {
         </Grid>
     );
 });
+// width: 137px;
+//     border: none;
+//     display: flex;
+//     justify-content: center;
+//     background-color: #f3f5ff;
+//     height: 135px;
+//     padding: 27px;
