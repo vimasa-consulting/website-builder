@@ -11,6 +11,7 @@ interface PopupProps {
     handleUpdate: (firstInput: string, secondInput: string) => Promise<void>;
     inputLabelOne: string;
     inputLabelTwo: string;
+    domainPlaceholder?: string
 }
 
 const EditItemPopup: React.FC<PopupProps> = ({ 
@@ -20,7 +21,8 @@ const EditItemPopup: React.FC<PopupProps> = ({
     closeHandler,
     handleUpdate,
     inputLabelOne,
-    inputLabelTwo
+    inputLabelTwo,
+    domainPlaceholder = ''
 }) => {
     const [input1, setInput1] = useState(firstAttribute);
     const [input2, setInput2] = useState(secondAttribute);
@@ -66,6 +68,7 @@ const EditItemPopup: React.FC<PopupProps> = ({
                     <input
                         id="input-field-two"
                         type="text"
+                        placeholder={domainPlaceholder}
                         className="w-full p-2 border-2 border-transparent rounded text-[15px] text-white bg-[#313131]"
                         value={input2}
                         onChange={(e) => setInput2(e.target.value)}

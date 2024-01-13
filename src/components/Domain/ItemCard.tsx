@@ -71,6 +71,7 @@ const updateItemHandler = async (firstInput: string, secondInput: string) => {
                     secondAttribute={item.projectHostingAlias}
                     inputLabelOne='Name'
                     inputLabelTwo='Domain Name'
+                    domainPlaceholder="subdomain.example.com"
                     />
                 )
             }
