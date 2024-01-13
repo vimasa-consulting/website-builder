@@ -60,6 +60,10 @@ export default observer(function EditorPage({fileID}: AppProps) {
                 setIsAuthorized(false);
             }, 1000);
         }*/
+        return () => {
+            const bodyEl = document.querySelector('body')!;
+            bodyEl.classList.remove('overflow-hidden');
+        }
     }, []);
 
     useEffect(() => {
