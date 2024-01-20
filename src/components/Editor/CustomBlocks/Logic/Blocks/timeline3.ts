@@ -94,7 +94,7 @@ const timeline3Component = (editor: Editor) => {
             </svg>
           </p>
           <div class="${classPrefix}-cardContainerHiddenTop">
-            <p class="${classPrefix}-title">Timeline 1</p>
+            <p class="${classPrefix}-title">Timeline 3</p>
             <p class="${classPrefix}-desc">Description of the expected result at this stage</p>
           </div>
         </div>
@@ -114,7 +114,7 @@ const timeline3Component = (editor: Editor) => {
             </svg>
           </p>
           <div class="${classPrefix}-cardContainer">
-            <p class="${classPrefix}-title">Timeline 1</p>
+            <p class="${classPrefix}-title">Timeline 3</p>
             <p class="${classPrefix}-desc">Description of the expected result at this stage</p>
           </div>
         </div>
@@ -154,7 +154,7 @@ const timeline3Component = (editor: Editor) => {
             </svg>
           </p>
           <div class="${classPrefix}-cardContainer">
-            <p class="${classPrefix}-title">Timeline 1</p>
+            <p class="${classPrefix}-title">Timeline 5</p>
             <p class="${classPrefix}-desc">Description of the expected result at this stage</p>
           </div>
         </div>
@@ -276,7 +276,54 @@ const timeline3Component = (editor: Editor) => {
 @media (max-width: 425px) {
   .${classPrefix}-section {
     padding: 20px;
+    overflow: hidden;
+    width: unset;
+    max-height: 700px;
+    overflow: hidden;
   }
+  .${classPrefix}-childContainer {
+    max-width: 106px;
+    max-height: 693px;
+  }
+  .${classPrefix}-childContainer:nth-child(2) {
+    padding-top: 26px;
+  }
+  .${classPrefix}-childContainer:nth-child(4), .${classPrefix}-childContainer:nth-child(5)  {
+    display: none;
+  }
+  .${classPrefix}-cardContainer {
+    height: 93px;
+    padding: 13px;
+    width: 106px;
+  }
+  .${classPrefix}-container {
+    justify-content: flex-start;
+    margin: 0px;
+  }
+  .${classPrefix}-title {
+    margin: 0;
+    font-size: 13px;
+  }
+  .${classPrefix}-textWrapper {
+    max-width: 390px;
+    margin-bottom: 0px;
+  }
+  .${classPrefix}-textWrapper > p {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35px;
+  }
+  .${classPrefix}-desc {
+    font-size: 10px;
+  }
+  .${classPrefix}-lineContainer > svg {
+    width: 340px;
+  }
+  .${classPrefix}-lineContainer {
+    top: 412px;
+  }
+
 }
 
       `,
