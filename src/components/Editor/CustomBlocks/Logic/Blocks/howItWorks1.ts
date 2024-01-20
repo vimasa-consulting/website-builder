@@ -186,12 +186,21 @@ const howItWorks1Component = (editor: Editor) => {
                   }
                   @media (max-width: 400px) {
                     .${classPrefix}-section {
-                      padding: 0 20px;
+                      padding: 43px 12px  54px;
+                    }
+                    .${classPrefix}-title {
+                      font-size: 26px;
+                      font-style: normal;
+                      font-weight: 600;
+                      line-height: 35px;
+                      margin-bottom: 48px;
                     }
                   
                     .${classPrefix}-cardNumber {
-                      white-space: initial;
-                      padding: 0 20px;
+                      padding: unset;
+                      width: 28px;
+                      height: 28px;
+                      font-size: 16px;
                     }
                   
                     .${classPrefix}-column {
@@ -200,25 +209,48 @@ const howItWorks1Component = (editor: Editor) => {
                   
                     .${classPrefix}-cardsWrapper {
                       max-width: 100%;
-                      margin: 40px 0;
+                      margin: 0;
                     }
                   
                     .${classPrefix}-cards {
-                      flex-direction: column;
+                      flex-direction: row;
                       align-items: stretch;
-                      gap: 40px;
+                      gap: 15px;
                     }
                   
                     .${classPrefix}-card {
                       width: 100%;
+                      gap: 25px;
                     }
                   
                     .${classPrefix}-imageWrapper {
-                      padding: 100px 20px;
+                      padding: unset;
+                      width: 114px;
+                      height: 132px;
                     }
                   
                     .${classPrefix}-img {
                       margin-bottom: 10px;
+                    }
+                    .${classPrefix}-image {
+                      width: 114px;
+                      height: 132px;
+                      object-fit: cover;
+                    }
+                    .${classPrefix}-stepTitle {
+                      font-size: 15px;
+                      font-style: normal;
+                      font-weight: 500;
+                      line-height: normal;
+                      margin-top: 13px;
+                    }
+                    .${classPrefix}-stepDescription {
+                      font-size: 13px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 140%;
+                      margin-top: 6px;
+                      max-width: 100px;
                     }
                   }
                   
