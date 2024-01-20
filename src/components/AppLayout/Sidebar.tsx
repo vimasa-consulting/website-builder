@@ -44,13 +44,13 @@ export default function Sidebar() {
             </p>
           </FlowbiteSidebar.Item>
           <FlowbiteSidebar.Item
-            href={ROUTES.TIPS}
+            href={ROUTES.PERSUASION}
             as={Link}
-            className={`text-white hover:bg-zinc-600 active:bg-zinc-700 p-3 ${pathname.indexOf(ROUTES.TIPS) !== -1 ? 'bg-zinc-700' : ''}`}
+            className={`text-white hover:bg-zinc-600 active:bg-zinc-700 p-3 ${pathname.indexOf(ROUTES.PERSUASION) !== -1 ? 'bg-zinc-700' : ''}`}
           >
             <p>
               <span className='pr-2'>🤹</span>
-              Tips & Tricks
+              Persuasion Blocks 101
             </p>
           </FlowbiteSidebar.Item>
           <FlowbiteSidebar.Item

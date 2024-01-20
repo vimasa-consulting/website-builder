@@ -11,7 +11,7 @@ const NavigationPanel = () => {
         <Link href=""  className=" text-white"> <span className='pr-2'>📙</span> Projects</Link>
       </div>
       <div className=" mb-4 p-3 rounded-md bg-zinc-500 hover:bg-zinc-600 active:bg-zinc-700">
-        <Link href=""  className=" text-white"> <span className='pr-2'>🤹</span> Tips & Tricks</Link>
+        <Link href=""  className=" text-white"> <span className='pr-2'>🤹</span> Persuasion Blocks 101</Link>
       </div>
       <div className=" mb-4 p-3 rounded-md bg-zinc-500 hover:bg-zinc-600 active:bg-zinc-700">
         <Link href=""  className=" text-white"> <span className='pr-2'>🤹</span> Analytics</Link>

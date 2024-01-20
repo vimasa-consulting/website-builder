@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css?family=Inter:300,400,500,italic");
+
+@font-face {
+  font-family: "Futura-CondensedExtraBold";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/600f031a5d99f6a347b57645/fonts/futura-condensed-extra-bold.otf")
+    format("opentype");
+}
 
 /* ####### CSS RESET START ####### */
 /* https://andy-bell.co.uk/a-more-modern-css-reset/ */

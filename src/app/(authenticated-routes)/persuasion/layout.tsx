@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import '../../../styles/globals.css'
 
 import AppLayout from '@/components/AppLayout'
 

@@ -5,7 +5,7 @@ export const ROUTES = {
   EDITOR: '/editor',
   PROJECTS: '/projects',
   NEW_PROJECT: '/projects/new',
-  TIPS: '/tips',
+  PERSUASION: '/persuasion',
   ANALYTICS: '/analytics',
   DOMAINS: '/domains',
   SETTINGS: '/settings',
