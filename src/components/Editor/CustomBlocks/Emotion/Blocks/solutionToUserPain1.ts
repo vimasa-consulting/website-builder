@@ -246,26 +246,35 @@ const solutionToUserPain1Component = (editor: Editor) => {
                   
                     .${classPrefix}-cardsWrapper {
                       max-width: 100%;
-                      margin: 40px 0;
+                      margin: 40px 0 0px;
                     }
                   
                     .${classPrefix}-cards {
-                      flex-direction: column;
-                      align-items: stretch;
-                      gap: 40px;
+                      gap: 0px;
                     }
                   
                     .${classPrefix}-card {
                       width: 100%;
+                      gap: 18px;
                     }
-                  
-                    .${classPrefix}-img {
-                      margin-bottom: 10px;
+                    .${classPrefix}-imageWrapper {
+                      height: 102px;
+                      max-width: 102px;
                     }
 
-                    .${classPrefix}-subTitle, .${classPrefix}-stepDescription {
+                    .${classPrefix}-subTitle {
                         padding: 0px;
                     }
+                    .${classPrefix}-stepTitle {
+                        font-size: 15px;
+                        margin: 0px;
+                    }
+                    .${classPrefix}-stepDescription {
+                      padding: 0px;
+                      width: unset;
+                      font-size: 13px;
+                      margin-top: 7px;
+                  }
                   }
                   
                 `,
