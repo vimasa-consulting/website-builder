@@ -83,7 +83,7 @@ const showcaseV1Component = (editor: Editor) => {
 
 
   <div class="${classPrefix}-cardsWrapper">
-    <div class="${classPrefix}-cards">
+    <div class="${classPrefix}-cards ${classPrefix}-midCards">
       <div class="${classPrefix}-card">     
         <div class="${classPrefix}-imageWrapper">
         <img loading="lazy" src="https://placehold.co/280x280" class="${classPrefix}-image" />
@@ -99,7 +99,7 @@ const showcaseV1Component = (editor: Editor) => {
           unique product selection </p>
         </div>
       </div>
-      <div class="${classPrefix}-card">
+      <div class="${classPrefix}-card ${classPrefix}-rightCard">
         <div class="${classPrefix}-imageWrapper">
         <img loading="lazy" src="https://placehold.co/280x280" class="${classPrefix}-image" />
         </div>
@@ -115,7 +115,7 @@ const showcaseV1Component = (editor: Editor) => {
 
 
   <div class="${classPrefix}-cardsWrapper">
-    <div class="${classPrefix}-cards">
+    <div class="${classPrefix}-cards ${classPrefix}-lowestCards">
       <div class="${classPrefix}-card">     
         <div class="${classPrefix}-imageWrapper">
         <img loading="lazy" src="https://placehold.co/280x280" class="${classPrefix}-image" />
@@ -146,8 +146,7 @@ const showcaseV1Component = (editor: Editor) => {
                     display: flex;
                     flex-direction: column;
                     padding-top: 95px;
-                    padding: 0 114px;
-                    max-height: 800px;
+                    padding: 95px 114px;
                     font-family: Inter, sans-serif;
                   }
 
@@ -427,10 +426,17 @@ const showcaseV1Component = (editor: Editor) => {
                   }
                   @media (max-width: 425px) {
                     .${classPrefix}-cards {
-                      gap: 20px;
                       width: 100%;
                       display: flex;
-                      flex-direction: column;
+                      gap: 0px;
+                      margin-right: 0px;
+                    }
+                    .${classPrefix}-midCards {
+                      margin-top: -135px;
+                    }
+                    .${classPrefix}-lowestCards {
+                      justify-content: space-around;
+                      margin-top: 20px;
                     }
 
                     .${classPrefix}-cardUnique {
@@ -443,21 +449,21 @@ const showcaseV1Component = (editor: Editor) => {
                       align-items: flex-start;
                       justify-content: flex-start;
                       gap: 50px;
-                      max-width: 262px;
                       max-height: 262px;
                       border-radius: 10px;
                       margin-bottom: 204px;
                       margin-top: -77px;
+                      margin-right: 0;
+                      max-width: 128px;
                     }
 
                     .${classPrefix}-section {
                       background-color: #fff;
                       display: flex;
                       flex-direction: column;
-                      padding-top: 95px;
-                      padding: 0 40px;
-                      max-height: 800px;
+                      padding: 40px 0;
                       font-family: Inter, sans-serif;
+                      overflow-x: hidden;
                     }
 
                     .${classPrefix}-cardsWrapper:last-child {
@@ -468,18 +474,78 @@ const showcaseV1Component = (editor: Editor) => {
                     .${classPrefix}-cardsWrapper:first-child {
                       margin-bottom: 0px;
                     }
-
-                    .${classPrefix}-descWrapper {
-                      margin-left: 20px;
+                    .${classPrefix}-cardsWrapper {
+                      margin: 0;
+                    }
+                    .${classPrefix}-uniqueProduct {
+                      font-size: 18px;
+                      height: 100%;
+                      width: unset;
+                    }
+                    .${classPrefix}-cardUnique {
+                      width: 126px;
+                    }
+                    .${classPrefix}-descWrapper > p {
+                      font-size: 10px;
                     }
 
                     .${classPrefix}-imageWrapperRounded {
                       margin-top: 0px;
+                      width: 156px;
+                      max-height: 100px;
+                      margin-top: -16px;
+                    }
+                    .${classPrefix}-imageWrapper {
+                      border-radius: 50%;
+                      flex-grow: 1;
+                      flex-direction: column;
+                      margin: 0 auto;
+                      width: 100px;
+                      height: 100px;
+                      background-color: #e9e9e9;
+                      display: flex;
+                      max-height: 100px;
+                    }
+                    .${classPrefix}-image {
+                      width: 100px;
+                      height: 100px;
+                    }
+                    .${classPrefix}-cardRounded {
+                      margin-right: 0;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      gap: 50px;
+                      height: 380px;
+                      border-radius: 50%;
+                      position: relative;
+                      line-height: normal;
+                      width: 380px;
+                      max-height: 100px;
+                      margin-top: 40px;
+                      margin-left: -7px;
                     }
 
                     .${classPrefix}-card {
                       width: 82%;
                       max-height: 344px;
+                      position: relative;
+                      line-height: normal;
+                      width: 33%;
+                      margin-left: 0px;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      gap: 50px;
+                      max-width: 262px;
+                      max-height: 262px;
+                      border-radius: 10px;
+                      margin-right: 0px;
+                    }
+                    .${classPrefix}-rightCard {
+                      margin-left: -12px;
                     }
                   }
                   
