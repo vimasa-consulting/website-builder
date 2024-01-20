@@ -153,7 +153,7 @@ const timeline1Component = (editor: Editor) => {
 
 .${classPrefix}-lineContainer {
   position: absolute;
-  top: 290px;
+  top: 287px;
   left: 14px;
 }
 
@@ -232,9 +232,54 @@ const timeline1Component = (editor: Editor) => {
 @media (max-width: 425px) {
   .${classPrefix}-section {
     padding: 20px;
+    padding-bottom: 51px;
+    padding-top: 0px;
+  }
+  .${classPrefix}-textWrapper > p {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35px;
+    margin-bottom: 0px;
+    margin-top: 31px;
+  }
+  .${classPrefix}-textWrapper {
+    margin-bottom: 0px;
+  }
+  .${classPrefix}-cardContainer {
+    width: 106px;
+    height: unset;
+    padding: 16px;
+  }
+  .${classPrefix}-childContainer {
+    display: none;
+  }
+  .${classPrefix}-childContainer:nth-child(1),
+  .${classPrefix}-childContainer:nth-child(2),
+  .${classPrefix}-childContainer:nth-child(3) {
+    display: flex;
+  }
+  .${classPrefix}-title {
+    font-size: 15px;
+    margin-top: 0px;
+  }
+  .${classPrefix}-lineContainer {
+    position: absolute;
+    top: 236px;
+    left: -4px;
+    max-width: 352px;
+    overflow: hidden;
+  }
+  .${classPrefix}-container {
+    margin-top: 45px;
+  }
+  .${classPrefix}-desc {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
   }
 }
-
       `,
       },
     },
