@@ -157,8 +157,8 @@ const showcaseV2Component = (editor: Editor) => {
                     padding-top: 95px;
                     padding: 0 114px;
                     font-family: Inter, sans-serif;
+                    padding-bottom: 70px;
                   }
-
                   .${classPrefix}-uniqueProduct {
                     color: #000;
                     width: 305px;
