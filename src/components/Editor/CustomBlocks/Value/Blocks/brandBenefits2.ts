@@ -144,11 +144,44 @@ const component = (editor: Editor) => {
 
           @media (max-width: 480px) {
             .${classPrefix}-section {
-              padding: 1.8rem 1rem;
+              padding: 41px 20px 37px;
             }
+            .${classPrefix}-heading-wrapper {
+              width: unset;
+            }
+            .${classPrefix}-section-heading {
+              color: #000;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 140%;
+              }
+    
+              .${classPrefix}-sub-heading {
+              text-align: left;
+              font-size: 13px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+              margin-bottom: 36px;
+              }
 
             .${classPrefix}-container {
               max-width: 100%;
+              flex-direction: column;
+            }
+            .${classPrefix}-benefits-wrapper {
+              gap: 0px;
+              justify-content: space-between;
+            }
+            .${classPrefix}-item-image {
+              margin-bottom: 10px;
+            }
+            .${classPrefix}-item-decription {
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
             }
           }
         `,
