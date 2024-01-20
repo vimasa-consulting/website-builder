@@ -175,7 +175,7 @@ const component = (editor: Editor) => {
 
 @media (max-width: 480px) {
   .${classPrefix}-section {
-    padding: 10px;
+    padding: 32px 10px 42px;
   }
 
   .${classPrefix}-container {
@@ -189,7 +189,7 @@ const component = (editor: Editor) => {
     font-size: 26px;
     font-style: normal;
     font-weight: 600;
-    line-height: 35px; /* 134.615% */
+    line-height: 35px;
   }
 
   .${classPrefix}-heading-wrapper {
@@ -202,12 +202,16 @@ const component = (editor: Editor) => {
 
   .${classPrefix}-image-item {
     width: 100%;
-    max-width: 87px;
+    max-width: 128px;
+  }
+
+  .${classPrefix}-image-item:nth-child(4) {
+    display: none;
   }
 
   .${classPrefix}-image {
-    width: 87px;
-    height: 117px;
+    width: 110px;
+    height: 170px;
   }
 
   .${classPrefix}-heading {
@@ -216,7 +220,7 @@ const component = (editor: Editor) => {
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 140%; /* 16.8px */
+    line-height: 140%;
   }
 
   .${classPrefix}-sub-heading {
@@ -225,13 +229,16 @@ const component = (editor: Editor) => {
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
-    line-height: 140%; /* 14px */
+    line-height: 140%;
     margin-bottom: 5px;
   }
 
   .${classPrefix}-image-container {
     margin-top: 0;
-    column-gap: 5px;
+    justify-items: space-between;
+    flex-wrap: unset;
+    flex-direction: row;
+    gap: 0px;
   }
 }
 
