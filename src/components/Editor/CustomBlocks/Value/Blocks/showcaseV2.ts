@@ -156,7 +156,6 @@ const showcaseV2Component = (editor: Editor) => {
                     flex-direction: column;
                     padding-top: 95px;
                     padding: 0 114px;
-                    max-height: 800px;
                     font-family: Inter, sans-serif;
                   }
 
@@ -400,9 +399,9 @@ const showcaseV2Component = (editor: Editor) => {
                   }
                   @media (max-width: 425px) {
                     .${classPrefix}-section {
-                      padding: 0 20px;
+                      padding: 0 12px;
+                      padding-bottom: 70px;
                     }
-                  
                     .${classPrefix}-cardNumber {
                       white-space: initial;
                       padding: 0 20px;
@@ -413,32 +412,64 @@ const showcaseV2Component = (editor: Editor) => {
                     }
                   
                     .${classPrefix}-cardsWrapper {
-                      max-width: 85%;
+                      max-width: unset;
                       margin: 40px 0;
+                    }
+                    .${classPrefix}-cardsWrapper:first-child {
+                      margin-bottom: 65px;
+                    }
+                    .${classPrefix}-cardsWrapper:last-child {
+                      margin-top: 45px;
                     }
                   
                     .${classPrefix}-cards {
-                      flex-direction: column;
                       align-items: stretch;
-                      gap: 40px;
+                      gap: 0px;
+                      justify-content: space-between;
                     }
                   
                     .${classPrefix}-card {
-                      width: 100%;
-                      max-height: 397px;
-                      margin-left: 43px;
+                      margin: 0;
+                      width: 110px;
+                      height: 110px;
                     }
                   
                     .${classPrefix}-imageWrapper {
                       padding: 0px;
+                      max-width: 100%;
+                      width: 110px;
+                      height: 110px;
                     }
-                  
                     .${classPrefix}-img {
                       margin-bottom: 10px;
                     }
-
+                    .${classPrefix}-image {
+                      width: 110px;
+                      height: 110px;
+                    }
+                    .${classPrefix}-cardRounded {
+                      width: 120px;
+                      height: 120px;
+                    }
+                
                     .${classPrefix}-imageWrapperRounded {
-                      margin-left: 30px;
+                      margin-left: 40px;
+                      width: 120px;
+                      height: 120px;
+                    }
+                    .${classPrefix}-uniqueProduct {
+                      font-size: 17px;
+                      width: unset;
+                    }
+                    .${classPrefix}-descWrapper > p {
+                      font-size: 10px;
+                      width: unset;
+                    }
+                    .${classPrefix}-descWrapper {
+                      margin-top: -40px;
+                    }
+                    .${classPrefix}-descWrapper > p:first-child {
+                      font-size: 13px;
                     }
                   }
                   
