@@ -280,7 +280,8 @@ const shopByOfferVal3Component = (editor: Editor) => {
                   }
                   @media (max-width: 425px) {
                     .${classPrefix}-section {
-                      padding: 0 20px;
+                      padding: 49px 12px 54px;
+                      padding-left: 25px;
                     }
                   
                     .${classPrefix}-cardNumber {
@@ -291,44 +292,58 @@ const shopByOfferVal3Component = (editor: Editor) => {
                     .${classPrefix}-column {
                       width: 100%;
                     }
+                    .${classPrefix}-title {
+                      margin: 0px;
+                      font-size: 26px;
+                      font-style: normal;
+                      font-weight: 600;
+                      line-height: 35px;
+                      margin-bottom: 51px;
+                    }
                   
                     .${classPrefix}-cardsWrapper {
                       max-width: 100%;
-                      margin: 40px 0;
+                      margin: 0;
                     }
                   
                     .${classPrefix}-cards {
-                      flex-direction: column;
-                      align-items: stretch;
-                      gap: 40px;
-                      margin-left: 37px;
+                      gap: 10px;
+                      margin-left: 0px;
+                      justify-content: space-between;
                     }
                   
                     .${classPrefix}-card {
-                      width: 100%;
-                      margin-bottom: 67px;
+                      margin-bottom: 0px;
+                      margin-right: 0px;
+                      max-width: 105px;
+                      gap: 10px;
+                      border-radius: 4px;
                     }
                   
                     .${classPrefix}-img {
                       margin-bottom: 10px;
                     }
-                  }
-
-                  @media (max-width: 768px) {
-                    .${classPrefix}-section {
-                      align-items: center;
-                      background-color: #fff;
-                      display: block;
-                      padding: 20px 24px;
-                      max-height: 700px;
-                      margin-top: 20px;
+                    .${classPrefix}-image {
+                      width: 105px;
+                      height: 84px;
+                      border-radius: 4px;
                     }
-        
-                    .${classPrefix}-title {
-                      width: auto;
+                    .${classPrefix}-offerCircle {
+                      width: 40px;
+                      height: 40px;
+                      top: -17px;
+                      left: -16px;
+                    }
+                    .${classPrefix}-descWrapper > p  {
+                      font-size: 8px;
+                    }
+                    .${classPrefix}-descWrapper {
+                      padding-bottom: 13px;
+                    }
+                    .${classPrefix}-offerCircle > p {
+                      font-size: 8px;
                     }
                   }
-                  
                 `,
       },
     },
