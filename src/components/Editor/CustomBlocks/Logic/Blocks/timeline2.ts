@@ -53,7 +53,7 @@ const timeline2Component = (editor: Editor) => {
               Product's Measurable results
             </p>
           </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="750" height="2" viewBox="0 0 750 2" fill="none">
+          <svg class="${classPrefix}-horizontalLine" xmlns="http://www.w3.org/2000/svg" width="750" height="2" viewBox="0 0 750 2" fill="none">
             <path d="M0 1L750 1" stroke="#999999" stroke-width="2" />
           </svg>
           <div class="${classPrefix}-cardsWrapper">
@@ -269,6 +269,41 @@ const timeline2Component = (editor: Editor) => {
           font-weight: 600;
           line-height: normal;
           width: 567px;
+        }
+        @media (max-width: 400px) {
+          .${classPrefix}-section {
+            max-width: 390px;
+            margin-bottom: 42px;
+          } 
+          .${classPrefix}-headerText {
+            font-size: 26px;
+          } 
+          .${classPrefix}-horizontalLine {
+            max-width: 365px;
+            margin: 0 10px;
+          } 
+          .${classPrefix}-cardLeft {
+            padding-top: 41px;
+          } 
+          .${classPrefix}-spacerRight {
+            margin-top: 135px;
+          } 
+          .${classPrefix}-descWrapper, .${classPrefix}-descWrapperRight {
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            width: 102px;
+          } 
+          .${classPrefix}-descWrapper > p, .${classPrefix}-descWrapperRight > p {
+            margin-bottom: 0;
+          } 
+          .${classPrefix}-imageWrapper > svg {
+            width: 130px;
+          } 
+          .${classPrefix}-image , .${classPrefix}-imageRight {
+              width: 89px;
+              height: 89px;
+          } 
         }
       `,
       },
