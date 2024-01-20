@@ -167,23 +167,9 @@ const component = (editor: Editor) => {
           line-height: 140%;
           }
 
-          @media (max-width: 768px) {
+          @media (max-width: 480px) {
           .${classPrefix}-section {
-          padding: 2rem 1rem;
-          }
-
-          .${classPrefix}-container {
-          width: auto;
-          }
-
-          .${classPrefix}-subheading-wrapper {
-          margin: 0 auto 36px auto;
-          }
-          }
-
-          @${classPrefix}-media (max-width: 480px) {
-          .${classPrefix}-section {
-          padding: 1.8rem 1rem;
+          padding: 36px 35px 48px;
           }
 
           .${classPrefix}-container {
@@ -192,16 +178,18 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-section-heading {
           color: #000;
-          font-family: Inter, sans-serif;
           font-size: 18px;
           font-style: normal;
           font-weight: 500;
-          line-height: 140%; /* 25.2px */
-          text-align: left;
+          line-height: 140%;
           }
 
           .${classPrefix}-sub-heading {
           text-align: left;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%; 
           }
 
           .${classPrefix}-grey-bar {
@@ -215,7 +203,8 @@ const component = (editor: Editor) => {
           }
 
           .${classPrefix}-benefits-wrapper {
-          column-gap: 50px;
+          column-gap: 0px;
+          justify-content: space-between;
           }
 
           .${classPrefix}-benefit-item {
@@ -229,7 +218,7 @@ const component = (editor: Editor) => {
           font-size: 13px;
           font-style: normal;
           font-weight: 400;
-          line-height: 140%; /* 18.2px */
+          line-height: 140%;
           }
 
           .${classPrefix}-item-sub-heading {
@@ -239,13 +228,13 @@ const component = (editor: Editor) => {
           font-size: 10px;
           font-style: normal;
           font-weight: 400;
-          line-height: 140%; /* 18.2px */
+          line-height: 140%; 
           }
 
           .${classPrefix}-image {
-          width: 35px;
-          height: 35px;
-          margin-bottom: 10px;
+            width: 35px;
+            height: 35px;
+            margin-bottom: 10px;
           }
           }
         `,
