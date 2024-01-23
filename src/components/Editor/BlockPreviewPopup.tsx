@@ -22,9 +22,12 @@ const BlockPreviewPopup: React.FC<BlockPreviewPopupProps> = ({blockSequence, han
     var totalBlocks=blocks.length;
     for(var index=0;index<blocks.length;index++) {
         var i=blocks[index].trim().charAt(0);
-        if(uniqueBlocks.indexOf(i)==-1){
+        if(i!='S' && uniqueBlocks.indexOf(i)==-1){
             uniqueBlocks.push(i);
             uniqueBlocksCount.push(0);
+        }
+        if(i=='S') {
+          totalBlocks--;
         }
     }
     for(var index=0;index<blocks.length;index++) {
@@ -143,8 +146,8 @@ const BlockPreviewPopup: React.FC<BlockPreviewPopupProps> = ({blockSequence, han
                     </button>
                 </div>
                 <p className="f25">Hi {cachedAuthUser?.attributes?.givenName}!</p>
-                <p className="f30">Our experts have built your page for maximum pursuasion</p>
-                <p className="f60">Its built with &nbsp;
+                <p className="f30">Our experts have built your page for maximum persuasion</p>
+                <p className="f60">It's built with &nbsp;
                 {
                 uniqueBlocksCount.length && uniqueBlocksCount.map((count, index) => (
                 <span key={index} className={getSpanStyle(uniqueBlocks[index])}>{count}% {getBlockName(uniqueBlocks[index])},</span>                            
