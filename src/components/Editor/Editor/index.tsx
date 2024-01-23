@@ -143,12 +143,6 @@ export default observer(function EditorApp({ fileID }: AppProps) {
       if(!blockManagerStore.isOpen && !appEditorStore.isInPreview){
         blockManagerStore.toggleOpen();
       }        
-      // Your update logic here
-      console.log('Component selected:', component);
-      // console.log('Component selected:', editor);
-      //grapesjs.editors[0] = editor
-      //setEditor(editor)
-      // Update your editor instance or perform other actions
     });
 
     editor.Commands.add("saveProject", {
