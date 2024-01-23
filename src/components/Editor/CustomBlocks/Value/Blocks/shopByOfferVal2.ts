@@ -53,7 +53,7 @@ const component = (editor: Editor) => {
                 <div class="${classPrefix}-box">
                   <span class="${classPrefix}-box-heading">FROM</span>
                   <h1 class="${classPrefix}-box-text">
-                    <span class="${classPrefix}-supertext">₹</span>
+                    <span class="${classPrefix}-supertext">$</span>
                     99
                   </h1>
                   <span class="${classPrefix}-box-footer-text">ONLY</span>
