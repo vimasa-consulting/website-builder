@@ -68,6 +68,9 @@ export default observer(function EditorApp({ fileID }: AppProps) {
     editor.Commands.add("publishProject", {
       run(editor, sender) {
         console.log('publish project');
+        if(blockManagerStore.isOpen){
+          blockManagerStore.toggleOpen();
+        }
         // open a popup and pass editor as props?
         // const container = document.querySelector("#customModalPopup");
         const savePopupContent = document.querySelector("#savePopupContent")
@@ -145,9 +148,12 @@ export default observer(function EditorApp({ fileID }: AppProps) {
       }        
     });
 
-    editor.Commands.add("saveProject", {
+    editor.Commands.add("saveProject", {      
       run(editor, sender) {
         // open a popup and pass editor as props?
+        if(blockManagerStore.isOpen){
+          blockManagerStore.toggleOpen();
+        }
         console.log('saving project');
         const savePopupContent = document.querySelector("#savePopupContent")
         const checkMarkContent = document.querySelector("#checkMarkContent")
@@ -214,12 +220,15 @@ export default observer(function EditorApp({ fileID }: AppProps) {
 
     editor.Commands.add("core:preview", {
       run(editor, sender) {
+        if(blockManagerStore.isOpen){
+          blockManagerStore.toggleOpen();
+        }
         appEditorStore.setLeftSidebarSize("0px");
         appEditorStore.setPreview(true);
         blockManagerStore.setOpen(false);
         appEditorStore.setSelectingTarget(true)
         layerManagerStore.setOpen(false);
-        setShowSlackAndHelp(false);
+        setShowSlackAndHelp(false);        
       },
       stop() {
         appEditorStore.setLeftSidebarSize("300px");
@@ -242,6 +251,9 @@ export default observer(function EditorApp({ fileID }: AppProps) {
     editor.Commands.add("openPersuasiveBlocks", {
       run(editor, sender) {
         // open a popup and pass editor as props?
+        if(blockManagerStore.isOpen){
+          blockManagerStore.toggleOpen();
+        }
         const container = document.querySelector("#customModalPopup");
         setShowPersuasiveBlocks(true)
         editor.Modal.open({

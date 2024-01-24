@@ -38,7 +38,7 @@ export default observer(function ExistingDesignManager() {
             </span>
             <GridItem className='mt-[36px]'>
                 <CardTitle
-                    title={"Styles"}
+                    title={""}
                     onClose={toggleOpen}
                     className={`${pad.xyS} text-[18px] font-500`}
                 />
