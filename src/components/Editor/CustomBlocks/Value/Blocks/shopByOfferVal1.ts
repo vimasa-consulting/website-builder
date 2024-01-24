@@ -45,7 +45,7 @@ const component = (editor: Editor) => {
                 </div>
                 <div class="${classPrefix}-box">
                   <span class="${classPrefix}-box-heading">Starting from</span>
-                  <h1 class="${classPrefix}-box-text">₹99</h1>
+                  <h1 class="${classPrefix}-box-text">$99</h1>
                 </div>
                 <div class="${classPrefix}-box">
                   <span class="${classPrefix}-box-heading">Save up to</span>

@@ -5,6 +5,8 @@
     height: 100%;
     padding-top: 37px;
     .startEditingCta {
+      cursor: pointer;
+      position: fixed;
       padding: 10px;
       border-radius: 5px;
       background: linear-gradient(272deg, #A601F3 2.16%, #FE7126 99.58%), linear-gradient(272deg, #A601F3 45.04%, #FE7126 99.58%);
@@ -144,6 +146,7 @@
       font-weight: bold;
       margin: 0px;
       padding-bottom: 5px;
+      margin-top: 110px;
     }
     .f30 {
       color:  #000;
