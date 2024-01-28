@@ -56,11 +56,7 @@ const solutionToUserPain1Component = (editor: Editor) => {
                     <div class="${classPrefix}-cards">
                       <div class="${classPrefix}-card">
                         <div class="${classPrefix}-imageWrapper">
-                          <img
-                            loading="lazy"
-                            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
-                            class="${classPrefix}-img"
-                          />
+                        <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                         </div>
                         <div class="${classPrefix}-cardTitle">
                           <div class="${classPrefix}-stepTitle">User Pain Point 1</div>
@@ -69,11 +65,7 @@ const solutionToUserPain1Component = (editor: Editor) => {
                       </div>
                       <div class="${classPrefix}-card">
                         <div class="${classPrefix}-imageWrapper">
-                          <img
-                            loading="lazy"
-                            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b7ef5cb8-3bda-4674-9dae-e74022fe2bef?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
-                            class="${classPrefix}-img"
-                          />
+                        <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                         </div>
                         <div class="${classPrefix}-cardTitle">
                         <div class="${classPrefix}-stepTitle">User Pain Point 2</div>
@@ -82,11 +74,7 @@ const solutionToUserPain1Component = (editor: Editor) => {
                       </div>
                       <div class="${classPrefix}-card">
                         <div class="${classPrefix}-imageWrapper">
-                          <img
-                            loading="lazy"
-                            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w, https/\/cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/6b20b8d1-1325-4de9-8e36-fa3aa996d650?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
-                            class="${classPrefix}-img"
-                          />
+                        <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                         </div>
                         <div class="${classPrefix}-cardTitle">
                           <div class="${classPrefix}-stepTitle">User Pain Point 3</div>
@@ -212,7 +200,7 @@ const solutionToUserPain1Component = (editor: Editor) => {
                     justify-content: center;
                   }
                   
-                  .${classPrefix}-img {
+                  .${classPrefix}-image-icon {
                     object-fit: contain;
                     object-position: center;
                     width: 45px;

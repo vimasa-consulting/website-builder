@@ -82,7 +82,7 @@ const solutionToUserPain3Component = (editor: Editor) => {
                     </div>
                   </div>
                   <div class="${classPrefix}-imageWrapper">
-                    <img class="${classPrefix}-image" src="https://placehold.co/403x793" alt="Image" />
+                    <img class="${classPrefix}-image" src="/editor/component-icons/image-icon.png" alt="Image" />
                   </div>
                 </section>
                                 `,

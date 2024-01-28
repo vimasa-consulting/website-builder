@@ -38,14 +38,14 @@ const component = (editor: Editor) => {
             <div class="${classPrefix}-mainImage">
               <img 
                 loading="lazy"
-                src="https://placehold.co/"
+                src="/editor/component-icons/image-icon.png"
                 class="${classPrefix}-image"      
               />
             </div>
             <div class="${classPrefix}-subImage">
               <img 
                 loading="lazy"
-                src="https://placehold.co/"
+                src="/editor/component-icons/image-icon.png"
                 class="${classPrefix}-image"      
               />
             </div>
