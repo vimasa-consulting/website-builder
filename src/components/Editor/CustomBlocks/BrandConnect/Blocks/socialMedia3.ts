@@ -52,27 +52,27 @@ const socialMedia3Component = (editor: Editor) => {
                 <div class="${classPrefix}-wrapper">
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/240x408" alt="Placeholder"/>
+                    <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                     </div>
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/240x408" alt="Placeholder"/>
+                    <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                     </div>
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/240x408" alt="Placeholder"/>
+                    <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                     </div>
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/240x408" alt="Placeholder"/>
+                    <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                     </div>
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/240x408" alt="Placeholder"/>
+                    <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                     </div>
                   </div>
               </div>
@@ -205,8 +205,8 @@ const socialMedia3Component = (editor: Editor) => {
               }
               .${classPrefix}-image {
                 object-fit: fill;
-                width: 20px;
-                height: 20px;
+                width: 240px;
+                height: 408px;
               } 
               @media (max-width: 400px) {
                 .${classPrefix}-section {

@@ -38,7 +38,7 @@ const component = (editor: Editor) => {
                 <p class="${classPrefix}-text">Use a direct quote from the founder/head of a department. Give a human touch while representing your brand and the products. Let the founder(s) address the users directly, so that it builds a better connect.</p>
                 <p class="${classPrefix}-smallHeading">Founder Name</p>
                 </div>
-                <img class="${classPrefix}-image" src="https://placehold.co/384x445" alt="" />
+                <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
             </div>
           </section>
         `,
@@ -94,6 +94,8 @@ const component = (editor: Editor) => {
             position: absolute;
             bottom: -110px;
             right: 12px;
+            width: 384px;
+            height: 445px;
           }
 
           .${classPrefix}-content-wrapper {

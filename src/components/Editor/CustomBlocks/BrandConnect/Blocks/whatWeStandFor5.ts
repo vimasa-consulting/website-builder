@@ -35,16 +35,7 @@ const component = (editor: Editor) => {
             <div class="${classPrefix}-container">
               <div class="${classPrefix}-left-container">
                 <div class="${classPrefix}-imageWrapper">
-                  <img loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
-                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
-                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
-                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
-                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
-                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
-                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
-                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&"
-                    class="${classPrefix}-image" />
+                <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                 </div>
               </div>
               <div class="${classPrefix}-right-container">
@@ -56,19 +47,19 @@ const component = (editor: Editor) => {
                     your brand stand out from the competitors by positioning it uniquely.</h3>
                   <div class="${classPrefix}-pointer-wrapper">
                     <div class="${classPrefix}-point">
-                      <img class="${classPrefix}-point-img" src="https://img.icons8.com/ios-filled/30/checkmark--v1.png" alt="checkmark--v1" />
+                      <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                       <span class="${classPrefix}-point-text">Pointer 1</span>
                     </div>
                     <div class="${classPrefix}-point">
-                      <img class="${classPrefix}-point-img" src="https://img.icons8.com/ios-filled/30/checkmark--v1.png" alt="checkmark--v1" />
+                      <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                       <span class="${classPrefix}-point-text">Pointer 2</span>
                     </div>
                     <div class="${classPrefix}-point">
-                      <img class="${classPrefix}-point-img" src="https://img.icons8.com/ios-filled/30/checkmark--v1.png" alt="checkmark--v1" />
+                      <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                       <span class="${classPrefix}-point-text">Pointer 3</span>
                     </div>
                     <div class="${classPrefix}-point">
-                      <img class="${classPrefix}-point-img" src="https://img.icons8.com/ios-filled/30/checkmark--v1.png" alt="checkmark--v1" />
+                      <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                       <span class="${classPrefix}-point-text">Pointer 4</span>
                     </div>
                   </div>
@@ -164,12 +155,11 @@ const component = (editor: Editor) => {
             font-weight: 400;
             line-height: normal;
           }
-
-          .${classPrefix}-point-img {
+          .${classPrefix}-image-icon {
+            object-fit: fill;
             width: 30px;
             height: 25px;
           }
-
           @media (max-width: 400px) {
             .${classPrefix}-container {
               flex-direction: column-reverse;

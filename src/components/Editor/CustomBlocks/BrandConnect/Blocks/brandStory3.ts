@@ -62,7 +62,7 @@ const brandStory3Component = (editor: Editor) => {
         }
 
         .${classPrefix}-container {
-        width: 100%;
+        width: 1440px;
         max-width: 1117px;
         max-height: 595px;
         display: flex;
@@ -78,7 +78,7 @@ const brandStory3Component = (editor: Editor) => {
         border-radius: 10px;
         background: #fff;
         box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
-        width: 600px;
+        width: 643px;
         padding: 70px;
         }
 
@@ -88,9 +88,10 @@ const brandStory3Component = (editor: Editor) => {
         font-size: 40px;
         font-style: normal;
         font-weight: 600;
-        line-height: normal;
+        line-height: 48px;
         margin: 0;
-        width: 420px;
+        width: 432px;
+        top: 269px;
         }
 
         .${classPrefix}-left-panel-info {
@@ -170,7 +171,7 @@ const brandStory3Component = (editor: Editor) => {
 
         .${classPrefix}-video-1 {
         width: 100%;
-        height: 300px;
+        height: 595px;
         }
         .${classPrefix}-cardWrapper {
         width: 100%;

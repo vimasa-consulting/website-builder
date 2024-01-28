@@ -34,12 +34,12 @@ const component = (editor: Editor) => {
           <section class="${classPrefix}-section">
             <div class="${classPrefix}-container">
               <div class="${classPrefix}-leftContainer">
-                <img class="${classPrefix}-image" src="https://placehold.co/710x762" alt="" />
+                <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-big" />
               </div>
               <div class="${classPrefix}-rightContainer">
                 <div class="${classPrefix}-wrapper">
                   <div class="${classPrefix}-imageWrapper">
-                    <img class="${classPrefix}-img" src="https://placehold.co/366x366" alt="" /> 
+                    <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-small" />
                   </div>
                   <h1 class="${classPrefix}-heading">From the Founder</h1>
                   <p class="${classPrefix}-content">Use a direct quote from the founder/head of a department. Give a human touch while representing your brand and the products. Let the founder(s) address the users directly, so that it builds a better connect.</p>
@@ -75,10 +75,18 @@ const component = (editor: Editor) => {
           justify-content: center;
           align-items: center;
           }
-          .${classPrefix}-image {
-          max-width: 100%;
+          .${classPrefix}-image-big {
+            max-width: 100%;
+            width: 710px;
+            height: 762px;
           }
-          .${classPrefix}-img, .${classPrefix}-imageWrapper {
+          .${classPrefix}-image-small {
+            border-radius: 10px;
+            max-width: 100%;
+            width: 366px;
+            height: 366px;
+          }
+          ${classPrefix}-imageWrapper {
             border-radius: 10px;
             max-width: 100%;
           }

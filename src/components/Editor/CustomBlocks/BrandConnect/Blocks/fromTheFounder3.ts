@@ -33,7 +33,7 @@ const component = (editor: Editor) => {
         components: `
           <section class="${classPrefix}-section">
             <div class="${classPrefix}-container">
-              <img class="${classPrefix}-image" src="https://placehold.co/384x463" alt="" />
+              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
               <div class="${classPrefix}-content-wrapper">
                 <h1 class="${classPrefix}-heading">From the Founder</h1>
                 <p class="${classPrefix}-text">Use a direct quote from the founder/head of a department. Give a human touch while representing your brand and the products. Let the founder(s) address the users directly, so that it builds a better connect.</p>
@@ -89,8 +89,9 @@ const component = (editor: Editor) => {
           }
 
           .${classPrefix}-image {
-            border-radius: 10px;
             max-width: 100%;
+            width: 384px;
+            height: 463px;
           }
           @media (max-width: 770px) {
             .${classPrefix}-container {

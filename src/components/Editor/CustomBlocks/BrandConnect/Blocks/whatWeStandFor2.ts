@@ -35,26 +35,26 @@ const component = (editor: Editor) => {
           <h1 class="${classPrefix}-title">What you stand for in one bold line</h1>
           <p class="${classPrefix}-subTitle">Elaborate on your core belief & ideology as a brand. Mention specific pointers about what you stand for, and avoid being vague or generic.</p>
             <div class="${classPrefix}-container">
-              <img class="${classPrefix}-image" src="https://placehold.co/482x419" alt="Placeholder Image" />
+              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />              
               <div class="${classPrefix}-contentWrapper">
               <div class="${classPrefix}-content">
-               <img src="https://img.icons8.com/ios-glyphs/30/808080/checkmark--v2.png" alt="Check Mark" />
+              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                <p class="${classPrefix}-text">What you stand for 1</p>
               </div>
               <div class="${classPrefix}-content">
-               <img src="https://img.icons8.com/ios-glyphs/30/808080/checkmark--v2.png" alt="Check Mark" />
+              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                <p class="${classPrefix}-text">What you stand for 2</p>
               </div>
               <div class="${classPrefix}-content">
-               <img src="https://img.icons8.com/ios-glyphs/30/808080/checkmark--v2.png" alt="Check Mark" />
+              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                <p class="${classPrefix}-text">What you stand for 3</p>
               </div>
               <div class="${classPrefix}-content">
-               <img src="https://img.icons8.com/ios-glyphs/30/808080/checkmark--v2.png" alt="Check Mark" />
+              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                <p class="${classPrefix}-text">What you stand for 4</p>
               </div>
               <div class="${classPrefix}-content">
-               <img src="https://img.icons8.com/ios-glyphs/30/808080/checkmark--v2.png" alt="Check Mark" />
+              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                <p class="${classPrefix}-text">What you stand for 5</p>
               </div>
               </div>
@@ -151,6 +151,13 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-image {
             border-radius: 10px;
+            width: 482px;
+            height: 419px
+          }
+          .${classPrefix}-image-icon {
+            border-radius: 10px;
+            width: 58px;
+            height: 58px
           }
           @media (max-width: 400px) {
             .${classPrefix}-section {

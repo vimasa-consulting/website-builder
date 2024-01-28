@@ -34,15 +34,8 @@ const brandStory1Component = (editor: Editor) => {
         components: `
           <section class="${classPrefix}-section">
             <div class="${classPrefix}-panel">
-              <div class="${classPrefix}-imageWrapper">
-                <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
-                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
-                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
-                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
-                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
-                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
-                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
-                  https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
+              <div class="${classPrefix}-image-wrapper">
+                <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
               </div>
               <h1 class="${classPrefix}-title">Compelling Header for Your Brand Story</h1>
               <p class="${classPrefix}-description">Craft your brand story in a way that sounds authentic, evokes emotions in your users, and is consistent across channels.
@@ -52,15 +45,15 @@ const brandStory1Component = (editor: Editor) => {
         `,
         styles: `
         .${classPrefix}-section {
-          width: auto;
+          width: 1265px;
           align-items: center;
           margin-inline: auto;
           max-width: 1440px;
           padding: 83px 0px; 
         }
         .${classPrefix}-panel {
-          border-radius: 10px;
-          background-color: #d9d9d9;
+          border-radius: 10px;      
+          background-color: #E9E9E9;
           display: flex;
           flex-direction: column;
           padding-top: 84px;
@@ -72,18 +65,28 @@ const brandStory1Component = (editor: Editor) => {
           max-width: 1256px;
           margin: auto;
         }
-
-        .${classPrefix}-image {
+        .${classPrefix}-image-wrapper {
+          width: 90px;
+          height: 90px;
+          border-color: #AEAEAE;
+          display: flex;
+          border-radius: 50%;  
+          border-style: dotted;
+          border-width: 2px;   
+          align-self: center;   
+        }
+        .${classPrefix}-image-icon {
           aspect-ratio: 1;
           object-fit: contain;
           object-position: center;
-          width: 90px;
+          width: 45px;
+          margin: auto;
           mix-blend-mode: multiply;
           overflow: hidden;
           align-self: center;
           max-width: 100%;
           border-radius: 50%;
-          height: 90px;
+          height: 45px;
         }
 
         .${classPrefix}-title {

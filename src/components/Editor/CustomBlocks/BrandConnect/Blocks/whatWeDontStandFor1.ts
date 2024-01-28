@@ -35,26 +35,26 @@ const component = (editor: Editor) => {
           <h1 class="${classPrefix}-title">Header for What you don’t stand for</h1>
           <p class="${classPrefix}-subTitle">Give a short description positioning yourself against the bad things that may harm the customer.</p>
             <div class="${classPrefix}-container">
-              <img class="${classPrefix}-image" src="https://placehold.co/482x419" alt="Placeholder Image" />
+              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
               <div class="${classPrefix}-contentWrapper">
               <div class="${classPrefix}-content">
-               <img src="https://img.icons8.com/ios-glyphs/50/808080/multiply.png" alt="X Mark" />
+              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                <p class="${classPrefix}-text">What you don't stand for 1</p>
               </div>
               <div class="${classPrefix}-content">
-               <img src="https://img.icons8.com/ios-glyphs/50/808080/multiply.png" alt="X Mark" />
+                <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                <p class="${classPrefix}-text">What you don't stand for 2</p>
               </div>
               <div class="${classPrefix}-content">
-               <img src="https://img.icons8.com/ios-glyphs/50/808080/multiply.png" alt="X Mark" />
+              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                <p class="${classPrefix}-text">What you don't stand for 3</p>
               </div>
               <div class="${classPrefix}-content">
-               <img src="https://img.icons8.com/ios-glyphs/50/808080/multiply.png" alt="X Mark" />
+              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                <p class="${classPrefix}-text">What you don't stand for 4</p>
               </div>
               <div class="${classPrefix}-content">
-               <img src="https://img.icons8.com/ios-glyphs/50/808080/multiply.png" alt="X Mark" />
+              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                <p class="${classPrefix}-text">What you don't stand for 5</p>
               </div>
               </div>
@@ -148,9 +148,15 @@ const component = (editor: Editor) => {
             line-height: 140%; /* 21px */
             color: #000;
           }
-
           .${classPrefix}-image {
             border-radius: 10px;
+            width: 419px;
+            height: 419px
+          }
+          .${classPrefix}-image-icon {
+            border-radius: 10px;
+            width: 55px;
+            height: 55px
           }
           @media (max-width: 400px) {
             .${classPrefix}-section {
@@ -168,10 +174,6 @@ const component = (editor: Editor) => {
               font-weight: 400;
               line-height: 140%;
               margin-bottom: 40px;
-            }
-            .${classPrefix}-image {
-              width: 310px;
-              height: 277px;
             }
             .${classPrefix}-container {
               flex-direction: column;

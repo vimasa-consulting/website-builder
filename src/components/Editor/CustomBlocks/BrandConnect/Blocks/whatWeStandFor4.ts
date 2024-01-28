@@ -33,7 +33,7 @@ const component = (editor: Editor) => {
         components: `
           <section class="${classPrefix}-section">
             <div class="${classPrefix}-container">
-              <img class="${classPrefix}-image" src="https://placehold.co/595x412" alt="" />
+              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
               <div class="${classPrefix}-content-wrapper">
                 <span class="${classPrefix}-small-heading">Highlight</span>
                 <h1 class="${classPrefix}-heading">What you stand for in one bold line</h1>
@@ -98,6 +98,8 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-image {
           border-radius: 10px;
+          width: 595px;
+          height: 412px;
           }
 
           @media (max-width: 480px) {
@@ -115,11 +117,6 @@ const component = (editor: Editor) => {
           .${classPrefix}-content-wrapper {
           width: auto;
           gap: 0px;
-          }
-
-          .${classPrefix}-image {
-          width: 360px;
-          height: 250px;
           }
 
           .${classPrefix}-small-heading {

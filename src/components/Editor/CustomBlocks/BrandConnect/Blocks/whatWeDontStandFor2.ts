@@ -55,7 +55,7 @@ const component = (editor: Editor) => {
           
             </div>
             <div class="${classPrefix}-imgWrapper">
-              <img src="https://placehold.co/45x45" alt="Placeholder"/>
+            <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
             </div>
           </section>
         `,
@@ -156,6 +156,11 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-image {
             border-radius: 10px;
+          }
+          .${classPrefix}-image-icon {
+            border-radius: 10px;
+            width: 45px;
+            height: 45px
           }
           @media (max-width: 400px) {
             .${classPrefix}-section {

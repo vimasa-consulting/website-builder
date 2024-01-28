@@ -50,34 +50,34 @@ const socialMedia2Component = (editor: Editor) => {
                 <p class="${classPrefix}-socialMediaHandle">@yourhandlename</p>
                 <h1 class="${classPrefix}-title">Introduce your social media community</h1>
                 <div class="${classPrefix}-iconWrapper">
-                  <img src="https://img.icons8.com/ios-filled/50/808080/facebook-new.png" alt="Face Logo"/>
-                  <img src="https://img.icons8.com/ios-filled/50/808080/instagram-new--v1.png" alt="Insta Logo" />
-                  <img src="https://img.icons8.com/ios-filled/50/808080/pinterest.png" alt="Pintrest Logo"/>
+                  <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+                  <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+                  <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
                 </div>
                 <div class="${classPrefix}-wrapper">
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/240x240" alt="Placeholder"/>
+                      <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                     </div>
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/240x240" alt="Placeholder"/>
+                    <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                     </div>
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/240x240" alt="Placeholder"/>
+                    <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                     </div>
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/240x240" alt="Placeholder"/>
+                    <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                     </div>
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/240x240" alt="Placeholder"/>
+                    <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                     </div>
                   </div>
               </div>
@@ -210,8 +210,13 @@ const socialMedia2Component = (editor: Editor) => {
               }
               .${classPrefix}-image {
                 object-fit: fill;
-                width: 20px;
-                height: 20px;
+                width: 240px;
+                height: 240px;
+              }
+              .${classPrefix}-image-icon {
+                object-fit: fill;
+                width: 35px;
+                height: 35px;
               } 
               @media (max-width: 400px) {
                 .${classPrefix}-section {
