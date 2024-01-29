@@ -5,8 +5,7 @@ export default (dc, { linkModel, linkView, ...config }) => {
     const selectorAccordion = config.selectorAccordion;
   
     dc.addType(type, {
-      model: linkModel.extend(
-        {
+      model: {
           defaults: {
             ...linkModel.prototype.defaults,
             name: "Accordion",
@@ -17,12 +16,12 @@ export default (dc, { linkModel, linkView, ...config }) => {
             selectable: false,
             ...config.accordionProps,
           },
-  
           init() {
             const attrs = this.getAttributes();
             attrs[attrKey] = 1;
             this.setAttributes(attrs);
             classKey && this.addClass(classKey);
+            console.log("accordion init");
           },
   
           clone() {
@@ -30,15 +29,13 @@ export default (dc, { linkModel, linkView, ...config }) => {
             cloned.addAttributes({ [selectorAccordion]: "" });
             return cloned;
           },
-        },
-        {
           isComponent(el) {
             if (el.hasAttribute && el.hasAttribute(attrKey)) {
               return { type };
             }
           },
-        }
-      ),
-      view: linkView,
+          
+      },
+      view: linkView, 
     });
   };

@@ -22,6 +22,8 @@ import blocksBasicPlugin from "grapesjs-blocks-basic";
 import formsPlugin from "grapesjs-plugin-forms";
 import countdownPlugin from "grapesjs-component-countdown";
 import exportPlugin from "grapesjs-plugin-export";
+import iconPlugin from "@/components/Editor/CustomBlocks/Icon/index";
+import accordionPlugin from "@/components/Editor/CustomBlocks/Accordion/index";
 // @ts-ignore
 import tabsPlugin from "grapesjs-tabs";
 import customCodePlugin from "grapesjs-custom-code";
@@ -30,14 +32,10 @@ import touchPlugin from "grapesjs-touch";
 import parserPostCSSPlugin from "grapesjs-parser-postcss";
 import tooltipPlugin from "grapesjs-tooltip";
 import tuiImageEditorPlugin from "grapesjs-tui-image-editor";
-import typedPlugin from "grapesjs-typed";
 import styleBGPlugin from "grapesjs-style-bg";
-import presetWebpagePlugin from "grapesjs-preset-webpage";
 import navbar from "grapesjs-navbar";
 import BlockSearchPopup from '../BlockSearchPopup';
-import { usePlugin } from 'grapesjs'
-import grapesjsIcons from 'grapesjs-icons'
-import plugin from 'grapesjs-google-material-icons';
+
 
 //import plugin from '@silexlabs/grapesjs-fonts';
 //@ts-ignore
@@ -88,6 +86,7 @@ export default observer(function EditorApp({ fileID }: AppProps) {
         // build html content
         const htmlBody = editor.getHtml();
         const cssBody = editor.getCss();
+        const jsBody = editor.getJs();
         const fullHTML = `
         <!DOCTYPE html>
         <html>
@@ -95,9 +94,8 @@ export default observer(function EditorApp({ fileID }: AppProps) {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0" >
             <style>${cssBody}</style>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&v=1704404084845"/>
-            <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&v=1704404087635"/>
-            <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&v=1704404089108"/>
+            
+            <script type="text/javascript" src="https://code.iconify.design/1/1.0.7/iconify.min.js" ></script>
             <!-- Matomo -->
             <script>
               var _paq = window._paq = window._paq || [];
@@ -118,7 +116,9 @@ export default observer(function EditorApp({ fileID }: AppProps) {
               });
             </script>
             <!-- End Matomo Code -->
-
+            <script>
+            ${jsBody}
+            </script>
           </head>
           ${htmlBody}
         </html>`;
@@ -188,14 +188,7 @@ export default observer(function EditorApp({ fileID }: AppProps) {
     });
 
     editor.Commands.add("openProjectUrl", {
-      run(editor, sender) {
-        // open a popup and pass editor as props?
-        console.log('opening project url in a new tab');
-        /*editor.Modal.open({
-          title: "Saving",
-          content: 'Please wait!',
-        }).onceClose(() => editor.stopCommand("saveProject"));*/
-        // save file
+      run(editor, sender) {       
         getFile(fileID).then((response) => {
           console.log(response);
           if (response.data) {
@@ -208,13 +201,10 @@ export default observer(function EditorApp({ fileID }: AppProps) {
               window.open(url, "_blank");
             }
           }
-          //editor.Modal.close();
         }).catch((error: any) => {
-          //console.log('Failed to save', error);
         });
       },
       stop() {
-        //editor.Modal.close();
       },
     });
 
@@ -239,15 +229,6 @@ export default observer(function EditorApp({ fileID }: AppProps) {
       },
     });
 
-    /*editor.Storage.add('remote', {
-      async load() {
-        return await axios.get(`projects/${projectId}`);
-      },
-    
-      async store(data) {
-        return await axios.patch(`projects/${projectId}`, { data });
-      },
-    });*/
     editor.Commands.add("openPersuasiveBlocks", {
       run(editor, sender) {
         // open a popup and pass editor as props?
@@ -270,17 +251,9 @@ export default observer(function EditorApp({ fileID }: AppProps) {
     // @ts-ignore
     var fontOptions = fonts?.attributes?.options;
     fontOptions.push({ id: "Inter, sans-serif", label: "Inter" });
-    //console.log(fontOptions);
     // @ts-ignore
     fonts?.set("options", fontOptions);
-    /*
-    const item:any=localStorage.getItem(`gjsFile-${fileID}`)  
-    if(item){
-      const landingProject=JSON.parse(item);
-      editor.loadProjectData(landingProject);
-      editor.UndoManager.clear()  
-    }    
-    */
+    
     const item: any = localStorage.getItem(`wb-${fileID}`)
     if (item) {
       const landingProject = JSON.parse(item);
@@ -302,57 +275,10 @@ export default observer(function EditorApp({ fileID }: AppProps) {
     deviceManager.remove("mobileLandscape");
     const mobileDevice = deviceManager.get("mobilePortrait");
     mobileDevice?.set({ width: "400px" });
-    const desktopDevice = deviceManager.get("desktop");
-    //desktopDevice?.set({ width: "1440px" });
 
-
-    // Test infinite canvas
-    editor.onReady(() => {
-
-      /*if(editor.getComponents().length<2){
-        const url = new URL(window.location.href);
-        const block_sequence = url.searchParams.get("block_sequence") || "";
-        const blocks = atob(block_sequence).split(",");
-        blocks.forEach((item) => {
-          console.log(item.trim());
-          editor.addComponents({ type: item.trim() });
-        });
-      }*/
-
-      // editor.Canvas.setZoom(70);
-      // editor.Canvas.setCoords(-30, -30);
-      // const firstFrame = editor.Canvas.getFrames()[0];
-      // // Multi frames
-      // editor.Canvas.addFrame({
-      //   name: 'Mobile home page',
-      //   x: firstFrame.width + 100, // Position in canvas
-      //   // y: 0,
-      //   width: 320, // Frame dimensions
-      //   height: 420,
-      //   refFrame: firstFrame,
-      //   // device: 'DEVICE-ID',
-      // });
-      // editor.Canvas.fitViewport({ ignoreHeight: true, gap: 50 });
-    });
   }
 
-  const iconPluginOptions: PluginOptions = {
-    // see https://icon-sets.iconify.design/
-    collections: [
-      'ri', // Remix Icon by Remix Design,
-      'mdi', // Material Design Icons by Pictogrammers
-      'uim', // Unicons Monochrome by Iconscout
-      'streamline-emojis' // Streamline Emojis by Streamline
-    ],
-    modal: {
-      title: 'Icons'
-    }
-  }
-  const fontPluginOptions: PluginOptions = {
-    api_key: "AIzaSyAdJTYSLPlKz4w5Iqyy-JAF2o8uQKd1FKc"
-  };
-  const iconPluginOptions2: PluginOptions = {
-  }
+  
   const plugins = [
     blocksBasicPlugin,
     formsPlugin,
@@ -367,15 +293,9 @@ export default observer(function EditorApp({ fileID }: AppProps) {
     //typedPlugin,
     styleBGPlugin,
     //presetWebpagePlugin,
-    navbar,
-    //@ts-ignore
-    usePlugin(plugin,iconPluginOptions2),
-    //usePlugin(grapesjsIcons, iconPluginOptions),
-    //usePlugin(plugin, iconPluginOptions),
-    //usePlugin(plugin, fontPluginOptions)    
-    // TODO: Undo once fixed
-    // lorySlider,
-    // table,
+    navbar, 
+    iconPlugin,
+    accordionPlugin,
   ];
 
   const disablePreviewMode = () => {

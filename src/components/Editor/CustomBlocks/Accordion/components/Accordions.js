@@ -3,8 +3,7 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
     const attrAccordions = config.attrAccordions;
   
     dc.addType(type, {
-      model: defaultModel.extend(
-        {
+      model: {
           defaults: {
             ...defaultModel.prototype.defaults,
             copyable: false,
@@ -35,15 +34,15 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
                 body.mozMatchesSelector ||
                 body.msMatchesSelector;
   
-              // var hideContents = () => {
-              //   var accordionContents =
-              //     el.querySelectorAll(attrAccordionContent) || [];
-              //   if (accordionContents) {
-              //     for (i = 0; i < accordionContents.length; i++) {
-              //       accordionContents[i].style.display = "none";
-              //     }
-              //   }
-              // };
+              var hideContents = () => {
+                 var accordionContents =
+                   el.querySelectorAll(attrAccordionContent) || [];
+                 if (accordionContents) {
+                   for (i = 0; i < accordionContents.length; i++) {
+                     accordionContents[i].style.display = "none";
+                   }
+                 }
+              };
   
               var activeAccordion = (accordionEl) => {
                 var accordionContainers =
@@ -60,7 +59,7 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
                   }
                 }
   
-                // hideContents();
+                hideContents();
                 accordionEl.className += " " + classAccordionActive;
               };
   
@@ -73,6 +72,7 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
   
               el.addEventListener("click", (e) => {
                 var target = e.target;
+                console.log(e);
                 if (matches.call(target, attrAccordion)) {
                   if (
                     el.querySelector(target.getAttribute(selectorAccordion)).style
@@ -98,24 +98,24 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
             const attrs = this.getAttributes();
             attrs[config.attrAccordions] = 1;
             this.setAttributes(attrs);
+            console.log('init');
           },
-        },
-        {
           isComponent(el) {
             if (el.hasAttribute && el.hasAttribute(attrAccordions)) {
               return { type };
             }
           },
-        }
-      ),
-  
-      view: defaultView.extend({
+      },         
+      view: {
         init() {
           const comps = this.model.components();
           !comps.length && comps.add(config.template);
+          console.log("view init");
         },
   
-        onRender() {},
-      }),
+        onRender() {
+          console.log("render");
+        },
+      },
     });
   };

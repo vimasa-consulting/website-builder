@@ -197,7 +197,7 @@ export function getEditorOptions(projectType: ProjectType) {
       default: 'visible'
     };
 
-    const gjsOpts = {
+    const gjsOpts = {        
         undoManager: { trackSelection: false },
         showOffsets: true,
         cssIcons: '',
@@ -892,6 +892,7 @@ export function getEditorOptions(projectType: ProjectType) {
           }
         },
         canvas: {
+          scripts: ["https://code.iconify.design/1/1.0.7/iconify.min.js"],
           // infiniteCanvas: true,
           customSpots: {
             select: true,

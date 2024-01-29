@@ -7,8 +7,7 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
     const selectorAccordion = config.selectorAccordion;
   
     dc.addType(type, {
-      model: defaultModel.extend(
-        {
+      model: {
           defaults: {
             ...defaultModel.prototype.defaults,
             name: "Accordion Container",
@@ -25,6 +24,7 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
             this.setAttributes(attrs);
             classKey && this.addClass(classKey);
             this.listenTo(this, "add", this.onAdd);
+            console.log("accordion container init");
           },
   
           onAdd() {
@@ -45,16 +45,13 @@ export default (dc, { defaultModel, defaultView, ...config }) => {
               }
             }
           },
-        },
-        {
           isComponent(el) {
             if (el.hasAttribute && el.hasAttribute(attrKey)) {
               return { type };
             }
           },
-        }
-      ),
-  
-      view: defaultView,
+          
+        },
+        view: defaultView,     
     });
   };
