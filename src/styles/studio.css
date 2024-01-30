@@ -1364,14 +1364,18 @@ img,video {
     border-color: hsla(0,0%,100%,.25)
 }
 
+.border-ra {
+    border-color: #535353;
+}
+
 .border-transparent {
     border-color: transparent
 }
 
-.border-white {
+/* .border-white {
     --tw-border-opacity: 1;
     border-color: rgb(255 255 255/var(--tw-border-opacity))
-}
+} */
 
 .\!border-y-transparent {
     border-bottom-color: transparent!important;
