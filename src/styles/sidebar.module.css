@@ -10,6 +10,14 @@
   background: linear-gradient(272deg, #A601F3 2.16%, #FE7126 99.58%);
 }
 
+.plan-benefits {
+  padding: 0 15px;
+}
+
+.plan-benefits .content {
+    background-color: rgba(82, 82, 91, 1);
+}
+
 /* .navBar>div:after {
   content: "";
   background: rgb(77, 77, 77);

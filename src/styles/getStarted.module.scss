@@ -57,11 +57,12 @@
       }
       .smartBuilder {
         color: #fff;
-        background: linear-gradient(272deg, #A601F3 2.16%, #FE7126 99.58%);
+        background: linear-gradient(272deg, #a600f3 2.16%, #ff7225 99.58%);
         font-family: Inter, sans-serif;
         font-size: 20px;
         letter-spacing: 0.6px;
         font-weight: 400;
+        border-radius: 5px;
       }
       .buildIt {
         background-color: #fff;
@@ -72,6 +73,7 @@
         font-weight: 400;
         line-height: 25px;
         letter-spacing: 0.6px;
+        border-radius: 5px;
       }
     }
     .subHeader {
@@ -108,7 +110,7 @@
         letter-spacing: 0.6px;
         font-weight: 300;
         line-height: 25px;
-        letter-spacing: 0.6px;
+        letter-spacing: 0.9px;
       }
       .listElement {
         display: flex;
@@ -128,8 +130,8 @@
       line-height: 31.377px;
       letter-spacing: 0.48px;
       .partyEmoji {
-        width: 31px;
-        height: 31px;
+        width: 33px;
+        height: 33px;
         display: inline-block;
       }
     }
