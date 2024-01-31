@@ -170,7 +170,9 @@ const reviewsAndRatings2Component = (editor: Editor) => {
             justify-content: center;
         }
           .${classPrefix}-img {
-            object-fit: contain;
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
             overflow: hidden;
             align-self: center;
             max-width: 100%;
@@ -214,7 +216,7 @@ const reviewsAndRatings2Component = (editor: Editor) => {
             .${classPrefix}-img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: fill;
               } 
             .${classPrefix}-review {
                 color: #000;
