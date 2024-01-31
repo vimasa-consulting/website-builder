@@ -9,7 +9,7 @@
       position: fixed;
       padding: 10px;
       border-radius: 5px;
-      background: linear-gradient(272deg, #A601F3 2.16%, #FE7126 99.58%), linear-gradient(272deg, #A601F3 45.04%, #FE7126 99.58%);
+      background: linear-gradient(272deg, #a600f3 2.16%, #ff7225 99.58%), linear-gradient(272deg, #a600f3 45.04%, #ff7225 99.58%);
       outline: none;
       border: none;
       color: #FFF;
@@ -80,19 +80,19 @@
       color:  #26d626;
     }
     .color-2 {
-      color:  #FFE512;
+      color:  #ffe512;
     }
      .color-3 {
-      color:  #11EC7D;
+      color:  #11ec7d;
     }
      .color-4 {
-      color: #E064FF;
+      color: #e064ff;
     }
      .color-5 {
       color:  #FF971D;
     }
     .color-6 {
-      color:  #FF7FE5;
+      color:  #ff7fe5;
     }
     .color-7 {
       color:  #7E9CFF;
@@ -135,7 +135,7 @@
     }
     .f60 {
       font-size: 60px;
-      color: #d1cbcb;
+      color: #d2d2d2;
       margin: 0 auto;
       padding: 0px 0px 10px;
       font-weight: bold;
