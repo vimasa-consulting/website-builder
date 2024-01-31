@@ -19,6 +19,15 @@ export default function Sidebar() {
     setShowProfileModal(true);
   };
 
+  // useEffect(() => {
+  //   document.onclick = function (event) {
+  //     const e = event.target as HTMLTextAreaElement;
+  //     if (e?.classList.length === 5) {
+  //       setShowProfileModal(false);
+  //     }
+  //   };
+  // });
+
   return (
     <FlowbiteSidebar
       aria-label="sidebar"
