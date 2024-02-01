@@ -15,7 +15,7 @@ import { ThemeProvider, Theme } from "@aws-amplify/ui-react";
 import { Inter } from "next/font/google";
 
 import styles from "@/styles/authenticator.module.css";
-import awsExports from "../../../aws-exports";
+import awsExports from "@/aws-exports";
 import { ROUTES } from "@/services/NavigationService";
 import { postSignInActions } from "@/services/AuthService";
 
