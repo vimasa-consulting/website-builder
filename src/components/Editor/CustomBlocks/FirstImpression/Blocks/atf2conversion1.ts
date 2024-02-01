@@ -204,6 +204,7 @@ const atf2Conversion1Component = (editor: Editor) => {
             .${classPrefix}-rating-img {
               width: 18px;
               height: 18px;
+              color: #ddd;
             }
 
             .${classPrefix}-rating {
