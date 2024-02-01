@@ -4,7 +4,7 @@ import { useContext, useEffect } from "react";
 import { Amplify } from "aws-amplify";
 import { useRouter } from 'next/navigation'
 
-import awsExports from "../../../aws-exports";
+import awsExports from "@/aws-exports";
 import { ROUTES } from "@/services/NavigationService";
 import Loader from "@/components/Loader";
 import AuthProvider from "@/context/identity/AuthProvider";
