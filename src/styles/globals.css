@@ -196,3 +196,7 @@ body {
 #heatmapContainerIframe {
   background-color: white;
 }
+#igsj {
+  border-top: 1px solid grey !important;
+  border-left: 1px solid grey !important;
+}

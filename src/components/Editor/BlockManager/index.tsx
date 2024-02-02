@@ -68,7 +68,7 @@ export default observer(function BlockManager() {
             </GridItem>*/}
             <GridItem grow className={fx.scrollY}>
                 { allBlocksMap.map((cat, index) => (
-                        <Grid key={cat} className="grid grid-cols-2 gap-2 p-2">
+                        <Grid key={cat} className="grid grid-cols-2 gap-2 p-2 mb-[142px]">
                             {blocksMap[cat].map((block) => (
                                 
                                 <Grid key={block.getId()} draggable                                    
@@ -80,7 +80,7 @@ export default observer(function BlockManager() {
                                 >   
                                     <GridItem
                                     id={getBlockId(block)}
-                                    className={cx('cursor-pointer py-2 px-5 transition-colors h-[135px] w-full flex justify-center items-center bg-[#f3f5ff] mb-[6px]', cl.br)}>
+                                    className={cx('cursor-pointer py-2 px-5 transition-colors h-[135px] w-full flex justify-center items-center bg-[#f2f5ff] mb-[6px]', cl.br)}>
                                     <div className="block-media" >
                                         <img height='70px' src={getMedia(block)} />
                                     </div>

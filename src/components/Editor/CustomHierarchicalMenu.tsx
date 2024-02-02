@@ -18,13 +18,19 @@ function CustomHierarchicalMenu(props: UseHierarchicalMenuProps & Props) {
   const selectedCategoryHandler = (label: string) => {
     const categoryInfo = categoryStyleMapping[label] 
     setSelectedCategory(categoryInfo)
+    
+  }
+
+  const subCategoryHandler = (subCategory: any) => {
+    refine(subCategory.value)
+    setCurrentSelectedCategory(subCategory.label)
   }
 
   return (
     <>
       <ul>
         {items.map((item) => (
-          <li onClick={() => selectedCategoryHandler(item.label)} className={`${currentSelectedCategory === item.label ? 'font-semibold' : ''} my-[16px]`}  key={item.label}>
+          <li onClick={() => selectedCategoryHandler(item.label)} className={`my-[16px]`}  key={item.label}>
             <label className='text-black cursor-pointer' onClick={() => refine(item.value)}>
               <h2 className={`flex text-[24.004px] font-normal font-medium gap-[12px] items-center px-[22px] py-[6px] rounded-lg ${categoryStyleMapping[item.label].searchStyle} w-max text-[white]`}>
                 <img className='w-[24px] h-[24px]' src={`/editor/${categoryStyleMapping[item.label].searchIcon}`} alt={categoryStyleMapping[item.label].alt} />
@@ -36,8 +42,8 @@ function CustomHierarchicalMenu(props: UseHierarchicalMenuProps & Props) {
                 <ul className='text-[18px] font-400 px-[10px] '>
                   {
               item.data.map(subCategory => (
-                <li className="p-[14px] pl-[5px]"  key={subCategory.label}>
-                <label className='text-black cursor-pointer' onClick={() => refine(subCategory.value)}>
+                <li className={`p-[14px] pl-[5px] ${currentSelectedCategory === subCategory.label ? 'font-semibold' : ''}`}  key={subCategory.label}>
+                <label className={`text-black cursor-pointer`} onClick={() => subCategoryHandler(subCategory) }>
                   <span>{subCategory.label}</span>
                 </label>
               </li> 

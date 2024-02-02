@@ -2360,7 +2360,7 @@ letter-spacing: 0.4px;
 #blocks-image, #blocks-video, #blocks-customButton, #blocks-icon {    
     align-items: center;
     display: flex;
-    background: #f3f5ff;
+    background: #f2f5ff;
     border-radius: 6px;
     border: none;
     width: 137px;
@@ -2384,4 +2384,25 @@ letter-spacing: 0.4px;
 }
 .googleIconPicker__customization > div {
     width: 150px;
+}
+#igsj {
+    border-top: 1px solid grey !important;
+    border-left: 1px solid grey !important;
+}
+#topBarButton:nth-child(3) {
+    margin-left: 38px;
+}
+#topBarButton:nth-child(4) {
+    margin-right: 200px;
+}
+#fileName {
+    width: 175px;
+    border: none;
+    margin-right: 257px;
+}
+#fileName > input {
+    border: none;
+}
+#headerRightButtons {
+    margin-left: 12px;;
 }

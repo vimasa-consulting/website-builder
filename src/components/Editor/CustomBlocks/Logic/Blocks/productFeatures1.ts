@@ -200,6 +200,8 @@ const productFeatures1Component = (editor: Editor) => {
   padding: 37px 146px 78px 143px;
   margin: 0 auto;
   max-width: 1440px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media (max-width: 425px) {

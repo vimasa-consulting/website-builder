@@ -147,10 +147,10 @@ const BlockPreviewPopup: React.FC<BlockPreviewPopupProps> = ({blockSequence, han
                 </div>
                 <p className="f25">Hi {cachedAuthUser?.attributes?.givenName}!</p>
                 <p className="f30">Our experts have built your page for maximum persuasion</p>
-                <p className="f60">Its built with &nbsp;
+                <p className="f60">It's built with&nbsp;
                 {
                 uniqueBlocksCount.length && uniqueBlocksCount.map((count, index) => (
-                <span key={index} className={getSpanStyle(uniqueBlocks[index])}>{count}% {getBlockName(uniqueBlocks[index])},</span>                            
+                <span key={index} className={getSpanStyle(uniqueBlocks[index])}>{count}% {getBlockName(uniqueBlocks[index])}<span>{index !== uniqueBlocksCount.length - 1 && ','}</span>&nbsp;</span>                            
                 ))
             }
                 </p>
