@@ -23,7 +23,7 @@ export default function Navbar() {
       rounded={false}
       className="bg-black m-1 navbarBackground"
     >
-      <FlowbiteNavbar.Brand href={ROUTES.PROJECTS}>
+      <FlowbiteNavbar.Brand href={ROUTES.GET_STARTED}>
         {/* <Image
           src="https://flowbite.com/docs/images/logo.svg"
           className="mr-3 h-6 sm:h-9"

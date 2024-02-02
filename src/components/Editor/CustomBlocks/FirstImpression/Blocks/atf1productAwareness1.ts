@@ -41,11 +41,21 @@ const atf1ProductAwareness1Component = (editor: Editor) => {
             <div class="${classPrefix}-left-column">
               <div class="${classPrefix}-rating-wrapper">
                 <div class="${classPrefix}-image-wrapper">
-                  <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
-                  <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
-                  <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
-                  <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
-                  <img class="${classPrefix}-rating-img" src="https://img.icons8.com/ios-glyphs/30/000000/star--v1.png" alt="star--v1" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+              </span>
+              <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+              <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+            </span>
+            <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+            <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+          </span>
+          <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+          <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+        </span>
+        <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+        <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+      </span>
                 </div>
                 <span class="${classPrefix}-rating">4.5/5 (2400 reviews)</span>
               </div>
@@ -59,14 +69,7 @@ const atf1ProductAwareness1Component = (editor: Editor) => {
             </div>
             <div class="${classPrefix}-right-column">
               <div class="${classPrefix}-imageWrapper">
-                <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
-                                      https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
-                                      https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
-                                      https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
-                                      https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
-                                      https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
-                                      https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
-                                      https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
+              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
               </div>
             </div>
           </section>
@@ -101,6 +104,7 @@ const atf1ProductAwareness1Component = (editor: Editor) => {
           .${classPrefix}-rating-img {
             width: 25px;
             height: 25px;
+            color: #ddd;
           }
 
           .${classPrefix}-rating {
@@ -201,6 +205,7 @@ const atf1ProductAwareness1Component = (editor: Editor) => {
             .${classPrefix}-rating-img {
               width: 18px;
               height: 18px;
+              color: #ddd;
             }
 
             .${classPrefix}-rating {
