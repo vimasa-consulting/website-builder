@@ -2,9 +2,7 @@
 
 .gjs-mdl-dialog {
   max-width: unset;
-  margin-top: 22px;
   width: 1298px !important;
-  margin-top: 70px !important;
   border-radius: 18px !important;
   height: 755px;
   overflow: scroll;
@@ -59,6 +57,7 @@
             background-color: #f5f9ff;
             padding: 8px 12px;
             border: none;
+            padding-left: 42px;
           }
         }
       }
@@ -155,7 +154,7 @@
                 display: flex;
                 gap: 14px;
                 align-items: center;
-                padding: 12px 4px;
+                padding: 12px 0px;
                 justify-content: space-between;
                 h1 {
                   color: #000;
@@ -207,6 +206,7 @@
           background-color: #f5f9ff;
           padding: 8px 12px;
           border: none;
+          padding-left: 42px;
         }
       }
     }
@@ -292,7 +292,7 @@
               display: flex;
               gap: 14px;
               align-items: center;
-              padding: 12px 4px;
+              padding: 12px 0px;
               justify-content: space-between;
               h1 {
                 color: #000;
@@ -322,25 +322,25 @@
 }
 
 .search-trust {
-  background-color: #11EC7D;
+  background-color:  #11ec7d;
 }
 .search-logic {
-  background-color: #7E9CFF;
+  background-color: #7e9cff;
 }
 .search-brand-connect {
-  background-color: #FF971D;
+  background-color:  #ff971d;
 }
 .search-emotion {
-  background-color: #FF7FE5;
+  background-color: #ff7fe5;
 }
 .search-fomo {
-  background-color: #FFE512;
+  background-color: #ffe512;
 }
 .search-value {
-  background-color: #E064FF;
+  background-color: #e064ff;
 }
 .search-first-impression {
-  background-color: #919090;
+  background-color: #a3a3a3;
 }
 
 .trust {
@@ -383,4 +383,22 @@
   font-weight: 400;
   margin-right: 50px;
   box-shadow: none;
+  padding-left: 42px;
+  border-radius: 6px !important;
+  margin-right: 36px;
+}
+.ais-SearchBox-input::placeholder {
+  color: #BFC0C0;
+  font-family: Inter, sans-serif;
+  font-size: 17.003px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 39.808px; 
+  letter-spacing: 0.425px;
+}
+.ais-SearchBox-submit {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  display: block !important;
 }

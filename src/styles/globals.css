@@ -9,6 +9,20 @@
     format("opentype");
 }
 
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Regular.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-SemiBold.otf') format('otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
 /* ####### CSS RESET START ####### */
 /* https://andy-bell.co.uk/a-more-modern-css-reset/ */
 /* Box sizing rules */

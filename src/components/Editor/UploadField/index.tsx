@@ -7,12 +7,16 @@ export interface UploadFieldProps extends Omit<ButtonProps, 'onChange'> {
   multiple?: boolean
   accept?: string
   onChange?: React.ButtonHTMLAttributes<HTMLInputElement>["onChange"],
+  handleUpload: any
 };
 
-export default observer(function UploadField({ children, accept, onChange, multiple = true, ...rest }: UploadFieldProps) {
+export default observer(function UploadField({ children, accept, onChange, handleUpload, multiple = true, ...rest }: UploadFieldProps) {
     const i18nStore = useI18nStore();
     const inputRef = useRef<HTMLInputElement>(null);
-    const handleClick = () => inputRef.current?.click();
+    const handleClick = () => {
+      console.log('clicked')
+      inputRef.current?.click()
+    };
 
     return (
       <>

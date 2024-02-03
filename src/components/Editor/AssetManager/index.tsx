@@ -78,6 +78,16 @@ export default observer(function AssetManager({ assets, select, close }: Omit<As
         setItems(result)
       };
 
+      const handleUpload = async (ev: React.FormEvent<HTMLInputElement>) => {
+        console.log('handleUpload called', ev)
+        // @ts-ignore
+        await Assets.FileUploader().uploadFile(ev.nativeEvent);
+        const urlValue = assets[0].getSrc()
+        const addedAsset = Assets.add(urlValue);
+        select(addedAsset);
+        close();
+    }
+
     useEffect(() => {
         fetchRequest();
     },[])
@@ -97,6 +107,9 @@ export default observer(function AssetManager({ assets, select, close }: Omit<As
                     <button onClick={searchHandler} className='bg-[#a78bfa] cursor-pointer px-[10px] py-[2px] h-[30px] my-auto rounded-[3px] text-white'>Search</button>
                 </GridItem>
                 <GridItem>
+                    <UploadField accept="image/*" onChange={handleUpload} handleUpload={handleUpload}/>
+                </GridItem>
+                <GridItem>
                     <Popover overlay title={false} buttonAs="span"
                         handler={<Button variant="pr" size="m2">{i18nStore.t('assetManager.addUrl')}</Button>}
                     >
@@ -112,6 +125,7 @@ export default observer(function AssetManager({ assets, select, close }: Omit<As
                         )}
                     </Popover>
                 </GridItem>
+           
             </Grid>
             <Grid className={cx('h-[75vh]')} space="m" col nowrap>
                 {

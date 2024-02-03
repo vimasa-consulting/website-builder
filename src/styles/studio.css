@@ -12,6 +12,20 @@ input[type="search"]::-webkit-search-cancel-button {
     opacity: 0;
     pointer-events: none; */
   }
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Regular.otf') format('otf');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-SemiBold.otf') format('otf');
+    font-weight: 600;
+    font-style: normal;
+  }
   
   .bg-checker {
       background-color: var(--bg-checker-color);

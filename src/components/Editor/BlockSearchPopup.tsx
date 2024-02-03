@@ -25,6 +25,22 @@ const initialUIState = {
   },
 };
 
+function SubmitIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+      <g clip-path="url(#clip0_608_3069)">
+      <path d="M9.375 9.375L13.125 13.125M6.25 10.625C3.83375 10.625 1.875 8.66625 1.875 6.25C1.875 3.83375 3.83375 1.875 6.25 1.875C8.66625 1.875 10.625 3.83375 10.625 6.25C10.625 8.66625 8.66625 10.625 6.25 10.625Z" stroke="#C0C0C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <defs>
+      <clipPath id="clip0_608_3069">
+      <rect width="15" height="15" fill="white"/>
+      </clipPath>
+      </defs>
+    </svg>
+  );
+}
+
+
 const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) => {
   const [selectedCategory, setSelectedCategory] = useState<any>(categoryStyleMapping['Brand Connect'])
   const [categorySelected, setCategorySelected] = useState(false)
@@ -80,7 +96,7 @@ const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) =>
         <InstantSearch searchClient={searchClient} indexName="blocks_list_new" initialUiState={initialUIState}>
           <div className="leftSection">            
               <div className="searchSection">
-                <SearchBox placeholder='Search'/>
+                <SearchBox  placeholder='Search'  submitIconComponent={SubmitIcon}/>
               </div>
               <div className="refinementList text-black bg-white">
                 <ConnectedCustomHierarchicalMenu 
