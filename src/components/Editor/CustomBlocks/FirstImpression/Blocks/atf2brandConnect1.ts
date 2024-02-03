@@ -46,14 +46,9 @@ const atf2BrandConnect1Component = (editor: Editor) => {
               </div>
               <div class="${classPrefix}-right-column">
                 <div class="${classPrefix}-imageWrapper">
-                  <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
-                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
-                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
-                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
-                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
-                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
-                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
-                            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+              </span>
                 </div>
               </div>
             </div>
@@ -131,6 +126,12 @@ const atf2BrandConnect1Component = (editor: Editor) => {
               max-width: 100%;
             }
 
+            .${classPrefix}-rating-img {
+              width: 25px;
+              height: 25px;
+              color: #ddd;
+            }
+
             @media only screen and (min-width: 601px) and (max-width: 768px) {
               .${classPrefix}-section {
                 height: auto;
@@ -168,6 +169,12 @@ const atf2BrandConnect1Component = (editor: Editor) => {
                 padding: 2rem;
                 width: auto;
                 align-items: center;
+              }
+
+              .${classPrefix}-rating-img {
+                width: 18px;
+                height: 18px;
+                color: #ddd;
               }
 
               .${classPrefix}-h1 {
