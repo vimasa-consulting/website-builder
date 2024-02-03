@@ -89,6 +89,18 @@ const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) =>
         </article>
         );
     }
+    function menuSort(a:any, b:any) {
+      var aCategory=a.path.split(">")[0].trim();
+      var bCategory=b.path.split(">")[0].trim();
+      var ordererdList=['First Impression', 'Logic', 'Emotion', 'Urgency', 'Value', 'Trust', 'Brand Connect', 'User Actions'];
+      console.log(ordererdList.indexOf(aCategory),ordererdList.indexOf(bCategory));
+      var first=ordererdList.indexOf(aCategory);
+      var second=ordererdList.indexOf(bCategory);
+      if(first==second) return 0;
+      if(first>second) return 1;
+      if(first<second) return -1;
+      return 1;
+    }
 
     return (
         <div id="customModalPopup">
@@ -104,7 +116,7 @@ const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) =>
                     "heirarchy.category",
                     "heirarchy.subcategory"
                   ]}
-                  sortBy={['name']}
+                  sortBy={menuSort}
                   setSelectedCategory={setSelectedCategory}
                   />
               </div>            
