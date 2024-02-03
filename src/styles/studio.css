@@ -2420,3 +2420,24 @@ letter-spacing: 0.4px;
 #headerRightButtons {
     margin-left: 12px;;
 }
+.search-box {
+    position: relative;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+  }
+  .border-bottom-dashed-grey {
+    border-bottom: 1px dashed grey;
+  }

@@ -83,7 +83,7 @@ const lang = {
         pages: 'Pages',
     },
     assetManager: {
-        addUrl: 'Add URL',
+        addUrl: 'Insert Image URL',
     },
     blockManager: {
         blocks: 'Blocks',
