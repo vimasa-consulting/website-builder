@@ -95,20 +95,20 @@ const atf1Conversion3Component = (editor: Editor) => {
             <div class="${classPrefix}-three-column-wrapper">
               <div class="${classPrefix}-benefits-wrapper">
               <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
-                <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
               </span>
 
                 <span class="${classPrefix}-benefits-text">Brand Benefit 1</span>
               </div>
               <div class="${classPrefix}-benefits-wrapper">
                 <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
-                  <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
                 </span>
                 <span class="${classPrefix}-benefits-text">Brand Benefit 2</span>
               </div>
               <div class="${classPrefix}-benefits-wrapper">
                 <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
-                  <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
                 </span>
 
                 <span class="${classPrefix}-benefits-text">Brand Benefit 3</span>
