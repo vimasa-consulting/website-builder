@@ -42,46 +42,23 @@ const atf2Conversion2Component = (editor: Editor) => {
                 <div class="${classPrefix}-left-column">
                   <div class="${classPrefix}-rating-wrapper">
                     <div class="${classPrefix}-image-wrapper">
-                      <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-rating-img" />
-                      <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-rating-img" />
-                      <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-rating-img" />
-                      <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-rating-img" />
-                      <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-rating-img" />
+                    <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                        <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                      </span>
+                 
+                 
+                      <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                      <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                    </span>
+                    <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                  <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                  <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                </span>
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+              </span>
                     </div>
                     <span class="${classPrefix}-rating">4.5/5 (2400 reviews)</span>
                   </div>
@@ -92,29 +69,30 @@ const atf2Conversion2Component = (editor: Editor) => {
                   </h2>
                   <div class="${classPrefix}-list-wrapper">
                     <div class="${classPrefix}-list-item">
-                      <img class="${classPrefix}-item-image" src="https://img.icons8.com/ios/50/6C6C6C/checked--v1.png" alt="checked--v1" />
+                      <<span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                      <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                    </span>
                       <span class="${classPrefix}-item-content">Mention a point to bring trust</span>
                     </div>
                     <div class="${classPrefix}-list-item">
-                      <img class="${classPrefix}-item-image" src="https://img.icons8.com/ios/50/6C6C6C/checked--v1.png" alt="checked--v1" />
+                    <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  </span>
                       <span class="${classPrefix}-item-content">Mention a point to bring trust</span>
                     </div>
                     <div class="${classPrefix}-list-item">
-                      <img class="${classPrefix}-item-image" src="https://img.icons8.com/ios/50/6C6C6C/checked--v1.png" alt="checked--v1" />
+                    <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  </span>
                       <span class="${classPrefix}-item-content">Mention a point to bring trust</span>
                     </div>
                   </div>
                   <a class="${classPrefix}-offer-cta">Offer based CTA ></a>
                 </div>
                 <div class="${classPrefix}-right-column">
-                  <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
-                                        https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+              </span>
                 </div>
               </div>
             </section>
@@ -160,6 +138,7 @@ const atf2Conversion2Component = (editor: Editor) => {
         .${classPrefix}-rating-img {
           width: 25px;
           height: 25px;
+          color: #ddd;
         }
 
         .${classPrefix}-rating {
@@ -215,6 +194,12 @@ const atf2Conversion2Component = (editor: Editor) => {
           overflow: hidden;
           align-self: center;
           max-width: 100%;
+        }
+
+        .${classPrefix}-rating-img-tick {
+          width: 33px;
+          height: 33px;
+          color: #ccc;
         }
 
         .${classPrefix}-list-wrapper {
@@ -300,6 +285,13 @@ const atf2Conversion2Component = (editor: Editor) => {
           .${classPrefix}-rating-img {
             width: 18px;
             height: 18px;
+            color: #ddd;
+          }
+
+          .${classPrefix}-rating-img-tick {
+            width: 25px;
+            height: 25px;
+            color: #ccc;
           }
 
           .${classPrefix}-rating {
