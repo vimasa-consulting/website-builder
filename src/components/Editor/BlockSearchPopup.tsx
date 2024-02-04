@@ -96,7 +96,9 @@ const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) =>
       console.log(ordererdList.indexOf(aCategory),ordererdList.indexOf(bCategory));
       var first=ordererdList.indexOf(aCategory);
       var second=ordererdList.indexOf(bCategory);
-      if(first==second) return 0;
+      if(first==second) {
+        return String(a.path).localeCompare(String(b.path));
+      };
       if(first>second) return 1;
       if(first<second) return -1;
       return 1;
