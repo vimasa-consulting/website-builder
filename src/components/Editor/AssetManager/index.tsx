@@ -226,8 +226,8 @@ export default observer(function AssetManager({ assets, select, close }: Omit<As
                                     // onKeyDown={keyDownHandler}
                                 />
                                 <svg className="search-icon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 15 15" fill="none">
-                                    <g clip-path="url(#clip0_608_3069)">
-                                    <path d="M9.375 9.375L13.125 13.125M6.25 10.625C3.83375 10.625 1.875 8.66625 1.875 6.25C1.875 3.83375 3.83375 1.875 6.25 1.875C8.66625 1.875 10.625 3.83375 10.625 6.25C10.625 8.66625 8.66625 10.625 6.25 10.625Z" stroke="#C0C0C0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <g clipPath="url(#clip0_608_3069)">
+                                    <path d="M9.375 9.375L13.125 13.125M6.25 10.625C3.83375 10.625 1.875 8.66625 1.875 6.25C1.875 3.83375 3.83375 1.875 6.25 1.875C8.66625 1.875 10.625 3.83375 10.625 6.25C10.625 8.66625 8.66625 10.625 6.25 10.625Z" stroke="#C0C0C0" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
                                     </g>
                                     <defs>
                                     <clipPath id="clip0_608_3069">

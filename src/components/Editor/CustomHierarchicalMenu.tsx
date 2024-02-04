@@ -4,7 +4,8 @@ import { useHierarchicalMenu, UseHierarchicalMenuProps } from 'react-instantsear
 import categoryStyleMapping from './categoryStyleMapping';
 
 interface Props  {
-  setSelectedCategory: React.Dispatch<any>
+  setSelectedCategory: React.Dispatch<any>;
+  selectedCategory: any
 }
 
 function CustomHierarchicalMenu(props: UseHierarchicalMenuProps & Props) {
@@ -13,7 +14,7 @@ function CustomHierarchicalMenu(props: UseHierarchicalMenuProps & Props) {
     items,
     refine,
   } = useHierarchicalMenu(props);
-  const { setSelectedCategory } = props
+  const { setSelectedCategory, selectedCategory } = props
 
   const selectedCategoryHandler = (label: string) => {
     const categoryInfo = categoryStyleMapping[label] 
@@ -32,7 +33,7 @@ function CustomHierarchicalMenu(props: UseHierarchicalMenuProps & Props) {
         {items.map((item) => (
           <li onClick={() => selectedCategoryHandler(item.label)} className={`my-[14px]`}  key={item.label}>
             <label className='text-black cursor-pointer' onClick={() => refine(item.value)}>
-              <h2 className={`flex text-[24.004px] font-normal font-medium gap-[12px] items-center px-[22px] py-[6px] rounded-lg ${categoryStyleMapping[item.label].searchStyle} w-max text-[white]`}>
+              <h2 className={`flex text-[24.004px] font-normal font-medium gap-[12px] items-center px-[22px] py-[6px] rounded-lg ${categoryStyleMapping[item.label].searchStyle} w-full ${selectedCategory.category === item.label ? 'text-black' : 'text-white'}`}>
                 <img className='w-[24px] h-[24px]' src={`/editor/${categoryStyleMapping[item.label].searchIcon}`} alt={categoryStyleMapping[item.label].alt} />
                 {item.label}
                 </h2>

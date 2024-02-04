@@ -2407,12 +2407,12 @@ letter-spacing: 0.4px;
     margin-left: 38px;
 }
 #topBarButton:nth-child(4) {
-    margin-right: 200px;
+    margin-right: 10%;
 }
 #fileName {
     width: 175px;
     border: none;
-    margin-right: 257px;
+    margin-right: 10%;
 }
 #fileName > input {
     border: none;
