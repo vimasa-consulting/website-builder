@@ -40,7 +40,7 @@ export default function FileField({
           <GridItem grow className="overflow-hidden">
               <div className={cx("mb-2", fx.txtEllips)}>{valFilename}</div>
               <Button className="block" onClick={() => onOpen?.(value)} full>
-                { btnLabel || 'Select image' }
+                { btnLabel || 'Images' }
               </Button>
           </GridItem>
         </Grid>
