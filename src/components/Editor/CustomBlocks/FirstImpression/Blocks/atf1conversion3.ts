@@ -111,6 +111,8 @@ const atf1Conversion3Component = (editor: Editor) => {
                   <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
                 </span>
 
+                
+
                 <span class="${classPrefix}-benefits-text">Brand Benefit 3</span>
               </div>
             </div>
