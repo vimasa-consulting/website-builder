@@ -75,7 +75,6 @@ export default observer(function ActionButtons() {
     const layerManagerStore = useLayerManagerStore();
     const styleManagerStore = useStyleManagerStore();
     const t = (key: string) => i18nStore.t(`actions.${key}`);
-    const [fileName, setFileName] = useState(localStorage.getItem(`wb-active-filename`) || '')
     interface AssetDataUrl {
         mime: string,
         name: string,
@@ -288,8 +287,8 @@ export default observer(function ActionButtons() {
             
             id: 'download-code',
             cmd: () => exportProject(),
-            iconPath: '/editor/download.png',
-            title: '',
+            iconPath: '',
+            title: 'Download',
         },
         {
             id: 'save',
@@ -450,15 +449,13 @@ export default observer(function ActionButtons() {
             close();
         }
     }
-
-    const setActiveFileName = function(e: any){        
-        localStorage.setItem(`wb-active-filename`,e.target.value);
-        setFileName(e.target.value)
+    const fileName:any=localStorage.getItem(`wb-active-filename`); 
+    const setActiveFileName = function(newValue:string){        
+        localStorage.setItem(`wb-active-filename`,newValue);
     }
-
     const { isOpen, toggleOpen } = useBlockManagerStore();
     return (
-        <Grid space="s" items="center" justify="end" className={`${cx(pad.xyS2)} flex-nowrap`}>
+        <Grid space="s" items="center" justify="end" className={cx(pad.xyS2)}>
             {/*<GridItem>
                 <Tooltip title="Blocks">
                     <Button onClick={toggleOpen} className='flex'>
@@ -468,10 +465,10 @@ export default observer(function ActionButtons() {
                 </Tooltip>
             </GridItem>*/}
              {buttonsLeft.map(({ id, cmd, iconPath, disabled, options, title }) => (
-                <GridItem id="topBarButton" key={id}>
+                <GridItem key={id}>
                     <ButtonWithTooltip
                         id={id}
-                        className='flex items-center'
+                        className='flex'
                         active={Commands.isActive(cmd as string)}
                         onClick={toggleCommand(cmd, options)}
                         disabled={disabled ? disabled() : false}
@@ -488,12 +485,12 @@ export default observer(function ActionButtons() {
                     {(props) => <DeviceSelector {...props}/>}
                   </DevicesProvider>                  
             </GridItem>*/}
-            <GridItem id='fileName'>
-                <input type="text" value={fileName}
-                onChange={setActiveFileName}/>
+            <GridItem>
+                <InputField size="s" type="text" value={fileName}
+                onInput={setActiveFileName}/>
             </GridItem>            
             {buttons.map(({ id, cmd, iconPath, disabled, options, title }) => (
-                <GridItem id='headerRightButtons' key={id}>
+                <GridItem key={id}>
                     <ButtonWithTooltip
                         id={id}
                         className='flex'
@@ -503,16 +500,8 @@ export default observer(function ActionButtons() {
                         title={t(title)}
                         border={false}
                     >
-                        {
-                            id === 'download-code' ?
-                            <img width={35} height={25} src={iconPath} /> :
-                            (
-                                <>
-                                    <SvgIcon svg={iconPath}></SvgIcon>                        
-                                    <p className='px-1 m-auto font-[Inter,sans-serif]'>{title}</p>   
-                                </>
-                            )
-                        }
+                        <SvgIcon svg={iconPath}></SvgIcon>                        
+                        <GridItem className='px-1' grow>{title}</GridItem>   
                     </ButtonWithTooltip>
                 </GridItem>
             ))}
