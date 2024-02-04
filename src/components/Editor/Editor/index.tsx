@@ -295,7 +295,7 @@ export default observer(function EditorApp({ fileID }: AppProps) {
     //presetWebpagePlugin,
     navbar, 
     iconPlugin,
-    accordionPlugin,
+    //accordionPlugin,
   ];
 
   const disablePreviewMode = () => {

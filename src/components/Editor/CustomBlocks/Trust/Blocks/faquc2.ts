@@ -56,8 +56,7 @@ const faquc2Component = (editor: Editor) => {
               <div class="${classPrefix}-title">Frequently Asked Questions</div>
               <div class="${classPrefix}-accordion">
               <div>
-                <input type="radio" name="example_accordion" id="section1" class="${classPrefix}-input">
-                <label for="section1" class="${classPrefix}-label">Ask a question related to customer doubts or apprehensions</label>
+                <a class="${classPrefix}-label">Ask a question related to customer doubts or apprehensions</a>
                 <div class="${classPrefix}-content">
                   <p>Section #1</p>
                   <p>
@@ -68,8 +67,7 @@ const faquc2Component = (editor: Editor) => {
                 </div>
               </div>
               <div>
-                <input type="radio" name="example_accordion" id="section2" class="${classPrefix}-input">
-                <label for="section2" class="${classPrefix}-label">Ask a question related to customer doubts or apprehensions</label>
+                <a class="${classPrefix}-label">Ask a question related to customer doubts or apprehensions</a>
                 <div class="${classPrefix}-content">
                   <p>Section #2</p>
                   <p>
@@ -80,8 +78,7 @@ const faquc2Component = (editor: Editor) => {
                 </div>
               </div>
               <div>
-                <input type="radio" name="example_accordion" id="section3" class="${classPrefix}-input">
-                <label for="section3" class="${classPrefix}-label">Ask a question related to customer doubts or apprehensions</label>
+                <a class="${classPrefix}-label">Ask a question related to customer doubts or apprehensions</a>
                 <div class="${classPrefix}-content">
                   <p>Section #3</p>
                   <p>
@@ -92,9 +89,8 @@ const faquc2Component = (editor: Editor) => {
                 </div>
               </div>
               <div>
-              <input type="radio" name="example_accordion" id="section4" class="${classPrefix}-input">
-              <label for="section4" class="${classPrefix}-label">Ask a question related to customer doubts or apprehensions</label>
-              <div class="${classPrefix}-content">
+                <a class="${classPrefix}-label">Ask a question related to customer doubts or apprehensions</a>
+                <div class="${classPrefix}-content">
                 <p>Section #4</p>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sit reiciendis, ipsam quaerat,
@@ -104,8 +100,7 @@ const faquc2Component = (editor: Editor) => {
               </div>
             </div>
             <div>
-            <input type="radio" name="example_accordion" id="section5" class="${classPrefix}-input">
-            <label for="section5" class="${classPrefix}-label">Ask a question related to customer doubts or apprehensions</label>
+              <a class="${classPrefix}-label">Ask a question related to customer doubts or apprehensions</a>
             <div class="${classPrefix}-content">
               <p>Section #5</p>
               <p>
@@ -213,20 +208,7 @@ const faquc2Component = (editor: Editor) => {
             background: #ffffff;
             line-height: 1.6;
             font-size: 0.85em;
-            display: none;
             padding: 14px 20px;
-          }
-          
-          .${classPrefix}-input {
-            display: none;
-          }
-          
-          .${classPrefix}-input:checked ~ .${classPrefix}-content {
-            display: block;
-          }
-          
-          .${classPrefix}-input:checked ~ .${classPrefix}-label::after {
-            transform: translateY(-50%) rotate(0.5turn);
           }
 
           @media (max-width: 768px) {
@@ -270,6 +252,23 @@ const faquc2Component = (editor: Editor) => {
             }
           }
         `,
+        script() {
+          var el = this;
+          function toggleAll(){
+            el.querySelectorAll('a').forEach(function () {
+              var item=arguments[0];
+              item.nextSibling.style.display="none";
+            });  
+          }
+          toggleAll();
+          el.querySelectorAll('a').forEach(function () {
+            var item=arguments[0];            
+            item.addEventListener("click", function() {
+              toggleAll();
+              item.nextSibling.style.display="block";              
+            });
+          });
+        },
       },
     },
   });
