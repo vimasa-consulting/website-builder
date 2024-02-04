@@ -199,7 +199,20 @@ const faquc1Component = (editor: Editor) => {
         `,
         script() {
           var el = this;
-          console.log(el);
+          function toggleAll(){
+            el.querySelectorAll('a').forEach(function () {
+              var item=arguments[0];
+              item.nextSibling.style.display="none";
+            });  
+          }
+          toggleAll();
+          el.querySelectorAll('a').forEach(function () {
+            var item=arguments[0];            
+            item.addEventListener("click", function() {
+              toggleAll();
+              item.nextSibling.style.display="block";              
+            });
+          });
         },
       },
     },
