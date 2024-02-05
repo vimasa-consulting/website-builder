@@ -80,6 +80,7 @@ const atf1Conversion1Component = (editor: Editor) => {
             height: auto;
             max-width: 1440px;
             margin: auto;
+            background-color: #FFFFFF;
           }
 
           .${classPrefix}-left-column {

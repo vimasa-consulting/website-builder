@@ -129,14 +129,14 @@ const atf2Conversion1Component = (editor: Editor) => {
           }
 
           .${classPrefix}-offer-cta {
-            color: #000;
+            color: #fff;
             text-align: center;
             font-size: 25px;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
             padding: 10px 20px;
-            background: #d9d9d9;
+            background: #676767;
             border-radius: 8px;
           }
 

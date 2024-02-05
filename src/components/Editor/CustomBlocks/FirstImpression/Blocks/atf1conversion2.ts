@@ -99,6 +99,7 @@ const atf1Conversion2Component = (editor: Editor) => {
           margin-left: auto;
           margin-right: auto;
           max-width: 1440px;
+          background-color: #FFFFFF;
           height: auto;
         }
 
@@ -167,6 +168,7 @@ const atf1Conversion2Component = (editor: Editor) => {
           padding: 10px 36px;
           font-size: 18px;
           font-style: normal;
+          background: #d9d9d9;
           font-weight: 500;
           line-height: normal;
           margin-top: 40px;

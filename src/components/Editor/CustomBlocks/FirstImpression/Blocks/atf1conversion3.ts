@@ -124,6 +124,7 @@ const atf1Conversion3Component = (editor: Editor) => {
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
+  background: #FFFFFF;
 }
 
 .${classPrefix}-two-column-wrapper {
@@ -197,6 +198,7 @@ const atf1Conversion3Component = (editor: Editor) => {
   margin-top: 40px;
   border-radius: 8px;
   border: 1px solid transparent;
+  background: #d9d9d9;
 }
 
 .${classPrefix}-right-column {
