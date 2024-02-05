@@ -38,23 +38,33 @@ const component = (editor: Editor) => {
               <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />              
               <div class="${classPrefix}-contentWrapper">
               <div class="${classPrefix}-content">
-              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+             <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  </span>
                <p class="${classPrefix}-text">What you stand for 1</p>
               </div>
               <div class="${classPrefix}-content">
-              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+             <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  </span>
                <p class="${classPrefix}-text">What you stand for 2</p>
               </div>
               <div class="${classPrefix}-content">
-              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+             <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  </span>
                <p class="${classPrefix}-text">What you stand for 3</p>
               </div>
               <div class="${classPrefix}-content">
-              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+             <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  </span>
                <p class="${classPrefix}-text">What you stand for 4</p>
               </div>
               <div class="${classPrefix}-content">
-              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+             <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  </span>
                <p class="${classPrefix}-text">What you stand for 5</p>
               </div>
               </div>
@@ -96,6 +106,11 @@ const component = (editor: Editor) => {
             margin-top: 0;
             margin-bottom: 18px;
             color: #000;
+          }
+          .${classPrefix}-rating-img-tick {
+            width: 33px;
+            height: 33px;
+            color: #ccc;
           }
           .${classPrefix}-subTitle {
             max-width: 830px;
@@ -201,6 +216,11 @@ const component = (editor: Editor) => {
           }
 
           @media (max-width: 480px) {
+            .${classPrefix}-rating-img-tick {
+              width: 25px;
+              height: 25px;
+              color: #ccc;
+            }
           }
         `,
       },
