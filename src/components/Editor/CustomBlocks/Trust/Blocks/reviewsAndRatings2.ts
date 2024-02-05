@@ -55,11 +55,21 @@ const reviewsAndRatings2Component = (editor: Editor) => {
               </div>
                 <div class="${classPrefix}-descriptionContainer">
                 <div class="${classPrefix}-ratingsContainer">
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
                 </div>
                 <p class="${classPrefix}-review">“Insert a realistic & relatable customer quote here. Be specific with the pointers. Make the language resonate with your target audience.”</p>
                 <h3 class="${classPrefix}-customerName">Customer Name</h3>
@@ -92,6 +102,12 @@ const reviewsAndRatings2Component = (editor: Editor) => {
             gap: 105px;
             
         }
+                
+.${classPrefix}-rating-img {
+    width: 25px;
+    height: 25px;
+    color: #ddd;
+  }
         .${classPrefix}-card {
             display: flex;
             justify-content: center;
@@ -189,6 +205,12 @@ const reviewsAndRatings2Component = (editor: Editor) => {
             .${classPrefix}-section {
                 padding: 53px 26px 68px 34px;
             } 
+                    
+.${classPrefix}-rating-img {
+    width: 17px;
+    height: 17px;
+    color: #ddd;
+  }
             .${classPrefix}-reviewsContainer {
                 display: flex;
                 justify-content: center;

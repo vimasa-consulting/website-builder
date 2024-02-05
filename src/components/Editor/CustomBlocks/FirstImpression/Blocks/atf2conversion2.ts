@@ -69,7 +69,7 @@ const atf2Conversion2Component = (editor: Editor) => {
                   </h2>
                   <div class="${classPrefix}-list-wrapper">
                     <div class="${classPrefix}-list-item">
-                      <<span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                      <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
                       <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
                     </span>
                       <span class="${classPrefix}-item-content">Mention a point to bring trust</span>
@@ -90,8 +90,16 @@ const atf2Conversion2Component = (editor: Editor) => {
                   <a class="${classPrefix}-offer-cta">Offer based CTA ></a>
                 </div>
                 <div class="${classPrefix}-right-column">
-                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                <div class="${classPrefix}-imageWrapper">
+                <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+                https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+                https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
+                </div>
               </span>
                 </div>
               </div>

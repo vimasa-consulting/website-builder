@@ -52,11 +52,21 @@ const reviewsAndRatings1Component = (editor: Editor) => {
                 <div class="${classPrefix}-reviewsContainer">
                 <div class="${classPrefix}-card">
                     <div class="${classPrefix}-ratingsContainer">
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
                     </div>
                     <hr class="${classPrefix}-horizontalLine"/>
                     <h2 class="${classPrefix}-productName">Product Name</h2>
@@ -68,11 +78,21 @@ const reviewsAndRatings1Component = (editor: Editor) => {
                 </div>
                 <div class="${classPrefix}-card">
                     <div class="${classPrefix}-ratingsContainer">
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
                     </div>
                     <hr class="${classPrefix}-horizontalLine"/>
                     <h2 class="${classPrefix}-productName">Product Name</h2>
@@ -86,11 +106,21 @@ const reviewsAndRatings1Component = (editor: Editor) => {
                 </div>
                 <div class="${classPrefix}-card">
                     <div class="${classPrefix}-ratingsContainer">
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
-                    <img class="${classPrefix}-ratingImg" src="https://img.icons8.com/ios-glyphs/30/808080/star--v1.png" alt="star--v1" />
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
+                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
+                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  </span>
                     </div>
                     <hr class="${classPrefix}-horizontalLine"/>
                     <h2 class="${classPrefix}-productName">Product Name</h2>
@@ -191,10 +221,22 @@ const reviewsAndRatings1Component = (editor: Editor) => {
             line-height: 21px;
             margin-bottom: -7px;
         } 
+        
+.${classPrefix}-rating-img {
+    width: 25px;
+    height: 25px;
+    color: #ddd;
+  }
         @media (max-width: 400px) {
             .${classPrefix}-section {
                 padding: 22px 36px 29px 35px;
             } 
+
+.${classPrefix}-rating-img {
+    width: 17px;
+    height: 17px;
+    color: #ddd;
+  }
             .${classPrefix}-title {
                 color: #000;
                 text-align: center;

@@ -45,19 +45,27 @@ const component = (editor: Editor) => {
                   <h3 class="${classPrefix}-content">Bring out your integrity as a brand and make a strong statement that your brand’s purpose is focussed on the true well-being of the customers, which other brands in the market aren’t doing.</h3>
                   <div class="${classPrefix}-pointer-wrapper">
                     <div class="${classPrefix}-point">
-                    <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+                    <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+              </span>
                       <span class="${classPrefix}-point-text">Pointer 1</span>
                     </div>
           <div class="${classPrefix}-point">
-          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+          <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+              </span>
                       <span class="${classPrefix}-point-text">Pointer 2</span>
                     </div>
           <div class="${classPrefix}-point">
-          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+          <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+              </span>
                       <span class="${classPrefix}-point-text">Pointer 3</span>
                     </div>
           <div class="${classPrefix}-point">
-          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+          <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+              </span>
                       <span class="${classPrefix}-point-text">Pointer 4</span>
                     </div>
                   </div>
@@ -162,6 +170,11 @@ const component = (editor: Editor) => {
             width: 30px;
             height: 30px;
           }
+          .${classPrefix}-rating-img-tick {
+            width: 33px;
+            height: 33px;
+            color: #ccc;
+          }
 
           @media (max-width: 400px) {
             .${classPrefix}-container {
@@ -212,6 +225,11 @@ const component = (editor: Editor) => {
             .${classPrefix}-image {
               width: 100%;
               height: 250px;
+            }
+            .${classPrefix}-rating-img-tick {
+              width: 25px;
+              height: 25px;
+              color: #ccc;
             }
           }
         `,

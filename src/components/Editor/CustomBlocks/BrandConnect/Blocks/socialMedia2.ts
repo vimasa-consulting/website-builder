@@ -50,9 +50,15 @@ const socialMedia2Component = (editor: Editor) => {
                 <p class="${classPrefix}-socialMediaHandle">@yourhandlename</p>
                 <h1 class="${classPrefix}-title">Introduce your social media community</h1>
                 <div class="${classPrefix}-iconWrapper">
-                  <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
-                  <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
-                  <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+              </span>
+              <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+              <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+            </span>
+            <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+            <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+          </span>
                 </div>
                 <div class="${classPrefix}-wrapper">
                   <div class="${classPrefix}-card">
@@ -218,9 +224,19 @@ const socialMedia2Component = (editor: Editor) => {
                 width: 35px;
                 height: 35px;
               } 
+              .${classPrefix}-rating-img-tick {
+                width: 33px;
+                height: 33px;
+                color: #ccc;
+              }
               @media (max-width: 400px) {
                 .${classPrefix}-section {
                   padding: 51px 20px 44px;
+                }
+                .${classPrefix}-rating-img-tick {
+                  width: 25px;
+                  height: 25px;
+                  color: #ccc;
                 }
                 .${classPrefix}-wrapper {
                   width: 100%;
