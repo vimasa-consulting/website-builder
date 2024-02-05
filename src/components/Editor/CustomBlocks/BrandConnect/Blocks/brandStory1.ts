@@ -33,6 +33,7 @@ const brandStory1Component = (editor: Editor) => {
         traits: [],
         components: `
           <section class="${classPrefix}-section">
+          <div class="${classPrefix}-wrapper">
             <div class="${classPrefix}-panel">
               <div class="${classPrefix}-image-wrapper">
                 <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
@@ -40,6 +41,7 @@ const brandStory1Component = (editor: Editor) => {
               <h1 class="${classPrefix}-title">Compelling Header for Your Brand Story</h1>
               <p class="${classPrefix}-description">Craft your brand story in a way that sounds authentic, evokes emotions in your users, and is consistent across channels.
                 Include the origin of the brand, its purpose & the values. Be very specific and simple with your brand message.</p>
+            </div>
             </div>
           </section>
         `,
@@ -65,6 +67,9 @@ const brandStory1Component = (editor: Editor) => {
           max-width: 1256px;
           margin: auto;
         }
+        .${classPrefix}-wrapper {
+          position: relative;
+        }
         .${classPrefix}-image-wrapper {
           width: 90px;
           height: 90px;
@@ -87,6 +92,7 @@ const brandStory1Component = (editor: Editor) => {
           max-width: 100%;
           border-radius: 50%;
           height: 45px;
+          z-index: 1;
         }
 
         .${classPrefix}-title {
@@ -99,6 +105,7 @@ const brandStory1Component = (editor: Editor) => {
           line-height: normal;
           margin-top: 64px;
           margin-bottom: 0;
+          z-index: 50;
         }
 
         .${classPrefix}-description {
@@ -111,6 +118,7 @@ const brandStory1Component = (editor: Editor) => {
           margin-top: 22px;
           max-width: 710px;
           color: #000;
+          z-index: 50;
         }
 
         @media (max-width: 400px) {
@@ -152,6 +160,33 @@ const brandStory1Component = (editor: Editor) => {
           }
         }
         `,
+        script() {
+          const img = document?.querySelector(`img`) as any;
+          function onSrcChange() {
+            console.log('The src attribute has changed!');
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.position = 'absolute';
+            img.style.top = '0';
+            img.style.left = '0';
+            img.style.borderRadius = 'unset';
+            img.style.objectFit = 'fill'
+            const imageWrapper = document.querySelector(`.brandConnect-brandStory1-image-wrapper`) as any
+            imageWrapper.style.border = 'none'
+          }
+          
+          const observer = new MutationObserver((mutationsList, observer) => {
+            for (const mutation of mutationsList) {
+              if (mutation.type === 'attributes' && mutation.attributeName === 'src') {
+                onSrcChange();
+              }
+            }
+          });
+          observer.observe(img, {
+            attributes: true, 
+            attributeFilter: ['src']
+          });
+        }
       },
     },
   });
