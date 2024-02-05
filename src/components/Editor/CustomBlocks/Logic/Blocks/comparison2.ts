@@ -56,7 +56,9 @@ const comparison2Component = (editor: Editor) => {
                    <img class="${classPrefix}-image" src="https://placehold.co/45x45" alt="Your Product">
                   </div>
                   <div class="${classPrefix}-iconWrapper">
-                  <img class="${classPrefix}-icon" src="https://img.icons8.com/ios-glyphs/40/FFFFFF/checkmark--v2.png" alt="Check Mark" />
+                  <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  </span>
                   </div>
                   <ul class="${classPrefix}-advantageList">
                     <li>Your brand's key advantage 1</li>
@@ -116,6 +118,11 @@ const comparison2Component = (editor: Editor) => {
                 .${classPrefix}-card img {
                   max-width: 100%;
                   background: #4B4B4B;
+                }
+                .${classPrefix}-rating-img-tick {
+                  width: 25px;
+                  height: 25px;
+                  color: #ccc;
                 }
                 .${classPrefix}-title {
                   text-align: center;

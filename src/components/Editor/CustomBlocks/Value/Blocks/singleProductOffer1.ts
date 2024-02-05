@@ -56,6 +56,7 @@ const component = (editor: Editor) => {
               flex-direction: row;
               height: 70vh;
               font-family: Inter, sans-serif;
+              background : #fff;
             }
 
             .${classPrefix}-left-column {
@@ -87,8 +88,9 @@ const component = (editor: Editor) => {
 
             .${classPrefix}-offer-cta {
               color: #000;
+              width: 180px;
               text-align: center;
-              font-size: 25px;
+              font-size: 22px;
               font-style: normal;
               font-weight: 500;
               line-height: normal;

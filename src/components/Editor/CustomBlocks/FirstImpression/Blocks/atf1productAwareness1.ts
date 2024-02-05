@@ -68,9 +68,16 @@ const atf1ProductAwareness1Component = (editor: Editor) => {
 
             </div>
             <div class="${classPrefix}-right-column">
-              <div class="${classPrefix}-imageWrapper">
-              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
-              </div>
+            <div class="${classPrefix}-imageWrapper">
+            <img loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=100 100w,
+            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=200 200w,
+            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=400 400w,
+            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=800 800w,
+            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1200 1200w,
+            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=1600 1600w, 
+            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&width=2000 2000w, 
+            https://cdn.builder.io/api/v1/image/assets/TEMP/ca3d4956-b579-42e5-bfae-034be853a066?apiKey=d9eca8b0cf294176914b16d6a4d96de8&" class="${classPrefix}-image" />
+            </div>
             </div>
           </section>
           `,
@@ -82,6 +89,7 @@ const atf1ProductAwareness1Component = (editor: Editor) => {
             height: auto;
             max-width: 1440px;
             margin: auto;
+            background-color: #FFFFFF;
           }
 
           .${classPrefix}-left-column {
@@ -135,8 +143,8 @@ const atf1ProductAwareness1Component = (editor: Editor) => {
             font-size: 25px;
             font-style: normal;
             font-weight: 500;
-            line-height: normal;
-            padding: 10px 20px;
+            line-height: 30px;
+            padding: 10px 36px;
             background: #d9d9d9;
             border-radius: 8px;
           }
@@ -233,7 +241,7 @@ const atf1ProductAwareness1Component = (editor: Editor) => {
               font-size: 18px;
               font-style: normal;
               font-weight: 500;
-              line-height: normal;
+              line-height: 21px;
             }
             .${classPrefix}-right-column {
               padding: 2rem 0;

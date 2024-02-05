@@ -88,12 +88,13 @@ const component = (editor: Editor) => {
             .${classPrefix}-offer-cta {
               color: #000;
               text-align: center;
-              font-size: 25px;
+              font-size: 22px;
               font-style: normal;
               font-weight: 500;
-              line-height: normal;
+              line-height: 26px;
               padding: 10px 20px;
-              background: #d9d9d9;
+              width: 180px;
+              background: #CACACA;              
               border-radius: 8px;
             }
 

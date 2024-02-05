@@ -52,19 +52,27 @@ const comparison1Component = (editor: Editor) => {
                   <img class="${classPrefix}-mainImage" src="https://placehold.co/446x303" alt="Your Product">
                   <ul class="${classPrefix}-advantageList">
                     <li>
-                      <img class="${classPrefix}-checkMark"  src="https://img.icons8.com/ios-filled/25/checkmark--v1.png" alt="checkmark--v1"/>
+                      <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  </span>
                       <p class="${classPrefix}-listText">Your brand's key advantage 1</p>
                     </li>
                     <li>
-                      <img class="${classPrefix}-checkMark"  src="https://img.icons8.com/ios-filled/25/checkmark--v1.png" alt="checkmark--v1"/>
+                      <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  </span>
                       <p class="${classPrefix}-listText">Your brand's key advantage 2</p>
                     </li>
                     <li>
-                      <img class="${classPrefix}-checkMark"  src="https://img.icons8.com/ios-filled/25/checkmark--v1.png" alt="checkmark--v1"/>
+                      <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  </span>
                       <p class="${classPrefix}-listText">Your brand's key advantage 3</p>
                     </li>
                     <li>
-                      <img class="${classPrefix}-checkMark"  src="https://img.icons8.com/ios-filled/25/checkmark--v1.png" alt="checkmark--v1"/>
+                      <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  </span>
                       <p class="${classPrefix}-listText">Your brand's key advantage 4</p>
                     </li>
                   </ul>
@@ -152,6 +160,11 @@ const comparison1Component = (editor: Editor) => {
                   margin: 0px;
                   display: inline-block;
                 }
+                .${classPrefix}-rating-img-tick {
+                  width: 25px;
+                  height: 25px;
+                  color: #ccc;
+                }
                 @media (max-width: 400px) {
                   .${classPrefix}-container {
                     align-items: center;
@@ -163,6 +176,11 @@ const comparison1Component = (editor: Editor) => {
                   .${classPrefix}-mainImage {
                     width: 172px;
                     height: 117px;
+                  }
+                  .${classPrefix}-rating-img-tick {
+                    width: 25px;
+                    height: 25px;
+                    color: #ccc;
                   }
                   .${classPrefix}-shortComingList li {
                     margin-bottom: 16px;

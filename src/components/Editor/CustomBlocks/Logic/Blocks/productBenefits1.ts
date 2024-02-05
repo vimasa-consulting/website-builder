@@ -61,7 +61,9 @@ const productBenefits1Component = (editor: Editor) => {
             <td>
               <div class="${classPrefix}-benefitsItem">
                 <div class="${classPrefix}-benefitsIcon">
-                  <img loading="lazy" src="/editor/component-icons/checkmark.png" class="${classPrefix}-imgCover" />
+                  <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  </span>
                 </div>
                 <div class="${classPrefix}-benefitsContent">
                   <span class="${classPrefix}-h3">

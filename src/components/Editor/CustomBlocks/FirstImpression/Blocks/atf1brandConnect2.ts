@@ -48,13 +48,13 @@ const atf1BrandConnect2Component = (editor: Editor) => {
                   <div class="${classPrefix}-item-row">
                     <div class="${classPrefix}-item">
                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                    <span data-icon="ph:placeholder-light" data-width="25px" class="iconify"></span>
                   </span>
                       <span class="${classPrefix}-item-text">Brand Benefit 1</span>
                     </div>
                     <div class="${classPrefix}-item">
                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                    <span data-icon="ph:placeholder-light" data-width="25px" class="iconify"></span>
                   </span>
                       <span class="${classPrefix}-item-text">Brand Benefit 2</span>
                     </div>
@@ -62,13 +62,13 @@ const atf1BrandConnect2Component = (editor: Editor) => {
                   <div class="${classPrefix}-item-row">
                     <div class="${classPrefix}-item">
                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                    <span data-icon="ph:placeholder-light" data-width="25px" class="iconify"></span>
                   </span>
                       <span class="${classPrefix}-item-text">Social Proof 1</span>
                     </div>
                     <div class="${classPrefix}-item">
                     <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                    <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                    <span data-icon="ph:placeholder-light" data-width="25px" class="iconify"></span>
                   </span>
                       <span class="${classPrefix}-item-text">Social Proof 2</span>
                     </div>
@@ -77,9 +77,7 @@ const atf1BrandConnect2Component = (editor: Editor) => {
               </div>
               <div class="${classPrefix}-right-column">
                 <div class="${classPrefix}-imageWrapper">
-                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
-              </span>
+                  <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                 </div>
               </div>
             </div>
@@ -90,6 +88,7 @@ const atf1BrandConnect2Component = (editor: Editor) => {
   margin: auto;
   max-width: 1440px;
   height: auto;
+  background-color: #FFFFFF;
 }
 .${classPrefix}-container {
   font-family: Inter, sans-serif;
@@ -133,7 +132,7 @@ const atf1BrandConnect2Component = (editor: Editor) => {
   font-size: 25px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  line-height: 30px;
   padding: 18px 30px;
   background: #d9d9d9;
   border-radius: 8px;
@@ -148,8 +147,9 @@ const atf1BrandConnect2Component = (editor: Editor) => {
 }
 
 .${classPrefix}-image {
-  aspect-ratio: 1;
-  object-fit: contain;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
   object-position: center;
   mix-blend-mode: multiply;
   overflow: hidden;
@@ -279,10 +279,11 @@ const atf1BrandConnect2Component = (editor: Editor) => {
   }
 
   .${classPrefix}-image {
-    border-radius: 8px;
-    width: 321px;
-    height: 299px;
-  }
+      border-radius: 8px;
+      object-fit: fill;
+      width: 100%;
+      height: 100%;
+    }
 
   .${classPrefix}-rating-img {
     width: 18px;

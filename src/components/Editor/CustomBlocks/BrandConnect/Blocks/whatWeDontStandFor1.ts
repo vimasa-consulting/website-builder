@@ -38,23 +38,33 @@ const component = (editor: Editor) => {
               <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
               <div class="${classPrefix}-contentWrapper">
               <div class="${classPrefix}-content">
-              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+              <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+              </span>
                <p class="${classPrefix}-text">What you don't stand for 1</p>
               </div>
               <div class="${classPrefix}-content">
-                <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+              </span>
                <p class="${classPrefix}-text">What you don't stand for 2</p>
               </div>
               <div class="${classPrefix}-content">
-              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+              <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+              </span>
                <p class="${classPrefix}-text">What you don't stand for 3</p>
               </div>
               <div class="${classPrefix}-content">
-              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+              <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+              </span>
                <p class="${classPrefix}-text">What you don't stand for 4</p>
               </div>
               <div class="${classPrefix}-content">
-              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+              <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+              </span>
                <p class="${classPrefix}-text">What you don't stand for 5</p>
               </div>
               </div>
@@ -158,9 +168,19 @@ const component = (editor: Editor) => {
             width: 55px;
             height: 55px
           }
+          .${classPrefix}-rating-img-tick {
+            width: 33px;
+            height: 33px;
+            color: #ccc;
+          }
           @media (max-width: 400px) {
             .${classPrefix}-section {
               padding: 53px 40px 58px;
+            }
+            .${classPrefix}-rating-img-tick {
+              width: 25px;
+              height: 25px;
+              color: #ccc;
             }
             .${classPrefix}-title {
               font-size: 26px;

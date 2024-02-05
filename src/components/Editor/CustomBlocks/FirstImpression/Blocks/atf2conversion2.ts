@@ -69,7 +69,7 @@ const atf2Conversion2Component = (editor: Editor) => {
                   </h2>
                   <div class="${classPrefix}-list-wrapper">
                     <div class="${classPrefix}-list-item">
-                      <<span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                      <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
                       <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
                     </span>
                       <span class="${classPrefix}-item-content">Mention a point to bring trust</span>
@@ -90,8 +90,9 @@ const atf2Conversion2Component = (editor: Editor) => {
                   <a class="${classPrefix}-offer-cta">Offer based CTA ></a>
                 </div>
                 <div class="${classPrefix}-right-column">
-                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                <div class="${classPrefix}-imageWrapper">
+                  <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
+                </div>
               </span>
                 </div>
               </div>
@@ -104,6 +105,7 @@ const atf2Conversion2Component = (editor: Editor) => {
           margin-right: auto;
           max-width: 1440px;
           height: auto;
+          background: #E9E9E9;
         }
 
         .${classPrefix}-two-column-wrapper {
@@ -133,6 +135,8 @@ const atf2Conversion2Component = (editor: Editor) => {
           align-items: center;
           gap: 10px;
           margin-bottom: 20px;
+          width: 100%;
+          height: 100%;
         }
 
         .${classPrefix}-rating-img {
@@ -165,10 +169,10 @@ const atf2Conversion2Component = (editor: Editor) => {
 
         .${classPrefix}-offer-cta {
           padding: 10px 36px;
-          font-size: 18px;
+          font-size: 25px;
           font-style: normal;
           font-weight: 500;
-          line-height: normal;
+          line-height: 30px;
           margin-top: 40px;
           border-radius: 8px;
           border: 1px solid transparent;
@@ -187,9 +191,9 @@ const atf2Conversion2Component = (editor: Editor) => {
         }
 
         .${classPrefix}-image {
-          aspect-ratio: 1;
-          object-fit: contain;
-          object-position: center;
+          object-fit: fill;
+          width: 100%;
+          height: 100%;
           mix-blend-mode: multiply;
           overflow: hidden;
           align-self: center;
@@ -322,7 +326,7 @@ const atf2Conversion2Component = (editor: Editor) => {
             font-size: 18px;
             font-style: normal;
             font-weight: 500;
-            line-height: normal;
+            line-height: 21px;
           }
 
           .${classPrefix}-right-column {
@@ -332,8 +336,9 @@ const atf2Conversion2Component = (editor: Editor) => {
           }
 
           .${classPrefix}-image {
-            width: 321px;
-            height: 299px;
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
           }
         }
           `,

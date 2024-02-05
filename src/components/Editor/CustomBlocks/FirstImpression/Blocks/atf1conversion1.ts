@@ -80,6 +80,7 @@ const atf1Conversion1Component = (editor: Editor) => {
             height: auto;
             max-width: 1440px;
             margin: auto;
+            background-color: #FFFFFF;
           }
 
           .${classPrefix}-left-column {
@@ -131,10 +132,10 @@ const atf1Conversion1Component = (editor: Editor) => {
             color: #000;
             text-align: center;
             font-size: 25px;
+            line-height: 30px;
             font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            padding: 10px 20px;
+            font-weight: 500;            
+            padding: 10px 36px;
             background: #d9d9d9;
             border-radius: 8px;
           }
@@ -230,7 +231,7 @@ const atf1Conversion1Component = (editor: Editor) => {
               font-size: 18px;
               font-style: normal;
               font-weight: 500;
-              line-height: normal;
+              line-height: 21px;
             }
             .${classPrefix}-right-column {
               padding: 2rem 0;

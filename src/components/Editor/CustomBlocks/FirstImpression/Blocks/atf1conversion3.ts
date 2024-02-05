@@ -124,6 +124,7 @@ const atf1Conversion3Component = (editor: Editor) => {
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
+  background: #FFFFFF;
 }
 
 .${classPrefix}-two-column-wrapper {
@@ -190,13 +191,14 @@ const atf1Conversion3Component = (editor: Editor) => {
 
 .${classPrefix}-offer-cta {
   padding: 10px 36px;
-  font-size: 18px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  line-height: 30px;
   margin-top: 40px;
   border-radius: 8px;
   border: 1px solid transparent;
+  background: #d9d9d9;
 }
 
 .${classPrefix}-right-column {
@@ -365,7 +367,7 @@ const atf1Conversion3Component = (editor: Editor) => {
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
+    line-height: 21px;
   }
 
   .${classPrefix}-right-column {
