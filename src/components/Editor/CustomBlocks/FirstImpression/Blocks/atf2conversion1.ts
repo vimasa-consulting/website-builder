@@ -134,7 +134,7 @@ const atf2Conversion1Component = (editor: Editor) => {
             font-size: 25px;
             font-style: normal;
             font-weight: 500;
-            line-height: normal;
+            line-height: 30px;
             padding: 10px 20px;
             background: #676767;
             border-radius: 8px;

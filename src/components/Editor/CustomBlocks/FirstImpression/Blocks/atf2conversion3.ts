@@ -190,10 +190,10 @@ const atf2Conversion3Component = (editor: Editor) => {
 
 .${classPrefix}-offer-cta {
   padding: 10px 36px;
-  font-size: 18px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  line-height: 30;
   margin-top: 40px;
   border-radius: 8px;
   border: 1px solid transparent;
