@@ -160,33 +160,44 @@ const brandStory1Component = (editor: Editor) => {
           }
         }
         `,
-        script() {
-          const img = document?.querySelector(`img`) as any;
+        script: function () {
+          const componentRoot = this;
+          const img = componentRoot.querySelector('img');
+          if(!img.src.includes('/editor/component-icons/image-icon.png')) {
+                onSrcChange()
+              }
+        
           function onSrcChange() {
             console.log('The src attribute has changed!');
-            img.style.width = '100%';
-            img.style.height = '100%';
-            img.style.position = 'absolute';
-            img.style.top = '0';
-            img.style.left = '0';
-            img.style.borderRadius = 'unset';
-            img.style.objectFit = 'fill'
-            const imageWrapper = document.querySelector(`.brandConnect-brandStory1-image-wrapper`) as any
-            imageWrapper.style.border = 'none'
+            console.log('The src attribute has changed!');
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.position = 'absolute';
+                img.style.top = '0';
+                img.style.left = '0';
+                img.style.borderRadius = 'unset';
+                img.style.objectFit = 'fill'
+                const imageWrapper = componentRoot.querySelector(`.brandConnect-brandStory1-image-wrapper`) as any
+                imageWrapper.style.border = 'none'
           }
-          
-          const observer = new MutationObserver((mutationsList, observer) => {
-            for (const mutation of mutationsList) {
+        
+          const observer = new MutationObserver(mutations => {
+            mutations.forEach(mutation => {
               if (mutation.type === 'attributes' && mutation.attributeName === 'src') {
                 onSrcChange();
               }
-            }
+            });
           });
-          observer.observe(img, {
-            attributes: true, 
-            attributeFilter: ['src']
-          });
-        }
+        
+          if (img) {
+            observer.observe(img, {
+              attributes: true,
+              attributeFilter: ['src']
+            });
+          } else {
+            console.log('Image element not found within the component');
+          }
+        },
       },
     },
   });
