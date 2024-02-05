@@ -93,6 +93,7 @@ export default observer(function AssetManager({ assets, select, close }: Omit<As
         const addedAsset = Assets.add(urlValue);
         select(addedAsset);
         close();
+        (ev.target as any).value = ''
     }
 
     const changeHandler = (e: any) => {
