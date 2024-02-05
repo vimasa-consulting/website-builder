@@ -88,7 +88,7 @@ const atf2BrandConnect2Component = (editor: Editor) => {
               margin: auto;
               max-width: 1440px;
               height: auto;
-              background: #E9E9E9
+              background: #E9E9E9;
             }
             .${classPrefix}-container {
               font-family: Inter, sans-serif;
@@ -133,13 +133,13 @@ const atf2BrandConnect2Component = (editor: Editor) => {
             }
 
             .${classPrefix}-offer-cta {
-              color: #000;
+              color: #FFF;
               text-align: center;
               font-size: 25px;
               font-style: normal;
               font-weight: 500;
-              line-height: normal;
-              padding: 18px 30px;
+              line-height: 30px;
+              padding: 10px 36px;
               background: #d9d9d9;
               border-radius: 8px;
             }
@@ -275,7 +275,7 @@ const atf2BrandConnect2Component = (editor: Editor) => {
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: normal;
+                line-height: 21px;
               }
 
               .${classPrefix}-right-column {

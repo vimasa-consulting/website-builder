@@ -88,6 +88,7 @@ const atf1BrandConnect2Component = (editor: Editor) => {
   margin: auto;
   max-width: 1440px;
   height: auto;
+  background-color: #FFFFFF;
 }
 .${classPrefix}-container {
   font-family: Inter, sans-serif;
@@ -131,7 +132,7 @@ const atf1BrandConnect2Component = (editor: Editor) => {
   font-size: 25px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  line-height: 30px;
   padding: 18px 30px;
   background: #d9d9d9;
   border-radius: 8px;
