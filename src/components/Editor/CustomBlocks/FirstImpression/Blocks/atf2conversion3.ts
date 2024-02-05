@@ -193,7 +193,7 @@ const atf2Conversion3Component = (editor: Editor) => {
   font-size: 25px;
   font-style: normal;
   font-weight: 500;
-  line-height: 30;
+  line-height: 30px;
   margin-top: 40px;
   border-radius: 8px;
   border: 1px solid transparent;
@@ -368,7 +368,7 @@ const atf2Conversion3Component = (editor: Editor) => {
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
+    line-height: 21px;
   }
 
   .${classPrefix}-right-column {

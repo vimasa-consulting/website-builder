@@ -326,7 +326,7 @@ const atf2Conversion2Component = (editor: Editor) => {
             font-size: 18px;
             font-style: normal;
             font-weight: 500;
-            line-height: normal;
+            line-height: 21px;
           }
 
           .${classPrefix}-right-column {
