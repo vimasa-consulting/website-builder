@@ -46,9 +46,7 @@ const atf2BrandConnect1Component = (editor: Editor) => {
               </div>
               <div class="${classPrefix}-right-column">
                 <div class="${classPrefix}-imageWrapper">
-                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
-              </span>
+                  <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                 </div>
               </div>
             </div>
@@ -117,8 +115,9 @@ const atf2BrandConnect1Component = (editor: Editor) => {
             }
 
             .${classPrefix}-image {
-              aspect-ratio: 1;
-              object-fit: contain;
+              width: 100%;
+              height: 100%;
+              object-fit: fill;
               object-position: center;
               mix-blend-mode: multiply;
               overflow: hidden;
