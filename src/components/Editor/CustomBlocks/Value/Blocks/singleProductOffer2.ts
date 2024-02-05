@@ -49,6 +49,7 @@ const component = (editor: Editor) => {
             padding: 5.25rem 0px;
             font-family: Inter, sans-serif;
             padding-bottom: 282px;
+            background : #fff;
           }
           .${classPrefix}-container {
             margin: 0 auto;
@@ -122,7 +123,7 @@ const component = (editor: Editor) => {
             border: none;
             font-size: 22px;
             font-weight: 500;
-            background-color: #dddddd;          
+            background-color: #d9d9d9;          
           }
           @media (max-width: 770px) {
             .${classPrefix}-container {
