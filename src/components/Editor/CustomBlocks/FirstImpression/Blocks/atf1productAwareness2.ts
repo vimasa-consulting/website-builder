@@ -108,6 +108,7 @@ const atf1ProductAwareness2Component = (editor: Editor) => {
           max-width: 1440px;
           height: auto;
           padding-bottom: 2rem;
+          background-color: #FFFFFF;
         }
 
         .${classPrefix}-two-column-wrapper {
@@ -175,12 +176,13 @@ const atf1ProductAwareness2Component = (editor: Editor) => {
 
         .${classPrefix}-offer-cta {
           padding: 10px 36px;
-          font-size: 18px;
+          font-size: 25px;
           font-style: normal;
           font-weight: 500;
-          line-height: normal;
+          line-height: 30px;
           margin-top: 40px;
           border-radius: 8px;
+          background: #d9d9d9;
           border: 1px solid transparent;
         }
 
@@ -324,7 +326,7 @@ const atf1ProductAwareness2Component = (editor: Editor) => {
             font-size: 18px;
             font-style: normal;
             font-weight: 500;
-            line-height: normal;
+            line-height: 21px;
           }
 
           .${classPrefix}-right-column {
