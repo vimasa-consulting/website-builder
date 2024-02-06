@@ -54,7 +54,7 @@ const personaUseCase2Component = (editor: Editor) => {
                         <div class="${classPrefix}-imageWrapper">
                           <img
                             loading="lazy"
-                            src="https://placehold.co/"
+                            src="/editor/component-icons/image-icon.png"
                             class="${classPrefix}-img"
                           />
                         </div>
@@ -64,7 +64,7 @@ const personaUseCase2Component = (editor: Editor) => {
                         <div class="${classPrefix}-imageWrapper">
                           <img
                             loading="lazy"
-                            src="https://placehold.co/"
+                            src="/editor/component-icons/image-icon.png"
                             class="${classPrefix}-img"
                           />
                         </div>
@@ -170,7 +170,7 @@ const personaUseCase2Component = (editor: Editor) => {
                   }
                   
                   .${classPrefix}-img {
-                    object-fit: contain;
+                    object-fit: fill;
                     width: 100%;
                     height: 100%;
                     mix-blend-mode: multiply;

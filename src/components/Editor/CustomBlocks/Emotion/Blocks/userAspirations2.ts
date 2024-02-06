@@ -186,7 +186,7 @@ const userAspirations2Component = (editor: Editor) => {
                   }
                   
                   .${classPrefix}-img {
-                    object-fit: contain;
+                    object-fit: fill;
                     object-position: center;
                     width: 100%;
                     height: 100%;

@@ -49,7 +49,7 @@ const comparison1Component = (editor: Editor) => {
                 <div class="${classPrefix}-container">
                 <div class="${classPrefix}-card">
                   <h2 class="${classPrefix}-title">Your Product Name</h2>
-                  <img class="${classPrefix}-mainImage" src="https://placehold.co/446x303" alt="Your Product">
+                  <img class="${classPrefix}-mainImage" src="/editor/component-icons/image-icon.png" alt="Your Product">
                   <ul class="${classPrefix}-advantageList">
                     <li>
                       <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
@@ -79,7 +79,7 @@ const comparison1Component = (editor: Editor) => {
                 </div>
                 <div class="${classPrefix}-card">
                   <h2 class="${classPrefix}-title">Others</h2>
-                  <img class="${classPrefix}-mainImage" src="https://placehold.co/446x303" alt="Competitor Product">
+                  <img class="${classPrefix}-mainImage" src="/editor/component-icons/image-icon.png" alt="Competitor Product">
                   <ul class="${classPrefix}-shortComingList">
                     <li>
                     <img class="${classPrefix}-checkMark" src="https://img.icons8.com/material-rounded/25/multiply--v1.png" alt="multiply--v1"/>
@@ -154,6 +154,10 @@ const comparison1Component = (editor: Editor) => {
                   font-size: 15px;
                 }
                 .${classPrefix}-mainImage {
+                  width: 446px;
+                  height: 303px;
+                  object-fit: fill;
+                  aspect-ratio: 1;                  
                   border-radius: 10px;
                 }
                 .${classPrefix}-listText {

@@ -33,8 +33,8 @@ const component = (editor: Editor) => {
         components: `
           <section class="${classPrefix}-section">
             <div class="${classPrefix}-container">
-              <img class="${classPrefix}-mainImage" src="https://placehold.co/525x525" alt="" />
-              <img class="${classPrefix}-subImage" src="https://placehold.co/284x284" alt="" />
+              <img class="${classPrefix}-mainImage" src="/editor/component-icons/image-icon.png" alt="" />
+              <img class="${classPrefix}-subImage" src="/editor/component-icons/image-icon.png" alt="" />
               <div class="${classPrefix}-contentWrapper">
                 <h1 class="${classPrefix}-heading">Product Name</h1>
                 <p class="${classPrefix}-firstText">Use this section to describe the important aspects of your product, and make sure to bring out your product’s USP.</p>
@@ -102,7 +102,10 @@ const component = (editor: Editor) => {
           .${classPrefix}-mainImage {
             border-radius: 10px;
             max-width: 100%;
-            margin-left: 85px;
+            width: 525px;
+            height: 525px;
+            object-fit: fill;
+            margin-left: 85px;  
             margin-bottom: 44px;
           }
           .${classPrefix}-subImage {
@@ -113,6 +116,9 @@ const component = (editor: Editor) => {
             left: 0px;
             z-index: 1;
             background: #E9E9E9;
+            width: 284px;
+            height: 284px;
+            object-fit: fill;
             box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
           }
           .${classPrefix}-cta {

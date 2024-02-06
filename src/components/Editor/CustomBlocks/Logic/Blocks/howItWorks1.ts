@@ -178,7 +178,7 @@ const howItWorks1Component = (editor: Editor) => {
                   
                   .${classPrefix}-image {
                     aspect-ratio: 1;
-                    object-fit: contain;
+                    object-fit: fill;
                     width: 100%;
                     height: 100%;
                     max-width: 100%;

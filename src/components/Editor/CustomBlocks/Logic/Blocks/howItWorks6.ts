@@ -192,7 +192,7 @@ const howItWorks6Component = (editor: Editor) => {
   height: 458px;
   border-radius: 10px;
   background: #E9E9E9;
-  object-fit: scale-down;
+  object-fit: fill;
   overflow: hidden;
 }
 

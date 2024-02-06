@@ -180,7 +180,7 @@ const productFeatures1Component = (editor: Editor) => {
 .${classPrefix}-img {
   width: 574px;
   height: 408px;
-  object-fit: scale-down;
+  object-fit: fill;
   overflow: hidden;
   border-radius: 10px;
   background: #E9E9E9;

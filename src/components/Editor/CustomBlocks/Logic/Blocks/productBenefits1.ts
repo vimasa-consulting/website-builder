@@ -80,7 +80,9 @@ const productBenefits1Component = (editor: Editor) => {
             <td>
               <div class="${classPrefix}-benefitsItem">
                 <div class="${classPrefix}-benefitsIcon">
-                  <img loading="lazy" src="/editor/component-icons/checkmark.png" class="${classPrefix}-imgCover" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                  <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                </span>
                 </div>
                 <div class="${classPrefix}-benefitsContent">
                   <span class="${classPrefix}-h3">
@@ -102,7 +104,10 @@ const productBenefits1Component = (editor: Editor) => {
             <td>
               <div class="${classPrefix}-benefitsItem">
                 <div class="${classPrefix}-benefitsIcon">
-                  <img loading="lazy" src="/editor/component-icons/checkmark.png" class="${classPrefix}-imgCover" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                  <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                </span>
+              
                 </div>
                 <div class="${classPrefix}-benefitsContent">
                   <span class="${classPrefix}-h3">
@@ -118,9 +123,9 @@ const productBenefits1Component = (editor: Editor) => {
           <tr>
             <td>
               <div class="${classPrefix}-benefitsItem">
-                <div class="${classPrefix}-benefitsIcon">
-                  <img loading="lazy" src="/editor/component-icons/checkmark.png" class="${classPrefix}-imgCover" />
-                </div>
+              <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+              <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+            </span>
                 <div class="${classPrefix}-benefitsContent">
                   <span class="${classPrefix}-h3">
                     Benefit 4
@@ -194,8 +199,7 @@ const productBenefits1Component = (editor: Editor) => {
 }
 
 .${classPrefix}-imgCover {
-  object-fit: cover;
-  object-position: center;
+  object-fit: fill;  
   overflow: hidden;
 }
 

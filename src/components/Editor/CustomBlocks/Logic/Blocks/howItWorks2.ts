@@ -204,7 +204,7 @@ const howItWorks2Component = (editor: Editor) => {
 }
 
 .${classPrefix}-img {
-  object-fit: scale-down;
+  object-fit: fit;
   overflow: hidden;
   width: 525px;
   height: 525px;
