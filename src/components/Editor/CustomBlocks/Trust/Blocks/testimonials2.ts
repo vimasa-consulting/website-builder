@@ -189,8 +189,7 @@ const testimonials2Component = (editor: Editor) => {
               }
               .${classPrefix}-imageContainer {
                 height: 82px;
-                width: 82px;
-                border-radius: 50%;
+                width: 82px;                
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -198,9 +197,10 @@ const testimonials2Component = (editor: Editor) => {
                 padding: 15px;
               }
               .${classPrefix}-image {
-                object-fit: fill;
                 width: 100%;
-                height: 100%;
+                height:  100%;
+                border-radius: 50%;
+                object-fit: fill;
               }
               .${classPrefix}-designation {
                 margin: 0;

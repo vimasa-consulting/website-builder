@@ -342,8 +342,7 @@ const reviewsAndRatings4Component = (editor: Editor) => {
         }
         .${classPrefix}-imageContainer {
           height: 62px;
-          width: 62px;
-          border-radius: 50%;
+          width: 62px;          
           display: flex;
           justify-content: center;
           align-items: center;
@@ -351,8 +350,9 @@ const reviewsAndRatings4Component = (editor: Editor) => {
         }
         .${classPrefix}-image {
           object-fit: fill;
-          width: 20px;
-          height: 20px;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
         }
         .${classPrefix}-designation {
           margin: 0;

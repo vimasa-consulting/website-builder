@@ -51,8 +51,7 @@ const testimonials1Component = (editor: Editor) => {
                 <h1 class="${classPrefix}-title">Header for Customer Reviews</h1>
                 <div class="${classPrefix}-wrapper">
                   <div class="${classPrefix}-imageWrapper">
-                    <img 
-                    class="${classPrefix}-image"
+                    <img class="${classPrefix}-image"
                     />
                   </div>
                   <div class="${classPrefix}-contentWrapper">
@@ -107,12 +106,12 @@ const testimonials1Component = (editor: Editor) => {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #E9E9E9;
-            border-radius: 50%;
+            background: #E9E9E9;            
           }
           .${classPrefix}-image {
-            width: 45px;
-            height: 45px;
+            width: 100%;
+            height:  100%;
+            border-radius: 50%;
             object-fit: fill;
           }
           .${classPrefix}-content {
