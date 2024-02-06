@@ -105,7 +105,7 @@ const atf1BrandConnect2Component = (editor: Editor) => {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 10rem 8rem;
+  padding: 0rem 8rem;
 }
 
 .${classPrefix}-h1 {

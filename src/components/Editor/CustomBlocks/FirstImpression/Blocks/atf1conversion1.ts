@@ -89,7 +89,7 @@ const atf1Conversion1Component = (editor: Editor) => {
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            padding: 10rem 5rem;
+            padding: 0rem 5rem;
           }
 
           .${classPrefix}-rating-wrapper {
