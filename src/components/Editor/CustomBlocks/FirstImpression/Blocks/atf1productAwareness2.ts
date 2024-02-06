@@ -115,7 +115,7 @@ const atf1ProductAwareness2Component = (editor: Editor) => {
           flex-direction: column;
           align-items: flex-start;
           justify-content: center;
-          padding: 8rem 5rem;
+          padding: 0rem 5rem;
         }
 
         .${classPrefix}-rating-wrapper {
