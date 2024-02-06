@@ -188,11 +188,13 @@ const atf1Conversion2Component = (editor: Editor) => {
 
         .${classPrefix}-image {
           aspect-ratio: 1;
-          object-position: center;
+          object-fit: fill;  
           mix-blend-mode: multiply;
           overflow: hidden;
           align-self: center;
           max-width: 100%;
+          width: 100%;
+          height: 100%;
         }
 
         .${classPrefix}-list-wrapper {

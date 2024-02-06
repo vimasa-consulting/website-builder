@@ -147,10 +147,10 @@ const atf1BrandConnect2Component = (editor: Editor) => {
 }
 
 .${classPrefix}-image {
+  aspect-ratio: 1;
   object-fit: fill;
   width: 100%;
   height: 100%;
-  object-position: center;
   mix-blend-mode: multiply;
   overflow: hidden;
   align-self: center;

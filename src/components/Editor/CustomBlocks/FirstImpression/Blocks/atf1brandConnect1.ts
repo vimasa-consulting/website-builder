@@ -119,8 +119,7 @@ const atf1BrandConnect1Component = (editor: Editor) => {
   aspect-ratio: 1;
   width: 100%;
   height: 100%;
-  object-fit: fill;
-  object-position: center;
+  object-fit: fill;  
   mix-blend-mode: multiply;
   overflow: hidden;
   align-self: center;

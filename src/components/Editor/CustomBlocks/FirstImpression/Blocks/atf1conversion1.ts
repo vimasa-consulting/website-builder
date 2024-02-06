@@ -153,7 +153,7 @@ const atf1Conversion1Component = (editor: Editor) => {
 
           .${classPrefix}-image {
             aspect-ratio: 1;
-            object-position: center;
+            object-fit: fill;                         
             mix-blend-mode: multiply;
             overflow: hidden;
             align-self: center;
