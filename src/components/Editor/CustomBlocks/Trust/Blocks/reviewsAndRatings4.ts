@@ -342,7 +342,8 @@ const reviewsAndRatings4Component = (editor: Editor) => {
         }
         .${classPrefix}-imageContainer {
           height: 62px;
-          width: 62px;          
+          width: 62px;      
+          border-radius: 50%;    
           display: flex;
           justify-content: center;
           align-items: center;

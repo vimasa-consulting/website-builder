@@ -104,6 +104,7 @@ const testimonials1Component = (editor: Editor) => {
             width: 317px;
             height: 317px;
             display: flex;
+            border-radius: 50%;
             align-items: center;
             justify-content: center;
             background: #E9E9E9;            
