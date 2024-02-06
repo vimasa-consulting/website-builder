@@ -441,7 +441,7 @@ const atf2ProductAwareness3Component = (editor: Editor) => {
                   img.style.top = '0';
                   img.style.left = '0';
                   img.style.borderRadius = 'unset';
-                  img.style.objectFit = 'fill'
+                  img.style.objectFit = 'fill';
                   // const imageWrapper = componentRoot.querySelector(`.brandConnect-brandStory1-image-wrapper`) as any
                   // imageWrapper.style.border = 'none'
             }
