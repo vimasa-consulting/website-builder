@@ -140,6 +140,14 @@ const comparison2Component = (editor: Editor) => {
                   align-items: center;
                   border-radius: 50%;
                 }
+                .${classPrefix}-image {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: fill;
+                  aspect-ratio: 1;
+                  display: flex;
+                  border-radius: 50%;
+                }
                 .${classPrefix}-iconWrapper {
                   width: 50px;
                   height: 50px;
@@ -214,10 +222,6 @@ const comparison2Component = (editor: Editor) => {
                   .${classPrefix}-imageWrapper {
                     width: 47px;
                     height: 47px;
-                  }
-                  .${classPrefix}-image {
-                    width: 25px;
-                    height: 25px;
                   }
                   .${classPrefix}-title {
                     font-size: 18px;

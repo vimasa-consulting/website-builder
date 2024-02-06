@@ -193,8 +193,9 @@ const personaUseCase3Component = (editor: Editor) => {
               }
               .${classPrefix}-image {
                 object-fit: fill;
-                width: 45px;
-                height: 45px;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
                 outline: none;
               }
               .${classPrefix}-descriptionOne {
