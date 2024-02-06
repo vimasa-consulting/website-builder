@@ -260,8 +260,6 @@ const atf2Conversion1Component = (editor: Editor) => {
                 }
           
             function onSrcChange() {
-              console.log('The src attribute has changed!');
-              console.log('The src attribute has changed!');
                   img.style.width = '100%';
                   img.style.height = '100%';
                   img.style.position = 'absolute';
@@ -269,8 +267,8 @@ const atf2Conversion1Component = (editor: Editor) => {
                   img.style.left = '0';
                   img.style.borderRadius = 'unset';
                   img.style.objectFit = 'fill'
-                  const imageWrapper = componentRoot.querySelector(`.brandConnect-brandStory1-image-wrapper`) as any
-                  imageWrapper.style.border = 'none'
+                  // const imageWrapper = componentRoot.querySelector(`.brandConnect-brandStory1-image-wrapper`) as any
+                  // imageWrapper.style.border = 'none'
             }
           
             const observer = new MutationObserver(mutations => {
