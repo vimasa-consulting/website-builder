@@ -106,8 +106,7 @@ const component = (editor: Editor) => {
 
           .${classPrefix}-image {
             aspect-ratio: 1;
-            object-fit: contain;
-            object-position: center;
+            object-fit: fill;
             align-self: center;
             width: 100%;
             max-width: 100%;

@@ -226,8 +226,9 @@ const socialMedia1Component = (editor: Editor) => {
               }
               .${classPrefix}-image-icon {
                 object-fit: fill;
-                width: 18;
-                height: 18px;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
               } 
               @media (max-width: 400px) {
                 .${classPrefix}-section {
