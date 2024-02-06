@@ -102,11 +102,13 @@ const atf2ProductAwareness2Component = (editor: Editor) => {
           max-width: 1440px;
           height: auto;
           background: #E9E9E9;
+          position: relative;
         }
 
         .${classPrefix}-two-column-wrapper {
           display: flex;
           flex-direction: row;
+          z-index: 99;
         }
 
         .${classPrefix}-left-column {
@@ -116,6 +118,7 @@ const atf2ProductAwareness2Component = (editor: Editor) => {
           align-items: flex-start;
           justify-content: center;
           padding: 0rem 5rem;
+          z-index: 99;
         }
 
         .${classPrefix}-rating-wrapper {
@@ -123,6 +126,7 @@ const atf2ProductAwareness2Component = (editor: Editor) => {
           flex-direction: row;
           gap: 20px;
           margin-bottom: 20px;
+          z-index: 99;
         }
         
         .${classPrefix}-image-wrapper {
@@ -131,22 +135,26 @@ const atf2ProductAwareness2Component = (editor: Editor) => {
           align-items: center;
           gap: 10px;
           margin-bottom: 20px;
+          z-index: 99;
         }
 
         .${classPrefix}-rating-img {
           width: 25px;
           height: 25px;
           color: #ddd;
+          z-index: 99;
         }
 
         .${classPrefix}-rating-img-tick {
           width: 33px;
           height: 33px;
           color: #ccc;
+          z-index: 99;
         }
 
         .${classPrefix}-rating {
           color: rgba(0, 0, 0, 0.5);
+          z-index: 99;
         }
 
         .${classPrefix}-h1 {
@@ -156,6 +164,7 @@ const atf2ProductAwareness2Component = (editor: Editor) => {
           font-weight: 600;
           line-height: 64px;
           margin: 0;
+          z-index: 99;
         }
 
         .${classPrefix}-h2 {
@@ -165,6 +174,7 @@ const atf2ProductAwareness2Component = (editor: Editor) => {
           font-weight: 400;
           line-height: 140%;
           margin-bottom: 40px;
+          z-index: 99;
         }
 
         .${classPrefix}-offer-cta {
@@ -178,6 +188,7 @@ const atf2ProductAwareness2Component = (editor: Editor) => {
           border: 1px solid transparent;
           background: #676767;
           color: #FFF;
+          z-index: 99;
         }
 
         .${classPrefix}-right-column {
@@ -204,6 +215,7 @@ const atf2ProductAwareness2Component = (editor: Editor) => {
           display: flex;
           flex-direction: column;
           gap: 10px;
+          z-index: 99;
         }
 
         .${classPrefix}-list-item {
@@ -212,11 +224,13 @@ const atf2ProductAwareness2Component = (editor: Editor) => {
           justify-content: center;
           gap: 10px;
           align-items: center;
+          z-index: 99;
         }
 
         .${classPrefix}-item-image {
           width: 25px;
           height: 25px;
+          z-index: 1px;
         }
 
         @media only screen and (min-width: 601px) and (max-width: 768px) {
@@ -335,6 +349,42 @@ const atf2ProductAwareness2Component = (editor: Editor) => {
           }
         }
           `,
+          script: function () {
+            const componentRoot = this;
+            const img = componentRoot.querySelector('img');
+            if(!img.src.includes('/editor/component-icons/image-icon.png')) {
+                  onSrcChange()
+                }
+          
+            function onSrcChange() {
+                  img.style.width = '100%';
+                  img.style.height = '100%';
+                  img.style.position = 'absolute';
+                  img.style.top = '0';
+                  img.style.left = '0';
+                  img.style.borderRadius = 'unset';
+                  img.style.objectFit = 'fill'
+                  // const imageWrapper = componentRoot.querySelector(`.brandConnect-brandStory1-image-wrapper`) as any
+                  // imageWrapper.style.border = 'none'
+            }
+          
+            const observer = new MutationObserver(mutations => {
+              mutations.forEach(mutation => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'src') {
+                  onSrcChange();
+                }
+              });
+            });
+          
+            if (img) {
+              observer.observe(img, {
+                attributes: true,
+                attributeFilter: ['src']
+              });
+            } else {
+              console.log('Image element not found within the component');
+            }
+          },
       },
     },
   });
