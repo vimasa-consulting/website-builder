@@ -171,7 +171,7 @@ const userAspirations2Component = (editor: Editor) => {
                     margin-left: 0px;
                     display: flex;
                     flex-direction: column;
-                    height: 100%;
+                    height: 450px;
                   }
                   
                   .${classPrefix}-imageWrapper {
@@ -187,7 +187,7 @@ const userAspirations2Component = (editor: Editor) => {
                   
                   .${classPrefix}-img {
                     object-fit: fill;
-                    object-position: center;
+                    aspect-ratio: 1;
                     width: 100%;
                     height: 100%;
                     border-radius: 10px;

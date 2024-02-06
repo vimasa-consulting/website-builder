@@ -215,8 +215,8 @@ const userAspirations1Component = (editor: Editor) => {
                   }
                   
                   .${classPrefix}-img {
-                    object-fit: contain;
-                    object-position: center;
+                    object-fit: fill;
+                    aspect-ratio: 1;
                     width: 100%;
                     height: 100%;
                     mix-blend-mode: multiply;
