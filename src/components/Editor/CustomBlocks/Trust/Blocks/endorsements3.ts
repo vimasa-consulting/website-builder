@@ -51,7 +51,9 @@ const endorsements3Component = (editor: Editor) => {
                 <div class="${classPrefix}-wrapper">
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/360x311" alt="Placeholder"/>
+                      <video class="${classPrefix}-video" controls>
+                          <source src="" type="video/mp4">
+                      </video>
                     </div>
                     <h2 class="${classPrefix}-endorserName">Endorser Name</h2>
                     <p class="${classPrefix}-designation">Designation/profile</p>
@@ -62,7 +64,9 @@ const endorsements3Component = (editor: Editor) => {
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/360x311" alt="Placeholder"/>
+                      <video class="${classPrefix}-video" controls>
+                          <source src="" type="video/mp4">
+                      </video>
                     </div>
                     <h2 class="${classPrefix}-endorserName">Endorser Name</h2>
                     <p class="${classPrefix}-designation">Designation/profile</p>
@@ -73,8 +77,10 @@ const endorsements3Component = (editor: Editor) => {
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/360x311" alt="Placeholder"/>
-                    </div>
+                      <video class="${classPrefix}-video" controls>
+                        <source src="" type="video/mp4">
+                      </video>  
+                      </div>
                     <h2 class="${classPrefix}-endorserName">Endorser Name</h2>
                     <p class="${classPrefix}-designation">Designation/profile</p>
                     <p class="${classPrefix}-review">
@@ -101,6 +107,13 @@ const endorsements3Component = (editor: Editor) => {
                   line-height: normal;
                   margin-bottom: 69px;
                   margin-top: 0px;
+                }
+                .${classPrefix}-video {
+                  width: 100%;
+                  height: 100%;
+                  max-width: 360;
+                  max-height: 311px;
+                  border-radius: 10px;
                 }
                 .${classPrefix}-wrapper {
                   display: flex;

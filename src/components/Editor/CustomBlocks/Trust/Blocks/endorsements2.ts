@@ -51,7 +51,9 @@ const endorsements2Component = (editor: Editor) => {
               <h1 class="${classPrefix}-mobileTitle">Header for Endorsement</h1>
                 <div class="${classPrefix}-wrapper">
                   <div class="${classPrefix}-imageWrapper">
-                  <img class="${classPrefix}-img" src="https://placehold.co/595x412" alt="Placeholder"/>
+                    <video class="${classPrefix}-video" controls>
+                        <source src="" type="video/mp4">
+                    </video>
                   </div>
                   <div class="${classPrefix}-content">
                     <h1 class="${classPrefix}-title">Header for Endorsement</h1>
@@ -81,6 +83,13 @@ const endorsements2Component = (editor: Editor) => {
             margin-bottom: 26px;
             margin-top: 0px;
           }
+          .${classPrefix}-video {
+            width: 100%;
+            height: 100%;
+            max-width: 595px;
+            max-height: 595px;
+            border-radius: 10px;
+            }
           .${classPrefix}-mobileTitle {
            display: none;
           }
