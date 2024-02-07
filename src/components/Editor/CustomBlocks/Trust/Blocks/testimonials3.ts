@@ -51,7 +51,9 @@ const testimonials3Component = (editor: Editor) => {
                 <div class="${classPrefix}-wrapper">
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/345x444" alt="Placeholder"/>
+                      <video class="${classPrefix}-video" controls>
+                      <source src="" type="video/mp4">
+                    </video>
                     </div>
                     <h2 class="${classPrefix}-customerName">Customer Name</h2>
                     <p class="${classPrefix}-review">
@@ -60,7 +62,9 @@ const testimonials3Component = (editor: Editor) => {
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/345x444" alt="Placeholder"/>
+                      <video class="${classPrefix}-video" controls>
+                      <source src="" type="video/mp4">
+                    </video>
                     </div>
                     <h2 class="${classPrefix}-customerName">Customer Name</h2>
                     <p class="${classPrefix}-review">
@@ -69,7 +73,9 @@ const testimonials3Component = (editor: Editor) => {
                   </div>
                   <div class="${classPrefix}-card">
                     <div class="${classPrefix}-playerWrapper">
-                      <img class="${classPrefix}-img" src="https://placehold.co/345x444" alt="Placeholder"/>
+                      <video class="${classPrefix}-video" controls>
+                      <source src="" type="video/mp4">
+                    </video>
                     </div>
                     <h2 class="${classPrefix}-customerName">Customer Name</h2>
                     <p class="${classPrefix}-review">
