@@ -1,0 +1,14 @@
+{
+  "resourceName": "websitebuilderStore",
+  "policyUUID": "4333a8a4",
+  "bucketName": "websitebuilderstore",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
