@@ -145,6 +145,7 @@ const howItWorks6Component = (editor: Editor) => {
   display: flex;
   flex-direction: column;
   max-width: 1440px;
+min-width: 1440px;
   margin: 0 auto;
   padding: 81px 136px 125px 150px;
 }

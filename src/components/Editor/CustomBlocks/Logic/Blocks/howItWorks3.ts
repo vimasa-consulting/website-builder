@@ -154,6 +154,7 @@ const howItWorks3Component = (editor: Editor) => {
   padding: 82px 120px 90px 122px;
   margin: 0 auto;
   max-width: 1440px;
+min-width: 1440px;
 }
 
 @media (max-width: 425px) {

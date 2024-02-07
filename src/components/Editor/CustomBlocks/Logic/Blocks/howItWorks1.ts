@@ -91,6 +91,7 @@ const howItWorks1Component = (editor: Editor) => {
                     flex-direction: column;
                     padding: 65px 0px 86px;
                     max-width: 1440px;
+min-width: 1440px;
                     margin: 0 auto;
                     font-family: Inter, sans-serif;
                   }

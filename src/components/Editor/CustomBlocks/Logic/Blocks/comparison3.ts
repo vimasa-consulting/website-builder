@@ -104,6 +104,7 @@ const comparison3Component = (editor: Editor) => {
                 styles: `
                 .${classPrefix}-comparisonContainer {
                   max-width: 1440px;
+min-width: 1440px;
                   margin: auto;
                   padding: 92px 0px 131px ;
                   font-family: Inter, sans-serif;

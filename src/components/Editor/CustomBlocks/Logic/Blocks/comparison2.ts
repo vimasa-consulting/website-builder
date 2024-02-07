@@ -92,6 +92,7 @@ const comparison2Component = (editor: Editor) => {
                   justify-content: space-around;
                   font-family: Inter, sans-serif;
                   max-width: 1440px;
+min-width: 1440px;
                   margin: 0 auto;
                   position: relative;
                 }
