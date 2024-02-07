@@ -85,7 +85,7 @@ const atf1Conversion1Component = (editor: Editor) => {
           }
 
           .${classPrefix}-left-column {
-            width: 50vw;
+            width: 50%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -142,7 +142,7 @@ const atf1Conversion1Component = (editor: Editor) => {
           }
 
           .${classPrefix}-right-column {
-            width: 50vw;
+            width: 50%;
             background: #e9e9e9;
           }
 

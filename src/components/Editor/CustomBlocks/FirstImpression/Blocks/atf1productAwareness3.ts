@@ -131,7 +131,7 @@ const atf1ProductAwareness3Component = (editor: Editor) => {
           }
 
           .${classPrefix}-left-column {
-            width: 50vw;
+            width: 50%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -209,7 +209,7 @@ const atf1ProductAwareness3Component = (editor: Editor) => {
           }
 
           .${classPrefix}-right-column {
-            width: 50vw;
+            width: 50%;
             display: flex;
             align-items: center;
             align-content: center;
@@ -441,7 +441,7 @@ const atf1ProductAwareness3Component = (editor: Editor) => {
                   img.style.top = '0';
                   img.style.left = '0';
                   img.style.borderRadius = 'unset';
-                  img.style.objectFit = 'fill'
+                  img.style.objectFit = 'fill';
                   // const imageWrapper = componentRoot.querySelector(`.brandConnect-brandStory1-image-wrapper`) as any
                   // imageWrapper.style.border = 'none'
             }
