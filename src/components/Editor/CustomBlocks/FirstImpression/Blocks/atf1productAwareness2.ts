@@ -99,6 +99,7 @@ const atf1ProductAwareness2Component = (editor: Editor) => {
           margin-left: auto;
           margin-right: auto;
           max-width: 1440px;
+          min-width: 1440px;
           height: auto;
           padding-bottom: 2rem;
           background-color: #FFFFFF;

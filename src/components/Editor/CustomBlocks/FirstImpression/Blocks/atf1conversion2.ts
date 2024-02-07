@@ -99,6 +99,7 @@ const atf1Conversion2Component = (editor: Editor) => {
           margin-left: auto;
           margin-right: auto;
           max-width: 1440px;
+          min-width: 1440px;
           background-color: #FFFFFF;
           height: auto;
         }

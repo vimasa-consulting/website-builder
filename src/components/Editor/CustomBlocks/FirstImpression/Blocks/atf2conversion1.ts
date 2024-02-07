@@ -79,6 +79,7 @@ const atf2Conversion1Component = (editor: Editor) => {
             flex-direction: row;
             height: auto;
             max-width: 1440px;
+            min-width: 1440px;
             margin: auto;
             background: #E9E9E9;
             position: relative;

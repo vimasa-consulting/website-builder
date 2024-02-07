@@ -81,6 +81,7 @@ const atf1ProductAwareness1Component = (editor: Editor) => {
             flex-direction: row;
             height: auto;
             max-width: 1440px;
+            min-width: 1440px;
             margin: auto;
             background-color: #FFFFFF;
             position: relative;

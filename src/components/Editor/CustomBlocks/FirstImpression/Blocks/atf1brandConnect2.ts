@@ -87,6 +87,7 @@ const atf1BrandConnect2Component = (editor: Editor) => {
             .${classPrefix}-section {
   margin: auto;
   max-width: 1440px;
+  min-width: 1440px;
   height: auto;
   background-color: #FFFFFF;
 }
