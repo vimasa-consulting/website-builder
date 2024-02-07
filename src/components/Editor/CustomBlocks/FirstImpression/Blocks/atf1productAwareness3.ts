@@ -1,7 +1,7 @@
 import { Editor } from "grapesjs";
 
 const options = {
-  id: "Zb6",
+  id: "Zb3",
   label: "ATF1 Product Awareness3",
   block: {},
   props: {},
@@ -136,7 +136,7 @@ const atf1ProductAwareness3Component = (editor: Editor) => {
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            padding: 0rem 5rem;
+            padding: 0 5rem;
             z-index: 99px;
           }
 
@@ -159,7 +159,7 @@ const atf1ProductAwareness3Component = (editor: Editor) => {
           .${classPrefix}-rating-img {
             width: 25px;
             height: 25px;
-            color: #ddd
+            color: #ddd;
             z-index: 99px;
           }
 
