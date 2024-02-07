@@ -67,5 +67,12 @@
         }
       ]
     }
+  },
+  "storage": {
+    "websitebuilderStore": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
   }
 }
