@@ -33,7 +33,11 @@ const component = (editor: Editor) => {
         components: `
           <section class="${classPrefix}-section">
             <div class="${classPrefix}-container">
-              <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
+              <div class="${classPrefix}-imageWrapper">
+                <video class="${classPrefix}-video" controls>
+                  <source src="" type="video/mp4">
+                </video>
+              </div>
               <div class="${classPrefix}-content-wrapper">
                 <h1 class="${classPrefix}-heading">From the Founder</h1>
                 <p class="${classPrefix}-text">Use a direct quote from the founder/head of a department. Give a human touch while representing your brand and the products. Let the founder(s) address the users directly, so that it builds a better connect.</p>
