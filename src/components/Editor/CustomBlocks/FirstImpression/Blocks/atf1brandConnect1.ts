@@ -138,6 +138,8 @@ const atf1BrandConnect1Component = (editor: Editor) => {
     height: auto;
     padding: 2rem 2rem;
     flex-direction: column;
+    max-width: 768px;
+    min-width: 768px;  
   }
 
   .${classPrefix}-left-column {
@@ -159,6 +161,8 @@ const atf1BrandConnect1Component = (editor: Editor) => {
 
 @media only screen and (max-width: 600px) {
   .${classPrefix}-section {
+    max-width: 400px;
+    min-width: 400px;  
   }
   
   .${classPrefix}-container {

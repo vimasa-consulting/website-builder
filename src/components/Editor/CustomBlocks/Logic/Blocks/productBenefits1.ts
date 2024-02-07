@@ -208,6 +208,8 @@ const productBenefits1Component = (editor: Editor) => {
   display: flex;
   flex-direction: column;
   padding: 80px;
+  max-width: 1440px;
+  min-width: 1440px;
 }
 
 @media (max-width: 425px) {

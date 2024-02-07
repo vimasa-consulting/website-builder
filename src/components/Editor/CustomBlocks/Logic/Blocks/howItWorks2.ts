@@ -157,7 +157,7 @@ const howItWorks2Component = (editor: Editor) => {
   display: flex;
   flex-direction: column;
   max-width: 1440px;
-min-width: 1440px;
+  min-width: 1440px;
   padding: 175px 156px 141px 157px;
   justify-content: center;
   align-items: center;

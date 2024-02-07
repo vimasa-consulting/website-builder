@@ -272,6 +272,8 @@ const atf1Conversion3Component = (editor: Editor) => {
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .${classPrefix}-section {
     padding: 1rem;
+    max-width: 768px;
+    min-width: 768px;  
   }
 
   .${classPrefix}-two-column-wrapper {
@@ -305,6 +307,8 @@ const atf1Conversion3Component = (editor: Editor) => {
   .${classPrefix}-section {
     padding: 10px 10px 50px 10px;
     height: auto;
+    max-width: 400px;
+    min-width: 400px;  
   }
 
   .${classPrefix}-two-column-wrapper {

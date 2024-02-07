@@ -179,6 +179,9 @@ const atf1ProductAwareness1Component = (editor: Editor) => {
               height: auto;
               padding: 2rem 2rem;
               flex-direction: column;
+              max-width: 768px;
+              min-width: 768px;  
+          
             }
 
             .${classPrefix}-left-column {
@@ -203,6 +206,8 @@ const atf1ProductAwareness1Component = (editor: Editor) => {
               height: auto;
               flex-direction: column;
               min-height: 408px;
+              max-width: 400px;
+              min-width: 400px;            
             }
             .${classPrefix}-left-column {
               padding: 2rem 0;

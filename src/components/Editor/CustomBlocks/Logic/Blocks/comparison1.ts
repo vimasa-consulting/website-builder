@@ -107,7 +107,7 @@ const comparison1Component = (editor: Editor) => {
                   justify-content: space-around;
                   font-family: Inter, sans-serif;
                   max-width: 1440px;
-min-width: 1440px;
+                  min-width: 1440px;
                   margin: 0 auto;
                 }
                 .${classPrefix}-card {
