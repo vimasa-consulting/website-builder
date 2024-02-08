@@ -1,79 +1,71 @@
 import { Editor } from "grapesjs";
 
 const comparison1Block = (editor: Editor) => {
-    const options = {
-        id: "Yd1",
-        label: "Comparison 1",
-        block: {},
-        props: {},
-        style: "",
-        category: "Logic",
-        classPrefix: "Yd1",
-        styleAdditional: "",
-        media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
+  const options = {
+    id: "Yd1",
+    label: "Comparison 1",
+    block: {},
+    props: {},
+    style: "",
+    category: "Logic",
+    classPrefix: "Yd1",
+    styleAdditional: "",
+    media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
       <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z"/>
     </svg>`,
-    };
+  };
 
-    editor.Blocks.add(options.id, {
-        media: options.media,
-        label: options.label,
-        category: options.category,
-        content: { type: options.id },
-        ...options.block,
-    });
+  editor.Blocks.add(options.id, {
+    media: options.media,
+    label: options.label,
+    category: options.category,
+    content: { type: options.id },
+    ...options.block,
+  });
 };
 
 const comparison1Component = (editor: Editor) => {
-    const options = {
-        id: "Yd1",
-        label: "Comparison 1",
-        block: {},
-        props: {},
-        style: "",
-        category: "Logic",
-        classPrefix: "Yd1",
-        styleAdditional: "",
-        media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
+  const options = {
+    id: "Yd1",
+    label: "Comparison 1",
+    block: {},
+    props: {},
+    style: "",
+    category: "Logic",
+    classPrefix: "Yd1",
+    styleAdditional: "",
+    media: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-sign-intersection-fill" viewBox="0 0 16 16">
     <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435ZM7.25 4h1.5v3.25H12v1.5H8.75V12h-1.5V8.75H4v-1.5h3.25V4Z"/>
     </svg>`,
-    };
-    const { classPrefix } = options;
+  };
+  const { classPrefix } = options;
 
-    editor.Components.addType(options.id, {
-        model: {
-            defaults: {
-                classes: [classPrefix],
-                traits: [],
-                components: `
+  editor.Components.addType(options.id, {
+    model: {
+      defaults: {
+        classes: [classPrefix],
+        traits: [],
+        components: `
                 <div class="${classPrefix}-container">
                 <div class="${classPrefix}-card">
                   <h2 class="${classPrefix}-title">Your Product Name</h2>
                   <img class="${classPrefix}-mainImage" src="/editor/component-icons/image-icon.png" alt="Your Product">
                   <ul class="${classPrefix}-advantageList">
                     <li>
-                      <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
-                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
-                  </span>
-                      <p class="${classPrefix}-listText">Your brand's key advantage 1</p>
+                    <img class="${classPrefix}-checkMark" src="https://img.icons8.com/material-outlined/24/000000/ok--v1.png" alt="ok--v1"/>
+                    <p class="${classPrefix}-listText">Your brand's key advantage 1</p>
                     </li>
                     <li>
-                      <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
-                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
-                  </span>
-                      <p class="${classPrefix}-listText">Your brand's key advantage 2</p>
+                     <img class="${classPrefix}-checkMark" src="https://img.icons8.com/material-outlined/24/000000/ok--v1.png" alt="ok--v1"/>
+                    <p class="${classPrefix}-listText">Your brand's key advantage 2</p>
                     </li>
                     <li>
-                      <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
-                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
-                  </span>
-                      <p class="${classPrefix}-listText">Your brand's key advantage 3</p>
+                     <img class="${classPrefix}-checkMark" src="https://img.icons8.com/material-outlined/24/000000/ok--v1.png" alt="ok--v1"/>
+                    <p class="${classPrefix}-listText">Your brand's key advantage 3</p>
                     </li>
                     <li>
-                      <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
-                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
-                  </span>
-                      <p class="${classPrefix}-listText">Your brand's key advantage 4</p>
+                     <img class="${classPrefix}-checkMark" src="https://img.icons8.com/material-outlined/24/000000/ok--v1.png" alt="ok--v1"/>
+                    <p class="${classPrefix}-listText">Your brand's key advantage 4</p>
                     </li>
                   </ul>
                 </div>
@@ -101,7 +93,7 @@ const comparison1Component = (editor: Editor) => {
                 </div>
               </div>
                 `,
-                styles: `
+        styles: `
                 .${classPrefix}-container {
                   display: flex;
                   justify-content: space-around;
@@ -225,9 +217,9 @@ const comparison1Component = (editor: Editor) => {
                   }
                 }
                 `,
-            },
-        },
-    });
+      },
+    },
+  });
 };
 
 export { comparison1Block, comparison1Component };

@@ -46,254 +46,198 @@ const productFeatures1Component = (editor: Editor) => {
         classes: [classPrefix],
         traits: [],
         components: `
-<section class="${classPrefix}-section">
-  <div class="${classPrefix}-card">
-    <div class="${classPrefix}-cardHeading">
-      <span class="${classPrefix}-h1">Header for Key Features of Your Product</span>
-    </div>
-    <table class="${classPrefix}-cardContent">
-      <tr>
-        <td>
-          <div class="${classPrefix}-cardTextLeft">
-            <span class="${classPrefix}-h3">
-              Feature 1
-            </span>
-            <div class="${classPrefix}-showOnlyOnMobile">
-              <span class="${classPrefix}-p">
-                Describe the feature crisply from your user&apos;s point of view
-              </span>
+          <section class="${classPrefix}-section">
+            <div class="${classPrefix}-card">
+              <div class="${classPrefix}-cardHeading">
+                <span class="${classPrefix}-h1">Header for Key Features of Your Product</span>
+              </div>
+              <table class="${classPrefix}-cardContent">
+                <tr>
+                  <td>
+                    <div class="${classPrefix}-cardTextLeft">
+                      <span class="${classPrefix}-h3">
+                        Feature 1
+                      </span>
+                      <span class="${classPrefix}-p">
+                        Describe the feature crisply from your user's point of view
+                      </span>
+                    </div>
+                  </td>
+                  <td>
+                    <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-imgFill" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-imgFill" />
+                  </td>
+                  <td>
+                    <div class="${classPrefix}-cardTextRight">
+                      <span class="${classPrefix}-h3">
+                        Feature 2
+                      </span>
+                      <span class="${classPrefix}-p">
+                        Describe the feature crisply from your user's point of view
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="${classPrefix}-cardTextLeft">
+                      <span class="${classPrefix}-h3">
+                        Feature 3
+                      </span>
+                      <span class="${classPrefix}-p">
+                        Describe the feature crisply from your user's point of view
+                      </span>
+                    </div>
+                  </td>
+                  <td>
+                    <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-imgFill" />
+                  </td>
+                </tr>
+              </table>
             </div>
-            <div class="${classPrefix}-hideOnMobile">
-              <span class="${classPrefix}-p">
-                Describe the feature elaborately from your user&apos;s point of view
-              </span>
-            </div>
-          </div>
-        </td>
-        <td>
-          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
-        </td>
-        <td class="${classPrefix}-paddingHack">
-          <div class="${classPrefix}-cardTextRight">
-            <span class="${classPrefix}-h3">
-              Feature 2
-            </span>
-            <div class="${classPrefix}-showOnlyOnMobile">
-              <span class="${classPrefix}-p">
-                Describe the feature crisply from your user&apos;s point of view
-              </span>
-            </div>
-            <div class="${classPrefix}-hideOnMobile">
-              <span class="${classPrefix}-p">
-                Describe the feature elaborately from your user&apos;s point of view
-              </span>
-            </div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="${classPrefix}-cardTextLeft">
-            <span class="${classPrefix}-h3">
-              Feature 3
-            </span>
-            <div class="${classPrefix}-showOnlyOnMobile">
-              <span class="${classPrefix}-p">
-                Describe the feature crisply from your user&apos;s point of view
-              </span>
-            </div>
-            <div class="${classPrefix}-hideOnMobile">
-              <span class="${classPrefix}-p">
-                Describe the feature elaborately from your user&apos;s point of view
-              </span>
-            </div>
-          </div>
-        </td>
-        <td>
-          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
-        </td>
-      </tr>
-    </table>
-  </div>
-</section>
+          </section>
         `,
         styles: `
-.${classPrefix}-h1 {
-  display: block;
-  font-family: Inter, sans-serif;
-  font-size: 40px;
-  font-weight: 600;
-}
+          .${classPrefix}-h1 {
+            display: block;
+            font-family: Inter, sans-serif;
+            font-size: 40px;
+            font-weight: 600;
+          }
 
-@media (max-width: 425px) {
-  .${classPrefix}-h1 {
-    font-size: 25px;
-  }
-}
+          @media (max-width: 425px) {
+            .${classPrefix}-h1 {
+              font-size: 25px;
+            }
+          }
 
-.${classPrefix}-h3 {
-  display: block;
-  font-family: Inter, sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: normal;
-}
+          .${classPrefix}-h3 {
+            display: block;
+            font-family: Inter, sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: normal;
+          }
 
-@media (max-width: 425px) {
-  .${classPrefix}-h3 {
-    font-size: 18px;
-  }
-}
+          @media (max-width: 425px) {
+            .${classPrefix}-h3 {
+              font-size: 18px;
+            }
+          }
 
-.${classPrefix}-p {
-  display: block;
-  font-family: Inter, sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 21px;
-}
+          .${classPrefix}-p {
+            display: block;
+            font-family: Inter, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 21px;
+          }
 
-@media (max-width: 425px) {
-  .${classPrefix}-p {
-    font-size: 13px;
-    line-height: 18.5px;
-  }
-}
+          @media (max-width: 425px) {
+            .${classPrefix}-p {
+              font-size: 13px;
+              line-height: 18.5px;
+            }
+          }
 
-@media (max-width: 425px) {
-  .${classPrefix}-hideOnMobile {
-    display: none;
-  }
-}
+          @media (max-width: 425px) {
+            .${classPrefix}-hideOnMobile {
+              display: none;
+            }
+          }
 
-@media (min-width: 426px) {
-  .${classPrefix}-showOnlyOnMobile {
-    display: none;
-  }
-}
+          @media (min-width: 426px) {
+            .${classPrefix}-showOnlyOnMobile {
+              display: none;
+            }
+          }
 
-.${classPrefix}-img {
-  width: 574px;
-  height: 408px;
-  object-fit: fill;
-  overflow: hidden;
-  border-radius: 10px;
-  background: #E9E9E9;
-}
+          .${classPrefix}-imgFill {
+            object-fit: fill;
+            object-position: center;
+            overflow: hidden;
+            width: 100%;
+          }
 
-@media (max-width: 425px) {
-  .${classPrefix}-img {
-    width: 186px;
-    height: 132px;
-  }
-}
+          .${classPrefix}-section {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 80px;
+          }
 
-.${classPrefix}-section {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 37px 146px 78px 143px;
-  margin: 0 auto;
-  max-width: 1440px;
-  padding-left: 0;
-  padding-right: 0;
-}
+          @media (max-width: 425px) {
+            .${classPrefix}-section {
+              padding: 40px 5px;
+            }
+          }
 
-@media (max-width: 425px) {
-  .${classPrefix}-section {
-    padding: 9px 0 29px 0;
-  }
-}
+          .${classPrefix}-card {
+            display: flex;
+            flex-direction: column;
+          }
 
-.${classPrefix}-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+          .${classPrefix}-cardHeading {
+            margin: 0 auto;
+            text-align: center;
+          }
 
-.${classPrefix}-cardHeading {
-  text-align: center;
-  margin: 0 35px;
-}
+          .${classPrefix}-cardContent {
+            margin: 0 auto;
+            margin-top: 90px;
+          }
 
-.${classPrefix}-cardHeading .${classPrefix}-h1 {
-  width: 898px;
-  height: 44px;
-}
+          @media (max-width: 425px) {
+            .${classPrefix}-cardContent {
+              margin-top: 40px;
+            }
+          }
 
-@media (max-width: 425px) {
-  .${classPrefix}-cardHeading .${classPrefix}-h1 {
-    width: 330px;
-    height: auto;
-    font-size: 26px;
-    line-height: 35px;
-  }
-}
+          .${classPrefix}-cardContent td {
+            width: 33%;
+          }
 
-.${classPrefix}-cardContent {
-  margin-top: 91px;
-}
+          .${classPrefix}-cardTextLeft,
+          .${classPrefix}-cardTextRight {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
 
-@media (max-width: 425px) {
-  .${classPrefix}-cardContent {
-    margin: 47px 14px 0 16px;
-  }
-}
+          @media (max-width: 425px) {
+            .${classPrefix}-cardTextLeft,
+            .${classPrefix}-cardTextRight {
+              gap: 6px;
+            }
+          }
 
-.${classPrefix}-cardTextLeft,
-.${classPrefix}-cardTextRight {
-  display: flex;
-  flex-direction: column;
-}
+          .${classPrefix}-cardTextLeft {
+            margin-right: 90px;
+          }
 
-.${classPrefix}-cardTextLeft .${classPrefix}-h3,
-.${classPrefix}-cardTextRight .${classPrefix}-h3 {
-  width: 340px;
-  height: 19px;
-}
+          @media (max-width: 425px) {
+            .${classPrefix}-cardTextLeft {
+              margin-right: 6px;
+            }
+          }
 
-@media (max-width: 425px) {
+          .${classPrefix}-cardTextRight {
+            margin-left: 90px;
+          }
 
-  .${classPrefix}-cardTextLeft .${classPrefix}-h3,
-  .${classPrefix}-cardTextRight .${classPrefix}-h3 {
-    width: 152px;
-    height: 19px;
-    font-size: 15px;
-  }
-}
+          @media (max-width: 425px) {
+            .${classPrefix}-cardTextRight {
+              margin-left: 6px;
+            }
+          }
 
-.${classPrefix}-cardTextLeft .${classPrefix}-p,
-.${classPrefix}-cardTextRight .${classPrefix}-p {
-  width: 482px;
-  height: 87px;
-  margin-top: 21px;
-}
-
-@media (max-width: 425px) {
-
-  .${classPrefix}-cardTextLeft .${classPrefix}-p,
-  .${classPrefix}-cardTextRight .${classPrefix}-p {
-    width: 177px;
-    height: 53px;
-    margin-top: 6px;
-  }
-}
-
-.${classPrefix}-paddingHack {
-  padding-left: 64px;
-}
-
-@media (max-width: 425px) {
-  .${classPrefix}-paddingHack {
-    padding-left: 16px;
-  }
-}
+          .${classPrefix}-imgFill {
+            border-radius: 20px;
+          }
       `,
       },
     },

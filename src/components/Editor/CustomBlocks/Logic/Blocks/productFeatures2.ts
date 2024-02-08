@@ -246,7 +246,7 @@ const productFeatures2Component = (editor: Editor) => {
   .${classPrefix}-featureTable {
     width: auto;
     height: auto;
-    margin: 0 19.96px 0 26.5px;
+    margin: 0;
   }
 }
 
@@ -314,13 +314,13 @@ const productFeatures2Component = (editor: Editor) => {
 
 .${classPrefix}-featureItem .${classPrefix}-h3 {
   width: 216px;
-  height: 17px;
+  height: auto;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-featureItem .${classPrefix}-h3 {
     width: 128px;
-    height: 17px;
+    height: auto;
     margin-top: 12px;
     margin-bottom: 9px;
   }
@@ -328,13 +328,13 @@ const productFeatures2Component = (editor: Editor) => {
 
 .${classPrefix}-featureItem .${classPrefix}-p {
   width: 329px;
-  height: 38px;
+  height: auto;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-featureItem .${classPrefix}-p {
     width: 150px;
-    height: 32px;
+    height: auto;
   }
 }
       `,
