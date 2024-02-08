@@ -44,7 +44,7 @@ export default function GetStarted({ projectID = "" }: Props) {
         setLoadingSmartBuilder(true);
         const newProjectPayload = {
           name: "Untitled",
-          projectHostingAlias: "",
+          //projectHostingAlias: "",
           files: [],
           collaborators: [],
           organizationId: cachedUser?.organizations[0] || "",

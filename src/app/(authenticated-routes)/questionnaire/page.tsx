@@ -304,7 +304,6 @@ export default function Page() {
       if(!projectID) {
         const newProjectPayload = {
           name: 'Untitled',
-          projectHostingAlias: '',
           collaborators: [],
           files:[],
           organizationId: cachedUser?.organizations[0] || '',

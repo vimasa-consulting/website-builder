@@ -4,7 +4,7 @@ export type Project = {
   files: any[];
   imageURL?: string
   matomoProjectId?: string
-  projectHostingAlias: string,
+  projectHostingAlias?: string,
   ownerUserId: string,
   collaborators: string[],
   organizationId: string
