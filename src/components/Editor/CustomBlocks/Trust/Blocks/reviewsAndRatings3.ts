@@ -85,6 +85,7 @@ const reviewsAndRatings3Component = (editor: Editor) => {
             padding: 95px 0px 85px;
             align-items: center;
             max-width: 1440px;
+            min-width: 1440px;
             margin: 0 auto;
           }
 
@@ -151,6 +152,7 @@ const reviewsAndRatings3Component = (editor: Editor) => {
           }
           @media (max-width: 400px) {
             .${classPrefix}-section {
+              min-width: 400px;
               padding: 45px 20px 41px;
             }
             .${classPrefix}-rating-img {

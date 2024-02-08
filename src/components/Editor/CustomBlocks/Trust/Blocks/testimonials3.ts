@@ -92,6 +92,7 @@ const testimonials3Component = (editor: Editor) => {
                   padding: 78px 0px 105px;
                   margin: 0 auto;
                   max-width: 1440px;
+                  min-width: 1440px;
                 }
                 .${classPrefix}-title {
                   text-align: center;
@@ -146,6 +147,7 @@ const testimonials3Component = (editor: Editor) => {
                 
               @media (max-width: 400px) {
                 .${classPrefix}-section {
+                  min-width: 400px;
                   padding: 56px 49px 90px;
                 }
                 .${classPrefix}-wrapper {

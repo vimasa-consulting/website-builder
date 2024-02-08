@@ -72,6 +72,7 @@ const clientListLogos1Component = (editor: Editor) => {
             padding: 48px 0 59px;
             font-family: Inter, sans-serif;
             max-width: 1440px;
+            min-width: 1440px;
             margin: 0 auto;
           }
         .${classPrefix}-sectionWrapper {
@@ -112,6 +113,7 @@ const clientListLogos1Component = (editor: Editor) => {
           }
           @media (max-width: 400px) {
             .${classPrefix}-section {
+              min-width: 400px;
               padding: 39px 12px 38px 16px;
             }
             .${classPrefix}-sectionWrapper {

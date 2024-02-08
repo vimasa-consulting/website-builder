@@ -90,6 +90,7 @@ const beforeAfter2Component = (editor: Editor) => {
             flex-direction: column;
             padding: 79px 0;
             padding-bottom: 340px;
+            min-width: 1440px;
           }
           
           .${classPrefix}-wrapper {
@@ -386,6 +387,7 @@ const beforeAfter2Component = (editor: Editor) => {
               padding-right: unset;
             }
             .${classPrefix}-section {
+              min-width: 400px;
               padding: unset;
               padding-bottom: 110px;
             }

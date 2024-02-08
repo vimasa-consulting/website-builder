@@ -87,6 +87,7 @@ const beforeAfter1Component = (editor: Editor) => {
             padding: 117px 0px;
             margin: 0 auto;
             max-width: 1440px;
+            min-width: 1440px;
           }
           
           .${classPrefix}-wrapper {
@@ -252,6 +253,7 @@ const beforeAfter1Component = (editor: Editor) => {
           
           @media (max-width: 400px) {
             .${classPrefix}-section {
+              min-width: 400px;
               padding: 25px 20px 72px;
             }
           

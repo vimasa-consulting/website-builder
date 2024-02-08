@@ -123,6 +123,7 @@ const faquc2Component = (editor: Editor) => {
             display: flex;
             padding: 109px 0;
             max-width: 1440px;
+            min-width: 1440px;
             margin: 0 auto;
           }
 
@@ -213,6 +214,7 @@ const faquc2Component = (editor: Editor) => {
 
           @media (max-width: 768px) {
             .${classPrefix}-section {
+              min-width: 400px;
              padding: 57px 18px; 
             }
 

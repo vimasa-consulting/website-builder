@@ -115,6 +115,7 @@ const faquc3Component = (editor: Editor) => {
             display: block;
             padding: 86px 0 64px;
             max-width: 1440px;
+            min-width: 1440px;
             margin: 0 auto;
           }
 
@@ -179,6 +180,7 @@ const faquc3Component = (editor: Editor) => {
 
           @media (max-width: 400px) {
             .${classPrefix}-section {
+              min-width: 400px;
               padding: 57px 18px 42px;
             }
 

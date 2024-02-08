@@ -83,6 +83,7 @@ const reviewsAndRatings2Component = (editor: Editor) => {
             padding: 91px 0px;
             font-family: Inter, sans-serif;
             max-width: 1440px;
+            min-width: 1440px;
             margin: 0 auto;
           }
         .${classPrefix}-title{
@@ -203,6 +204,7 @@ const reviewsAndRatings2Component = (editor: Editor) => {
         } 
         @media (max-width: 400px) {
             .${classPrefix}-section {
+                min-width: 400px;
                 padding: 53px 26px 68px 34px;
             } 
                     

@@ -81,6 +81,7 @@ const testimonials4Component = (editor: Editor) => {
             padding: 75px 0px 92px;
             margin: 0 auto;
             max-width: 1440px;
+            min-width: 1440px;
           }
         .${classPrefix}-sectionWrapper {
             display: flex;
@@ -181,6 +182,7 @@ const testimonials4Component = (editor: Editor) => {
 
         @media (max-width: 400px) {
           .${classPrefix}-section {
+            min-width: 400px;
             padding: 42px 51px 31px;
           }
           .${classPrefix}-wrapper {

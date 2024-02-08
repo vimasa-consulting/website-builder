@@ -100,6 +100,7 @@ const testimonials2Component = (editor: Editor) => {
                   padding: 99px 0px 135px;
                   margin: 0 auto;
                   max-width: 1440px;
+                  min-width: 1440px;
                 }
                 .${classPrefix}-title {
                   text-align: center;
@@ -210,6 +211,7 @@ const testimonials2Component = (editor: Editor) => {
       
               @media (max-width: 400px) {
                 .${classPrefix}-section {
+                  min-width: 400px;
                   padding: 45px 25px 52px;
                 }
                 .${classPrefix}-cardWrapper {

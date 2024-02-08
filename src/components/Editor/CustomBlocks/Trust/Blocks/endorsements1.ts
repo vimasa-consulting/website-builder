@@ -84,6 +84,7 @@ const endorsements1Component = (editor: Editor) => {
             justify-content: center;
             align-items: center;
             max-width: 1440px;
+            min-width: 1440px;
             margin: 0 auto;
           }
           .${classPrefix}-title {
@@ -176,6 +177,7 @@ const endorsements1Component = (editor: Editor) => {
 
         @media (max-width: 400px) {
           .${classPrefix}-section {
+            min-width: 400px;
             padding: 56px 27px 62px 26px;
             flex-direction: column;
           }

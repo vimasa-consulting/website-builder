@@ -97,6 +97,7 @@ const endorsements3Component = (editor: Editor) => {
                   font-family: Inter, sans-serif;
                   padding: 79px 0px 85px;
                   max-width: 1440px;
+                  min-width: 400px;
                   margin: 0 auto;
                 }
                 .${classPrefix}-title {
@@ -172,6 +173,7 @@ const endorsements3Component = (editor: Editor) => {
                 
               @media (max-width: 400px) {
                 .${classPrefix}-section {
+                  min-width: 400px;
                   padding: 66px 35px 53px; 
                 }
                 .${classPrefix}-wrapper {

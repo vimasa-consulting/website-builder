@@ -75,6 +75,7 @@ const clientListLogos3Component = (editor: Editor) => {
             max-height: 700px;
             font-family: Inter, sans-serif;
             max-width: 1440px;
+            min-width: 1440px;
             margin: 0 auto;
             display: flex;
             justify-content: center;
@@ -125,6 +126,7 @@ const clientListLogos3Component = (editor: Editor) => {
           }
           @media (max-width: 400px) {
             .${classPrefix}-section {
+               min-width: 400px;
                padding: 35px 14px 37px;
             }
             .${classPrefix}-title {

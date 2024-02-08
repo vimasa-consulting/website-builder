@@ -91,6 +91,7 @@ const beforeAfter3Component = (editor: Editor) => {
             flex-direction: column;
             padding: 101px 0px 127px;
             max-width: 1440px;
+            min-width: 1440px;
             margin: 0 auto;
           }
         .${classPrefix}-title {
@@ -199,6 +200,7 @@ const beforeAfter3Component = (editor: Editor) => {
           
           @media (max-width: 400px) {
             .${classPrefix}-section {
+              min-width: 400px;
               padding: 47px 15px 73px;
             }
           

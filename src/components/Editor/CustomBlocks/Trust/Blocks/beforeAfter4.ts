@@ -87,6 +87,7 @@ const beforeAfter4Component = (editor: Editor) => {
             display: flex;
             flex-direction: column;
             padding-top: 84px;
+            min-width: 1440px;
           }
 
           .${classPrefix}-after-mobile {
@@ -449,6 +450,7 @@ const beforeAfter4Component = (editor: Editor) => {
             }
 
             .${classPrefix}-section {
+              min-width: 400px;
               padding: 0 20px;
             }
           

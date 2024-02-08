@@ -73,6 +73,7 @@ const clientListLogos4Component = (editor: Editor) => {
             max-height: 700px;
             font-family: Inter, sans-serif;
             max-width: 1440px;
+            min-width: 1440px;
             margin: 0 auto;
           }
         .${classPrefix}-logoWrapper {
@@ -107,6 +108,7 @@ const clientListLogos4Component = (editor: Editor) => {
 
           @media (max-width: 400px) {
             .${classPrefix}-section {
+                min-width: 400px;
                 padding: 36px 0 41px;
             }
             .${classPrefix}-title {
