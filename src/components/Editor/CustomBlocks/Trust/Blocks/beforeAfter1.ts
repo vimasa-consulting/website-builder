@@ -52,7 +52,7 @@ const beforeAfter1Component = (editor: Editor) => {
                   <div class="${classPrefix}-cardWrapper">
                     <div class="${classPrefix}-card">
                       <div class="${classPrefix}-panel">
-                      <img class="${classPrefix}-img ${classPrefix}-img-1" src="https://placehold.co/415x518" alt="Placeholder"/>
+                      <img class="${classPrefix}-img ${classPrefix}-img-1" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                         <div class="${classPrefix}-caption">
                           <button class="${classPrefix}-button" >Before</button>
                         </div>
@@ -60,7 +60,7 @@ const beforeAfter1Component = (editor: Editor) => {
                     </div>
                     <div class="${classPrefix}-card-2">
                       <div class="${classPrefix}-panel-2">
-                      <img class="${classPrefix}-img ${classPrefix}-img-2" src="https://placehold.co/415x518" alt="Placeholder"/>
+                      <img class="${classPrefix}-img ${classPrefix}-img-2" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                         <div class="${classPrefix}-caption">
                           <button class="${classPrefix}-button" >After</button>
                         </div>

@@ -57,31 +57,31 @@ const clientListLogos2Component = (editor: Editor) => {
                 <div class="${classPrefix}-logoWrapper">
                   <div class="${classPrefix}-logoContainer">
                   <div class="${classPrefix}-logo">
-                  <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                  <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                   </div>
                    <p class="${classPrefix}-brand">Brand Name</p>
                    </div>
                    <div class="${classPrefix}-logoContainer">
                    <div class="${classPrefix}-logo">
-                    <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                    <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                     </div>
                    <p class="${classPrefix}-brand">Brand Name</p>
                    </div>
                    <div class="${classPrefix}-logoContainer">
                    <div class="${classPrefix}-logo">
-                   <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                   <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                    </div>
                    <p class="${classPrefix}-brand">Brand Name</p>
                    </div>
                    <div class="${classPrefix}-logoContainer">
                    <div class="${classPrefix}-logo">
-                   <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                   <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                    </div>
                    <p class="${classPrefix}-brand">Brand Name</p>
                    </div>
                    <div class="${classPrefix}-logoContainer">
                    <div class="${classPrefix}-logo">
-                    <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                    <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                     </div>
                    <p class="${classPrefix}-brand">Brand Name</p>
                    </div>

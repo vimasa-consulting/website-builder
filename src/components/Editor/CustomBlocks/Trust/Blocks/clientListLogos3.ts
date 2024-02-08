@@ -51,19 +51,19 @@ const clientListLogos3Component = (editor: Editor) => {
                     <div class="${classPrefix}-block">
                         <p class="${classPrefix}-title">“Insert a customer quote here. Be specific in the benefits they received from you“</p>
                         <div class="${classPrefix}-logo">
-                        <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                        <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                         </div>
                     </div>
                     <div class="${classPrefix}-block">
                         <p class="${classPrefix}-title">“Insert a customer quote here. Be specific in the benefits they received from you“</p>
                         <div class="${classPrefix}-logo">
-                        <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                        <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                         </div>
                     </div>
                     <div class="${classPrefix}-block">
                         <p class="${classPrefix}-title">“Insert a customer quote here. Be specific in the benefits they received from you“</p>
                         <div class="${classPrefix}-logo">
-                        <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                        <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                         </div>
                     </div>
                 </div>

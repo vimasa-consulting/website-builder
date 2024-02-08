@@ -51,7 +51,7 @@ const reviewsAndRatings2Component = (editor: Editor) => {
                 <h1 class="${classPrefix}-title">Header for Customer Reviews</h1>
                 <div class="${classPrefix}-reviewsContainer">
                 <div class="${classPrefix}-panel">
-                <img class="${classPrefix}-img" src="https://placehold.co/289x339" alt="Placeholder"/>
+                <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
               </div>
                 <div class="${classPrefix}-descriptionContainer">
                 <div class="${classPrefix}-ratingsContainer">

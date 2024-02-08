@@ -68,7 +68,7 @@ const testimonials4Component = (editor: Editor) => {
                   </div>
                   </div>
                   <div class="${classPrefix}-imageWrapper">
-                  <img class="${classPrefix}-img" class="${classPrefix}-image" src="https://placehold.co/366x366" alt="Placeholder"/>
+                  <img class="${classPrefix}-img" class="${classPrefix}-image" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                 </div>
                 </div>
                 </div> 

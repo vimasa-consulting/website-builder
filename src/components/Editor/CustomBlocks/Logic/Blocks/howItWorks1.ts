@@ -57,7 +57,7 @@ const howItWorks1Component = (editor: Editor) => {
           <div class="${classPrefix}-stepDescription">Description of the step</div>
         </div>
         <div class="${classPrefix}-imageWrapper">
-        <img class="${classPrefix}-image" src="https://placehold.co/381x381" alt="placeholder-image">
+        <img class="${classPrefix}-image" src="/editor/component-icons/image-icon.png" alt="placeholder-image">
         </div>
       </div>
       <div class="${classPrefix}-card">
@@ -67,7 +67,7 @@ const howItWorks1Component = (editor: Editor) => {
           <div class="${classPrefix}-stepDescription">Description of the step 2</div>
         </div>
         <div class="${classPrefix}-imageWrapper">
-        <img class="${classPrefix}-image" src="https://placehold.co/381x381" alt="placeholder-image">
+        <img class="${classPrefix}-image" src="/editor/component-icons/image-icon.png" alt="placeholder-image">
         </div>
       </div>
       <div class="${classPrefix}-card">
@@ -77,7 +77,7 @@ const howItWorks1Component = (editor: Editor) => {
           <div class="${classPrefix}-stepDescription">Description of the step 3</div>
         </div>
         <div class="${classPrefix}-imageWrapper">
-        <img class="${classPrefix}-image" src="https://placehold.co/381x381" alt="placeholder-image">
+        <img class="${classPrefix}-image" src="/editor/component-icons/image-icon.png" alt="placeholder-image">
         </div>
       </div>
     </div>

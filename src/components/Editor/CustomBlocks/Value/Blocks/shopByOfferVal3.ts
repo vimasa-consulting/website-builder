@@ -56,7 +56,7 @@ const shopByOfferVal3Component = (editor: Editor) => {
           <p>off</p>
         </div>
         <div class="${classPrefix}-imageWrapper">
-        <img loading="lazy" src="https://placehold.co/329x287" class="${classPrefix}-image" />
+        <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
         </div>
         <div class="${classPrefix}-descWrapper">
               <p>Product Range 1</p>
@@ -69,7 +69,7 @@ const shopByOfferVal3Component = (editor: Editor) => {
           <p class="${classPrefix}-bigText">&#8377; 99</p>
         </div>
         <div class="${classPrefix}-imageWrapper">
-        <img loading="lazy" src="https://placehold.co/329x287" class="${classPrefix}-image" />
+        <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
         </div>
         <div class="${classPrefix}-descWrapper">
               <p>Product Range 1</p>
@@ -82,7 +82,7 @@ const shopByOfferVal3Component = (editor: Editor) => {
           <p>off</p>
         </div>
         <div class="${classPrefix}-imageWrapper">
-        <img loading="lazy" src="https://placehold.co/329x287" class="${classPrefix}-image" />
+        <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
         </div>
         <div class="${classPrefix}-descWrapper">
               <p>Product Range 1</p>

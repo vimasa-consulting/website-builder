@@ -50,7 +50,7 @@ const faquc2Component = (editor: Editor) => {
               <div class="${classPrefix}-wrapper">
               <div class="${classPrefix}-mobile-title">Frequently Asked Questions</div>
               <div class="${classPrefix}-left">
-                <img loading="lazy" src="https://placehold.co/" class="${classPrefix}-image" />
+                <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
               </div>
               <div class="${classPrefix}-right">
               <div class="${classPrefix}-title">Frequently Asked Questions</div>

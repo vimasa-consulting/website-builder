@@ -65,14 +65,14 @@ const beforeAfter2Component = (editor: Editor) => {
                       <div class="${classPrefix}-card">
                       
                         <div class="${classPrefix}-panel">
-                        <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-image" />
+                        <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                         </div>
                         <div class="${classPrefix}-before"><span>Before</span></div>
                       </div>
                       <div class="${classPrefix}-card-2">
                       <div class="${classPrefix}-after"><span>After</span></div>
                         <div class="${classPrefix}-panel-2">
-                        <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-image" />
+                        <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                         </div>
                       </div>
                     </div>

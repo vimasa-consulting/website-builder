@@ -52,16 +52,16 @@ const clientListLogos1Component = (editor: Editor) => {
                     <h1 class="${classPrefix}-title" >Header about the successful collaborations with your clients</h1>
                     </div>
                     <div class="${classPrefix}-logoContainer">
-                    <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                    <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                     </div>
                     <div class="${classPrefix}-logoContainer">
-                    <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                    <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                     </div>
                     <div class="${classPrefix}-logoContainer">
-                    <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                    <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                     </div>
                     <div class="${classPrefix}-logoContainer">
-                    <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+                    <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                     </div>
                   </div>
               </section>

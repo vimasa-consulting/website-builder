@@ -50,19 +50,19 @@ const clientListLogos4Component = (editor: Editor) => {
              <h1 class="${classPrefix}-title" >Header for your successful client collaborations</h1>  
              <div class="${classPrefix}-logoWrapper">
              <div class="${classPrefix}-logo">
-             <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+             <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
              </div>
              <div class="${classPrefix}-logo">
-             <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+             <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
              </div>
              <div class="${classPrefix}-logo">
-             <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+             <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
              </div>
              <div class="${classPrefix}-logo">
-             <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+             <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
              </div>
              <div class="${classPrefix}-logo">
-             <img class="${classPrefix}-img" src="https://placehold.co/134x55" alt="Placeholder"/>
+             <img class="${classPrefix}-img" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
              </div>
             </div>
                 </section>

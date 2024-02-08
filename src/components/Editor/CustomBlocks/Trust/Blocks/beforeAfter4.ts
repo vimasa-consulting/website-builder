@@ -57,12 +57,12 @@ const beforeAfter4Component = (editor: Editor) => {
                           Use emotionally powerful words to describe user's "Before" experience
                         </p>
                         <div class="${classPrefix}-panel">
-                        <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-image-1" />
+                        <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-1" />
                         </div>
                       </div>
                       <div class="${classPrefix}-card-2">
                         <div class="${classPrefix}-panel-2">
-                        <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-image" />
+                        <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                         </div>
                         <div class="${classPrefix}-after"><span>After</span></div>
                         <p class="${classPrefix}-description-2">

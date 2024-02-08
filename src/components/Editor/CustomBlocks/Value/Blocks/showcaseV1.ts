@@ -86,7 +86,7 @@ const showcaseV1Component = (editor: Editor) => {
     <div class="${classPrefix}-cards ${classPrefix}-midCards">
       <div class="${classPrefix}-card">     
         <div class="${classPrefix}-imageWrapper">
-        <img loading="lazy" src="https://placehold.co/280x280" class="${classPrefix}-image" />
+        <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
         </div>
         <div class="${classPrefix}-descWrapper">
               <p>Product 4</p>
@@ -101,7 +101,7 @@ const showcaseV1Component = (editor: Editor) => {
       </div>
       <div class="${classPrefix}-card ${classPrefix}-rightCard">
         <div class="${classPrefix}-imageWrapper">
-        <img loading="lazy" src="https://placehold.co/280x280" class="${classPrefix}-image" />
+        <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
         </div>
         <div class="${classPrefix}-descWrapper">
               <p>Product 5</p>
@@ -118,7 +118,7 @@ const showcaseV1Component = (editor: Editor) => {
     <div class="${classPrefix}-cards ${classPrefix}-lowestCards">
       <div class="${classPrefix}-card">     
         <div class="${classPrefix}-imageWrapper">
-        <img loading="lazy" src="https://placehold.co/280x280" class="${classPrefix}-image" />
+        <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
         </div>
         <div class="${classPrefix}-descWrapper">
               <p>Product 6</p>

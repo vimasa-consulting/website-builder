@@ -53,13 +53,13 @@ const beforeAfter3Component = (editor: Editor) => {
                   <div class="${classPrefix}-cardWrapper">
                     <div class="${classPrefix}-card">
                       <div class="${classPrefix}-panel">
-                        <img class="${classPrefix}-image" src="https://placehold.co/340x473" alt="Placeholder"/>
+                        <img class="${classPrefix}-image" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                       </div>
                       <p class="${classPrefix}-type" >Before</p>
                     </div>
                     <div class="${classPrefix}-card">
                       <div class="${classPrefix}-panel">
-                      <img class="${classPrefix}-image" src="https://placehold.co/340x473" alt="Placeholder"/>
+                      <img class="${classPrefix}-image" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                       </div>
                       <p class="${classPrefix}-type" >After</p>
                     </div>
@@ -67,13 +67,13 @@ const beforeAfter3Component = (editor: Editor) => {
                   <div class="${classPrefix}-cardWrapper">
                     <div class="${classPrefix}-card">
                       <div class="${classPrefix}-panel">
-                      <img class="${classPrefix}-image" src="https://placehold.co/340x473" alt="Placeholder"/>
+                      <img class="${classPrefix}-image" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                       </div>
                       <p class="${classPrefix}-type" >Before</p>
                     </div>
                     <div class="${classPrefix}-card">
                       <div class="${classPrefix}-panel">
-                      <img class="${classPrefix}-image" src="https://placehold.co/340x473" alt="Placeholder"/>
+                      <img class="${classPrefix}-image" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                       </div>
                       <p class="${classPrefix}-type" >After</p>
                     </div>
