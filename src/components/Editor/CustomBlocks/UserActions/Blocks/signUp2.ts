@@ -75,6 +75,7 @@ const signUp2Component = (editor: Editor) => {
                     padding: 57px 0 75px;
                     margin: 0 auto;
                     max-width: 1440px;
+                    min-width: 1440px;
                     font-family: Inter, sans-serif;
                 }
                 .${classPrefix}-title {
@@ -131,6 +132,7 @@ const signUp2Component = (editor: Editor) => {
                 }
                 @media (max-width: 400px) {
                     .${classPrefix}-section {
+                        min-width: 400px;
                         padding: 40px 36px 51px;
                     }
                     .${classPrefix}-formSection {

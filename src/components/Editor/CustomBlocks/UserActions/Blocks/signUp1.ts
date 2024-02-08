@@ -73,6 +73,7 @@ const signUp1Component = (editor: Editor) => {
                     justify-content: center;
                     padding: 72px 0px 80px;
                     margin: 0 auto;
+                    min-width: 1440px;
                     max-width: 1440px;
                 }
                 .${classPrefix}-title {
@@ -120,6 +121,7 @@ const signUp1Component = (editor: Editor) => {
                 }
                 @media (max-width: 400px) {
                     .${classPrefix}-section {
+                        min-width: 400px;
                         padding: 34px 56px 42px;
                     }
                     .${classPrefix}-formSection {

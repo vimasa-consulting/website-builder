@@ -54,6 +54,7 @@ const signUpCtaComponent = (editor: Editor) => {
                 styles: `
                 .${classPrefix}-section {
                     display: flex;
+                    min-width: 1440px;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
@@ -77,6 +78,7 @@ const signUpCtaComponent = (editor: Editor) => {
                 @media (max-width: 400px) {
                     .${classPrefix}-section {
                         padding: 12px;
+                        min-width: 400px;
                     }
                     .${classPrefix}-submitCta {
                         max-width: 235px;
