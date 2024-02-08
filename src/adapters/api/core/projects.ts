@@ -10,7 +10,7 @@ export async function getAllProjects(organizationId: string) {
   });
 }
 
-export async function createProject(payload: Omit<Project, '_id' | 'imageURL' | 'ownerUserId'>) {
+export async function createProject(payload: Omit<Project, '_id' | 'imageURL' | 'ownerUserId' | 'projectHostingAlias'>) {
   return apiInstance.post(RESOURCE_PATH, payload, {
     headers: (await getAuthHeaders()),
   });
