@@ -95,6 +95,7 @@ const shopByOfferVal3Component = (editor: Editor) => {
                 `,
         styles: `
                 .${classPrefix}-section {
+                    min-width: 1440px;
                     background-color: #fff;
                     display: flex;
                     flex-direction: column;
@@ -280,6 +281,7 @@ const shopByOfferVal3Component = (editor: Editor) => {
                   }
                   @media (max-width: 425px) {
                     .${classPrefix}-section {
+                      min-width: 400px;
                       padding: 49px 12px 54px;
                       padding-left: 25px;
                     }

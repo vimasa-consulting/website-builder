@@ -142,6 +142,7 @@ const showcaseV1Component = (editor: Editor) => {
                 `,
         styles: `
                 .${classPrefix}-section {
+                    min-width: 1440px;
                     background-color: #fff;
                     display: flex;
                     flex-direction: column;
@@ -458,6 +459,7 @@ const showcaseV1Component = (editor: Editor) => {
                     }
 
                     .${classPrefix}-section {
+                      min-width: 400px;
                       background-color: #fff;
                       display: flex;
                       flex-direction: column;

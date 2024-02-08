@@ -52,6 +52,7 @@ const component = (editor: Editor) => {
         styles: `
             .${classPrefix}-section {
               display: flex;
+              min-width: 1440px;
               flex-direction: row;
               height: 70vh;
               background: #E9E9E9;
@@ -132,6 +133,7 @@ const component = (editor: Editor) => {
 
             @media only screen and (max-width: 600px) {
               .${classPrefix}-section {
+                min-width: 400px;
                 padding: 2rem 2rem;
                 height: auto;
                 flex-direction: column;

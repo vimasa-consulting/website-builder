@@ -46,6 +46,7 @@ const component = (editor: Editor) => {
         `,
         styles: `
           .${classPrefix}-section {
+            min-width: 1440px;
             padding: 5.25rem 0px;
             font-family: Inter, sans-serif;
             padding-bottom: 282px;
@@ -132,6 +133,9 @@ const component = (editor: Editor) => {
             background-color: #d9d9d9;          
           }
           @media (max-width: 770px) {
+            .${classPrefix}-section {
+              min-width: 400px;
+            }
             .${classPrefix}-container {
               position: unset;
               flex-direction: column;

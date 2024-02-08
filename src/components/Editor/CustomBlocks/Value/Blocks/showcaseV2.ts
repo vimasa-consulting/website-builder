@@ -151,6 +151,7 @@ const showcaseV2Component = (editor: Editor) => {
                 `,
         styles: `
                 .${classPrefix}-section {
+                    min-width: 1440px;
                     background-color: #fff;
                     display: flex;
                     flex-direction: column;

@@ -52,6 +52,7 @@ const component = (editor: Editor) => {
           `,
         styles: `
             .${classPrefix}-section {
+              min-width: 1440px;
               display: flex;
               flex-direction: row;
               height: 70vh;

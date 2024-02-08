@@ -60,6 +60,7 @@ const component = (editor: Editor) => {
             padding: 5.5rem 1rem;
             font-family: Inter, sans-serif;
             max-width: 1440px;
+            min-width: 1440px;
             margin: auto;
           }
 
@@ -120,6 +121,7 @@ const component = (editor: Editor) => {
 
           @media (max-width: 480px) {
             .${classPrefix}-section {
+              min-width: 400px;
               padding: 1.8rem 1rem;
             }
             .${classPrefix}-container {
