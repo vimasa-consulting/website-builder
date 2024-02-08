@@ -145,6 +145,7 @@ const timeline1Component = (editor: Editor) => {
   display: flex;
   flex-direction: column;
   padding: 80px;
+  min-width: 1440px;
 }
 
 .${classPrefix}-wrapper {
@@ -234,6 +235,7 @@ const timeline1Component = (editor: Editor) => {
     padding: 20px;
     padding-bottom: 51px;
     padding-top: 0px;
+    min-width: 400px;
   }
   .${classPrefix}-textWrapper > p {
     font-size: 25px;

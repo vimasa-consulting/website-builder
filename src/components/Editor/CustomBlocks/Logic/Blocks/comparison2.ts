@@ -203,6 +203,7 @@ const comparison2Component = (editor: Editor) => {
                 @media (max-width: 400px) {
                   .${classPrefix}-container {
                     align-items: center;
+                    min-width: 400px;
                   }
                   .${classPrefix}-card {
                     width: 100%;

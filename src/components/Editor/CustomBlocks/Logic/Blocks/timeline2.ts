@@ -250,7 +250,7 @@ const timeline2Component = (editor: Editor) => {
         }
 
         .${classPrefix}-section {
-          width: 750px;
+          min-width: 1440px;
           margin: 0 auto;
           margin-bottom: 20px;
         }
@@ -272,7 +272,8 @@ const timeline2Component = (editor: Editor) => {
         }
         @media (max-width: 400px) {
           .${classPrefix}-section {
-            max-width: 390px;
+            max-width: 400px;
+            min-width: 400px;
             margin-bottom: 42px;
           } 
           .${classPrefix}-headerText {

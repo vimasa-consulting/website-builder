@@ -185,7 +185,7 @@ const timeline3Component = (editor: Editor) => {
   flex-direction: column;
   padding: 80px;
   margin-bottom: 40px;
-  width: 1422px;
+  min-width: 1440px;
 }
 
 .${classPrefix}-wrapper {
@@ -277,7 +277,7 @@ const timeline3Component = (editor: Editor) => {
   .${classPrefix}-section {
     padding: 20px;
     overflow: hidden;
-    width: unset;
+    min-width: 400px;
     max-height: 700px;
     overflow: hidden;
   }

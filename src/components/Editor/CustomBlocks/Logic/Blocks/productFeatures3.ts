@@ -176,11 +176,13 @@ const productFeatures3Component = (editor: Editor) => {
   display: flex;
   flex-direction: column;
   padding: 80px 100px;
+  min-width: 1440px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-section {
     padding: 40px 15px;
+    min-width: 400px;
   }
 }
 

@@ -214,6 +214,7 @@ const productBenefits1Component = (editor: Editor) => {
 
 @media (max-width: 425px) {
   .${classPrefix}-section {
+    min-width: 400px;
     padding: 60px 20px 0;
   }
 }

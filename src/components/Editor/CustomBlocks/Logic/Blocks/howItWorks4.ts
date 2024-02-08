@@ -195,6 +195,7 @@ const howItWorks4Component = (editor: Editor) => {
 
 @media (max-width: 425px) {
   .${classPrefix}-section {
+    min-width: 400px;
     padding: 40px 18px 43px 18px;
   }
 }

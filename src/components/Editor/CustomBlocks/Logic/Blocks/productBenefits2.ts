@@ -160,10 +160,12 @@ const productBenefits2Component = (editor: Editor) => {
   display: flex;
   flex-direction: column;
   padding: 100px 120px;
+  min-width: 1440px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-section {
+    min-width: 400px;
     padding: 60px 30px;
   }
 }

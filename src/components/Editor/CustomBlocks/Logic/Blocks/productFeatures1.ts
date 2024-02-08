@@ -207,6 +207,7 @@ min-width: 1440px;
 
 @media (max-width: 425px) {
   .${classPrefix}-section {
+    min-width: 400px;
     padding: 9px 0 29px 0;
   }
 }

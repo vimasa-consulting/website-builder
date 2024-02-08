@@ -168,6 +168,7 @@ const comparison3Component = (editor: Editor) => {
                 @media (max-width: 400px) {
                   .${classPrefix}-comparisonContainer {
                     padding: 46px 0px;
+                    min-width: 400px;
                   }
                   .${classPrefix}-title {
                     font-size: 26px;

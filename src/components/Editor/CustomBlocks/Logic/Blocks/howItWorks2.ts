@@ -166,6 +166,7 @@ const howItWorks2Component = (editor: Editor) => {
 
 @media (max-width: 425px) {
   .${classPrefix}-section {
+    min-width: 400px;
     padding: 0 40px;
   }
 }
