@@ -53,6 +53,7 @@ const fomo1Component = (editor: Editor) => {
                 styles: `
                .${classPrefix}-section {
                 height: 53px;
+                min-width: 1440px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -69,6 +70,7 @@ const fomo1Component = (editor: Editor) => {
               @media (max-width: 400px) {
                .${classPrefix}-section {
                  height: 38px;
+                 min-width: 400px;
                }
                 .${classPrefix}-text {
                 color: #000;

@@ -59,6 +59,7 @@ const fomo3Component = (editor: Editor) => {
                 styles: `
                .${classPrefix}-section {
                 height: 128px;
+                min-width: 1440px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -132,6 +133,7 @@ const fomo3Component = (editor: Editor) => {
                } 
               @media (max-width: 770px) {
                 .${classPrefix}-section {
+                  min-width: 400px;
                   height: 70px;
                   padding-top: 10px;
                   padding-bottom: 14px;

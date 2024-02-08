@@ -62,6 +62,7 @@ const fomo5Component = (editor: Editor) => {
                 styles: `
                .${classPrefix}-section {
                 height: 96px;
+                min-width: 1440px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -138,6 +139,7 @@ const fomo5Component = (editor: Editor) => {
                   }
                   .${classPrefix}-section {
                     padding-top: 10px;
+                    min-width: 400px;
                     padding-bottom: 14px;
                   }
                   .${classPrefix}-section-desktop-only{
