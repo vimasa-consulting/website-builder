@@ -51,6 +51,7 @@ const brandStory1Component = (editor: Editor) => {
           align-items: center;
           margin-inline: auto;
           max-width: 1440px;
+          min-width: 1440px;
           padding: 83px 0px; 
         }
         .${classPrefix}-panel {
@@ -124,6 +125,7 @@ const brandStory1Component = (editor: Editor) => {
         @media (max-width: 400px) {
           .${classPrefix}-section {
                 padding: 10px;
+                min-width: 400px;
                 max-height: 422px;
                 border-radius: 10px;
                 height: 405px;

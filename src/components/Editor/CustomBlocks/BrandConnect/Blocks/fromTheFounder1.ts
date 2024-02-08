@@ -47,6 +47,7 @@ const component = (editor: Editor) => {
             padding: 86px 0 186px;
             font-family: Inter, sans-serif;
             max-width: 1440px;
+            min-width: 1440px;
             margin-inline: auto;
           }
           .${classPrefix}-container {
@@ -114,9 +115,10 @@ const component = (editor: Editor) => {
             .${classPrefix}-section {
              padding-top: 59px;
              padding-bottom: 300px;
+             min-width: 400px;
             }
             .${classPrefix}-container {
-             width: 366px;
+            width: 366px;
             }
             .${classPrefix}-content-wrapper {
               width: 366px; 

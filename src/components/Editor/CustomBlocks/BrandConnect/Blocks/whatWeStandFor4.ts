@@ -47,6 +47,7 @@ const component = (editor: Editor) => {
           .${classPrefix}-section {
           padding: 5.25rem;
           max-width: 1440px;
+          min-width: 1440px;
           margin: auto;
           }
           .${classPrefix}-container {
@@ -106,6 +107,7 @@ const component = (editor: Editor) => {
           .${classPrefix}-section {
           padding: 10px;
           padding-bottom: 60px;
+          min-width: 400px;
           }
           .${classPrefix}-container {
           gap: 30px;

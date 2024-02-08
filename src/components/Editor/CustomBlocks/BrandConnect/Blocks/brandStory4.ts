@@ -60,6 +60,7 @@ const brandStory4Component = (editor: Editor) => {
         styles: `
         .${classPrefix}-section {
         width: 100%;
+        min-width: 1440px;
         height: 707px;
         flex-shrink: 0;
         background: #e9e9e9;
@@ -160,6 +161,7 @@ padding: 0px 13px;
 
 @media (max-width: 770px) {
 .${classPrefix}-section {
+min-width: 400px;
 height: 560px;
 width: 100%;
 max-width: 400px;

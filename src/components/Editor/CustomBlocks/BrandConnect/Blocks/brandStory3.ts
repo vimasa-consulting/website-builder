@@ -53,6 +53,7 @@ const brandStory3Component = (editor: Editor) => {
         styles: `
         .${classPrefix}-section {
         max-width: 1440px;
+        min-width: 1440px;
         padding: 84px 162px;
         background: #e9e9e9;
         display: flex;
@@ -122,6 +123,7 @@ const brandStory3Component = (editor: Editor) => {
 
         @media (max-width: 400px) {
         .${classPrefix}-section {
+          min-width: 400px;
         padding: 50px 20px;
         }
 

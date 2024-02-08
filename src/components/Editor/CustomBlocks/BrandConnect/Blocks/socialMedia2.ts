@@ -96,6 +96,7 @@ const socialMedia2Component = (editor: Editor) => {
                   padding: 73px 0px 70px;
                   padding-bottom: 106px;
                   max-width: 1440px;
+                  min-width: 1440px;
                   margin-inline: auto;
                 }
                 .${classPrefix}-title {
@@ -231,6 +232,7 @@ const socialMedia2Component = (editor: Editor) => {
               }
               @media (max-width: 400px) {
                 .${classPrefix}-section {
+                  min-width: 400px;
                   padding: 51px 20px 44px;
                 }
                 .${classPrefix}-rating-img-tick {

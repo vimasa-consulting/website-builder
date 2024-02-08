@@ -110,6 +110,7 @@ const socialMedia1Component = (editor: Editor) => {
                   padding: 116px 0 106px;
                   padding-bottom: 106px;
                   max-width: 1440px;
+                  min-width: 1440px;
                   margin-inline: auto;
                 }
                 .${classPrefix}-title {
@@ -232,6 +233,7 @@ const socialMedia1Component = (editor: Editor) => {
               } 
               @media (max-width: 400px) {
                 .${classPrefix}-section {
+                  min-width: 400px;
                   padding: 54px 20px 26px;
                 }
                 .${classPrefix}-wrapper {

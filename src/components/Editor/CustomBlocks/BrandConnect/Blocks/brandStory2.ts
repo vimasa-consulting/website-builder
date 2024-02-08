@@ -50,6 +50,7 @@ const brandStory2Component = (editor: Editor) => {
         styles: `
         .${classPrefix}-section {
           max-width: 1440px;
+          min-width: 1440px;
           padding: 84px 0px;
           display: flex;
           align-items: center;
@@ -146,6 +147,7 @@ const brandStory2Component = (editor: Editor) => {
 
           @media (max-width: 400px) {
           .${classPrefix}-section {
+            min-width: 400px;
           padding: 30px 20px;
           padding-bottom: 60px;
           }

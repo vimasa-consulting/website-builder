@@ -84,6 +84,7 @@ const socialMedia3Component = (editor: Editor) => {
                   font-family: Inter, sans-serif;
                   padding: 82px 0px 92px;
                   max-width: 1440px;
+                  min-width: 1440px;
                   margin: 0 auto;
                 }
                 .${classPrefix}-title {
@@ -210,6 +211,7 @@ const socialMedia3Component = (editor: Editor) => {
               } 
               @media (max-width: 400px) {
                 .${classPrefix}-section {
+                  min-width: 400px;
                   padding: 51px 20px 44px;
                 }
                 .${classPrefix}-wrapper {

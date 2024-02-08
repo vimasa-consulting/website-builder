@@ -55,10 +55,11 @@ const component = (editor: Editor) => {
           align-items: center;
           justify-content: space-between;
           font-family: Inter, sans-serif;
-          max-width: 1440px;
+          max-width: 1440px;          
           }
-          .${classPrefix}-section {
+          .${classPrefix}-section {            
             max-width: 1440px;
+            min-width: 1440px;
             margin: 0 auto;
           }
           .${classPrefix}-leftContainer {
@@ -110,7 +111,11 @@ const component = (editor: Editor) => {
           }
 
           @media (max-width: 770px) {
+            .${classPrefix}-section {            
+              min-width: 400px;              
+            }
             .${classPrefix}-container {
+              min-width: 400px;
               padding: 20px;
               flex-direction: column-reverse;
               gap: 50px;         

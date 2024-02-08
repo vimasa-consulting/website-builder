@@ -77,6 +77,7 @@ const component = (editor: Editor) => {
         styles: `
           .${classPrefix}-section {
             max-width: 1440px;
+            min-width: 1440px;
             margin: auto;
           }
 
@@ -176,6 +177,10 @@ const component = (editor: Editor) => {
           }
 
           @media (max-width: 400px) {
+            .${classPrefix}-section {
+              min-width: 400px;
+              margin: auto;
+            }
             .${classPrefix}-container {
               flex-direction: column-reverse;
               padding: 50px 20px;

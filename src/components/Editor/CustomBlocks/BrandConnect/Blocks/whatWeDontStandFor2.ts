@@ -65,6 +65,7 @@ const component = (editor: Editor) => {
             font-family: Inter, sans-serif;
             background-color: #E9E9E9;
             max-width: 1440px;
+            min-width: 1440px;
             margin-inline: auto;
           }
           .${classPrefix}-firstContainer {
@@ -164,6 +165,7 @@ const component = (editor: Editor) => {
           }
           @media (max-width: 400px) {
             .${classPrefix}-section {
+              min-width: 400px;
               padding: 53px 18px 34px;
             } 
             .${classPrefix}-title {

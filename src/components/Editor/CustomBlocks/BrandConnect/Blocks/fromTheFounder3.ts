@@ -51,6 +51,7 @@ const component = (editor: Editor) => {
             padding: 88px 0px;
             font-family: Inter, sans-serif;
             max-width: 1440px;
+            min-width: 1440px;
             margin-inline: auto;
           }
           .${classPrefix}-container {
@@ -106,6 +107,7 @@ const component = (editor: Editor) => {
 
           @media (max-width: 425px) {
             .${classPrefix}-section {
+              min-width: 400px;
               padding: 71px 20px 69px;
              }
             .${classPrefix}-text {
