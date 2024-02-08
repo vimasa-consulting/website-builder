@@ -105,6 +105,7 @@ const solutionToUserPain2Component = (editor: Editor) => {
                   padding: 62px 0px 117px;
                   margin: 0 auto;
                   max-width: 1440px;
+                  min-width: 1440px;
                 }
                 .${classPrefix}-title {
                   text-align: center;
@@ -215,6 +216,7 @@ const solutionToUserPain2Component = (editor: Editor) => {
       
               @media (max-width: 400px) {
                 .${classPrefix}-section {
+                  min-width: 400px;
                   padding: 44px 0 64px;
                 }
                 .${classPrefix}-cardWrapper {

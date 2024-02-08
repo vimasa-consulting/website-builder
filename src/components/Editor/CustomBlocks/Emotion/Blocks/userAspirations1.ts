@@ -111,6 +111,7 @@ const userAspirations1Component = (editor: Editor) => {
                     background-color: #fff;
                     padding: 63px 0px 118px;
                     max-width: 1440px;
+                    min-width: 1440px;
                     margin: 0 auto;
                     font-family: Inter, sans-serif;
                   }
@@ -239,6 +240,7 @@ const userAspirations1Component = (editor: Editor) => {
                   
                   @media (max-width: 400px) {
                     .${classPrefix}-section {
+                      min-width: 400px;
                       padding: 45px 0px 68px;
                     }
                   

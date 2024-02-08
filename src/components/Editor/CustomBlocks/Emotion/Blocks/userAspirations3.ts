@@ -58,6 +58,7 @@ const component = (editor: Editor) => {
             padding: 76px 0px 78px;
             margin: 0 auto;
             max-width: 1440px;
+            min-width: 1440px;
           }
           .${classPrefix}-container {
             margin: 0 auto;
@@ -149,6 +150,7 @@ const component = (editor: Editor) => {
           }
           @media (max-width: 400px) {
             .${classPrefix}-section {
+              min-width: 400px;
               padding: 53px 29px 69px;
              }
             .${classPrefix}-heading {

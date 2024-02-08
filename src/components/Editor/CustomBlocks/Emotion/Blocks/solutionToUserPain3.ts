@@ -93,6 +93,7 @@ const solutionToUserPain3Component = (editor: Editor) => {
                     justify-content: flex-end;
                     gap: 190px;
                     max-width: 1440px;
+                    min-width: 1440px;
                     margin: 0 auto;
                   }
                  .${classPrefix}-contentContainer {
@@ -163,6 +164,7 @@ const solutionToUserPain3Component = (editor: Editor) => {
                   }
                   @media (max-width: 400px) {
                     .${classPrefix}-section {
+                      min-width: 400px;
                       flex-direction: column;
                     }
                     .${classPrefix}-title {

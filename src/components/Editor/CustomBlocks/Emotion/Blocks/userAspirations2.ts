@@ -94,6 +94,7 @@ const userAspirations2Component = (editor: Editor) => {
                 styles: `
                 .${classPrefix}-section {
                     background-color: #fff;
+                    min-width: 1440px;
                     padding: 89px 0px 71px;
                     font-family: Inter, sans-serif;
                   }
@@ -210,6 +211,7 @@ const userAspirations2Component = (editor: Editor) => {
                   
                   @media (max-width: 400px) {
                     .${classPrefix}-section {
+                      min-width: 400px;
                       padding: 38px 0px 52px;
                     }
                   

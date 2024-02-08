@@ -93,6 +93,7 @@ const solutionToUserPain1Component = (editor: Editor) => {
                     padding: 86px 107px;
                     margin: 0 auto;
                     max-width: 1440px;
+                    min-width: 1440px;
                   }
                   
                   .${classPrefix}-title {
@@ -214,6 +215,7 @@ const solutionToUserPain1Component = (editor: Editor) => {
                   }
                   @media (max-width: 400px) {
                     .${classPrefix}-section {
+                      min-width: 400px;
                       padding: 55px 9px 58px;
                     }
                   

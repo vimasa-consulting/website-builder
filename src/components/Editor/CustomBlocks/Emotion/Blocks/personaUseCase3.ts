@@ -79,6 +79,7 @@ const personaUseCase3Component = (editor: Editor) => {
                   padding: 62px 0px 67px;
                   margin: 0 auto;
                   max-width: 1440px;
+                  min-width: 1440px;
                 }
                 .${classPrefix}-title {
                   text-align: center;
@@ -222,6 +223,7 @@ const personaUseCase3Component = (editor: Editor) => {
       
               @media (max-width: 400px) {
                 .${classPrefix}-section {
+                  min-width: 400px;
                   padding: 32px 20px 82px;
                 }
                 .${classPrefix}-imageContainer {

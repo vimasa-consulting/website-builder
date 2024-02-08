@@ -79,6 +79,7 @@ const personaUseCase2Component = (editor: Editor) => {
                     font-family: Inter, sans-serif;
                     margin: 0 auto;
                     max-width: 1440px;
+                    min-width: 1440px;
                   }
                   
                   .${classPrefix}-title {
@@ -179,6 +180,7 @@ const personaUseCase2Component = (editor: Editor) => {
                   
                   @media (max-width: 400px) {
                     .${classPrefix}-section {
+                      min-width: 400px;
                       padding: 40px 13px;
                     }
                     .${classPrefix}-cardNumber {

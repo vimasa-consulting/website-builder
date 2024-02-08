@@ -94,6 +94,7 @@ const personaUseCase1Component = (editor: Editor) => {
                   padding: 88px 20px 122px;
                   margin: 0 auto;
                   max-width: 1440px;
+                  min-width: 1440px;
                 }
                 .${classPrefix}-title {
                   text-align: center;
@@ -220,6 +221,7 @@ const personaUseCase1Component = (editor: Editor) => {
       
               @media (max-width: 400px) {
                 .${classPrefix}-section {
+                  min-width: 400px;
                   padding: 22px 20px 117px;
                 }
                 .${classPrefix}-cardWrapper {
