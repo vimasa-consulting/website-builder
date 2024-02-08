@@ -197,6 +197,7 @@ const atf2Conversion1Component = (editor: Editor) => {
 
           @media only screen and (max-width: 600px) {
             .${classPrefix}-section {
+              min-width: 400px;  
               padding: 2rem 2rem;
               height: auto;
               flex-direction: column;

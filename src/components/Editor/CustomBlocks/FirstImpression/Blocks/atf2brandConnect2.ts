@@ -235,6 +235,7 @@ const atf2BrandConnect2Component = (editor: Editor) => {
 
             @media only screen and (max-width: 600px) {
               .${classPrefix}-section {
+                min-width: 400px;  
               }
 
               .${classPrefix}-container {

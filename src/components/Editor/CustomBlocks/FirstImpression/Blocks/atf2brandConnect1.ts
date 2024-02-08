@@ -135,6 +135,7 @@ const atf2BrandConnect1Component = (editor: Editor) => {
             @media only screen and (min-width: 601px) and (max-width: 768px) {
               .${classPrefix}-section {
                 height: auto;
+                min-width: 400px;  
                 padding: 2rem 2rem;
                 flex-direction: column;
               }

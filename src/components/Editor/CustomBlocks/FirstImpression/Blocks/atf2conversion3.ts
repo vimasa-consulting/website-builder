@@ -316,6 +316,7 @@ const atf2Conversion3Component = (editor: Editor) => {
 
 @media only screen and (max-width: 600px) {
   .${classPrefix}-section {
+    min-width: 400px;  
     padding: 10px 10px 50px 10px;
     height: auto;
   }
