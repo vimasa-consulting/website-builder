@@ -45,7 +45,7 @@ export default function Navbar() {
           className="cursor-pointer"
           onClick={openProfilePopup}
           alt="User settings"
-          img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+          img={cachedAuthUser?.attributes?.profileImage}
           rounded
         />
         <div className="flex flex-col">

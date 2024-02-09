@@ -12,7 +12,8 @@ export type AuthUser = {
     sub: string,
     email: string,
     givenName: string,
-    familyName: string
+    familyName: string,
+    profileImage: string
   },
 }
 
