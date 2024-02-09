@@ -114,7 +114,7 @@ const component = (editor: Editor) => {
           @media (max-width: 400px) {
             .${classPrefix}-section {
              padding-top: 59px;
-             padding-bottom: 300px;
+             padding-bottom: 250px;
              min-width: 400px;
             }
             .${classPrefix}-container {
@@ -128,8 +128,13 @@ const component = (editor: Editor) => {
             }
             .${classPrefix}-image {
               width: 215px;
-              bottom: -207px;
+              bottom: -182px;
               right: -2px;
+              height: 232px;
+            }
+            .${classPrefix}-text {
+              margin-top: 0;
+              margin-bottom: 24px;
             }
             .${classPrefix}-heading {
               font-size: 26px;
