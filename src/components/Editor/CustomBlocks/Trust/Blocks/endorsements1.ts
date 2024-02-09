@@ -70,7 +70,7 @@ const endorsements1Component = (editor: Editor) => {
                   </div>
                   </div>
                   <div class="${classPrefix}-imageWrapper">
-                  <img class="${classPrefix}-img" src="https://placehold.co/521x521" alt="Placeholder"/>
+                  <img class="${classPrefix}-img" loading="lazy" src="/editor/component-icons/image-icon.png" alt="Placeholder"/>
                 </div>
                 </div>
               </section>
@@ -104,8 +104,8 @@ const endorsements1Component = (editor: Editor) => {
             margin: 0px;
           }
           .${classPrefix}-imageWrapper {
-            width: 100%;
-            height: 100%;
+            width: 521px;
+            height: 521px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -119,9 +119,10 @@ const endorsements1Component = (editor: Editor) => {
             border-radius: 10px; 
           }
           .${classPrefix}-image {
-            width: 45px;
-            height: 45px;
             object-fit: fill;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
           }
           .${classPrefix}-content {
             display: flex;
@@ -188,10 +189,11 @@ const endorsements1Component = (editor: Editor) => {
             width: unset;
           }
           .${classPrefix}-imageWrapper {
+            width: 360px;
             height: 360px;
           }
           .${classPrefix}-img {
-            object-fit: cover;
+            object-fit: fill;
           }
           .${classPrefix}-descriptionContainer {
             min-width: unset;
