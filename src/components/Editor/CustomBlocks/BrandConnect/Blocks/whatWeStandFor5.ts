@@ -34,6 +34,7 @@ const component = (editor: Editor) => {
           <section class="${classPrefix}-section">
             <div class="${classPrefix}-container">
               <div class="${classPrefix}-left-container">
+              <h1 class="${classPrefix}-mobileHeading">What you stand for in one bold line</h1>
                 <div class="${classPrefix}-imageWrapper">
                 <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                 </div>
@@ -48,25 +49,25 @@ const component = (editor: Editor) => {
                   <div class="${classPrefix}-pointer-wrapper">
                     <div class="${classPrefix}-point">
                        <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
-                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify ${classPrefix}-icon"></span>
                   </span>
                       <span class="${classPrefix}-point-text">Pointer 1</span>
                     </div>
                     <div class="${classPrefix}-point">
                        <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
-                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify ${classPrefix}-icon"></span>
                   </span>
                       <span class="${classPrefix}-point-text">Pointer 2</span>
                     </div>
                     <div class="${classPrefix}-point">
                        <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
-                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify ${classPrefix}-icon"></span>
                   </span>
                       <span class="${classPrefix}-point-text">Pointer 3</span>
                     </div>
                     <div class="${classPrefix}-point">
                        <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
-                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify ${classPrefix}-icon"></span>
                   </span>
                       <span class="${classPrefix}-point-text">Pointer 4</span>
                     </div>
@@ -128,6 +129,9 @@ const component = (editor: Editor) => {
             margin-bottom: 26px;
             max-width: 400px;
           }
+          .${classPrefix}-mobileHeading {
+            display: none;
+          }
 
           .${classPrefix}-content {
             color: #000;
@@ -178,18 +182,18 @@ const component = (editor: Editor) => {
               min-width: 400px;
             }
             .${classPrefix}-container {
-              flex-direction: column-reverse;
+              flex-direction: column;
               padding: 50px 20px;
-              gap: 50px;
+              gap: 30px;
             }
             .${classPrefix}-rating-img-tick {
               width: 25px;
-              height: 25px;
               color: #ccc;
             }
 
             .${classPrefix}-left-container {
               width: 100%;
+              background: white;
             }
             .${classPrefix}-right-container {
               width: auto;
@@ -203,6 +207,21 @@ const component = (editor: Editor) => {
               font-weight: 600;
               line-height: 35px; 
               padding-right: 110px;
+              display: none;
+            }
+            .${classPrefix}-mobileHeading {
+              color: #000;
+              font-family: Inter, sans-serif;
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 35px; 
+              padding-right: 110px;
+              display: block;
+              text-align: left;
+              text-align: left;
+              margin-bottom: 30px;
+              margin-top: 0px;
             }
 
             .${classPrefix}-content {
@@ -211,7 +230,7 @@ const component = (editor: Editor) => {
               font-size: 13px;
               font-style: normal;
               font-weight: 400;
-              line-height: 140%; /* 18.2px */
+              line-height: 140%;
             }
 
             .${classPrefix}-point-text {
@@ -230,6 +249,10 @@ const component = (editor: Editor) => {
             .${classPrefix}-image {
               width: 100%;
               height: 250px;
+              border-radius: 10px;
+            }
+            .${classPrefix}-icon {
+              width: 25px !important;
             }
           }
 

@@ -41,6 +41,8 @@ const component = (editor: Editor) => {
                   about what you stand for, and avoid being vague or generic.</span>
               </div>
             </div>
+            <span class="${classPrefix}-mobileText">Elaborate on your core belief & ideology as a brand. Mention specific pointers
+            about what you stand for, and avoid being vague or generic.</span>
           </section>
         `,
         styles: `
@@ -103,14 +105,18 @@ const component = (editor: Editor) => {
           height: 412px;
           }
 
+          .${classPrefix}-mobileText {
+            display: none;
+          }
+
           @media (max-width: 480px) {
           .${classPrefix}-section {
           padding: 10px;
           padding-bottom: 60px;
-          min-width: 400px;
+          min-width: 390px;
           }
           .${classPrefix}-container {
-          gap: 30px;
+          gap: 20px;
           padding: 30px 20px;
           text-align: center;
           flex-direction: column-reverse;
@@ -128,7 +134,7 @@ const component = (editor: Editor) => {
           font-size: 16px;
           font-style: normal;
           font-weight: 500;
-          line-height: 140%; /* 22.4px */
+          line-height: 140%; 
           margin-bottom: 20px;
           }
           .${classPrefix}-heading {
@@ -147,7 +153,22 @@ const component = (editor: Editor) => {
           font-size: 13px;
           font-style: normal;
           font-weight: 400;
-          line-height: 140%; /* 18.2px */
+          line-height: 140%;
+          display: none;
+          }
+          .${classPrefix}-mobileText {
+          color: #000;
+          font-family: Inter, sans-serif;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          display: block;
+          padding: 0 7px;
+          }
+          .${classPrefix}-image {
+            width: 360px;
+            height: 240px;
           }
           }
         `,
