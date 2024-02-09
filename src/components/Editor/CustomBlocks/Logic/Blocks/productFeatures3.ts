@@ -57,7 +57,9 @@ const productFeatures3Component = (editor: Editor) => {
           <td>
             <div class="${classPrefix}-featureItem">
               <div class="${classPrefix}-featureIcon">
-                <img loading="lazy" src="/editor/component-icons/atom-editor.png" class="${classPrefix}-imgCover" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-featureIcon">
+                  <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+                </span>
               </div>
               <div class="${classPrefix}-featureContent">
                 <span class="${classPrefix}-h3">
@@ -74,7 +76,9 @@ const productFeatures3Component = (editor: Editor) => {
           <td>
             <div class="${classPrefix}-featureItem">
               <div class="${classPrefix}-featureIcon">
-                <img loading="lazy" src="/editor/component-icons/add-to-cloud.png" class="${classPrefix}-imgCover" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-featureIcon">
+                  <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+                </span>
               </div>
               <div class="${classPrefix}-featureContent">
                 <span class="${classPrefix}-h3">
@@ -91,7 +95,9 @@ const productFeatures3Component = (editor: Editor) => {
           <td>
             <div class="${classPrefix}-featureItem">
               <div class="${classPrefix}-featureIcon">
-                <img loading="lazy" src="/editor/component-icons/check-lock.png" class="${classPrefix}-imgCover" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-featureIcon">
+                  <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+                </span>                
               </div>
               <div class="${classPrefix}-featureContent">
                 <span class="${classPrefix}-h3">
@@ -105,7 +111,7 @@ const productFeatures3Component = (editor: Editor) => {
           </td>
         </tr>
       </table>
-      <img loading="lazy" src="https://placehold.co/536x434" class="${classPrefix}-imgCover" />
+      <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-imgCover" />
     </div>
   </div>
 </section>
@@ -163,11 +169,20 @@ const productFeatures3Component = (editor: Editor) => {
   .${classPrefix}-showOnlyOnMobile {
     display: none;
   }
+  .${classPrefix}-imgCover {
+    object-fit: fill;
+    aspect-ratio: 1;
+    width: 370px;
+    height: 300px;
+    overflow: hidden;
+  }  
 }
 
 .${classPrefix}-imgCover {
-  object-fit: cover;
-  object-position: center;
+  object-fit: fill;
+  aspect-ratio: 1;
+  width: 536px;
+  height: 434px;
   overflow: hidden;
 }
 

@@ -38,19 +38,19 @@ const component = (editor: Editor) => {
               <div class="${classPrefix}-benefits-wrapper">
                 <div class="${classPrefix}-benefit-item">
                 <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                <span data-icon="ph:placeholder-light" data-width="25px" class="iconify"></span>
               </span>
                   <span class="${classPrefix}-item-heading">Free Shipping above $100</span>
                 </div>
                 <div class="${classPrefix}-benefit-item">
                 <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                <span data-icon="ph:placeholder-light" data-width="25px" class="iconify"></span>
               </span>
                   <span class="${classPrefix}-item-heading">60 days return and refund</span>
                 </div>
                 <div class="${classPrefix}-benefit-item">
                 <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                <span data-icon="ph:placeholder-light" data-width="25px" class="iconify"></span>
               </span>
                   <span class="${classPrefix}-item-heading">Refer a friend to earn $20</span>
                 </div>
