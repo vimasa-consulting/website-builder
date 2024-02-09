@@ -39,7 +39,7 @@ const component = (editor: Editor) => {
                 <div class="${classPrefix}-benefit-item">
                   <div class="${classPrefix}-circlular-div">
                   <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                  <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  <span data-icon="ph:placeholder-light" data-width="25px" class="iconify"></span>
                 </span>
                     <div class="${classPrefix}-cir-text">Brand Benefit 1</div>
                   </div>
@@ -48,7 +48,7 @@ const component = (editor: Editor) => {
                 <div class="${classPrefix}-benefit-item">
                   <div class="${classPrefix}-circlular-div">
                   <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                  <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  <span data-icon="ph:placeholder-light" data-width="25px" class="iconify"></span>
                 </span>
                     <div class="${classPrefix}-cir-text">Brand Benefit 2</div>
                   </div>
@@ -57,7 +57,7 @@ const component = (editor: Editor) => {
                 <div class="${classPrefix}-benefit-item">
                   <div class="${classPrefix}-circlular-div">
                   <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                  <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  <span data-icon="ph:placeholder-light" data-width="25px" class="iconify"></span>
                 </span>
                     <div class="${classPrefix}-cir-text">Brand Benefit 3</div>
                   </div>
@@ -66,7 +66,7 @@ const component = (editor: Editor) => {
                 <div class="${classPrefix}-benefit-item">
                   <div class="${classPrefix}-circlular-div">
                   <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img">
-                  <span data-icon="material-symbols:star" data-width="25px" class="iconify"></span>
+                  <span data-icon="ph:placeholder-light" data-width="25px" class="iconify"></span>
                 </span>
                     <div class="${classPrefix}-cir-text">Brand Benefit 4</div>
                   </div>
