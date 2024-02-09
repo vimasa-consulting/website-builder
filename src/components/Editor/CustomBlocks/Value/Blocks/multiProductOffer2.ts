@@ -70,10 +70,10 @@ const component = (editor: Editor) => {
       <div class="${classPrefix}-image-item">
         <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
         <div class="${classPrefix}-wrapper">
-          <div class="${classPrefix}-sub-heading">Product Name 4</div>
+          <div class="${classPrefix}-sub-heading">Product Name 5</div>
           <div class="${classPrefix}-heading">Up to 60% Off</div>
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </section>
@@ -187,6 +187,9 @@ const component = (editor: Editor) => {
   }
 
   .${classPrefix}-image-item:nth-child(4) {
+    display: none;
+  }
+  .${classPrefix}-image-item:nth-child(5) {
     display: none;
   }
 

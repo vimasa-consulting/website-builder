@@ -39,8 +39,12 @@ const component = (editor: Editor) => {
             <div class="${classPrefix}-left-column">
               <h1 class="${classPrefix}-h1">Product Name</h1>
               <h2 class="${classPrefix}-h2">
-                Use this section to describe the important aspects of your product, and make sure to bring out your product’s USP. <br/>
-                You can talk about features, benefits, dimensions, etc. You can also talk about the value of the product, in terms of how it will make your user’s life better. 
+                <span class="${classPrefix}-textOne">
+                  Use this section to describe the important aspects of your product, and make sure to bring out your product’s USP.
+                </span> <br/>
+                <span class="${classPrefix}-textTwo">
+                  You can talk about features, benefits, dimensions, etc. You can also talk about the value of the product, in terms of how it will make your user’s life better. 
+                </span>
               </h2>
               <a class="${classPrefix}-offer-cta">CTA ></a>
 
@@ -55,9 +59,11 @@ const component = (editor: Editor) => {
               min-width: 1440px;
               display: flex;
               flex-direction: row;
-              height: 70vh;
+              height: 793px;
               font-family: Inter, sans-serif;
               background : #fff;
+              max-height: 793px;
+              position: relative;
             }
 
             .${classPrefix}-left-column {
@@ -103,7 +109,6 @@ const component = (editor: Editor) => {
             .${classPrefix}-right-column {
               width: 50vw;
             }
-
             .${classPrefix}-right-image {
               width: 100%;
               height: 100%;
@@ -136,19 +141,23 @@ const component = (editor: Editor) => {
               .${classPrefix}-section {
                 padding: 2rem 2rem;
                 height: auto;
-                flex-direction: column;
+                min-width: unset;
+                padding-left: 22px;
+                padding-right: 0px;
+                justify-content: space-between;
               }
               .${classPrefix}-left-column {
                 padding: 2rem 0;
                 width: auto;
-                align-items: center;
+                align-items: flex-start;
               }
               .${classPrefix}-h1 {
                 text-align: center;
                 font-size: 26px;
                 font-weight: 600;
                 line-height: 35px;
-                margin-bottom: 20px;
+                font-size: 18px;
+                margin-bottom: 0;
               }
               .${classPrefix}-h2 {
                 text-align: center;
@@ -156,20 +165,36 @@ const component = (editor: Editor) => {
                 font-style: normal;
                 font-weight: 400;
                 line-height: 140%;
-                margin-bottom: 38px;
+                max-width: 112px;
+                text-align: left;
+                margin-bottom: 18px;
+              }
+              .${classPrefix}-textTwo {
+                display: none;
               }
               .${classPrefix}-offer-cta {
-                font-size: 18px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: normal;
+                width: 102px;
+                height: 28px;
+                padding: 6px 0;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 14px;
               }
               .${classPrefix}-right-column {
                 padding: 2rem 0;
                 width: auto;
+                width: 207px;
+                height: 226px;
               }
               .${classPrefix}-right-image {
                 border-radius: 8px;
+                width: 207px;
+                height: 226px;
+                max-width: 100%;
+                object-fit: fill;
               }
             }
           `,
