@@ -33,7 +33,8 @@ const component = (editor: Editor) => {
         components: `
           <section class="${classPrefix}-section">
             <div class="${classPrefix}-container">
-              <div class="${classPrefix}-leftContainer">
+            <div class="${classPrefix}-leftContainer">
+              <h1 class="${classPrefix}-mobileHeading">From the Founder</h1>
                 <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-big" />
               </div>
               <div class="${classPrefix}-rightContainer">
@@ -62,11 +63,15 @@ const component = (editor: Editor) => {
             min-width: 1440px;
             margin: 0 auto;
           }
+          .${classPrefix}-mobileHeading {
+            display: none;
+          }
           .${classPrefix}-leftContainer {
           width: 50%;
           display: flex;
           justify-content: center;
           }
+
           .${classPrefix}-rightContainer {
           width: 50%;
           }
@@ -112,23 +117,52 @@ const component = (editor: Editor) => {
 
           @media (max-width: 770px) {
             .${classPrefix}-section {            
-              min-width: 400px;              
+              min-width: 390px;          
             }
             .${classPrefix}-container {
-              min-width: 400px;
-              padding: 20px;
-              flex-direction: column-reverse;
+              min-width: 390px;
+              padding: 0px;
+              flex-direction: column;
               gap: 50px;         
             }
           }
 
           @media (max-width: 480px) {
             .${classPrefix}-rightContainer {
-              max-width: 290px;
-              width: unset; 
+              width: 100%;
+              margin-bottom: 60px;
             }
             .${classPrefix}-leftContainer {
-              width: unset; 
+              width: 100%; 
+              display: block;
+            }
+            .${classPrefix}-wrapper {
+              flex-direction: row;
+              justify-content: flex-start;
+              gap: 24px;
+            }
+            .${classPrefix}-heading {
+              display: none;
+            }
+            .${classPrefix}-content {
+              max-width: 185px;
+              font-size: 13px;
+              text-align: left;
+            }
+            .${classPrefix}-image-big {
+              width: 100%;
+              height: 270px;
+            }
+            .${classPrefix}-image-small {
+              width: 154px;
+              height: 154px;
+            }
+            .${classPrefix}-mobileHeading {
+              display: block;
+              font-size: 26px;
+              margin-top: 60px;
+              margin-bottom: 20px;
+              text-align: center;
             }
           }
         `,
