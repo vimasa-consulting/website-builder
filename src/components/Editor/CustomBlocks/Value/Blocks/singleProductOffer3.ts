@@ -123,8 +123,6 @@ const component = (editor: Editor) => {
               align-self: center;   
             }
             .${classPrefix}-image-icon {
-              aspect-ratio: 1;
-              object-fit: contain;
               object-position: center;
               width: 45px;
               margin: auto;
@@ -132,7 +130,6 @@ const component = (editor: Editor) => {
               overflow: hidden;
               align-self: center;
               max-width: 100%;
-              border-radius: 50%;
               height: 45px;
               z-index: 1;
             }
@@ -171,12 +168,12 @@ const component = (editor: Editor) => {
                 min-width: 400px;
                 padding: 2rem 2rem;
                 height: auto;
-                flex-direction: column;
+                justify-content: space-between;
+                padding-right: 87px;
               }
               .${classPrefix}-left-column {
                 padding: 2rem 0;
                 width: auto;
-                align-items: center;
               }
               .${classPrefix}-h1 {
                 text-align: center;
@@ -184,6 +181,9 @@ const component = (editor: Editor) => {
                 font-weight: 600;
                 line-height: 35px;
                 margin-bottom: 20px;
+                font-size: 18px;
+                margin-bottom: 8px;
+                line-height: unset;
               }
               .${classPrefix}-h2 {
                 text-align: center;
@@ -192,12 +192,21 @@ const component = (editor: Editor) => {
                 font-weight: 400;
                 line-height: 140%;
                 margin-bottom: 38px;
+                max-width: 123px;
+                text-align: left;
+                margin-bottom: 15px;
+                margin-top: 0px;
               }
               .${classPrefix}-offer-cta {
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: normal;
+                width: 102px;
+                height: 28px;
+                padding: 4px 0;
+                border-radius: 6px;
+                font-size: 15px;
               }
               .${classPrefix}-right-column {
                 padding: 2rem 0;
@@ -205,6 +214,14 @@ const component = (editor: Editor) => {
               }
               .${classPrefix}-right-image {
                 border-radius: 8px;
+              }
+              .${classPrefix}-image-wrapper {
+                width: 47px;
+                height: 47px;
+                overflow: hidden;
+              }
+              .${classPrefix}-image-icon {
+                border-radius: 50%;
               }
             }
           `,
