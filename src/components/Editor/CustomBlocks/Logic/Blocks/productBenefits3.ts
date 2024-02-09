@@ -108,7 +108,21 @@ const productBenefits3Component = (editor: Editor) => {
   font-size: 40px;
   font-weight: 600;
 }
-
+.${classPrefix}-section {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 80px;
+  min-width: 1440px;
+}
+.${classPrefix}-imgFill {
+  aspect-ratio: 1;
+  object-fit: fill;
+  overflow: hidden;
+  width: 574px;
+  height: 408px;
+  border-radius: 20px;
+}
 @media (max-width: 425px) {
   .${classPrefix}-h1 {
     font-size: 25px;
@@ -164,26 +178,12 @@ const productBenefits3Component = (editor: Editor) => {
   }
 }
 
-.${classPrefix}-imgFill {
-  aspect-ratio: 1;
-  object-fit: fill;
-  overflow: hidden;
-  width: 574px;
-  height: 408px;
-  border-radius: 20px;
-}
 
-.${classPrefix}-section {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 80px;
-  min-width: 1440px;
-}
+
+
 
 @media (max-width: 425px) {
   .${classPrefix}-section {
-    min-width: 400px;
     padding: 40px 5px;
     min-width: 400px;
   }

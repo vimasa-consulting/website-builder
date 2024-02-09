@@ -43,15 +43,21 @@ const component = (editor: Editor) => {
               </div>
               <div class="${classPrefix}-benefits-wrapper">
                 <div class="${classPrefix}-benefit-item">
-                  <img class="${classPrefix}-item-image" src="" alt="benefit-image" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-item-image">
+                  <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+                </span>
                   <span class="${classPrefix}-item-decription">Brand 1</span>
                 </div>
                 <div class="${classPrefix}-benefit-item">
-                  <img class="${classPrefix}-item-image" src="" alt="benefit-image" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-item-image">
+                <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+              </span>
                   <span class="${classPrefix}-item-decription">Brand 2</span>
                 </div>
                 <div class="${classPrefix}-benefit-item">
-                  <img class="${classPrefix}-item-image" src="" alt="benefit-image" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-item-image">
+                <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+              </span>
                   <span class="${classPrefix}-item-decription">Brand 3</span>
                 </div>
               </div>

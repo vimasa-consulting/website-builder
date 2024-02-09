@@ -124,6 +124,14 @@ const productFeatures3Component = (editor: Editor) => {
   font-weight: 600;
 }
 
+.${classPrefix}-imgCover {
+  object-fit: fill;
+  aspect-ratio: 1;
+  width: 536px;
+  height: 434px;
+  overflow: hidden;
+}
+
 @media (max-width: 425px) {
   .${classPrefix}-h1 {
     font-size: 25px;
@@ -178,13 +186,6 @@ const productFeatures3Component = (editor: Editor) => {
   }  
 }
 
-.${classPrefix}-imgCover {
-  object-fit: fill;
-  aspect-ratio: 1;
-  width: 536px;
-  height: 434px;
-  overflow: hidden;
-}
 
 .${classPrefix}-section {
   background-color: #fff;

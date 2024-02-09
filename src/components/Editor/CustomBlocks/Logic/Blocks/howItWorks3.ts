@@ -227,11 +227,10 @@ const howItWorks3Component = (editor: Editor) => {
 .${classPrefix}-imgMobile {
   width: 271px;
   height: 226px;
-  object-fit: scale-down;
+  object-fit: fill;
   overflow: hidden;
   border-radius: 10px;
   background: #E9E9E9;
-  margin: 53px 20px 0 109px;
 }
 
 .${classPrefix}-cardContentLeft {

@@ -133,7 +133,14 @@ const productBenefits2Component = (editor: Editor) => {
   font-weight: 400;
   line-height: 21px;
 }
-
+.${classPrefix}-imgCover {
+  object-fit: fill;
+  aspect-ratio: 1;
+  width: 513px;
+  height: 380px;
+  border-radius: 10px;
+  overflow: hidden;
+}
 @media (max-width: 425px) {
   .${classPrefix}-p {
     font-size: 13px;
@@ -161,14 +168,7 @@ const productBenefits2Component = (editor: Editor) => {
   }
 }
 
-.${classPrefix}-imgCover {
-  object-fit: fill;
-  aspect-ratio: 1;
-  width: 513px;
-  height: 380px;
-  border-radius: 10px;
-  overflow: hidden;
-}
+
 
 .${classPrefix}-section {
   background-color: #fff;
