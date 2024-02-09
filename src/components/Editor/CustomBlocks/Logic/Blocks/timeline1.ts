@@ -60,7 +60,9 @@ const timeline1Component = (editor: Editor) => {
       <div class="${classPrefix}-container">
         <div class="${classPrefix}-childContainer">
           <p class="${classPrefix}-imgWrapper">
-            <img loading="lazy" src="/editor/component-icons/tv.png" class="${classPrefix}-imgCover" />
+          <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+          <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+        </span>
           </p>
           <p class="${classPrefix}-circleWrapper">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -74,7 +76,9 @@ const timeline1Component = (editor: Editor) => {
         </div>
         <div class="${classPrefix}-childContainer">
           <p class="${classPrefix}-imgWrapper">
-            <img loading="lazy" src="/editor/component-icons/charging-battery.png" class="${classPrefix}-imgCover" />
+          <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+          <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+        </span>
           </p>
           <p class="${classPrefix}-circleWrapper">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -88,7 +92,9 @@ const timeline1Component = (editor: Editor) => {
         </div>
         <div class="${classPrefix}-childContainer">
           <p class="${classPrefix}-imgWrapper">
-            <img loading="lazy" src="/editor/component-icons/cloud-big.png" class="${classPrefix}-imgCover" />
+          <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+          <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+        </span>
           </p>
           <p class="${classPrefix}-circleWrapper">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -102,7 +108,9 @@ const timeline1Component = (editor: Editor) => {
         </div>
         <div class="${classPrefix}-childContainer">
           <p class="${classPrefix}-imgWrapper">
-            <img loading="lazy" src="/editor/component-icons/chart-2.png" class="${classPrefix}-imgCover" />
+          <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+          <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+        </span>
           </p>
           <p class="${classPrefix}-circleWrapper">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -116,7 +124,9 @@ const timeline1Component = (editor: Editor) => {
         </div>
         <div class="${classPrefix}-childContainer">
           <p class="${classPrefix}-imgWrapper">
-            <img loading="lazy" src="/editor/component-icons/hand-shake.png" class="${classPrefix}-imgCover" />
+          <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+          <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+        </span>
           </p>
           <p class="${classPrefix}-circleWrapper">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">

@@ -58,21 +58,29 @@ const productData3Component = (editor: Editor) => {
       <div class="${classPrefix}-metricItem">
         <div>
           <span class="${classPrefix}-metricValue">18%</span>&nbsp;
-          <img loading="lazy" src="/editor/component-icons/vector.svg" class="${classPrefix}-imgCover" />
+            <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+              <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+            </span>
         </div>
         <span class="${classPrefix}-metricTitle">Big Metric 1</span>
         <div class="${classPrefix}-metricIcon">
-          <img loading="lazy" src="/editor/component-icons/pie-25.png" class="${classPrefix}-imgCover" />
+        <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+        <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+      </span>
         </div>
       </div>
       <div class="${classPrefix}-metricItem">
         <div>
           <span class="${classPrefix}-metricValue">90%</span>&nbsp;
-          <img loading="lazy" src="/editor/component-icons/vector.svg" class="${classPrefix}-imgCover" />
+          <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                  <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+                </span>
         </div>
         <span class="${classPrefix}-metricTitle">Big Metric 2</span>
         <div class="${classPrefix}-metricIcon">
-          <img loading="lazy" src="/editor/component-icons/bar-chart.png" class="${classPrefix}-imgCover" />
+        <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+        <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+      </span>
         </div>
       </div>
     </div>

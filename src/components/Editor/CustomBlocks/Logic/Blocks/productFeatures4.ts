@@ -53,13 +53,15 @@ const productFeatures4Component = (editor: Editor) => {
       <span class="${classPrefix}-p">Give a short description of your product, highlighting it&apos;s USP</span>
     </div>
     <div class="${classPrefix}-cardContent">
-      <img loading="lazy" src="https://placehold.co/600x400" class="${classPrefix}-imgCover" />
+      <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-imgCover" />
       <table class="${classPrefix}-featureTable">
         <tr>
           <td>
             <div class="${classPrefix}-featureItem">
               <div class="${classPrefix}-featureIcon">
-                <img loading="lazy" src="/editor/component-icons/tv-y.png" class="${classPrefix}-imgCover" />
+              <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+              <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+            </span>
               </div>
               <div class="${classPrefix}-featureContent">
                 <span class="${classPrefix}-h3">
@@ -73,7 +75,10 @@ const productFeatures4Component = (editor: Editor) => {
           <td>
             <div class="${classPrefix}-featureItem">
               <div class="${classPrefix}-featureIcon">
-                <img loading="lazy" src="/editor/component-icons/add-to-cloud.png" class="${classPrefix}-imgCover" />
+              <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+              <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+            </span>
+
               </div>
               <div class="${classPrefix}-featureContent">
                 <span class="${classPrefix}-h3">
@@ -87,7 +92,9 @@ const productFeatures4Component = (editor: Editor) => {
           <td>
             <div class="${classPrefix}-featureItem">
               <div class="${classPrefix}-featureIcon">
-                <img loading="lazy" src="/editor/component-icons/charging-battery.png" class="${classPrefix}-imgCover" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                  <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+                </span>
               </div>
               <div class="${classPrefix}-featureContent">
                 <span class="${classPrefix}-h3">
@@ -101,7 +108,9 @@ const productFeatures4Component = (editor: Editor) => {
           <td>
             <div class="${classPrefix}-featureItem">
               <div class="${classPrefix}-featureIcon">
-                <img loading="lazy" src="/editor/component-icons/atom-editor.png" class="${classPrefix}-imgCover" />
+                <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                  <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+                </span>
               </div>
               <div class="${classPrefix}-featureContent">
                 <span class="${classPrefix}-h3">
@@ -169,11 +178,20 @@ const productFeatures4Component = (editor: Editor) => {
   .${classPrefix}-showOnlyOnMobile {
     display: none;
   }
+  .${classPrefix}-imgCover {
+    object-fit: fill;
+    aspect-ratio: 1;
+    width: 360px;
+    height: 240px;
+    overflow: hidden;
+  }  
 }
 
 .${classPrefix}-imgCover {
-  object-fit: cover;
-  object-position: center;
+  object-fit: fill;
+  aspect-ratio: 1;
+  width: 600px;
+  height: 400px;
   overflow: hidden;
 }
 

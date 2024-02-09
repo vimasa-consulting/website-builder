@@ -61,21 +61,27 @@ const howItWorks3Component = (editor: Editor) => {
       <div class="${classPrefix}-cardContentLeft">
         <div class="${classPrefix}-stepsWrapper">
           <div class="${classPrefix}-stepItem">
-            <img loading="lazy" src="/editor/component-icons/tv-14.png" class="${classPrefix}-stepIcon" />
+            <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-stepIcon">
+              <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+            </span>
             <div class="${classPrefix}-stepContent">
               <span class="${classPrefix}-h3">Step 1</span>
               <span class="${classPrefix}-p">Description of the step</span>
             </div>
           </div>
           <div class="${classPrefix}-stepItem">
-            <img loading="lazy" src="/editor/component-icons/delivery.png" class="${classPrefix}-stepIcon" />
+            <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-stepIcon">
+              <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+            </span>
             <div class="${classPrefix}-stepContent">
               <span class="${classPrefix}-h3">Step 2</span>
               <span class="${classPrefix}-p">Description of the step</span>
             </div>
           </div>
           <div class="${classPrefix}-stepItem">
-            <img loading="lazy" src="/editor/component-icons/no-card.png" class="${classPrefix}-stepIcon" />
+            <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-stepIcon">
+              <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+            </span>
             <div class="${classPrefix}-stepContent">
               <span class="${classPrefix}-h3">Step 3</span>
               <span class="${classPrefix}-p">Description of the step</span>
