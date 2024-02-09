@@ -176,7 +176,7 @@ const component = (editor: Editor) => {
           }
           @media (max-width: 400px) {
             .${classPrefix}-section {
-              min-width: 400px;
+              min-width: 390px;
               padding: 53px 40px 58px;
             }
             .${classPrefix}-rating-img-tick {
@@ -214,6 +214,10 @@ const component = (editor: Editor) => {
               font-style: normal;
               font-weight: 500;
               line-height: normal;
+            }
+            .${classPrefix}-image {
+              width: 319px;
+              height: 277px;
             }
           }
 
