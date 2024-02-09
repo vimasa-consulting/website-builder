@@ -35,7 +35,7 @@ export default function init(editor: Editor) {
               padding-right:15px;
               padding-bottom:10px;
               padding-left:15px;
-              background-color:rgb(36,99,235);
+              background-color: #676767;
               border-top-left-radius:5px;
               border-top-right-radius:5px;
               border-bottom-right-radius:5px;

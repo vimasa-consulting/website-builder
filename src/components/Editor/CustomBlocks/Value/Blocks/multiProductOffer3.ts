@@ -49,21 +49,28 @@ const component = (editor: Editor) => {
       <div class="${classPrefix}-image-item">
         <img loading="lazy" src="/editor/component-icons/image-icon.png"  class="${classPrefix}-image" />
         <div class="${classPrefix}-wrapper">
-          <div class="${classPrefix}-sub-heading">Product Name 1</div>
+          <div class="${classPrefix}-sub-heading">Product Name 2</div>
           <div class="${classPrefix}-heading">Up to 60% Off</div>
         </div>
       </div>
       <div class="${classPrefix}-image-item">
         <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
         <div class="${classPrefix}-wrapper">
-          <div class="${classPrefix}-sub-heading">Product Name 1</div>
+          <div class="${classPrefix}-sub-heading">Product Name 3</div>
           <div class="${classPrefix}-heading">Up to 60% Off</div>
         </div>
       </div>
       <div class="${classPrefix}-image-item">
         <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
         <div class="${classPrefix}-wrapper">
-          <div class="${classPrefix}-sub-heading">Product Name 1</div>
+          <div class="${classPrefix}-sub-heading">Product Name 4</div>
+          <div class="${classPrefix}-heading">Up to 60% Off</div>
+        </div>
+      </div>
+      <div class="${classPrefix}-image-item">
+        <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
+        <div class="${classPrefix}-wrapper">
+          <div class="${classPrefix}-sub-heading">Product Name 5</div>
           <div class="${classPrefix}-heading">Up to 60% Off</div>
         </div>
       </div>
