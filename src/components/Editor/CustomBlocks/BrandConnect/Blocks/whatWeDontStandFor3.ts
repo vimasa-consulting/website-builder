@@ -34,6 +34,7 @@ const component = (editor: Editor) => {
           <section class="${classPrefix}-section">
             <div class="${classPrefix}-container">
               <div class="${classPrefix}-left-container">
+              <h1 class="${classPrefix}-mobileHeading">What you don’t stand for in one bold line</h1>
                 <div class="${classPrefix}-imageWrapper">
                   <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
                 </div>
@@ -130,7 +131,9 @@ const component = (editor: Editor) => {
             margin: 0;
             margin-bottom: 26px;
           }
-
+          .${classPrefix}-mobileHeading {
+            display: none;
+          }
           .${classPrefix}-content {
             color: #000;
             font-family: Inter, sans-serif;
@@ -178,17 +181,18 @@ const component = (editor: Editor) => {
 
           @media (max-width: 400px) {
             .${classPrefix}-section {
-              min-width: 400px;
+              min-width: 390px;
               margin: auto;
             }
             .${classPrefix}-container {
-              flex-direction: column-reverse;
+              flex-direction: column;
               padding: 50px 20px;
               gap: 50px;
             }
 
             .${classPrefix}-left-container {
               width: 100%;
+              background: white;
             }
             .${classPrefix}-right-container {
               width: auto;
@@ -202,6 +206,7 @@ const component = (editor: Editor) => {
               font-weight: 600;
               line-height: 35px; 
               padding-right: 50px;
+              display: none;
             }
 
             .${classPrefix}-content {
@@ -229,6 +234,23 @@ const component = (editor: Editor) => {
             .${classPrefix}-image {
               width: 100%;
               height: 250px;
+              border-radius: 10px;
+            }
+            .${classPrefix}-imageWrapper {
+              border-radius: 10px;
+            }
+            .${classPrefix}-mobileHeading {
+              color: #000;
+              font-family: Inter, sans-serif;
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 35px; 
+              padding-right: 50px;
+              display: block;
+              text-align: left;
+              margin-top:0;
+              margin-bottom: 28px;
             }
             .${classPrefix}-rating-img-tick {
               width: 25px;
