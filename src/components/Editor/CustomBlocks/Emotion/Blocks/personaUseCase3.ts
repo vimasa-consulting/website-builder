@@ -231,8 +231,10 @@ const personaUseCase3Component = (editor: Editor) => {
                   width: 121px;
                 }
                 .${classPrefix}-image {
-                  width: 25px;
-                  height: 25px;
+                  object-fit: fill;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 50%;
                 }
                 .${classPrefix}-userPainPoint {
                   margin-bottom: 13px;

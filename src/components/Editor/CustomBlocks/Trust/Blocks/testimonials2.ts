@@ -196,7 +196,6 @@ const testimonials2Component = (editor: Editor) => {
                 align-items: center;
                 background: #E9E9E9;
                 border-radius: 50%;
-                padding: 15px;
               }
               .${classPrefix}-image {
                 width: 100%;
