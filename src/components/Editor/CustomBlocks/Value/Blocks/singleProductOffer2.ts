@@ -49,7 +49,6 @@ const component = (editor: Editor) => {
             min-width: 1440px;
             padding: 5.25rem 0px;
             font-family: Inter, sans-serif;
-            padding-bottom: 282px;
             background : #fff;
           }
           .${classPrefix}-container {
@@ -131,41 +130,57 @@ const component = (editor: Editor) => {
             font-size: 22px;
             font-weight: 500;
             background-color: #d9d9d9;          
+            display: inline-block;
+            padding: 7px 0;
           }
           @media (max-width: 770px) {
             .${classPrefix}-section {
               min-width: 400px;
+              padding-right: 0;
+              padding-top: 20px;
+              padding-bottom: 20px;
+              padding-left: 20px;
             }
             .${classPrefix}-container {
-              position: unset;
-              flex-direction: column;
-              align-items: center;
+              flex-direction: row-reverse;
             }
             .${classPrefix}-contentWrapper {
               max-width: 467px;
               margin-top: 50px;
             }
-            .${classPrefix}-subImage {
-              position: unset;
+            .${classPrefix}-heading {
+              font-size: 18px;
+              margin-bottom: 12px;
             }
-            .${classPrefix}-mainImage {
-              margin-left: 0;
+            .${classPrefix}-secondText {
+              display: none;
             }
-            .${classPrefix}-mainImage, .${classPrefix}-heading {
-              margin-right: 0px;
+            .${classPrefix}-firstText {
+              font-size: 13px;
+              max-width: 110px;          
+            }
+            .${classPrefix}-cta {
+              width: 102px;
+              height:28px;      
+              font-size: 15px;
+              padding: 5px 0;
+              border-radius: 6px;
             }
           }
 
           @media (max-width: 425px) {
-            .${classPrefix}-section {
-              padding: 20px;
-             }
-            .${classPrefix}-text {
-              width: unset; 
-             }
             .${classPrefix}-mainImage {
               margin: 0;
               margin-bottom: 50px;
+              width: 193px;
+              height: 188px;
+             }
+            .${classPrefix}-subImage {
+              width: 114px;
+              height: 104px;
+              right: 121px;
+              top: 109px;
+              left: unset;
              }
           }
         `,

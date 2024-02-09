@@ -21,7 +21,7 @@ export default observer(function UploadField({ children, accept, onChange, handl
     return (
       <>
         <input className="hidden" ref={inputRef} type="file" multiple={multiple} accept={accept} onChange={onChange}/>
-        <Button className="flex flex-col justify-center border-none outline-none w-full items-center h-[120px] border-bottom-dashed-grey" onClick={handleClick}>
+        <Button className="flex flex-col justify-center border-none outline-none w-full items-center h-[140px] border-bottom-dashed-grey" onClick={handleClick}>
           { children || i18nStore.t('upload') }
         </Button>
       </>

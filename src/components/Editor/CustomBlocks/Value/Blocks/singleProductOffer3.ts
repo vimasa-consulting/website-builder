@@ -45,7 +45,9 @@ const component = (editor: Editor) => {
 
             </div>
             <div class="${classPrefix}-right-column">
-              <img class="${classPrefix}-right-image" />
+            <div class="${classPrefix}-image-wrapper">
+            <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image-icon" />
+          </div>
             </div>
           </section>
           `,
@@ -54,9 +56,10 @@ const component = (editor: Editor) => {
               display: flex;
               min-width: 1440px;
               flex-direction: row;
-              height: 70vh;
+              height: 566px;
               background: #E9E9E9;
               font-family: Inter, sans-serif;
+              position: relative;
             }
 
             .${classPrefix}-left-column {
@@ -66,6 +69,7 @@ const component = (editor: Editor) => {
               align-items: flex-start;
               justify-content: center;
               padding: 10rem 5rem;
+              z-index: 99;
             }
 
             .${classPrefix}-h1 {
@@ -75,6 +79,7 @@ const component = (editor: Editor) => {
               font-weight: 600;
               line-height: 64px;
               margin: 0;
+              z-index: 99;
             }
 
             .${classPrefix}-h2 {
@@ -84,6 +89,7 @@ const component = (editor: Editor) => {
               font-weight: 400;
               line-height: 140%;
               margin-bottom: 40px;
+              z-index: 99;
             }
 
             .${classPrefix}-offer-cta {
@@ -97,10 +103,35 @@ const component = (editor: Editor) => {
               width: 180px;
               background: #CACACA;              
               border-radius: 8px;
+              z-index: 99;
             }
 
             .${classPrefix}-right-column {
               width: 50vw;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .${classPrefix}-image-wrapper {
+              width: 90px;
+              height: 90px;
+              border-color: #AEAEAE;
+              display: flex;
+              border-radius: 50%;  
+              border-style: dotted;
+              border-width: 2px;   
+              align-self: center;   
+            }
+            .${classPrefix}-image-icon {
+              object-position: center;
+              width: 45px;
+              margin: auto;
+              mix-blend-mode: multiply;
+              overflow: hidden;
+              align-self: center;
+              max-width: 100%;
+              height: 45px;
+              z-index: 1;
             }
 
             .${classPrefix}-right-image {
@@ -113,6 +144,7 @@ const component = (editor: Editor) => {
                 height: auto;
                 padding: 2rem 2rem;
                 flex-direction: column;
+                min-width: unset;
               }
 
               .${classPrefix}-left-column {
@@ -136,12 +168,12 @@ const component = (editor: Editor) => {
                 min-width: 400px;
                 padding: 2rem 2rem;
                 height: auto;
-                flex-direction: column;
+                justify-content: space-between;
+                padding-right: 87px;
               }
               .${classPrefix}-left-column {
                 padding: 2rem 0;
                 width: auto;
-                align-items: center;
               }
               .${classPrefix}-h1 {
                 text-align: center;
@@ -149,6 +181,9 @@ const component = (editor: Editor) => {
                 font-weight: 600;
                 line-height: 35px;
                 margin-bottom: 20px;
+                font-size: 18px;
+                margin-bottom: 8px;
+                line-height: unset;
               }
               .${classPrefix}-h2 {
                 text-align: center;
@@ -157,12 +192,21 @@ const component = (editor: Editor) => {
                 font-weight: 400;
                 line-height: 140%;
                 margin-bottom: 38px;
+                max-width: 123px;
+                text-align: left;
+                margin-bottom: 15px;
+                margin-top: 0px;
               }
               .${classPrefix}-offer-cta {
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: normal;
+                width: 102px;
+                height: 28px;
+                padding: 4px 0;
+                border-radius: 6px;
+                font-size: 15px;
               }
               .${classPrefix}-right-column {
                 padding: 2rem 0;
@@ -171,8 +215,54 @@ const component = (editor: Editor) => {
               .${classPrefix}-right-image {
                 border-radius: 8px;
               }
+              .${classPrefix}-image-wrapper {
+                width: 47px;
+                height: 47px;
+                overflow: hidden;
+              }
+              .${classPrefix}-image-icon {
+                border-radius: 50%;
+              }
             }
           `,
+          script: function () {
+            const componentRoot = this;
+            const img = componentRoot.querySelector('img');
+            if(!img.src.includes('/editor/component-icons/image-icon.png')) {
+                  onSrcChange()
+                }
+          
+            function onSrcChange() {
+              console.log('The src attribute has changed!');
+              console.log('The src attribute has changed!');
+                  img.style.width = '100%';
+                  img.style.height = '100%';
+                  img.style.position = 'absolute';
+                  img.style.top = '0';
+                  img.style.left = '0';
+                  img.style.borderRadius = 'unset';
+                  img.style.objectFit = 'fill'
+                  const imageWrapper = componentRoot.querySelector(`.value-singleProductOffer3-image-wrapper`) as any
+                  imageWrapper.style.border = 'none'
+            }
+          
+            const observer = new MutationObserver(mutations => {
+              mutations.forEach(mutation => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'src') {
+                  onSrcChange();
+                }
+              });
+            });
+          
+            if (img) {
+              observer.observe(img, {
+                attributes: true,
+                attributeFilter: ['src']
+              });
+            } else {
+              console.log('Image element not found within the component');
+            }
+          },
       },
     },
   });
