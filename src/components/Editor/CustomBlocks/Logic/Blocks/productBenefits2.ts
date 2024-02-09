@@ -64,7 +64,9 @@ const productBenefits2Component = (editor: Editor) => {
       <div class="${classPrefix}-benefitsWrapper">
         <div class="${classPrefix}-benefitsItem">
           <div class="${classPrefix}-benefitsIcon">
-            <img loading="lazy" src="/editor/component-icons/average-price.png" class="${classPrefix}-imgCover" />
+            <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+              <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+            </span>
           </div>
           <div class="${classPrefix}-benefitsContent">
             <span class="${classPrefix}-h3">
@@ -77,7 +79,9 @@ const productBenefits2Component = (editor: Editor) => {
         </div>
         <div class="${classPrefix}-benefitsItem">
           <div class="${classPrefix}-benefitsIcon">
-            <img loading="lazy" src="/editor/component-icons/delivery.png" class="${classPrefix}-imgCover" />
+            <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+              <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+            </span>
           </div>
           <div class="${classPrefix}-benefitsContent">
             <span class="${classPrefix}-h3">
@@ -90,7 +94,7 @@ const productBenefits2Component = (editor: Editor) => {
         </div>
       </div>
     </div>
-    <img loading="lazy" src="https://placehold.co/513x380" class="${classPrefix}-imgCover" />
+    <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-imgCover" />
   </div>
 </section>
         `,
@@ -147,11 +151,22 @@ const productBenefits2Component = (editor: Editor) => {
   .${classPrefix}-showOnlyOnMobile {
     display: none;
   }
+  .${classPrefix}-imgCover {
+    object-fit: fill;
+    aspect-ratio: 1;
+    width: 340px;
+    height: 250px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
 }
 
 .${classPrefix}-imgCover {
-  object-fit: cover;
-  object-position: center;
+  object-fit: fill;
+  aspect-ratio: 1;
+  width: 513px;
+  height: 380px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -170,7 +185,7 @@ const productBenefits2Component = (editor: Editor) => {
   }
 }
 
-.${classPrefix}-section .${classPrefix}-imgCover {
+.${classPrefix}-section {
   max-height: 400px;
   border-radius: 10px;
   max-width: 100%;

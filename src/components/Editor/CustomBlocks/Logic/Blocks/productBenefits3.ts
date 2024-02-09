@@ -64,12 +64,12 @@ const productBenefits3Component = (editor: Editor) => {
           </div>
         </td>
         <td>
-          <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-imgFill" />
+          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-imgFill" />
         </td>
       </tr>
       <tr>
         <td>
-          <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-imgFill" />
+          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-imgFill" />
         </td>
         <td>
           <div class="${classPrefix}-cardTextRight">
@@ -94,7 +94,7 @@ const productBenefits3Component = (editor: Editor) => {
           </div>
         </td>
         <td>
-          <img loading="lazy" src="https://placehold.co/574x408" class="${classPrefix}-imgFill" />
+          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-imgFill" />
         </td>
       </tr>
     </table>
@@ -154,13 +154,23 @@ const productBenefits3Component = (editor: Editor) => {
   .${classPrefix}-showOnlyOnMobile {
     display: none;
   }
+  .${classPrefix}-imgFill {
+    aspect-ratio: 1;
+    object-fit: fill;
+    overflow: hidden;
+    width: 190px;
+    height: 135px;
+    border-radius: 4px;
+  }
 }
 
 .${classPrefix}-imgFill {
+  aspect-ratio: 1;
   object-fit: fill;
-  object-position: center;
   overflow: hidden;
-  width: 100%;
+  width: 574px;
+  height: 408px;
+  border-radius: 20px;
 }
 
 .${classPrefix}-section {
@@ -236,10 +246,6 @@ const productBenefits3Component = (editor: Editor) => {
   .${classPrefix}-cardTextRight {
     margin-left: 6px;
   }
-}
-
-.${classPrefix}-imgFill {
-  border-radius: 20px;
 }
       `,
       },

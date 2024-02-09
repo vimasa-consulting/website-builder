@@ -97,7 +97,7 @@ const productBenefits1Component = (editor: Editor) => {
           </tr>
         </table>
         <div class="${classPrefix}-hideOnMobile">
-          <img loading="lazy" src="https://placehold.co/396x524" class="${classPrefix}-imgCover" />
+          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-imgCover" />
         </div>
         <table class="${classPrefix}-benefitsTable">
           <tr>
@@ -196,10 +196,20 @@ const productBenefits1Component = (editor: Editor) => {
   .${classPrefix}-showOnlyOnMobile {
     display: none;
   }
+  .${classPrefix}-imgCover {
+    object-fit: fill;  
+    width: 302px;
+    height: 400px;
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
 }
 
 .${classPrefix}-imgCover {
   object-fit: fill;  
+  width: 396px;
+  height: 524px;
+  aspect-ratio: 1;
   overflow: hidden;
 }
 
