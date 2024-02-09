@@ -1,5 +1,5 @@
 import AuthContext from "@/context/identity/AuthContext";
-import { updateUserName } from "@/services/CognitoService";
+import { updateUserName } from "@/services/CognitoService"; 
 import React, {
   useCallback,
   useContext,
@@ -7,6 +7,7 @@ import React, {
   useRef,
   useState,
 } from "react";
+import { Storage } from 'aws-amplify';
 
 const Profile = () => {
   const [userDetails, setUserDetails] = useState({
@@ -18,7 +19,7 @@ const Profile = () => {
     "https://flowbite.com/docs/images/people/profile-picture-5.jpg"
   );
   const inputRef = useRef<HTMLInputElement>(null);
-  const { cachedAuthUser, setCachedAuthUser } = useContext(AuthContext);
+  const { cachedAuthUser, setCachedAuthUser, cachedUser } = useContext(AuthContext);
   const profileStyle = {
     width: "88px",
     height: "88px",
@@ -29,14 +30,10 @@ const Profile = () => {
     alignItems: "center",
   };
 
-  const handleImageChange = (e: any) => {
+  const handleImageChange = async (e: any) => {
     const file = e.target.files[0];
     if (file) {
-      const reader = new FileReader();
-      reader.onload = (event: any) => {
-        setProfilePic(event.target.result);
-      };
-      reader.readAsDataURL(file);
+      await uploadImage(file)
     }
   };
 
@@ -66,13 +63,44 @@ const Profile = () => {
     }
   };
 
-  const loadDependencies = useCallback(() => {
+  const loadDependencies = useCallback(async() => {
     setUserDetails({
       firstName: cachedAuthUser?.attributes?.givenName || "",
       lastName: cachedAuthUser?.attributes?.familyName || "",
       email: cachedAuthUser?.attributes?.email || "",
     });
+    // const profileImage = await Storage.get(cachedUser?._id || '')
+    // setProfilePic(profileImage)
   }, [cachedAuthUser]);
+
+  const uploadImage = async (file: any) => {
+    if (!file) {
+      return;
+    }
+
+    try {
+      const userId = cachedUser?._id || '';
+      await updateUserImage(userId, file);
+      const updatedProfileImage = await Storage.get(userId)
+      setCachedAuthUser(((prevState: any) => ({
+        username: prevState.username,
+        attributes: {...prevState.attributes, profileImage: updatedProfileImage }
+      }))) 
+    } catch(error) {
+      console.log(error);
+    }
+  };
+
+  const updateUserImage = async (userId: string, file: File): Promise<void> => {
+    try {
+      await Storage.remove(userId);
+      await Storage.put(userId, file, {
+        contentType: file.type,
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };  
 
   useEffect(() => {
     if (cachedAuthUser) {
@@ -86,10 +114,10 @@ const Profile = () => {
       <div className="flex gap-[32px] mt-[24.5px]">
         <div>
           {/* <img className="cursor-pointer w-[88px] h-[88px] rounded-full" alt="User settings" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" /> */}
-          {profilePic ? (
+          {cachedAuthUser?.attributes?.profileImage ? (
             <img
               id="profilePic"
-              src={profilePic}
+              src={cachedAuthUser.attributes.profileImage}
               alt="Profile Picture"
               onClick={handleClick}
               className="cursor-pointer w-[88px] h-[88px] rounded-full"
