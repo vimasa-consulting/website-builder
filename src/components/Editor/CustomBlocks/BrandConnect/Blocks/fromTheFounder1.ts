@@ -128,7 +128,7 @@ const component = (editor: Editor) => {
             }
             .${classPrefix}-image {
               width: 215px;
-              bottom: -182px;
+              bottom: -160px;
               right: -2px;
               height: 232px;
             }
