@@ -73,7 +73,9 @@ const howItWorks4Component = (editor: Editor) => {
                 Step 1
               </span>
             </span>
-            <img loading="lazy" src="/editor/component-icons/checkmark.png" class="${classPrefix}-stepIcon" />
+            <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-stepIcon">
+              <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+            </span>            
           </div>
           <div class="${classPrefix}-stepContent">
             <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
@@ -95,7 +97,9 @@ const howItWorks4Component = (editor: Editor) => {
                 Step 2
               </span>
             </span>
-            <img loading="lazy" src="/editor/component-icons/checkmark.png" class="${classPrefix}-stepIcon" />
+            <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-stepIcon">
+              <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+            </span>            
           </div>
           <div class="${classPrefix}-stepContent">
             <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
@@ -117,7 +121,9 @@ const howItWorks4Component = (editor: Editor) => {
                 Step 3
               </span>
             </span>
-            <img loading="lazy" src="/editor/component-icons/checkmark.png" class="${classPrefix}-stepIcon" />
+            <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-stepIcon">
+              <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+            </span>            
           </div>
           <div class="${classPrefix}-stepContent">
             <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />

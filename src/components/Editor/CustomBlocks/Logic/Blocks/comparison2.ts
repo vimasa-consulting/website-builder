@@ -53,7 +53,7 @@ const comparison2Component = (editor: Editor) => {
                 <div class="${classPrefix}-card ${classPrefix}-advantagesCard">
                   <h2 class="${classPrefix}-title">Your Product Name</h2>
                   <div class="${classPrefix}-imageWrapper">
-                   <img class="${classPrefix}-image" src="https://placehold.co/45x45" alt="Your Product">
+                   <img class="${classPrefix}-image" src="/editor/component-icons/image-icon.png" alt="Your Product">
                   </div>
                   <div class="${classPrefix}-iconWrapper">
                   <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
@@ -71,10 +71,12 @@ const comparison2Component = (editor: Editor) => {
                 <div class="${classPrefix}-card ${classPrefix}-shortComingsCard">
                   <h2 class="${classPrefix}-title">Others</h2>
                   <div class="${classPrefix}-imageWrapper">
-                    <img class="${classPrefix}-image" src="https://placehold.co/45x45" alt="Competitor Product">
+                    <img class="${classPrefix}-image" src="/editor/component-icons/image-icon.png" alt="Competitor Product">
                   </div>
                   <div class="${classPrefix}-iconWrapper">
-                  <img class="${classPrefix}-icon" src="https://img.icons8.com/fluency-systems-filled/40/FFFFFF/x.png" alt="X Mark" />
+                  <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="teenyicons:tick-circle-outline" data-width="33px" class="iconify"></span>
+                  </span>
                  </div>
                   <ul class="${classPrefix}-shortComingList">
                     <li>Competitor's Shortcoming 1</li>
@@ -121,8 +123,8 @@ const comparison2Component = (editor: Editor) => {
                   background: #4B4B4B;
                 }
                 .${classPrefix}-rating-img-tick {
-                  width: 25px;
-                  height: 25px;
+                  width: 45px;
+                  height: 45px;
                   color: #ccc;
                 }
                 .${classPrefix}-title {
@@ -201,6 +203,11 @@ const comparison2Component = (editor: Editor) => {
                   
                 }
                 @media (max-width: 400px) {
+                  .${classPrefix}-rating-img-tick {
+                    width: 33px;
+                    height: 33px;
+                    color: #ccc;
+                  }
                   .${classPrefix}-container {
                     align-items: center;
                     min-width: 400px;

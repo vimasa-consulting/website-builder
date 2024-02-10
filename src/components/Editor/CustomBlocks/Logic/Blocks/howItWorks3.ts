@@ -225,8 +225,8 @@ const howItWorks3Component = (editor: Editor) => {
 }
 
 .${classPrefix}-imgMobile {
-  width: 271px;
-  height: 226px;
+  width: 360px;
+  height: 340px;
   object-fit: fill;
   overflow: hidden;
   border-radius: 10px;

@@ -82,19 +82,27 @@ const comparison1Component = (editor: Editor) => {
                   <img class="${classPrefix}-mainImage" src="/editor/component-icons/image-icon.png" alt="Competitor Product">
                   <ul class="${classPrefix}-shortComingList">
                     <li>
-                    <img class="${classPrefix}-checkMark" src="https://img.icons8.com/material-rounded/25/multiply--v1.png" alt="multiply--v1"/>
+                    <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                      <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+                    </span>
                     <p class="${classPrefix}-listText">Competitor's Shortcoming 1</p>
                     </li>
                     <li>
-                     <img class="${classPrefix}-checkMark" src="https://img.icons8.com/material-rounded/25/multiply--v1.png" alt="multiply--v1"/>
+                    <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+                  </span>
                     <p class="${classPrefix}-listText">Competitor's Shortcoming 2</p>
                     </li>
                     <li>
-                     <img class="${classPrefix}-checkMark" src="https://img.icons8.com/material-rounded/25/multiply--v1.png" alt="multiply--v1"/>
+                    <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+                  </span>
                     <p class="${classPrefix}-listText">Competitor's Shortcoming 3</p>
                     </li>
                     <li>
-                     <img class="${classPrefix}-checkMark" src="https://img.icons8.com/material-rounded/25/multiply--v1.png" alt="multiply--v1"/>
+                    <span data-gjs-type="icon" draggable="true" class="icon-display ${classPrefix}-rating-img-tick">
+                    <span data-icon="ph:placeholder-light" data-width="33px" class="iconify"></span>
+                  </span>
                     <p class="${classPrefix}-listText">Competitor's Shortcoming 4</p>
                     </li>
                   </ul>
@@ -166,8 +174,8 @@ const comparison1Component = (editor: Editor) => {
                   display: inline-block;
                 }
                 .${classPrefix}-rating-img-tick {
-                  width: 25px;
-                  height: 25px;
+                  width: 44px;
+                  height: 45px;
                   color: #ccc;
                 }
                 @media (max-width: 400px) {
@@ -184,8 +192,8 @@ const comparison1Component = (editor: Editor) => {
                     height: 117px;
                   }
                   .${classPrefix}-rating-img-tick {
-                    width: 25px;
-                    height: 25px;
+                    width: 33px;
+                    height: 33px;
                     color: #ccc;
                   }
                   .${classPrefix}-shortComingList li {
