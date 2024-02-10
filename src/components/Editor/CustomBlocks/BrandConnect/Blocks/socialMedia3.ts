@@ -234,6 +234,10 @@ const socialMedia3Component = (editor: Editor) => {
                 .${classPrefix}-playerWrapper > .${classPrefix}-img {
                   width: 100%;
                 }
+                .${classPrefix}-image {
+                  object-fit: fill;
+                  width: 360px;
+                }
               }
         `,
       },
