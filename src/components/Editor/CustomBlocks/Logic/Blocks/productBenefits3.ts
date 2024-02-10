@@ -58,27 +58,41 @@ const productBenefits3Component = (editor: Editor) => {
             <span class="${classPrefix}-h3">
               Benefit 1
             </span>
-            <span class="${classPrefix}-p">
-              Description of the benefit to your user
-            </span>
+            <div class="${classPrefix}-showOnlyOnMobile">
+              <span class="${classPrefix}-p">
+                Description of the benefit to your user
+              </span>
+            </div>
+            <div class="${classPrefix}-hideOnMobile">
+              <span class="${classPrefix}-p">
+                Describe the feature elaborately from your user&apos;s point of view
+              </span>
+            </div>
           </div>
         </td>
         <td>
-          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-imgFill" />
+          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
         </td>
       </tr>
       <tr>
         <td>
-          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-imgFill" />
+          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
         </td>
-        <td>
+        <td class="${classPrefix}-paddingHack">
           <div class="${classPrefix}-cardTextRight">
             <span class="${classPrefix}-h3">
               Benefit 2
             </span>
-            <span class="${classPrefix}-p">
-              Description of the benefit to your user
-            </span>
+            <div class="${classPrefix}-showOnlyOnMobile">
+              <span class="${classPrefix}-p">
+                Description of the benefit to your user
+              </span>
+            </div>
+            <div class="${classPrefix}-hideOnMobile">
+              <span class="${classPrefix}-p">
+                Description of the benefit to your user
+              </span>
+            </div>
           </div>
         </td>
       </tr>
@@ -88,13 +102,20 @@ const productBenefits3Component = (editor: Editor) => {
             <span class="${classPrefix}-h3">
               Benefit 3
             </span>
-            <span class="${classPrefix}-p">
-              Description of the benefit to your user
-            </span>
+            <div class="${classPrefix}-showOnlyOnMobile">
+              <span class="${classPrefix}-p">
+                Description of the benefit to your user
+              </span>
+            </div>
+            <div class="${classPrefix}-hideOnMobile">
+              <span class="${classPrefix}-p">
+                Description of the benefit to your user
+              </span>
+            </div>
           </div>
         </td>
         <td>
-          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-imgFill" />
+          <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-img" />
         </td>
       </tr>
     </table>
@@ -108,21 +129,7 @@ const productBenefits3Component = (editor: Editor) => {
   font-size: 40px;
   font-weight: 600;
 }
-.${classPrefix}-section {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 80px;
-  min-width: 1440px;
-}
-.${classPrefix}-imgFill {
-  aspect-ratio: 1;
-  object-fit: fill;
-  overflow: hidden;
-  width: 574px;
-  height: 408px;
-  border-radius: 20px;
-}
+
 @media (max-width: 425px) {
   .${classPrefix}-h1 {
     font-size: 25px;
@@ -168,83 +175,125 @@ const productBenefits3Component = (editor: Editor) => {
   .${classPrefix}-showOnlyOnMobile {
     display: none;
   }
-  .${classPrefix}-imgFill {
-    aspect-ratio: 1;
-    object-fit: fill;
-    overflow: hidden;
-    width: 190px;
-    height: 135px;
-    border-radius: 4px;
+}
+
+.${classPrefix}-img {
+  width: 574px;
+  height: 408px;
+  object-fit: fill;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #E9E9E9;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-img {
+    width: 186px;
+    height: 132px;
   }
 }
 
-
-
-
+.${classPrefix}-section {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 37px 146px 78px 143px;
+  margin: 0 auto;
+  max-width: 1440px;
+min-width: 1440px;
+  padding-left: 0;
+  padding-right: 0;
+}
 
 @media (max-width: 425px) {
   .${classPrefix}-section {
-    padding: 40px 5px;
     min-width: 400px;
+    padding: 9px 0 29px 0;
   }
 }
 
 .${classPrefix}-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .${classPrefix}-cardHeading {
-  margin: 0 auto;
   text-align: center;
+  margin: 0 35px;
+}
+
+.${classPrefix}-cardHeading .${classPrefix}-h1 {
+  width: 898px;
+  height: 44px;
+}
+
+@media (max-width: 425px) {
+  .${classPrefix}-cardHeading .${classPrefix}-h1 {
+    width: 330px;
+    height: auto;
+    font-size: 26px;
+    line-height: 35px;
+  }
 }
 
 .${classPrefix}-cardContent {
-  margin: 0 auto;
-  margin-top: 90px;
+  margin-top: 91px;
 }
 
 @media (max-width: 425px) {
   .${classPrefix}-cardContent {
-    margin-top: 40px;
+    margin: 47px 14px 0 16px;
   }
-}
-
-.${classPrefix}-cardContent td {
-  width: 33%;
 }
 
 .${classPrefix}-cardTextLeft,
 .${classPrefix}-cardTextRight {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+}
+
+.${classPrefix}-cardTextLeft .${classPrefix}-h3,
+.${classPrefix}-cardTextRight .${classPrefix}-h3 {
+  width: 340px;
+  height: 19px;
 }
 
 @media (max-width: 425px) {
-  .${classPrefix}-cardTextLeft,
-  .${classPrefix}-cardTextRight {
-    gap: 6px;
+
+  .${classPrefix}-cardTextLeft .${classPrefix}-h3,
+  .${classPrefix}-cardTextRight .${classPrefix}-h3 {
+    width: 152px;
+    height: 19px;
+    font-size: 15px;
   }
 }
 
-.${classPrefix}-cardTextLeft {
-  margin-right: 90px;
+.${classPrefix}-cardTextLeft .${classPrefix}-p,
+.${classPrefix}-cardTextRight .${classPrefix}-p {
+  width: 482px;
+  height: 87px;
+  margin-top: 21px;
 }
 
 @media (max-width: 425px) {
-  .${classPrefix}-cardTextLeft {
-    margin-right: 6px;
+
+  .${classPrefix}-cardTextLeft .${classPrefix}-p,
+  .${classPrefix}-cardTextRight .${classPrefix}-p {
+    width: 177px;
+    height: 53px;
+    margin-top: 6px;
   }
 }
 
-.${classPrefix}-cardTextRight {
-  margin-left: 90px;
+.${classPrefix}-paddingHack {
+  padding-left: 64px;
 }
 
 @media (max-width: 425px) {
-  .${classPrefix}-cardTextRight {
-    margin-left: 6px;
+  .${classPrefix}-paddingHack {
+    padding-left: 16px;
   }
 }
       `,
