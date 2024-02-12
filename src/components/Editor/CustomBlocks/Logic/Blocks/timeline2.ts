@@ -53,7 +53,7 @@ const timeline2Component = (editor: Editor) => {
               Product's Measurable results
             </p>
           </div>
-          <svg class="${classPrefix}-horizontalLine" xmlns="http://www.w3.org/2000/svg" width="750" height="2" viewBox="0 0 750 2" fill="none">
+          <svg class="${classPrefix}-horizontalLine" xmlns="http://www.w3.org/2000/svg" width="1440" height="2" viewBox="0 0 750 2" fill="none">
             <path d="M0 1L750 1" stroke="#999999" stroke-width="2" />
           </svg>
           <div class="${classPrefix}-cardsWrapper">
@@ -72,7 +72,7 @@ const timeline2Component = (editor: Editor) => {
                 </div>
               </div>
               <div class="${classPrefix}-uploadImageWrapper">
-                <img loading="lazy" src="https://placehold.co/140x140" class="${classPrefix}-image" />
+                <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
               </div>
 
 
@@ -93,7 +93,7 @@ const timeline2Component = (editor: Editor) => {
                 </div>
               </div>
               <div class="${classPrefix}-uploadImageWrapper">
-                <img loading="lazy" src="https://placehold.co/140x140" class="${classPrefix}-image" />
+                <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-image" />
               </div>
             </div>
             <div class="${classPrefix}-cardRight">
@@ -112,7 +112,7 @@ const timeline2Component = (editor: Editor) => {
                 </div>
               </div>
               <div class="${classPrefix}-uploadImageWrapper">
-                <img loading="lazy" src="https://placehold.co/140x140" class="${classPrefix}-imageRight" />
+                <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-imageRight" />
               </div>
 
               <div class="${classPrefix}-spacerRightBottom"></div>
@@ -131,7 +131,7 @@ const timeline2Component = (editor: Editor) => {
                 </div>
               </div>
               <div class="${classPrefix}-uploadImageWrapper">
-                <img loading="lazy" src="https://placehold.co/140x140" class="${classPrefix}-imageRight" />
+                <img loading="lazy" src="/editor/component-icons/image-icon.png" class="${classPrefix}-imageRight" />
               </div>
 
             </div>
