@@ -47,8 +47,8 @@ const BlockSearchPopup: React.FC<BlockSearchPopupProps> = ({ grapeJSEditor }) =>
   const { selectedComponent, setSelectedComponent } = useAppEditorStore();
     const searchClient = useMemo(() => {
       return algoliasearch(
-        "IO4B9E5Q45",
-        "a089c7660ed4fcbb8529e4a12ce2836c"
+        "2PAD938XZW",
+        "72109eaf5eeb2ba89c9c864a1695f0de"
       )
     }, []);
 
