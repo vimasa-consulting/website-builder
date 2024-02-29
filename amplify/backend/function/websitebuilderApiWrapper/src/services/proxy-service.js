@@ -10,7 +10,7 @@ class ProxyService {
     const { httpMethod, fullRequestParams } = event;
     Logger.info('ProxyService.process', { httpMethod, fullRequestParams, path });
     const targetPath = path.replace('/api', '');
-    const targetURL = `http://54.234.111.81${targetPath}`;
+    const targetURL = `http://54.198.142.52${targetPath}`;
     const targetHeaders = {};
     if (event.headers?.['Authorization']) {
       targetHeaders['Authorization'] = event.headers['Authorization'];
