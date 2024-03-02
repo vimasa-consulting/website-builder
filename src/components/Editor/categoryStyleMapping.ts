@@ -62,13 +62,13 @@ const categoryStyleMapping: any = {
       category: "First Impression",
       description: 'Helps you to create a powerful first impression'
     },
-    'User Actions': {
+    'Call To Actions': {
       style: 'first-impression',
       searchStyle: 'search-first-impression',
       icon: 'first-impression-document.png',
       searchIcon: 'first-impression-document-white.png',
       alt: 'Document icon',
-      category: "User Actions",
+      category: "Call To Actions",
       description: 'Helps you to control user actions'
     },
   }
