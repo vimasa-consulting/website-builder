@@ -97,24 +97,19 @@ export default observer(function EditorApp({ fileID }: AppProps) {
             
             <script type="text/javascript" src="https://code.iconify.design/1/1.0.7/iconify.min.js" ></script>
             <!-- Matomo -->
-            <script>
-              var _paq = window._paq = window._paq || [];
-              /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-              _paq.push(['trackPageView']);
-              _paq.push(['enableLinkTracking']);
-              (function() {
-                var u="https://aayushsoftwarescom.matomo.cloud/";
-                _paq.push(['setTrackerUrl', u+'matomo.php']);
-                _paq.push(['setSiteId', '${matomoProjectId}']);
-                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-                g.async=true; g.src='//cdn.matomo.cloud/aayushsoftwarescom.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-              })();
-              document.querySelectorAll('a').forEach(function(item) { 
-                item.onclick=function() { 
-                    _paq.push(['trackEvent', 'Click', item.innerText, item.attributes.href,1]);
-                } 
-              });
-            </script>
+              <script>
+                var _paq = window._paq = window._paq || [];
+                /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+                _paq.push(['trackPageView']);
+                _paq.push(['enableLinkTracking']);
+                (function() {
+                  var u="//ec2-54-209-127-49.compute-1.amazonaws.com/";
+                  _paq.push(['setTrackerUrl', u+'matomo.php']);
+                  _paq.push(['setSiteId', '${matomoProjectId}']);
+                  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                  g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+                })();
+              </script>
             <!-- End Matomo Code -->
             <script>
             ${jsBody}
